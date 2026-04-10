@@ -705,6 +705,11 @@ p:last-child { margin-bottom: 0; }
   transition: filter var(--t-base), transform var(--t-base), opacity var(--t-base);
   flex-shrink: 0;
 }
+/* Dentrix Ascend is naturally narrow — bump height to match visual weight */
+.trust-bar-logos img[src*="dentrix-ascend"] {
+  height: 50px;
+}
+
 /* Eaglesoft has a dark background — use screen blend to drop it */
 .trust-bar-logos img[src*="eaglesoft-official"] {
   height: 34px;
