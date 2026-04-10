@@ -15,10 +15,10 @@
 
   <title>Elite Dental Force - Dental Revenue Intelligence Platform</title>
 
-  <!-- Fonts -->
+  <!-- Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -35,55 +35,24 @@
     "alternateName": "EDF",
     "url": "https://www.elitedentalforce.com",
     "logo": "https://www.elitedentalforce.com/images/logo.png",
-    "description": "The infrastructure leader in dental revenue intelligence. AI-powered consultants and EDiFi software platform for eligibility verification and revenue optimization.",
+    "description": "The infrastructure leader in dental revenue intelligence.",
     "sameAs": [
-      "https://www.linkedin.com/company/elitedentalforce",
-      "https://twitter.com/elitedentalforce"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "",
-      "contactType": "sales",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "EDiFi",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "description": "Contact for pricing"
-    },
-    "description": "Dental revenue intelligence platform for eligibility verification, claims optimization, and practice analytics.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Elite Dental Force"
-    }
+      "https://www.linkedin.com/company/elitedentalforce"
+    ]
   }
   </script>
 </head>
 <body>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/" class="logo">
+        <a href="/" class="logo" aria-label="Elite Dental Force Home">
           <img src="images/Grayscale Transparent.png" alt="Elite Dental Force">
         </a>
 
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="has-dropdown">
               <a href="pages/platform.html" class="nav-link">Platform</a>
@@ -125,7 +94,7 @@
           </div>
         </nav>
 
-        <button class="mobile-toggle" aria-label="Toggle menu">
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -135,164 +104,213 @@
   </header>
 
   <main>
+
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-glass-animation">
+      <!-- Ambient orbs -->
+      <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb--3" aria-hidden="true"></div>
+
+      <!-- Canvas animation -->
+      <div class="hero-glass-animation" aria-hidden="true">
         <canvas id="glassRippleCanvas"></canvas>
       </div>
+
       <div class="container">
         <div class="hero-split">
+
+          <!-- Left: Copy -->
           <div class="hero-content">
             <div class="hero-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
               Dental Revenue Intelligence
             </div>
-            <h1>Transform Uncertainty Into Revenue Confidence</h1>
-            <p class="lead">Elite Dental Force combines AI-powered consultants with the EDiFi software platform to eliminate eligibility guesswork and optimize your dental practice revenue.</p>
+
+            <h1>Transform Uncertainty Into <span class="gradient-text">Revenue Confidence</span></h1>
+
+            <p class="lead">Elite Dental Force combines AI-powered consultants with the EDiFi software platform — eliminating eligibility guesswork and maximizing your practice revenue.</p>
+
             <div class="hero-actions">
               <a href="pages/contact.html#demo" class="btn btn-primary btn-lg">Book a Demo</a>
-              <a href="pages/platform.html" class="btn btn-secondary btn-lg">Learn More</a>
+              <a href="pages/platform.html" class="btn btn-secondary btn-lg">See How It Works</a>
+            </div>
+
+            <div class="hero-proof">
+              <div class="hero-proof-dots" aria-hidden="true">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>+</span>
+              </div>
+              <p class="hero-proof-text" style="margin:0;">
+                <strong>500+ practices</strong> on the waitlist — join the movement
+              </p>
             </div>
           </div>
+
+          <!-- Right: Visual -->
           <div class="hero-visual">
-            <div class="product-visual">
-              <img src="images/edifi-dashboard-hero.webp" alt="EDiFi Platform Dashboard showing real-time eligibility verification and revenue analytics">
+            <div class="product-visual-wrapper">
+              <div class="product-visual">
+                <img
+                  src="images/edifi-dashboard-hero.webp"
+                  alt="EDiFi Platform Dashboard — real-time eligibility verification and revenue analytics"
+                  loading="eager"
+                >
+              </div>
+              <!-- Floating stat badges -->
+              <div class="hero-stat-badge hero-stat-badge--1" aria-hidden="true">
+                <div class="badge-num">35%</div>
+                <div class="badge-label">Fewer Denials</div>
+              </div>
+              <div class="hero-stat-badge hero-stat-badge--2" aria-hidden="true">
+                <div class="badge-num">90%</div>
+                <div class="badge-label">First-Pass Rate</div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- Trust Bar -->
-    <section class="trust-bar">
+    <section class="trust-bar" aria-label="PMS Integrations">
       <div class="container">
-        <p class="trust-bar-label">Integrates With Leading Dental Practice Management Systems</p>
+        <p class="trust-bar-label">Integrates with leading dental practice management systems</p>
       </div>
       <div class="trust-bar-scroll">
         <div class="trust-bar-logos">
           <img src="images/logos/dentrix.png" alt="Dentrix">
           <img src="images/logos/dentrix-ascend.png" alt="Dentrix Ascend">
-          <img src="images/logos/open-dental.png" alt="Open Dental Software">
+          <img src="images/logos/open-dental.png" alt="Open Dental">
           <img src="images/logos/curve-dental.webp" alt="Curve Dental">
           <img src="images/logos/eaglesoft.png" alt="Eaglesoft">
           <!-- Duplicate for seamless loop -->
-          <img src="images/logos/dentrix.png" alt="Dentrix">
-          <img src="images/logos/dentrix-ascend.png" alt="Dentrix Ascend">
-          <img src="images/logos/open-dental.png" alt="Open Dental Software">
-          <img src="images/logos/curve-dental.webp" alt="Curve Dental">
-          <img src="images/logos/eaglesoft.png" alt="Eaglesoft">
+          <img src="images/logos/dentrix.png" alt="Dentrix" aria-hidden="true">
+          <img src="images/logos/dentrix-ascend.png" alt="Dentrix Ascend" aria-hidden="true">
+          <img src="images/logos/open-dental.png" alt="Open Dental" aria-hidden="true">
+          <img src="images/logos/curve-dental.webp" alt="Curve Dental" aria-hidden="true">
+          <img src="images/logos/eaglesoft.png" alt="Eaglesoft" aria-hidden="true">
         </div>
       </div>
     </section>
 
-    <!-- Two-Path Split: AI Consultants & EDiFi -->
+    <!-- Two-Path Platform -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate>
           <span class="overline">Our Platform</span>
           <h2>Two Layers of Revenue Intelligence</h2>
           <p>A comprehensive approach combining human-guided AI expertise with powerful software infrastructure.</p>
         </div>
 
         <div class="grid grid-2">
-          <!-- AI Consultants Path -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+          <!-- AI Consultants -->
+          <div class="feature-card" data-animate data-delay="1">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
             <h3>AI Consultants</h3>
-            <p>Decision support intelligence that standardizes workflows across your entire organization. Our AI consultants work alongside your team to provide real-time guidance on eligibility, coding, and revenue optimization.</p>
+            <p>Decision-support intelligence that standardizes workflows across your entire organization. Role-based AI guidance that works alongside your team in real time.</p>
             <ul class="feature-list">
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Role-based guidance for every team member
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Real-time decision support
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Real-time decision support at every touchpoint
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Workflow standardization at scale
               </li>
             </ul>
             <a href="pages/ai-consultants.html" class="btn btn-secondary">Explore AI Consultants</a>
           </div>
 
-          <!-- EDiFi Software Path -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <!-- EDiFi Software -->
+          <div class="feature-card" data-animate data-delay="2">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
             <h3>EDiFi Software Platform</h3>
-            <p>Revenue infrastructure that powers intelligent eligibility verification, claims optimization, and comprehensive reporting. EDiFi is the foundation that drives measurable financial outcomes.</p>
+            <p>Revenue infrastructure powering intelligent eligibility verification, claims optimization, and comprehensive analytics. The foundation that drives measurable financial outcomes.</p>
             <ul class="feature-list">
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Eligibility Intelligence MVP
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Eligibility Intelligence — verify before the patient arrives
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Real-time analytics dashboard
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Real-time analytics and revenue dashboard
               </li>
               <li>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Seamless PMS integrations
               </li>
             </ul>
             <a href="pages/edifi.html" class="btn btn-secondary">Explore EDiFi Platform</a>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Outcomes Section -->
+    <!-- Outcomes / Metrics -->
     <section class="section bg-light">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate>
           <span class="overline">Proven Results</span>
           <h2>Outcomes That Drive Your Bottom Line</h2>
-          <p>Practices using Elite Dental Force see measurable improvements across key revenue metrics.</p>
+          <p>Practices using Elite Dental Force see measurable improvements across every key revenue metric.</p>
         </div>
 
         <div class="metrics-grid">
-          <div class="metric-card">
-            <div class="metric-value" data-counter="35">35</div>
-            <div class="metric-label">% Reduction in Claim Denials</div>
+          <div class="metric-card" data-animate data-delay="1">
+            <span class="metric-value" data-counter="35">35<span style="font-size:0.55em;vertical-align:super;font-weight:800;">%</span></span>
+            <div class="metric-label">Reduction in Claim Denials</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value" data-counter="50">50</div>
-            <div class="metric-label">% Faster Eligibility Verification</div>
+          <div class="metric-card" data-animate data-delay="2">
+            <span class="metric-value" data-counter="50">50<span style="font-size:0.55em;vertical-align:super;font-weight:800;">%</span></span>
+            <div class="metric-label">Faster Eligibility Verification</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value" data-counter="25">25</div>
-            <div class="metric-label">% Increase in Collections</div>
+          <div class="metric-card" data-animate data-delay="3">
+            <span class="metric-value" data-counter="25">25<span style="font-size:0.55em;vertical-align:super;font-weight:800;">%</span></span>
+            <div class="metric-label">Increase in Collections</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value" data-counter="90">90</div>
-            <div class="metric-label">% First-Pass Claim Acceptance</div>
+          <div class="metric-card" data-animate data-delay="4">
+            <span class="metric-value" data-counter="90">90<span style="font-size:0.55em;vertical-align:super;font-weight:800;">%</span></span>
+            <div class="metric-label">First-Pass Claim Acceptance</div>
           </div>
         </div>
 
         <div class="split-section mt-12">
-          <div class="split-content">
-            <h3>See the Platform in Action</h3>
-            <p>The EDiFi dashboard provides real-time visibility into your practice's revenue health, from eligibility status to claim tracking and financial analytics.</p>
+          <div class="split-content" data-animate="slide-left">
+            <h3>See the Platform <span class="gradient-text">in Action</span></h3>
+            <p>The EDiFi dashboard provides real-time visibility into your practice's revenue health — from eligibility status to claim tracking and financial analytics.</p>
             <a href="pages/contact.html#demo" class="btn btn-primary">Request a Live Demo</a>
           </div>
-          <div class="split-visual">
+          <div class="split-visual" data-animate="slide-right">
             <div class="product-visual">
-              <img src="images/edifi-analytics.webp" alt="EDiFi Analytics Dashboard showing revenue metrics and trends">
-              <div class="product-visual-caption">EDiFi Revenue Analytics - Real-time financial performance tracking</div>
+              <img
+                src="images/edifi-analytics.webp"
+                alt="EDiFi Analytics Dashboard showing revenue metrics and trends"
+                loading="lazy"
+              >
+              <div class="product-visual-caption">EDiFi Revenue Analytics — Real-time financial performance tracking</div>
             </div>
           </div>
         </div>
@@ -302,56 +320,60 @@
     <!-- How It Works -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate>
           <span class="overline">How It Works</span>
           <h2>From Discovery to Optimization</h2>
-          <p>A streamlined implementation process designed for minimal disruption and maximum impact.</p>
+          <p>A streamlined onboarding process designed for minimal disruption and maximum impact from day one.</p>
         </div>
 
         <div class="workflow-steps">
-          <div class="workflow-step">
+          <div class="workflow-step" data-animate data-delay="1">
+            <div class="workflow-step-num">1</div>
             <h4>Discover</h4>
-            <p>We analyze your current workflows, identify revenue leakage points, and map your practice needs.</p>
+            <p>We analyze your current workflows, identify revenue leakage points, and map your practice's specific needs.</p>
           </div>
-          <div class="workflow-step">
+          <div class="workflow-step" data-animate data-delay="2">
+            <div class="workflow-step-num">2</div>
             <h4>Configure</h4>
-            <p>Customize the EDiFi platform and AI consultants to match your practice's specific requirements.</p>
+            <p>Customize EDiFi and AI consultants to match your practice's workflows, payers, and team structure.</p>
           </div>
-          <div class="workflow-step">
+          <div class="workflow-step" data-animate data-delay="3">
+            <div class="workflow-step-num">3</div>
             <h4>Deploy</h4>
-            <p>Launch with comprehensive training for your team and seamless integration with your existing systems.</p>
+            <p>Launch with comprehensive team training and seamless integration with your existing systems.</p>
           </div>
-          <div class="workflow-step">
+          <div class="workflow-step" data-animate data-delay="4">
+            <div class="workflow-step-num">4</div>
             <h4>Optimize</h4>
-            <p>Continuous improvement through analytics insights, performance reviews, and platform updates.</p>
+            <p>Continuous improvement through analytics insights, performance reviews, and ongoing platform updates.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Audience Section -->
+    <!-- Who We Serve -->
     <section class="section bg-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animate>
           <span class="overline">Who We Serve</span>
           <h2>Solutions for Every Practice Size</h2>
           <p>Whether you're a single-location practice or a multi-state DSO, Elite Dental Force scales with your needs.</p>
         </div>
 
         <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="feature-card" data-animate data-delay="1">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
               </svg>
             </div>
             <h3>Private Practices</h3>
-            <p>Maximize revenue without adding administrative burden. Our AI consultants provide expert-level guidance accessible to practices of any size.</p>
+            <p>Maximize revenue without adding administrative burden. Expert-level AI guidance accessible to practices of any size — without hiring a billing team.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="feature-card" data-animate data-delay="2">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -359,66 +381,68 @@
               </svg>
             </div>
             <h3>Multi-Location Groups</h3>
-            <p>Standardize workflows across all locations while maintaining visibility into performance. Centralized reporting with location-level insights.</p>
+            <p>Standardize workflows across all locations while maintaining full visibility. Centralized reporting with granular, location-level intelligence.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="feature-card" data-animate data-delay="3">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
             </div>
-            <h3>DSOs & Enterprises</h3>
-            <p>Enterprise-grade infrastructure for dental support organizations. Portfolio-wide analytics, compliance controls, and scalable deployment.</p>
+            <h3>DSOs &amp; Enterprises</h3>
+            <p>Enterprise-grade infrastructure for dental support organizations. Portfolio-wide analytics, compliance controls, and scalable deployment across every location.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Resources Preview -->
+    <!-- Blog / Resources -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Resources</span>
-          <h2>Insights for Revenue Excellence</h2>
-          <p>Stay informed with the latest strategies, industry trends, and platform updates.</p>
+        <div class="section-header" data-animate>
+          <span class="overline">Insights</span>
+          <h2>Revenue Intelligence Resources</h2>
+          <p>Stay informed with the latest strategies, industry trends, and expert guidance from our team.</p>
         </div>
 
         <div class="resource-grid">
-          <a href="pages/resources.html#blog" class="resource-card">
-            <div class="resource-card-image">
-              <img src="images/blog-preview-1.jpg" alt="Blog article preview">
+          <a href="https://blog.elitedentalforce.com/post/new-blog-post-4853" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="1">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.1) 0%,rgba(9,91,167,0.07) 100%);display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><circle cx="12" cy="17" r="1"></circle><path d="M8 21h8"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Blog</span>
-              <h4 class="resource-card-title">5 Strategies to Reduce Claim Denials in 2025</h4>
-              <p class="resource-card-excerpt">Learn how top-performing practices are minimizing denials and accelerating revenue collection.</p>
+              <span class="resource-card-tag">AI &amp; Technology</span>
+              <span class="resource-card-title">AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win</span>
+              <p class="resource-card-excerpt">Something big is shifting in dentistry, and it's not another gadget for the operatory.</p>
             </div>
           </a>
-          <a href="pages/resources.html#podcast" class="resource-card">
-            <div class="resource-card-image">
-              <img src="images/podcast-preview.jpg" alt="Podcast episode preview">
+
+          <a href="https://blog.elitedentalforce.com/post/new-blog-data-blocks-2025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="2">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.1) 0%,rgba(0,31,113,0.08) 100%);display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Podcast</span>
-              <h4 class="resource-card-title">Revenue Intelligence: The Future of Dental Billing</h4>
-              <p class="resource-card-excerpt">Industry experts discuss how AI is transforming dental practice revenue management.</p>
+              <span class="resource-card-tag">Dental Billing</span>
+              <span class="resource-card-title">How Data Blocks AI in Dental Billing</span>
+              <p class="resource-card-excerpt">Vendor lock-in blocks dental AI. Learn how data ownership can help your practice boost billing and reduce denials.</p>
             </div>
           </a>
-          <a href="pages/resources.html#webinars" class="resource-card">
-            <div class="resource-card-image">
-              <img src="images/webinar-preview.jpg" alt="Webinar preview">
+
+          <a href="https://blog.elitedentalforce.com/post/new-blog-post-00025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="3">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.08) 0%,rgba(0,31,113,0.1) 100%);display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Webinar</span>
-              <h4 class="resource-card-title">Mastering Eligibility Verification</h4>
-              <p class="resource-card-excerpt">Join our live session to learn best practices for streamlining your verification process.</p>
+              <span class="resource-card-tag">Revenue Intelligence</span>
+              <span class="resource-card-title">The $16 Billion Data Dilemma in Dentistry</span>
+              <p class="resource-card-excerpt">Dentistry loses $16B annually from bad data — not effort. Uncover the truth behind flawed metrics and learn how to build accuracy that drives growth.</p>
             </div>
           </a>
         </div>
 
-        <div class="text-center mt-12">
-          <a href="pages/resources.html" class="btn btn-secondary">View All Resources</a>
+        <div class="text-center mt-12" data-animate>
+          <a href="https://blog.elitedentalforce.com/dental-billing-solutions" target="_blank" rel="noopener" class="btn btn-secondary">View All Articles</a>
         </div>
       </div>
     </section>
@@ -426,14 +450,17 @@
     <!-- CTA Band -->
     <section class="cta-band">
       <div class="container">
-        <h2>Ready to Transform Your Revenue Operations?</h2>
-        <p>Join leading dental practices that trust Elite Dental Force for intelligent revenue management.</p>
-        <div class="cta-band-actions">
-          <a href="pages/contact.html#demo" class="btn btn-primary btn-lg">Book a Demo</a>
-          <a href="pages/contact.html" class="btn btn-secondary btn-lg">Contact Sales</a>
+        <div data-animate>
+          <h2>Ready to Transform Your <span class="gradient-text">Revenue Operations?</span></h2>
+          <p>Join leading dental practices that trust Elite Dental Force for intelligent revenue management.</p>
+          <div class="cta-band-actions">
+            <a href="pages/contact.html#demo" class="btn btn-primary btn-lg">Book a Demo</a>
+            <a href="pages/contact.html" class="btn btn-secondary btn-lg">Contact Sales</a>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -441,7 +468,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href="/" class="logo" aria-label="Elite Dental Force Home">
             <img src="images/Grayscale Transparent.png" alt="Elite Dental Force">
           </a>
           <p>The infrastructure leader in dental revenue intelligence. Transforming how dental practices manage eligibility, billing, and revenue optimization.</p>
@@ -496,11 +523,8 @@
           <a href="pages/privacy.html">Privacy Policy</a>
         </div>
         <div class="social-links">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="Elite Dental Force on LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
         </div>
       </div>

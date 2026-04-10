@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initFormValidation();
   initScrollAnimations();
+  initCounterAnimations();
   initGlassRippleAnimation();
 });
 
@@ -304,32 +305,37 @@ function initScrollAnimations() {
 }
 
 /**
- * Counter Animation for Metrics
+ * Counter Animation for Metrics (preserves inner HTML with % suffix spans)
  */
-function animateCounters() {
+function initCounterAnimations() {
   const counters = document.querySelectorAll('[data-counter]');
 
   counters.forEach(counter => {
-    const target = parseInt(counter.dataset.counter);
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
+    const target = parseInt(counter.dataset.counter, 10);
+    // Capture any suffix HTML (e.g. the <span> with %) that comes after the number
+    const suffixHTML = counter.innerHTML.replace(/^\d+/, '');
 
-    const updateCounter = () => {
-      current += step;
-      if (current < target) {
-        counter.textContent = Math.floor(current);
-        requestAnimationFrame(updateCounter);
-      } else {
-        counter.textContent = target;
-      }
+    const animateCount = () => {
+      const duration = 1800;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        counter.innerHTML = current + suffixHTML;
+
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
     };
 
-    // Start animation when element is visible
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          updateCounter();
+          animateCount();
           observer.unobserve(entry.target);
         }
       });
@@ -338,6 +344,9 @@ function animateCounters() {
     observer.observe(counter);
   });
 }
+
+// Backward compat alias
+function animateCounters() { initCounterAnimations(); }
 
 /**
  * Utility: Debounce Function
@@ -527,7 +536,7 @@ function initGlassRippleAnimation() {
             nodes[j].x, nodes[j].y
           );
           gradient.addColorStop(0, `rgba(75, 168, 240, ${alpha})`);
-          gradient.addColorStop(0.5, `rgba(0, 212, 255, ${alpha * 0.8})`);
+          gradient.addColorStop(0.5, `rgba(75, 168, 240, ${alpha * 0.8})`);
           gradient.addColorStop(1, `rgba(75, 168, 240, ${alpha})`);
 
           ctx.strokeStyle = gradient;
@@ -550,7 +559,7 @@ function initGlassRippleAnimation() {
       ctx.stroke();
 
       // Inner glow ring
-      ctx.strokeStyle = `rgba(0, 212, 255, ${ripple.alpha * 0.3})`;
+      ctx.strokeStyle = `rgba(75, 168, 240, ${ripple.alpha * 0.3})`;
       ctx.lineWidth = ripple.lineWidth * 2;
       ctx.beginPath();
       ctx.arc(ripple.x, ripple.y, ripple.radius * 0.8, 0, Math.PI * 2);
@@ -580,7 +589,7 @@ function initGlassRippleAnimation() {
         node.x, node.y, 0,
         node.x, node.y, glowRadius
       );
-      glowGradient.addColorStop(0, `rgba(0, 212, 255, ${config.glowIntensity * pulse})`);
+      glowGradient.addColorStop(0, `rgba(75, 168, 240, ${config.glowIntensity * pulse})`);
       glowGradient.addColorStop(0.5, `rgba(75, 168, 240, ${config.glowIntensity * 0.3 * pulse})`);
       glowGradient.addColorStop(1, 'rgba(75, 168, 240, 0)');
 

@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force Blog - Insights, strategies, and best practices for dental revenue optimization, eligibility verification, and practice management.">
-  <title>Blog - Elite Dental Force</title>
+  <meta name="description" content="Elite Dental Force Blog — Insights, strategies, and best practices for dental revenue optimization, AI, eligibility verification, and practice management.">
+  <title>Blog — Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
 </head>
 <body>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="../../index.html" class="logo">
+        <a href="../../index.html" class="logo" aria-label="Elite Dental Force Home">
           <img src="../../images/Grayscale Transparent.png" alt="Elite Dental Force">
         </a>
-
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="has-dropdown">
               <a href="../platform.html" class="nav-link">Platform</a>
@@ -39,7 +39,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="../resources.html" class="nav-link active">Resources</a>
+              <a href="../resources.html" class="nav-link">Resources</a>
               <ul class="dropdown">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
@@ -62,162 +62,191 @@
             <a href="../contact.html#sales" class="btn btn-primary">Book a Demo</a>
           </div>
         </nav>
-
-        <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Blog</span>
-          <h1>Revenue Intelligence Insights</h1>
-          <p class="lead">Expert strategies, industry trends, and best practices for optimizing your dental practice revenue.</p>
+
+    <!-- Page Hero -->
+    <section style="padding: calc(80px + 4rem) 0 4rem; position:relative; z-index:1;">
+      <div class="container" style="text-align:center; max-width: 720px;">
+        <div data-animate>
+          <span class="overline">Knowledge &amp; Insights</span>
+          <h1 style="font-size:clamp(2.25rem,5vw,3.5rem); margin-bottom:1.25rem;">
+            The EDF <span class="gradient-text">Intelligence Blog</span>
+          </h1>
+          <p class="lead" style="max-width:580px; margin:0 auto;">
+            Expert guidance on dental revenue intelligence, AI billing, eligibility best practices, and the future of dental operations.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Featured Article -->
-    <section class="section">
+    <!-- Featured Post -->
+    <section class="section-sm" style="position:relative; z-index:1;">
       <div class="container">
-        <div class="split-section" style="gap: var(--space-12);">
-          <div class="split-visual">
-            <div class="product-visual" style="aspect-ratio: 16/10;">
-              <img src="../../images/blog-featured.jpg" alt="Featured blog article">
+        <a
+          href="https://blog.elitedentalforce.com/post/new-blog-post-4853"
+          target="_blank" rel="noopener"
+          class="featured-post"
+          style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;
+                 background:rgba(255,255,255,0.035); border:1px solid rgba(255,255,255,0.07);
+                 border-radius:1.75rem; padding:3rem;
+                 backdrop-filter:blur(12px); transition:all 380ms cubic-bezier(0.16,1,0.3,1);
+                 position:relative; overflow:hidden;"
+          onmouseover="this.style.borderColor='rgba(75,168,240,0.22)'; this.style.transform='translateY(-4px)';"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';"
+          data-animate
+        >
+          <!-- Top line -->
+          <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(75,168,240,0.5),transparent);"></div>
+
+          <div style="background:linear-gradient(135deg,rgba(75,168,240,0.1),rgba(9,91,167,0.07));
+                      border-radius:1.25rem; aspect-ratio:16/9;
+                      display:flex; align-items:center; justify-content:center;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.4)" stroke-width="1" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+              <circle cx="12" cy="17" r="1"></circle>
+              <path d="M8 21h8"></path>
+            </svg>
+          </div>
+
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;
+                        padding:2px 0.75rem;margin-bottom:1rem;
+                        background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.25);
+                        border-radius:9999px;font-size:0.75rem;font-weight:700;
+                        color:#ffd700;text-transform:uppercase;letter-spacing:0.08em;">
+              Featured
+            </div>
+            <h2 style="font-size:1.75rem; line-height:1.2; margin-bottom:1rem; color:#fff;">
+              AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win
+            </h2>
+            <p style="color:#7daac9; line-height:1.7; margin-bottom:1.5rem;">
+              Something big is shifting in dentistry, and it's not another gadget for the operatory. The organizations that understand the role of accelerated computing will pull ahead — decisively.
+            </p>
+            <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+              <span style="font-size:0.875rem; color:#4a6a85;">December 18, 2025</span>
+              <span style="display:inline-flex; align-items:center; gap:0.375rem;
+                           padding:0.375rem 1rem; border-radius:0.625rem;
+                           background:rgba(75,168,240,0.1); border:1px solid rgba(75,168,240,0.2);
+                           font-size:0.875rem; font-weight:600; color:#4ba8f0;
+                           transition:all 220ms ease;">
+                Read Article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </span>
             </div>
           </div>
-          <div class="split-content">
-            <span class="overline" style="color: var(--color-interactive);">Featured</span>
-            <h2>5 Strategies to Reduce Claim Denials in 2025</h2>
-            <p style="font-size: var(--text-lg); color: var(--color-text-light); margin-bottom: var(--space-4);">Learn how top-performing practices are minimizing denials and accelerating revenue collection with proactive verification and intelligent workflow optimization.</p>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6);">January 15, 2025 • 8 min read</p>
-            <a href="#" class="btn btn-primary">Read Article</a>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
 
-    <!-- Blog Categories -->
-    <section class="section bg-light">
+    <!-- All Posts Grid -->
+    <section class="section">
       <div class="container">
-        <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-bottom: var(--space-12);">
-          <button class="btn btn-primary" style="font-size: var(--text-sm);">All Posts</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Eligibility</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Revenue Optimization</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Industry Trends</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Best Practices</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Product Updates</button>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
+          <h2 style="font-size:1.875rem;" data-animate>All Articles</h2>
+          <a href="https://blog.elitedentalforce.com/dental-billing-solutions" target="_blank" rel="noopener"
+             style="font-size:0.875rem; color:#4ba8f0; display:inline-flex; align-items:center; gap:0.375rem; font-weight:600; transition:opacity 150ms ease;"
+             onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+            View all on blog
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
         </div>
 
-        <!-- Blog Grid -->
         <div class="resource-grid">
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-1.jpg" alt="Blog article preview">
+
+          <!-- Post 1 -->
+          <a href="https://blog.elitedentalforce.com/post/new-blog-post-4853" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="1">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.1),rgba(9,91,167,0.06));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><circle cx="12" cy="17" r="1"></circle><path d="M8 21h8"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Eligibility</span>
-              <h4 class="resource-card-title">The True Cost of Eligibility Errors</h4>
-              <p class="resource-card-excerpt">Understanding how verification mistakes impact your bottom line and what you can do about it.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">January 10, 2025 • 5 min read</p>
+              <span class="resource-card-tag">AI &amp; Technology</span>
+              <span class="resource-card-title">AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win</span>
+              <p class="resource-card-excerpt">Something big is shifting in dentistry, and it's not another gadget for the operatory.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">December 18, 2025</p>
             </div>
           </a>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-2.jpg" alt="Blog article preview">
+          <!-- Post 2 -->
+          <a href="https://blog.elitedentalforce.com/post/new-blog-data-blocks-2025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="2">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.1),rgba(0,31,113,0.08));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Revenue Optimization</span>
-              <h4 class="resource-card-title">Maximizing First-Pass Acceptance Rates</h4>
-              <p class="resource-card-excerpt">Practical techniques to submit clean claims the first time and reduce rework.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">January 5, 2025 • 6 min read</p>
+              <span class="resource-card-tag">Dental Billing</span>
+              <span class="resource-card-title">How Data Blocks AI in Dental Billing</span>
+              <p class="resource-card-excerpt">Vendor lock-in blocks dental AI. Learn how data ownership can help your practice boost billing, reduce denials, and embrace innovation.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">October 21, 2025</p>
             </div>
           </a>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-3.jpg" alt="Blog article preview">
+          <!-- Post 3 -->
+          <a href="https://blog.elitedentalforce.com/post/new-blog-post-00025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="3">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.08),rgba(0,31,113,0.1));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Industry Trends</span>
-              <h4 class="resource-card-title">2025 Dental Insurance Trends to Watch</h4>
-              <p class="resource-card-excerpt">Key changes in payer policies and what they mean for your practice revenue.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">December 28, 2024 • 7 min read</p>
+              <span class="resource-card-tag">Revenue Intelligence</span>
+              <span class="resource-card-title">The $16 Billion Data Dilemma in Dentistry</span>
+              <p class="resource-card-excerpt">Dentistry loses $16B annually from bad data — not effort. Uncover the truth behind flawed metrics and learn how to build accuracy that drives growth.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">October 13, 2025</p>
             </div>
           </a>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-4.jpg" alt="Blog article preview">
+          <!-- Post 4 -->
+          <a href="https://blog.elitedentalforce.com/post/Optimize-Your-Dental-Practice" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="1">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.08),rgba(75,168,240,0.06));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Best Practices</span>
-              <h4 class="resource-card-title">Building a Revenue-First Front Office Culture</h4>
-              <p class="resource-card-excerpt">How to empower your team to catch revenue issues before they become problems.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">December 20, 2024 • 5 min read</p>
+              <span class="resource-card-tag">Practice Operations</span>
+              <span class="resource-card-title">Optimize Your Dental Practice: Compliance, AI, and Staffing Strategies for 2025</span>
+              <p class="resource-card-excerpt">Future-ready dental practices: explore compliance, AI integration, and staffing solutions for sustainable success.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">September 10, 2025</p>
             </div>
           </a>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-5.jpg" alt="Blog article preview">
+          <!-- Post 5 -->
+          <a href="https://blog.elitedentalforce.com/post/new-blog-post-1587" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="2">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.07),rgba(0,31,113,0.09));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Product Updates</span>
-              <h4 class="resource-card-title">Introducing EDiFi Analytics Dashboard 2.0</h4>
-              <p class="resource-card-excerpt">New features and capabilities in our latest platform update.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">December 15, 2024 • 4 min read</p>
+              <span class="resource-card-tag">Dental Operations</span>
+              <span class="resource-card-title">The Life of a Certified Dental Assistant: Tackling Dental Office Workflow Challenges</span>
+              <p class="resource-card-excerpt">Explore the daily challenges CDAs face and how they keep dental office workflows running strong.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">August 20, 2025</p>
             </div>
           </a>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/blog-preview-6.jpg" alt="Blog article preview">
+          <!-- Post 6 -->
+          <a href="https://blog.elitedentalforce.com/post/New-Blog-Dental-Industry-Crisis" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="3">
+            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.1),rgba(75,168,240,0.06));display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
             </div>
             <div class="resource-card-body">
-              <span class="resource-card-tag">Eligibility</span>
-              <h4 class="resource-card-title">Navigating Complex Benefit Structures</h4>
-              <p class="resource-card-excerpt">Tips for verifying coverage when plans have unusual limitations or exclusions.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">December 10, 2024 • 6 min read</p>
+              <span class="resource-card-tag">Industry Analysis</span>
+              <span class="resource-card-title">The Dental Industry Crisis: Why Your Practice Needs Modern Solutions Now</span>
+              <p class="resource-card-excerpt">The dental industry stands at a crossroads. While clinical technology advances, business operations remain stuck in the past.</p>
+              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">August 16, 2025</p>
             </div>
           </a>
+
         </div>
 
-        <!-- Pagination -->
-        <div style="display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-12);">
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">Previous</button>
-          <button class="btn btn-primary" style="padding: var(--space-2) var(--space-4);">1</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">2</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">3</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">Next</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section class="section">
-      <div class="container">
-        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-          <span class="overline">Newsletter</span>
-          <h2>Stay Updated</h2>
-          <p style="color: var(--color-text-light); margin-bottom: var(--space-8);">Get the latest revenue intelligence insights delivered to your inbox. No spam, just valuable content for dental professionals.</p>
-
-          <!-- GoHighLevel Form Placeholder -->
-          <div class="form-container" data-form-tag="Newsletter">
-            <form class="newsletter-form" style="display: flex; gap: var(--space-3); max-width: 500px; margin: 0 auto;">
-              <input type="email" placeholder="Enter your email" required style="flex: 1; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--text-base);">
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
-            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-4);">By subscribing, you agree to our Privacy Policy.</p>
-          </div>
+        <!-- CTA to full blog -->
+        <div class="text-center mt-16" data-animate>
+          <p style="color:#4a6a85; margin-bottom:1.25rem; font-size:0.875rem;">More articles published regularly on our GoHighLevel blog platform</p>
+          <a href="https://blog.elitedentalforce.com/dental-billing-solutions" target="_blank" rel="noopener" class="btn btn-primary">
+            Visit Full Blog
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -225,14 +254,17 @@
     <!-- CTA Band -->
     <section class="cta-band">
       <div class="container">
-        <h2>Ready to Transform Your Revenue Operations?</h2>
-        <p>See how Elite Dental Force can help your practice optimize revenue.</p>
-        <div class="cta-band-actions">
-          <a href="../contact.html#demo" class="btn btn-white btn-lg">Book a Demo</a>
-          <a href="../resources.html" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">Explore Resources</a>
+        <div data-animate>
+          <h2>Ready to Transform Your <span class="gradient-text">Revenue Operations?</span></h2>
+          <p>Join leading dental practices that trust Elite Dental Force for intelligent revenue management.</p>
+          <div class="cta-band-actions">
+            <a href="../contact.html#demo" class="btn btn-primary btn-lg">Book a Demo</a>
+            <a href="../contact.html" class="btn btn-secondary btn-lg">Contact Sales</a>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -240,12 +272,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="../../index.html" class="logo">
-            <img src="../../images/Grayscale Transparent.png" alt="Elite Dental Force">
-          </a>
+          <a href="../../index.html" class="logo"><img src="../../images/Grayscale Transparent.png" alt="Elite Dental Force"></a>
           <p>The infrastructure leader in dental revenue intelligence.</p>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
@@ -254,39 +283,37 @@
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Resources</h5>
           <ul class="footer-links">
             <li><a href="blog.html">Blog</a></li>
             <li><a href="podcast.html">Podcast</a></li>
             <li><a href="webinars.html">Webinars</a></li>
+            <li><a href="news.html">News</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Company</h5>
           <ul class="footer-links">
             <li><a href="../company.html">About Us</a></li>
-            <li><a href="../company/security.html">Security</a></li>
-            <li><a href="../company/faq.html">FAQ</a></li>
+            <li><a href="../partners.html">Partners</a></li>
+            <li><a href="../investors.html">Investors</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Contact</h5>
           <ul class="footer-links">
             <li><a href="../contact.html#sales">Sales</a></li>
             <li><a href="../contact.html#support">Support</a></li>
+            <li><a href="../contact.html">Get in Touch</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="../terms.html">Terms of Service</a>
-          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
         </div>
       </div>
     </div>
