@@ -194,18 +194,12 @@ p:last-child { margin-bottom: 0; }
 .text-small { font-size: var(--fs-sm); }
 .text-white { color: var(--white); }
 
-/* Overline label */
+/* Overline label — no dash */
 .overline {
   display: inline-flex; align-items: center; gap: var(--s2);
   font-size: var(--fs-xs); font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold); margin-bottom: var(--s4);
-}
-.overline::before {
-  content: '';
-  display: inline-block; width: 20px; height: 2px;
-  background: var(--grad-gold); border-radius: var(--r-full);
-  flex-shrink: 0;
 }
 
 /* ================================================
@@ -348,9 +342,15 @@ p:last-child { margin-bottom: 0; }
   display: flex; align-items: center; justify-content: space-between;
 }
 
-.logo img { height: 36px; width: auto; }
+.logo img {
+  height: 64px;
+  width: auto;
+  max-width: 320px;
+  mix-blend-mode: screen;
+  filter: brightness(1.25) contrast(1.05) saturate(1.1);
+}
 .logo { transition: opacity var(--t-fast); }
-.logo:hover { opacity: 0.8; }
+.logo:hover { opacity: 0.85; }
 
 .nav {
   display: flex; align-items: center; gap: var(--s2);
