@@ -125,11 +125,7 @@
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────
-  if (GTM_ID !== 'GTM-MQJKZLMC') {
-    installGTM(GTM_ID);
-  } else {
-    console.warn('[EDF Tracking] Replace GTM_CONTAINER_ID in js/tracking.js with your actual GTM ID.');
-  }
+  installGTM(GTM_ID);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
