@@ -13,6 +13,16 @@
   status = 301
 
 [[redirects]]
+  from = "/revnet"
+  to = "/pages/revnet.html"
+  status = 301
+
+[[redirects]]
+  from = "/dental-revenue-intelligence"
+  to = "/pages/dental-revenue-intelligence.html"
+  status = 301
+
+[[redirects]]
   from = "/demo"
   to = "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
   status = 302
