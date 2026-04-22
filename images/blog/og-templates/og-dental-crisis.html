@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #020917;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  }
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #020917;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 26px 26px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .ambient-glow {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(75,168,240,0.11) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .accent-line {
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 2px;
+    height: 240px;
+    background: linear-gradient(180deg, transparent 0%, #4ba8f0 50%, transparent 100%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .logo-wrap {
+    position: absolute;
+    top: 52px;
+    right: 52px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(75,168,240,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .logo-wrap img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .main-row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 72px;
+    padding-right: 160px;
+  }
+  .content-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  .category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4ba8f0;
+    margin-bottom: 18px;
+  }
+  .title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #ffffff 0%, #d0e8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 700px;
+    margin-bottom: 18px;
+  }
+  .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(211,237,252,0.55);
+    max-width: 580px;
+    line-height: 1.5;
+  }
+  .bottom-strip {
+    flex-shrink: 0;
+    background: #020917;
+    border-top: 1px solid rgba(75,168,240,0.14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 72px;
+    height: 52px;
+  }
+  .bottom-left {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.38);
+  }
+  .bottom-right {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(75,168,240,0.65);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="ambient-glow"></div>
+  <div class="accent-line"></div>
+  <div class="logo-wrap">
+    <div class="logo-glow"></div>
+    <img src="../../favicon.png" alt="EDF">
+  </div>
+  <div class="main-row">
+    <div class="content-stack">
+      <div class="category">Industry Trends</div>
+      <div class="title">The Dental<br>Industry Crisis</div>
+      <div class="subtitle">Why practices need modern solutions now, and what the data shows.</div>
+    </div>
+  </div>
+  <div class="bottom-strip">
+    <span class="bottom-left">elitedentalforce.com</span>
+    <span class="bottom-right">Elite Dental Force Blog</span>
+  </div>
+</div>
+</body>
+</html>
