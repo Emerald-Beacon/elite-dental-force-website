@@ -1,18 +1,578 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force Webinars - Live and on-demand educational sessions on dental revenue optimization, eligibility verification, and practice management.">
-  <title>Webinars - Elite Dental Force</title>
+  <meta name="description" content="Live and on-demand dental revenue webinars from Elite Dental Force — eligibility verification, claim denial prevention, payment audits, and EDiFi platform training for dental practices.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/resources/webinars.html">
+  <meta property="og:title" content="Dental Revenue Webinars — Live & On-Demand | Elite Dental Force">
+  <meta property="og:description" content="Learn from dental billing experts. Free live and on-demand sessions on eligibility, claims, and revenue optimization.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/resources/webinars.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>Dental Revenue Webinars — Live & On-Demand | Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <style>
+    /* ── Grid override ── */
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    /* ── Section backgrounds ── */
+    main .section {
+      background: rgba(2,9,23,0.35);
+    }
+    main .section.bg-alt {
+      background: rgba(8,21,48,0.42);
+    }
+
+    /* ── btn-white (local definition) ── */
+    .btn-white {
+      background: #ffffff;
+      color: #020917;
+      font-weight: 700;
+      border-color: transparent;
+    }
+    .btn-white:hover {
+      background: rgba(255,255,255,0.92);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+    }
+
+    /* ========================================================
+       HERO
+    ======================================================== */
+    .wbn-hero {
+      position: relative;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      padding: calc(80px + var(--s20)) 0 var(--s20);
+      overflow: hidden;
+      background: rgba(2,9,23,0.35);
+    }
+
+    /* ambient orbs */
+    .wbn-hero__orb {
+      position: absolute;
+      border-radius: var(--r-full);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .wbn-hero__orb--1 {
+      width: 800px; height: 600px;
+      top: -180px; left: -200px;
+      background: radial-gradient(ellipse at center, rgba(75,168,240,0.22) 0%, rgba(9,91,167,0.08) 45%, transparent 70%);
+      filter: blur(60px);
+      animation: wbn-orb-drift 14s ease-in-out infinite alternate;
+    }
+    .wbn-hero__orb--2 {
+      width: 600px; height: 500px;
+      bottom: -100px; right: -120px;
+      background: radial-gradient(ellipse at center, rgba(9,91,167,0.18) 0%, rgba(0,31,113,0.06) 50%, transparent 70%);
+      filter: blur(70px);
+      animation: wbn-orb-drift 18s ease-in-out infinite alternate-reverse;
+    }
+    .wbn-hero__orb--3 {
+      width: 500px; height: 500px;
+      top: 30%; left: 40%;
+      background: radial-gradient(ellipse at center, rgba(75,168,240,0.09) 0%, transparent 70%);
+      filter: blur(90px);
+      animation: wbn-orb-drift 22s ease-in-out infinite alternate;
+      animation-delay: -7s;
+    }
+    @keyframes wbn-orb-drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(30px, 20px) scale(1.07); }
+    }
+
+    .wbn-hero > .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    /* overline in hero — blue variant */
+    .wbn-hero__overline {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: var(--s5);
+    }
+    .wbn-hero__overline::before,
+    .wbn-hero__overline::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: rgba(75,168,240,0.5);
+    }
+
+    .wbn-hero__h1 {
+      font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: var(--s6);
+      text-shadow: 0 0 80px rgba(75,168,240,0.15);
+    }
+    .wbn-hero__h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #f0f7ff 0%, #4ba8f0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 18px rgba(75,168,240,0.35));
+    }
+
+    .wbn-hero__sub {
+      font-size: var(--fs-lg);
+      line-height: 1.7;
+      color: rgba(133,184,216,0.85);
+      max-width: 600px;
+      margin: 0 auto var(--s8);
+    }
+
+    /* CTA pills */
+    .wbn-hero__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s4);
+      flex-wrap: wrap;
+      margin-bottom: var(--s10);
+    }
+    .wbn-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s2);
+      padding: 0.625rem 1.5rem;
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      border-radius: var(--r-full);
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .wbn-pill--primary {
+      background: var(--grad-brand);
+      color: var(--white);
+      box-shadow: var(--shadow-btn);
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .wbn-pill--primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      animation: wbn-shimmer 2.8s ease-in-out infinite;
+    }
+    @keyframes wbn-shimmer {
+      0%   { left: -100%; }
+      100% { left: 200%; }
+    }
+    .wbn-pill--primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-btn-hover);
+    }
+    .wbn-pill--ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-blue);
+    }
+    .wbn-pill--ghost:hover {
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.45);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Trust pills row */
+    .wbn-hero__trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s3);
+      flex-wrap: wrap;
+    }
+    .wbn-trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      padding: 0.35rem 0.875rem;
+      background: rgba(75,168,240,0.07);
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: var(--r-full);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(133,184,216,0.9);
+    }
+    .wbn-trust-pill svg {
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ========================================================
+       SECTION HEADERS (shared)
+    ======================================================== */
+    .wbn-section-head {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--s16);
+    }
+    .wbn-section-head .overline {
+      color: var(--blue);
+    }
+    .wbn-section-head h2 {
+      font-size: clamp(var(--fs-3xl), 4vw, var(--fs-5xl));
+      margin-bottom: var(--s5);
+      color: var(--text);
+    }
+    .wbn-section-head p {
+      font-size: var(--fs-lg);
+      color: rgba(133,184,216,0.85);
+      margin: 0;
+    }
+
+    /* ========================================================
+       UPCOMING CARDS
+    ======================================================== */
+    .wbn-upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s8);
+    }
+
+    .wbn-ucard {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: var(--shadow-card);
+    }
+    /* top highlight line */
+    .wbn-ucard::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+      pointer-events: none;
+    }
+    .wbn-ucard:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.55), 0 0 0 1px rgba(75,168,240,0.2), 0 0 40px rgba(75,168,240,0.12);
+      transform: translateY(-4px);
+    }
+
+    /* colored tag bar */
+    .wbn-ucard__tag {
+      background: rgba(75,168,240,0.12);
+      border-bottom: 1px solid rgba(75,168,240,0.25);
+      color: #4ba8f0;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .wbn-ucard__body {
+      padding: var(--s8);
+    }
+
+    .wbn-ucard__title {
+      font-size: var(--fs-2xl);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--s3);
+      line-height: 1.2;
+    }
+
+    .wbn-ucard__desc {
+      font-size: var(--fs-base);
+      color: rgba(133,184,216,0.85);
+      line-height: 1.65;
+      margin-bottom: var(--s6);
+    }
+
+    .wbn-ucard__meta {
+      display: flex;
+      align-items: center;
+      gap: var(--s6);
+      margin-bottom: var(--s8);
+    }
+    .wbn-ucard__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      font-size: var(--fs-sm);
+      color: rgba(133,184,216,0.6);
+    }
+    .wbn-ucard__meta-item svg {
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* full-width register btn */
+    .wbn-ucard__cta {
+      display: flex;
+      width: 100%;
+    }
+    .wbn-ucard__cta .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ========================================================
+       ON-DEMAND CARDS
+    ======================================================== */
+    .wbn-od-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s6);
+    }
+
+    .wbn-od-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+    }
+    /* top highlight line */
+    .wbn-od-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wbn-od-card:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.55), 0 0 0 1px rgba(75,168,240,0.2), 0 0 40px rgba(75,168,240,0.12);
+      transform: translateY(-4px);
+    }
+    .wbn-od-card:hover .wbn-od-card__play-circle {
+      stroke: #4ba8f0;
+      filter: drop-shadow(0 0 8px rgba(75,168,240,0.55));
+    }
+
+    /* placeholder image area */
+    .wbn-od-card__thumb {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      background: rgba(75,168,240,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* play icon */
+    .wbn-od-card__play {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .wbn-od-card:hover .wbn-od-card__play {
+      transform: scale(1.12);
+    }
+    .wbn-od-card__play-circle {
+      stroke: rgba(75,168,240,0.6);
+      transition: stroke 0.3s ease, filter 0.3s ease;
+    }
+    .wbn-od-card__play-triangle {
+      fill: rgba(75,168,240,0.75);
+      transition: fill 0.3s ease;
+    }
+    .wbn-od-card:hover .wbn-od-card__play-triangle {
+      fill: #4ba8f0;
+    }
+
+    /* duration badge overlaid on thumb */
+    .wbn-od-card__duration {
+      position: absolute;
+      bottom: var(--s3);
+      right: var(--s3);
+      background: rgba(2,9,23,0.85);
+      color: rgba(133,184,216,0.9);
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--r-sm);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(75,168,240,0.15);
+    }
+
+    .wbn-od-card__body {
+      padding: 1.25rem var(--s6) var(--s6);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* gold pill tag */
+    .wbn-od-card__tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      background: rgba(255,215,0,0.08);
+      border: 1px solid rgba(255,215,0,0.22);
+      border-radius: var(--r-full);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffd700;
+      margin-bottom: var(--s3);
+      align-self: flex-start;
+    }
+
+    .wbn-od-card__title {
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: auto;
+    }
+
+    .wbn-od-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+      margin-top: var(--s4);
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      color: #4ba8f0;
+      text-decoration: none;
+      transition: gap 0.2s ease, opacity 0.2s ease;
+    }
+    .wbn-od-card__link:hover {
+      gap: 0.55em;
+      opacity: 0.85;
+    }
+
+    /* center-align the "View All" button */
+    .wbn-od-footer {
+      text-align: center;
+      margin-top: var(--s12);
+    }
+
+    /* ghost "View All" button */
+    .wbn-ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      padding: 0.75rem 2rem;
+      font-size: var(--fs-base);
+      font-weight: 600;
+      color: var(--text);
+      background: transparent;
+      border: 1px solid rgba(75,168,240,0.28);
+      border-radius: var(--r-lg);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .wbn-ghost-btn:hover {
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.5);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       REQUEST TOPIC (centered, minimal)
+    ======================================================== */
+    .wbn-request {
+      text-align: center;
+    }
+    .wbn-request .overline {
+      color: var(--blue);
+    }
+    .wbn-request h2 {
+      font-size: clamp(var(--fs-2xl), 3.5vw, var(--fs-4xl));
+      margin-bottom: var(--s5);
+      color: var(--text);
+    }
+    .wbn-request p {
+      font-size: var(--fs-lg);
+      color: rgba(133,184,216,0.85);
+      max-width: 480px;
+      margin: 0 auto var(--s8);
+    }
+
+    /* ========================================================
+       RESPONSIVE
+    ======================================================== */
+    @media (max-width: 900px) {
+      .wbn-upcoming-grid {
+        grid-template-columns: 1fr;
+      }
+      .wbn-od-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wbn-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .wbn-pill {
+        width: 100%;
+        justify-content: center;
+      }
+      .wbn-hero__trust {
+        gap: var(--s2);
+      }
+      .wbn-od-grid {
+        grid-template-columns: 1fr;
+      }
+      .wbn-ucard__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--s2);
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="wbn-page">
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -27,7 +587,7 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
+
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,7 +599,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="../resources.html" class="nav-link active">Resources</a>
+              <a href="index.html" class="nav-link active">Resources</a>
               <ul class="dropdown">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
@@ -54,7 +614,6 @@
                 <li><a href="../company/security.html">Security</a></li>
                 <li><a href="../company/faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -73,200 +632,275 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- ======================================================
+         1. HERO
+    ====================================================== -->
+    <section class="wbn-hero">
+      <div class="wbn-hero__orb wbn-hero__orb--1"></div>
+      <div class="wbn-hero__orb wbn-hero__orb--2"></div>
+      <div class="wbn-hero__orb wbn-hero__orb--3"></div>
+
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Webinars</span>
-          <h1>Learn From the Experts</h1>
-          <p class="lead">Live and on-demand educational sessions on dental revenue optimization, best practices, and platform training.</p>
+        <div class="wbn-hero__overline">Live &amp; On-Demand</div>
+
+        <h1 class="wbn-hero__h1">Learn From the<br><em>Experts</em></h1>
+
+        <p class="wbn-hero__sub">Live and on-demand educational sessions on dental revenue optimization, eligibility mastery, and EDiFi platform training.</p>
+
+        <div class="wbn-hero__actions">
+          <a href="#upcoming" class="wbn-pill wbn-pill--primary">View Upcoming</a>
+          <a href="#ondemand" class="wbn-pill wbn-pill--ghost">Watch On-Demand</a>
+        </div>
+
+        <div class="wbn-hero__trust">
+          <!-- Free to Attend -->
+          <span class="wbn-trust-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Free to Attend
+          </span>
+          <!-- Expert-Led -->
+          <span class="wbn-trust-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            Expert-Led
+          </span>
+          <!-- CE Credit Eligible -->
+          <span class="wbn-trust-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M8 14l-2 7 6-3 6 3-2-7"></path>
+            </svg>
+            CE Credit Eligible
+          </span>
         </div>
       </div>
     </section>
 
-    <!-- Upcoming Webinars -->
-    <section class="section">
+    <!-- ======================================================
+         2. UPCOMING LIVE WEBINARS
+    ====================================================== -->
+    <section id="upcoming" class="section">
       <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
+        <div class="wbn-section-head">
           <span class="overline">Upcoming</span>
-          <h2>Live Webinars</h2>
-          <p>Register for upcoming live sessions and get your questions answered in real-time.</p>
+          <h2>Register for Live Sessions</h2>
         </div>
 
-        <div class="grid grid-2" style="gap: var(--space-8);">
-          <!-- Upcoming Webinar 1 -->
-          <div style="background: var(--color-white); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid var(--color-interactive);">
-            <div style="background: var(--color-interactive); color: white; padding: var(--space-3) var(--space-6); font-size: var(--text-sm); font-weight: var(--font-semibold);">
-              LIVE - January 25, 2025 at 2:00 PM EST
-            </div>
-            <div style="padding: var(--space-8);">
-              <h3 style="margin-bottom: var(--space-3);">Mastering Eligibility Verification</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-6);">Join our experts for a deep dive into streamlining your verification process. Learn best practices for reducing errors and improving efficiency.</p>
-              <div style="display: flex; align-items: center; gap: var(--space-6); margin-bottom: var(--space-6);">
-                <div style="display: flex; align-items: center; gap: var(--space-2);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span style="font-size: var(--text-sm); color: var(--color-text-muted);">60 minutes</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: var(--space-2);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  <span style="font-size: var(--text-sm); color: var(--color-text-muted);">All skill levels</span>
-                </div>
-              </div>
+        <div class="wbn-upcoming-grid">
 
-              <!-- GoHighLevel Form Placeholder -->
-              <div class="form-container" data-form-tag="Webinar Registration">
-                <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
+          <!-- Card 1 -->
+          <article class="wbn-ucard">
+            <div class="wbn-ucard__tag">UPCOMING &mdash; May 15, 2026 at 2:00 PM EST</div>
+            <div class="wbn-ucard__body">
+              <h3 class="wbn-ucard__title">Mastering Eligibility Verification</h3>
+              <p class="wbn-ucard__desc">Join our experts for a deep dive into streamlining your verification process. Learn proven best practices for reducing errors, eliminating coverage surprises, and getting every patient benefit-ready before they sit down.</p>
+              <div class="wbn-ucard__meta">
+                <span class="wbn-ucard__meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  60 min
+                </span>
+                <span class="wbn-ucard__meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  All skill levels
+                </span>
+              </div>
+              <div class="wbn-ucard__cta">
+                <a href="../contact.html" class="btn btn-primary">Register Now</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Upcoming Webinar 2 -->
-          <div style="background: var(--color-white); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid var(--color-interactive);">
-            <div style="background: var(--color-interactive); color: white; padding: var(--space-3) var(--space-6); font-size: var(--text-sm); font-weight: var(--font-semibold);">
-              LIVE - February 8, 2025 at 1:00 PM EST
-            </div>
-            <div style="padding: var(--space-8);">
-              <h3 style="margin-bottom: var(--space-3);">EDiFi Platform Deep Dive</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-6);">Get a comprehensive walkthrough of the EDiFi platform features. Perfect for new users and those looking to maximize their platform usage.</p>
-              <div style="display: flex; align-items: center; gap: var(--space-6); margin-bottom: var(--space-6);">
-                <div style="display: flex; align-items: center; gap: var(--space-2);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span style="font-size: var(--text-sm); color: var(--color-text-muted);">45 minutes</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: var(--space-2);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Current customers</span>
-                </div>
+          <!-- Card 2 -->
+          <article class="wbn-ucard">
+            <div class="wbn-ucard__tag">UPCOMING &mdash; June 5, 2026 at 1:00 PM EST</div>
+            <div class="wbn-ucard__body">
+              <h3 class="wbn-ucard__title">EDiFi Platform Deep Dive</h3>
+              <p class="wbn-ucard__desc">Get a comprehensive walkthrough of every EDiFi module — from eligibility and claims to payment audit and analytics. Perfect for current customers ready to unlock the full power of the platform.</p>
+              <div class="wbn-ucard__meta">
+                <span class="wbn-ucard__meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  45 min
+                </span>
+                <span class="wbn-ucard__meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Current customers
+                </span>
               </div>
+              <div class="wbn-ucard__cta">
+                <a href="../contact.html" class="btn btn-primary">Register Now</a>
+              </div>
+            </div>
+          </article>
 
-              <!-- GoHighLevel Form Placeholder -->
-              <div class="form-container" data-form-tag="Webinar Registration">
-                <a href="#" class="btn btn-primary" style="width: 100%;">Register Now</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- On-Demand Webinars -->
-    <section class="section bg-light">
+    <!-- ======================================================
+         3. ON-DEMAND LIBRARY
+    ====================================================== -->
+    <section id="ondemand" class="section bg-alt">
       <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
+        <div class="wbn-section-head">
           <span class="overline">On-Demand</span>
           <h2>Watch Anytime</h2>
-          <p>Access our library of recorded webinars at your convenience.</p>
+          <p>Access our library of recorded sessions at your convenience.</p>
         </div>
 
-        <div class="resource-grid">
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-1.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">52:18</div>
-            </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Revenue Optimization</span>
-              <h4 class="resource-card-title">Reducing Claim Denials: A Strategic Approach</h4>
-              <p class="resource-card-excerpt">Learn proven strategies to minimize claim denials and accelerate your revenue cycle.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded January 10, 2025</p>
-            </div>
-          </a>
+        <div class="wbn-od-grid">
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-2.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">45:32</div>
+          <!-- Card 1 — Insurance Untangled appearance -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">External</span>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Best Practices</span>
-              <h4 class="resource-card-title">Front Office Revenue Workflows</h4>
-              <p class="resource-card-excerpt">Optimize your front office workflows for maximum revenue capture and patient satisfaction.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded December 15, 2024</p>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">Guest Appearance</span>
+              <h4 class="wbn-od-card__title">Insurance Untangled — Alvin Uta'i on Dental Insurance &amp; Revenue Optimization</h4>
+              <a href="https://podcasts.apple.com/us/podcast/insurance-untangled/id1697118974" target="_blank" rel="noopener" class="wbn-od-card__link">Listen on Apple Podcasts &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-3.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">38:45</div>
+          <!-- Card 2 -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">45:32</span>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Platform Training</span>
-              <h4 class="resource-card-title">Getting Started with EDiFi Analytics</h4>
-              <p class="resource-card-excerpt">A comprehensive guide to using the EDiFi analytics dashboard for revenue insights.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded December 1, 2024</p>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">Best Practices</span>
+              <h4 class="wbn-od-card__title">Front Office Revenue Workflows</h4>
+              <a href="#" class="wbn-od-card__link">Watch Now &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-4.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">55:21</div>
+          <!-- Card 3 -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">38:45</span>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Industry Insights</span>
-              <h4 class="resource-card-title">2025 Insurance Landscape Preview</h4>
-              <p class="resource-card-excerpt">Expert analysis of upcoming insurance changes and how to prepare your practice.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded November 20, 2024</p>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">Platform Training</span>
+              <h4 class="wbn-od-card__title">Getting Started with EDiFi Analytics</h4>
+              <a href="#" class="wbn-od-card__link">Watch Now &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-5.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">42:07</div>
+          <!-- Card 4 -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">55:21</span>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">DSO Focus</span>
-              <h4 class="resource-card-title">Scaling Revenue Operations for Multi-Location Groups</h4>
-              <p class="resource-card-excerpt">Strategies for maintaining revenue consistency across multiple practice locations.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded November 5, 2024</p>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">Industry Insights</span>
+              <h4 class="wbn-od-card__title">2025 Insurance Landscape Preview</h4>
+              <a href="#" class="wbn-od-card__link">Watch Now &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" class="resource-card">
-            <div class="resource-card-image">
-              <img src="../../images/webinar-6.jpg" alt="Webinar thumbnail">
-              <div style="position: absolute; bottom: var(--space-3); right: var(--space-3); background: rgba(0,0,0,0.8); color: white; padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); font-size: var(--text-sm);">48:33</div>
+          <!-- Card 5 -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">42:07</span>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">AI & Technology</span>
-              <h4 class="resource-card-title">Introduction to AI Consultants</h4>
-              <p class="resource-card-excerpt">Discover how AI-powered decision support can transform your practice workflows.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3);">Recorded October 22, 2024</p>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">DSO Focus</span>
+              <h4 class="wbn-od-card__title">Scaling Revenue for Multi-Location Groups</h4>
+              <a href="#" class="wbn-od-card__link">Watch Now &rarr;</a>
             </div>
-          </a>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="wbn-od-card">
+            <div class="wbn-od-card__thumb" aria-hidden="true">
+              <svg class="wbn-od-card__play" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="wbn-od-card__play-circle" cx="26" cy="26" r="24" stroke-width="1.5"/>
+                <polygon class="wbn-od-card__play-triangle" points="21,18 36,26 21,34"/>
+              </svg>
+              <span class="wbn-od-card__duration">48:33</span>
+            </div>
+            <div class="wbn-od-card__body">
+              <span class="wbn-od-card__tag">AI &amp; Technology</span>
+              <h4 class="wbn-od-card__title">Introduction to AI in Dental Billing</h4>
+              <a href="#" class="wbn-od-card__link">Watch Now &rarr;</a>
+            </div>
+          </article>
+
         </div>
 
-        <div style="text-align: center; margin-top: var(--space-8);">
-          <a href="#" class="btn btn-secondary">View All Recordings</a>
+        <div class="wbn-od-footer">
+          <a href="#" class="wbn-ghost-btn">View All Recordings</a>
         </div>
       </div>
     </section>
 
-    <!-- Request Topics -->
+    <!-- ======================================================
+         4. REQUEST A TOPIC
+    ====================================================== -->
     <section class="section">
       <div class="container">
-        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-          <span class="overline">Have a Topic Suggestion?</span>
+        <div class="wbn-request">
+          <span class="overline">Shape Our Content</span>
           <h2>Request a Webinar Topic</h2>
-          <p style="color: var(--color-text-light); margin-bottom: var(--space-8);">We're always looking for topics that matter to you. Let us know what you'd like to learn about.</p>
+          <p>We build content around what matters to you. Tell us what you need to learn.</p>
           <a href="../contact.html" class="btn btn-primary">Submit a Topic Request</a>
         </div>
       </div>
     </section>
 
-    <!-- CTA Band -->
+    <!-- ======================================================
+         5. CTA BAND
+    ====================================================== -->
     <section class="cta-band">
       <div class="container">
         <h2>Ready to See the Platform in Action?</h2>
         <p>Book a personalized demo with our team.</p>
         <div class="cta-band-actions">
-          <a href="../contact.html#demo" class="btn btn-white btn-lg">Book a Demo</a>
-          <a href="../resources.html" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">Explore Resources</a>
+          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-white btn-lg">Book a Demo</a>
+          <a href="../resources.html" class="btn btn-secondary btn-lg" style="border-color: rgba(255,255,255,0.28); color: #fff;">Explore Resources</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -284,7 +918,7 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
+
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -327,5 +961,9 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/tracking.js" defer></script>
+  <script src="../../js/ghl-forms.js" defer></script>
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

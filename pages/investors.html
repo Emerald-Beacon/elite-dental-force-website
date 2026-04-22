@@ -1,33 +1,492 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force Investor Relations - Learn about our market opportunity, differentiation, and growth trajectory in dental revenue intelligence.">
-  <title>Investors - Elite Dental Force</title>
+  <meta name="description" content="Elite Dental Force Investor Relations: Pre-seed opportunity in the $2B dental operational AI market. 100+ office waitlist, validated $59K underpayment recovery, dual revenue model.">
+  <title>Investors | Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <style>
+    /* ── INVESTOR PAGE OVERRIDES ── */
+    :root {
+      --inv-gold: #ffd700;
+      --inv-gold-dim: rgba(255,215,0,0.15);
+      --inv-gold-border: rgba(255,215,0,0.3);
+      --inv-blue: #4ba8f0;
+      --inv-navy: #001f71;
+      --inv-dark: #030139;
+      --inv-card: rgba(255,255,255,0.04);
+      --inv-card-border: rgba(255,255,255,0.08);
+      --inv-card-hover: rgba(255,255,255,0.07);
+    }
+
+    /* Hero */
+    .inv-hero {
+      min-height: 92vh;
+      display: flex; align-items: center;
+      background: radial-gradient(ellipse 120% 80% at 50% 0%, rgba(9,91,167,0.4) 0%, transparent 60%),
+                  radial-gradient(ellipse 60% 50% at 80% 50%, rgba(75,168,240,0.12) 0%, transparent 60%),
+                  var(--bg-deep);
+      position: relative; overflow: hidden;
+      padding: 120px 0 80px;
+    }
+    .inv-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234ba8f0' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .inv-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--inv-gold-dim);
+      border: 1px solid var(--inv-gold-border);
+      color: var(--inv-gold);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .inv-hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--inv-gold); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+    .inv-hero h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      font-weight: 800; line-height: 1.08; letter-spacing: -0.035em;
+      color: #fff; margin: 0 0 24px;
+    }
+    .inv-hero h1 .line-sm {
+      display: block;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 600; letter-spacing: 0.01em;
+      color: rgba(255,255,255,0.5); margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px;
+    }
+    .inv-hero h1 em { font-style: normal; color: var(--inv-blue); }
+    .inv-hero .lead, .inv-hero p.lead {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.75;
+      margin: 0 0 40px;
+    }
+    .inv-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--inv-gold); color: var(--inv-dark);
+      font-weight: 700; padding: 14px 28px; border-radius: 8px;
+      text-decoration: none; font-size: 15px;
+      transition: all 0.2s;
+    }
+    .btn-gold:hover { background: #ffe033; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,215,0,0.3); }
+    .btn-outline-white {
+      border: 1.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85);
+      font-weight: 600; padding: 14px 28px; border-radius: 8px;
+      text-decoration: none; font-size: 15px;
+      transition: all 0.2s; background: transparent;
+    }
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.6); color: #fff; background: rgba(255,255,255,0.05); }
+
+    /* Hero stat strip */
+    .inv-hero-stats {
+      display: flex; gap: 0; flex-wrap: wrap;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 40px;
+    }
+    .inv-hero-stat {
+      flex: 1; min-width: 160px;
+      padding: 0 32px 0 0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .inv-hero-stat:last-child { border-right: none; padding-right: 0; }
+    .inv-hero-stat-num {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800; line-height: 1; color: #fff;
+      letter-spacing: -0.04em; margin-bottom: 6px;
+    }
+    .inv-hero-stat-num.gold { color: var(--inv-gold); }
+    .inv-hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.4; }
+
+    /* Section base */
+    .inv-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .inv-section--dark { background: rgba(3,1,57,0.85); }
+    .inv-section--navy { background: rgba(0,31,113,0.85); }
+    .inv-section--alt { background: rgba(2,15,58,0.85); }
+    .inv-section--deep { background: rgba(1,9,40,0.88); }
+
+    .inv-overline {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--inv-gold);
+      margin-bottom: 12px; display: block;
+    }
+    .inv-h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800; line-height: 1.15; letter-spacing: -0.03em;
+      color: #fff; margin: 0 0 16px;
+    }
+    .inv-h2 em { font-style: normal; color: var(--inv-blue); }
+    .inv-subhead {
+      font-size: 1.05rem; color: rgba(255,255,255,0.55);
+      line-height: 1.7; max-width: 560px;
+    }
+    .inv-section-header { margin-bottom: 56px; }
+
+    /* Problem cards */
+    .inv-problem-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      margin-bottom: 40px;
+    }
+    .inv-problem-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 32px 28px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .inv-problem-card:hover { border-color: rgba(75,168,240,0.3); background: var(--inv-card-hover); }
+    .inv-problem-num {
+      font-size: 2.8rem; font-weight: 800; line-height: 1;
+      letter-spacing: -0.04em; color: var(--inv-gold); margin-bottom: 8px;
+    }
+    .inv-problem-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .inv-problem-desc { font-size: 13.5px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+    /* Market opportunity */
+    .inv-market-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .inv-market-hero {
+      background: linear-gradient(135deg, rgba(9,91,167,0.3), rgba(75,168,240,0.1));
+      border: 1px solid rgba(75,168,240,0.25);
+      border-radius: 20px; padding: 40px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      grid-row: 1 / 3;
+    }
+    .inv-market-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 28px 32px;
+    }
+    .inv-market-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+    .inv-market-num { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.04em; color: #fff; margin-bottom: 4px; }
+    .inv-market-num.blue { color: var(--inv-blue); }
+    .inv-market-num.gold { color: var(--inv-gold); }
+    .inv-market-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .inv-market-tag {
+      display: inline-block;
+      background: rgba(75,168,240,0.15); color: var(--inv-blue);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 100px; margin-bottom: 16px;
+    }
+    .inv-market-tag.gold { background: var(--inv-gold-dim); color: var(--inv-gold); }
+
+    /* Why now */
+    .inv-why-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+    }
+    .inv-why-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 28px;
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .inv-why-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(75,168,240,0.12); border: 1px solid rgba(75,168,240,0.2);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--inv-blue);
+    }
+    .inv-why-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .inv-why-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+    /* Traction */
+    .inv-traction-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+      margin-bottom: 48px;
+    }
+    .inv-traction-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 28px 24px; text-align: center;
+    }
+    .inv-traction-num {
+      font-size: 2.4rem; font-weight: 800; letter-spacing: -0.04em; color: #fff;
+      margin-bottom: 6px;
+    }
+    .inv-traction-num.gold { color: var(--inv-gold); }
+    .inv-traction-num.blue { color: var(--inv-blue); }
+    .inv-traction-label { font-size: 12.5px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+    /* Beta offices */
+    .inv-offices-row {
+      display: flex; flex-wrap: wrap; gap: 12px;
+    }
+    .inv-office-pill {
+      background: rgba(75,168,240,0.08); border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 100px; padding: 10px 20px;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .inv-office-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #34d399; flex-shrink: 0; }
+
+    /* Validation bar */
+    .inv-validation-bar {
+      background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(75,168,240,0.08));
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 16px; padding: 32px 40px;
+      display: flex; gap: 60px; flex-wrap: wrap; align-items: center;
+      margin-top: 40px;
+    }
+    .inv-validation-stat { text-align: center; }
+    .inv-validation-num { font-size: 2rem; font-weight: 800; color: var(--inv-gold); margin-bottom: 4px; }
+    .inv-validation-label { font-size: 12px; color: rgba(255,255,255,0.45); }
+
+    /* Business model */
+    .inv-model-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-bottom: 40px;
+    }
+    .inv-model-card {
+      border-radius: 20px; padding: 40px; position: relative; overflow: hidden;
+    }
+    .inv-model-card--saas { background: linear-gradient(135deg, rgba(75,168,240,0.15), rgba(9,91,167,0.1)); border: 1px solid rgba(75,168,240,0.25); }
+    .inv-model-card--perf { background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.04)); border: 1px solid var(--inv-gold-border); }
+    .inv-model-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 8px; display: block;
+    }
+    .inv-model-label.blue { color: var(--inv-blue); }
+    .inv-model-label.gold { color: var(--inv-gold); }
+    .inv-model-price { font-size: 2.8rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; margin-bottom: 4px; }
+    .inv-model-price sub { font-size: 1rem; font-weight: 600; letter-spacing: 0; }
+    .inv-model-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 24px; }
+    .inv-model-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .inv-model-features li { font-size: 13.5px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 10px; }
+    .inv-model-features li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--inv-blue); flex-shrink: 0; }
+    .inv-model-card--perf .inv-model-features li::before { background: var(--inv-gold); }
+
+    .inv-unit-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    }
+    .inv-unit-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 12px; padding: 20px; text-align: center;
+    }
+    .inv-unit-num { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 4px; }
+    .inv-unit-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.05em; }
+
+    /* Projections table */
+    .inv-proj-table {
+      width: 100%; border-collapse: collapse;
+    }
+    .inv-proj-table th {
+      padding: 14px 20px; text-align: left;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .inv-proj-table th:not(:first-child) { text-align: right; }
+    .inv-proj-table td {
+      padding: 18px 20px;
+      font-size: 14px; color: rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .inv-proj-table td:not(:first-child) { text-align: right; }
+    .inv-proj-table tr:last-child td { border-bottom: none; }
+    .inv-proj-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .inv-proj-table .highlight { color: var(--inv-gold); font-weight: 700; }
+    .inv-proj-table .blue { color: var(--inv-blue); font-weight: 600; }
+    .inv-proj-wrap {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; overflow: hidden;
+    }
+
+    /* Team */
+    .inv-team-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .inv-team-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 20px; padding: 32px; text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .inv-team-card:hover { border-color: rgba(75,168,240,0.3); transform: translateY(-3px); }
+    .inv-team-avatar {
+      width: 100px; height: 100px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(9,91,167,0.5), rgba(75,168,240,0.3));
+      border: 2px solid rgba(75,168,240,0.3);
+      margin: 0 auto 16px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: 800; color: var(--inv-blue);
+    }
+    .inv-team-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .inv-team-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .inv-team-role { font-size: 12px; color: var(--inv-blue); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .inv-team-bio { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+    /* Advisory board */
+    .inv-advisors-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .inv-advisor-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 24px 20px; text-align: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .inv-advisor-card:hover { border-color: rgba(255,215,0,0.25); background: var(--inv-card-hover); }
+    .inv-advisor-initial {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(75,168,240,0.15));
+      border: 1.5px solid var(--inv-gold-border);
+      margin: 0 auto 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 800; color: var(--inv-gold);
+      overflow: hidden;
+    }
+    .inv-advisor-initial img { width: 100%; height: 100%; object-fit: cover; }
+    .inv-advisor-name { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+    .inv-advisor-specialty { font-size: 11.5px; color: var(--inv-blue); font-weight: 600; margin-bottom: 6px; }
+    .inv-advisor-company { font-size: 11.5px; color: rgba(255,255,255,0.35); }
+
+    /* Partners */
+    .inv-partners-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+    }
+    .inv-partner-card {
+      background: var(--inv-card); border: 1px solid var(--inv-card-border);
+      border-radius: 16px; padding: 28px 32px;
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .inv-partner-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(75,168,240,0.12); border: 1px solid rgba(75,168,240,0.2);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--inv-blue);
+    }
+    .inv-partner-name { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .inv-partner-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .inv-partner-terms { font-size: 12px; color: var(--inv-gold); font-weight: 600; margin-top: 8px; }
+
+    /* The Ask */
+    .inv-ask-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start;
+    }
+    .inv-ask-hero {
+      background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(9,91,167,0.2));
+      border: 1px solid var(--inv-gold-border); border-radius: 24px; padding: 48px;
+    }
+    .inv-ask-amount { font-size: 4rem; font-weight: 800; color: var(--inv-gold); letter-spacing: -0.04em; margin-bottom: 4px; }
+    .inv-ask-type { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+    .inv-ask-divider { height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 28px; }
+    .inv-ask-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .inv-ask-row-label { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .inv-ask-row-value { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+
+    .inv-use-funds { display: flex; flex-direction: column; gap: 16px; }
+    .inv-fund-bar { display: flex; flex-direction: column; gap: 6px; }
+    .inv-fund-bar-header { display: flex; justify-content: space-between; align-items: center; }
+    .inv-fund-bar-label { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 600; }
+    .inv-fund-bar-pct { font-size: 13px; color: var(--inv-gold); font-weight: 700; }
+    .inv-fund-bar-track { height: 6px; background: rgba(255,255,255,0.07); border-radius: 100px; overflow: hidden; }
+    .inv-fund-bar-fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--inv-blue), var(--inv-gold)); }
+    .inv-fund-bar-desc { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    .inv-milestone-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+    .inv-milestone { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .inv-milestone:last-child { border-bottom: none; }
+    .inv-milestone-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--inv-gold); flex-shrink: 0; margin-top: 5px; }
+    .inv-milestone-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .inv-milestone-desc { font-size: 12.5px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+    /* CTA form */
+    .inv-form-wrap {
+      max-width: 640px; margin: 0 auto;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px; padding: 48px;
+    }
+    .inv-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .inv-form-group { display: flex; flex-direction: column; gap: 6px; }
+    .inv-form-group.full { grid-column: 1 / 3; }
+    .inv-form-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
+    .inv-form-input, .inv-form-select, .inv-form-textarea {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; padding: 12px 16px;
+      color: #fff; font-size: 14px; font-family: inherit;
+      outline: none; transition: border-color 0.2s;
+      width: 100%; box-sizing: border-box;
+    }
+    .inv-form-input:focus, .inv-form-select:focus, .inv-form-textarea:focus {
+      border-color: rgba(75,168,240,0.5);
+    }
+    .inv-form-input::placeholder, .inv-form-textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .inv-form-select option { background: #030139; }
+    .inv-form-textarea { resize: vertical; min-height: 100px; }
+
+    /* Competitive callout */
+    .inv-competitive-strip {
+      background: linear-gradient(135deg, rgba(75,168,240,0.08), rgba(9,91,167,0.12));
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 16px; padding: 32px 40px;
+      display: flex; gap: 40px; align-items: center; flex-wrap: wrap;
+    }
+    .inv-comp-item { display: flex; flex-direction: column; gap: 4px; }
+    .inv-comp-company { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); }
+    .inv-comp-focus { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .inv-comp-raise { font-size: 13px; color: var(--inv-blue); font-weight: 700; }
+    .inv-comp-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+    .inv-comp-callout {
+      margin-left: auto;
+      background: rgba(255,215,0,0.1); border: 1px solid var(--inv-gold-border);
+      border-radius: 12px; padding: 16px 24px; text-align: center;
+    }
+    .inv-comp-callout-num { font-size: 1.8rem; font-weight: 800; color: var(--inv-gold); }
+    .inv-comp-callout-label { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+    /* Divider */
+    .inv-divider { height: 1px; background: rgba(255,255,255,0.06); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .inv-problem-grid { grid-template-columns: 1fr 1fr; }
+      .inv-market-grid { grid-template-columns: 1fr; }
+      .inv-market-hero { grid-row: auto; }
+      .inv-traction-grid { grid-template-columns: 1fr 1fr; }
+      .inv-team-grid { grid-template-columns: 1fr 1fr; }
+      .inv-advisors-grid { grid-template-columns: 1fr 1fr; }
+      .inv-model-grid { grid-template-columns: 1fr; }
+      .inv-unit-grid { grid-template-columns: 1fr 1fr; }
+      .inv-ask-grid { grid-template-columns: 1fr; }
+      .inv-why-grid { grid-template-columns: 1fr; }
+      .inv-partners-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .inv-problem-grid { grid-template-columns: 1fr; }
+      .inv-traction-grid { grid-template-columns: 1fr 1fr; }
+      .inv-advisors-grid { grid-template-columns: 1fr 1fr; }
+      .inv-team-grid { grid-template-columns: 1fr; }
+      .inv-hero-stat { min-width: 130px; padding: 0 20px 0 0; }
+      .inv-form-grid { grid-template-columns: 1fr; }
+      .inv-form-group.full { grid-column: 1; }
+      .inv-competitive-strip { gap: 20px; }
+      .inv-comp-callout { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Elite Dental Force Home">
           <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
         </a>
-
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="has-dropdown">
               <a href="platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="platform.html">Platform Overview</a></li>
-                <li><a href="ai-consultants.html">AI Consultants</a></li>
+                
                 <li><a href="edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,7 +498,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="resources.html" class="nav-link">Resources</a>
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
               <ul class="dropdown">
                 <li><a href="resources/blog.html">Blog</a></li>
                 <li><a href="resources/podcast.html">Podcast</a></li>
@@ -54,7 +513,6 @@
                 <li><a href="company/security.html">Security</a></li>
                 <li><a href="company/faq.html">FAQ</a></li>
                 <li><a href="investors.html">Investors</a></li>
-                <li><a href="contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -62,295 +520,852 @@
             <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
           </div>
         </nav>
-
-        <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, var(--color-deep) 0%, var(--color-brand) 100%);">
+
+    <!-- ── HERO ── -->
+    <section class="inv-hero">
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Investor Relations</span>
-          <h1>Building Infrastructure for Dental Revenue Intelligence</h1>
-          <p class="lead">Elite Dental Force is creating the operating system for dental practice revenue management, positioned at the intersection of AI, healthcare, and financial technology.</p>
-          <div class="hero-actions" style="justify-content: center;">
-            <a href="#access" class="btn btn-white btn-lg">Request Investor Access</a>
+        <div style="max-width: 720px;">
+          <div class="inv-hero-badge"><span></span>Pre-Seed Investment Opportunity</div>
+          <h1>The Operating System<br>for <em>Dental Revenue</em> Intelligence</h1>
+          <p class="lead">44 FDA-cleared dental AI products exist. Almost all are clinical. Nobody owns operational AI (eligibility, billing, claims automation). Elite Dental Force is building the infrastructure layer that 135,000+ dental practices will depend on.</p>
+          <div class="inv-hero-actions">
+            <a href="#access" class="btn-gold">Request Investor Access</a>
+            <a href="#opportunity" class="btn-outline-white">View the Opportunity</a>
+          </div>
+        </div>
+
+        <div class="inv-hero-stats">
+          <div class="inv-hero-stat">
+            <div class="inv-hero-stat-num gold">500+</div>
+            <div class="inv-hero-stat-label">Offices on waitlist<br>Zero paid advertising</div>
+          </div>
+          <div class="inv-hero-stat" style="padding-left: 32px;">
+            <div class="inv-hero-stat-num">$59K</div>
+            <div class="inv-hero-stat-label">Underpayments found<br>in beta validation</div>
+          </div>
+          <div class="inv-hero-stat" style="padding-left: 32px;">
+            <div class="inv-hero-stat-num">$2B+</div>
+            <div class="inv-hero-stat-label">Addressable market<br>zero category leaders</div>
+          </div>
+          <div class="inv-hero-stat" style="padding-left: 32px;">
+            <div class="inv-hero-stat-num">80%</div>
+            <div class="inv-hero-stat-label">Gross margin target<br>dual revenue model</div>
+          </div>
+          <div class="inv-hero-stat" style="padding-left: 32px;">
+            <div class="inv-hero-stat-num gold">$500K</div>
+            <div class="inv-hero-stat-label">Pre-seed raise<br>SAFE + Warrants</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Market Opportunity -->
-    <section class="section">
+    <!-- ── THE PROBLEM ── -->
+    <section class="inv-section inv-section--dark" id="opportunity">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Market Opportunity</span>
-          <h2>A Massive, Underserved Market</h2>
-          <p>The dental industry represents a significant opportunity for technology-driven transformation.</p>
+        <div class="inv-section-header">
+          <span class="inv-overline">The Problem</span>
+          <h2 class="inv-h2">Dental Practices Are <em>Bleeding Revenue</em> and They Don't Know It</h2>
+          <p class="inv-subhead">The dental industry processes billions in claims annually with workflows that haven't fundamentally changed in decades. The result is staggering, preventable loss.</p>
         </div>
 
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <div class="metric-value">$160B+</div>
-            <div class="metric-label">U.S. Dental Industry</div>
+        <div class="inv-problem-grid">
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">90%</div>
+            <div class="inv-problem-title">Denials Are Preventable</div>
+            <div class="inv-problem-desc">9 in 10 claim denials stem from eligibility errors, coding mismatches, and documentation gaps, all solvable before submission.</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value">200K+</div>
-            <div class="metric-label">Dental Practices</div>
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">$100K</div>
+            <div class="inv-problem-title">Lost Per Practice Per Year</div>
+            <div class="inv-problem-desc">The average dental practice loses $30K–$100K annually to preventable denials, underpayments, and AR aging beyond 90 days.</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value">15%+</div>
-            <div class="metric-label">Revenue Lost to Denials</div>
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">3hrs</div>
+            <div class="inv-problem-title">Wasted Daily on Insurance</div>
+            <div class="inv-problem-desc">Dental staff spend 2–3 hours per day on manual eligibility verification, phone calls to payers, and rework, none of which generates revenue.</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value">$8B+</div>
-            <div class="metric-label">RCM TAM</div>
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">15%</div>
+            <div class="inv-problem-title">Industry Denial Rate</div>
+            <div class="inv-problem-desc">The dental industry averages a 15% claim denial rate. Best-in-class practices achieve under 5%. That gap is pure recoverable revenue.</div>
+          </div>
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">74%</div>
+            <div class="inv-problem-title">Cite Eligibility as Root Cause</div>
+            <div class="inv-problem-desc">74% of surveyed practices identify eligibility verification errors as their leading cause of preventable denials. (EDF Market Validation, 2025)</div>
+          </div>
+          <div class="inv-problem-card">
+            <div class="inv-problem-num">45 days</div>
+            <div class="inv-problem-title">Average AR Aging</div>
+            <div class="inv-problem-desc">The industry average is 45–50 days to collect. Best practices collect in 30–35 days. That 2-week gap compounds into significant cash flow drag.</div>
           </div>
         </div>
 
-        <div style="max-width: 800px; margin: var(--space-16) auto 0; text-align: center;">
-          <p style="font-size: var(--text-lg); color: var(--color-text-light);">Despite the scale of the dental industry, most practices still rely on outdated, manual processes for revenue management. The opportunity for intelligent automation is immense.</p>
+        <div class="inv-validation-bar">
+          <div class="inv-validation-stat">
+            <div class="inv-validation-num">126</div>
+            <div class="inv-validation-label">Survey participants</div>
+          </div>
+          <div class="inv-validation-stat">
+            <div class="inv-validation-num">5yr</div>
+            <div class="inv-validation-label">Longitudinal study</div>
+          </div>
+          <div class="inv-validation-stat">
+            <div class="inv-validation-num">74%</div>
+            <div class="inv-validation-label">Full response rate</div>
+          </div>
+          <div class="inv-validation-stat">
+            <div class="inv-validation-num">91%</div>
+            <div class="inv-validation-label">Willing to evaluate new tech</div>
+          </div>
+          <div class="inv-validation-stat">
+            <div class="inv-validation-num">82%</div>
+            <div class="inv-validation-label">Cite portal dependency as top failure</div>
+          </div>
+          <div style="margin-left: auto; font-size: 12px; color: rgba(255,255,255,0.35); max-width: 200px; line-height: 1.5;">
+            5-year market validation study across private practices, group practices, and DSOs
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Infrastructure Thesis -->
-    <section class="section bg-light">
+    <!-- ── MARKET OPPORTUNITY ── -->
+    <section class="inv-section inv-section--deep">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Investment Thesis</span>
-          <h2>Infrastructure, Not Just Software</h2>
-          <p>We're building the foundational layer that dental practices will rely on for revenue operations.</p>
+        <div class="inv-section-header">
+          <span class="inv-overline">Market Opportunity</span>
+          <h2 class="inv-h2">A <em>Wide-Open Category</em> in a $180B Industry</h2>
+          <p class="inv-subhead">Clinical dental AI has received $100M+ in funding. Operational AI (eligibility, billing, claims) has zero category leaders. That is the gap Elite Dental Force is built to own.</p>
         </div>
 
-        <div class="grid grid-2" style="gap: var(--space-12); align-items: center;">
-          <div>
-            <h3>Long-Term Infrastructure Play</h3>
-            <p>Elite Dental Force isn't building a point solution. We're creating the infrastructure layer that powers intelligent revenue operations for dental practices of all sizes.</p>
-            <ul style="margin: var(--space-6) 0;">
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Two-layer architecture</strong> creates multiple revenue streams and deep customer relationships</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Network effects</strong> as more practices and payers join the platform</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Defensible data moat</strong> through aggregated insights and intelligence</span>
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Expansion revenue</strong> through upsell, cross-sell, and usage-based pricing</span>
-              </li>
+        <div class="inv-market-grid">
+          <div class="inv-market-hero">
+            <div>
+              <div class="inv-market-tag gold">Category Opportunity</div>
+              <div style="font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px;">Zero Category Leaders in Operational Dental AI</div>
+              <p style="font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 28px;">Pearl raised $58M for imaging. Overjet raised $53M for diagnostics. Dental Intelligence raised $85M for analytics dashboards. <strong style="color: rgba(255,255,255,0.8);">Nobody is building the revenue layer.</strong></p>
+            </div>
+            <div class="inv-competitive-strip" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); padding: 20px 24px; gap: 24px; flex-wrap: wrap;">
+              <div class="inv-comp-item">
+                <div class="inv-comp-company">Pearl</div>
+                <div class="inv-comp-focus">Clinical Imaging AI</div>
+                <div class="inv-comp-raise">$58M raised</div>
+              </div>
+              <div class="inv-comp-divider"></div>
+              <div class="inv-comp-item">
+                <div class="inv-comp-company">Overjet</div>
+                <div class="inv-comp-focus">Imaging + Payer AI</div>
+                <div class="inv-comp-raise">$53M raised</div>
+              </div>
+              <div class="inv-comp-divider"></div>
+              <div class="inv-comp-item">
+                <div class="inv-comp-company">Dental Intelligence</div>
+                <div class="inv-comp-focus">Practice Analytics</div>
+                <div class="inv-comp-raise">$85M raised</div>
+              </div>
+              <div class="inv-comp-divider"></div>
+              <div class="inv-comp-item">
+                <div class="inv-comp-company" style="color: var(--inv-gold);">Elite Dental Force</div>
+                <div class="inv-comp-focus">Operational AI: Revenue Layer</div>
+                <div class="inv-comp-raise" style="color: var(--inv-gold);">Category creator</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inv-market-card">
+            <div class="inv-market-label">Total Addressable Market</div>
+            <div class="inv-market-num blue">$2.0B</div>
+            <div class="inv-market-desc">133,000 insurance-participating practices × $15,000/yr platform spend</div>
+          </div>
+          <div class="inv-market-card">
+            <div class="inv-market-label">Serviceable Available Market</div>
+            <div class="inv-market-num">$750M</div>
+            <div class="inv-market-desc">~50,000 DSO-affiliated, multi-location, and high-volume practices</div>
+          </div>
+          <div class="inv-market-card">
+            <div class="inv-market-label">Obtainable Market (Year 4-5)</div>
+            <div class="inv-market-num gold">$22–36M ARR</div>
+            <div class="inv-market-desc">Less than 2% TAM penetration. Conservative relative to comparable SaaS companies.</div>
+          </div>
+          <div class="inv-market-card">
+            <div class="inv-market-label">DSO Market Growth</div>
+            <div class="inv-market-num blue">7%/yr</div>
+            <div class="inv-market-desc">32% of practices are now DSO-affiliated, expanding our SAM organically every year</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY NOW ── -->
+    <section class="inv-section inv-section--alt">
+      <div class="container">
+        <div class="inv-section-header">
+          <span class="inv-overline">Why Now</span>
+          <h2 class="inv-h2">Four Forces Creating a <em>Perfect Window</em></h2>
+          <p class="inv-subhead">The market conditions for operational dental AI have never been more favorable, and that window won't stay open.</p>
+        </div>
+        <div class="inv-why-grid">
+          <div class="inv-why-card">
+            <div class="inv-why-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div>
+              <div class="inv-why-title">DSO Consolidation Accelerating</div>
+              <div class="inv-why-desc">32% of dental practices are now DSO-affiliated, growing 7% per year. DSOs desperately need standardized revenue workflows across locations, exactly what EDF provides.</div>
+            </div>
+          </div>
+          <div class="inv-why-card">
+            <div class="inv-why-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <div class="inv-why-title">Insurance Complexity Exploding</div>
+              <div class="inv-why-desc">31 new CDT codes in 2026. UnitedHealthcare cutting Medicare Advantage dental coverage. 9 states pushing loss ratio legislation. Payer rules have never been harder to navigate manually.</div>
+            </div>
+          </div>
+          <div class="inv-why-card">
+            <div class="inv-why-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="inv-why-title">Labor Crisis Forces AI Adoption</div>
+              <div class="inv-why-desc">Dental office staff turnover is at an all-time high. Practices cannot hire and retain billing staff. AI automation is no longer optional. It's the only viable operating model.</div>
+            </div>
+          </div>
+          <div class="inv-why-card">
+            <div class="inv-why-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="inv-why-title">Operational AI Wide Open</div>
+              <div class="inv-why-desc">44 FDA-cleared dental AI products exist, almost all clinical (imaging/diagnostics). The entire operational layer (eligibility, billing, claims automation) has zero category leaders. EDF is first.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRACTION ── -->
+    <section class="inv-section inv-section--dark">
+      <div class="container">
+        <div class="inv-section-header">
+          <span class="inv-overline">Traction & Validation</span>
+          <h2 class="inv-h2">Market Demand Is <em>Real and Proven</em></h2>
+          <p class="inv-subhead">Before a single dollar of paid advertising, Elite Dental Force has built one of the most validated pre-launch positions in dental technology.</p>
+        </div>
+
+        <div class="inv-traction-grid">
+          <div class="inv-traction-card">
+            <div class="inv-traction-num gold">500+</div>
+            <div class="inv-traction-label">Dental offices on waitlist<br>Zero paid advertising</div>
+          </div>
+          <div class="inv-traction-card">
+            <div class="inv-traction-num blue">81,672</div>
+            <div class="inv-traction-label">Dental professional contacts<br>in CRM database</div>
+          </div>
+          <div class="inv-traction-card">
+            <div class="inv-traction-num gold">$59K</div>
+            <div class="inv-traction-label">Underpayments found<br>in single beta audit</div>
+          </div>
+          <div class="inv-traction-card">
+            <div class="inv-traction-num blue">2,399</div>
+            <div class="inv-traction-label">Real claims analyzed<br>during beta validation</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 32px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px;">Beta Office Program: Active Practices</div>
+          <div class="inv-offices-row">
+            <div class="inv-office-pill">All Smiles Dentistry, Saratoga Springs UT</div>
+            <div class="inv-office-pill">Mint Dental Loft, California</div>
+            <div class="inv-office-pill">Logan Peak Dental, Utah</div>
+            <div class="inv-office-pill">Sierra Dental, Utah</div>
+            <div class="inv-office-pill">Brush Dental, Utah</div>
+            <div class="inv-office-pill">Mesa View Dental, Utah</div>
+          </div>
+        </div>
+
+        <div style="background: var(--inv-card); border: 1px solid var(--inv-card-border); border-radius: 16px; padding: 32px 40px;">
+          <div style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px;">5 Core Hypotheses Validated Through Market Research</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(52,211,153,0.15); border: 1.5px solid rgba(52,211,153,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">
+                <svg width="11" height="11" fill="none" stroke="#34d399" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Practices will adopt automation if it prevents denials <strong style="color: #fff;">before submission</strong></div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(52,211,153,0.15); border: 1.5px solid rgba(52,211,153,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">
+                <svg width="11" height="11" fill="none" stroke="#34d399" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Eligibility accuracy directly ties to <strong style="color: #fff;">treatment acceptance and case conversion</strong></div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(52,211,153,0.15); border: 1.5px solid rgba(52,211,153,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">
+                <svg width="11" height="11" fill="none" stroke="#34d399" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div style="font-size: 14px; color: rgba(255,255,255,0.7);">AR aging is caused by <strong style="color: #fff;">workflow fragmentation</strong>, not isolated claim errors</div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(52,211,153,0.15); border: 1.5px solid rgba(52,211,153,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">
+                <svg width="11" height="11" fill="none" stroke="#34d399" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Practices prefer <strong style="color: #fff;">compute-driven workflow intelligence</strong> over traditional task-based software</div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(52,211,153,0.15); border: 1.5px solid rgba(52,211,153,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">
+                <svg width="11" height="11" fill="none" stroke="#34d399" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Clean claim submission on first attempt is viewed as a <strong style="color: #fff;">financial performance standard</strong>, not a technical nicety</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BUSINESS MODEL ── -->
+    <section class="inv-section inv-section--deep">
+      <div class="container">
+        <div class="inv-section-header">
+          <span class="inv-overline">Business Model</span>
+          <h2 class="inv-h2">We Only Win <em>When Practices Win</em></h2>
+          <p class="inv-subhead">A dual revenue structure that aligns incentives completely and creates two compounding growth engines.</p>
+        </div>
+
+        <div class="inv-model-grid">
+          <div class="inv-model-card inv-model-card--saas">
+            <span class="inv-model-label blue">Stream 1: Subscription</span>
+            <div class="inv-model-price">$499–600<sub>/mo</sub></div>
+            <div class="inv-model-desc">Platform access fee per office. Covers all AI agents, eligibility intelligence, claims workflows, real-time dashboards, and DSO orchestration tools.</div>
+            <ul class="inv-model-features">
+              <li>Predictable recurring revenue</li>
+              <li>Low churn: embedded in daily workflows</li>
+              <li>Volume discounts for multi-location groups</li>
+              <li>Enterprise DSO contracts at custom ACV</li>
             </ul>
           </div>
-          <div class="product-visual">
-            <img src="../images/investor-platform.png" alt="EDiFi Platform showing revenue analytics" style="border-radius: var(--radius-xl);">
+          <div class="inv-model-card inv-model-card--perf">
+            <span class="inv-model-label gold">Stream 2: Performance</span>
+            <div class="inv-model-price">2.5–5%<sub> on recovered AR</sub></div>
+            <div class="inv-model-desc">Revenue participation on AR recovered through the platform. EDF earns only when underpayments are identified and collected. Pure aligned incentives.</div>
+            <ul class="inv-model-features">
+              <li>Grows with practice revenue, not headcount</li>
+              <li>Validated: $59K recovered in single beta audit</li>
+              <li>Displaces 3rd-party RCM services ($16K–$50K/yr)</li>
+              <li>Net new revenue, not existing budget reallocation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 32px;">
+          <div style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px;">Unit Economics</div>
+          <div class="inv-unit-grid">
+            <div class="inv-unit-card">
+              <div class="inv-unit-num">$800</div>
+              <div class="inv-unit-label">Blended ARPU / mo</div>
+            </div>
+            <div class="inv-unit-card">
+              <div class="inv-unit-num" style="color: var(--inv-gold);">20:1</div>
+              <div class="inv-unit-label">LTV:CAC (stabilized)</div>
+            </div>
+            <div class="inv-unit-card">
+              <div class="inv-unit-num" style="color: var(--inv-blue);">&lt;1mo</div>
+              <div class="inv-unit-label">CAC Payback Period</div>
+            </div>
+            <div class="inv-unit-card">
+              <div class="inv-unit-num">80%</div>
+              <div class="inv-unit-label">Gross Margin Target</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: rgba(75,168,240,0.05); border: 1px solid rgba(75,168,240,0.15); border-radius: 16px; padding: 28px 36px; display: flex; gap: 40px; flex-wrap: wrap; align-items: center;">
+          <div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Replaces fragmented tool spend</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: #fff;">$18K–$24K/yr</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.4);">What practices currently spend on fragmented billing tools</div>
+          </div>
+          <div style="font-size: 1.8rem; color: rgba(255,255,255,0.2); font-weight: 300;">→</div>
+          <div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">EDF replaces it with</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--inv-gold);">$6K–$7.2K/yr</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.4);">50–70% cost reduction + recovered revenue upside</div>
+          </div>
+          <div style="font-size: 1.8rem; color: rgba(255,255,255,0.2); font-weight: 300;">→</div>
+          <div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Practice ROI</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: #34d399;">5–10x</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.4);">For every dollar spent on the platform</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Differentiation -->
-    <section class="section">
+    <!-- ── FINANCIAL PROJECTIONS ── -->
+    <section class="inv-section inv-section--alt">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Differentiation</span>
-          <h2>Why Elite Dental Force Wins</h2>
-          <p>Clear competitive advantages in a fragmented market.</p>
+        <div class="inv-section-header">
+          <span class="inv-overline">Financial Projections</span>
+          <h2 class="inv-h2">A Clear Path to <em>$17M ARR</em> in 3 Years</h2>
+          <p class="inv-subhead">Conservative growth model requiring less than 2% TAM penetration. Validated against comparable dental SaaS companies.</p>
         </div>
 
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
-            </div>
-            <h3>Two-Layer Architecture</h3>
-            <p>Unique combination of AI consultants and software platform creates multiple value propositions and revenue streams.</p>
+        <div class="inv-proj-wrap" style="margin-bottom: 40px;">
+          <table class="inv-proj-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Year 1 (2026)</th>
+                <th>Year 2 (2027)</th>
+                <th>Year 3 (2028)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Active Offices</td>
+                <td>237</td>
+                <td>749</td>
+                <td class="highlight">1,778</td>
+              </tr>
+              <tr>
+                <td>Total Revenue</td>
+                <td class="blue">$860K</td>
+                <td class="blue">$5.07M</td>
+                <td class="highlight">$12.8M</td>
+              </tr>
+              <tr>
+                <td>ARR at Year End</td>
+                <td>$2.28M</td>
+                <td>$7.19M</td>
+                <td class="highlight">$17.07M</td>
+              </tr>
+              <tr>
+                <td>YoY Revenue Growth</td>
+                <td>N/A</td>
+                <td class="blue">490%</td>
+                <td>152%</td>
+              </tr>
+              <tr>
+                <td>Gross Margin</td>
+                <td>80%</td>
+                <td>80%</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Net Income</td>
+                <td>$296K</td>
+                <td>$2.91M</td>
+                <td class="highlight">$7.4M</td>
+              </tr>
+              <tr>
+                <td>Net Margin</td>
+                <td>34%</td>
+                <td>57%</td>
+                <td class="highlight">58%</td>
+              </tr>
+              <tr>
+                <td>Monthly Churn</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1.5%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+          <div style="background: rgba(75,168,240,0.06); border: 1px solid rgba(75,168,240,0.15); border-radius: 12px; padding: 24px;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.35); margin-bottom: 8px;">Conservative Case (50%)</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: rgba(255,255,255,0.7);">$6.4M</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.35);">Year 3 revenue: $8.5M ARR</div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <h3>Real-Time Intelligence</h3>
-            <p>Not just analytics. Actionable intelligence delivered in the moment decisions are made.</p>
+          <div style="background: rgba(75,168,240,0.1); border: 1px solid rgba(75,168,240,0.25); border-radius: 12px; padding: 24px;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--inv-blue); margin-bottom: 8px;">Base Case</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: #fff;">$12.8M</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.4);">Year 3 revenue: $17.1M ARR</div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3>Scales With Customers</h3>
-            <p>Platform serves single practices to enterprise DSOs without architectural changes.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <h3>Enterprise Security</h3>
-            <p>HIPAA-aligned, SOC 2 certified infrastructure ready for regulated healthcare environments.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3>Deep Integrations</h3>
-            <p>Pre-built connections to major PMS systems, clearinghouses, and payers.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <h3>Aligned Incentives</h3>
-            <p>Our success is directly tied to improving customer revenue outcomes.</p>
+          <div style="background: rgba(255,215,0,0.08); border: 1px solid var(--inv-gold-border); border-radius: 12px; padding: 24px;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--inv-gold); margin-bottom: 8px;">Upside Case (DSO wins)</div>
+            <div style="font-size: 1.4rem; font-weight: 800; color: var(--inv-gold);">$19.2M</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.4);">Year 3 revenue: $25.6M ARR</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Traction Signals -->
-    <section class="section bg-alt">
+    <!-- ── TEAM ── -->
+    <section class="inv-section inv-section--dark">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Traction</span>
-          <h2>Momentum & Validation</h2>
-          <p>Key indicators of market fit and growth trajectory.</p>
+        <div class="inv-section-header">
+          <span class="inv-overline">Leadership Team</span>
+          <h2 class="inv-h2">Operators Who <em>Know This Industry</em></h2>
+          <p class="inv-subhead">Domain expertise in dental revenue cycle operations, insurance strategy, and AI systems, built from years inside the problem.</p>
         </div>
 
-        <div style="max-width: 800px; margin: 0 auto; background: var(--color-white); padding: var(--space-10); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-          <p style="text-align: center; color: var(--color-text-muted); font-size: var(--text-lg);">Detailed traction metrics available upon request through investor access.</p>
-          <div style="text-align: center; margin-top: var(--space-6);">
-            <a href="#access" class="btn btn-primary">Request Access</a>
+        <div class="inv-team-grid" style="margin-bottom: 24px; grid-template-columns: repeat(4, 1fr);">
+          <div class="inv-team-card">
+            <div class="inv-team-avatar">
+              <img src="../images/team/alvin-utai.png" alt="Alvin Uta'i">
+            </div>
+            <div class="inv-team-name">Alvin Uta'i</div>
+            <div class="inv-team-role">Founder & CEO</div>
+            <div class="inv-team-bio">Deep expertise in dental operations, insurance workflows, and revenue cycle management. Built a 500-office waitlist and 81,672-contact database with zero paid advertising.</div>
+          </div>
+          <div class="inv-team-card">
+            <div class="inv-team-avatar">
+              <img src="../images/team/benjamin-tuinei.png" alt="Benjamin Tuinei">
+            </div>
+            <div class="inv-team-name">Benjamin Tuinei</div>
+            <div class="inv-team-role">Co-Founder</div>
+            <div class="inv-team-bio">President of Veritus Dental Resources. Leading expert in PPO strategy, fee negotiation, and ERISA enforcement. Controls access to the Utah Dental United network of 500+ practices.</div>
+          </div>
+          <div class="inv-team-card">
+            <div class="inv-team-avatar">
+              <img src="../images/team/seti-matua.png" alt="Seti Matua">
+            </div>
+            <div class="inv-team-name">Seti Matua</div>
+            <div class="inv-team-role">Chief Operating Officer</div>
+            <div class="inv-team-bio">Operations leadership for Elite Dental Force. Oversees day-to-day execution, team coordination, and operational infrastructure as the company scales from beta to launch.</div>
+          </div>
+          <div class="inv-team-card">
+            <div class="inv-team-avatar">
+              <img src="../images/team/alex-furer.png" alt="Alex Furer">
+            </div>
+            <div class="inv-team-name">Alex Furer</div>
+            <div class="inv-team-role">Chief Technology Officer</div>
+            <div class="inv-team-bio">PMS integration architecture expert. Deep background in dental software systems including MedicTalk DentForms. Leads engineering and product development for the EDiFi platform.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Leadership -->
-    <section class="section">
+    <!-- ── ADVISORY BOARD ── -->
+    <section class="inv-section inv-section--deep">
       <div class="container">
-        <div class="section-header">
-          <span class="overline">Leadership</span>
-          <h2>Experienced Team</h2>
-          <p>Proven operators with deep domain expertise.</p>
+        <div class="inv-section-header">
+          <span class="inv-overline">Advisory Board</span>
+          <h2 class="inv-h2">12 Advisors. <em>Deep Domain Access.</em></h2>
+          <p class="inv-subhead">Structured advisory board with equity participation (0.25% per advisor, 48-month vesting). Domain coverage across clinical, DSO, enterprise sales, go-to-market, and fundraising.</p>
         </div>
 
-        <div class="grid grid-4" style="gap: var(--space-6);">
-          <div style="text-align: center;">
-            <div style="width: 120px; height: 120px; background: var(--color-alt-bg); border-radius: var(--radius-full); margin: 0 auto var(--space-4); overflow: hidden;">
-              <img src="../images/team/ceo.jpg" alt="CEO" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="inv-advisors-grid">
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-sonya-reddy.png" alt="Dr. Sonya Reddy">
             </div>
-            <h5 style="margin-bottom: var(--space-1);">CEO</h5>
-            <p style="font-size: var(--text-sm); color: var(--color-interactive); margin-bottom: var(--space-2);">Chief Executive Officer</p>
-            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin: 0;">Healthcare tech veteran</p>
+            <div class="inv-advisor-name">Dr. Sonya Reddy, DDS</div>
+            <div class="inv-advisor-specialty">Clinical Strategy</div>
+            <div class="inv-advisor-company">SmileUp Dentistry, Irving TX</div>
           </div>
-          <div style="text-align: center;">
-            <div style="width: 120px; height: 120px; background: var(--color-alt-bg); border-radius: var(--radius-full); margin: 0 auto var(--space-4); overflow: hidden;">
-              <img src="../images/team/cto.jpg" alt="CTO" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-siona-motufau.png" alt="Dr. Siona Motufau Jr.">
             </div>
-            <h5 style="margin-bottom: var(--space-1);">CTO</h5>
-            <p style="font-size: var(--text-sm); color: var(--color-interactive); margin-bottom: var(--space-2);">Chief Technology Officer</p>
-            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin: 0;">Enterprise SaaS builder</p>
+            <div class="inv-advisor-name">Dr. Siona Motufau Jr., DDS</div>
+            <div class="inv-advisor-specialty">Implant &amp; Multi-Location</div>
+            <div class="inv-advisor-company">Ohana Dental Implant Centers, CO</div>
           </div>
-          <div style="text-align: center;">
-            <div style="width: 120px; height: 120px; background: var(--color-alt-bg); border-radius: var(--radius-full); margin: 0 auto var(--space-4); overflow: hidden;">
-              <img src="../images/team/coo.jpg" alt="COO" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-mark-whitfield.png" alt="Dr. Mark Whitefield">
             </div>
-            <h5 style="margin-bottom: var(--space-1);">COO</h5>
-            <p style="font-size: var(--text-sm); color: var(--color-interactive); margin-bottom: var(--space-2);">Chief Operating Officer</p>
-            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin: 0;">Dental ops expert</p>
+            <div class="inv-advisor-name">Dr. Mark Whitefield, DDS</div>
+            <div class="inv-advisor-specialty">Implant Surgery &amp; Dental Tech</div>
+            <div class="inv-advisor-company">Implant Evolution, Nashville TN</div>
           </div>
-          <div style="text-align: center;">
-            <div style="width: 120px; height: 120px; background: var(--color-alt-bg); border-radius: var(--radius-full); margin: 0 auto var(--space-4); overflow: hidden;">
-              <img src="../images/team/cfo.jpg" alt="CFO" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/richard-hoang.png" alt="Richard Hoang">
             </div>
-            <h5 style="margin-bottom: var(--space-1);">CFO</h5>
-            <p style="font-size: var(--text-sm); color: var(--color-interactive); margin-bottom: var(--space-2);">Chief Financial Officer</p>
-            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin: 0;">Growth stage finance</p>
+            <div class="inv-advisor-name">Richard Hoang</div>
+            <div class="inv-advisor-specialty">Clinical &amp; Public Health</div>
+            <div class="inv-advisor-company">Favor Dental, Houston TX</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/sheldon.png" alt="Sheldon Krancher">
+            </div>
+            <div class="inv-advisor-name">Sheldon Krancher</div>
+            <div class="inv-advisor-specialty">DSO Enterprise, Align Technology</div>
+            <div class="inv-advisor-company">ClearForward, New Jersey</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/travis-rodgers.png" alt="Travis Rodgers">
+            </div>
+            <div class="inv-advisor-name">Travis Rodgers</div>
+            <div class="inv-advisor-specialty">GTM, Category Creation, Fundraising</div>
+            <div class="inv-advisor-company">Revere Partners VC, National</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-george-jabbour.png" alt="Dr. George Jabbour">
+            </div>
+            <div class="inv-advisor-name">Dr. George Jabbour, DDS</div>
+            <div class="inv-advisor-specialty">DSO &amp; Multi-Location Operations</div>
+            <div class="inv-advisor-company">Fort Bend Dental / Innovate 32, Houston TX</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-arrington.png" alt="Dr. Joseph Arrington">
+            </div>
+            <div class="inv-advisor-name">Dr. Joseph Arrington</div>
+            <div class="inv-advisor-specialty">Implementation Science &amp; Lean Six Sigma</div>
+            <div class="inv-advisor-company">DO, PhD, DBA, MBA. Black Belt, USPTO Patent Holder</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/darius-somekhian.png" alt="Darius Somekhian">
+            </div>
+            <div class="inv-advisor-name">Darius Somekhian</div>
+            <div class="inv-advisor-specialty">Dental AI Investing &amp; DSO Partnerships</div>
+            <div class="inv-advisor-company">DDS Founders Fund / Cloud Dentistry, New York</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/logan-jack.png" alt="Logan Jack">
+            </div>
+            <div class="inv-advisor-name">Logan Jack</div>
+            <div class="inv-advisor-specialty">DSO Operations, MB2 Dental</div>
+            <div class="inv-advisor-company">MB2 Dental Solutions, Houston TX (800+ locations)</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/dr-dwight-peccora.png" alt="Dr. Dwight Peccora">
+            </div>
+            <div class="inv-advisor-name">Dr. Dwight Peccora</div>
+            <div class="inv-advisor-specialty">DSO Enterprise &amp; Insurance Billing</div>
+            <div class="inv-advisor-company">Innovate 32 / Fort Bend Dental, Houston TX</div>
+          </div>
+          <div class="inv-advisor-card">
+            <div class="inv-advisor-initial">
+              <img src="../images/team/team-member-1.webp" alt="Matalena Ve'e">
+            </div>
+            <div class="inv-advisor-name">Matalena Ve'e</div>
+            <div class="inv-advisor-specialty">Dental Strategy &amp; Insurance</div>
+            <div class="inv-advisor-company">Elite Dental Force, Dental Strategist &amp; Insurance Specialist</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Investor Access Form -->
-    <section class="section bg-deep" id="access" style="color: white;">
-      <div class="container container-narrow">
-        <div class="section-header">
-          <span class="overline" style="color: var(--color-interactive);">Investor Access</span>
-          <h2 style="color: white;">Request Information</h2>
-          <p style="color: rgba(255,255,255,0.8);">Submit your information to receive our investor materials and schedule a conversation with our team.</p>
+    <!-- ── PARTNERS ── -->
+    <section class="inv-section inv-section--alt">
+      <div class="container">
+        <div class="inv-section-header">
+          <span class="inv-overline">Strategic Partners</span>
+          <h2 class="inv-h2">Built on <em>Revenue-Aligned</em> Partnerships</h2>
+          <p class="inv-subhead">Every partnership is structured around shared upside, ensuring alignment between EDF, our partners, and the practices we serve.</p>
         </div>
 
-        <!-- GoHighLevel Form Placeholder -->
-        <div style="background: rgba(255,255,255,0.05); padding: var(--space-10); border-radius: var(--radius-xl); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="inv-partners-grid">
+          <div class="inv-partner-card">
+            <div class="inv-partner-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="inv-partner-name">Claim Chaser (Alakazam Labs)</div>
+              <div class="inv-partner-desc">AR recovery and claims follow-up automation partnership. Integrated directly into the EDiFi revenue recovery workflow to close the loop from denial to collection.</div>
+              <div class="inv-partner-terms">Terms: 3.5% AR fee. 65% EDF / 35% Claim Chaser split on AR recovery. 100% EDF on claims revenue.</div>
+            </div>
+          </div>
+          <div class="inv-partner-card">
+            <div class="inv-partner-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <div>
+              <div class="inv-partner-name">CareFi: Patient Financing</div>
+              <div class="inv-partner-desc">Patient financing integration that captures treatment plan revenue that would otherwise be deferred. EDF earns a revenue participation on financed transactions closed through the platform.</div>
+              <div class="inv-partner-terms">Terms: 1.5% of net revenue on financed transactions. Revenue participation active.</div>
+            </div>
+          </div>
+          <div class="inv-partner-card">
+            <div class="inv-partner-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+            </div>
+            <div>
+              <div class="inv-partner-name">PMS Integrations: Phase 2</div>
+              <div class="inv-partner-desc">Planned certified integrations with the four major practice management systems covering 70%+ of the US dental market. Technical architecture already designed for these connections.</div>
+              <div class="inv-partner-terms">Targets: Dentrix, Eaglesoft, Open Dental, Curve Dental, covering 70%+ of US practices</div>
+            </div>
+          </div>
+          <div class="inv-partner-card">
+            <div class="inv-partner-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="inv-partner-name">Benjamin Tuinei: Utah Dental United</div>
+              <div class="inv-partner-desc">Co-founder Benjamin Tuinei's network gives EDF direct access to 500+ dental offices across Utah through the Utah Dental United coalition, a pre-built enterprise channel for rapid initial adoption.</div>
+              <div class="inv-partner-terms">Controlled by EDF Co-Founder. Direct distribution channel for launch.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THE ASK ── -->
+    <section class="inv-section inv-section--dark" id="the-ask">
+      <div class="container">
+        <div class="inv-section-header">
+          <span class="inv-overline">The Investment</span>
+          <h2 class="inv-h2">Pre-Seed Round: <em>Early Believers Only</em></h2>
+          <p class="inv-subhead">Favorable terms for investors who recognize category creation opportunities before the market does.</p>
+        </div>
+
+        <div class="inv-ask-grid">
+          <div class="inv-ask-hero">
+            <div>
+              <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,215,0,0.6); margin-bottom: 8px;">Total Raise</div>
+              <div class="inv-ask-amount">$500K</div>
+              <div class="inv-ask-type">Pre-Seed: SAFE + Warrants. Delaware C-Corp</div>
+            </div>
+            <div class="inv-ask-divider"></div>
+            <div>
+              <div class="inv-ask-row">
+                <span class="inv-ask-row-label">Instrument</span>
+                <span class="inv-ask-row-value">SAFE + Warrants</span>
+              </div>
+              <div class="inv-ask-row">
+                <span class="inv-ask-row-label">Stage</span>
+                <span class="inv-ask-row-value">Pre-Seed / Pre-Revenue</span>
+              </div>
+              <div class="inv-ask-row">
+                <span class="inv-ask-row-label">Incorporation</span>
+                <span class="inv-ask-row-value">Delaware C-Corp</span>
+              </div>
+              <div class="inv-ask-row">
+                <span class="inv-ask-row-label">Next Milestone</span>
+                <span class="inv-ask-row-value">Paying customers → revenue traction</span>
+              </div>
+              <div class="inv-ask-row" style="margin-bottom: 0;">
+                <span class="inv-ask-row-label">Seed Target</span>
+                <span class="inv-ask-row-value" style="color: var(--inv-gold);">$2M to $4M, Q3 2027</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div style="background: var(--inv-card); border: 1px solid var(--inv-card-border); border-radius: 20px; padding: 32px;">
+              <div style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;">Use of Funds</div>
+              <div class="inv-use-funds">
+                <div class="inv-fund-bar">
+                  <div class="inv-fund-bar-header">
+                    <span class="inv-fund-bar-label">Go-to-Market</span>
+                    <span class="inv-fund-bar-pct">55%</span>
+                  </div>
+                  <div class="inv-fund-bar-track"><div class="inv-fund-bar-fill" style="width: 55%;"></div></div>
+                  <div class="inv-fund-bar-desc">Sales, marketing, conference circuit, outreach campaigns, and customer acquisition ($275K)</div>
+                </div>
+                <div class="inv-fund-bar">
+                  <div class="inv-fund-bar-header">
+                    <span class="inv-fund-bar-label">Operational Overhead</span>
+                    <span class="inv-fund-bar-pct">30%</span>
+                  </div>
+                  <div class="inv-fund-bar-track"><div class="inv-fund-bar-fill" style="width: 30%;"></div></div>
+                  <div class="inv-fund-bar-desc">Cloud infrastructure, tooling, compliance (security 90% complete), and day-to-day operating costs ($150K)</div>
+                </div>
+                <div class="inv-fund-bar">
+                  <div class="inv-fund-bar-header">
+                    <span class="inv-fund-bar-label">Key Team Hires</span>
+                    <span class="inv-fund-bar-pct">15%</span>
+                  </div>
+                  <div class="inv-fund-bar-track"><div class="inv-fund-bar-fill" style="width: 15%;"></div></div>
+                  <div class="inv-fund-bar-desc">Targeted hires in sales, customer success, and operations to support launch growth ($75K)</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--inv-card); border: 1px solid var(--inv-card-border); border-radius: 20px; padding: 32px;">
+              <div style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Path to Next Round</div>
+              <div class="inv-milestone-list">
+                <div class="inv-milestone">
+                  <div class="inv-milestone-dot"></div>
+                  <div>
+                    <div class="inv-milestone-title">First 100 Paying Offices</div>
+                    <div class="inv-milestone-desc">Conference campaign + waitlist conversion → $80K ARR</div>
+                  </div>
+                </div>
+                <div class="inv-milestone">
+                  <div class="inv-milestone-dot"></div>
+                  <div>
+                    <div class="inv-milestone-title">First DSO Contract</div>
+                    <div class="inv-milestone-desc">5 to 50 location group, Q1 2027, unlocks enterprise channel</div>
+                  </div>
+                </div>
+                <div class="inv-milestone">
+                  <div class="inv-milestone-dot"></div>
+                  <div>
+                    <div class="inv-milestone-title">Seed Round: $2M to $4M</div>
+                    <div class="inv-milestone-desc">Q3 2027, with 500 offices and $800K+ ARR as proof</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ACCESS FORM ── -->
+    <section class="inv-section inv-section--deep" id="access">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="inv-overline" style="display: block; text-align: center;">Request Access</span>
+          <h2 class="inv-h2" style="text-align: center;">Ready to <em>Learn More?</em></h2>
+          <p class="inv-subhead" style="margin: 0 auto;">Submit your information and we'll reach out with our full investor package: pitch deck, financial model, and a conversation with the founding team.</p>
+        </div>
+
+        <div class="inv-form-wrap">
           <form data-validate>
-            <div class="grid grid-2" style="gap: var(--space-6);">
-              <div class="form-group">
-                <label class="form-label" for="firstName" style="color: rgba(255,255,255,0.9);">First Name *</label>
-                <input type="text" id="firstName" name="firstName" class="form-input" required>
+            <div class="inv-form-grid">
+              <div class="inv-form-group">
+                <label class="inv-form-label" for="inv-first">First Name *</label>
+                <input type="text" id="inv-first" name="firstName" class="inv-form-input" placeholder="John" required>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="lastName" style="color: rgba(255,255,255,0.9);">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" class="form-input" required>
+              <div class="inv-form-group">
+                <label class="inv-form-label" for="inv-last">Last Name *</label>
+                <input type="text" id="inv-last" name="lastName" class="inv-form-input" placeholder="Smith" required>
+              </div>
+              <div class="inv-form-group full">
+                <label class="inv-form-label" for="inv-email">Email Address *</label>
+                <input type="email" id="inv-email" name="email" class="inv-form-input" placeholder="john@firm.com" required>
+              </div>
+              <div class="inv-form-group full">
+                <label class="inv-form-label" for="inv-firm">Firm / Organization *</label>
+                <input type="text" id="inv-firm" name="firm" class="inv-form-input" placeholder="Acme Ventures" required>
+              </div>
+              <div class="inv-form-group full">
+                <label class="inv-form-label" for="inv-role">Investor Type</label>
+                <select id="inv-role" name="role" class="inv-form-select">
+                  <option value="">Select...</option>
+                  <option value="vc">Venture Capital</option>
+                  <option value="angel">Angel Investor</option>
+                  <option value="pe">Private Equity</option>
+                  <option value="strategic">Strategic Investor</option>
+                  <option value="family">Family Office</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="inv-form-group full">
+                <label class="inv-form-label" for="inv-message">What drew you to Elite Dental Force?</label>
+                <textarea id="inv-message" name="message" class="inv-form-textarea" placeholder="Tell us a bit about your background or interest area..."></textarea>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="email" style="color: rgba(255,255,255,0.9);">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="firm" style="color: rgba(255,255,255,0.9);">Firm / Organization *</label>
-              <input type="text" id="firm" name="firm" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="role" style="color: rgba(255,255,255,0.9);">Your Role</label>
-              <select id="role" name="role" class="form-select">
-                <option value="">Select...</option>
-                <option value="vc">Venture Capital</option>
-                <option value="pe">Private Equity</option>
-                <option value="strategic">Strategic Investor</option>
-                <option value="angel">Angel Investor</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message" style="color: rgba(255,255,255,0.9);">Additional Information</label>
-              <textarea id="message" name="message" class="form-textarea" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Request Access</button>
+            <button type="submit" class="btn-gold" style="width: 100%; padding: 16px; font-size: 16px; border: none; cursor: pointer; margin-top: 8px;">Request Investor Package</button>
+            <p style="text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 16px; margin-bottom: 0;">We respond within 24 hours. All information is kept strictly confidential.</p>
           </form>
-          <p style="text-align: center; font-size: var(--text-sm); color: rgba(255,255,255,0.5); margin-top: var(--space-4);">This form will be connected to GoHighLevel and tagged as "Investor Request"</p>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -363,16 +1378,14 @@
           </a>
           <p>The infrastructure leader in dental revenue intelligence.</p>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="platform.html">Overview</a></li>
-            <li><a href="ai-consultants.html">AI Consultants</a></li>
+            
             <li><a href="edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Resources</h5>
           <ul class="footer-links">
@@ -381,27 +1394,24 @@
             <li><a href="resources/webinars.html">Webinars</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Company</h5>
           <ul class="footer-links">
             <li><a href="company.html">About Us</a></li>
+            <li><a href="investors.html">Investors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Legal</h5>
+          <ul class="footer-links">
             <li><a href="company/security.html">Security</a></li>
             <li><a href="company/faq.html">FAQ</a></li>
           </ul>
         </div>
-
-        <div class="footer-column">
-          <h5 class="footer-heading">Contact</h5>
-          <ul class="footer-links">
-            <li><a href="contact.html#sales">Sales</a></li>
-            <li><a href="contact.html#support">Support</a></li>
-          </ul>
-        </div>
       </div>
-
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved. Incorporated in Delaware.</p>
         <div class="footer-legal">
           <a href="terms.html">Terms of Service</a>
           <a href="privacy.html">Privacy Policy</a>
@@ -411,5 +1421,9 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/tracking.js" defer></script>
+  <script src="../js/ghl-forms.js" defer></script>
+  <script src="../js/booking-widget.js" defer></script>
+  <script src="../js/cookie-consent.js" defer></script>
 </body>
 </html>

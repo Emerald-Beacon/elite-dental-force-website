@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg-d" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#011428"/>
+      <stop offset="100%" stop-color="#000810"/>
+    </radialGradient>
+    <radialGradient id="vaultGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vign-d" cx="50%" cy="50%" r="72%">
+      <stop offset="50%" stop-color="#000810" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000810" stop-opacity="0.85"/>
+    </radialGradient>
+    <filter id="glow-d">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-d)"/>
+
+  <!-- Faint grid -->
+  <g stroke="#4ba8f0" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- ═══ VAULT (main box) ══════════════════════════
+       Origin: (600, 330), scale: sx = 600+80x-80y, sy = 330+40x+40y-90z
+       Vault at x=-1.5..1.5, y=-1..1, z=0..3
+  -->
+  <!-- Using precomputed: vault corners -->
+  <!-- A(-1.5,-1,0)→(600-120+80,330-60-40)=(560,230) -->
+  <!-- B(1.5,-1,0)→(600+120+80,330+60-40)=(800,350) -->
+  <!-- C(1.5,1,0)→(600+120-80,330+60+40)=(640,430) -->
+  <!-- D(-1.5,1,0)→(600-120-80,330-60+40)=(400,310) -->
+  <!-- Top at z=3: subtract 270 from sy -->
+  <!-- A'→(560,-40) too high. Use z=2.5: subtract 225 -->
+  <!-- A'(-1.5,-1,2.5)→(560,5) still borderline. Use z=2: subtract 180 -->
+  <!-- A'(-1.5,-1,2)→(560,50); B'(1.5,-1,2)→(800,170); C'(1.5,1,2)→(640,250); D'(-1.5,1,2)→(400,130) -->
+
+  <!-- Vault shadow on floor -->
+  <ellipse cx="600" cy="435" rx="130" ry="30" fill="rgba(0,0,0,0.4)"/>
+
+  <!-- Vault front face (y=-1): A,B,B',A' -->
+  <polygon points="560,230 800,350 800,170 560,50" fill="#0d2242"/>
+  <!-- Door panel inset on front -->
+  <rect x="610" y="120" width="145" height="185" rx="6" fill="#0a1a36" stroke="#4ba8f0" stroke-opacity="0.22" stroke-width="1.5"/>
+  <!-- Door border highlight -->
+  <rect x="615" y="125" width="135" height="175" rx="4" fill="none" stroke="#4ba8f0" stroke-opacity="0.14" stroke-width="1"/>
+  <!-- Hinge bolts on door -->
+  <circle cx="622" cy="145" r="4" fill="#4ba8f0" fill-opacity="0.35"/>
+  <circle cx="622" cy="280" r="4" fill="#4ba8f0" fill-opacity="0.35"/>
+  <circle cx="743" cy="145" r="4" fill="#4ba8f0" fill-opacity="0.35"/>
+  <circle cx="743" cy="280" r="4" fill="#4ba8f0" fill-opacity="0.35"/>
+
+  <!-- Vault right face (x=1.5): B,B',C',C -->
+  <polygon points="800,350 800,170 640,250 640,430" fill="#091828"/>
+  <!-- Shadow line on right edge -->
+  <line x1="800" y1="170" x2="800" y2="350" stroke="#4ba8f0" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Vault top face: A',B',C',D' -->
+  <polygon points="560,50 800,170 640,250 400,130" fill="#142d55"/>
+  <!-- Top face grid pattern -->
+  <line x1="560" y1="50" x2="640" y2="250" stroke="#4ba8f0" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="680" y1="110" x2="520" y2="190" stroke="#4ba8f0" stroke-opacity="0.06" stroke-width="0.8"/>
+  <line x1="640" y1="250" x2="800" y2="170" stroke="#4ba8f0" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="400" y1="130" x2="800" y2="170" stroke="#4ba8f0" stroke-opacity="0.06" stroke-width="0.8"/>
+  <!-- Top edge highlight -->
+  <line x1="560" y1="50" x2="800" y2="170" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="1.2"/>
+  <line x1="560" y1="50" x2="400" y2="130" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Gold vault glow -->
+  <ellipse cx="682" cy="215" rx="110" ry="80" fill="url(#vaultGlow)"/>
+
+  <!-- LOCK ICON on door — centered at (682, 215) -->
+  <g filter="url(#glow-d)" transform="translate(682,215)">
+    <!-- Lock body -->
+    <rect x="-22" y="-12" width="44" height="36" rx="7" fill="#ffd700" fill-opacity="0.9"/>
+    <!-- Shackle arc -->
+    <path d="M -11,-12 L -11,-26 A 11,11 0 0 1 11,-26 L 11,-12" fill="none" stroke="#ffd700" stroke-width="4" stroke-opacity="0.9" stroke-linecap="round"/>
+    <!-- Keyhole body -->
+    <circle cx="0" cy="2" r="6" fill="#0a1a36"/>
+    <rect x="-3" y="6" width="6" height="9" rx="1.5" fill="#0a1a36"/>
+  </g>
+
+  <!-- ═══ FLOATING DATA CUBES (left side) ═══ -->
+  <!-- Cube A — scale 55,28,55; position left-upper -->
+  <!-- Front: teal-blue; Right: dark blue; Top: light blue -->
+
+  <!-- Cube 1 — at approx (280, 200) center -->
+  <g opacity="0.9">
+    <polygon points="256,246 311,274 311,219 256,191" fill="#1e5e9a"/>
+    <polygon points="311,274 256,302 256,247 311,219" fill="#14406a"/>
+    <polygon points="256,191 311,219 256,247 201,219" fill="#3a8ec8"/>
+    <line x1="256" y1="191" x2="311" y2="219" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="0.8"/>
+    <line x1="311" y1="219" x2="256" y2="247" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+    <line x1="256" y1="247" x2="201" y2="219" stroke="#4ba8f0" stroke-opacity="0.35" stroke-width="0.8"/>
+    <line x1="201" y1="219" x2="256" y2="191" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="0.8"/>
+  </g>
+  <!-- Shadow under cube 1 -->
+  <ellipse cx="256" cy="302" rx="34" ry="9" fill="rgba(0,0,0,0.3)"/>
+
+  <!-- Cube 2 — stacked above cube 1 (smaller) -->
+  <g opacity="0.8">
+    <polygon points="256,191 297,212 297,170 256,149" fill="#2878b8"/>
+    <polygon points="297,212 256,233 256,191 297,170" fill="#1a5286"/>
+    <polygon points="256,149 297,170 256,191 215,170" fill="#4aa0d8"/>
+    <line x1="256" y1="149" x2="297" y2="170" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="0.8"/>
+    <line x1="297" y1="170" x2="256" y2="191" stroke="#4ba8f0" stroke-opacity="0.45" stroke-width="0.8"/>
+    <line x1="256" y1="191" x2="215" y2="170" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+    <line x1="215" y1="170" x2="256" y2="149" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="0.8"/>
+  </g>
+
+  <!-- Cube 3 — right of cube 1, lower -->
+  <g opacity="0.75">
+    <polygon points="340,290 385,314 385,265 340,241" fill="#1a5080"/>
+    <polygon points="385,314 340,338 340,289 385,265" fill="#112e50"/>
+    <polygon points="340,241 385,265 340,289 295,265" fill="#2e7ab0"/>
+    <line x1="340" y1="241" x2="385" y2="265" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+    <line x1="385" y1="265" x2="340" y2="289" stroke="#4ba8f0" stroke-opacity="0.35" stroke-width="0.8"/>
+    <line x1="340" y1="289" x2="295" y2="265" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.8"/>
+    <line x1="295" y1="265" x2="340" y2="241" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  </g>
+  <ellipse cx="340" cy="338" rx="28" ry="7" fill="rgba(0,0,0,0.25)"/>
+
+  <!-- Cube 4 — small, lower-left, slightly floating -->
+  <g opacity="0.6">
+    <polygon points="175,380 210,399 210,362 175,343" fill="#163a60"/>
+    <polygon points="210,399 175,418 175,381 210,362" fill="#0f2542"/>
+    <polygon points="175,343 210,362 175,381 140,362" fill="#245e8a"/>
+    <line x1="175" y1="343" x2="210" y2="362" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.7"/>
+    <line x1="210" y1="362" x2="175" y2="381" stroke="#4ba8f0" stroke-opacity="0.25" stroke-width="0.7"/>
+    <line x1="175" y1="381" x2="140" y2="362" stroke="#4ba8f0" stroke-opacity="0.22" stroke-width="0.7"/>
+    <line x1="140" y1="362" x2="175" y2="343" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.7"/>
+  </g>
+
+  <!-- Flow lines from cubes to vault (dashed electric blue) -->
+  <g fill="none" stroke="#4ba8f0" stroke-dasharray="5,4" stroke-linecap="round">
+    <line x1="311" y1="246" x2="520" y2="305" stroke-opacity="0.35" stroke-width="1.5"/>
+    <line x1="385" y1="290" x2="520" y2="320" stroke-opacity="0.28" stroke-width="1.2"/>
+    <line x1="340" y1="241" x2="510" y2="290" stroke-opacity="0.22" stroke-width="1"/>
+  </g>
+  <!-- Flow arrow tips at vault -->
+  <g fill="#4ba8f0" fill-opacity="0.5">
+    <circle cx="520" cy="305" r="3"/>
+    <circle cx="520" cy="320" r="2.5"/>
+    <circle cx="510" cy="290" r="2.5"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#4ba8f0" fill-opacity="0.3">
+    <circle cx="450" cy="380" r="2"/>
+    <circle cx="430" cy="420" r="1.5"/>
+    <circle cx="470" cy="460" r="2"/>
+    <circle cx="380" cy="460" r="1.5"/>
+    <circle cx="420" cy="500" r="1.5"/>
+    <circle cx="490" cy="510" r="1.5"/>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#vign-d)"/>
+</svg>

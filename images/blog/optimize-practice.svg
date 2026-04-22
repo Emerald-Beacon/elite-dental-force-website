@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#010d22"/>
+      <stop offset="55%" stop-color="#011a38"/>
+      <stop offset="100%" stop-color="#001228"/>
+    </linearGradient>
+    <linearGradient id="riseBar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="riseBar2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="riseBar3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5db8ff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="riseBar4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78c8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3478c8" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="riseBar5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#95d8ff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="riseBar6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#d4a017" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="peakGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="areaGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineAreaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="topFade4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010d22" stop-opacity="0.65"/>
+      <stop offset="28%" stop-color="#010d22" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="botFade4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="68%" stop-color="#010d22" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#010d22" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <rect width="1200" height="630" fill="url(#areaGlow)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#4ba8f0" stroke-opacity="0.035" stroke-width="1">
+    <line x1="120" y1="150" x2="1080" y2="150"/>
+    <line x1="120" y1="250" x2="1080" y2="250"/>
+    <line x1="120" y1="350" x2="1080" y2="350"/>
+    <line x1="120" y1="450" x2="1080" y2="450"/>
+  </g>
+
+  <!-- Baseline -->
+  <line x1="120" y1="500" x2="1080" y2="500" stroke="#4ba8f0" stroke-opacity="0.14" stroke-width="1.5"/>
+
+  <!-- ASCENDING BARS — left to right getting taller -->
+  <!-- Bar 1: shortest -->
+  <rect x="145" y="430" width="100" height="70" fill="url(#riseBar1)" rx="4"/>
+  <rect x="145" y="430" width="100" height="4" fill="#4ba8f0" fill-opacity="0.7" rx="2"/>
+
+  <!-- Bar 2 -->
+  <rect x="295" y="380" width="100" height="120" fill="url(#riseBar2)" rx="4"/>
+  <rect x="295" y="380" width="100" height="4" fill="#4ba8f0" fill-opacity="0.78" rx="2"/>
+
+  <!-- Bar 3 -->
+  <rect x="445" y="310" width="100" height="190" fill="url(#riseBar3)" rx="4"/>
+  <rect x="445" y="310" width="100" height="4" fill="#5db8ff" fill-opacity="0.85" rx="2"/>
+
+  <!-- Bar 4 -->
+  <rect x="595" y="245" width="100" height="255" fill="url(#riseBar4)" rx="4"/>
+  <rect x="595" y="245" width="100" height="4" fill="#78c8ff" fill-opacity="0.88" rx="2"/>
+
+  <!-- Bar 5 -->
+  <rect x="745" y="195" width="100" height="305" fill="url(#riseBar5)" rx="4"/>
+  <rect x="745" y="195" width="100" height="4" fill="#95d8ff" fill-opacity="0.9" rx="2"/>
+
+  <!-- Bar 6: tallest — gold highlight -->
+  <rect x="895" y="140" width="100" height="360" fill="url(#riseBar6)" rx="4"/>
+  <rect x="895" y="140" width="100" height="5" fill="#ffd700" fill-opacity="1" rx="2"/>
+
+  <!-- Area fill under trend line -->
+  <polygon points="195,430 345,380 495,310 645,245 795,195 945,140 945,500 195,500" fill="url(#lineAreaFill)"/>
+
+  <!-- Ascending trend line connecting bar tops -->
+  <polyline points="195,430 345,380 495,310 645,245 795,195 945,140" fill="none" stroke="#4ba8f0" stroke-opacity="0.6" stroke-width="2.5"/>
+
+  <!-- Gold peak glow on tallest bar -->
+  <ellipse cx="945" cy="140" rx="70" ry="55" fill="url(#peakGlow)"/>
+
+  <!-- Accent dots at bar tops -->
+  <g>
+    <circle cx="195" cy="430" r="4" fill="#4ba8f0" fill-opacity="0.7"/>
+    <circle cx="345" cy="380" r="4.5" fill="#4ba8f0" fill-opacity="0.78"/>
+    <circle cx="495" cy="310" r="5" fill="#5db8ff" fill-opacity="0.85"/>
+    <circle cx="645" cy="245" r="5.5" fill="#78c8ff" fill-opacity="0.88"/>
+    <circle cx="795" cy="195" r="6" fill="#95d8ff" fill-opacity="0.9"/>
+    <!-- Gold dot on peak -->
+    <circle cx="945" cy="140" r="7" fill="#ffd700" fill-opacity="0.95"/>
+    <circle cx="945" cy="140" r="3.5" fill="#ffffff" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Upward arrow above peak bar -->
+  <g transform="translate(945, 108)" opacity="0.85">
+    <line x1="0" y1="20" x2="0" y2="0" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="-7,10 0,0 7,10" fill="none" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Floating KPI badge — upper right -->
+  <g transform="translate(980, 68)">
+    <rect x="-52" y="-22" width="104" height="44" rx="8" fill="#ffd700" fill-opacity="0.12" stroke="#ffd700" stroke-opacity="0.35" stroke-width="1"/>
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#ffd700" fill-opacity="0.9" text-anchor="middle" y="8">+34%</text>
+  </g>
+
+  <!-- Small floating metric chips — mid area -->
+  <g opacity="0.5">
+    <rect x="148" y="95" width="72" height="28" rx="6" fill="#4ba8f0" fill-opacity="0.1" stroke="#4ba8f0" stroke-opacity="0.2" stroke-width="1"/>
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#4ba8f0" fill-opacity="0.75" text-anchor="middle" x="184" y="114">+12%</text>
+  </g>
+  <g opacity="0.45">
+    <rect x="298" y="82" width="72" height="28" rx="6" fill="#4ba8f0" fill-opacity="0.1" stroke="#4ba8f0" stroke-opacity="0.18" stroke-width="1"/>
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#4ba8f0" fill-opacity="0.7" text-anchor="middle" x="334" y="101">+18%</text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#topFade4)"/>
+  <rect width="1200" height="630" fill="url(#botFade4)"/>
+</svg>

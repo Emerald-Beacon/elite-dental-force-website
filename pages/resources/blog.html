@@ -1,16 +1,532 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force Blog — Insights, strategies, and best practices for dental revenue optimization, AI, eligibility verification, and practice management.">
-  <title>Blog — Elite Dental Force</title>
+  <meta name="description" content="The Elite Dental Force blog — expert insights on dental revenue cycle management, AI billing automation, insurance eligibility, payment audits, claim denial prevention, and the future of dental practice operations.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/resources/blog.html">
+  <meta property="og:title" content="Dental Revenue Intelligence Blog | Elite Dental Force">
+  <meta property="og:description" content="Expert insights on dental billing AI, eligibility verification, claim denials, and practice revenue optimization.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/resources/blog.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>Dental Revenue Intelligence Blog | Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <style>
+    /* ── Blog-specific design tokens ── */
+    :root {
+      --cat-ai:       #4ba8f0;
+      --cat-billing:  #ffd700;
+      --cat-revenue:  #3454f8;
+      --cat-industry: #7db8f0;
+      --cat-ops:      #fb923c;
+    }
+
+    /* ── Page hero ── */
+    .blog-hero {
+      padding: calc(80px + 5rem) 0 3rem;
+      text-align: center;
+      position: relative; z-index: 1;
+    }
+    .blog-hero h1 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .blog-hero .lead {
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Category filters ── */
+    .blog-filters {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 0.5rem;
+    }
+    .blog-filter-btn {
+      padding: 0.4rem 1.1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 200ms ease;
+      font-family: var(--font);
+      letter-spacing: 0.01em;
+    }
+    .blog-filter-btn:hover {
+      background: rgba(75,168,240,0.1);
+      border-color: rgba(75,168,240,0.35);
+      color: #fff;
+    }
+    .blog-filter-btn.active { color: #fff; border-color: transparent; }
+    .blog-filter-btn[data-filter="all"].active         { background: rgba(75,168,240,0.18); color: var(--cat-ai); border-color: rgba(75,168,240,0.4); }
+    .blog-filter-btn[data-filter="ai"].active          { background: rgba(75,168,240,0.15); color: var(--cat-ai); border-color: rgba(75,168,240,0.4); }
+    .blog-filter-btn[data-filter="billing"].active     { background: rgba(255,215,0,0.12);  color: var(--cat-billing); border-color: rgba(255,215,0,0.35); }
+    .blog-filter-btn[data-filter="revenue"].active     { background: rgba(52,84,248,0.12);  color: var(--cat-revenue); border-color: rgba(52,84,248,0.35); }
+    .blog-filter-btn[data-filter="industry"].active    { background: rgba(125,184,240,0.12);color: var(--cat-industry); border-color: rgba(125,184,240,0.35); }
+    .blog-filter-btn[data-filter="ops"].active         { background: rgba(251,146,60,0.12); color: var(--cat-ops); border-color: rgba(251,146,60,0.35); }
+
+    /* Hidden card during filter */
+    .blog-card.hidden {
+      display: none !important;
+    }
+    /* Smooth reveal on filter change */
+    .blog-card {
+      animation-fill-mode: both;
+    }
+
+    /* ── Section divider ── */
+    .blog-section-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .blog-section-label h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .blog-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* ── Category badge ── */
+    .cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cat-badge--ai       { background: rgba(75,168,240,0.12);  color: var(--cat-ai);      border: 1px solid rgba(75,168,240,0.25); }
+    .cat-badge--billing  { background: rgba(255,215,0,0.1);    color: var(--cat-billing); border: 1px solid rgba(255,215,0,0.25); }
+    .cat-badge--revenue  { background: rgba(52,84,248,0.1);    color: var(--cat-revenue); border: 1px solid rgba(52,84,248,0.25); }
+    .cat-badge--industry { background: rgba(125,184,240,0.1);  color: var(--cat-industry);border: 1px solid rgba(125,184,240,0.25); }
+    .cat-badge--ops      { background: rgba(251,146,60,0.1);   color: var(--cat-ops);     border: 1px solid rgba(251,146,60,0.25); }
+
+    /* ── Read time ── */
+    .read-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* ── Author chip ── */
+    .author-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .author-chip-avatar {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4ba8f0, #095ba7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+    }
+    .author-chip-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ══════════════════════════════════════
+       FEATURED HERO CARD
+    ══════════════════════════════════════ */
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(12px);
+      transition: border-color 350ms ease, transform 350ms ease, box-shadow 350ms ease;
+      text-decoration: none;
+    }
+    .blog-featured:hover {
+      border-color: rgba(75,168,240,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(75,168,240,0.15);
+    }
+    .blog-featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.6), rgba(255,215,0,0.3), transparent);
+    }
+
+    /* Visual pane */
+    .blog-featured-visual {
+      position: relative;
+      min-height: 380px;
+      background: linear-gradient(135deg, #020d1f 0%, #041030 40%, #091a4a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Dark overlay on featured photo */
+    .blog-featured-visual-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(2,12,30,0.72) 0%, rgba(4,16,48,0.55) 100%);
+      z-index: 0;
+    }
+    .blog-featured-tag { z-index: 2; }
+
+    /* Card photo overlay */
+    .blog-card-visual {
+      position: relative;
+    }
+    .blog-card-visual-overlay {
+      position: absolute; inset: 0;
+    }
+    .blog-card-visual-overlay--ai       { background: linear-gradient(160deg, rgba(2,12,30,0.55), rgba(9,91,167,0.4)); }
+    .blog-card-visual-overlay--billing  { background: linear-gradient(160deg, rgba(2,12,30,0.55), rgba(80,60,0,0.45)); }
+    .blog-card-visual-overlay--revenue  { background: linear-gradient(160deg, rgba(2,12,30,0.55), rgba(52,84,248,0.35)); }
+    .blog-card-visual-overlay--industry { background: linear-gradient(160deg, rgba(2,12,30,0.55), rgba(9,91,167,0.35)); }
+    .blog-card-visual-overlay--ops      { background: linear-gradient(160deg, rgba(2,12,30,0.55), rgba(80,40,0,0.4)); }
+
+    /* ── Premium real-photo card treatment ── */
+    .blog-card-visual--photo { position: relative; overflow: hidden; }
+    .blog-card-photo-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(108deg, rgba(1,9,34,0.92) 0%, rgba(1,9,34,0.58) 42%, rgba(1,9,34,0.14) 100%),
+        linear-gradient(to top, rgba(1,9,34,0.88) 0%, rgba(1,9,34,0) 48%);
+    }
+    .blog-card-photo-overlay--crisis {
+      background:
+        linear-gradient(108deg, rgba(1,9,34,0.97) 0%, rgba(1,9,34,0.80) 52%, rgba(1,9,34,0.50) 100%),
+        linear-gradient(to top, rgba(1,9,34,0.97) 0%, rgba(1,9,34,0.25) 55%);
+    }
+    .blog-card-photo-accent {
+      position: absolute; left: 0; top: 0; bottom: 0; width: 3px; z-index: 2;
+      background: linear-gradient(to bottom, #4ba8f0 0%, rgba(75,168,240,0.12) 100%);
+    }
+    .blog-card-photo-accent--gold {
+      background: linear-gradient(to bottom, #ffd700 0%, rgba(255,215,0,0.08) 100%);
+    }
+    .blog-card-photo-dot {
+      position: absolute; top: 14px; left: 14px; z-index: 3;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #4ba8f0; box-shadow: 0 0 10px rgba(75,168,240,0.7);
+    }
+    .blog-card-photo-dot--gold {
+      background: #ffd700; box-shadow: 0 0 10px rgba(255,215,0,0.7);
+    }
+    .blog-featured-visual-icon {
+      position: relative; z-index: 1;
+      width: 120px; height: 120px;
+      border-radius: 2rem;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.2);
+    }
+    .blog-featured-tag {
+      position: absolute;
+      top: 1.5rem; left: 1.5rem;
+      z-index: 2;
+      padding: 0.35rem 0.875rem;
+      border-radius: 9999px;
+      background: rgba(255,215,0,0.12);
+      border: 1px solid rgba(255,215,0,0.3);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffd700;
+    }
+
+    /* Content pane */
+    .blog-featured-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+    .blog-featured-content h2 {
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0;
+    }
+    .blog-featured-content p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-size: 0.9375rem;
+      margin: 0;
+    }
+    .blog-featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .blog-featured-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.625rem;
+      background: rgba(75,168,240,0.1);
+      border: 1px solid rgba(75,168,240,0.25);
+      color: var(--cat-ai);
+      font-size: 0.875rem;
+      font-weight: 700;
+      transition: all 200ms ease;
+      margin-top: 0.5rem;
+      width: fit-content;
+    }
+    .blog-featured:hover .blog-featured-cta {
+      background: rgba(75,168,240,0.2);
+      border-color: rgba(75,168,240,0.5);
+    }
+
+    /* ══════════════════════════════════════
+       MAIN BLOG GRID
+    ══════════════════════════════════════ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Standard post card */
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.035);
+      backdrop-filter: blur(8px);
+      transition: border-color 280ms ease, transform 280ms ease, box-shadow 280ms ease;
+      text-decoration: none;
+      position: relative;
+    }
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      opacity: 0;
+      transition: opacity 280ms ease;
+    }
+    .blog-card:hover {
+      border-color: rgba(75,168,240,0.22);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(75,168,240,0.1);
+    }
+    .blog-card:hover::before { opacity: 1; }
+
+    /* Accent top line color per category */
+    .blog-card--ai::before    { background: linear-gradient(90deg, var(--cat-ai), rgba(75,168,240,0.2)); }
+    .blog-card--billing::before { background: linear-gradient(90deg, var(--cat-billing), rgba(255,215,0,0.2)); }
+    .blog-card--revenue::before { background: linear-gradient(90deg, var(--cat-revenue), rgba(52,84,248,0.2)); }
+    .blog-card--industry::before { background: linear-gradient(90deg, var(--cat-industry), rgba(125,184,240,0.2)); }
+    .blog-card--ops::before   { background: linear-gradient(90deg, var(--cat-ops), rgba(251,146,60,0.2)); }
+
+    .blog-card-visual {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-visual svg {
+      position: relative; z-index: 1;
+    }
+
+    /* Gradient backgrounds per category */
+    .bg-grad-ai       { background: linear-gradient(135deg, rgba(75,168,240,0.1) 0%, rgba(9,91,167,0.06) 100%); }
+    .bg-grad-billing  { background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(9,91,167,0.06) 100%); }
+    .bg-grad-revenue  { background: linear-gradient(135deg, rgba(52,211,153,0.08) 0%, rgba(9,91,167,0.05) 100%); }
+    .bg-grad-industry { background: linear-gradient(135deg, rgba(244,114,182,0.08) 0%, rgba(9,91,167,0.06) 100%); }
+    .bg-grad-ops      { background: linear-gradient(135deg, rgba(251,146,60,0.08) 0%, rgba(9,91,167,0.05) 100%); }
+
+    .blog-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+    .blog-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .blog-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .blog-card-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .blog-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .blog-read-more {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cat-ai);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: gap 180ms ease;
+    }
+    .blog-card:hover .blog-read-more { gap: 0.45rem; }
+
+    /* ══════════════════════════════════════
+       NEWSLETTER INLINE CTA
+    ══════════════════════════════════════ */
+    .blog-newsletter {
+      border-radius: 1.5rem;
+      padding: 3rem;
+      background: linear-gradient(135deg, rgba(9,91,167,0.18) 0%, rgba(0,31,113,0.12) 100%);
+      border: 1px solid rgba(75,168,240,0.15);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .blog-newsletter::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+    .blog-newsletter h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .blog-newsletter p {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+      margin-left: auto; margin-right: auto;
+    }
+    .blog-newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .blog-newsletter-form input {
+      flex: 1;
+      padding: 0.625rem 1rem;
+      border-radius: 0.625rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-family: var(--font);
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 200ms ease;
+    }
+    .blog-newsletter-form input:focus { border-color: rgba(75,168,240,0.5); }
+    .blog-newsletter-form input::placeholder { color: var(--text-muted); }
+
+    /* ══════════════════════════════════════
+       WIDE CARD (spans 2 cols)
+    ══════════════════════════════════════ */
+    .blog-card-wide {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    .blog-card-wide .blog-card-visual {
+      width: 280px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .blog-card-wide .blog-card-title {
+      font-size: 1.125rem;
+    }
+    .blog-card-wide .blog-card-excerpt {
+      -webkit-line-clamp: 4;
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-visual { min-height: 220px; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .blog-card-wide { grid-column: span 2; flex-direction: column; }
+      .blog-card-wide .blog-card-visual { width: 100%; height: 180px; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card-wide { grid-column: span 1; flex-direction: column; }
+      .blog-featured-content { padding: 2rem 1.5rem; }
+      .blog-newsletter { padding: 2rem 1.25rem; }
+      .blog-newsletter-form { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,7 +543,7 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
+                
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,12 +555,13 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="../resources.html" class="nav-link">Resources</a>
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
               <ul class="dropdown">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
                 <li><a href="webinars.html">Webinars</a></li>
                 <li><a href="news.html">News</a></li>
+                <li><a href="../dental-revenue-intelligence.html">What is Dental Revenue Intelligence?</a></li>
               </ul>
             </li>
             <li class="has-dropdown">
@@ -54,7 +571,6 @@
                 <li><a href="../company/security.html">Security</a></li>
                 <li><a href="../company/faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -71,17 +587,21 @@
 
   <main>
 
-    <!-- Page Hero -->
-    <section style="padding: calc(80px + 4rem) 0 4rem; position:relative; z-index:1;">
-      <div class="container" style="text-align:center; max-width: 720px;">
-        <div data-animate>
-          <span class="overline">Knowledge &amp; Insights</span>
-          <h1 style="font-size:clamp(2.25rem,5vw,3.5rem); margin-bottom:1.25rem;">
-            The EDF <span class="gradient-text">Intelligence Blog</span>
-          </h1>
-          <p class="lead" style="max-width:580px; margin:0 auto;">
-            Expert guidance on dental revenue intelligence, AI billing, eligibility best practices, and the future of dental operations.
-          </p>
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+      <div class="container" data-animate>
+        <span class="overline">Intelligence &amp; Insights</span>
+        <h1>The EDF <span class="gradient-text">Intelligence Blog</span></h1>
+        <p class="lead">Where dental revenue strategy meets AI. Insights from the team building the future of dental billing, payment integrity, and practice intelligence.</p>
+
+        <!-- Category filters -->
+        <div class="blog-filters">
+          <button class="blog-filter-btn active" data-filter="all">All</button>
+          <button class="blog-filter-btn" data-filter="ai">AI &amp; Technology</button>
+          <button class="blog-filter-btn" data-filter="billing">Dental Billing</button>
+          <button class="blog-filter-btn" data-filter="revenue">Revenue Intelligence</button>
+          <button class="blog-filter-btn" data-filter="industry">Industry Analysis</button>
+          <button class="blog-filter-btn" data-filter="ops">Practice Operations</button>
         </div>
       </div>
     </section>
@@ -89,165 +609,341 @@
     <!-- Featured Post -->
     <section class="section-sm" style="position:relative; z-index:1;">
       <div class="container">
+        <div class="blog-section-label" data-animate>
+          <h2>Featured</h2>
+        </div>
+
         <a
-          href="https://blog.elitedentalforce.com/post/new-blog-post-4853"
-          target="_blank" rel="noopener"
-          class="featured-post"
-          style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;
-                 background:rgba(255,255,255,0.035); border:1px solid rgba(255,255,255,0.07);
-                 border-radius:1.75rem; padding:3rem;
-                 backdrop-filter:blur(12px); transition:all 380ms cubic-bezier(0.16,1,0.3,1);
-                 position:relative; overflow:hidden;"
-          onmouseover="this.style.borderColor='rgba(75,168,240,0.22)'; this.style.transform='translateY(-4px)';"
-          onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';"
+          href="articles/dental-claim-denial-rates-2025.html"
+          class="blog-featured"
           data-animate
         >
-          <!-- Top line -->
-          <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(75,168,240,0.5),transparent);"></div>
-
-          <div style="background:linear-gradient(135deg,rgba(75,168,240,0.1),rgba(9,91,167,0.07));
-                      border-radius:1.25rem; aspect-ratio:16/9;
-                      display:flex; align-items:center; justify-content:center;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.4)" stroke-width="1" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-              <circle cx="12" cy="17" r="1"></circle>
-              <path d="M8 21h8"></path>
-            </svg>
+          <!-- Visual pane -->
+          <div class="blog-featured-visual" style="background-image:url('../../images/blog/claim-denials.jpg'); background-size:cover; background-position:center;">
+            <span class="blog-featured-tag">Latest</span>
+            <div class="blog-featured-visual-overlay"></div>
           </div>
 
-          <div>
-            <div style="display:inline-flex;align-items:center;gap:0.5rem;
-                        padding:2px 0.75rem;margin-bottom:1rem;
-                        background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.25);
-                        border-radius:9999px;font-size:0.75rem;font-weight:700;
-                        color:#ffd700;text-transform:uppercase;letter-spacing:0.08em;">
-              Featured
-            </div>
-            <h2 style="font-size:1.75rem; line-height:1.2; margin-bottom:1rem; color:#fff;">
-              AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win
-            </h2>
-            <p style="color:#7daac9; line-height:1.7; margin-bottom:1.5rem;">
-              Something big is shifting in dentistry, and it's not another gadget for the operatory. The organizations that understand the role of accelerated computing will pull ahead — decisively.
-            </p>
-            <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-              <span style="font-size:0.875rem; color:#4a6a85;">December 18, 2025</span>
-              <span style="display:inline-flex; align-items:center; gap:0.375rem;
-                           padding:0.375rem 1rem; border-radius:0.625rem;
-                           background:rgba(75,168,240,0.1); border:1px solid rgba(75,168,240,0.2);
-                           font-size:0.875rem; font-weight:600; color:#4ba8f0;
-                           transition:all 220ms ease;">
-                Read Article
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <!-- Content pane -->
+          <div class="blog-featured-content">
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+              <span class="cat-badge cat-badge--ai">Industry Analysis</span>
+              <span class="read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                9 min read
               </span>
+            </div>
+            <h2>Dental Claim Denial Rates in 2025: What the Data Says and How to Fight Back</h2>
+            <p>Dental claim denial rates average 6–12% nationally — but high-performing practices using AI-assisted clean-claim workflows achieve sub-3%. Here's what the data shows, where denials come from, and how to close the gap before it costs you more.</p>
+            <div class="blog-featured-meta">
+              <div class="author-chip">
+                <div class="author-chip-avatar">EDF</div>
+                <span class="author-chip-name">EDF Intelligence Team</span>
+              </div>
+              <span class="blog-date">April 15, 2026</span>
+            </div>
+            <div class="blog-featured-cta">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
             </div>
           </div>
         </a>
       </div>
     </section>
 
-    <!-- All Posts Grid -->
+    <!-- All Articles Grid -->
     <section class="section">
       <div class="container">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
-          <h2 style="font-size:1.875rem;" data-animate>All Articles</h2>
-          <a href="https://blog.elitedentalforce.com/dental-billing-solutions" target="_blank" rel="noopener"
-             style="font-size:0.875rem; color:#4ba8f0; display:inline-flex; align-items:center; gap:0.375rem; font-weight:600; transition:opacity 150ms ease;"
-             onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
-            View all on blog
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
+        <div class="blog-section-label" data-animate>
+          <h2>All Articles</h2>
+          <span id="article-count" style="font-size:0.8125rem; font-weight:600; color:var(--text-muted); white-space:nowrap; margin-right:auto; padding-left:0.75rem;"></span>
         </div>
 
-        <div class="resource-grid">
+        <div class="blog-grid">
 
-          <!-- Post 1 -->
-          <a href="https://blog.elitedentalforce.com/post/new-blog-post-4853" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="1">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.1),rgba(9,91,167,0.06));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><circle cx="12" cy="17" r="1"></circle><path d="M8 21h8"></path></svg>
+          <!-- Wide card: Data Blocks -->
+          <a href="articles/data-blocks-ai-billing.html"
+             class="blog-card blog-card-wide blog-card--billing"
+             data-category="billing"
+             data-animate data-delay="1">
+            <div class="blog-card-visual" style="width:260px; flex-shrink:0; background-image:url('../../images/blog/data-blocks.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-visual-overlay blog-card-visual-overlay--billing"></div>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">AI &amp; Technology</span>
-              <span class="resource-card-title">AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win</span>
-              <p class="resource-card-excerpt">Something big is shifting in dentistry, and it's not another gadget for the operatory.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">December 18, 2025</p>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--billing">Dental Billing</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  5 min read
+                </span>
+              </div>
+              <div class="blog-card-title">How Data Blocks AI in Dental Billing</div>
+              <p class="blog-card-excerpt">Vendor lock-in is quietly killing dental AI adoption. Learn how data ownership gives your practice the power to boost billing accuracy, reduce denials, and actually embrace the innovation you're paying for.</p>
+              <div class="blog-card-footer">
+                <div>
+                  <div class="author-chip">
+                    <div class="author-chip-avatar">EDF</div>
+                    <span class="author-chip-name">EDF Intelligence Team</span>
+                  </div>
+                  <div class="blog-date" style="padding-left:34px; margin-top:2px;">October 21, 2025</div>
+                </div>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
             </div>
           </a>
 
-          <!-- Post 2 -->
-          <a href="https://blog.elitedentalforce.com/post/new-blog-data-blocks-2025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="2">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.1),rgba(0,31,113,0.08));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          <!-- Card: $16B Dilemma -->
+          <a href="articles/16-billion-data-dilemma.html"
+             class="blog-card blog-card--revenue"
+             data-category="revenue"
+             data-animate data-delay="2">
+            <div class="blog-card-visual" style="background-image:url('../../images/blog/revenue-data.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-visual-overlay blog-card-visual-overlay--revenue"></div>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Dental Billing</span>
-              <span class="resource-card-title">How Data Blocks AI in Dental Billing</span>
-              <p class="resource-card-excerpt">Vendor lock-in blocks dental AI. Learn how data ownership can help your practice boost billing, reduce denials, and embrace innovation.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">October 21, 2025</p>
-            </div>
-          </a>
-
-          <!-- Post 3 -->
-          <a href="https://blog.elitedentalforce.com/post/new-blog-post-00025" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="3">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.08),rgba(0,31,113,0.1));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Revenue Intelligence</span>
-              <span class="resource-card-title">The $16 Billion Data Dilemma in Dentistry</span>
-              <p class="resource-card-excerpt">Dentistry loses $16B annually from bad data — not effort. Uncover the truth behind flawed metrics and learn how to build accuracy that drives growth.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">October 13, 2025</p>
-            </div>
-          </a>
-
-          <!-- Post 4 -->
-          <a href="https://blog.elitedentalforce.com/post/Optimize-Your-Dental-Practice" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="1">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.08),rgba(75,168,240,0.06));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-            </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Practice Operations</span>
-              <span class="resource-card-title">Optimize Your Dental Practice: Compliance, AI, and Staffing Strategies for 2025</span>
-              <p class="resource-card-excerpt">Future-ready dental practices: explore compliance, AI integration, and staffing solutions for sustainable success.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">September 10, 2025</p>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--revenue">Revenue Intelligence</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  6 min read
+                </span>
+              </div>
+              <div class="blog-card-title">The $16 Billion Data Dilemma in Dentistry</div>
+              <p class="blog-card-excerpt">Dentistry loses $16B annually from bad data, not lack of effort. Uncover the truth behind flawed metrics and learn how to build data accuracy that actually drives growth.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">October 13, 2025</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
             </div>
           </a>
 
-          <!-- Post 5 -->
-          <a href="https://blog.elitedentalforce.com/post/new-blog-post-1587" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="2">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(75,168,240,0.07),rgba(0,31,113,0.09));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <!-- Card: Optimize Practice -->
+          <a href="articles/optimize-dental-practice-2025.html"
+             class="blog-card blog-card--ops"
+             data-category="ops"
+             data-animate data-delay="1">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/optimize-practice.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay"></div>
+              <div class="blog-card-photo-accent"></div>
+              <div class="blog-card-photo-dot"></div>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Dental Operations</span>
-              <span class="resource-card-title">The Life of a Certified Dental Assistant: Tackling Dental Office Workflow Challenges</span>
-              <p class="resource-card-excerpt">Explore the daily challenges CDAs face and how they keep dental office workflows running strong.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">August 20, 2025</p>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--ops">Practice Operations</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  8 min read
+                </span>
+              </div>
+              <div class="blog-card-title">Optimize Your Dental Practice: Compliance, AI, and Staffing Strategies for 2025</div>
+              <p class="blog-card-excerpt">Future-ready dental practices don't happen by accident. Explore the compliance, AI integration, and staffing solutions that drive sustainable success.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">September 10, 2025</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
             </div>
           </a>
 
-          <!-- Post 6 -->
-          <a href="https://blog.elitedentalforce.com/post/New-Blog-Dental-Industry-Crisis" target="_blank" rel="noopener" class="resource-card" data-animate data-delay="3">
-            <div class="resource-card-image" style="background:linear-gradient(135deg,rgba(9,91,167,0.1),rgba(75,168,240,0.06));display:flex;align-items:center;justify-content:center;">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(75,168,240,0.45)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <!-- Card: CDA Workflow -->
+          <a href="articles/life-of-cda.html"
+             class="blog-card blog-card--industry"
+             data-category="industry"
+             data-animate data-delay="2">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/cda-workflow.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay"></div>
+              <div class="blog-card-photo-accent"></div>
+              <div class="blog-card-photo-dot"></div>
             </div>
-            <div class="resource-card-body">
-              <span class="resource-card-tag">Industry Analysis</span>
-              <span class="resource-card-title">The Dental Industry Crisis: Why Your Practice Needs Modern Solutions Now</span>
-              <p class="resource-card-excerpt">The dental industry stands at a crossroads. While clinical technology advances, business operations remain stuck in the past.</p>
-              <p style="font-size:0.75rem;color:#4a6a85;margin-top:0.75rem;">August 16, 2025</p>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--industry">Dental Operations</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  5 min read
+                </span>
+              </div>
+              <div class="blog-card-title">The Life of a Certified Dental Assistant: Tackling Dental Office Workflow Challenges</div>
+              <p class="blog-card-excerpt">Explore the daily challenges CDAs face and how intelligent workflows, not just harder work, keep dental offices running at peak performance.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">August 20, 2025</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card: Industry Crisis -->
+          <a href="articles/dental-industry-crisis.html"
+             class="blog-card blog-card--ai"
+             data-category="industry"
+             data-animate data-delay="3">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/dental-crisis.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay blog-card-photo-overlay--crisis"></div>
+              <div class="blog-card-photo-accent blog-card-photo-accent--gold"></div>
+              <div class="blog-card-photo-dot blog-card-photo-dot--gold"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--ai">Industry Analysis</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  4 min read
+                </span>
+              </div>
+              <div class="blog-card-title">The Dental Industry Crisis: Why Your Practice Needs Modern Solutions Now</div>
+              <p class="blog-card-excerpt">The dental industry stands at a crossroads. While clinical technology advances rapidly, business operations remain stuck in the past. Here's what that costs you.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">August 16, 2025</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card: Accelerated Computing (AI) -->
+          <a href="articles/ai-accelerated-computing.html"
+             class="blog-card blog-card--ai"
+             data-category="ai"
+             data-animate data-delay="1">
+            <div class="blog-card-visual" style="background-image:url('../../images/blog/ai-computing.png'); background-size:cover; background-position:center;">
+              <div class="blog-card-visual-overlay blog-card-visual-overlay--ai"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--ai">AI &amp; Technology</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  7 min read
+                </span>
+              </div>
+              <div class="blog-card-title">AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win</div>
+              <p class="blog-card-excerpt">The organizations that understand accelerated computing in AI infrastructure will pull ahead of those that don't. Here's what that looks like in dentistry.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">December 18, 2025</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card: Claim Denial Rates 2025 -->
+          <a href="articles/dental-claim-denial-rates-2025.html"
+             class="blog-card blog-card--ai"
+             data-category="industry"
+             data-animate data-delay="2">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/claim-denials.jpg'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay"></div>
+              <div class="blog-card-photo-accent"></div>
+              <div class="blog-card-photo-dot"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--ai">Industry Analysis</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  9 min read
+                </span>
+              </div>
+              <div class="blog-card-title">Dental Claim Denial Rates in 2025: What the Data Says and How to Fight Back</div>
+              <p class="blog-card-excerpt">Dental claim denial rates average 6–12% nationwide — but high-performing practices using AI-assisted workflows achieve sub-3% rates. Here's what the data shows and how to close the gap.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">April 15, 2026</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card: How to Audit Dental Payments -->
+          <a href="articles/how-to-audit-dental-payments.html"
+             class="blog-card blog-card--revenue"
+             data-category="revenue"
+             data-animate data-delay="3">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/payment-audit.jpg'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay"></div>
+              <div class="blog-card-photo-accent"></div>
+              <div class="blog-card-photo-dot"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--revenue">Revenue Intelligence</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  11 min read
+                </span>
+              </div>
+              <div class="blog-card-title">How to Audit Dental Payments: A Complete Guide to Finding Hidden Revenue</div>
+              <p class="blog-card-excerpt">A dental payment audit is a systematic review of every insurance reimbursement against contracted fees. EDiFi's payment audit engine found $59,000 in underpayments across 2,399 claims. Here's how to run one.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">April 8, 2026</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card: Eligibility Verification Best Practices -->
+          <a href="articles/dental-eligibility-verification-best-practices.html"
+             class="blog-card blog-card--billing"
+             data-category="billing"
+             data-animate data-delay="1">
+            <div class="blog-card-visual blog-card-visual--photo" style="background-image:url('../../images/blog/eligibility.jpg'); background-size:cover; background-position:center;">
+              <div class="blog-card-photo-overlay"></div>
+              <div class="blog-card-photo-accent blog-card-photo-accent--gold"></div>
+              <div class="blog-card-photo-dot blog-card-photo-dot--gold"></div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-top">
+                <span class="cat-badge cat-badge--billing">Dental Billing</span>
+                <span class="read-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  10 min read
+                </span>
+              </div>
+              <div class="blog-card-title">Dental Eligibility Verification Best Practices: The Complete 2025 Guide</div>
+              <p class="blog-card-excerpt">Proper dental insurance eligibility verification requires checking six critical data points before every appointment. Practices that automate this process reduce claim denials by up to 70% and save 8+ hours per week.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">March 28, 2026</span>
+                <span class="blog-read-more">
+                  Read
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </span>
+              </div>
             </div>
           </a>
 
         </div>
 
-        <!-- CTA to full blog -->
-        <div class="text-center mt-16" data-animate>
-          <p style="color:#4a6a85; margin-bottom:1.25rem; font-size:0.875rem;">More articles published regularly on our GoHighLevel blog platform</p>
-          <a href="https://blog.elitedentalforce.com/dental-billing-solutions" target="_blank" rel="noopener" class="btn btn-primary">
-            Visit Full Blog
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          </a>
+        <!-- Newsletter Inline CTA -->
+        <div class="blog-newsletter mt-16" data-animate>
+          <span class="overline" style="margin-bottom:0.75rem; display:block;">Stay Ahead</span>
+          <h3>Revenue Intelligence, Straight to Your Inbox</h3>
+          <p>No fluff. Just the strategies, data, and insights your dental team needs to maximize revenue and stay ahead of payer changes.</p>
+          <form class="blog-newsletter-form" onsubmit="return false;" aria-label="Newsletter signup">
+            <input type="email" placeholder="Enter your email address" aria-label="Email address">
+            <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Subscribe</button>
+          </form>
         </div>
+
       </div>
     </section>
 
@@ -255,10 +951,10 @@
     <section class="cta-band">
       <div class="container">
         <div data-animate>
-          <h2>Ready to Transform Your <span class="gradient-text">Revenue Operations?</span></h2>
-          <p>Join leading dental practices that trust Elite Dental Force for intelligent revenue management.</p>
+          <h2>Ready to Find Out How Much <span class="gradient-text">You're Owed?</span></h2>
+          <p>Join 100+ practices on the waitlist. We'll show you exactly what EDiFi finds in your claims before you commit to anything.</p>
           <div class="cta-band-actions">
-            <a href="../contact.html#demo" class="btn btn-primary btn-lg">Book a Demo</a>
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary btn-lg">Book a Demo</a>
             <a href="../contact.html" class="btn btn-secondary btn-lg">Contact Sales</a>
           </div>
         </div>
@@ -279,7 +975,7 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
+            
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -290,6 +986,7 @@
             <li><a href="podcast.html">Podcast</a></li>
             <li><a href="webinars.html">Webinars</a></li>
             <li><a href="news.html">News</a></li>
+            <li><a href="../dental-revenue-intelligence.html">What is Dental Revenue Intelligence?</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -310,7 +1007,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
         <div class="footer-legal">
           <a href="../terms.html">Terms</a>
           <a href="../privacy.html">Privacy</a>
@@ -320,5 +1017,46 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/tracking.js" defer></script>
+  <script src="../../js/ghl-forms.js" defer></script>
+  <script>
+    // ── Category filter — functional show/hide ──
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const blogCards  = document.querySelectorAll('.blog-card');
+    const countEl    = document.getElementById('article-count');
+
+    function updateCount(filter) {
+      if (!countEl) return;
+      const visible = filter === 'all'
+        ? blogCards.length
+        : [...blogCards].filter(c => c.dataset.category === filter).length;
+      countEl.textContent = visible + ' Article' + (visible !== 1 ? 's' : '');
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active pill
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show/hide cards
+        blogCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        updateCount(filter);
+      });
+    });
+
+    updateCount('all');
+  </script>
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

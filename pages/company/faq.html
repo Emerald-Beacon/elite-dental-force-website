@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Frequently Asked Questions about Elite Dental Force - Learn about our platform, integrations, security, pricing, and how to get started.">
-  <title>FAQ - Elite Dental Force</title>
+  <meta name="description" content="Frequently asked questions about EDiFi and Elite Dental Force — how it works, what integrations are supported, pricing, security, HIPAA compliance, and how to get started with dental revenue automation.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/company/faq.html">
+  <meta property="og:title" content="EDiFi FAQ — Dental Revenue Platform Questions Answered | Elite Dental Force">
+  <meta property="og:description" content="How does EDiFi work? What's the pricing? What PMS systems does it integrate with? All your EDiFi questions answered.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/company/faq.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>EDiFi FAQ — Dental Revenue Automation Questions Answered</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,57 +23,466 @@
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
 
-  <!-- FAQ Schema Markup -->
+  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Elite Dental Force?", "acceptedAnswer": { "@type": "Answer", "text": "Elite Dental Force is a dental revenue intelligence platform combining AI-powered consultants with the EDiFi software platform to help practices optimize eligibility, reduce claim denials, and improve overall revenue performance." } },
+      { "@type": "Question", "name": "What integrations are available?", "acceptedAnswer": { "@type": "Answer", "text": "EDiFi integrates with leading practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, and Denticon, plus direct connections with major clearinghouses and payers." } },
+      { "@type": "Question", "name": "How is data protected?", "acceptedAnswer": { "@type": "Answer", "text": "We maintain HIPAA-aligned security including AES-256 encryption, role-based access controls, complete audit logging, and BAA support. All data is encrypted in transit and at rest." } },
+      { "@type": "Question", "name": "Do you provide a Business Associate Agreement?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide a signed BAA to every customer as part of our standard service agreement." } },
+      { "@type": "Question", "name": "How do I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Book a demo with our team. We'll walk you through the platform, understand your needs, and recommend the best path forward for your practice." } }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ====================================================
+       FAQ PAGE — Elite Dental Force
+       ==================================================== */
+
+    /* Grid backdrop */
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    main .section          { background: rgba(2,9,23,0.35); }
+    main .section.bg-light { background: rgba(8,21,48,0.42); }
+
+    /* ── HERO ── */
+    .fq-hero {
+      position: relative;
+      padding: 180px 0 88px;
+      text-align: center;
+      background: rgba(2,9,23,0.45);
+      overflow: hidden;
+    }
+    .fq-hero-glow {
+      position: absolute;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,91,167,0.22) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+    }
+    .fq-hero-inner { position: relative; z-index: 2; }
+
+    .fq-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      border: 1px solid rgba(75,168,240,0.28);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .fq-h1 {
+      font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin: 0 auto 20px;
+      max-width: 680px;
+    }
+    .fq-h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4ba8f0, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .fq-sub {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.48);
+      max-width: 520px;
+      margin: 0 auto 44px;
+    }
+
+    /* Count badge row */
+    .fq-count-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.36);
+    }
+    .fq-count-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: rgba(75,168,240,0.5);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .fq-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* ── LEFT: Category nav ── */
+    .fq-nav {
+      position: sticky;
+      top: 100px;
+    }
+
+    .fq-nav-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+
+    .fq-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fq-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      cursor: pointer;
+      transition: all 0.18s;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
+    .fq-nav-link:hover {
+      color: rgba(255,255,255,0.82);
+      background: rgba(75,168,240,0.06);
+    }
+    .fq-nav-link.active {
+      color: #4ba8f0;
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.2);
+    }
+    .fq-nav-link-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(75,168,240,0.35);
+      flex-shrink: 0;
+      transition: background 0.18s;
+    }
+    .fq-nav-link.active .fq-nav-link-dot { background: #4ba8f0; }
+
+    .fq-nav-count {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.05);
+      border-radius: 100px;
+      padding: 2px 8px;
+    }
+    .fq-nav-link.active .fq-nav-count {
+      color: #4ba8f0;
+      background: rgba(75,168,240,0.12);
+    }
+
+    /* Divider below nav */
+    .fq-nav-divider {
+      height: 1px;
+      background: rgba(75,168,240,0.08);
+      margin: 20px 0;
+    }
+
+    .fq-nav-cta {
+      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .fq-nav-cta p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .fq-nav-cta a {
+      display: block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      padding: 9px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .fq-nav-cta a:hover { background: rgba(255,255,255,0.22); }
+
+    /* ── RIGHT: FAQ categories + items ── */
+    .fq-body { display: flex; flex-direction: column; gap: 52px; }
+
+    .fq-category-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fq-category-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(75,168,240,0.12);
+    }
+
+    .fq-category-h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    /* Accordion items */
+    .fq-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .fq-item {
+      background: linear-gradient(145deg, #0d1f3c, #081530);
+      border: 1px solid rgba(75,168,240,0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .fq-item.open {
+      border-color: rgba(75,168,240,0.28);
+    }
+
+    .fq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 22px 28px;
+      background: none;
+      border: none;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      cursor: pointer;
+      gap: 20px;
+      transition: color 0.2s;
+    }
+    .fq-q:hover { color: #fff; }
+    .fq-item.open .fq-q { color: #fff; }
+
+    .fq-q-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: rgba(75,168,240,0.07);
+      border: 1px solid rgba(75,168,240,0.18);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s, transform 0.25s;
+    }
+    .fq-q-icon svg {
+      width: 14px; height: 14px;
+      stroke: #4ba8f0; fill: none; stroke-width: 2.5;
+      transition: transform 0.25s;
+    }
+    .fq-item.open .fq-q-icon {
+      background: rgba(75,168,240,0.14);
+      border-color: rgba(75,168,240,0.4);
+    }
+    .fq-item.open .fq-q-icon svg { transform: rotate(45deg); }
+
+    .fq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fq-item.open .fq-a { max-height: 600px; }
+
+    .fq-a-inner {
+      padding: 0 28px 24px;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.55);
+      border-top: 1px solid rgba(75,168,240,0.08);
+      padding-top: 20px;
+    }
+    .fq-a-inner a { color: #4ba8f0; text-decoration: none; }
+    .fq-a-inner a:hover { text-decoration: underline; }
+    .fq-a-inner strong { color: rgba(255,255,255,0.82); }
+
+    /* Mobile category tabs */
+    .fq-tabs {
+      display: none;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+      margin-bottom: 36px;
+    }
+    .fq-tabs::-webkit-scrollbar { display: none; }
+    .fq-tab {
+      flex-shrink: 0;
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      background: rgba(75,168,240,0.05);
+      border: 1px solid rgba(75,168,240,0.14);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.18s;
+      white-space: nowrap;
+    }
+    .fq-tab:hover { color: #fff; border-color: rgba(75,168,240,0.3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .fq-layout { grid-template-columns: 220px 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .fq-layout { grid-template-columns: 1fr; }
+      .fq-nav { display: none; }
+      .fq-tabs { display: flex; }
+      .fq-hero { padding: 140px 0 64px; }
+      .fq-h1 { font-size: 2.5rem; }
+    }
+    @media (max-width: 480px) {
+      .fq-q { padding: 18px 20px; font-size: 0.9rem; }
+      .fq-a-inner { padding: 0 20px 20px; padding-top: 16px; }
+    }
+  </style>
+
+  <!-- Schema: FAQPage — powers Google FAQ rich results and AI answer extraction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "EDiFi & Elite Dental Force — Frequently Asked Questions",
+    "url": "https://www.elitedentalforce.com/pages/company/faq.html",
     "mainEntity": [
       {
         "@type": "Question",
         "name": "What is Elite Dental Force?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Elite Dental Force is a dental revenue intelligence platform that combines AI-powered consultants with the EDiFi software platform to help practices optimize eligibility verification, reduce claim denials, and improve overall revenue performance."
+          "text": "Elite Dental Force is a dental revenue intelligence company that builds AI-powered tools and infrastructure to help dental practices and DSOs optimize eligibility verification, reduce claim denials, recover underpayments, and get paid accurately for every service they provide. Their flagship platform is EDiFi — the Revenue Intelligence Platform for modern dental teams."
         }
       },
       {
         "@type": "Question",
-        "name": "How is data protected?",
+        "name": "What makes Elite Dental Force different from other billing solutions?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We maintain HIPAA-aligned security practices including end-to-end encryption (AES-256), SOC 2 Type II certification, role-based access controls, and comprehensive audit logging. All data is encrypted both in transit and at rest."
+          "text": "Most billing services focus on claim submission. EDiFi goes further — it verifies eligibility before the patient arrives, generates clean claims with AI-assisted coding, audits every payer payment against contracted fee schedules, and flags underpayments automatically. In beta validation across 2,399 real claims, EDiFi found $59,000 in underpayments at a single practice."
         }
       },
       {
         "@type": "Question",
-        "name": "What practice sizes do you support?",
+        "name": "What practice management systems does EDiFi integrate with?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Elite Dental Force serves practices of all sizes, from single-location private practices to multi-state DSOs with hundreds of locations. Our platform scales to meet the needs of any organization."
+          "text": "EDiFi integrates with leading dental practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, and Denticon, plus direct connections with major clearinghouses and payers."
         }
       },
       {
         "@type": "Question",
-        "name": "What integrations are available?",
+        "name": "Is EDiFi web-based or do I need to install software?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EDiFi integrates with leading practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, Denticon, and many others. We also connect directly with major clearinghouses and payers."
+          "text": "EDiFi is fully web-based — accessible from any modern browser on desktop, tablet, or mobile. No downloads, no local installs, no IT dependencies. Updates happen automatically in the background."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I get started?",
+        "name": "How is practice data protected?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The best way to get started is to book a demo with our team. We'll walk you through the platform, understand your specific needs, and recommend the best engagement path for your practice."
+          "text": "Elite Dental Force maintains HIPAA-aligned security across every layer: AES-256 encryption at rest and in transit, role-based access controls, immutable audit logging, 24/7 threat monitoring, and regular third-party penetration testing. All infrastructure is hosted in HIPAA-compliant US data centers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Elite Dental Force provide a Business Associate Agreement (BAA)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — a signed BAA is included with every customer agreement at no additional cost. The BAA covers permitted uses and disclosures of PHI, breach notification procedures within 72 hours, safeguard obligations, and subcontractor chain-of-trust requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is EDiFi pricing structured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi is priced as a monthly subscription ranging from $499 to $600 per location, plus an optional performance component of 2.5% to 5% on collections recovered through the platform. Beta offices receive complimentary access during the initial rollout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with EDiFi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fastest path is to book a demo at elitedentalforce.com/pages/contact.html. The Elite Dental Force team will walk through the platform, understand your specific workflows, and outline the implementation path. Most offices are live within a few weeks of signing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the EDiFi implementation process look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Implementation follows four phases: Discovery (analyzing current workflows and identifying revenue gaps), Configuration (platform customized to your PMS and payer mix), Deployment (team training and go-live), and Optimization (ongoing improvement through analytics and dedicated support)."
         }
       }
     ]
   }
   </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.elitedentalforce.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Company", "item": "https://www.elitedentalforce.com/pages/company.html"},
+      {"@type": "ListItem", "position": 3, "name": "FAQ", "item": "https://www.elitedentalforce.com/pages/company/faq.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -77,7 +497,6 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -88,7 +507,15 @@
                 <li><a href="../partners.html">Partners</a></li>
               </ul>
             </li>
-            <li><a href="../resources.html" class="nav-link">Resources</a></li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="../resources/blog.html">Blog</a></li>
+                <li><a href="../resources/podcast.html">Podcast</a></li>
+                <li><a href="../resources/webinars.html">Webinars</a></li>
+                <li><a href="../resources/news.html">News</a></li>
+              </ul>
+            </li>
             <li class="has-dropdown">
               <a href="../company.html" class="nav-link active">Company</a>
               <ul class="dropdown">
@@ -96,348 +523,397 @@
                 <li><a href="security.html">Security</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
           <div class="nav-cta">
-            <a href="../contact.html#sales" class="btn btn-primary">Book a Demo</a>
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary">Book a Demo</a>
           </div>
         </nav>
 
         <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="fq-hero">
+      <div class="fq-hero-glow"></div>
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">FAQ</span>
-          <h1>Frequently Asked Questions</h1>
-          <p class="lead">Find answers to common questions about Elite Dental Force, our platform, and how we can help transform your practice revenue.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- General Questions -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">General</span>
-          <h2>About Elite Dental Force</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              What is Elite Dental Force?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Elite Dental Force is a dental revenue intelligence platform that combines AI-powered consultants with the EDiFi software platform to help practices optimize eligibility verification, reduce claim denials, and improve overall revenue performance. We serve practices of all sizes, from single-location offices to enterprise DSOs.
-              </div>
-            </div>
+        <div class="fq-hero-inner">
+          <div class="fq-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            FAQ
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              What makes Elite Dental Force different from other billing solutions?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Unlike traditional billing services that focus solely on claim submission, Elite Dental Force provides a comprehensive revenue intelligence layer. Our two-pronged approach combines AI Consultants that provide real-time decision support with the EDiFi software platform that powers eligibility verification, claims optimization, and analytics. This combination addresses revenue challenges at every stage of the patient journey.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              What practice sizes do you support?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Elite Dental Force serves practices of all sizes, from single-location private practices to multi-state DSOs with hundreds of locations. Our platform scales to meet the needs of any organization, with features and pricing options tailored to your practice size and requirements.
-              </div>
-            </div>
+          <h1 class="fq-h1">Frequently Asked <em>Questions</em></h1>
+          <p class="fq-sub">Everything you need to know about Elite Dental Force, EDiFi, and how we help dental practices grow their revenue.</p>
+          <div class="fq-count-row">
+            <span class="fq-count-dot"></span>
+            16 questions across 5 categories
+            <span class="fq-count-dot"></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Platform Questions -->
-    <section class="section bg-light">
+    <!-- MAIN FAQ SECTION -->
+    <section class="section" style="padding-top: 72px; padding-bottom: 96px;">
       <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">Platform</span>
-          <h2>Platform & Features</h2>
+
+        <!-- Mobile category tabs -->
+        <div class="fq-tabs">
+          <a href="#general"    class="fq-tab">General</a>
+          <a href="#platform"   class="fq-tab">Platform</a>
+          <a href="#security"   class="fq-tab">Security</a>
+          <a href="#onboarding" class="fq-tab">Getting Started</a>
+          <a href="#pricing"    class="fq-tab">Pricing</a>
         </div>
 
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              What is the difference between AI Consultants and EDiFi?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                <strong>AI Consultants</strong> provide decision support intelligence for your team. They offer real-time guidance on eligibility, coding, and revenue optimization, helping standardize workflows across your organization.<br><br>
-                <strong>EDiFi</strong> is our software platform that powers the technical infrastructure - eligibility verification, claims processing, analytics dashboards, and PMS integrations. Together, they form a complete revenue intelligence solution.
-              </div>
-            </div>
-          </div>
+        <div class="fq-layout">
 
-          <div class="faq-item">
-            <button class="faq-question">
-              What integrations are available?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                EDiFi integrates with leading practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, Denticon, and many others. We also connect directly with major clearinghouses and payers. Our integration library is continuously expanding - contact us to confirm compatibility with your specific systems.
-              </div>
-            </div>
-          </div>
+          <!-- Sidebar nav -->
+          <aside class="fq-nav" aria-label="FAQ categories">
+            <div class="fq-nav-label">Categories</div>
+            <ul class="fq-nav-list">
+              <li>
+                <a href="#general" class="fq-nav-link active" data-target="general">
+                  <span class="fq-nav-link-dot"></span>
+                  General
+                  <span class="fq-nav-count">3</span>
+                </a>
+              </li>
+              <li>
+                <a href="#platform" class="fq-nav-link" data-target="platform">
+                  <span class="fq-nav-link-dot"></span>
+                  Platform &amp; Features
+                  <span class="fq-nav-count">4</span>
+                </a>
+              </li>
+              <li>
+                <a href="#security" class="fq-nav-link" data-target="security">
+                  <span class="fq-nav-link-dot"></span>
+                  Security &amp; Compliance
+                  <span class="fq-nav-count">3</span>
+                </a>
+              </li>
+              <li>
+                <a href="#onboarding" class="fq-nav-link" data-target="onboarding">
+                  <span class="fq-nav-link-dot"></span>
+                  Getting Started
+                  <span class="fq-nav-count">4</span>
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" class="fq-nav-link" data-target="pricing">
+                  <span class="fq-nav-link-dot"></span>
+                  Pricing &amp; Contracts
+                  <span class="fq-nav-count">2</span>
+                </a>
+              </li>
+            </ul>
 
-          <div class="faq-item">
-            <button class="faq-question">
-              What results can I expect?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Practices using Elite Dental Force typically see significant improvements across key metrics: 35% reduction in claim denials, 50% faster eligibility verification, 25% increase in collections, and 90% first-pass claim acceptance. Actual results vary based on your current processes and practice characteristics.
-              </div>
-            </div>
-          </div>
+            <div class="fq-nav-divider"></div>
 
-          <div class="faq-item">
-            <button class="faq-question">
-              Is there a mobile app?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                EDiFi is a web-based platform accessible from any modern browser on desktop, tablet, or mobile devices. This ensures you can access your revenue intelligence data from anywhere without needing to install or update separate applications.
+            <div class="fq-nav-cta">
+              <p>Didn't find your answer?</p>
+              <a href="../contact.html">Contact Our Team</a>
+            </div>
+          </aside>
+
+          <!-- FAQ body -->
+          <div class="fq-body">
+
+            <!-- ── GENERAL ── -->
+            <div id="general">
+              <div class="fq-category-title">General</div>
+              <h2 class="fq-category-h2">About Elite Dental Force</h2>
+              <div class="fq-list">
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What is Elite Dental Force?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Elite Dental Force is a dental revenue intelligence company. We build AI-powered tools and infrastructure that help dental practices and DSOs optimize eligibility verification, reduce claim denials, recover underpayments, and get paid accurately for every service they provide. Our flagship platform is <strong>EDiFi</strong> — the Revenue Intelligence Platform for modern dental teams.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What makes Elite Dental Force different from other billing solutions?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Most billing services focus on claim submission. We go further — EDiFi verifies eligibility before the patient arrives, generates clean claims with AI-assisted coding, audits every payer payment against your contracted fee schedules, and flags underpayments automatically. It's the full revenue cycle, not just one piece of it. In beta validation across 2,399 real claims, EDiFi found <strong>$59K in underpayments at a single practice</strong>.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What practice sizes do you support?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Elite Dental Force serves practices of all sizes — from single-location private practices to multi-state DSOs with hundreds of locations. The platform scales to match your organization's complexity, with role-based access, multi-location dashboards, and DSO-level reporting built in.
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-        </div>
+
+            <!-- ── PLATFORM ── -->
+            <div id="platform">
+              <div class="fq-category-title">Platform &amp; Features</div>
+              <h2 class="fq-category-h2">How EDiFi Works</h2>
+              <div class="fq-list">
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What is the difference between AI Consultants and EDiFi?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      <strong>AI Consultants</strong> are real-time guidance agents embedded in your workflow — answering coding questions, flagging documentation gaps, and providing decision support to your front desk and billing team as they work.<br><br>
+                      <strong>EDiFi</strong> is the full software platform — eligibility verification, claims engine, payment audit, analytics, and PMS integrations. Together they cover every step from patient scheduled to payment collected.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What practice management systems does EDiFi integrate with?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      EDiFi integrates with leading dental practice management systems including <strong>Dentrix, Eaglesoft, Open Dental, Curve, and Denticon</strong>, plus direct connections with major clearinghouses and payers. Our integration library is continuously expanding — contact us to confirm compatibility with your specific system.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What results can I expect?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Results vary by practice, but our beta validation data shows meaningful impact across every revenue touchpoint — from faster eligibility turnaround to 100% clean-claim submission rates. The Payment Audit Engine found underpayments in 27% of audited claims. We'll provide an honest assessment of what's achievable at your practice during the demo.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    Is EDiFi web-based or do I need to install software?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      EDiFi is fully web-based — accessible from any modern browser on desktop, tablet, or mobile. No downloads, no local installs, no IT dependencies. Updates happen automatically in the background, so your team always has the latest version.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ── SECURITY ── -->
+            <div id="security">
+              <div class="fq-category-title">Security &amp; Compliance</div>
+              <h2 class="fq-category-h2">Protecting Your Data</h2>
+              <div class="fq-list">
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    How is our practice data protected?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      We maintain HIPAA-aligned security across every layer: <strong>AES-256 encryption</strong> at rest and in transit, role-based access controls, immutable audit logging, 24/7 threat monitoring, and regular third-party penetration testing. All infrastructure is hosted in HIPAA-compliant US data centers. For the full picture, visit our <a href="security.html">Security page</a>.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    Do you provide a Business Associate Agreement (BAA)?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Yes — a signed BAA is included with every customer agreement at no additional cost. Our BAA covers permitted uses and disclosures of PHI, breach notification procedures (within 72 hours), safeguard obligations, and subcontractor chain-of-trust requirements.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    Where is data stored?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      All data is stored in HIPAA-compliant data centers located in the United States. Our infrastructure includes redundant systems, automated backups, and disaster recovery capabilities to ensure your data is always safe, available, and restorable.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ── GETTING STARTED ── -->
+            <div id="onboarding">
+              <div class="fq-category-title">Getting Started</div>
+              <h2 class="fq-category-h2">Implementation &amp; Support</h2>
+              <div class="fq-list">
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    How do I get started?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      The fastest path is to <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank">book a demo</a>. We'll walk through the platform together, understand your specific workflows and pain points, and outline the right implementation path for your practice. Most offices are live within a few weeks of signing.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What does the implementation process look like?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Implementation follows four phases: <strong>Discovery</strong> (we analyze your current workflows and identify revenue gaps), <strong>Configuration</strong> (platform customized to your PMS and payer mix), <strong>Deployment</strong> (team training and go-live), and <strong>Optimization</strong> (ongoing improvement through analytics and dedicated support). The process is designed for minimal disruption to your daily operations.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What training does my team receive?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      We provide role-specific training during implementation — front desk, billing, and management each get sessions tailored to their workflows. Ongoing resources include documentation, video guides, and access to our support team. Training is included in your onboarding, not billed separately.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    What ongoing support is available?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      All customers have access to our support team by email during business hours. Enterprise and DSO customers receive a dedicated account manager and priority response SLAs. Our knowledge base and documentation are available 24/7 at no additional charge.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ── PRICING ── -->
+            <div id="pricing">
+              <div class="fq-category-title">Pricing &amp; Contracts</div>
+              <h2 class="fq-category-h2">Plans &amp; Terms</h2>
+              <div class="fq-list">
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    How is pricing structured?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Pricing is based on your practice size, number of locations, and which modules you need. We offer a monthly subscription base plus a performance component tied to recovered revenue — so we're directly aligned with your financial outcomes. <a href="../contact.html#sales">Contact sales</a> for a personalized quote.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fq-item">
+                  <button class="fq-q" aria-expanded="false">
+                    Is there a long-term contract requirement?
+                    <span class="fq-q-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </span>
+                  </button>
+                  <div class="fq-a" role="region">
+                    <div class="fq-a-inner">
+                      Most customers start with an annual agreement, which includes full onboarding and implementation support. We also offer flexible arrangements for enterprise and DSO accounts. Reach out to discuss the terms that work best for your organization.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- /.fq-body -->
+        </div><!-- /.fq-layout -->
       </div>
     </section>
 
-    <!-- Security Questions -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">Security</span>
-          <h2>Security & Compliance</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              How is data protected?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                We maintain HIPAA-aligned security practices including end-to-end encryption (AES-256), SOC 2 Type II certification, role-based access controls, and comprehensive audit logging. All data is encrypted both in transit and at rest. For more details, visit our <a href="security.html">Security page</a>.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              Do you provide a Business Associate Agreement (BAA)?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Yes, we provide Business Associate Agreements to all customers as part of our standard service. Our BAA outlines our responsibilities for protecting PHI and demonstrates our commitment to HIPAA compliance.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              Where is data stored?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                All data is stored in SOC 2 certified data centers located in the United States. Our infrastructure includes redundant systems, regular backups, and disaster recovery capabilities to ensure your data remains safe and accessible.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Getting Started Questions -->
-    <section class="section bg-light">
-      <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">Getting Started</span>
-          <h2>Implementation & Support</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              How do I get started?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                The best way to get started is to book a demo with our team. We'll walk you through the platform, understand your specific needs, and recommend the best engagement path for your practice. Implementation typically follows a structured process: Discovery, Configuration, Deployment, and ongoing Optimization.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              What is the implementation process like?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Our implementation process is designed for minimal disruption. It includes: (1) Discovery - analyzing your workflows and identifying needs, (2) Configuration - customizing the platform to your requirements, (3) Deployment - launching with comprehensive team training, and (4) Optimization - continuous improvement through analytics and support.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              What training is provided?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                We provide comprehensive training for all team members during implementation, including role-specific sessions for front desk, billing, and management staff. Ongoing training resources include documentation, video tutorials, and access to our support team.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              What support options are available?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                All customers receive access to our support team via email and phone during business hours. Enterprise customers have access to dedicated account managers and priority support channels. Our knowledge base and documentation are available 24/7.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Questions -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">Pricing</span>
-          <h2>Pricing & Contracts</h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              How is pricing structured?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Pricing is customized based on your practice size, number of locations, and specific service requirements. We offer flexible engagement models to fit different practice needs and budgets. Contact our sales team for a personalized quote.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              Is there a long-term contract requirement?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                We offer flexible contract terms to match your practice needs. Most customers start with an annual agreement, which includes implementation and onboarding support. Contact our sales team to discuss options that work for your situation.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Still Have Questions CTA -->
+    <!-- CTA BAND -->
     <section class="cta-band">
       <div class="container">
         <h2>Still Have Questions?</h2>
-        <p>Our team is here to help. Reach out and we'll get you the answers you need.</p>
+        <p>Our team is happy to answer anything not covered here. Reach out and we'll respond within one business day.</p>
         <div class="cta-band-actions">
-          <a href="../contact.html#sales" class="btn btn-white btn-lg">Contact Us</a>
-          <a href="../contact.html#demo" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">Book a Demo</a>
+          <a href="../contact.html" class="btn btn-white btn-lg">Contact Us</a>
+          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.28);color:#fff;">Book a Demo</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -450,16 +926,13 @@
           </a>
           <p>The infrastructure leader in dental revenue intelligence.</p>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Resources</h5>
           <ul class="footer-links">
@@ -468,7 +941,6 @@
             <li><a href="../resources/webinars.html">Webinars</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Company</h5>
           <ul class="footer-links">
@@ -477,16 +949,15 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h5 class="footer-heading">Contact</h5>
           <ul class="footer-links">
-            <li><a href="../contact.html#sales">Sales</a></li>
-            <li><a href="../contact.html#support">Support</a></li>
+            <li><a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank">Book a Demo</a></li>
+            <li><a href="mailto:sales@elitedentalforce.com">Sales</a></li>
+            <li><a href="mailto:support@elitedentalforce.com">Support</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
         <div class="footer-legal">
@@ -498,5 +969,55 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/tracking.js" defer></script>
+  <script src="../../js/ghl-forms.js" defer></script>
+  <script>
+    /* ── Accordion ── */
+    document.querySelectorAll('.fq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.fq-item');
+        var isOpen = item.classList.contains('open');
+
+        /* Close all */
+        document.querySelectorAll('.fq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.fq-q').setAttribute('aria-expanded', 'false');
+        });
+
+        /* Open clicked (toggle) */
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ── Sidebar active state on scroll ── */
+    var sections = document.querySelectorAll('.fq-body > div[id]');
+    var navLinks = document.querySelectorAll('.fq-nav-link');
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          navLinks.forEach(function(link) {
+            link.classList.toggle('active', link.dataset.target === id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(function(s) { observer.observe(s); });
+
+    /* ── Open first item by default ── */
+    var first = document.querySelector('.fq-item');
+    if (first) {
+      first.classList.add('open');
+      first.querySelector('.fq-q').setAttribute('aria-expanded', 'true');
+    }
+  </script>
+
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,8 +11,598 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <style>
+    /* ====================================================
+       PARTNERS PAGE — Elite Dental Force
+       ==================================================== */
+
+    /* Grid backdrop */
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    /* Section tints */
+    main .section          { background: rgba(2,9,23,0.35); }
+    main .section.bg-alt   { background: rgba(8,21,48,0.42); }
+
+    /* ── HERO ── */
+    .ptrs-hero {
+      position: relative;
+      padding: 196px 0 112px;
+      text-align: center;
+      overflow: hidden;
+      background: rgba(2,9,23,0.45);
+    }
+
+    .ptrs-hero-glow {
+      position: absolute;
+      width: 960px; height: 960px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,91,167,0.24) 0%, transparent 62%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -58%);
+      pointer-events: none;
+    }
+
+    .ptrs-hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ptrs-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      border: 1px solid rgba(75,168,240,0.28);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 36px;
+    }
+
+    .ptrs-h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      color: #f0f7ff;
+      margin: 0 auto 24px;
+      max-width: 760px;
+    }
+
+    .ptrs-h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ptrs-hero-sub {
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: rgba(133,184,216,0.85);
+      max-width: 600px;
+      margin: 0 auto 44px;
+    }
+
+    .ptrs-hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-bottom: 44px;
+    }
+
+    .ptrs-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border: 1px solid rgba(75,168,240,0.35);
+      border-radius: 10px;
+      background: transparent;
+      color: rgba(240,247,255,0.85);
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+    .ptrs-btn-ghost:hover {
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.55);
+      color: #f0f7ff;
+    }
+
+    /* Trust pills */
+    .ptrs-trust-pills {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .ptrs-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(75,168,240,0.07);
+      border: 1px solid rgba(75,168,240,0.22);
+      border-radius: 100px;
+      color: rgba(255,255,255,0.65);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 16px;
+    }
+
+    .ptrs-pill-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #4ba8f0;
+    }
+
+    /* ── STATS STRIP ── */
+    .ptrs-stats {
+      background: rgba(8,21,48,0.55);
+      border-top: 1px solid rgba(75,168,240,0.12);
+      border-bottom: 1px solid rgba(75,168,240,0.12);
+      position: relative;
+      z-index: 1;
+    }
+
+    .ptrs-stats::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.45), transparent);
+    }
+
+    .ptrs-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    .ptrs-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 36px 24px;
+      border-right: 1px solid rgba(75,168,240,0.08);
+    }
+    .ptrs-stat-item:last-child { border-right: none; }
+
+    .ptrs-stat-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.18);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ptrs-stat-icon svg {
+      width: 22px; height: 22px;
+      stroke: #4ba8f0; fill: none; stroke-width: 2;
+    }
+
+    .ptrs-stat-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f0f7ff;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .ptrs-stat-label {
+      font-size: 0.8rem;
+      color: rgba(133,184,216,0.6);
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    /* ── PARTNERSHIP TYPE CARDS ── */
+    .ptrs-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .ptrs-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      padding: 2rem;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ptrs-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .ptrs-card:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(75,168,240,0.08);
+      transform: translateY(-3px);
+    }
+
+    .ptrs-card-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(75,168,240,0.09);
+      border: 1px solid rgba(75,168,240,0.2);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .ptrs-card-icon svg {
+      width: 26px; height: 26px;
+      stroke: #4ba8f0; fill: none; stroke-width: 2;
+    }
+
+    .ptrs-card-badge {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      background: linear-gradient(135deg, rgba(9,91,167,0.5), rgba(75,168,240,0.35));
+      border: 1px solid rgba(75,168,240,0.3);
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      padding: 4px 12px;
+    }
+
+    .ptrs-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #f0f7ff;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .ptrs-card > p {
+      font-size: 0.88rem;
+      color: rgba(133,184,216,0.85);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .ptrs-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ptrs-card-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.84rem;
+      color: rgba(133,184,216,0.75);
+    }
+
+    .ptrs-card-list li::before {
+      content: '';
+      display: block;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: rgba(75,168,240,0.12);
+      border: 1px solid rgba(75,168,240,0.28);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%234ba8f0' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px;
+      flex-shrink: 0;
+    }
+
+    /* ── BENEFITS SECTION ── */
+    .ptrs-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .ptrs-benefit-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .ptrs-benefit-icon {
+      width: 48px; height: 48px;
+      border-radius: 13px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.18);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ptrs-benefit-item:hover .ptrs-benefit-icon {
+      background: rgba(75,168,240,0.14);
+      border-color: rgba(75,168,240,0.35);
+      box-shadow: 0 0 18px rgba(75,168,240,0.18);
+    }
+    .ptrs-benefit-icon svg {
+      width: 22px; height: 22px;
+      stroke: #4ba8f0; fill: none; stroke-width: 2;
+    }
+
+    .ptrs-benefit-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f0f7ff;
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
+    }
+
+    .ptrs-benefit-desc {
+      font-size: 0.86rem;
+      color: rgba(133,184,216,0.75);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── CURRENT PARTNERS ── */
+    .ptrs-partners-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .ptrs-partner-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      width: 100%;
+      max-width: 360px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .ptrs-partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .ptrs-partner-card:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(75,168,240,0.08);
+      transform: translateY(-3px);
+    }
+
+    .ptrs-partner-logo {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1.25rem;
+    }
+
+    .ptrs-partner-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f0f7ff;
+      margin-bottom: 4px;
+    }
+
+    .ptrs-partner-type {
+      font-size: 0.8rem;
+      color: rgba(75,168,240,0.75);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .ptrs-partner-divider {
+      height: 1px;
+      background: rgba(75,168,240,0.12);
+      margin: 1rem 0;
+    }
+
+    .ptrs-partner-desc {
+      font-size: 0.85rem;
+      color: rgba(133,184,216,0.75);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .ptrs-partners-note {
+      font-size: 0.84rem;
+      color: rgba(133,184,216,0.6);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ── APPLICATION FORM ── */
+    .ptrs-form-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      padding: 2.5rem;
+      overflow: hidden;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .ptrs-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .ptrs-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .ptrs-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .ptrs-field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .ptrs-field label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(240,247,255,0.5);
+    }
+
+    .ptrs-field input,
+    .ptrs-field select,
+    .ptrs-field textarea {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: #f0f7ff;
+      font-family: inherit;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+
+    .ptrs-field input::placeholder,
+    .ptrs-field textarea::placeholder {
+      color: rgba(255,255,255,0.22);
+    }
+
+    .ptrs-field select option {
+      background: #0d1f3c;
+      color: #f0f7ff;
+    }
+
+    .ptrs-field input:focus,
+    .ptrs-field select:focus,
+    .ptrs-field textarea:focus {
+      border-color: #4ba8f0;
+      background: rgba(75,168,240,0.06);
+      box-shadow: 0 0 0 3px rgba(75,168,240,0.12);
+    }
+
+    .ptrs-field textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.6;
+    }
+
+    .ptrs-form-note {
+      font-size: 0.75rem;
+      color: rgba(133,184,216,0.45);
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    /* Form success state */
+    #ptrs-form-wrap { }
+
+    .ptrs-success {
+      display: none;
+      text-align: center;
+      padding: 56px 32px;
+    }
+
+    .ptrs-success-icon {
+      width: 68px; height: 68px;
+      border-radius: 50%;
+      background: rgba(52,211,153,0.1);
+      border: 1px solid rgba(52,211,153,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .ptrs-success-icon svg {
+      width: 30px; height: 30px;
+      stroke: #34d399; fill: none; stroke-width: 2.5;
+    }
+    .ptrs-success h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #f0f7ff;
+      margin-bottom: 10px;
+    }
+    .ptrs-success p {
+      font-size: 0.92rem;
+      color: rgba(133,184,216,0.65);
+      line-height: 1.7;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /* Section header overrides */
+    .ptrs-page .section-header h2 { color: #f0f7ff; }
+    .ptrs-page .section-header p  { color: rgba(133,184,216,0.75); }
+    .ptrs-page .overline           { color: #4ba8f0 !important; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .ptrs-card-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .ptrs-hero { padding: 148px 0 88px; }
+      .ptrs-card-grid { grid-template-columns: 1fr; }
+      .ptrs-benefits-grid { grid-template-columns: 1fr; }
+      .ptrs-stats-grid { grid-template-columns: 1fr; }
+      .ptrs-stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(75,168,240,0.08);
+        padding: 24px 16px;
+      }
+      .ptrs-stat-item:last-child { border-bottom: none; }
+      .ptrs-form-card { padding: 1.75rem 1.25rem; }
+    }
+
+    @media (max-width: 640px) {
+      .ptrs-h1 { font-size: 2.5rem; }
+      .ptrs-hero-ctas { flex-direction: column; align-items: center; }
+      .ptrs-form-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body>
+<body class="ptrs-page">
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -27,7 +617,7 @@
               <a href="platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="platform.html">Platform Overview</a></li>
-                <li><a href="ai-consultants.html">AI Consultants</a></li>
+
                 <li><a href="edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,7 +629,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="resources.html" class="nav-link">Resources</a>
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
               <ul class="dropdown">
                 <li><a href="resources/blog.html">Blog</a></li>
                 <li><a href="resources/podcast.html">Podcast</a></li>
@@ -54,7 +644,6 @@
                 <li><a href="company/security.html">Security</a></li>
                 <li><a href="company/faq.html">FAQ</a></li>
                 <li><a href="investors.html">Investors</a></li>
-                <li><a href="contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -73,234 +662,352 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- ── HERO ── -->
+    <section class="ptrs-hero">
+      <div class="ptrs-hero-glow"></div>
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Partner Ecosystem</span>
-          <h1>Build the Future of Dental Revenue Together</h1>
-          <p class="lead">Join our growing ecosystem of technology, integration, and referral partners helping dental practices achieve revenue excellence.</p>
-          <div class="hero-actions" style="justify-content: center;">
-            <a href="#apply" class="btn btn-white btn-lg">Become a Partner</a>
+        <div class="ptrs-hero-inner">
+
+          <div class="ptrs-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Partner Ecosystem
           </div>
+
+          <h1 class="ptrs-h1">
+            Build the Future of<br>
+            <em>Dental Revenue</em> Together
+          </h1>
+
+          <p class="ptrs-hero-sub">
+            Join our growing ecosystem of technology, integration, and referral partners helping dental practices achieve revenue excellence.
+          </p>
+
+          <div class="ptrs-hero-ctas">
+            <a href="#apply" class="btn btn-primary btn-lg">Become a Partner</a>
+            <a href="#benefits" class="ptrs-btn-ghost">
+              Learn About Benefits
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="ptrs-trust-pills">
+            <span class="ptrs-pill"><span class="ptrs-pill-dot"></span>Revenue Share Program</span>
+            <span class="ptrs-pill"><span class="ptrs-pill-dot"></span>Co-Marketing Support</span>
+            <span class="ptrs-pill"><span class="ptrs-pill-dot"></span>Dedicated Partner Success</span>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Partner Categories -->
+    <!-- ── STATS STRIP ── -->
+    <div class="ptrs-stats" role="region" aria-label="Partnership overview">
+      <div class="ptrs-stats-grid">
+
+        <div class="ptrs-stat-item">
+          <div class="ptrs-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ptrs-stat-value">3</div>
+            <div class="ptrs-stat-label">Partner Types</div>
+          </div>
+        </div>
+
+        <div class="ptrs-stat-item">
+          <div class="ptrs-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ptrs-stat-value">Revenue</div>
+            <div class="ptrs-stat-label">Share Program</div>
+          </div>
+        </div>
+
+        <div class="ptrs-stat-item">
+          <div class="ptrs-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ptrs-stat-value">Co-Marketing</div>
+            <div class="ptrs-stat-label">Joint Growth</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── PARTNERSHIP TYPES ── -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="overline">Partnership Types</span>
+          <span class="overline">Partnership Models</span>
           <h2>Multiple Ways to Partner</h2>
           <p>Choose the partnership model that aligns with your business and goals.</p>
         </div>
 
-        <div class="feature-grid">
-          <div class="feature-card" style="padding: var(--space-10);">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
+        <div class="ptrs-card-grid">
+
+          <!-- Technology Partners -->
+          <div class="ptrs-card">
+            <div class="ptrs-card-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
               </svg>
             </div>
             <h3>Technology Partners</h3>
-            <p>Build integrations and solutions on top of the Elite Dental Force platform.</p>
-            <ul style="margin: var(--space-4) 0; font-size: var(--text-sm);">
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">API access and documentation</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Technical support and sandbox</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Co-marketing opportunities</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Joint solution development</li>
+            <p>Build integrations and solutions on top of the Elite Dental Force platform to extend capabilities for dental practices.</p>
+            <ul class="ptrs-card-list">
+              <li>API access and documentation</li>
+              <li>Technical support and sandbox</li>
+              <li>Co-marketing opportunities</li>
+              <li>Joint solution development</li>
             </ul>
           </div>
 
-          <div class="feature-card" style="padding: var(--space-10);">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4"></path>
+          <!-- Integration Partners -->
+          <div class="ptrs-card">
+            <div class="ptrs-card-badge">Most Popular</div>
+            <div class="ptrs-card-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
               </svg>
             </div>
             <h3>Integration Partners</h3>
-            <p>Connect your PMS, clearinghouse, or other dental software with EDiFi.</p>
-            <ul style="margin: var(--space-4) 0; font-size: var(--text-sm);">
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Pre-built integration frameworks</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Certification program</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Partner directory listing</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Mutual customer referrals</li>
+            <p>Connect your PMS, clearinghouse, or dental software with EDiFi to create seamless data workflows.</p>
+            <ul class="ptrs-card-list">
+              <li>Pre-built integration frameworks</li>
+              <li>Certification program</li>
+              <li>Partner directory listing</li>
+              <li>Mutual customer referrals</li>
             </ul>
           </div>
 
-          <div class="feature-card" style="padding: var(--space-10);">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          <!-- Affiliate Partners -->
+          <div class="ptrs-card">
+            <div class="ptrs-card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
             <h3>Affiliate Partners</h3>
-            <p>Refer dental practices and earn competitive commissions.</p>
-            <ul style="margin: var(--space-4) 0; font-size: var(--text-sm);">
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Competitive revenue share</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Sales enablement materials</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Deal registration protection</li>
-              <li style="padding: var(--space-2) 0; color: var(--color-text-light);">Performance-based tiers</li>
+            <p>Refer dental practices to our platform and earn competitive commissions on every successful referral.</p>
+            <ul class="ptrs-card-list">
+              <li>Competitive revenue share</li>
+              <li>Sales enablement materials</li>
+              <li>Deal registration protection</li>
+              <li>Performance-based tiers</li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Partner Benefits -->
-    <section class="section bg-light">
+    <!-- ── BENEFITS ── -->
+    <section class="section bg-alt" id="benefits">
       <div class="container">
         <div class="section-header">
-          <span class="overline">Benefits</span>
+          <span class="overline">Partner Benefits</span>
           <h2>Why Partner With Us</h2>
-          <p>Access resources and support designed to drive mutual success.</p>
+          <p>Access resources and support designed to drive mutual success and accelerate growth.</p>
         </div>
 
-        <div class="grid grid-2" style="gap: var(--space-8);">
-          <div style="display: flex; gap: var(--space-4); align-items: flex-start;">
-            <div style="width: 48px; height: 48px; background: var(--color-white); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        <div class="ptrs-benefits-grid">
+
+          <div class="ptrs-benefit-item">
+            <div class="ptrs-benefit-icon">
+              <svg viewBox="0 0 24 24">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
               </svg>
             </div>
             <div>
-              <h4 style="margin-bottom: var(--space-2);">Revenue Growth</h4>
-              <p style="color: var(--color-text-light); font-size: var(--text-sm); margin: 0;">Expand your business with new revenue streams through referrals, integrations, and joint solutions.</p>
+              <div class="ptrs-benefit-title">Revenue Growth</div>
+              <p class="ptrs-benefit-desc">Expand your business with new revenue streams through referrals, integrations, and joint solutions.</p>
             </div>
           </div>
 
-          <div style="display: flex; gap: var(--space-4); align-items: flex-start;">
-            <div style="width: 48px; height: 48px; background: var(--color-white); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          <div class="ptrs-benefit-item">
+            <div class="ptrs-benefit-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
               </svg>
             </div>
             <div>
-              <h4 style="margin-bottom: var(--space-2);">Training & Enablement</h4>
-              <p style="color: var(--color-text-light); font-size: var(--text-sm); margin: 0;">Access comprehensive training, sales materials, and certification programs.</p>
+              <div class="ptrs-benefit-title">Training &amp; Enablement</div>
+              <p class="ptrs-benefit-desc">Comprehensive training, sales materials, and certification programs to help you succeed.</p>
             </div>
           </div>
 
-          <div style="display: flex; gap: var(--space-4); align-items: flex-start;">
-            <div style="width: 48px; height: 48px; background: var(--color-white); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          <div class="ptrs-benefit-item">
+            <div class="ptrs-benefit-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
             </div>
             <div>
-              <h4 style="margin-bottom: var(--space-2);">Technical Support</h4>
-              <p style="color: var(--color-text-light); font-size: var(--text-sm); margin: 0;">Dedicated partner support team and technical resources for integration success.</p>
+              <div class="ptrs-benefit-title">Technical Support</div>
+              <p class="ptrs-benefit-desc">Dedicated partner support team and technical resources for smooth integration success.</p>
             </div>
           </div>
 
-          <div style="display: flex; gap: var(--space-4); align-items: flex-start;">
-            <div style="width: 48px; height: 48px; background: var(--color-white); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          <div class="ptrs-benefit-item">
+            <div class="ptrs-benefit-icon">
+              <svg viewBox="0 0 24 24">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </div>
             <div>
-              <h4 style="margin-bottom: var(--space-2);">Market Visibility</h4>
-              <p style="color: var(--color-text-light); font-size: var(--text-sm); margin: 0;">Featured placement in our partner directory and co-marketing opportunities.</p>
+              <div class="ptrs-benefit-title">Market Visibility</div>
+              <p class="ptrs-benefit-desc">Featured placement in our partner directory and co-marketing campaigns to grow your brand.</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Partner Spotlight -->
+    <!-- ── CURRENT PARTNERS ── -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="overline">Partner Spotlight</span>
-          <h2>Our Partner Ecosystem</h2>
-          <p>Trusted by leading organizations in dental technology and services.</p>
+          <span class="overline">Our Partners</span>
+          <h2>Trusted Partner Ecosystem</h2>
+          <p>We partner with industry leaders who share our commitment to dental practice excellence.</p>
         </div>
 
-        <div class="trust-bar-logos" style="background: var(--color-bg-light); padding: var(--space-12); border-radius: var(--radius-xl);">
-          <img src="../images/logos/partner-1.png" alt="Partner Logo">
-          <img src="../images/logos/partner-2.png" alt="Partner Logo">
-          <img src="../images/logos/partner-3.png" alt="Partner Logo">
-          <img src="../images/logos/partner-4.png" alt="Partner Logo">
-          <img src="../images/logos/partner-5.png" alt="Partner Logo">
+        <div class="ptrs-partners-wrap">
+
+          <div class="ptrs-partner-card">
+            <img
+              src="../images/logos/claim-chaser.png"
+              alt="Claim Chaser"
+              class="ptrs-partner-logo"
+            >
+            <div class="ptrs-partner-name">Claim Chaser</div>
+            <div class="ptrs-partner-type">Revenue Recovery Partner</div>
+            <div class="ptrs-partner-divider"></div>
+            <p class="ptrs-partner-desc">AI-powered accounts receivable recovery — maximizing dental practice collections.</p>
+          </div>
+
+          <p class="ptrs-partners-note">More partners coming soon. Interested in being featured? Apply below.</p>
+
         </div>
       </div>
     </section>
 
-    <!-- Partner Application Form -->
+    <!-- ── APPLICATION FORM ── -->
     <section class="section bg-alt" id="apply">
-      <div class="container container-narrow">
+      <div class="container">
         <div class="section-header">
           <span class="overline">Apply Now</span>
           <h2>Become a Partner</h2>
-          <p>Tell us about your organization and how you'd like to partner.</p>
+          <p>Tell us about your organization and how you'd like to partner with Elite Dental Force.</p>
         </div>
 
-        <!-- GoHighLevel Form Placeholder -->
-        <div style="background: var(--color-white); padding: var(--space-10); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-          <form data-validate>
-            <div class="grid grid-2" style="gap: var(--space-6);">
-              <div class="form-group">
-                <label class="form-label" for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" class="form-input" required>
+        <div class="ptrs-form-card">
+
+          <div id="ptrs-form-wrap">
+            <form class="ptrs-form" id="ptrs-partner-form" novalidate>
+
+              <div class="ptrs-form-row">
+                <div class="ptrs-field">
+                  <label for="ptrs-firstName">First Name <span style="color:#4ba8f0;">*</span></label>
+                  <input type="text" id="ptrs-firstName" name="firstName" placeholder="Jane" required autocomplete="given-name">
+                </div>
+                <div class="ptrs-field">
+                  <label for="ptrs-lastName">Last Name <span style="color:#4ba8f0;">*</span></label>
+                  <input type="text" id="ptrs-lastName" name="lastName" placeholder="Smith" required autocomplete="family-name">
+                </div>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" class="form-input" required>
+
+              <div class="ptrs-field">
+                <label for="ptrs-email">Email Address <span style="color:#4ba8f0;">*</span></label>
+                <input type="email" id="ptrs-email" name="email" placeholder="jane@yourcompany.com" required autocomplete="email">
               </div>
+
+              <div class="ptrs-field">
+                <label for="ptrs-company">Company Name <span style="color:#4ba8f0;">*</span></label>
+                <input type="text" id="ptrs-company" name="company" placeholder="Acme Dental Technology" required autocomplete="organization">
+              </div>
+
+              <div class="ptrs-field">
+                <label for="ptrs-website">Company Website</label>
+                <input type="url" id="ptrs-website" name="website" placeholder="https://">
+              </div>
+
+              <div class="ptrs-field">
+                <label for="ptrs-partnerType">Partnership Type <span style="color:#4ba8f0;">*</span></label>
+                <select id="ptrs-partnerType" name="partnerType" required>
+                  <option value="">Select a partnership type...</option>
+                  <option value="technology">Technology Partner</option>
+                  <option value="integration">Integration Partner</option>
+                  <option value="affiliate">Affiliate Partner</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="ptrs-field">
+                <label for="ptrs-description">Tell us about your company and goals</label>
+                <textarea id="ptrs-description" name="description" rows="4" placeholder="Describe your company and how you envision partnering with Elite Dental Force..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Application</button>
+              <p class="ptrs-form-note">This form will be connected to GoHighLevel and tagged as "Partner Application"</p>
+
+            </form>
+          </div>
+
+          <!-- Success state -->
+          <div class="ptrs-success" id="ptrs-success">
+            <div class="ptrs-success-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email Address *</label>
-              <input type="email" id="email" name="email" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="company">Company Name *</label>
-              <input type="text" id="company" name="company" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="website">Company Website</label>
-              <input type="url" id="website" name="website" class="form-input" placeholder="https://">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="partnerType">Partnership Type *</label>
-              <select id="partnerType" name="partnerType" class="form-select" required>
-                <option value="">Select a partnership type...</option>
-                <option value="technology">Technology Partner</option>
-                <option value="integration">Integration Partner</option>
-                <option value="affiliate">Affiliate Partner</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="description">Tell us about your company and partnership goals</label>
-              <textarea id="description" name="description" class="form-textarea" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Submit Application</button>
-          </form>
-          <p style="text-align: center; font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-4);">This form will be connected to GoHighLevel and tagged as "Partner Application"</p>
+            <h3>Application Received!</h3>
+            <p>Thanks for your interest in partnering with us. A member of our partnerships team will be in touch within two business days.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CTA Band -->
+    <!-- ── CTA BAND ── -->
     <section class="cta-band">
       <div class="container">
         <h2>Questions About Partnership?</h2>
-        <p>Our partnerships team is ready to discuss how we can work together.</p>
+        <p>Our team is ready to discuss how we can build something great together.</p>
         <div class="cta-band-actions">
-          <a href="contact.html#partnerships" class="btn btn-white btn-lg">Contact Partnerships</a>
+          <a href="contact.html" class="btn btn-white btn-lg">Contact Partnerships</a>
+          <a href="contact.html#sales" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.28);color:#fff;">Book a Demo</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -318,7 +1025,7 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="platform.html">Overview</a></li>
-            <li><a href="ai-consultants.html">AI Consultants</a></li>
+
             <li><a href="edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -361,5 +1068,17 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/tracking.js" defer></script>
+  <script src="../js/ghl-forms.js" defer></script>
+  <script>
+    /* Partner application form — success state */
+    document.getElementById('ptrs-partner-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('ptrs-form-wrap').style.display = 'none';
+      document.getElementById('ptrs-success').style.display  = 'block';
+    });
+  </script>
+  <script src="../js/booking-widget.js" defer></script>
+  <script src="../js/cookie-consent.js" defer></script>
 </body>
 </html>

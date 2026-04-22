@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg-r" cx="42%" cy="52%" r="58%">
+      <stop offset="0%" stop-color="#011830"/>
+      <stop offset="100%" stop-color="#000810"/>
+    </radialGradient>
+    <radialGradient id="goldPeak" cx="50%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vign" cx="50%" cy="50%" r="72%">
+      <stop offset="50%" stop-color="#000810" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000810" stop-opacity="0.82"/>
+    </radialGradient>
+    <filter id="glow-r">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-r)"/>
+
+  <!-- Very faint grid -->
+  <g stroke="#4ba8f0" stroke-opacity="0.035" stroke-width="1">
+    <line x1="0" y1="190" x2="1200" y2="190"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="370" x2="1200" y2="370"/>
+    <line x1="0" y1="460" x2="1200" y2="460"/>
+  </g>
+
+  <!-- Floor -->
+  <polygon points="480,370 780,520 720,550 420,400" fill="rgba(5,16,38,0.75)" stroke="#4ba8f0" stroke-opacity="0.18" stroke-width="1"/>
+  <!-- Floor grid lines -->
+  <g stroke="#4ba8f0" stroke-opacity="0.14" stroke-width="0.8">
+    <line x1="540" y1="400" x2="480" y2="430"/>
+    <line x1="600" y1="430" x2="540" y2="460"/>
+    <line x1="660" y1="460" x2="600" y2="490"/>
+    <line x1="720" y1="490" x2="660" y2="520"/>
+    <line x1="420" y1="400" x2="720" y2="550"/>
+  </g>
+
+  <!-- BAR 1 — h=1.5 — blue -->
+  <polygon points="480,370 540,400 540,310 480,280" fill="#235e90"/>
+  <polygon points="540,400 480,430 480,340 540,310" fill="#1a4870"/>
+  <polygon points="480,280 540,310 480,340 420,310" fill="#3a8ec8"/>
+  <line x1="480" y1="280" x2="540" y2="310" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  <line x1="540" y1="310" x2="480" y2="340" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  <line x1="480" y1="340" x2="420" y2="310" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.8"/>
+  <line x1="420" y1="310" x2="480" y2="280" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.8"/>
+
+  <!-- BAR 2 — h=2.2 — blue -->
+  <polygon points="540,400 600,430 600,298 540,268" fill="#235e90"/>
+  <polygon points="600,430 540,460 540,328 600,298" fill="#1a4870"/>
+  <polygon points="540,268 600,298 540,328 480,298" fill="#3a8ec8"/>
+  <line x1="540" y1="268" x2="600" y2="298" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  <line x1="600" y1="298" x2="540" y2="328" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  <line x1="540" y1="328" x2="480" y2="298" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.8"/>
+  <line x1="480" y1="298" x2="540" y2="268" stroke="#4ba8f0" stroke-opacity="0.3" stroke-width="0.8"/>
+
+  <!-- BAR 3 — h=3.0 — lighter blue (stepping up) -->
+  <polygon points="600,430 660,460 660,280 600,250" fill="#2970a8"/>
+  <polygon points="660,460 600,490 600,310 660,280" fill="#1e5482"/>
+  <polygon points="600,250 660,280 600,310 540,280" fill="#4aa0d8"/>
+  <line x1="600" y1="250" x2="660" y2="280" stroke="#4ba8f0" stroke-opacity="0.45" stroke-width="0.9"/>
+  <line x1="660" y1="280" x2="600" y2="310" stroke="#4ba8f0" stroke-opacity="0.45" stroke-width="0.9"/>
+  <line x1="600" y1="310" x2="540" y2="280" stroke="#4ba8f0" stroke-opacity="0.35" stroke-width="0.8"/>
+  <line x1="540" y1="280" x2="600" y2="250" stroke="#4ba8f0" stroke-opacity="0.35" stroke-width="0.8"/>
+
+  <!-- BAR 4 — h=3.8 — brighter blue -->
+  <polygon points="660,460 720,490 720,262 660,232" fill="#3080b8"/>
+  <polygon points="720,490 660,520 660,292 720,262" fill="#235e8e"/>
+  <polygon points="660,232 720,262 660,292 600,262" fill="#56b0e0"/>
+  <line x1="660" y1="232" x2="720" y2="262" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="720" y1="262" x2="660" y2="292" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="660" y1="292" x2="600" y2="262" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+  <line x1="600" y1="262" x2="660" y2="232" stroke="#4ba8f0" stroke-opacity="0.4" stroke-width="0.8"/>
+
+  <!-- BAR 5 — h=5.0 — GOLD (tallest) -->
+  <polygon points="720,490 780,520 780,220 720,190" fill="#c49500"/>
+  <polygon points="780,520 720,550 720,250 780,220" fill="#8a6400"/>
+  <polygon points="720,190 780,220 720,250 660,220" fill="#ffd700"/>
+  <!-- Gold top edge highlight -->
+  <line x1="720" y1="190" x2="780" y2="220" stroke="#ffe84d" stroke-opacity="0.9" stroke-width="1.5"/>
+  <line x1="780" y1="220" x2="720" y2="250" stroke="#ffd700" stroke-opacity="0.7" stroke-width="1"/>
+  <line x1="720" y1="250" x2="660" y2="220" stroke="#ffd700" stroke-opacity="0.5" stroke-width="0.8"/>
+  <line x1="660" y1="220" x2="720" y2="190" stroke="#ffe84d" stroke-opacity="0.7" stroke-width="1"/>
+
+  <!-- Gold glow above bar 5 -->
+  <ellipse cx="720" cy="185" rx="95" ry="65" fill="url(#goldPeak)"/>
+
+  <!-- Upward arrow — bar 5 -->
+  <g filter="url(#glow-r)" transform="translate(720,162)" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95">
+    <line x1="0" y1="20" x2="0" y2="2"/>
+    <polyline points="-8,11 0,2 8,11"/>
+  </g>
+
+  <!-- Left-side decorative floating dots -->
+  <g fill="#4ba8f0">
+    <circle cx="130" cy="220" r="2.5" fill-opacity="0.3"/>
+    <circle cx="180" cy="270" r="2" fill-opacity="0.22"/>
+    <circle cx="220" cy="190" r="3" fill-opacity="0.2"/>
+    <circle cx="155" cy="340" r="2" fill-opacity="0.18"/>
+    <circle cx="290" cy="230" r="2.5" fill-opacity="0.2"/>
+    <circle cx="340" cy="300" r="2" fill-opacity="0.16"/>
+    <circle cx="380" cy="200" r="2" fill-opacity="0.18"/>
+    <circle cx="310" cy="380" r="2.5" fill-opacity="0.14"/>
+  </g>
+
+  <!-- Connecting dots to chart (subtle dashed trail) -->
+  <line x1="380" y1="310" x2="480" y2="370" stroke="#4ba8f0" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="4,6"/>
+
+  <!-- KPI badge: "+34% Revenue" — floating left -->
+  <g transform="translate(218, 155)">
+    <rect x="-62" y="-26" width="124" height="52" rx="12" fill="rgba(1,9,34,0.82)" stroke="#ffd700" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-size="24" font-weight="800" fill="#ffd700" fill-opacity="0.95" text-anchor="middle" y="11">+34%</text>
+  </g>
+
+  <!-- Secondary metric dot -->
+  <circle cx="218" cy="155" r="4" fill="#ffd700" fill-opacity="0.6"/>
+  <circle cx="218" cy="155" r="7" fill="none" stroke="#ffd700" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Right side upper — small stat chips -->
+  <g transform="translate(980, 90)">
+    <rect x="-40" y="-14" width="80" height="28" rx="6" fill="rgba(1,9,34,0.7)" stroke="#4ba8f0" stroke-opacity="0.25" stroke-width="1"/>
+    <text font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-size="12" font-weight="700" fill="#4ba8f0" fill-opacity="0.7" text-anchor="middle" y="5">YOY ↑</text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#vign)"/>
+</svg>

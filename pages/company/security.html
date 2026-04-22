@@ -1,18 +1,745 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force Security & Compliance - Learn about our HIPAA-aligned security practices, SOC 2 Type II certification, and commitment to protecting your practice data.">
-  <title>Security & Compliance - Elite Dental Force</title>
+  <meta name="description" content="Elite Dental Force Security & Compliance — HIPAA-aligned architecture, AES-256 encryption, role-based access controls, 24/7 threat monitoring, and BAA included for every customer.">
+  <title>Security & Compliance — Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <style>
+    /* ====================================================
+       SECURITY PAGE — Elite Dental Force
+       ==================================================== */
+
+    /* Grid backdrop — stronger lines */
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    /* Section tints — let grid show through */
+    .sec-page main .section             { background: rgba(2,9,23,0.35); }
+    .sec-page main .section.bg-light    { background: rgba(8,21,48,0.42); }
+    .sec-page main .section.bg-alt      { background: rgba(10,26,58,0.42); }
+    .sec-page main .section-header h2,
+    .sec-page main .section h2          { color: #fff; }
+    .sec-page main .section-header p    { color: rgba(255,255,255,0.48); }
+    .sec-page main .section .overline   { color: #4ba8f0 !important; }
+
+    /* ── 1. HERO ── */
+    .sec-hero {
+      position: relative;
+      padding: 196px 0 108px;
+      text-align: center;
+      overflow: hidden;
+      background: rgba(2,9,23,0.45);
+    }
+
+    .sec-hero-glow {
+      position: absolute;
+      width: 960px;
+      height: 960px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,91,167,0.24) 0%, transparent 62%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -58%);
+      pointer-events: none;
+    }
+
+    .sec-hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .sec-hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      border: 1px solid rgba(75,168,240,0.28);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 36px;
+    }
+
+    .sec-hero-h1 {
+      font-size: clamp(3rem, 6.5vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin: 0 auto 28px;
+      max-width: 780px;
+    }
+
+    .sec-h1-accent {
+      background: linear-gradient(90deg, #4ba8f0 0%, #ffd700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sec-hero-sub {
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: rgba(255,255,255,0.5);
+      max-width: 620px;
+      margin: 0 auto 52px;
+    }
+
+    /* Trust pills row */
+    .sec-trust-pills {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .sec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(75,168,240,0.07);
+      border: 1px solid rgba(75,168,240,0.22);
+      border-radius: 100px;
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 16px;
+      letter-spacing: 0.01em;
+    }
+
+    .sec-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 6px rgba(52,211,153,0.6);
+      flex-shrink: 0;
+    }
+
+    /* ── 2. STAT STRIP ── */
+    .sec-stat-strip {
+      background: rgba(8,21,48,0.55);
+      border-top: 1px solid rgba(75,168,240,0.12);
+      border-bottom: 1px solid rgba(75,168,240,0.12);
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sec-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    .sec-stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 36px 16px;
+      border-right: 1px solid rgba(75,168,240,0.08);
+      text-align: center;
+    }
+
+    .sec-stat-item:last-child {
+      border-right: none;
+    }
+
+    .sec-stat-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.16);
+      flex-shrink: 0;
+    }
+
+    .sec-stat-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #4ba8f0;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .sec-stat-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .sec-stat-sub {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.36);
+      margin-top: -4px;
+    }
+
+    /* ── 3. HIPAA SPLIT ── */
+    .sec-hipaa-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .sec-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 36px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .sec-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(75,168,240,0.07);
+      color: rgba(255,255,255,0.68);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .sec-checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .sec-checklist-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Security layer visualization card */
+    .sec-layers-card {
+      background: linear-gradient(145deg, #0a1938, #060e24);
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 24px;
+      padding: 48px 40px;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sec-layers-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(75,168,240,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .sec-layers-visual {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 1;
+    }
+
+    /* Nested layer rings */
+    .sec-layer-ring {
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec-layer-outer {
+      inset: 0;
+      border: 1.5px solid rgba(75,168,240,0.45);
+      background: rgba(75,168,240,0.04);
+    }
+
+    .sec-layer-mid {
+      inset: 18%;
+      border: 1.5px solid rgba(255,215,0,0.38);
+      background: rgba(255,215,0,0.03);
+    }
+
+    .sec-layer-inner {
+      inset: 36%;
+      border: 1.5px solid rgba(52,211,153,0.5);
+      background: rgba(52,211,153,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec-layer-label {
+      position: absolute;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .sec-layer-outer .sec-layer-label {
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #4ba8f0;
+    }
+
+    .sec-layer-mid .sec-layer-label {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,215,0,0.85);
+    }
+
+    .sec-layer-inner .sec-layer-label {
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(52,211,153,0.85);
+    }
+
+    .sec-shield-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      z-index: 2;
+    }
+
+    /* ── 4. SECURITY PILLARS GRID ── */
+    .sec-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .sec-pillar-card {
+      background: linear-gradient(145deg, #0d1f3c, #081530);
+      border: 1px solid rgba(75,168,240,0.14);
+      border-radius: 20px;
+      padding: 36px 32px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sec-pillar-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(75,168,240,0.07), transparent 60%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .sec-pillar-card:hover {
+      border-color: rgba(75,168,240,0.32);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(75,168,240,0.12);
+      transform: translateY(-4px);
+    }
+
+    .sec-pillar-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Top highlight line on pillar cards */
+    .sec-pillar-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.45), transparent);
+      border-radius: inherit;
+    }
+
+    .sec-pillar-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sec-pillar-card:hover .sec-pillar-icon {
+      background: rgba(75,168,240,0.14);
+      border-color: rgba(75,168,240,0.35);
+      box-shadow: 0 0 20px rgba(75,168,240,0.18);
+    }
+
+    .sec-pillar-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: #4ba8f0;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .sec-pillar-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .sec-pillar-card p {
+      font-size: 0.9rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.48);
+      margin: 0;
+    }
+
+    /* ── 5. COMPLIANCE CARDS ── */
+    .sec-compliance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .sec-compliance-card {
+      background: linear-gradient(145deg, #0d1f3c, #071428);
+      border: 1px solid rgba(75,168,240,0.16);
+      border-radius: 24px;
+      padding: 48px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sec-compliance-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .sec-compliance-card:hover {
+      border-color: rgba(75,168,240,0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(75,168,240,0.1);
+      transform: translateY(-3px);
+    }
+
+    .sec-cc-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .sec-cc-icon svg {
+      width: 34px;
+      height: 34px;
+      stroke: #4ba8f0;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .sec-cc-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      background: rgba(75,168,240,0.1);
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 100px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+
+    .sec-compliance-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .sec-compliance-card > p {
+      font-size: 0.93rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+    }
+
+    .sec-cc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .sec-cc-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(75,168,240,0.07);
+      color: rgba(255,255,255,0.62);
+      font-size: 0.9rem;
+    }
+
+    .sec-cc-list li:last-child {
+      border-bottom: none;
+    }
+
+    .sec-cc-list li svg {
+      width: 16px;
+      height: 16px;
+      stroke: #4ba8f0;
+      fill: none;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+    }
+
+    .sec-cc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.36);
+      letter-spacing: 0.04em;
+    }
+
+    .sec-cc-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(52,211,153,0.7);
+      box-shadow: 0 0 5px rgba(52,211,153,0.4);
+    }
+
+    /* ── 6. DATA PRACTICES GRID ── */
+    .sec-data-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .sec-data-card {
+      background: linear-gradient(145deg, rgba(8,21,48,0.7), rgba(6,14,36,0.7));
+      border: 1px solid rgba(75,168,240,0.12);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sec-data-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.35), transparent);
+    }
+
+    .sec-data-card:hover {
+      border-color: rgba(75,168,240,0.26);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .sec-data-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sec-data-card:hover .sec-data-icon {
+      background: rgba(75,168,240,0.14);
+      box-shadow: 0 0 16px rgba(75,168,240,0.16);
+    }
+
+    .sec-data-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #4ba8f0;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .sec-data-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .sec-data-card p {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.44);
+      margin: 0;
+    }
+
+    /* ── CTA BAND overrides (btn-white) ── */
+    .btn-white {
+      background: #fff;
+      color: #020917;
+      font-weight: 700;
+      border-color: transparent;
+    }
+    .btn-white:hover {
+      background: rgba(255,255,255,0.92);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255,255,255,0.2);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .sec-hipaa-split {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .sec-layers-card {
+        min-height: 340px;
+      }
+      .sec-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sec-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 960px) {
+      .sec-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .sec-stat-item:nth-child(3) {
+        border-right: none;
+      }
+      .sec-stat-item:nth-child(4),
+      .sec-stat-item:nth-child(5) {
+        border-top: 1px solid rgba(75,168,240,0.08);
+      }
+      .sec-stat-item:nth-child(5) {
+        border-right: none;
+      }
+      .sec-compliance-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .sec-hero {
+        padding: 150px 0 80px;
+      }
+      .sec-hero-h1 {
+        font-size: 2.6rem;
+      }
+      .sec-hero-sub {
+        font-size: 0.97rem;
+      }
+      .sec-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sec-stat-item:nth-child(2) {
+        border-right: none;
+      }
+      .sec-stat-item:nth-child(3),
+      .sec-stat-item:nth-child(4),
+      .sec-stat-item:nth-child(5) {
+        border-top: 1px solid rgba(75,168,240,0.08);
+      }
+      .sec-stat-item:nth-child(3),
+      .sec-stat-item:nth-child(5) {
+        border-right: none;
+      }
+      .sec-pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .sec-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sec-compliance-card {
+        padding: 32px 24px;
+      }
+      .sec-layers-visual {
+        max-width: 260px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .sec-data-grid {
+        grid-template-columns: 1fr;
+      }
+      .sec-trust-pills {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="sec-page">
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -27,7 +754,6 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -38,7 +764,15 @@
                 <li><a href="../partners.html">Partners</a></li>
               </ul>
             </li>
-            <li><a href="../resources.html" class="nav-link">Resources</a></li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="../resources/blog.html">Blog</a></li>
+                <li><a href="../resources/podcast.html">Podcast</a></li>
+                <li><a href="../resources/webinars.html">Webinars</a></li>
+                <li><a href="../resources/news.html">News</a></li>
+              </ul>
+            </li>
             <li class="has-dropdown">
               <a href="../company.html" class="nav-link active">Company</a>
               <ul class="dropdown">
@@ -46,7 +780,6 @@
                 <li><a href="security.html">Security</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -65,240 +798,498 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1: HERO
+         ═══════════════════════════════════════════ -->
+    <section class="sec-hero">
+      <div class="sec-hero-glow"></div>
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Security & Compliance</span>
-          <h1>Your Data Security Is Our Priority</h1>
-          <p class="lead">Elite Dental Force maintains enterprise-grade security practices to protect your practice and patient data at every level.</p>
+        <div class="sec-hero-inner">
+
+          <div class="sec-hero-kicker">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Security &amp; Compliance
+          </div>
+
+          <h1 class="sec-hero-h1">
+            Your Practice Data,<br>
+            <em class="sec-h1-accent" style="font-style: normal;">Protected at Every Layer.</em>
+          </h1>
+
+          <p class="sec-hero-sub">
+            EDiFi is architected for healthcare from day one. HIPAA-aligned infrastructure, AES-256 encryption, role-based access, and 24/7 threat monitoring — so your team focuses on patients, not paperwork.
+          </p>
+
+          <!-- Trust Pills -->
+          <div class="sec-trust-pills" role="list" aria-label="Security certifications">
+            <span class="sec-pill" role="listitem">
+              <span class="sec-pill-dot" aria-hidden="true"></span>
+              AES-256 Encrypted
+            </span>
+            <span class="sec-pill" role="listitem">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0.55;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              HIPAA Aligned
+            </span>
+            <span class="sec-pill" role="listitem">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0.55;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Role-Based Access
+            </span>
+            <span class="sec-pill" role="listitem">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0.55;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              24/7 Monitoring
+            </span>
+            <span class="sec-pill" role="listitem">
+              <span class="sec-pill-dot" aria-hidden="true"></span>
+              BAA Ready
+            </span>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Security Overview -->
+    <!-- ═══════════════════════════════════════════
+         SECTION 2: SECURITY AT A GLANCE STAT STRIP
+         ═══════════════════════════════════════════ -->
+    <div class="sec-stat-strip" role="region" aria-label="Security overview">
+      <div class="sec-stat-grid">
+
+        <div class="sec-stat-item">
+          <div class="sec-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <span class="sec-stat-label">AES-256</span>
+          <span class="sec-stat-sub">Encryption Standard</span>
+        </div>
+
+        <div class="sec-stat-item">
+          <div class="sec-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <span class="sec-stat-label">HIPAA Aligned</span>
+          <span class="sec-stat-sub">Architecture</span>
+        </div>
+
+        <div class="sec-stat-item">
+          <div class="sec-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span class="sec-stat-label">Role-Based</span>
+          <span class="sec-stat-sub">Access Control</span>
+        </div>
+
+        <div class="sec-stat-item">
+          <div class="sec-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <span class="sec-stat-label">24/7 Active</span>
+          <span class="sec-stat-sub">Threat Monitoring</span>
+        </div>
+
+        <div class="sec-stat-item">
+          <div class="sec-stat-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <span class="sec-stat-label">BAA</span>
+          <span class="sec-stat-sub">Available on Request</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3: HIPAA ARCHITECTURE (SPLIT)
+         ═══════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
-        <div class="split-section">
-          <div class="split-content">
-            <span class="overline" style="color: var(--color-interactive); font-size: var(--text-sm); font-weight: var(--font-semibold); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: var(--space-4);">HIPAA Compliance</span>
-            <h2>HIPAA-Aligned Architecture</h2>
-            <p style="font-size: var(--text-lg); color: var(--color-text-light);">Elite Dental Force maintains rigorous security practices aligned with HIPAA requirements for protected health information. Our infrastructure is designed from the ground up to meet and exceed healthcare data protection standards.</p>
-            <ul style="margin: var(--space-6) 0;">
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                End-to-end encryption (AES-256)
+        <div class="sec-hipaa-split">
+
+          <!-- Left: Text -->
+          <div>
+            <span class="overline">HIPAA Compliance</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 20px;">Built for Healthcare<br>Compliance</h2>
+            <p style="font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,0.52); margin-bottom: 0;">
+              Every component of EDiFi was designed with healthcare data protection in mind. Our platform supports HIPAA technical, administrative, and physical safeguard requirements — not as an afterthought, but as a foundation.
+            </p>
+
+            <ul class="sec-checklist" aria-label="HIPAA compliance features">
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                End-to-end AES-256 encryption at rest and in transit
               </li>
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                SOC 2 Type II certified
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                TLS 1.3 for all data communications
               </li>
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Role-based access controls
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                HIPAA-aligned technical and administrative safeguards
               </li>
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Complete audit logging
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                Role-based access controls per user and location
               </li>
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Regular third-party penetration testing
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                Complete audit logging with tamper-proof records
               </li>
-              <li style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Business Associate Agreements available
+              <li>
+                <svg class="sec-checklist-icon" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                Business Associate Agreements for all customers
               </li>
             </ul>
           </div>
-          <div class="split-visual">
-            <div class="product-visual">
-              <img src="../../images/security-certifications.png" alt="Security certifications and compliance badges">
+
+          <!-- Right: Security Layer Visualization -->
+          <div>
+            <div class="sec-layers-card">
+              <div class="sec-layers-visual" role="img" aria-label="Security layer diagram showing network, application, and encrypted data core">
+
+                <!-- Outer ring: Network & Infrastructure -->
+                <div class="sec-layer-ring sec-layer-outer">
+                  <span class="sec-layer-label">Network &amp; Infrastructure</span>
+                </div>
+
+                <!-- Middle ring: Application Security -->
+                <div class="sec-layer-ring sec-layer-mid">
+                  <span class="sec-layer-label">Application Security</span>
+                </div>
+
+                <!-- Inner ring: Encrypted Data Core -->
+                <div class="sec-layer-ring sec-layer-inner">
+                  <span class="sec-layer-label">Encrypted Data Core</span>
+                </div>
+
+                <!-- Shield center -->
+                <div class="sec-shield-center" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(52,211,153,0.1)"/>
+                    <polyline points="9 12 11 14 15 10" stroke="#34d399" stroke-width="2.2"/>
+                  </svg>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Card labels below visual -->
+            <div style="display:flex; justify-content:center; gap:20px; margin-top:20px; flex-wrap:wrap;">
+              <div style="display:flex; align-items:center; gap:7px; font-size:11px; color:rgba(255,255,255,0.4);">
+                <span style="width:10px; height:10px; border-radius:50%; border:1.5px solid rgba(75,168,240,0.6);"></span>
+                Network
+              </div>
+              <div style="display:flex; align-items:center; gap:7px; font-size:11px; color:rgba(255,255,255,0.4);">
+                <span style="width:10px; height:10px; border-radius:50%; border:1.5px solid rgba(255,215,0,0.55);"></span>
+                Application
+              </div>
+              <div style="display:flex; align-items:center; gap:7px; font-size:11px; color:rgba(255,255,255,0.4);">
+                <span style="width:10px; height:10px; border-radius:50%; border:1.5px solid rgba(52,211,153,0.65); background:rgba(52,211,153,0.08);"></span>
+                Encrypted Core
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Security Pillars -->
-    <section class="section bg-light">
+    <!-- ═══════════════════════════════════════════
+         SECTION 4: SECURITY PILLARS (3×2 GRID)
+         ═══════════════════════════════════════════ -->
+    <section class="section bg-alt">
       <div class="container">
         <div class="section-header">
           <span class="overline">Security Framework</span>
-          <h2>Enterprise-Grade Protection</h2>
-          <p>Our comprehensive security framework covers every aspect of data protection.</p>
+          <h2>Six Layers of Protection</h2>
+          <p>Our comprehensive security framework covers every attack surface, from the network edge to the database row.</p>
         </div>
 
-        <div class="grid grid-3" style="gap: var(--space-8);">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        <div class="sec-pillars-grid">
+
+          <!-- Data Encryption -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
             </div>
             <h3>Data Encryption</h3>
-            <p>All data is encrypted both at rest and in transit using AES-256 encryption. TLS 1.3 protects all communications between systems.</p>
+            <p>AES-256 encryption at rest and TLS 1.3 in transit. Every byte of patient and practice data is encrypted before it leaves your device and again in storage.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          <!-- Access Control -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
             <h3>Access Control</h3>
-            <p>Role-based access controls ensure users only access the data they need. Multi-factor authentication is available for all accounts.</p>
+            <p>Role-based permissions ensure every team member accesses only what they need. Multi-factor authentication supported across all account types.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
+          <!-- Audit Logging -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
               </svg>
             </div>
             <h3>Audit Logging</h3>
-            <p>Comprehensive audit trails track all system access and data modifications. Logs are retained according to healthcare compliance requirements.</p>
+            <p>Immutable audit trails track every login, data access, and modification. Logs are retained to meet healthcare compliance retention timelines.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
+          <!-- Continuous Monitoring -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
               </svg>
             </div>
             <h3>Continuous Monitoring</h3>
-            <p>24/7 security monitoring detects and responds to potential threats in real-time. Automated alerts notify our security team of anomalies.</p>
+            <p>Automated 24/7 threat detection flags anomalous behavior in real time. Our security team receives immediate alerts and responds with documented SLAs.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          <!-- Infrastructure Security -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                <line x1="6" y1="18" x2="6.01" y2="18"/>
               </svg>
             </div>
             <h3>Infrastructure Security</h3>
-            <p>Our cloud infrastructure is hosted in SOC 2 certified data centers with physical security controls, redundant power, and disaster recovery.</p>
+            <p>Hosted in HIPAA-compliant cloud infrastructure with physical security controls, multi-region redundancy, and automated disaster recovery.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <polyline points="9 12 11 14 15 10"></polyline>
+          <!-- Vulnerability Management -->
+          <div class="sec-pillar-card">
+            <div class="sec-pillar-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
               </svg>
             </div>
             <h3>Vulnerability Management</h3>
-            <p>Regular penetration testing by third-party security firms. Continuous vulnerability scanning and rapid patch deployment.</p>
+            <p>Scheduled third-party penetration testing, continuous automated scanning, and a formal patch deployment process with documented timelines.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Certifications & Compliance -->
+    <!-- ═══════════════════════════════════════════
+         SECTION 5: COMPLIANCE & STANDARDS
+         ═══════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="section-header">
           <span class="overline">Certifications</span>
-          <h2>Compliance & Standards</h2>
-          <p>We maintain industry-recognized certifications and adhere to healthcare compliance standards.</p>
+          <h2>Compliance Standards We Uphold</h2>
         </div>
 
-        <div class="grid grid-2" style="gap: var(--space-8);">
-          <div style="background: var(--color-white); padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-            <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
-              <div style="width: 60px; height: 60px; background: var(--color-alt-bg); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 style="margin: 0;">HIPAA Compliance</h4>
-                <p style="margin: 0; font-size: var(--text-sm); color: var(--color-text-muted);">Healthcare Data Protection</p>
-              </div>
-            </div>
-            <p style="color: var(--color-text-light); margin: 0;">Our platform is designed to support HIPAA compliance requirements. We provide Business Associate Agreements (BAAs) and maintain technical, administrative, and physical safeguards for protected health information.</p>
-          </div>
+        <div class="sec-compliance-grid">
 
-          <div style="background: var(--color-white); padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-            <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
-              <div style="width: 60px; height: 60px; background: var(--color-alt-bg); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="9 12 11 14 15 10"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h4 style="margin: 0;">SOC 2 Type II</h4>
-                <p style="margin: 0; font-size: var(--text-sm); color: var(--color-text-muted);">Service Organization Controls</p>
-              </div>
+          <!-- HIPAA Card -->
+          <div class="sec-compliance-card">
+            <div class="sec-cc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
             </div>
-            <p style="color: var(--color-text-light); margin: 0;">Annual SOC 2 Type II audits verify our security, availability, and confidentiality controls. Reports are available to customers under NDA upon request.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business Associate Agreement -->
-    <section class="section bg-alt">
-      <div class="container">
-        <div class="grid grid-2" style="gap: var(--space-12); align-items: center;">
-          <div>
-            <span class="overline" style="color: var(--color-interactive); font-size: var(--text-sm); font-weight: var(--font-semibold); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: var(--space-4);">Business Partners</span>
-            <h2>Business Associate Agreements</h2>
-            <p style="font-size: var(--text-lg); color: var(--color-text-light); margin-bottom: var(--space-6);">Elite Dental Force provides Business Associate Agreements (BAAs) to all customers as part of our standard service. Our BAA outlines our responsibilities for protecting PHI and demonstrates our commitment to HIPAA compliance.</p>
-            <a href="../contact.html#sales" class="btn btn-primary">Request BAA Information</a>
-          </div>
-          <div style="background: var(--color-white); padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-            <h4 style="margin-bottom: var(--space-4);">Our BAA Covers:</h4>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Permitted uses and disclosures of PHI
+            <div class="sec-cc-badge">Healthcare Compliance</div>
+            <h3>HIPAA-Aligned Platform</h3>
+            <p>Our platform is architected to support HIPAA's technical, administrative, and physical safeguard requirements. We help covered entities and business associates meet their obligations under the Security and Privacy Rules.</p>
+            <ul class="sec-cc-list" aria-label="HIPAA safeguards covered">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Technical Safeguards
               </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Safeguards for protecting PHI
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Administrative Safeguards
               </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Breach notification procedures
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Physical Safeguards
               </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Subcontractor requirements
-              </li>
-              <li style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; color: var(--color-text-light);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Audit and compliance verification
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Breach Notification Support
               </li>
             </ul>
+            <span class="sec-cc-tag">Applicable to all customers</span>
           </div>
+
+          <!-- BAA Card -->
+          <div class="sec-compliance-card">
+            <div class="sec-cc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="sec-cc-badge">Included Standard</div>
+            <h3>Business Associate Agreement</h3>
+            <p>Elite Dental Force provides a signed BAA to every customer as part of our standard service agreement. Our BAA is reviewed by healthcare compliance attorneys and updated annually.</p>
+            <ul class="sec-cc-list" aria-label="BAA coverage details">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                PHI use and disclosure limits
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Breach notification (within 72 hours)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Subcontractor chain-of-trust
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Annual compliance review
+              </li>
+            </ul>
+            <span class="sec-cc-tag">Signed at contract — no extra cost</span>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Security Questions CTA -->
-    <section class="cta-band">
+    <!-- ═══════════════════════════════════════════
+         SECTION 6: RESPONSIBLE DATA PRACTICES
+         ═══════════════════════════════════════════ -->
+    <section class="section bg-light">
       <div class="container">
-        <h2>Have Security Questions?</h2>
-        <p>Our security team is available to discuss our practices and answer your compliance questions.</p>
-        <div class="cta-band-actions">
-          <a href="../contact.html#sales" class="btn btn-white btn-lg">Contact Security Team</a>
-          <a href="faq.html" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">View FAQ</a>
+        <div class="section-header">
+          <h2>How We Handle Your Data</h2>
+          <p>Transparency is part of our security model. Here's exactly how EDiFi manages your practice's information.</p>
+        </div>
+
+        <div class="sec-data-grid">
+
+          <div class="sec-data-card">
+            <div class="sec-data-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </div>
+            <h3>We Never Sell Your Data</h3>
+            <p>No third-party data sharing, ever. Your patient and practice data belongs to you.</p>
+          </div>
+
+          <div class="sec-data-card">
+            <div class="sec-data-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Minimum Necessary Access</h3>
+            <p>EDiFi employees access your data only when required for support, and only the minimum necessary.</p>
+          </div>
+
+          <div class="sec-data-card">
+            <div class="sec-data-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <polyline points="21 15 15 15 15 21"/>
+                <path d="M21 3 H3 V21 H15 L21 15 V3 Z"/>
+                <path d="M14 2 L14 8 L20 8"/>
+              </svg>
+            </div>
+            <h3>You Own Your Data</h3>
+            <p>Export your complete data at any time. If you leave, your data leaves with you — fully portable.</p>
+          </div>
+
+          <div class="sec-data-card">
+            <div class="sec-data-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/>
+                <path d="M14 11v6"/>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+            </div>
+            <h3>Deletion on Request</h3>
+            <p>Account closure triggers a verified deletion workflow. Data is purged within 30 days per our data retention policy.</p>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA BAND
+         ═══════════════════════════════════════════ -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Have Questions About Our Security Practices?</h2>
+        <p>Our team is available to discuss our security architecture, provide compliance documentation, or walk through our BAA.</p>
+        <div class="cta-band-actions">
+          <a href="../contact.html#security" class="btn btn-white btn-lg">Contact Our Security Team</a>
+          <a href="faq.html" class="btn btn-secondary btn-lg" style="border-color: rgba(255,255,255,0.28); color: #fff;">View FAQ</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -316,7 +1307,6 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -359,5 +1349,33 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+
+  <script>
+    /* Spotlight mouse tracking on pillar cards */
+    document.querySelectorAll('.sec-pillar-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--mouse-y', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    /* Wobble on compliance cards */
+    document.querySelectorAll('.sec-compliance-card').forEach(function(card) {
+      card.addEventListener('mouseenter', function(e) {
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        card.style.transform = 'rotate(' + (x * 1.5) + 'deg) scale(1.01) translateY(-3px)';
+        card.style.transition = 'transform 0.15s ease';
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    });
+  </script>
+
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

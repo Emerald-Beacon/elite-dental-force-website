@@ -1,18 +1,343 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Revenue Intelligence Podcast by Elite Dental Force - Expert conversations on dental revenue optimization, industry trends, and practice management strategies.">
-  <title>Podcast - Elite Dental Force</title>
+  <meta name="description" content="Podcast appearances by Alvin Uta'i, Founder & CEO of Elite Dental Force — conversations about dental billing AI, insurance eligibility, payer strategy, and the future of dental revenue intelligence.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/resources/podcast.html">
+  <meta property="og:title" content="Podcast Appearances — Alvin Uta'i on Dental Revenue & AI | Elite Dental Force">
+  <meta property="og:description" content="Listen to Alvin Uta'i discuss dental billing AI, insurance eligibility, and the future of dental revenue intelligence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/resources/podcast.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>Podcast Appearances — Alvin Uta'i on AI & Dental Revenue</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <style>
+    /* ================================================
+       PODCAST APPEARANCES PAGE — pod- namespace
+       ================================================ */
+
+    body.pod-page::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    .pod-page main .section        { background: rgba(2,9,23,0.35); }
+    .pod-page main .section.bg-alt { background: rgba(8,21,48,0.42); }
+
+    /* ── HERO ── */
+    .pod-hero {
+      padding: calc(80px + 5rem) 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pod-hero::before {
+      content: '';
+      position: absolute;
+      width: 900px; height: 600px;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center,
+        rgba(75,168,240,0.16) 0%, rgba(9,91,167,0.07) 45%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .pod-hero .container { position: relative; z-index: 2; max-width: 720px; }
+    .pod-overline {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #4ba8f0; margin-bottom: 1.25rem;
+    }
+    .pod-hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 800; line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #f0f7ff; margin-bottom: 1.25rem;
+    }
+    .pod-hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .pod-hero-sub {
+      font-size: 1.125rem; line-height: 1.7;
+      color: rgba(133,184,216,0.85);
+      max-width: 560px; margin: 0 auto 2.5rem;
+    }
+    .pod-host-pill {
+      display: inline-flex; align-items: center; gap: 0.625rem;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 50px; padding: 0.5rem 1.25rem;
+      font-size: 0.875rem; color: rgba(133,184,216,0.85);
+    }
+    .pod-host-pill strong { color: #f0f7ff; font-weight: 600; }
+    .pod-host-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #4ba8f0;
+      box-shadow: 0 0 8px rgba(75,168,240,0.7);
+      animation: pod-pulse 2s ease-in-out infinite;
+    }
+    @keyframes pod-pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:0.5; transform:scale(1.4); }
+    }
+
+    /* ── STATS STRIP ── */
+    .pod-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 3rem 0 0;
+    }
+    .pod-stats::before {
+      content: ''; grid-column: 1 / -1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+      display: block;
+    }
+    .pod-stat {
+      padding: 1.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(75,168,240,0.1);
+    }
+    .pod-stat:last-child { border-right: none; }
+    .pod-stat-val {
+      font-size: 1.75rem; font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
+    }
+    .pod-stat-lbl {
+      font-size: 0.75rem; color: rgba(133,184,216,0.6);
+      margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+
+    /* ── FEATURED APPEARANCE ── */
+    .pod-featured {
+      background: linear-gradient(145deg, rgba(13,31,60,0.92), rgba(8,21,48,0.92));
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pod-featured::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.6), transparent);
+    }
+    .pod-featured:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 0 30px rgba(75,168,240,0.08);
+    }
+    .pod-featured-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2.5rem;
+      padding: 2.5rem;
+      align-items: center;
+    }
+    .pod-featured-badge {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      background: rgba(255,215,0,0.1);
+      border: 1px solid rgba(255,215,0,0.25);
+      border-radius: 50px;
+      padding: 0.3rem 0.875rem;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: #ffd700; margin-bottom: 0.875rem;
+    }
+    .pod-featured-badge::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: #ffd700; box-shadow: 0 0 6px rgba(255,215,0,0.7);
+    }
+    .pod-featured-show {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #4ba8f0; margin-bottom: 0.5rem;
+    }
+    .pod-featured-title {
+      font-size: 1.5rem; font-weight: 800; line-height: 1.25;
+      color: #f0f7ff; margin-bottom: 0.875rem;
+    }
+    .pod-featured-meta {
+      display: flex; align-items: center; gap: 1rem;
+      flex-wrap: wrap; margin-bottom: 1rem;
+    }
+    .pod-meta-item {
+      display: flex; align-items: center; gap: 0.35rem;
+      font-size: 0.8125rem; color: rgba(133,184,216,0.6);
+    }
+    .pod-featured-desc {
+      font-size: 0.9375rem; line-height: 1.65;
+      color: rgba(133,184,216,0.8); margin-bottom: 1.5rem;
+    }
+    .pod-featured-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .pod-btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      padding: 0.625rem 1.25rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(75,168,240,0.25);
+      border-radius: 10px;
+      font-size: 0.875rem; font-weight: 600;
+      color: rgba(133,184,216,0.85);
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .pod-btn-ghost:hover {
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.45);
+      color: #f0f7ff;
+    }
+    .pod-featured-cover {
+      width: 160px; height: 160px; flex-shrink: 0;
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(9,91,167,0.6), rgba(0,31,113,0.8));
+      border: 1px solid rgba(75,168,240,0.2);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-weight: 800; color: #4ba8f0;
+      font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .pod-featured-cover-logo {
+      font-size: 1.5rem; font-weight: 800;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1; margin-bottom: 0.25rem;
+    }
+
+    /* ── APPEARANCES LIST ── */
+    .pod-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .pod-card {
+      display: flex; align-items: center; gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(145deg, rgba(13,31,60,0.85), rgba(8,21,48,0.85));
+      border: 1px solid rgba(75,168,240,0.15);
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      overflow: hidden;
+    }
+    .pod-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.35), transparent);
+    }
+    .pod-card:hover {
+      border-color: rgba(75,168,240,0.38);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 20px rgba(75,168,240,0.07);
+      transform: translateY(-2px);
+    }
+    .pod-card-num {
+      width: 72px; height: 72px; flex-shrink: 0;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.15);
+      border-radius: 12px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .pod-card:hover .pod-card-num {
+      background: rgba(75,168,240,0.14);
+      border-color: rgba(75,168,240,0.3);
+      box-shadow: 0 0 18px rgba(75,168,240,0.12);
+    }
+    .pod-card-num-val {
+      font-size: 1.125rem; font-weight: 800;
+      color: #4ba8f0; line-height: 1;
+    }
+    .pod-card-num-lbl {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: rgba(75,168,240,0.5); margin-top: 2px;
+    }
+    .pod-card-body { flex: 1; min-width: 0; }
+    .pod-card-show {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: #4ba8f0; margin-bottom: 0.2rem;
+    }
+    .pod-card-title {
+      font-size: 1rem; font-weight: 700;
+      color: #f0f7ff; line-height: 1.3; margin-bottom: 0.25rem;
+    }
+    .pod-card-meta {
+      font-size: 0.78rem; color: rgba(133,184,216,0.55);
+    }
+    .pod-card-arrow {
+      width: 34px; height: 34px; flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(75,168,240,0.06);
+      border: 1px solid rgba(75,168,240,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(75,168,240,0.5);
+      transition: all 0.3s ease;
+    }
+    .pod-card:hover .pod-card-arrow {
+      background: rgba(75,168,240,0.14);
+      border-color: rgba(75,168,240,0.4);
+      color: #4ba8f0;
+      transform: translateX(3px);
+    }
+
+    /* ── APPEAR ON A PODCAST CTA ── */
+    .pod-invite {
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .pod-invite h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800; color: #f0f7ff; margin-bottom: 0.75rem;
+    }
+    .pod-invite p {
+      font-size: 1rem; color: rgba(133,184,216,0.8);
+      max-width: 480px; margin: 0 auto 1.75rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .pod-featured-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .pod-featured-cover { display: none; }
+      .pod-stats { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 480px) {
+      .pod-card-num { width: 56px; height: 56px; }
+      .pod-stats { grid-template-columns: 1fr; }
+      .pod-stat { border-right: none; border-bottom: 1px solid rgba(75,168,240,0.1); }
+      .pod-stat:last-child { border-bottom: none; }
+    }
+  </style>
 </head>
-<body>
+<body class="pod-page">
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -27,7 +352,6 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,7 +363,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="../resources.html" class="nav-link active">Resources</a>
+              <a href="index.html" class="nav-link active">Resources</a>
               <ul class="dropdown">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
@@ -54,7 +378,6 @@
                 <li><a href="../company/security.html">Security</a></li>
                 <li><a href="../company/faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -64,168 +387,80 @@
         </nav>
 
         <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="pod-hero">
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">Podcast</span>
-          <h1>Revenue Intelligence Podcast</h1>
-          <p class="lead">Conversations with industry leaders on dental revenue optimization, practice management, and the future of dental billing.</p>
+        <p class="pod-overline">Podcast Appearances</p>
+        <h1>Alvin on the<br><em>Mic</em></h1>
+        <p class="pod-hero-sub">
+          Conversations on dental revenue intelligence, payer strategy, and how AI is transforming the business of dentistry.
+        </p>
+        <div class="pod-host-pill">
+          <span class="pod-host-dot"></span>
+          <span>Featuring <strong>Alvin Uta'i</strong> — Founder & CEO, Elite Dental Force</span>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="pod-stats" id="pod-stats-strip">
+          <!-- Rendered by JS -->
         </div>
       </div>
     </section>
 
-    <!-- Podcast Platforms -->
+    <!-- FEATURED APPEARANCE -->
+    <section class="section bg-alt">
+      <div class="container">
+        <p class="pod-overline">Most Recent</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#f0f7ff;margin-bottom:2rem;">Latest Appearance</h2>
+        <div id="pod-featured-slot">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL APPEARANCES -->
     <section class="section">
       <div class="container">
-        <div style="text-align: center; margin-bottom: var(--space-12);">
-          <p style="font-size: var(--text-lg); color: var(--color-text-light); margin-bottom: var(--space-6);">Listen on your favorite platform</p>
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center;">
-            <a href="#" class="btn btn-secondary" style="display: flex; align-items: center; gap: var(--space-2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.563 17.066c-.246.37-.77.49-1.14.246-3.12-1.907-7.05-2.34-11.677-1.282-.445.102-.89-.177-.99-.62-.102-.445.176-.89.62-.992 5.06-1.157 9.402-.66 12.94 1.506.37.244.49.77.247 1.142zm1.49-3.223c-.308.46-.95.608-1.41.3-3.57-2.195-9.012-2.83-13.24-1.548-.55.166-1.13-.145-1.295-.694-.165-.55.146-1.13.695-1.295 4.83-1.465 10.84-.754 14.95 1.827.46.308.608.95.3 1.41zm.13-3.36C15.51 8.283 9.01 8.075 5.25 9.176c-.66.193-1.357-.177-1.55-.837-.193-.66.177-1.357.836-1.55 4.32-1.265 11.5-1.02 16.04 1.79.61.354.82 1.136.466 1.746-.354.61-1.135.82-1.745.466-.003-.002-.005-.003-.008-.006z"/></svg>
-              Spotify
-            </a>
-            <a href="#" class="btn btn-secondary" style="display: flex; align-items: center; gap: var(--space-2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.97 17.47c-.17.28-.53.37-.81.21-2.22-1.36-5.02-1.67-8.32-.91-.32.07-.63-.13-.7-.45-.07-.32.13-.63.45-.7 3.61-.83 6.71-.47 9.18 1.05.28.16.37.53.2.8zm1.32-2.9c-.21.35-.66.46-1.01.25-2.54-1.56-6.41-2.01-9.42-1.1-.39.12-.8-.1-.92-.49-.12-.39.1-.8.49-.92 3.44-1.04 7.72-.54 10.62 1.25.34.22.45.66.24 1.01zm.11-3.02c-3.05-1.81-8.08-1.98-10.99-1.09-.47.14-.96-.12-1.1-.59-.14-.47.12-.96.59-1.1 3.34-1.02 8.89-.82 12.4 1.26.42.25.56.79.31 1.21-.25.43-.79.57-1.21.31z"/></svg>
-              Apple Podcasts
-            </a>
-            <a href="#" class="btn btn-secondary" style="display: flex; align-items: center; gap: var(--space-2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.514 0-10-4.486-10-10S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1.5-6l6-4-6-4v8z"/></svg>
-              Google Podcasts
-            </a>
-            <a href="#" class="btn btn-secondary" style="display: flex; align-items: center; gap: var(--space-2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3v18h18V3H3zm16.5 9a.5.5 0 0 1-.5.5h-3.5v7.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V12.5H9a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h3.5V6a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v3.5H19a.5.5 0 0 1 .5.5v2z"/></svg>
-              RSS Feed
-            </a>
-          </div>
+        <p class="pod-overline">All Episodes</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#f0f7ff;margin-bottom:2rem;">Every Appearance</h2>
+        <div class="pod-list" id="pod-list">
+          <!-- Rendered by JS -->
         </div>
       </div>
     </section>
 
-    <!-- Latest Episode -->
-    <section class="section bg-light">
+    <!-- INVITE CTA -->
+    <section class="section bg-alt">
       <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">Latest Episode</span>
-        </div>
-
-        <div style="background: var(--color-white); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); overflow: hidden;">
-          <div class="split-section" style="gap: 0;">
-            <div style="padding: var(--space-8); display: flex; flex-direction: column; justify-content: center;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted); display: block; margin-bottom: var(--space-2);">Episode 52 • January 18, 2025</span>
-              <h3 style="margin-bottom: var(--space-4);">Revenue Intelligence: The Future of Dental Billing</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-6);">Industry experts discuss how AI and automation are transforming dental practice revenue management. Learn about the latest trends and what practices can do to stay ahead.</p>
-              <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
-                <div style="display: flex; align-items: center; gap: var(--space-2);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <span style="font-size: var(--text-sm); color: var(--color-text-muted);">45 min</span>
-                </div>
-              </div>
-              <div style="display: flex; gap: var(--space-3);">
-                <a href="#" class="btn btn-primary">Listen Now</a>
-                <a href="#" class="btn btn-secondary">Show Notes</a>
-              </div>
-            </div>
-            <div style="background: var(--color-alt-bg); aspect-ratio: 1; min-width: 300px;">
-              <img src="../../images/podcast-ep-52.jpg" alt="Episode 52 cover" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-          </div>
+        <div class="pod-invite">
+          <p class="pod-overline">Podcast Hosts</p>
+          <h2>Want Alvin on Your Show?</h2>
+          <p>Topics: dental revenue intelligence, AI in healthcare billing, payer strategy, building a dental tech startup.</p>
+          <a href="../contact.html" class="btn btn-primary btn-lg">Send a Podcast Inquiry</a>
         </div>
       </div>
     </section>
 
-    <!-- All Episodes -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" style="text-align: left; max-width: 100%;">
-          <span class="overline">All Episodes</span>
-          <h2>Browse the Archive</h2>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-          <!-- Episode Card -->
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 120px; height: 120px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/podcast-ep-51.jpg" alt="Episode 51" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Episode 51 • January 11, 2025 • 38 min</span>
-              <h4 style="margin: var(--space-2) 0;">Mastering DSO Revenue at Scale</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Strategies for managing revenue operations across multiple locations while maintaining consistency and efficiency.</p>
-            </div>
-          </a>
-
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 120px; height: 120px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/podcast-ep-50.jpg" alt="Episode 50" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Episode 50 • January 4, 2025 • 42 min</span>
-              <h4 style="margin: var(--space-2) 0;">2025 Insurance Trends: What Practices Need to Know</h4>
-              <p style="color: var(--color-text-light); margin: 0;">A deep dive into upcoming payer policy changes and how they'll impact dental practice revenue.</p>
-            </div>
-          </a>
-
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 120px; height: 120px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/podcast-ep-49.jpg" alt="Episode 49" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Episode 49 • December 28, 2024 • 35 min</span>
-              <h4 style="margin: var(--space-2) 0;">Building the Perfect Front Office Team</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Hiring, training, and empowering front office staff to maximize practice revenue.</p>
-            </div>
-          </a>
-
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 120px; height: 120px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/podcast-ep-48.jpg" alt="Episode 48" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Episode 48 • December 21, 2024 • 40 min</span>
-              <h4 style="margin: var(--space-2) 0;">Eligibility Verification Best Practices</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Expert tips for streamlining verification workflows and catching issues before they impact revenue.</p>
-            </div>
-          </a>
-
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 120px; height: 120px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/podcast-ep-47.jpg" alt="Episode 47" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <span style="font-size: var(--text-sm); color: var(--color-text-muted);">Episode 47 • December 14, 2024 • 37 min</span>
-              <h4 style="margin: var(--space-2) 0;">Denial Management: From Reactive to Proactive</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Shifting your denial strategy from fixing problems to preventing them.</p>
-            </div>
-          </a>
-        </div>
-
-        <div style="text-align: center; margin-top: var(--space-8);">
-          <a href="#" class="btn btn-secondary">Load More Episodes</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Subscribe CTA -->
+    <!-- CTA BAND -->
     <section class="cta-band">
       <div class="container">
-        <h2>Never Miss an Episode</h2>
-        <p>Subscribe to the Revenue Intelligence Podcast and stay informed on the latest dental revenue strategies.</p>
+        <h2>Follow the Conversation</h2>
+        <p>Connect with Alvin on LinkedIn for real-time insights between episodes.</p>
         <div class="cta-band-actions">
-          <a href="#" class="btn btn-white btn-lg">Subscribe Now</a>
-          <a href="../resources.html" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">Explore Resources</a>
+          <a href="https://www.linkedin.com/in/alvinutai" target="_blank" rel="noopener" class="btn btn-white btn-lg">Connect on LinkedIn</a>
+          <a href="../resources.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.28);color:#fff;">Explore Resources</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -243,7 +478,6 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -286,5 +520,143 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/tracking.js" defer></script>
+  <script src="../../js/ghl-forms.js" defer></script>
+
+  <script>
+    /* ============================================================
+       PODCAST APPEARANCES DATA
+       ============================================================
+       TO ADD A NEW APPEARANCE:
+       1. Copy one of the objects below (from { to the closing },)
+       2. Paste it at the TOP of the array (so newest shows first)
+       3. Fill in all 7 fields:
+            show        — Name of the podcast show
+            episode     — Episode number or label (e.g. "Episode 47")
+            date        — When it aired (e.g. "May 2026")
+            title       — The episode title
+            description — 1–2 sentences about what was discussed
+            duration    — How long (e.g. "42 min")
+            link        — The direct URL to the episode
+       4. Save the file — it appears automatically, no HTML needed.
+       ============================================================ */
+
+    const PODCAST_APPEARANCES = [
+
+      /* ── APPEARANCE 1 ── */
+      {
+        show:        "Dental Tech Talks",
+        episode:     "Episode 25",
+        date:        "July 4, 2025",
+        title:       "Fixing Dental Billing at the Source: AI, Insurance, and Practice Survival",
+        description: "Alvin joins hosts Youssef Hanine and Amy Gagne, RDH to discuss how AI is transforming dental billing and insurance — covering denial prevention, fee negotiation, real-time eligibility verification, and the path from Lean Six Sigma consulting to building Elite Dental Force.",
+        duration:    "48 min",
+        link:        "https://podcasts.apple.com/us/podcast/25-fixing-dental-billing-at-the-source-alvin-utai-ceo/id1810632023?i=1000715746876"
+      },
+
+      /* ── APPEARANCE 2 — UPDATE WITH YOUR REAL DETAILS ── */
+      {
+        show:        "Podcast Name Here",
+        episode:     "Episode #",
+        date:        "Month Year",
+        title:       "Episode Title Goes Here",
+        description: "Update this with the real episode title, show name, and a brief description of what was discussed.",
+        duration:    "00 min",
+        link:        "#"
+      }
+
+      /* ── PASTE NEW APPEARANCES ABOVE THIS LINE ── */
+
+    ];
+
+    /* ============================================================
+       RENDERING — no need to edit anything below this line
+       ============================================================ */
+    (function() {
+      const total = PODCAST_APPEARANCES.length;
+
+      // Stats strip
+      const statsEl = document.getElementById('pod-stats-strip');
+      if (statsEl) {
+        statsEl.innerHTML = `
+          <div style="height:2px;background:linear-gradient(90deg,transparent,rgba(75,168,240,0.5),transparent);grid-column:1/-1;"></div>
+          <div class="pod-stat"><div class="pod-stat-val">${total}</div><div class="pod-stat-lbl">Appearances</div></div>
+          <div class="pod-stat"><div class="pod-stat-val">🎙️</div><div class="pod-stat-lbl">Guest Speaker</div></div>
+          <div class="pod-stat"><div class="pod-stat-val">Growing</div><div class="pod-stat-lbl">Reach</div></div>
+        `;
+      }
+
+      // Featured — first item in array (most recent)
+      const featuredSlot = document.getElementById('pod-featured-slot');
+      if (featuredSlot && total > 0) {
+        const f = PODCAST_APPEARANCES[0];
+        featuredSlot.innerHTML = `
+          <div class="pod-featured">
+            <div class="pod-featured-inner">
+              <div>
+                <div class="pod-featured-badge">Most Recent</div>
+                <div class="pod-featured-show">${escHtml(f.show)} &nbsp;·&nbsp; ${escHtml(f.episode)}</div>
+                <h3 class="pod-featured-title">${escHtml(f.title)}</h3>
+                <div class="pod-featured-meta">
+                  <span class="pod-meta-item">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    ${escHtml(f.duration)}
+                  </span>
+                  <span class="pod-meta-item">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    ${escHtml(f.date)}
+                  </span>
+                </div>
+                <p class="pod-featured-desc">${escHtml(f.description)}</p>
+                <div class="pod-featured-actions">
+                  <a href="${escAttr(f.link)}" target="_blank" rel="noopener" class="btn btn-primary">Listen Now</a>
+                </div>
+              </div>
+              <div class="pod-featured-cover" aria-hidden="true">
+                <div class="pod-featured-cover-logo">EDF</div>
+                <span>Podcast</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Full list — skip index 0 (already featured above) if more than 1
+      const listEl = document.getElementById('pod-list');
+      if (listEl) {
+        const listItems = total > 1 ? PODCAST_APPEARANCES.slice(1) : PODCAST_APPEARANCES;
+        if (listItems.length === 0) {
+          listEl.innerHTML = `<p style="color:rgba(133,184,216,0.5);text-align:center;padding:2rem 0;">More appearances coming soon.</p>`;
+        } else {
+          listEl.innerHTML = listItems.map((ep, i) => `
+            <a href="${escAttr(ep.link)}" target="_blank" rel="noopener" class="pod-card">
+              <div class="pod-card-num">
+                <div class="pod-card-num-val">${total - i - 1 > 0 ? total - i - 1 : i + 1}</div>
+                <div class="pod-card-num-lbl">Ep</div>
+              </div>
+              <div class="pod-card-body">
+                <div class="pod-card-show">${escHtml(ep.show)}</div>
+                <div class="pod-card-title">${escHtml(ep.title)}</div>
+                <div class="pod-card-meta">${escHtml(ep.episode)} &nbsp;·&nbsp; ${escHtml(ep.date)} &nbsp;·&nbsp; ${escHtml(ep.duration)}</div>
+              </div>
+              <div class="pod-card-arrow" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+            </a>
+          `).join('');
+        }
+      }
+
+      function escHtml(str) {
+        return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+      function escAttr(str) {
+        return String(str).replace(/"/g,'&quot;');
+      }
+    })();
+  </script>
+
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

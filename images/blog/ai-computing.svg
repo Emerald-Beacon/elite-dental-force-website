@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg-a" cx="50%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#012040"/>
+      <stop offset="100%" stop-color="#000810"/>
+    </radialGradient>
+    <radialGradient id="coreGl" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#4ba8f0" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vign-a" cx="50%" cy="50%" r="72%">
+      <stop offset="50%" stop-color="#000810" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000810" stop-opacity="0.88"/>
+    </radialGradient>
+    <filter id="glow-a">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="nodeGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-a)"/>
+  <!-- Ambient glow -->
+  <ellipse cx="600" cy="315" rx="500" ry="320" fill="url(#coreGl)"/>
+
+  <!-- Faint isometric grid background -->
+  <g stroke="#4ba8f0" stroke-opacity="0.025" stroke-width="1">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <!-- Diagonal lines - isometric right -->
+    <line x1="0" y1="0" x2="1200" y2="600"/>
+    <line x1="0" y1="210" x2="1200" y2="810"/>
+    <line x1="200" y1="0" x2="1200" y2="500"/>
+    <line x1="0" y1="420" x2="840" y2="840"/>
+    <!-- Diagonal lines - isometric left -->
+    <line x1="1200" y1="0" x2="0" y2="600"/>
+    <line x1="1200" y1="210" x2="0" y2="810"/>
+    <line x1="1000" y1="0" x2="0" y2="500"/>
+  </g>
+
+  <!-- ═══ SERVER TOWER (isometric) ══════════
+       Centered at (600, 315)
+       Scale: sx=600+70x-70y, sy=315+35x+35y-75z
+       Tower at x=-1..1, y=-0.6..0.6, z=0..4
+  -->
+  <!-- Server base shadow -->
+  <ellipse cx="600" cy="455" rx="100" ry="25" fill="rgba(0,0,0,0.45)"/>
+
+  <!-- Server front face (y=-0.6) precomputed:
+       A(-1,-0.6,0)→(600-70+42, 315-35-21)=(572,259)
+       B(1,-0.6,0)→(600+70+42, 315+35-21)=(712,329)
+       B'(1,-0.6,4)→(712,329-300)=(712,29) — too high
+       Use z=3: B'→(712,329-225)=(712,104); A'→(572,259-225)=(572,34) still borderline
+       Use z=2.5 height: B'→(712,329-187)=(712,142); A'→(572,259-187)=(572,72)
+  -->
+  <!-- Server front face -->
+  <polygon points="572,259 712,329 712,142 572,72" fill="#0d1f3e"/>
+  <!-- Server rack units (front) -->
+  <g fill="#0a1730" stroke="#4ba8f0" stroke-opacity="0.18" stroke-width="0.8">
+    <rect x="580" y="84" width="124" height="24" rx="2"/>
+    <rect x="580" y="114" width="124" height="24" rx="2"/>
+    <rect x="580" y="144" width="124" height="24" rx="2"/>
+    <rect x="580" y="174" width="124" height="24" rx="2"/>
+    <rect x="580" y="204" width="124" height="24" rx="2"/>
+    <rect x="580" y="234" width="124" height="18" rx="2"/>
+  </g>
+  <!-- LED indicators on rack units -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="592" cy="96" r="3" fill="#4ba8f0" fill-opacity="0.9"/>
+    <circle cx="592" cy="126" r="3" fill="#4ba8f0" fill-opacity="0.85"/>
+    <circle cx="592" cy="156" r="3" fill="#ffd700" fill-opacity="0.9"/>
+    <circle cx="592" cy="186" r="3" fill="#4ba8f0" fill-opacity="0.8"/>
+    <circle cx="592" cy="216" r="3" fill="#4ba8f0" fill-opacity="0.75"/>
+    <circle cx="592" cy="243" r="3" fill="#ffd700" fill-opacity="0.7"/>
+  </g>
+  <!-- Activity bars on rack units -->
+  <g fill="#4ba8f0" fill-opacity="0.25">
+    <rect x="606" y="89" width="72" height="14" rx="2"/>
+    <rect x="606" y="119" width="55" height="14" rx="2"/>
+    <rect x="606" y="149" width="88" height="14" rx="2"/>
+    <rect x="606" y="179" width="40" height="14" rx="2"/>
+    <rect x="606" y="209" width="68" height="14" rx="2"/>
+  </g>
+  <!-- Active bar (gold highlight) -->
+  <rect x="606" y="149" width="88" height="14" rx="2" fill="#ffd700" fill-opacity="0.12"/>
+
+  <!-- Server right face (x=1) precomputed:
+       B(1,-0.6,0)→(712,329)
+       C(1,0.6,0)→(600+70-42,315+35+21)=(628,371)  wait: 600+70*1-70*0.6=600+70-42=628; 315+35*1+35*0.6=315+35+21=371
+       C'(1,0.6,2.5)→(628,371-187)=(628,184)
+       B'(1,-0.6,2.5)→(712,142)
+  -->
+  <polygon points="712,329 628,371 628,184 712,142" fill="#081528"/>
+  <!-- Right face vent lines -->
+  <g stroke="#4ba8f0" stroke-opacity="0.1" stroke-width="1">
+    <line x1="628" y1="200" x2="712" y2="158"/>
+    <line x1="628" y1="220" x2="712" y2="178"/>
+    <line x1="628" y1="240" x2="712" y2="198"/>
+    <line x1="628" y1="260" x2="712" y2="218"/>
+    <line x1="628" y1="280" x2="712" y2="238"/>
+    <line x1="628" y1="300" x2="712" y2="258"/>
+    <line x1="628" y1="320" x2="712" y2="278"/>
+    <line x1="628" y1="340" x2="712" y2="298"/>
+  </g>
+  <!-- Right face edge highlight -->
+  <line x1="712" y1="142" x2="712" y2="329" stroke="#4ba8f0" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Server top face precomputed:
+       A'(-1,-0.6,2.5)→(572,72)
+       B'(1,-0.6,2.5)→(712,142)
+       C'(1,0.6,2.5)→(628,184)
+       D'(-1,0.6,2.5)→(488,114) : 600-70-42=488; 315-35+21-187=114
+  -->
+  <polygon points="572,72 712,142 628,184 488,114" fill="#142d55"/>
+  <!-- Top face panel grid -->
+  <line x1="572" y1="72" x2="628" y2="184" stroke="#4ba8f0" stroke-opacity="0.12" stroke-width="1"/>
+  <line x1="712" y1="142" x2="488" y2="114" stroke="#4ba8f0" stroke-opacity="0.1" stroke-width="0.8"/>
+  <!-- Top edge highlights -->
+  <line x1="572" y1="72" x2="712" y2="142" stroke="#4ba8f0" stroke-opacity="0.5" stroke-width="1.5"/>
+  <line x1="572" y1="72" x2="488" y2="114" stroke="#4ba8f0" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Top antenna/cooling tower (small isometric tower on top) -->
+  <polygon points="594,72 620,58 620,40 594,54" fill="#1e4878" opacity="0.9"/>
+  <polygon points="620,58 594,72 594,54 620,40" fill="#142e5a" opacity="0.9"/>
+  <polygon points="594,54 620,40 610,34 584,48" fill="#2a5e9a" opacity="0.9"/>
+  <circle cx="600" cy="32" r="5" fill="#4ba8f0" fill-opacity="0.9" filter="url(#glow-a)"/>
+  <circle cx="600" cy="32" r="2.5" fill="#ffffff" fill-opacity="0.85"/>
+
+  <!-- ═══ NETWORK NODES ══════════════════════ -->
+  <!-- Ring 1 nodes — 6 nodes orbiting the server -->
+  <!-- Node positions: precomputed at various angles around center (600,215) of server -->
+
+  <!-- Left cluster nodes -->
+  <g filter="url(#nodeGlow)">
+    <!-- Node L1 -->
+    <circle cx="310" cy="210" r="16" fill="#4ba8f0" fill-opacity="0.08"/>
+    <circle cx="310" cy="210" r="9" fill="#4ba8f0" fill-opacity="0.88"/>
+    <circle cx="310" cy="210" r="3.5" fill="#ffffff"/>
+    <!-- Node L2 -->
+    <circle cx="240" cy="320" r="14" fill="#4ba8f0" fill-opacity="0.07"/>
+    <circle cx="240" cy="320" r="7.5" fill="#4ba8f0" fill-opacity="0.8"/>
+    <circle cx="240" cy="320" r="3" fill="#d3edfc"/>
+    <!-- Node L3 -->
+    <circle cx="360" cy="430" r="12" fill="#4ba8f0" fill-opacity="0.06"/>
+    <circle cx="360" cy="430" r="6.5" fill="#4ba8f0" fill-opacity="0.72"/>
+    <circle cx="360" cy="430" r="2.5" fill="#d3edfc"/>
+  </g>
+
+  <!-- Right cluster nodes -->
+  <g filter="url(#nodeGlow)">
+    <!-- Node R1 -->
+    <circle cx="900" cy="180" r="16" fill="#4ba8f0" fill-opacity="0.08"/>
+    <circle cx="900" cy="180" r="9" fill="#4ba8f0" fill-opacity="0.85"/>
+    <circle cx="900" cy="180" r="3.5" fill="#ffffff"/>
+    <!-- Node R2 -->
+    <circle cx="980" cy="315" r="14" fill="#4ba8f0" fill-opacity="0.07"/>
+    <circle cx="980" cy="315" r="7.5" fill="#4ba8f0" fill-opacity="0.78"/>
+    <circle cx="980" cy="315" r="3" fill="#d3edfc"/>
+    <!-- Node R3 — gold (data output) -->
+    <circle cx="880" cy="440" r="14" fill="#ffd700" fill-opacity="0.08"/>
+    <circle cx="880" cy="440" r="7.5" fill="#ffd700" fill-opacity="0.85"/>
+    <circle cx="880" cy="440" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Outer scattered small nodes -->
+  <g fill="#4ba8f0" fill-opacity="0.38">
+    <circle cx="110" cy="140" r="3.5"/>
+    <circle cx="155" cy="240" r="3"/>
+    <circle cx="100" cy="380" r="3"/>
+    <circle cx="180" cy="480" r="2.5"/>
+    <circle cx="1050" cy="130" r="3.5"/>
+    <circle cx="1110" cy="255" r="3"/>
+    <circle cx="1070" cy="420" r="3"/>
+    <circle cx="1030" cy="530" r="2.5"/>
+    <circle cx="480" cy="555" r="2.5"/>
+    <circle cx="600" cy="570" r="3"/>
+    <circle cx="720" cy="558" r="2.5"/>
+  </g>
+
+  <!-- Network connection lines -->
+  <!-- Server to ring nodes -->
+  <g stroke="#4ba8f0" stroke-opacity="0.22" stroke-width="1.2" fill="none">
+    <line x1="572" y1="215" x2="310" y2="210"/>
+    <line x1="565" y1="250" x2="240" y2="320"/>
+    <line x1="572" y1="290" x2="360" y2="430"/>
+    <line x1="712" y1="215" x2="900" y2="180"/>
+    <line x1="720" y1="250" x2="980" y2="315"/>
+    <line x1="712" y1="290" x2="880" y2="440"/>
+  </g>
+  <!-- Ring node to outer nodes (dimmer) -->
+  <g stroke="#4ba8f0" stroke-opacity="0.10" stroke-width="0.8" fill="none">
+    <line x1="310" y1="210" x2="110" y2="140"/>
+    <line x1="240" y1="320" x2="155" y2="240"/>
+    <line x1="240" y1="320" x2="100" y2="380"/>
+    <line x1="360" y1="430" x2="180" y2="480"/>
+    <line x1="900" y1="180" x2="1050" y2="130"/>
+    <line x1="980" y1="315" x2="1110" y2="255"/>
+    <line x1="980" y1="315" x2="1070" y2="420"/>
+    <line x1="880" y1="440" x2="1030" y2="530"/>
+  </g>
+  <!-- Cross connections -->
+  <g stroke="#4ba8f0" stroke-opacity="0.07" stroke-width="0.7" fill="none">
+    <line x1="310" y1="210" x2="900" y2="180"/>
+    <line x1="240" y1="320" x2="980" y2="315"/>
+    <line x1="360" y1="430" x2="880" y2="440"/>
+    <line x1="310" y1="210" x2="360" y2="430"/>
+    <line x1="900" y1="180" x2="880" y2="440"/>
+  </g>
+
+  <!-- Data flow packets (small dots on lines, suggest motion) -->
+  <g fill="#4ba8f0">
+    <circle cx="440" cy="212" r="2.5" fill-opacity="0.7"/>
+    <circle cx="400" cy="280" r="2" fill-opacity="0.55"/>
+    <circle cx="835" cy="195" r="2.5" fill-opacity="0.7"/>
+    <circle cx="848" cy="265" r="2" fill-opacity="0.55"/>
+  </g>
+  <circle cx="794" cy="365" r="2.5" fill="#ffd700" fill-opacity="0.6"/>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#vign-a)"/>
+</svg>

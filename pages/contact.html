@@ -1,413 +1,755 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Elite Dental Force</title>
-    <meta name="description" content="Get in touch with Elite Dental Force. Contact our sales, partnerships, support, or media teams for inquiries about dental revenue intelligence solutions.">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a demo of EDiFi, request a free dental revenue audit, or contact the Elite Dental Force team. We respond within one business day.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/contact.html">
+  <meta property="og:title" content="Book a Demo or Contact Us | Elite Dental Force">
+  <meta property="og:description" content="Book a demo of EDiFi or request a free dental revenue audit. Our team responds within one business day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/contact.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>Book a Demo or Contact Us | Elite Dental Force</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <style>
+    /* ====================================================
+       CONTACT PAGE
+       ==================================================== */
+
+    /* Grid backdrop */
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    /* Section tints */
+    main .section             { background: rgba(2,9,23,0.35); }
+    main .section.bg-light    { background: rgba(8,21,48,0.42); }
+
+    /* ── HERO ── */
+    .ct-hero {
+      position: relative;
+      padding: 180px 0 96px;
+      text-align: center;
+      background: rgba(2,9,23,0.45);
+      overflow: hidden;
+    }
+    .ct-hero-glow {
+      position: absolute;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,91,167,0.22) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+    }
+    .ct-hero-inner { position: relative; z-index: 2; }
+
+    .ct-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      border: 1px solid rgba(75,168,240,0.28);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .ct-h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin: 0 auto 22px;
+      max-width: 680px;
+    }
+    .ct-h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4ba8f0, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ct-sub {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* ── MAIN CONTACT LAYOUT ── */
+    .ct-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── LEFT: Info panel ── */
+    .ct-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .ct-info-card {
+      background: linear-gradient(145deg, #0d1f3c, #081530);
+      border: 1px solid rgba(75,168,240,0.14);
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .ct-info-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4ba8f0;
+      margin-bottom: 20px;
+    }
+
+    .ct-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(75,168,240,0.07);
+    }
+    .ct-contact-row:last-of-type { border-bottom: none; padding-bottom: 0; }
+
+    .ct-contact-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.16);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ct-contact-icon svg {
+      width: 18px; height: 18px;
+      stroke: #4ba8f0; fill: none; stroke-width: 2;
+    }
+
+    .ct-contact-detail-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 3px;
+    }
+    .ct-contact-detail-val {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.82);
+    }
+    .ct-contact-detail-val a {
+      color: rgba(255,255,255,0.82);
+      transition: color 0.2s;
+    }
+    .ct-contact-detail-val a:hover { color: #4ba8f0; }
+
+    /* Schedule a call button */
+    .ct-schedule-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(75,168,240,0.07);
+      border: 1px solid rgba(75,168,240,0.22);
+      border-radius: 14px;
+      padding: 18px 22px;
+      color: #fff;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+    .ct-schedule-btn:hover {
+      background: rgba(75,168,240,0.13);
+      border-color: rgba(75,168,240,0.4);
+      color: #fff;
+    }
+    .ct-schedule-btn-left { display: flex; align-items: center; gap: 12px; }
+    .ct-schedule-btn-icon {
+      width: 38px; height: 38px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ct-schedule-btn-icon svg { width: 17px; height: 17px; stroke: #fff; fill: none; stroke-width: 2; }
+    .ct-schedule-label { font-size: 0.88rem; font-weight: 700; color: #fff; }
+    .ct-schedule-sub   { font-size: 0.72rem; color: rgba(255,255,255,0.42); margin-top: 1px; }
+    .ct-schedule-arrow { color: rgba(255,255,255,0.35); }
+
+    /* ── RIGHT: Form card ── */
+    .ct-form-card {
+      background: linear-gradient(145deg, #0d1f3c, #071428);
+      border: 1px solid rgba(75,168,240,0.16);
+      border-radius: 24px;
+      padding: 48px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ct-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .ct-form-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .ct-form-sub {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 36px;
+    }
+
+    /* Form fields */
+    .ct-form { display: flex; flex-direction: column; gap: 18px; }
+
+    .ct-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .ct-field { display: flex; flex-direction: column; gap: 7px; }
+
+    .ct-field label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.52);
+      text-transform: uppercase;
+    }
+
+    .ct-field input,
+    .ct-field select,
+    .ct-field textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-size: 0.9rem;
+      color: #fff;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .ct-field input::placeholder,
+    .ct-field textarea::placeholder { color: rgba(255,255,255,0.22); }
+    .ct-field select option { background: #0d1f3c; color: #fff; }
+
+    .ct-field input:focus,
+    .ct-field select:focus,
+    .ct-field textarea:focus {
+      border-color: rgba(75,168,240,0.5);
+      background: rgba(75,168,240,0.06);
+    }
+
+    .ct-field textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+
+    .ct-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 28px;
+      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      border: none;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      font-family: inherit;
+      margin-top: 6px;
+    }
+    .ct-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+    .ct-submit:active { transform: translateY(0); }
+    .ct-submit svg { width: 17px; height: 17px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+    .ct-form-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* Success state */
+    .ct-success {
+      display: none;
+      text-align: center;
+      padding: 48px 32px;
+    }
+    .ct-success-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(52,211,153,0.1);
+      border: 1px solid rgba(52,211,153,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .ct-success-icon svg { width: 28px; height: 28px; stroke: #34d399; fill: none; stroke-width: 2.5; }
+    .ct-success h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .ct-success p  { font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 340px; margin: 0 auto; }
+
+    /* ── QUICK STRIP ── */
+    .ct-strip {
+      background: rgba(8,21,48,0.55);
+      border-top: 1px solid rgba(75,168,240,0.10);
+      border-bottom: 1px solid rgba(75,168,240,0.10);
+      position: relative; z-index: 1;
+    }
+    .ct-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+    .ct-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 32px 20px;
+      border-right: 1px solid rgba(75,168,240,0.08);
+    }
+    .ct-strip-item:last-child { border-right: none; }
+    .ct-strip-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.16);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ct-strip-icon svg { width: 20px; height: 20px; stroke: #4ba8f0; fill: none; stroke-width: 2; }
+    .ct-strip-label { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .ct-strip-val   { font-size: 0.82rem; color: rgba(255,255,255,0.42); }
+    .ct-strip-val a { color: rgba(255,255,255,0.42); }
+    .ct-strip-val a:hover { color: #4ba8f0; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .ct-layout { grid-template-columns: 1fr; gap: 40px; }
+      .ct-form-card { padding: 36px 28px; }
+    }
+    @media (max-width: 640px) {
+      .ct-hero { padding: 140px 0 72px; }
+      .ct-h1 { font-size: 2.6rem; }
+      .ct-form-row { grid-template-columns: 1fr; }
+      .ct-strip-grid { grid-template-columns: 1fr; }
+      .ct-strip-item { border-right: none; border-bottom: 1px solid rgba(75,168,240,0.08); padding: 24px 16px; }
+      .ct-strip-item:last-child { border-bottom: none; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="../index.html" class="logo">
-                    <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <a href="platform.html" class="nav-link">Platform</a>
+              <ul class="dropdown">
+                <li><a href="platform.html">Platform Overview</a></li>
+                <li><a href="edifi.html">EDiFi Software</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link">Solutions</a>
+              <ul class="dropdown">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="resources/blog.html">Blog</a></li>
+                <li><a href="resources/podcast.html">Podcast</a></li>
+                <li><a href="resources/webinars.html">Webinars</a></li>
+                <li><a href="resources/news.html">News</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="company.html" class="nav-link active">Company</a>
+              <ul class="dropdown">
+                <li><a href="company.html">About Us</a></li>
+                <li><a href="company/security.html">Security</a></li>
+                <li><a href="company/faq.html">FAQ</a></li>
+                <li><a href="investors.html">Investors</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary">Book a Demo</a>
+          </div>
+        </nav>
+
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="ct-hero">
+      <div class="ct-hero-glow"></div>
+      <div class="container">
+        <div class="ct-hero-inner">
+          <div class="ct-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get In Touch
+          </div>
+          <h1 class="ct-h1">Let's <em>Connect.</em></h1>
+          <p class="ct-sub">Whether you're ready to book a demo, explore a partnership, need support, or want to join our team — we'd love to hear from you. We respond within one business day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK INFO STRIP -->
+    <div class="ct-strip" role="region" aria-label="Contact overview">
+      <div class="ct-strip-grid">
+        <div class="ct-strip-item">
+          <div class="ct-strip-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="ct-strip-label">Email Us</div>
+            <div class="ct-strip-val"><a href="mailto:info@elitedentalforce.com">info@elitedentalforce.com</a></div>
+          </div>
+        </div>
+        <div class="ct-strip-item">
+          <div class="ct-strip-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="ct-strip-label">Response Time</div>
+            <div class="ct-strip-val">Within 1 business day</div>
+          </div>
+        </div>
+        <div class="ct-strip-item">
+          <div class="ct-strip-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="ct-strip-label">Business Hours</div>
+            <div class="ct-strip-val">Mon – Fri, 8am – 6pm MT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="section" id="contact-main">
+      <div class="container">
+        <div class="ct-layout">
+
+          <!-- Left: Info panel -->
+          <div class="ct-info-panel">
+
+            <div class="ct-info-card">
+              <div class="ct-info-card-label">Contact Information</div>
+
+              <div class="ct-contact-row">
+                <div class="ct-contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="ct-contact-detail-label">General</div>
+                  <div class="ct-contact-detail-val"><a href="mailto:info@elitedentalforce.com">info@elitedentalforce.com</a></div>
+                </div>
+              </div>
+
+              <div class="ct-contact-row">
+                <div class="ct-contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="ct-contact-detail-label">Sales & Demos</div>
+                  <div class="ct-contact-detail-val"><a href="mailto:sales@elitedentalforce.com">sales@elitedentalforce.com</a></div>
+                </div>
+              </div>
+
+              <div class="ct-contact-row">
+                <div class="ct-contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="ct-contact-detail-label">Support</div>
+                  <div class="ct-contact-detail-val"><a href="mailto:support@elitedentalforce.com">support@elitedentalforce.com</a></div>
+                </div>
+              </div>
+
+              <div class="ct-contact-row">
+                <div class="ct-contact-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 3 3-3h7V2z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <div class="ct-contact-detail-label">Headquarters</div>
+                  <div class="ct-contact-detail-val">Saratoga Springs, Utah</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schedule a call -->
+            <a href="#" class="ct-schedule-btn" id="schedule-call-btn">
+              <div class="ct-schedule-btn-left">
+                <div class="ct-schedule-btn-icon">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div>
+                  <div class="ct-schedule-label">Schedule a Call</div>
+                  <div class="ct-schedule-sub">Pick a time that works for you</div>
+                </div>
+              </div>
+              <div class="ct-schedule-arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </a>
+
+            <!-- Follow us -->
+            <div class="ct-info-card" style="padding: 24px 32px;">
+              <div class="ct-info-card-label">Follow Us</div>
+              <div style="display: flex; gap: 12px; margin-top: 4px;">
+                <a href="https://www.linkedin.com/company/elite-dental-force" target="_blank" rel="noopener"
+                   style="display:flex;align-items:center;gap:8px;background:rgba(75,168,240,0.07);border:1px solid rgba(75,168,240,0.18);border-radius:10px;padding:10px 16px;color:rgba(255,255,255,0.7);font-size:0.82rem;font-weight:600;transition:all 0.2s;text-decoration:none;"
+                   onmouseover="this.style.borderColor='rgba(75,168,240,0.4)';this.style.color='#fff';"
+                   onmouseout="this.style.borderColor='rgba(75,168,240,0.18)';this.style.color='rgba(255,255,255,0.7)';">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#4ba8f0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
                 </a>
+              </div>
+            </div>
 
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="has-dropdown">
-                            <a href="platform.html" class="nav-link">Platform</a>
-                            <ul class="dropdown">
-                                <li><a href="platform.html">Platform Overview</a></li>
-                                <li><a href="ai-consultants.html">AI Consultants</a></li>
-                                <li><a href="edifi.html">EDiFi Software</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html" class="nav-link">Solutions</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="partners.html">Partners</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="resources.html" class="nav-link">Resources</a>
-                            <ul class="dropdown">
-                                <li><a href="resources/blog.html">Blog</a></li>
-                                <li><a href="resources/podcast.html">Podcast</a></li>
-                                <li><a href="resources/webinars.html">Webinars</a></li>
-                                <li><a href="resources/news.html">News</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="company.html" class="nav-link active">Company</a>
-                            <ul class="dropdown">
-                                <li><a href="company.html">About Us</a></li>
-                                <li><a href="company/security.html">Security</a></li>
-                                <li><a href="company/faq.html">FAQ</a></li>
-                                <li><a href="investors.html">Investors</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="nav-cta">
-                        <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
-                    </div>
-                </nav>
+          </div>
 
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+          <!-- Right: Contact Form -->
+          <div class="ct-form-card" id="demo">
+
+            <div id="ct-form-wrap">
+              <div class="ct-form-title">Send Us a Message</div>
+              <div class="ct-form-sub">Fill out the form and we'll be in touch shortly.</div>
+
+              <form class="ct-form" id="contact-form" novalidate>
+
+                <div class="ct-form-row">
+                  <div class="ct-field">
+                    <label for="ct-name">Full Name <span style="color:#4ba8f0;">*</span></label>
+                    <input type="text" id="ct-name" name="name" placeholder="Alvin Uta'i" required autocomplete="name">
+                  </div>
+                  <div class="ct-field">
+                    <label for="ct-email">Work Email <span style="color:#4ba8f0;">*</span></label>
+                    <input type="email" id="ct-email" name="email" placeholder="you@practice.com" required autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="ct-form-row">
+                  <div class="ct-field">
+                    <label for="ct-phone">Phone Number</label>
+                    <input type="tel" id="ct-phone" name="phone" placeholder="(801) 555-0100" autocomplete="tel">
+                  </div>
+                  <div class="ct-field">
+                    <label for="ct-org">Practice / Company</label>
+                    <input type="text" id="ct-org" name="organization" placeholder="Smile Dental Group" autocomplete="organization">
+                  </div>
+                </div>
+
+                <div class="ct-field">
+                  <label for="ct-subject">What can we help you with? <span style="color:#4ba8f0;">*</span></label>
+                  <select id="ct-subject" name="subject" required>
+                    <option value="">Select a topic</option>
+                    <option value="demo">Book a Demo</option>
+                    <option value="sales">Sales Inquiry</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="support">Customer Support</option>
+                    <option value="apply">Join Our Team</option>
+                    <option value="security">Security / Compliance</option>
+                    <option value="media">Media & Press</option>
+                    <option value="general">General Question</option>
+                  </select>
+                </div>
+
+                <div class="ct-field">
+                  <label for="ct-message">Message <span style="color:#4ba8f0;">*</span></label>
+                  <textarea id="ct-message" name="message" placeholder="Tell us a little about what you're looking for…" required></textarea>
+                </div>
+
+                <button type="submit" class="ct-submit">
+                  Send Message
+                  <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                 </button>
+                <p class="ct-form-note">We respond within 1 business day. No spam, ever.</p>
+
+              </form>
             </div>
+
+            <!-- Success state (shown after submit) -->
+            <div class="ct-success" id="ct-success">
+              <div class="ct-success-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>Message Sent!</h3>
+              <p>Thanks for reaching out. A member of our team will be in touch within one business day.</p>
+            </div>
+
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero hero-short">
-            <div class="container">
-                <div class="hero-content centered">
-                    <h1>Let's Connect</h1>
-                    <p class="hero-subtitle">Whether you're ready to transform your revenue cycle, explore partnership opportunities, or need support—we're here to help.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Paths Section -->
-        <section class="section contact-paths">
-            <div class="container">
-                <div class="contact-grid">
-                    <!-- Sales Inquiry -->
-                    <div class="contact-card" id="sales">
-                        <div class="contact-card-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#d3edfc"/>
-                                <path d="M24 14v20M14 24h20" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M17 17l14 14M31 17L17 31" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3>Sales Inquiries</h3>
-                        <p>Ready to see how Elite Dental Force can transform your practice's revenue cycle? Schedule a personalized demo with our team.</p>
-                        <ul class="contact-benefits">
-                            <li>Personalized platform walkthrough</li>
-                            <li>ROI assessment for your practice</li>
-                            <li>Custom pricing consultation</li>
-                            <li>Implementation timeline review</li>
-                        </ul>
-                        <!-- GoHighLevel Form Placeholder - Tag: Contact Sales -->
-                        <form class="contact-form" data-form-tag="Contact Sales">
-                            <div class="form-group">
-                                <label for="sales-name">Full Name *</label>
-                                <input type="text" id="sales-name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="sales-email">Work Email *</label>
-                                <input type="email" id="sales-email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="sales-phone">Phone Number</label>
-                                <input type="tel" id="sales-phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="sales-practice">Practice Name *</label>
-                                <input type="text" id="sales-practice" name="practice" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="sales-size">Practice Size *</label>
-                                <select id="sales-size" name="practice_size" required>
-                                    <option value="">Select practice size</option>
-                                    <option value="1-2">1-2 Locations</option>
-                                    <option value="3-10">3-10 Locations</option>
-                                    <option value="11-50">11-50 Locations</option>
-                                    <option value="50+">50+ Locations (DSO)</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="sales-interest">Primary Interest *</label>
-                                <select id="sales-interest" name="interest" required>
-                                    <option value="">Select your interest</option>
-                                    <option value="ai-consultants">AI Consultants</option>
-                                    <option value="edifi">EDiFi Software</option>
-                                    <option value="both">Complete Platform</option>
-                                    <option value="not-sure">Not Sure Yet</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="sales-message">Tell us about your needs</label>
-                                <textarea id="sales-message" name="message" rows="4" placeholder="What challenges are you facing with your revenue cycle?"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">Book a Demo</button>
-                        </form>
-                    </div>
-
-                    <!-- Partnership Inquiry -->
-                    <div class="contact-card" id="partnerships">
-                        <div class="contact-card-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#d3edfc"/>
-                                <path d="M16 28c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="24" cy="16" r="4" stroke="#095ba7" stroke-width="2"/>
-                                <path d="M30 32c0-3.3 2.7-6 6-6M12 32c0-3.3 2.7-6 6-6" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3>Partnership Opportunities</h3>
-                        <p>Interested in partnering with Elite Dental Force? We work with technology providers, integrators, and industry affiliates.</p>
-                        <ul class="contact-benefits">
-                            <li>Technology integration partnerships</li>
-                            <li>Reseller and referral programs</li>
-                            <li>Co-marketing opportunities</li>
-                            <li>Strategic alliance discussions</li>
-                        </ul>
-                        <!-- GoHighLevel Form Placeholder - Tag: Contact Partner -->
-                        <form class="contact-form" data-form-tag="Contact Partner">
-                            <div class="form-group">
-                                <label for="partner-name">Full Name *</label>
-                                <input type="text" id="partner-name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="partner-email">Work Email *</label>
-                                <input type="email" id="partner-email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="partner-company">Company Name *</label>
-                                <input type="text" id="partner-company" name="company" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="partner-type">Partnership Type *</label>
-                                <select id="partner-type" name="partnership_type" required>
-                                    <option value="">Select partnership type</option>
-                                    <option value="technology">Technology Integration</option>
-                                    <option value="reseller">Reseller / Referral</option>
-                                    <option value="affiliate">Affiliate Partner</option>
-                                    <option value="strategic">Strategic Alliance</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="partner-message">Partnership Proposal *</label>
-                                <textarea id="partner-message" name="message" rows="4" placeholder="Describe the partnership opportunity you're proposing..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">Submit Partnership Inquiry</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="contact-grid secondary-row">
-                    <!-- Support Inquiry -->
-                    <div class="contact-card" id="support">
-                        <div class="contact-card-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#d3edfc"/>
-                                <circle cx="24" cy="24" r="10" stroke="#095ba7" stroke-width="2"/>
-                                <path d="M24 20v4l3 3" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M14 14l4 4M34 14l-4 4M14 34l4-4M34 34l-4-4" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3>Customer Support</h3>
-                        <p>Already a customer? Our support team is here to help you get the most out of Elite Dental Force.</p>
-                        <ul class="contact-benefits">
-                            <li>Technical assistance</li>
-                            <li>Account questions</li>
-                            <li>Training requests</li>
-                            <li>Feature guidance</li>
-                        </ul>
-                        <!-- GoHighLevel Form Placeholder - Tag: Contact Support -->
-                        <form class="contact-form" data-form-tag="Contact Support">
-                            <div class="form-group">
-                                <label for="support-name">Full Name *</label>
-                                <input type="text" id="support-name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="support-email">Work Email *</label>
-                                <input type="email" id="support-email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="support-practice">Practice Name *</label>
-                                <input type="text" id="support-practice" name="practice" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="support-type">Support Type *</label>
-                                <select id="support-type" name="support_type" required>
-                                    <option value="">Select support type</option>
-                                    <option value="technical">Technical Issue</option>
-                                    <option value="billing">Billing Question</option>
-                                    <option value="training">Training Request</option>
-                                    <option value="feature">Feature Question</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="support-message">Describe Your Issue *</label>
-                                <textarea id="support-message" name="message" rows="4" placeholder="Please provide details about your support request..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">Submit Support Request</button>
-                        </form>
-                    </div>
-
-                    <!-- Media Inquiry -->
-                    <div class="contact-card" id="media">
-                        <div class="contact-card-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#d3edfc"/>
-                                <rect x="14" y="16" width="20" height="16" rx="2" stroke="#095ba7" stroke-width="2"/>
-                                <circle cx="24" cy="24" r="4" stroke="#095ba7" stroke-width="2"/>
-                                <path d="M14 20h4M30 20h4" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3>Media & Press</h3>
-                        <p>For press inquiries, interview requests, or media resources about Elite Dental Force.</p>
-                        <ul class="contact-benefits">
-                            <li>Press releases & news</li>
-                            <li>Executive interviews</li>
-                            <li>Industry commentary</li>
-                            <li>Brand assets & resources</li>
-                        </ul>
-                        <div class="media-contact-info">
-                            <p><strong>Press Contact:</strong></p>
-                            <p>Email: <a href="mailto:press@elitedentalforce.com">press@elitedentalforce.com</a></p>
-                        </div>
-                        <div class="media-resources">
-                            <h4>Media Resources</h4>
-                            <ul class="resource-links">
-                                <li><a href="#" class="resource-link">Press Kit (PDF)</a></li>
-                                <li><a href="#" class="resource-link">Logo & Brand Assets</a></li>
-                                <li><a href="#" class="resource-link">Executive Bios</a></li>
-                                <li><a href="#" class="resource-link">Recent Press Releases</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick Contact Info Section -->
-        <section class="section bg-light">
-            <div class="container">
-                <div class="quick-contact-grid">
-                    <div class="quick-contact-item">
-                        <div class="quick-contact-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 8l12 8 12-8" stroke="#095ba7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <rect x="4" y="6" width="24" height="20" rx="2" stroke="#095ba7" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h4>Email Us</h4>
-                        <p><a href="mailto:info@elitedentalforce.com">info@elitedentalforce.com</a></p>
-                    </div>
-                    <div class="quick-contact-item">
-                        <div class="quick-contact-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 6h8l2 6-4 4c2 4 5 7 9 9l4-4 6 2v8c-14 0-25-11-25-25z" stroke="#095ba7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h4>Call Us</h4>
-                        <p><a href="tel:+18005551234">(800) 555-1234</a></p>
-                    </div>
-                    <div class="quick-contact-item">
-                        <div class="quick-contact-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#095ba7" stroke-width="2"/>
-                                <path d="M16 8v8l6 3" stroke="#095ba7" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h4>Business Hours</h4>
-                        <p>Mon-Fri: 8am - 6pm EST</p>
-                    </div>
-                    <div class="quick-contact-item">
-                        <div class="quick-contact-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 2C10.48 2 6 6.48 6 12c0 7 10 18 10 18s10-11 10-18c0-5.52-4.48-10-10-10z" stroke="#095ba7" stroke-width="2"/>
-                                <circle cx="16" cy="12" r="3" stroke="#095ba7" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h4>Headquarters</h4>
-                        <p>United States</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-band">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Revenue Cycle?</h2>
-                    <p>Join leading dental practices who trust Elite Dental Force for revenue intelligence infrastructure.</p>
-                    <a href="#sales" class="btn btn-white">Book Your Demo Today</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="../index.html" class="logo">
-                        <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
-                    </a>
-                    <p>Revenue Intelligence Infrastructure for Modern Dental Practices</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="platform.html">Overview</a></li>
-                        <li><a href="ai-consultants.html">AI Consultants</a></li>
-                        <li><a href="edifi.html">EDiFi Software</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Resource Hub</a></li>
-                        <li><a href="resources/blog.html">Blog</a></li>
-                        <li><a href="resources/podcast.html">Podcast</a></li>
-                        <li><a href="resources/webinars.html">Webinars</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="company.html">About Us</a></li>
-                        <li><a href="company/security.html">Security</a></li>
-                        <li><a href="company/faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="company/security.html">Security</a>
-                </div>
-            </div>
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to See EDiFi in Action?</h2>
+        <p>Join the 100+ practices on our waitlist and be among the first to transform your revenue cycle.</p>
+        <div class="cta-band-actions">
+          <a href="#demo" class="btn btn-white btn-lg">Book a Demo</a>
+          <a href="platform.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.28);color:#fff;">View Platform</a>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="../js/main.js"></script>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
+          </a>
+          <p>The infrastructure leader in dental revenue intelligence.</p>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Platform</h5>
+          <ul class="footer-links">
+            <li><a href="platform.html">Overview</a></li>
+            <li><a href="edifi.html">EDiFi Software</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="resources/blog.html">Blog</a></li>
+            <li><a href="resources/podcast.html">Podcast</a></li>
+            <li><a href="resources/webinars.html">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company/security.html">Security</a></li>
+            <li><a href="company/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Contact</h5>
+          <ul class="footer-links">
+            <li><a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank">Book a Demo</a></li>
+            <li><a href="mailto:sales@elitedentalforce.com">Sales</a></li>
+            <li><a href="mailto:support@elitedentalforce.com">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Elite Dental Force Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/tracking.js" defer></script>
+  <script src="../js/ghl-forms.js" defer></script>
+  <script>
+    /* Auto-select subject from URL hash */
+    (function() {
+      var hash = window.location.hash.replace('#','');
+      var map = { demo:'demo', sales:'sales', support:'support', apply:'apply', partnership:'partnership', meeting:'demo', security:'security' };
+      if (map[hash]) {
+        var sel = document.getElementById('ct-subject');
+        if (sel) sel.value = map[hash];
+        var card = document.getElementById('demo');
+        if (card) setTimeout(function(){ card.scrollIntoView({ behavior:'smooth', block:'center' }); }, 200);
+      }
+    })();
+    /* Note: form submission is now handled by ghl-forms.js
+       which sends data to GoHighLevel webhook and fires GA4 conversion event.
+       Configure webhook URLs in js/ghl-forms.js → GHL_CONFIG */
+  </script>
+
+  <!-- Schema: ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Elite Dental Force",
+    "url": "https://www.elitedentalforce.com/pages/contact.html",
+    "description": "Book a demo of EDiFi, request a free dental revenue audit, or contact the Elite Dental Force team.",
+    "contactOption": ["TollFree", "HearingImpairedSupported"],
+    "contactType": "Sales and Support",
+    "email": "info@elitedentalforce.com",
+    "availableLanguage": "English",
+    "areaServed": "United States"
+  }
+  </script>
+
+  <!-- GTM noscript fallback -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQJKZLMC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <script src="../js/booking-widget.js" defer></script>
+  <script src="../js/cookie-consent.js" defer></script>
 </body>
 </html>

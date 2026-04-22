@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#010614"/>
+      <stop offset="45%" stop-color="#010e20"/>
+      <stop offset="100%" stop-color="#000810"/>
+    </linearGradient>
+    <radialGradient id="warnGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#ffd700" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="redCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4444" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ff4444" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="crackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff8c00" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="shardFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#095ba7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#010e20" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="shardFill2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3454f8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#010e20" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="shardFill3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#095ba7" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#010e20" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="warnGlowFilter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="topFade6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010614" stop-opacity="0.7"/>
+      <stop offset="30%" stop-color="#010614" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="botFade6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="65%" stop-color="#010614" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#010614" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg6)"/>
+
+  <!-- Subtle tension grid — very faint -->
+  <g stroke="#4ba8f0" stroke-opacity="0.025" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- Warning glow — center -->
+  <ellipse cx="600" cy="315" rx="350" ry="250" fill="url(#warnGlow)"/>
+  <ellipse cx="600" cy="315" rx="160" ry="140" fill="url(#redCenter)"/>
+
+  <!-- SHATTERED POLYGON FRAGMENTS — representing fragmented dental industry -->
+  <!-- Left cluster of shards -->
+  <polygon points="80,180 220,155 280,250 160,280 90,230" fill="url(#shardFill)" stroke="#4ba8f0" stroke-opacity="0.18" stroke-width="1"/>
+  <polygon points="160,280 280,250 320,340 200,370 140,330" fill="url(#shardFill2)" stroke="#3454f8" stroke-opacity="0.15" stroke-width="1"/>
+  <polygon points="80,230 160,280 140,330 65,310 55,265" fill="url(#shardFill3)" stroke="#4ba8f0" stroke-opacity="0.12" stroke-width="0.8"/>
+  <polygon points="220,155 380,120 420,200 280,250" fill="url(#shardFill)" stroke="#4ba8f0" stroke-opacity="0.15" stroke-width="1"/>
+  <polygon points="80,380 140,330 200,370 185,450 95,430" fill="url(#shardFill2)" stroke="#095ba7" stroke-opacity="0.13" stroke-width="0.8"/>
+
+  <!-- Right cluster of shards -->
+  <polygon points="980,160 1120,185 1140,260 1010,240 955,205" fill="url(#shardFill)" stroke="#4ba8f0" stroke-opacity="0.17" stroke-width="1"/>
+  <polygon points="1010,240 1140,260 1150,350 1020,360 975,295" fill="url(#shardFill2)" stroke="#3454f8" stroke-opacity="0.14" stroke-width="1"/>
+  <polygon points="955,295 1020,360 1005,440 935,420 910,360" fill="url(#shardFill3)" stroke="#4ba8f0" stroke-opacity="0.12" stroke-width="0.8"/>
+  <polygon points="1060,100 1180,115 1190,175 1120,185 1040,155" fill="url(#shardFill)" stroke="#4ba8f0" stroke-opacity="0.13" stroke-width="0.8"/>
+  <polygon points="1005,440 1060,500 980,520 935,470 935,420" fill="url(#shardFill2)" stroke="#095ba7" stroke-opacity="0.11" stroke-width="0.8"/>
+
+  <!-- Top and bottom scattered smaller shards -->
+  <polygon points="420,60 520,45 550,100 450,110" fill="url(#shardFill3)" stroke="#4ba8f0" stroke-opacity="0.12" stroke-width="0.8"/>
+  <polygon points="650,50 760,65 770,120 660,115" fill="url(#shardFill2)" stroke="#095ba7" stroke-opacity="0.1" stroke-width="0.8"/>
+  <polygon points="430,520 540,510 555,575 440,580" fill="url(#shardFill3)" stroke="#4ba8f0" stroke-opacity="0.1" stroke-width="0.8"/>
+  <polygon points="660,525 750,510 775,565 665,572" fill="url(#shardFill2)" stroke="#095ba7" stroke-opacity="0.09" stroke-width="0.8"/>
+
+  <!-- CENTER — fracture lines radiating outward from center -->
+  <g stroke="url(#crackGrad)" stroke-linecap="round">
+    <!-- Main crack lines from center -->
+    <line x1="600" y1="315" x2="370" y2="140" stroke-width="1.8" stroke-opacity="0.6"/>
+    <line x1="600" y1="315" x2="830" y2="138" stroke-width="1.5" stroke-opacity="0.55"/>
+    <line x1="600" y1="315" x2="280" y2="330" stroke-width="2" stroke-opacity="0.65"/>
+    <line x1="600" y1="315" x2="920" y2="325" stroke-width="2" stroke-opacity="0.62"/>
+    <line x1="600" y1="315" x2="400" y2="500" stroke-width="1.6" stroke-opacity="0.5"/>
+    <line x1="600" y1="315" x2="800" y2="495" stroke-width="1.5" stroke-opacity="0.48"/>
+    <line x1="600" y1="315" x2="600" y2="110" stroke-width="1.4" stroke-opacity="0.5"/>
+    <line x1="600" y1="315" x2="600" y2="520" stroke-width="1.2" stroke-opacity="0.42"/>
+    <!-- Secondary hairline cracks -->
+    <line x1="600" y1="315" x2="180" y2="215" stroke-width="0.8" stroke-opacity="0.28"/>
+    <line x1="600" y1="315" x2="1020" y2="215" stroke-width="0.8" stroke-opacity="0.26"/>
+    <line x1="600" y1="315" x2="175" y2="430" stroke-width="0.7" stroke-opacity="0.22"/>
+    <line x1="600" y1="315" x2="1025" y2="430" stroke-width="0.7" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- WARNING TRIANGLE — center, glowing gold -->
+  <g filter="url(#warnGlowFilter)" transform="translate(600, 310)">
+    <!-- Triangle outline -->
+    <polygon points="0,-62 53,31 -53,31" fill="#ffd700" fill-opacity="0.1" stroke="#ffd700" stroke-opacity="0.7" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Inner triangle -->
+    <polygon points="0,-46 39,23 -39,23" fill="#ffd700" fill-opacity="0.06"/>
+    <!-- Exclamation mark body -->
+    <rect x="-4" y="-26" width="8" height="32" rx="3" fill="#ffd700" fill-opacity="0.88"/>
+    <!-- Exclamation dot -->
+    <circle cx="0" cy="18" r="4.5" fill="#ffd700" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Scattered debris particles -->
+  <g fill="#ffd700" fill-opacity="0.45">
+    <circle cx="455" cy="245" r="2.5"/>
+    <circle cx="480" cy="260" r="1.8"/>
+    <circle cx="520" cy="238" r="2"/>
+    <circle cx="680" cy="248" r="2.5"/>
+    <circle cx="710" cy="265" r="1.8"/>
+    <circle cx="735" cy="245" r="2"/>
+    <circle cx="470" cy="380" r="2"/>
+    <circle cx="498" cy="365" r="1.5"/>
+    <circle cx="700" cy="378" r="2"/>
+    <circle cx="725" cy="362" r="1.5"/>
+  </g>
+  <!-- Blue debris -->
+  <g fill="#4ba8f0" fill-opacity="0.4">
+    <circle cx="350" cy="290" r="2"/>
+    <circle cx="330" cy="310" r="1.5"/>
+    <circle cx="360" cy="330" r="1.8"/>
+    <circle cx="840" cy="285" r="2"/>
+    <circle cx="865" cy="310" r="1.5"/>
+    <circle cx="845" cy="335" r="1.8"/>
+    <circle cx="560" cy="185" r="2"/>
+    <circle cx="580" cy="172" r="1.5"/>
+    <circle cx="620" cy="178" r="2"/>
+    <circle cx="560" cy="450" r="1.8"/>
+    <circle cx="640" cy="448" r="2"/>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#topFade6)"/>
+  <rect width="1200" height="630" fill="url(#botFade6)"/>
+</svg>

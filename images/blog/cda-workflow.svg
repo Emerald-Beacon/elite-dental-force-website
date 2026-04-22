@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#010c1e"/>
+      <stop offset="50%" stop-color="#011630"/>
+      <stop offset="100%" stop-color="#001228"/>
+    </linearGradient>
+    <!-- Node gradients -->
+    <radialGradient id="nodeA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#095ba7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3454f8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#1a2fb8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#1a2fb8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#095ba7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeD" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#c8960a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#c8960a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeE" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#095ba7" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#095ba7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centerGlow5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow5">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="connLine1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3454f8" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="connLine2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3454f8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="connLine3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ba8f0" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="connLine4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#4ba8f0" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="topFade5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010c1e" stop-opacity="0.6"/>
+      <stop offset="28%" stop-color="#010c1e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="botFade5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="68%" stop-color="#010c1e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#010c1e" stop-opacity="0.72"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4ba8f0" fill-opacity="0.7"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ffd700" fill-opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <rect width="1200" height="630" fill="url(#centerGlow5)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#4ba8f0" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Secondary subtle arcs connecting outer nodes to center (back layer) -->
+  <g fill="none" stroke="#4ba8f0" stroke-opacity="0.06" stroke-width="1">
+    <path d="M 110,315 Q 355,200 600,315"/>
+    <path d="M 110,315 Q 355,430 600,315"/>
+    <path d="M 1090,315 Q 845,200 600,315"/>
+    <path d="M 1090,315 Q 845,430 600,315"/>
+  </g>
+
+  <!-- WORKFLOW: 5 nodes in a horizontal chain -->
+  <!-- Positions: 130, 315, 500, 685, 870, 1055 — 5 nodes + center at 600 -->
+  <!-- Actually doing a horizontal pentagon: A(145,315) B(360,175) C(600,115) D(840,175) E(1055,315) with center hub -->
+  <!-- Let me do a cleaner 5-node linear flow at y=315, spread across width -->
+
+  <!-- Connection lines (BEHIND nodes) -->
+  <!-- A → B -->
+  <line x1="218" y1="315" x2="342" y2="315" stroke="url(#connLine1)" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <!-- B → C (center) -->
+  <line x1="428" y1="315" x2="522" y2="315" stroke="url(#connLine1)" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <!-- C → D -->
+  <line x1="678" y1="315" x2="772" y2="315" stroke="url(#connLine3)" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+  <!-- D → E -->
+  <line x1="858" y1="315" x2="982" y2="315" stroke="url(#connLine4)" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Curved secondary connections (cross-links) -->
+  <path d="M 195,280 Q 380,180 545,280" fill="none" stroke="#4ba8f0" stroke-opacity="0.12" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <path d="M 645,280 Q 810,180 990,280" fill="none" stroke="#ffd700" stroke-opacity="0.1" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <path d="M 195,350 Q 595,430 990,350" fill="none" stroke="#4ba8f0" stroke-opacity="0.07" stroke-width="1" stroke-dasharray="8,5"/>
+
+  <!-- NODE A: Patient Intake — leftmost -->
+  <g filter="url(#softGlow5)">
+    <circle cx="195" cy="315" r="55" fill="url(#nodeA)" fill-opacity="0.12"/>
+    <circle cx="195" cy="315" r="36" fill="#095ba7" fill-opacity="0.22"/>
+    <circle cx="195" cy="315" r="22" fill="#4ba8f0" fill-opacity="0.88"/>
+    <circle cx="195" cy="315" r="9" fill="#ffffff" fill-opacity="0.92"/>
+  </g>
+  <!-- Node A label -->
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#4ba8f0" fill-opacity="0.75" text-anchor="middle" x="195" y="370">INTAKE</text>
+
+  <!-- NODE B -->
+  <g filter="url(#softGlow5)">
+    <circle cx="385" cy="315" r="48" fill="url(#nodeB)" fill-opacity="0.12"/>
+    <circle cx="385" cy="315" r="32" fill="#3454f8" fill-opacity="0.2"/>
+    <circle cx="385" cy="315" r="20" fill="#3454f8" fill-opacity="0.85"/>
+    <circle cx="385" cy="315" r="8" fill="#d3edfc" fill-opacity="0.9"/>
+  </g>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#7a9fff" fill-opacity="0.75" text-anchor="middle" x="385" y="362">ELIGIBILITY</text>
+
+  <!-- NODE C: CENTER HUB — brightest -->
+  <g filter="url(#softGlow5)">
+    <circle cx="600" cy="315" r="70" fill="#4ba8f0" fill-opacity="0.06"/>
+    <circle cx="600" cy="315" r="50" fill="#4ba8f0" fill-opacity="0.1"/>
+    <circle cx="600" cy="315" r="32" fill="#4ba8f0" fill-opacity="0.25"/>
+    <circle cx="600" cy="315" r="18" fill="#4ba8f0" fill-opacity="0.92"/>
+    <circle cx="600" cy="315" r="7" fill="#ffffff"/>
+  </g>
+  <!-- Subtle orbit ring -->
+  <circle cx="600" cy="315" r="52" fill="none" stroke="#4ba8f0" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4,6"/>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#4ba8f0" fill-opacity="0.7" text-anchor="middle" x="600" y="383">TREATMENT</text>
+
+  <!-- NODE D: gold accent -->
+  <g filter="url(#softGlow5)">
+    <circle cx="815" cy="315" r="48" fill="url(#nodeD)" fill-opacity="0.1"/>
+    <circle cx="815" cy="315" r="32" fill="#c8960a" fill-opacity="0.2"/>
+    <circle cx="815" cy="315" r="20" fill="#ffd700" fill-opacity="0.88"/>
+    <circle cx="815" cy="315" r="8" fill="#ffffff" fill-opacity="0.9"/>
+  </g>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffd700" fill-opacity="0.75" text-anchor="middle" x="815" y="362">BILLING</text>
+
+  <!-- NODE E: rightmost -->
+  <g filter="url(#softGlow5)">
+    <circle cx="1005" cy="315" r="52" fill="url(#nodeE)" fill-opacity="0.12"/>
+    <circle cx="1005" cy="315" r="34" fill="#4ba8f0" fill-opacity="0.18"/>
+    <circle cx="1005" cy="315" r="21" fill="#4ba8f0" fill-opacity="0.85"/>
+    <circle cx="1005" cy="315" r="8.5" fill="#ffffff" fill-opacity="0.88"/>
+  </g>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#4ba8f0" fill-opacity="0.72" text-anchor="middle" x="1005" y="363">PAYMENT</text>
+
+  <!-- Small orbiting dots on center node -->
+  <g fill="#4ba8f0">
+    <circle cx="600" cy="263" r="3" fill-opacity="0.7"/>
+    <circle cx="648" cy="281" r="2.5" fill-opacity="0.55"/>
+    <circle cx="552" cy="281" r="2.5" fill-opacity="0.55"/>
+    <circle cx="648" cy="349" r="2.5" fill-opacity="0.5"/>
+    <circle cx="552" cy="349" r="2.5" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="630" fill="url(#topFade5)"/>
+  <rect width="1200" height="630" fill="url(#botFade5)"/>
+</svg>

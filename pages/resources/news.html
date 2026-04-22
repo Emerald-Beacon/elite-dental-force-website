@@ -1,18 +1,446 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force News - Latest company announcements, press releases, product updates, and industry news.">
-  <title>News - Elite Dental Force</title>
+  <meta name="description" content="Latest news from Elite Dental Force — company announcements, press releases, product updates, partnership news, and media coverage of EDiFi and dental revenue intelligence.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/resources/news.html">
+  <meta property="og:title" content="News & Press Releases | Elite Dental Force">
+  <meta property="og:description" content="Latest announcements, press releases, and product updates from Elite Dental Force and the EDiFi platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/resources/news.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-homepage.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+  <title>News & Press | Elite Dental Force</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
   <link rel="stylesheet" href="../../css/styles.css">
   <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <style>
+    /* ── Grid override ── */
+    body.nws-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+      background-size: 55px 55px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Section backgrounds ── */
+    .nws-page main .section {
+      background: rgba(2,9,23,0.35);
+      position: relative;
+      z-index: 1;
+    }
+    .nws-page main .section.bg-alt {
+      background: rgba(8,21,48,0.42);
+    }
+
+    /* ── Shared tokens ── */
+    .nws-overline {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4ba8f0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .nws-gradient-text {
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Glassmorphism card base ── */
+    .nws-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nws-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+      pointer-events: none;
+    }
+    .nws-card:hover {
+      border-color: rgba(75,168,240,0.4);
+      box-shadow: 0 0 28px rgba(75,168,240,0.12), 0 8px 40px rgba(0,0,0,0.5);
+      transform: translateY(-2px);
+    }
+
+    /* ─────────────────────────────────────
+       HERO
+    ───────────────────────────────────── */
+    .nws-hero {
+      padding: 7rem 0 4rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .nws-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #f0f7ff;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .nws-hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nws-hero-sub {
+      font-size: 1.1rem;
+      color: rgba(133,184,216,0.85);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* ── Category filter tabs ── */
+    .nws-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+    .nws-tab {
+      cursor: pointer;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(75,168,240,0.15);
+      color: rgba(133,184,216,0.7);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nws-tab:hover {
+      border-color: rgba(75,168,240,0.3);
+      color: rgba(133,184,216,0.95);
+    }
+    .nws-tab.active {
+      background: rgba(75,168,240,0.15);
+      border-color: #4ba8f0;
+      color: #4ba8f0;
+    }
+
+    /* ─────────────────────────────────────
+       FEATURED ARTICLE
+    ───────────────────────────────────── */
+    .nws-featured-wrap {
+      padding: 0 0 4rem;
+      position: relative;
+      z-index: 1;
+    }
+    .nws-featured {
+      display: flex;
+      align-items: stretch;
+      min-height: 320px;
+    }
+    .nws-featured-text {
+      flex: 0 0 55%;
+      padding: 3rem 3rem 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+    }
+    .nws-featured-visual {
+      flex: 0 0 45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(9,91,167,0.25), rgba(0,31,113,0.4));
+      border-left: 1px solid rgba(75,168,240,0.12);
+      padding: 2.5rem;
+    }
+    .nws-featured-stat {
+      text-align: center;
+    }
+    .nws-featured-number {
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #f0f7ff, #4ba8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .nws-featured-stat-label {
+      font-size: 0.95rem;
+      color: rgba(133,184,216,0.75);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .nws-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .nws-badge--press {
+      background: rgba(75,168,240,0.12);
+      border: 1px solid rgba(75,168,240,0.3);
+      color: #4ba8f0;
+    }
+    .nws-badge--product {
+      background: rgba(255,215,0,0.12);
+      border: 1px solid rgba(255,215,0,0.3);
+      color: #ffd700;
+    }
+    .nws-badge--company {
+      background: rgba(75,168,240,0.12);
+      border: 1px solid rgba(75,168,240,0.3);
+      color: #4ba8f0;
+    }
+    .nws-badge--events {
+      background: rgba(255,215,0,0.12);
+      border: 1px solid rgba(255,215,0,0.3);
+      color: #ffd700;
+    }
+    .nws-featured-title {
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: #f0f7ff;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+    .nws-featured-date {
+      font-size: 0.8rem;
+      color: rgba(133,184,216,0.6);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .nws-featured-excerpt {
+      font-size: 0.95rem;
+      color: rgba(133,184,216,0.85);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .nws-link {
+      color: #4ba8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nws-link:hover {
+      color: #62bcff;
+    }
+
+    /* ─────────────────────────────────────
+       NEWS FEED
+    ───────────────────────────────────── */
+    .nws-feed-section {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .nws-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .nws-news-card {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .nws-news-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .nws-news-date {
+      font-size: 0.78rem;
+      color: rgba(133,184,216,0.6);
+      font-weight: 500;
+    }
+    .nws-news-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f0f7ff;
+      line-height: 1.4;
+      margin: 0;
+    }
+    .nws-news-excerpt {
+      font-size: 0.875rem;
+      color: rgba(133,184,216,0.75);
+      line-height: 1.65;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .nws-news-footer {
+      margin-top: auto;
+      padding-top: 0.75rem;
+    }
+
+    /* ─────────────────────────────────────
+       MEDIA & PRESS
+    ───────────────────────────────────── */
+    .nws-media-section {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 0;
+    }
+    .nws-media-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .nws-media-left h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #f0f7ff;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .nws-media-left p {
+      font-size: 1rem;
+      color: rgba(133,184,216,0.85);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .nws-btn-contact {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(75,168,240,0.25);
+    }
+    .nws-btn-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(75,168,240,0.4);
+    }
+    .nws-media-card {
+      padding: 2rem;
+    }
+    .nws-media-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f0f7ff;
+      margin-bottom: 1.25rem;
+    }
+    .nws-resource-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nws-resource-item {
+      border-bottom: 1px solid rgba(75,168,240,0.08);
+    }
+    .nws-resource-item:last-child {
+      border-bottom: none;
+    }
+    .nws-resource-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 0.5rem;
+      color: rgba(133,184,216,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nws-resource-link:hover {
+      background: rgba(75,168,240,0.05);
+      color: #4ba8f0;
+      padding-left: 0.85rem;
+    }
+    .nws-resource-icon {
+      flex-shrink: 0;
+      color: #4ba8f0;
+      opacity: 0.75;
+    }
+    .nws-resource-link:hover .nws-resource-icon {
+      opacity: 1;
+    }
+
+    /* ─────────────────────────────────────
+       CTA BAND (standard class — no overrides needed)
+    ───────────────────────────────────── */
+
+    /* ─────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nws-featured {
+        flex-direction: column;
+      }
+      .nws-featured-text {
+        flex: none;
+        padding: 2rem 1.75rem;
+      }
+      .nws-featured-visual {
+        flex: none;
+        border-left: none;
+        border-top: 1px solid rgba(75,168,240,0.12);
+        padding: 2.5rem 1.75rem;
+        min-height: 200px;
+      }
+      .nws-media-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .nws-hero {
+        padding: 5rem 0 3rem;
+      }
+      .nws-feed-grid {
+        grid-template-columns: 1fr;
+      }
+      .nws-featured-text {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="nws-page">
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -27,7 +455,7 @@
               <a href="../platform.html" class="nav-link">Platform</a>
               <ul class="dropdown">
                 <li><a href="../platform.html">Platform Overview</a></li>
-                <li><a href="../ai-consultants.html">AI Consultants</a></li>
+
                 <li><a href="../edifi.html">EDiFi Software</a></li>
               </ul>
             </li>
@@ -39,7 +467,7 @@
               </ul>
             </li>
             <li class="has-dropdown">
-              <a href="../resources.html" class="nav-link active">Resources</a>
+              <a href="index.html" class="nav-link active">Resources</a>
               <ul class="dropdown">
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="podcast.html">Podcast</a></li>
@@ -54,7 +482,6 @@
                 <li><a href="../company/security.html">Security</a></li>
                 <li><a href="../company/faq.html">FAQ</a></li>
                 <li><a href="../investors.html">Investors</a></li>
-                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -73,187 +500,210 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+
+    <!-- ═══════════════════════════════════
+         HERO
+    ═══════════════════════════════════ -->
+    <section class="nws-hero">
       <div class="container">
-        <div class="hero-content" style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <span class="hero-badge">News</span>
-          <h1>Latest Updates</h1>
-          <p class="lead">Company announcements, press releases, product updates, and industry news from Elite Dental Force.</p>
+        <span class="nws-overline">Press &amp; Updates</span>
+        <h1>Latest <em>News</em> from<br>Elite Dental Force</h1>
+        <p class="nws-hero-sub">Company announcements, product updates, partnership news, and industry coverage.</p>
+        <div class="nws-filter-row" role="tablist" aria-label="Filter news by category">
+          <button class="nws-tab active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="nws-tab" role="tab" aria-selected="false" data-filter="press">Press Releases</button>
+          <button class="nws-tab" role="tab" aria-selected="false" data-filter="product">Product Updates</button>
+          <button class="nws-tab" role="tab" aria-selected="false" data-filter="company">Company News</button>
+          <button class="nws-tab" role="tab" aria-selected="false" data-filter="events">Events</button>
         </div>
       </div>
     </section>
 
-    <!-- News Categories -->
-    <section class="section">
+    <!-- ═══════════════════════════════════
+         FEATURED ARTICLE
+    ═══════════════════════════════════ -->
+    <section class="nws-featured-wrap">
       <div class="container">
-        <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-bottom: var(--space-12);">
-          <button class="btn btn-primary" style="font-size: var(--text-sm);">All News</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Press Releases</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Product Updates</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Company News</button>
-          <button class="btn btn-secondary" style="font-size: var(--text-sm);">Events</button>
-        </div>
-
-        <!-- Featured News -->
-        <div style="background: var(--color-white); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: var(--space-12);">
-          <div class="split-section" style="gap: 0;">
-            <div style="flex: 1; padding: var(--space-10);">
-              <span style="display: inline-block; background: var(--color-interactive); color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); font-size: var(--text-sm); font-weight: var(--font-semibold); margin-bottom: var(--space-4);">Press Release</span>
-              <h2 style="margin-bottom: var(--space-4);">Elite Dental Force Announces $15M Series A Funding</h2>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-4);">Funding will accelerate product development and expand go-to-market efforts as demand for dental revenue intelligence solutions grows.</p>
-              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6);">January 20, 2025</p>
-              <a href="#" class="btn btn-primary">Read Full Release</a>
-            </div>
-            <div style="flex: 1; background: var(--color-alt-bg);">
-              <img src="../../images/news-featured.jpg" alt="Series A announcement" style="width: 100%; height: 100%; object-fit: cover;">
+        <article class="nws-card nws-featured" data-category="press">
+          <div class="nws-featured-text">
+            <span class="nws-badge nws-badge--press">Press Release</span>
+            <h2 class="nws-featured-title">Elite Dental Force Partners with HeyDonto to Transform Insurance Eligibility Verification</h2>
+            <p class="nws-featured-date">August 2025</p>
+            <p class="nws-featured-excerpt">Elite Dental Force and HeyDonto announce a strategic API partnership to deliver AI-powered real-time insurance eligibility verification to dental practices — reducing manual verification work by 60%, enabling proactive claim readiness, and providing predictive data insights before patients arrive.</p>
+            <a href="https://www.cbs42.com/business/press-releases/ein-presswire/833362564/elite-dental-force-partners-with-heydonto-to-transform-insurance-eligibility-verification/" target="_blank" rel="noopener" class="nws-link">Read Full Story &rarr;</a>
+          </div>
+          <div class="nws-featured-visual">
+            <div class="nws-featured-stat">
+              <span class="nws-featured-number">60%</span>
+              <span class="nws-featured-stat-label">Reduction in Manual Verification</span>
             </div>
           </div>
-        </div>
+        </article>
+      </div>
+    </section>
 
-        <!-- News Grid -->
-        <div style="display: flex; flex-direction: column; gap: var(--space-6);">
-          <!-- News Item -->
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-1.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Product Update</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">January 15, 2025</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">EDiFi Platform 2.5 Released with Enhanced Analytics</h4>
-              <p style="color: var(--color-text-light); margin: 0;">New dashboard features, improved reporting capabilities, and faster eligibility verification processing.</p>
-            </div>
-          </a>
+    <!-- ═══════════════════════════════════
+         NEWS FEED
+    ═══════════════════════════════════ -->
+    <section class="section nws-feed-section">
+      <div class="container">
+        <div class="nws-feed-grid" id="nws-feed-grid">
 
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-2.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Card 1 — Press Release -->
+          <article class="nws-card nws-news-card" data-category="press">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--press">Press Release</span>
+              <span class="nws-news-date">Mar 30, 2026</span>
             </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Company News</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">January 10, 2025</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">Elite Dental Force Named to Dental Tech Top 50</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Recognized for innovation in dental revenue technology and impact on practice efficiency.</p>
+            <h3 class="nws-news-title">Elite Dental Force Announces Benjamin Tuinei as Co-Founder</h3>
+            <p class="nws-news-excerpt">Elite Dental Force formally announces Benjamin Tuinei — a recognized national expert on dental insurance negotiations — as Co-Founder, deepening the company's insurance intelligence capabilities at the leadership level.</p>
+            <div class="nws-news-footer">
+              <a href="https://www.einpresswire.com/article/901190175/elite-dental-force-announces-benjamin-tuinei-as-co-founder" target="_blank" rel="noopener" class="nws-link">Read Full Release &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-3.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Card 2 — Press Release -->
+          <article class="nws-card nws-news-card" data-category="press">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--press">Press Release</span>
+              <span class="nws-news-date">Jan 19, 2026</span>
             </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Events</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">January 5, 2025</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">Join Us at the Greater New York Dental Meeting</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Visit our booth to see live demos of the EDiFi platform and meet our team.</p>
+            <h3 class="nws-news-title">Elite Dental Force &amp; Wrench.AI Announce AI Consulting Suite for Dental Offices and DSOs</h3>
+            <p class="nws-news-excerpt">The joint AI enablement suite brings operational intelligence to dental practices without requiring direct PMS integration — no PHI handling, no compliance friction, fast deployment from day one.</p>
+            <div class="nws-news-footer">
+              <a href="https://www.einpresswire.com/article/884451669/elite-dental-force-wrench-ai-announce-ai-consulting-suite-advancing-dental-operational-intelligence-for-offices-dsos" target="_blank" rel="noopener" class="nws-link">Read Full Release &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-4.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Card 3 — Press Release -->
+          <article class="nws-card nws-news-card" data-category="press">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--press">Press Release</span>
+              <span class="nws-news-date">Apr 2, 2026</span>
             </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Press Release</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">December 18, 2024</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">Elite Dental Force Partners with Major DSO Network</h4>
-              <p style="color: var(--color-text-light); margin: 0;">Strategic partnership brings EDiFi platform to over 200 practice locations nationwide.</p>
+            <h3 class="nws-news-title">Elite Dental Force Announces Strategic Partnership with Claim Chaser</h3>
+            <p class="nws-news-excerpt">The partnership integrates Claim Chaser's AR recovery expertise with EDiFi's revenue intelligence infrastructure, delivering a combined clean-claim and collections workflow for dental practices.</p>
+            <div class="nws-news-footer">
+              <a href="../partners.html" class="nws-link">Learn More &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-5.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Card 4 — Product Update -->
+          <article class="nws-card nws-news-card" data-category="product">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--product">Product Update</span>
+              <span class="nws-news-date">Apr 10, 2026</span>
             </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Company News</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">December 10, 2024</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">New Integration: Open Dental Now Fully Supported</h4>
-              <p style="color: var(--color-text-light); margin: 0;">EDiFi now offers complete bi-directional integration with Open Dental PMS.</p>
+            <h3 class="nws-news-title">EDiFi Payment Audit Module Now in Production — $59K Found in First Validation</h3>
+            <p class="nws-news-excerpt">The new Payment Audit engine surfaced $59,000 in underpayments during its first live validation run across five fee schedules, now fully deployed for beta offices.</p>
+            <div class="nws-news-footer">
+              <a href="../edifi.html" class="nws-link">Explore EDiFi &rarr;</a>
             </div>
-          </a>
+          </article>
 
-          <a href="#" style="display: flex; gap: var(--space-6); padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); transition: box-shadow 0.2s, border-color 0.2s; text-decoration: none; color: inherit;">
-            <div style="width: 200px; height: 140px; flex-shrink: 0; background: var(--color-alt-bg); border-radius: var(--radius-md); overflow: hidden;">
-              <img src="../../images/news-6.jpg" alt="News thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Card 5 — Company News -->
+          <article class="nws-card nws-news-card" data-category="company">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--company">Company News</span>
+              <span class="nws-news-date">Mar 25, 2026</span>
             </div>
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-2);">
-                <span style="font-size: var(--text-sm); color: var(--color-interactive); font-weight: var(--font-medium);">Product Update</span>
-                <span style="font-size: var(--text-sm); color: var(--color-text-muted);">December 1, 2024</span>
-              </div>
-              <h4 style="margin-bottom: var(--space-2);">AI Consultants Feature: Enhanced Coding Recommendations</h4>
-              <p style="color: var(--color-text-light); margin: 0;">New AI-powered coding suggestions help practices improve claim accuracy.</p>
+            <h3 class="nws-news-title">Bella Voice AI Now Live — Hands-Free Perio Charting in Beta Offices</h3>
+            <p class="nws-news-excerpt">Bella's perio charting voice assistant has completed beta rollout across Utah offices, enabling hygienists and doctors to chart hands-free in real time without touching a keyboard.</p>
+            <div class="nws-news-footer">
+              <a href="../platform.html" class="nws-link">See the Platform &rarr;</a>
             </div>
-          </a>
-        </div>
+          </article>
 
-        <!-- Pagination -->
-        <div style="display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-12);">
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">Previous</button>
-          <button class="btn btn-primary" style="padding: var(--space-2) var(--space-4);">1</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">2</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">3</button>
-          <button class="btn btn-secondary" style="padding: var(--space-2) var(--space-4);">Next</button>
+          <!-- Card 6 — Media -->
+          <article class="nws-card nws-news-card" data-category="press">
+            <div class="nws-news-meta">
+              <span class="nws-badge nws-badge--press">Media</span>
+              <span class="nws-news-date">Jul 4, 2025</span>
+            </div>
+            <h3 class="nws-news-title">CEO Alvin Uta'i Featured on Dental Tech Talks — "Fixing Dental Billing at the Source"</h3>
+            <p class="nws-news-excerpt">Alvin joins hosts Youssef Hanine and Amy Gagne, RDH on Dental Tech Talks (Ep. 25) to discuss how AI is transforming dental billing, insurance complexity, and practice survival in a changing reimbursement landscape.</p>
+            <div class="nws-news-footer">
+              <a href="https://podcasts.apple.com/us/podcast/25-fixing-dental-billing-at-the-source-alvin-utai-ceo/id1810632023?i=1000715746876" target="_blank" rel="noopener" class="nws-link">Listen on Apple Podcasts &rarr;</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Media Contact -->
-    <section class="section bg-alt">
+    <!-- ═══════════════════════════════════
+         MEDIA & PRESS
+    ═══════════════════════════════════ -->
+    <section class="section bg-alt nws-media-section">
       <div class="container">
-        <div class="grid grid-2" style="gap: var(--space-12); align-items: center;">
-          <div>
-            <span class="overline" style="color: var(--color-interactive);">Media</span>
-            <h2>Press & Media Inquiries</h2>
-            <p style="font-size: var(--text-lg); color: var(--color-text-light); margin-bottom: var(--space-6);">For press inquiries, interview requests, or media kit access, please contact our communications team.</p>
-            <a href="../contact.html#media" class="btn btn-primary">Contact Media Team</a>
+        <div class="nws-media-layout">
+
+          <!-- Left: copy + CTA -->
+          <div class="nws-media-left">
+            <span class="nws-overline">Media</span>
+            <h2>Press &amp; Media Inquiries</h2>
+            <p>For press inquiries, interview requests, speaking opportunities, or access to our media kit, please reach out to our communications team. We typically respond within one business day.</p>
+            <a href="../contact.html" class="nws-btn-contact">Contact Media Team</a>
           </div>
-          <div style="background: var(--color-white); padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-            <h4 style="margin-bottom: var(--space-4);">Media Resources</h4>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border);">
-                <a href="#" style="display: flex; align-items: center; gap: var(--space-3); color: var(--color-text); text-decoration: none;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                  Company Fact Sheet
+
+          <!-- Right: resource card -->
+          <div class="nws-card nws-media-card">
+            <p class="nws-media-card-title">Press Releases</p>
+            <ul class="nws-resource-list">
+              <li class="nws-resource-item">
+                <a href="https://www.einpresswire.com/article/901190175/elite-dental-force-announces-benjamin-tuinei-as-co-founder" target="_blank" rel="noopener" class="nws-resource-link">
+                  <svg class="nws-resource-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                  Benjamin Tuinei Named Co-Founder — Mar 2026
                 </a>
               </li>
-              <li style="padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border);">
-                <a href="#" style="display: flex; align-items: center; gap: var(--space-3); color: var(--color-text); text-decoration: none;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                  Logo & Brand Assets
+              <li class="nws-resource-item">
+                <a href="https://www.einpresswire.com/article/884451669/elite-dental-force-wrench-ai-announce-ai-consulting-suite-advancing-dental-operational-intelligence-for-offices-dsos" target="_blank" rel="noopener" class="nws-resource-link">
+                  <svg class="nws-resource-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                  EDF &amp; Wrench.AI AI Consulting Suite — Jan 2026
                 </a>
               </li>
-              <li style="padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border);">
-                <a href="#" style="display: flex; align-items: center; gap: var(--space-3); color: var(--color-text); text-decoration: none;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  Executive Bios
+              <li class="nws-resource-item">
+                <a href="https://www.cbs42.com/business/press-releases/ein-presswire/833362564/elite-dental-force-partners-with-heydonto-to-transform-insurance-eligibility-verification/" target="_blank" rel="noopener" class="nws-resource-link">
+                  <svg class="nws-resource-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                  EDF &amp; HeyDonto Partnership — Aug 2025
                 </a>
               </li>
-              <li style="padding: var(--space-3) 0;">
-                <a href="#" style="display: flex; align-items: center; gap: var(--space-3); color: var(--color-text); text-decoration: none;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                  Product Screenshots
+              <li class="nws-resource-item">
+                <a href="../contact.html" class="nws-resource-link">
+                  <svg class="nws-resource-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                  Media Kit &amp; Press Inquiries
                 </a>
               </li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CTA Band -->
+    <!-- ═══════════════════════════════════
+         CTA BAND
+    ═══════════════════════════════════ -->
     <section class="cta-band">
       <div class="container">
         <h2>Stay Connected</h2>
@@ -264,6 +714,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -281,7 +732,7 @@
           <h5 class="footer-heading">Platform</h5>
           <ul class="footer-links">
             <li><a href="../platform.html">Overview</a></li>
-            <li><a href="../ai-consultants.html">AI Consultants</a></li>
+
             <li><a href="../edifi.html">EDiFi Software</a></li>
           </ul>
         </div>
@@ -324,5 +775,40 @@
   </footer>
 
   <script src="../../js/main.js"></script>
+  <script src="../../js/tracking.js" defer></script>
+  <script src="../../js/ghl-forms.js" defer></script>
+
+  <script>
+    // ── Category filter tabs ──
+    (function () {
+      const tabs = document.querySelectorAll('.nws-tab');
+      const cards = document.querySelectorAll('#nws-feed-grid [data-category]');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          // Update active state
+          tabs.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          var filter = tab.getAttribute('data-filter');
+
+          // Show / hide feed cards
+          cards.forEach(function (card) {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }());
+  </script>
+  <script src="../../js/booking-widget.js" defer></script>
+  <script src="../../js/cookie-consent.js" defer></script>
 </body>
 </html>

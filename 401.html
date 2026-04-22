@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unauthorized | Elite Dental Force</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    body { background: #020917; min-height: 100vh; display: flex; flex-direction: column; }
+    .err-page {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 5rem 1.5rem; position: relative; overflow: hidden;
+    }
+    .err-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(75,168,240,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.045) 1px, transparent 1px);
+      background-size: 60px 60px; pointer-events: none;
+    }
+    .err-grid::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #020917 100%);
+    }
+    .err-orb {
+      position: absolute; border-radius: 50%; pointer-events: none; filter: blur(120px);
+    }
+    .err-orb--1 { width: 500px; height: 500px; background: #001f71; opacity: 0.45; top: -100px; left: -150px; }
+    .err-orb--2 { width: 350px; height: 350px; background: rgba(255,215,0,0.15); opacity: 0.35; bottom: -80px; right: -100px; }
+    .err-inner { position: relative; z-index: 2; text-align: center; max-width: 560px; }
+    .err-code {
+      font-size: clamp(7rem, 18vw, 11rem); font-weight: 800; line-height: 1;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, #ffd700 50%, #f59e0b 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin: 0 0 0.5rem; letter-spacing: -0.04em;
+    }
+    .err-title { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; color: #f0f7ff; margin: 0 0 1rem; }
+    .err-desc { font-size: 1rem; color: rgba(133,184,216,0.75); line-height: 1.65; margin: 0 0 2.5rem; }
+    .err-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .err-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700;
+      text-decoration: none; transition: all 0.25s ease;
+    }
+    .err-btn--primary {
+      background: linear-gradient(135deg, #095ba7, #4ba8f0); color: #fff; border: none;
+      box-shadow: 0 4px 20px rgba(75,168,240,0.3);
+    }
+    .err-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(75,168,240,0.4); }
+    .err-btn--outline {
+      background: transparent; color: rgba(133,184,216,0.8);
+      border: 1px solid rgba(75,168,240,0.25);
+    }
+    .err-btn--outline:hover { border-color: rgba(75,168,240,0.5); color: #f0f7ff; background: rgba(75,168,240,0.06); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/Grayscale Transparent.png" alt="Elite Dental Force">
+        </a>
+        <div class="nav-cta">
+          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="err-page">
+    <div class="err-grid"></div>
+    <div class="err-orb err-orb--1"></div>
+    <div class="err-orb err-orb--2"></div>
+
+    <div class="err-inner">
+      <div class="err-code">401</div>
+      <h1 class="err-title">Access Restricted</h1>
+      <p class="err-desc">You don't have permission to access this page. If you believe this is an error, please contact our team and we'll get it sorted out.</p>
+
+      <div class="err-actions">
+        <a href="index.html" class="err-btn err-btn--primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Back to Home
+        </a>
+        <a href="pages/contact.html" class="err-btn err-btn--outline">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/cookie-consent.js" defer></script>
+</body>
+</html>
