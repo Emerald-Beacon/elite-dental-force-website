@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>What is AI Claim Scrubbing? | The Complete Definition</title>
+  <meta name="description" content="AI claim scrubbing is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, and denial-risk patterns BEFORE submission — so errors are fixed before the claim ever reaches the clearinghouse.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is AI Claim Scrubbing? | The Complete Definition">
+  <meta property="og:description" content="AI claim scrubbing reviews every dental claim against payer rules and denial-risk patterns BEFORE submission — so errors are caught before the claim reaches the clearinghouse.">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-dental-revenue-intelligence.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta property="article:published_time" content="2026-04-22T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-22T00:00:00Z">
+  <meta property="article:author" content="Elite Dental Force">
+  <meta property="article:section" content="Dental Revenue Cycle">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is AI Claim Scrubbing? | The Complete Definition">
+  <meta name="twitter:description" content="AI claim scrubbing catches dental claim errors before submission — fixing CDT code issues, payer rule violations, and denial-risk patterns before they become denials.">
+  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-dental-revenue-intelligence.png">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="what is AI claim scrubbing, dental claim scrubbing, AI dental claim scrubbing definition, dental claim pre-submission review, CDT code validation, dental claim denial prevention, clean claim dental">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- ================================================================
+       PAGE-SPECIFIC STYLES
+       ================================================================ -->
+  <style>
+    :root {
+      --acs-blue: #4ba8f0;
+      --acs-navy: #001f71;
+      --acs-dark: #020917;
+      --acs-mid: #0a1628;
+      --acs-card: #0d1e35;
+      --acs-gold: #ffd700;
+      --acs-green: #27c93f;
+      --acs-red: #ef4444;
+      --acs-border: rgba(75,168,240,0.14);
+      --acs-text: #c5dff0;
+      --acs-muted: #6b8fa8;
+    }
+
+    /* ── Hero ── */
+    .acs-hero {
+      background: linear-gradient(180deg, #030d22 0%, #020917 70%);
+      border-bottom: 1px solid rgba(75,168,240,0.1);
+      padding: 120px 0 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .acs-hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(75,168,240,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .acs-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.22);
+      border-radius: 50px;
+      padding: 6px 16px 6px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--acs-blue);
+      margin-bottom: 28px;
+    }
+    .acs-hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--acs-green);
+      box-shadow: 0 0 6px rgba(39,201,63,0.8);
+      animation: dot-pulse 2s ease-in-out infinite;
+    }
+    @keyframes dot-pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:0.5; transform:scale(1.4); }
+    }
+    .acs-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: #f0f7ff;
+      max-width: 860px;
+      margin: 0 auto 16px;
+    }
+    .acs-hero h1 .acs-highlight {
+      background: linear-gradient(135deg, #62bcff 0%, #4ba8f0 50%, #3454f8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .acs-hero-meta {
+      font-size: 13px;
+      color: var(--acs-muted);
+      margin-bottom: 40px;
+    }
+    .acs-hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .acs-hero-meta span + span::before { content: '·'; margin: 0 8px; }
+
+    /* ── Direct Answer Box ── */
+    .acs-answer-box {
+      background: rgba(75,168,240,0.08);
+      border: 1px solid rgba(75,168,240,0.28);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .acs-answer-box-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--acs-blue);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .acs-answer-box-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 2px;
+      background: var(--acs-blue);
+    }
+    .acs-answer-box p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #e2f0fb;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* ── Breadcrumb ── */
+    .acs-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--acs-muted);
+      margin-bottom: 24px;
+    }
+    .acs-breadcrumb a { color: var(--acs-muted); transition: color 0.2s; }
+    .acs-breadcrumb a:hover { color: var(--acs-blue); }
+    .acs-breadcrumb-sep { opacity: 0.4; }
+    .acs-breadcrumb-current { color: var(--acs-blue); }
+
+    /* ── Main Layout ── */
+    .acs-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 64px;
+      align-items: start;
+      padding: 72px 0 96px;
+    }
+    @media (max-width: 1024px) {
+      .acs-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ── Sticky TOC ── */
+    .acs-toc { position: sticky; top: 100px; }
+    .acs-toc-title {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--acs-muted); margin-bottom: 16px;
+    }
+    .acs-toc-list { display: flex; flex-direction: column; gap: 2px; }
+    .acs-toc-item {
+      display: block; padding: 8px 12px;
+      font-size: 13px; font-weight: 500;
+      color: var(--acs-muted); border-radius: 7px;
+      border-left: 2px solid transparent; transition: all 0.2s;
+    }
+    .acs-toc-item:hover {
+      color: #f0f7ff;
+      background: rgba(75,168,240,0.06);
+      border-left-color: rgba(75,168,240,0.4);
+    }
+    .acs-toc-item.active {
+      color: var(--acs-blue);
+      background: rgba(75,168,240,0.08);
+      border-left-color: var(--acs-blue);
+    }
+    .acs-toc-divider { height: 1px; background: var(--acs-border); margin: 12px 0; }
+    .acs-toc-cta {
+      margin-top: 28px;
+      background: rgba(75,168,240,0.06);
+      border: 1px solid rgba(75,168,240,0.2);
+      border-radius: 12px; padding: 20px;
+    }
+    .acs-toc-cta p { font-size: 13px; color: var(--acs-text); margin-bottom: 14px; line-height: 1.5; }
+    @media (max-width: 1024px) { .acs-toc { display: none; } }
+
+    /* ── Article Body ── */
+    .acs-article { min-width: 0; }
+    .acs-article h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800; color: #f0f7ff;
+      margin-top: 56px; margin-bottom: 24px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--acs-border);
+      line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .acs-article h2:first-of-type { margin-top: 0; }
+    .acs-article h3 { font-size: 1.15rem; font-weight: 700; color: #e2f0fb; margin-top: 28px; margin-bottom: 10px; }
+    .acs-article p { font-size: 16px; line-height: 1.8; color: var(--acs-text); margin-bottom: 18px; }
+    .acs-article ul, .acs-article ol { margin: 16px 0 24px 0; padding-left: 0; list-style: none; }
+    .acs-article ul li, .acs-article ol li {
+      font-size: 15.5px; line-height: 1.75; color: var(--acs-text);
+      padding: 10px 0 10px 28px;
+      border-bottom: 1px solid rgba(75,168,240,0.06); position: relative;
+    }
+    .acs-article ul li:last-child, .acs-article ol li:last-child { border-bottom: none; }
+    .acs-article ul li::before {
+      content: ''; position: absolute; left: 0; top: 18px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--acs-blue); box-shadow: 0 0 6px rgba(75,168,240,0.5);
+    }
+    .acs-article li strong { color: #f0f7ff; font-weight: 700; }
+
+    /* ── Component Cards ── */
+    .acs-component-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 14px; margin: 24px 0 32px;
+    }
+    @media (max-width: 640px) { .acs-component-grid { grid-template-columns: 1fr; } }
+    .acs-component-card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--acs-border); border-left: 3px solid var(--acs-blue);
+      border-radius: 10px; padding: 18px 20px; transition: all 0.2s;
+    }
+    .acs-component-card:hover { background: rgba(75,168,240,0.05); transform: translateX(2px); }
+    .acs-component-card-num {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--acs-blue);
+      font-family: 'JetBrains Mono', monospace; margin-bottom: 6px;
+    }
+    .acs-component-card h4 { font-size: 14px; font-weight: 700; color: #f0f7ff; margin-bottom: 6px; letter-spacing: -0.01em; }
+    .acs-component-card p { font-size: 13px; color: var(--acs-muted); margin: 0; line-height: 1.55; }
+
+    /* ── Callout ── */
+    .acs-callout {
+      background: rgba(9,91,167,0.1); border: 1px solid rgba(9,91,167,0.3);
+      border-left: 4px solid var(--acs-blue); border-radius: 10px;
+      padding: 1.25rem 1.5rem; margin: 28px 0;
+    }
+    .acs-callout p { font-size: 15px; color: #d6eeff; margin: 0; line-height: 1.7; }
+    .acs-callout-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--acs-blue); margin-bottom: 8px;
+    }
+
+    /* ── Stat Cards ── */
+    .acs-stat-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin: 28px 0;
+    }
+    @media (max-width: 600px) { .acs-stat-row { grid-template-columns: 1fr 1fr; } }
+    .acs-stat-card {
+      background: rgba(255,255,255,0.02); border: 1px solid var(--acs-border);
+      border-radius: 12px; padding: 20px 18px; text-align: center;
+    }
+    .acs-stat-value {
+      font-size: 1.9rem; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(135deg, #fff 0%, #62bcff 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1; margin-bottom: 8px;
+    }
+    .acs-stat-label { font-size: 12px; color: var(--acs-muted); line-height: 1.4; }
+    .acs-stat-source { font-size: 10px; color: rgba(107,143,168,0.6); margin-top: 4px; }
+
+    /* ── Process Steps ── */
+    .acs-process {
+      margin: 28px 0;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .acs-process-step {
+      display: flex; gap: 18px;
+      padding: 20px 0; border-bottom: 1px solid rgba(75,168,240,0.08);
+    }
+    .acs-process-step:last-child { border-bottom: none; }
+    .acs-process-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(75,168,240,0.1); border: 1px solid rgba(75,168,240,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; color: var(--acs-blue);
+      flex-shrink: 0; margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .acs-process-step h4 { font-size: 0.95rem; font-weight: 700; color: #f0f7ff; margin: 0 0 5px; }
+    .acs-process-step p { font-size: 0.875rem; color: var(--acs-text); line-height: 1.65; margin: 0; }
+
+    /* ── EDiFi callout ── */
+    .acs-edifi-callout {
+      background: linear-gradient(135deg, rgba(9,91,167,0.18) 0%, rgba(75,168,240,0.06) 100%);
+      border: 1px solid rgba(75,168,240,0.28); border-radius: 20px;
+      padding: 32px; margin: 2rem 0; position: relative; overflow: hidden;
+    }
+    .acs-edifi-callout::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.7), rgba(255,215,0,0.5), transparent);
+    }
+    .acs-edifi-callout-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--acs-gold); margin-bottom: 10px;
+    }
+    .acs-edifi-callout h3 { font-size: 1.35rem; font-weight: 800; color: #f0f7ff; margin: 0 0 12px; }
+    .acs-edifi-callout p { font-size: 0.95rem; color: var(--acs-text); line-height: 1.75; }
+    .acs-edifi-modules { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .acs-edifi-module {
+      font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 50px;
+      background: rgba(75,168,240,0.1); border: 1px solid rgba(75,168,240,0.22);
+      color: rgba(75,168,240,0.9);
+    }
+
+    /* ── Comparison table ── */
+    .acs-compare-wrap {
+      overflow-x: auto; margin: 24px 0 32px;
+      border-radius: 14px; border: 1px solid var(--acs-border);
+    }
+    .acs-compare-table {
+      width: 100%; border-collapse: collapse; min-width: 560px;
+    }
+    .acs-compare-table thead { background: rgba(75,168,240,0.07); }
+    .acs-compare-table th {
+      padding: 14px 20px; text-align: left; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: #f0f7ff;
+      border-bottom: 1px solid var(--acs-border);
+    }
+    .acs-compare-table th:first-child { color: var(--acs-muted); }
+    .acs-compare-table th.col-edifi { color: var(--acs-blue); background: rgba(75,168,240,0.1); }
+    .acs-compare-table td {
+      padding: 13px 20px; font-size: 13.5px; color: var(--acs-text);
+      border-bottom: 1px solid rgba(75,168,240,0.05); vertical-align: top;
+    }
+    .acs-compare-table tr:last-child td { border-bottom: none; }
+    .acs-compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.012); }
+    .acs-compare-table td.feature { font-weight: 600; color: #e2f0fb; }
+    .acs-compare-table td.legacy { color: #ef8888; }
+    .acs-compare-table td.acs { color: var(--acs-green); font-weight: 600; }
+    .check { color: #27c93f; margin-right: 4px; }
+    .cross { color: #ef4444; margin-right: 4px; }
+
+    /* ── FAQ ── */
+    .acs-faq {
+      margin-top: 56px; padding-top: 48px;
+      border-top: 1px solid var(--acs-border);
+    }
+    .acs-faq-title {
+      font-size: clamp(1.4rem, 3vw, 1.75rem); font-weight: 800;
+      color: #f0f7ff; margin-bottom: 32px; letter-spacing: -0.02em;
+    }
+    .acs-faq-item {
+      border: 1px solid var(--acs-border); border-radius: 12px;
+      padding: 24px 28px; margin-bottom: 16px;
+      background: rgba(255,255,255,0.02); transition: border-color 0.2s;
+    }
+    .acs-faq-item:hover { border-color: rgba(75,168,240,0.25); }
+    .acs-faq-q { font-size: 16px; font-weight: 700; color: #f0f7ff; margin-bottom: 12px; line-height: 1.35; }
+    .acs-faq-a { font-size: 15px; color: var(--acs-text); line-height: 1.75; margin: 0; }
+
+    /* ── Bottom CTA ── */
+    .acs-cta {
+      background: linear-gradient(135deg, rgba(0,31,113,0.55) 0%, rgba(9,91,167,0.35) 100%);
+      border: 1px solid rgba(75,168,240,0.2); border-radius: 20px;
+      padding: 56px 48px; text-align: center; margin: 56px 0 72px;
+      position: relative; overflow: hidden;
+    }
+    .acs-cta::before {
+      content: ''; position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 500px; height: 300px;
+      background: radial-gradient(ellipse, rgba(75,168,240,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .acs-cta h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800;
+      color: #f0f7ff; margin-bottom: 14px; letter-spacing: -0.02em;
+    }
+    .acs-cta p {
+      font-size: 16px; color: var(--acs-text);
+      max-width: 540px; margin: 0 auto 32px; line-height: 1.65;
+    }
+    .acs-cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Scroll entrance ── */
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 640px) {
+      .acs-hero { padding: 90px 0 48px; }
+      .acs-cta { padding: 36px 24px; }
+    }
+  </style>
+
+  <!-- 1. Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is AI Claim Scrubbing? The Complete Definition",
+    "description": "AI claim scrubbing is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, and denial-risk patterns BEFORE submission — so errors are fixed before the claim ever reaches the clearinghouse.",
+    "url": "https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html",
+    "datePublished": "2026-04-22",
+    "dateModified": "2026-04-22",
+    "inLanguage": "en-US",
+    "author": {
+      "@type": "Organization",
+      "name": "Elite Dental Force",
+      "url": "https://www.elitedentalforce.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elite Dental Force",
+      "url": "https://www.elitedentalforce.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.elitedentalforce.com/images/Grayscale Transparent.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "AI Claim Scrubbing",
+      "description": "The automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, and denial-risk patterns before submission."
+    },
+    "image": "https://www.elitedentalforce.com/images/og-dental-revenue-intelligence.png",
+    "articleSection": "Dental Revenue Cycle",
+    "keywords": "AI claim scrubbing, dental claim scrubbing, CDT code validation, payer rule matching, dental claim denial prevention, clean claim rate, pre-submission claim review"
+  }
+  </script>
+
+  <!-- 2. DefinedTerm Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "AI Claim Scrubbing",
+    "description": "AI claim scrubbing is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, frequency limitations, and historical denial-risk patterns BEFORE the claim is submitted to the clearinghouse — so that errors, missing information, and payer rule violations are identified and corrected before they cause a denial.",
+    "url": "https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "Dental Technology Glossary",
+      "url": "https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elite Dental Force",
+        "url": "https://www.elitedentalforce.com"
+      }
+    }
+  }
+  </script>
+
+  <!-- 3. FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is AI claim scrubbing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI claim scrubbing is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, frequency limitations, and historical denial-risk patterns BEFORE the claim is submitted to the clearinghouse. Instead of discovering errors after a claim is denied, AI claim scrubbing catches violations, missing attachments, incorrect tooth numbers, unbundling issues, and payer-specific exceptions before the claim ever leaves the practice — so the first submission is a clean submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average dental claim denial rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average initial dental claim denial rate is 20 to 25 percent industry-wide. This means roughly one in five dental claims is denied on its first submission. The vast majority of these denials are preventable — they result from CDT code violations, missing documentation, incorrect tooth numbers, payer-specific rule exceptions, and eligibility errors that a pre-submission AI scrub would catch. Practices using AI-assisted claim scrubbing through EDiFi achieve a 94.2 percent clean claim rate, compared to the 75 to 80 percent industry average."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is AI claim scrubbing different from a clearinghouse edit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clearinghouse edits are format and transaction-level checks — they verify that the claim is properly structured for electronic transmission. AI claim scrubbing is a clinical and payer-rule-level review — it checks the actual procedure codes, tooth numbers, documentation completeness, frequency limitations, and payer-specific denial patterns before the claim is even sent to the clearinghouse. A clearinghouse edit catches structural errors. AI claim scrubbing catches clinical and coverage errors that would survive a clearinghouse check and still be denied by the payer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does AI claim scrubbing check on each dental claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A complete AI claim scrubbing engine checks: CDT code validity and correct coding by procedure type, payer-specific rules for CDT code combinations that are routinely rejected, tooth number and surface accuracy for restorative and prosthetic procedures, frequency limitations against the patient's verified benefit data, documentation requirements including radiograph attachments, periodontal charting, and clinical narratives for codes that require them, prior authorization flags for procedures that require pre-approval from specific payers, billing provider and NPI accuracy, coordination of benefits flags when secondary insurance exists, and a denial probability score that surfaces the highest-risk claims for manual review before submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does EDiFi's AI claim scrubbing engine work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi's AI scrubbing engine runs every claim through a five-layer review before submission: CDT code validation against a 489+ code knowledge base, payer-specific rule matching against stored rule sets for every major dental payer, documentation gap flagging for procedures that require attachments or narratives, denial probability scoring based on historical payer patterns, and fix recommendation generation that specifies exactly what needs to change on each claim. The scrub runs automatically when claims are prepared in the practice management system — no staff action required to initiate it. Claims that pass the scrub are submitted. Claims with flagged issues are held for review with specific fix instructions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 4. BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.elitedentalforce.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Claim Scrubbing",
+        "item": "https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQJKZLMC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ================================================================
+       HEADER / NAV
+       ================================================================ -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo">
+          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <a href="platform.html" class="nav-link">Platform</a>
+              <ul class="dropdown">
+                <li><a href="platform.html">Platform Overview</a></li>
+                <li><a href="edifi.html">EDiFi Software</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link">Solutions</a>
+              <ul class="dropdown">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="partners.html">Partners</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="resources/blog.html">Blog</a></li>
+                <li><a href="resources/podcast.html">Podcast</a></li>
+                <li><a href="resources/webinars.html">Webinars</a></li>
+                <li><a href="resources/news.html">News</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="company.html" class="nav-link">Company</a>
+              <ul class="dropdown">
+                <li><a href="company.html">About Us</a></li>
+                <li><a href="company/security.html">Security</a></li>
+                <li><a href="company/faq.html">FAQ</a></li>
+                <li><a href="investors.html">Investors</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary">Book a Demo</a>
+          </div>
+        </nav>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <section class="acs-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="acs-breadcrumb" style="justify-content:center; margin-bottom:28px;">
+          <a href="../index.html">Home</a>
+          <span class="acs-breadcrumb-sep">/</span>
+          <span class="acs-breadcrumb-current">AI Claim Scrubbing</span>
+        </nav>
+
+        <div class="acs-hero-badge">
+          <div class="acs-hero-badge-dot"></div>
+          Category Definition — Published by Elite Dental Force
+        </div>
+
+        <h1>What is <span class="acs-highlight">AI Claim Scrubbing</span>?</h1>
+
+        <div class="acs-hero-meta">
+          <span>By Elite Dental Force</span>
+          <span>April 22, 2026</span>
+          <span>9 min read</span>
+        </div>
+
+        <!-- DIRECT ANSWER BOX -->
+        <div class="acs-answer-box" itemscope itemtype="https://schema.org/DefinedTerm">
+          <div class="acs-answer-box-label">Definition</div>
+          <p itemprop="description">
+            <strong style="color:#f0f7ff;">AI claim scrubbing</strong> is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, frequency limitations, and denial-risk patterns <strong style="color:#f0f7ff;">BEFORE</strong> submission — so that errors, missing information, and payer rule violations are identified and corrected before the claim ever reaches the clearinghouse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         MAIN CONTENT + SIDEBAR
+         ================================================================ -->
+    <div class="container">
+      <div class="acs-layout">
+
+        <!-- ── ARTICLE BODY ── -->
+        <article class="acs-article" itemscope itemtype="https://schema.org/Article">
+          <meta itemprop="headline" content="What is AI Claim Scrubbing? The Complete Definition">
+          <meta itemprop="datePublished" content="2026-04-22">
+          <meta itemprop="author" content="Elite Dental Force">
+
+          <!-- ============================================================
+               SECTION 1 — Why It Exists
+               ============================================================ -->
+          <h2 id="why-it-exists">Why Dental Claims Get Denied — and Why Scrubbing Prevents It</h2>
+
+          <p>A dental claim denial is not a verdict on the quality of care provided. Most denials have nothing to do with whether the procedure was necessary, properly documented, or correctly performed. They are administrative failures: the wrong CDT code combination for a specific payer, a missing radiograph attachment, a tooth number that does not match the fee schedule entry, a frequency limitation that had already been reached — none of which are discovered until the claim is rejected weeks after submission.</p>
+
+          <p>The average initial dental claim denial rate across the industry is 20 to 25 percent. That means roughly one in four dental claims is denied on first submission. The billing team then has to identify the error, correct it, and resubmit — a process that takes additional staff time, delays payment by 30 to 60 days, and, for a percentage of denials, never results in collection at all because the appeal window closes.</p>
+
+          <p>The entire denial-rework cycle is preventable. Not partially preventable — almost entirely preventable. The conditions that cause the overwhelming majority of dental claim denials are predictable, pattern-based, and detectable before submission. AI claim scrubbing is the system that detects them.</p>
+
+          <div class="acs-stat-row fade-in">
+            <div class="acs-stat-card">
+              <div class="acs-stat-value">20–25%</div>
+              <div class="acs-stat-label">average initial dental claim denial rate across the industry</div>
+              <div class="acs-stat-source">Industry benchmark</div>
+            </div>
+            <div class="acs-stat-card">
+              <div class="acs-stat-value">94.2%</div>
+              <div class="acs-stat-label">clean claim rate achieved by EDiFi beta practices vs. 75–80% industry average</div>
+              <div class="acs-stat-source">EDiFi, 2026</div>
+            </div>
+            <div class="acs-stat-card">
+              <div class="acs-stat-value">489+</div>
+              <div class="acs-stat-label">CDT codes in EDiFi's knowledge base with payer-specific rule sets for every major carrier</div>
+              <div class="acs-stat-source">EDiFi, 2026</div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SECTION 2 — What Gets Checked
+               ============================================================ -->
+          <h2 id="what-gets-checked">What AI Claim Scrubbing Checks on Every Claim</h2>
+
+          <p>A complete AI claim scrubbing engine does not run a single validation — it runs a layered review across five distinct categories of error. Most dental claim denials fall into one of these five categories, and a scrub that covers all five catches virtually every preventable denial before it happens.</p>
+
+          <div class="acs-component-grid fade-in">
+            <div class="acs-component-card">
+              <div class="acs-component-card-num">Check 01</div>
+              <h4>CDT Code Validation</h4>
+              <p>Every CDT code on the claim is validated for accuracy, correct usage, and proper code combinations. Bundled procedures that payers require to be billed separately, or separately-billed codes that payers require to be bundled, are flagged before submission.</p>
+            </div>
+            <div class="acs-component-card">
+              <div class="acs-component-card-num">Check 02</div>
+              <h4>Payer-Rule Matching</h4>
+              <p>Payer-specific rules are applied to every claim: frequency limitations, tooth-surface requirements, prior authorization triggers, covered procedure lists, and CDT code exceptions vary by carrier. Generic clearinghouse edits do not catch these — payer-rule matching does.</p>
+            </div>
+            <div class="acs-component-card">
+              <div class="acs-component-card-num">Check 03</div>
+              <h4>Denial Probability Scoring</h4>
+              <p>Each claim receives a denial probability score based on historical payer patterns — which CDT codes are most frequently denied by which carriers, which provider billing patterns generate the highest rejection rates, and which claim types have pending prior authorization requirements.</p>
+            </div>
+            <div class="acs-component-card">
+              <div class="acs-component-card-num">Check 04</div>
+              <h4>Fix Recommendations</h4>
+              <p>When an issue is flagged, the scrubbing engine does not just reject the claim — it generates a specific fix recommendation: which code to change, what documentation to attach, which tooth surface needs correction, or what the payer's specific requirement is for this procedure.</p>
+            </div>
+            <div class="acs-component-card">
+              <div class="acs-component-card-num">Check 05</div>
+              <h4>Documentation Gap Flagging</h4>
+              <p>Procedures that require attachments — radiographs for crowns and root canals, periodontal charting for perio procedures, clinical narratives for D9310 exams — are checked for documentation completeness before the claim is submitted, not after it is denied for missing information.</p>
+            </div>
+          </div>
+
+          <div class="acs-callout">
+            <div class="acs-callout-label">What Clearinghouse Edits Miss</div>
+            <p>Standard clearinghouse edits check claim structure — that required fields are filled in, that NPI numbers are formatted correctly, that payer IDs are valid. They do not check clinical accuracy, payer-specific rules, frequency limitations, or denial probability. A claim can pass every clearinghouse edit and still be denied for a CDT code violation or a missing radiograph. AI claim scrubbing runs the checks that clearinghouses cannot.</p>
+          </div>
+
+          <!-- ============================================================
+               SECTION 3 — The Scrub Process
+               ============================================================ -->
+          <h2 id="the-process">How the AI Claim Scrubbing Process Works</h2>
+
+          <p>AI claim scrubbing runs automatically as claims are prepared — between the time a procedure is documented and the time the claim reaches the clearinghouse. Here is the end-to-end process in a practice using EDiFi's AI scrubbing engine:</p>
+
+          <div class="acs-process fade-in">
+            <div class="acs-process-step">
+              <div class="acs-process-num">1</div>
+              <div>
+                <h4>Claim Prepared in PMS</h4>
+                <p>The provider documents the procedure in the practice management system (Dentrix, Open Dental, Eaglesoft, or Curve Dental). CDT codes are assigned and the claim is queued. The AI scrubbing engine triggers automatically — no staff action required.</p>
+              </div>
+            </div>
+            <div class="acs-process-step">
+              <div class="acs-process-num">2</div>
+              <div>
+                <h4>Five-Layer Scrub Runs</h4>
+                <p>The engine checks CDT code validity, payer-specific rules for the identified carrier, frequency limitations against the patient's verified benefit data, documentation completeness, and denial probability based on historical patterns for this payer and procedure combination.</p>
+              </div>
+            </div>
+            <div class="acs-process-step">
+              <div class="acs-process-num">3</div>
+              <div>
+                <h4>Denial Risk Scored</h4>
+                <p>Each claim receives a denial probability score — low, medium, or high — based on the scrub results. Low-risk claims proceed automatically. Medium and high-risk claims are held with specific issue flags and fix recommendations displayed for the billing team.</p>
+              </div>
+            </div>
+            <div class="acs-process-step">
+              <div class="acs-process-num">4</div>
+              <div>
+                <h4>Fix or Approve</h4>
+                <p>The billing team reviews flagged claims with the exact fix listed — "Attach periapical radiograph for D2750," "CDT D4341 requires charting for 4+ sites — documentation incomplete," "Delta Dental requires D6750 submitted with D6210 for this tooth." The team fixes the issue or overrides with a reason, then approves.</p>
+              </div>
+            </div>
+            <div class="acs-process-step">
+              <div class="acs-process-num">5</div>
+              <div>
+                <h4>Clean Claim Submitted</h4>
+                <p>Only reviewed, scrubbed claims reach the clearinghouse. First-submission clean claim rate climbs from the 75–80% industry average toward the 94%+ that EDiFi beta practices are achieving. Denials that do occur are genuine coverage disputes — not preventable errors.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               SECTION 4 — Comparison Table
+               ============================================================ -->
+          <h2 id="comparison">With vs. Without AI Claim Scrubbing</h2>
+
+          <div class="acs-compare-wrap fade-in">
+            <table class="acs-compare-table">
+              <thead>
+                <tr>
+                  <th style="width:30%">Claim Scenario</th>
+                  <th>Without AI Scrubbing</th>
+                  <th class="col-edifi">With AI Claim Scrubbing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature">CDT code violation</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Submitted, denied 3 weeks later — rework required</td>
+                  <td class="acs"><span class="check">&#10003;</span> Caught before submission with specific fix instruction</td>
+                </tr>
+                <tr>
+                  <td class="feature">Missing radiograph attachment</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Denied for insufficient documentation — resubmit with attachment</td>
+                  <td class="acs"><span class="check">&#10003;</span> Flagged before submission — attach radiograph, then submit clean</td>
+                </tr>
+                <tr>
+                  <td class="feature">Frequency limit exceeded</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Denial — payer rejects as non-covered due to frequency</td>
+                  <td class="acs"><span class="check">&#10003;</span> Caught against patient's verified benefit data before submission</td>
+                </tr>
+                <tr>
+                  <td class="feature">Payer-specific rule violation</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Denied — carrier-specific exception not known to billing staff</td>
+                  <td class="acs"><span class="check">&#10003;</span> Flagged with payer-specific rule citation and fix recommendation</td>
+                </tr>
+                <tr>
+                  <td class="feature">Prior auth required</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Denied for missing prior authorization — appeal lengthy</td>
+                  <td class="acs"><span class="check">&#10003;</span> Prior auth flag surfaced before claim is submitted</td>
+                </tr>
+                <tr>
+                  <td class="feature">Unbundling/bundling error</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> Denied or partially paid — billing pattern flagged by carrier</td>
+                  <td class="acs"><span class="check">&#10003;</span> Bundling rules checked against 489+ CDT code knowledge base</td>
+                </tr>
+                <tr>
+                  <td class="feature">Clean claim rate</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> 75–80% industry average</td>
+                  <td class="acs"><span class="check">&#10003;</span> 94.2% with EDiFi AI scrubbing</td>
+                </tr>
+                <tr>
+                  <td class="feature">Time to payment</td>
+                  <td class="legacy"><span class="cross">&#10005;</span> First submission + denial + rework + resubmit = 60–90 days</td>
+                  <td class="acs"><span class="check">&#10003;</span> Clean first submission = 14–21 day standard payment cycle</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ============================================================
+               SECTION 5 — EDiFi Delivery
+               ============================================================ -->
+          <h2 id="edifi">How EDiFi Delivers AI Claim Scrubbing</h2>
+
+          <p><a href="/pages/edifi.html" style="color:var(--acs-blue); text-decoration:underline; text-underline-offset:3px;">EDiFi</a>'s AI scrubbing engine is built on three foundational components that make it more precise than standard clearinghouse edits or basic billing software claim checks.</p>
+
+          <div class="acs-edifi-callout fade-in">
+            <div class="acs-edifi-callout-label">AI Claim Scrubbing — Powered by EDiFi</div>
+            <h3>EDiFi's 5-Layer Pre-Submission Scrub Engine</h3>
+            <p>EDiFi's AI scrubbing engine runs every claim through CDT code validation, payer-rule matching, documentation gap detection, denial probability scoring, and fix recommendation generation — automatically, before every submission, with no staff action required to initiate it.</p>
+            <div class="acs-edifi-modules">
+              <span class="acs-edifi-module">489+ CDT Code Knowledge Base</span>
+              <span class="acs-edifi-module">Payer-Specific Rule Sets</span>
+              <span class="acs-edifi-module">Denial Probability Scoring</span>
+              <span class="acs-edifi-module">Documentation Gap Detection</span>
+              <span class="acs-edifi-module">Fix Recommendations</span>
+              <span class="acs-edifi-module">Frequency Limit Checking</span>
+            </div>
+            <p>EDiFi integrates with Dentrix, Dentrix Ascend, Open Dental, Eaglesoft, and Curve Dental. Verified eligibility data from the pre-appointment verification layer feeds directly into the scrub engine — so frequency limits are checked against the patient's actual remaining benefits, not a generic rule. Claim scrubbing is one of six interconnected modules in the EDiFi <a href="dental-revenue-intelligence.html" style="color:var(--acs-blue); text-underline-offset:3px;">dental revenue intelligence</a> platform.</p>
+          </div>
+
+          <ul>
+            <li><strong>489+ CDT code knowledge base</strong> — Every CDT code in the current code set, with payer-specific rules, bundling requirements, documentation requirements, and frequency limitations mapped for every major dental carrier</li>
+            <li><strong>Payer-specific rule sets</strong> — Stored rule sets for Delta Dental, Cigna, Aetna, MetLife, Guardian, United Concordia, and additional regional carriers — updated as payer policy changes are detected</li>
+            <li><strong>Denial probability scoring</strong> — Historical denial patterns analyzed by CDT code, payer, provider, and procedure category — surfacing high-risk claims for review before they become denials</li>
+            <li><strong>Documentation gap detection</strong> — Procedure-specific documentation requirements checked automatically: radiograph attachments for restorations and prosthetics, charting for perio procedures, clinical narratives for exam codes</li>
+            <li><strong>Integrated with eligibility data</strong> — Frequency limits and benefit limitations are checked against the patient's actual verified benefit data, not generic CDT rules — catching frequency violations that depend on the patient's specific plan year history</li>
+          </ul>
+
+          <!-- ============================================================
+               FAQ SECTION
+               ============================================================ -->
+          <section class="acs-faq" aria-label="Frequently asked questions about AI claim scrubbing">
+            <h2 class="acs-faq-title" id="faq">Frequently Asked Questions</h2>
+
+            <div class="acs-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="acs-faq-q" itemprop="name">What is AI claim scrubbing?</div>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="acs-faq-a" itemprop="text">AI claim scrubbing is the automated process of reviewing every dental claim against payer-specific CDT code rules, documentation requirements, frequency limitations, and historical denial-risk patterns BEFORE the claim is submitted to the clearinghouse. Instead of discovering errors after a claim is denied, AI claim scrubbing catches violations, missing attachments, incorrect tooth numbers, unbundling issues, and payer-specific exceptions before the claim ever leaves the practice — so the first submission is a clean submission.</p>
+              </div>
+            </div>
+
+            <div class="acs-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="acs-faq-q" itemprop="name">What is the average dental claim denial rate?</div>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="acs-faq-a" itemprop="text">The average initial dental claim denial rate is 20 to 25 percent industry-wide. This means roughly one in five dental claims is denied on its first submission. The vast majority of these denials are preventable — they result from CDT code violations, missing documentation, incorrect tooth numbers, payer-specific rule exceptions, and eligibility errors that a pre-submission AI scrub would catch. Practices using AI-assisted claim scrubbing through EDiFi achieve a 94.2 percent clean claim rate, compared to the 75 to 80 percent industry average.</p>
+              </div>
+            </div>
+
+            <div class="acs-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="acs-faq-q" itemprop="name">How is AI claim scrubbing different from a clearinghouse edit?</div>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="acs-faq-a" itemprop="text">Clearinghouse edits are format and transaction-level checks — they verify that the claim is properly structured for electronic transmission. AI claim scrubbing is a clinical and payer-rule-level review — it checks the actual procedure codes, tooth numbers, documentation completeness, frequency limitations, and payer-specific denial patterns before the claim is even sent to the clearinghouse. A clearinghouse edit catches structural errors. AI claim scrubbing catches clinical and coverage errors that would survive a clearinghouse check and still be denied by the payer.</p>
+              </div>
+            </div>
+
+            <div class="acs-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="acs-faq-q" itemprop="name">What does AI claim scrubbing check on each dental claim?</div>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="acs-faq-a" itemprop="text">A complete AI claim scrubbing engine checks: CDT code validity and correct coding by procedure type, payer-specific rules for CDT code combinations that are routinely rejected, tooth number and surface accuracy for restorative and prosthetic procedures, frequency limitations against the patient's verified benefit data, documentation requirements including radiograph attachments, periodontal charting, and clinical narratives for codes that require them, prior authorization flags for procedures that require pre-approval from specific payers, billing provider and NPI accuracy, coordination of benefits flags when secondary insurance exists, and a denial probability score that surfaces the highest-risk claims for manual review before submission.</p>
+              </div>
+            </div>
+
+            <div class="acs-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <div class="acs-faq-q" itemprop="name">How does EDiFi's AI claim scrubbing engine work?</div>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p class="acs-faq-a" itemprop="text">EDiFi's AI scrubbing engine runs every claim through a five-layer review before submission: CDT code validation against a 489+ code knowledge base, payer-specific rule matching against stored rule sets for every major dental payer, documentation gap flagging for procedures that require attachments or narratives, denial probability scoring based on historical payer patterns, and fix recommendation generation that specifies exactly what needs to change on each claim. The scrub runs automatically when claims are prepared in the practice management system — no staff action required to initiate it. Claims that pass the scrub are submitted. Claims with flagged issues are held for review with specific fix instructions.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================================================
+               BOTTOM CTA
+               ============================================================ -->
+          <div class="acs-cta fade-in">
+            <h2>See AI Claim Scrubbing in Action</h2>
+            <p>Book a demo of EDiFi and see the 5-layer AI scrubbing engine running on real claims — with denial probability scores, fix recommendations, and payer-specific rule matches.</p>
+            <div class="acs-cta-actions">
+              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary btn-lg">Book a Live Demo</a>
+              <a href="edifi.html" class="btn btn-secondary btn-lg">Explore EDiFi Platform</a>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- ── STICKY SIDEBAR ── -->
+        <aside class="acs-toc" aria-label="Table of contents">
+          <div class="acs-toc-title">On This Page</div>
+          <nav class="acs-toc-list">
+            <a href="#why-it-exists" class="acs-toc-item active">Why Claims Get Denied</a>
+            <a href="#what-gets-checked" class="acs-toc-item">What Gets Checked</a>
+            <a href="#the-process" class="acs-toc-item">How the Process Works</a>
+            <a href="#comparison" class="acs-toc-item">With vs. Without Scrubbing</a>
+            <a href="#edifi" class="acs-toc-item">How EDiFi Delivers It</a>
+            <div class="acs-toc-divider"></div>
+            <a href="#faq" class="acs-toc-item">FAQ</a>
+          </nav>
+
+          <div class="acs-toc-cta">
+            <p>Stop submitting claims that come back denied. See the AI scrubbing engine running live.</p>
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center; font-size:14px; padding:10px 16px;">Book a Demo</a>
+          </div>
+
+          <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--acs-border);">
+            <div class="acs-toc-title" style="margin-bottom:14px;">Related Pages</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <a href="dental-revenue-intelligence.html" style="font-size:12.5px; color:var(--acs-blue); padding:8px 10px; border-radius:6px; background:rgba(75,168,240,0.05); border:1px solid rgba(75,168,240,0.12); display:block; line-height:1.4; transition:all 0.2s;">What is Dental Revenue Intelligence?</a>
+              <a href="revnet.html" style="font-size:12.5px; color:var(--acs-blue); padding:8px 10px; border-radius:6px; background:rgba(75,168,240,0.05); border:1px solid rgba(75,168,240,0.12); display:block; transition:all 0.2s;">What is RevNet?</a>
+              <a href="eligibility-intelligence.html" style="font-size:12.5px; color:var(--acs-blue); padding:8px 10px; border-radius:6px; background:rgba(75,168,240,0.05); border:1px solid rgba(75,168,240,0.12); display:block; line-height:1.4; transition:all 0.2s;">What is Eligibility Intelligence?</a>
+              <a href="denial-prevention.html" style="font-size:12.5px; color:var(--acs-blue); padding:8px 10px; border-radius:6px; background:rgba(75,168,240,0.05); border:1px solid rgba(75,168,240,0.12); display:block; line-height:1.4; transition:all 0.2s;">What is Denial Prevention?</a>
+              <a href="edifi.html" style="font-size:12.5px; color:var(--acs-blue); padding:8px 10px; border-radius:6px; background:rgba(75,168,240,0.05); border:1px solid rgba(75,168,240,0.12); display:block; transition:all 0.2s;">EDiFi Platform Overview</a>
+            </div>
+          </div>
+        </aside>
+
+      </div><!-- end .acs-layout -->
+    </div><!-- end .container -->
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
+          </a>
+          <p>The infrastructure leader in dental revenue intelligence.</p>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Platform</h5>
+          <ul class="footer-links">
+            <li><a href="platform.html">Overview</a></li>
+            <li><a href="edifi.html">EDiFi Software</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="resources/blog.html">Blog</a></li>
+            <li><a href="resources/podcast.html">Podcast</a></li>
+            <li><a href="resources/webinars.html">Webinars</a></li>
+            <li><a href="resources/news.html">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company/security.html">Security</a></li>
+            <li><a href="company/faq.html">FAQ</a></li>
+            <li><a href="investors.html">Investors</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Contact</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html#sales">Sales</a></li>
+            <li><a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank">Book a Demo</a></li>
+            <li><a href="contact.html#support">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="Elite Dental Force on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.facebook.com/elitedentalforce" aria-label="Elite Dental Force on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/elitedentalforce" aria-label="Elite Dental Force on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.youtube.com/@elitedentalforceteam" aria-label="Elite Dental Force on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://x.com/EliteDentalForc" aria-label="Elite Dental Force on X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script src="../js/main.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var fadeEls = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var fadeObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              fadeObs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+        fadeEls.forEach(function (el) { fadeObs.observe(el); });
+      } else {
+        fadeEls.forEach(function (el) { el.classList.add('visible'); });
+      }
+
+      var headings = document.querySelectorAll('.acs-article h2[id], .acs-faq[id]');
+      var tocItems = document.querySelectorAll('.acs-toc-item');
+
+      if (headings.length && tocItems.length && 'IntersectionObserver' in window) {
+        var tocObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.id;
+              tocItems.forEach(function (item) {
+                var href = item.getAttribute('href');
+                item.classList.toggle('active', href === '#' + id);
+              });
+            }
+          });
+        }, { rootMargin: '-15% 0px -75% 0px' });
+        headings.forEach(function (h) { tocObs.observe(h); });
+      }
+
+      tocItems.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            var target = document.getElementById(href.slice(1));
+            if (target) {
+              e.preventDefault();
+              var y = target.getBoundingClientRect().top + window.pageYOffset - 90;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }
+        });
+      });
+
+    })();
+  </script>
+  <script src="../js/booking-widget.js" defer></script>
+  <script src="../js/cookie-consent.js" defer></script>
+</body>
+</html>

@@ -23,6 +23,21 @@
   status = 301
 
 [[redirects]]
+  from = "/eligibility-intelligence"
+  to = "/pages/eligibility-intelligence.html"
+  status = 301
+
+[[redirects]]
+  from = "/ai-claim-scrubbing"
+  to = "/pages/ai-claim-scrubbing.html"
+  status = 301
+
+[[redirects]]
+  from = "/denial-prevention"
+  to = "/pages/denial-prevention.html"
+  status = 301
+
+[[redirects]]
   from = "/demo"
   to = "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
   status = 302
