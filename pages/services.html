@@ -764,6 +764,75 @@
       .m-pill { padding: 0.4375rem 0.875rem; }
       .seg-card, .pricing-card { padding: 1.75rem 1.5rem; }
     }
+
+    /* ================================================================
+       SERVICES PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .svc-hero { padding: 6rem 0 4rem; }
+      .svc-hero-h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
+      .svc-hero-sub { font-size: 1rem; }
+      .svc-hero-actions { flex-wrap: wrap; justify-content: center; }
+      .svc-btn-primary,
+      .svc-btn-outline { min-height: 48px; }
+
+      /* Section padding */
+      .svc-section { padding: 3rem 0; }
+      .svc-section-header { margin-bottom: 2.5rem; }
+
+      /* Segment / "Who We Serve" grid */
+      .seg-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+
+      /* Core services grid */
+      .svc-card-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Pricing grid */
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      /* CTA band */
+      .svc-cta-band { padding: 4rem 0; }
+      .svc-cta-band-inner { max-width: 100%; }
+
+      /* Metric pills: allow 2 per row */
+      .metric-pill-row { justify-content: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .svc-hero { padding: 5rem 0 3rem; }
+      .svc-btn-primary,
+      .svc-btn-outline { width: 100%; justify-content: center; }
+
+      /* Section */
+      .svc-section { padding: 2.5rem 0; }
+
+      /* Core services: single column */
+      .svc-card-grid { grid-template-columns: 1fr; }
+      .svc-card { padding: 1.5rem; }
+
+      /* Seg cards */
+      .seg-card { padding: 1.5rem; }
+
+      /* Pricing */
+      .pricing-card { padding: 1.5rem; }
+      .pricing-popular-badge { font-size: 0.55rem; padding: 4px 12px; }
+
+      /* CTA band buttons */
+      .svc-cta-btn-white,
+      .svc-cta-btn-outline-white { width: 100%; justify-content: center; min-height: 48px; }
+
+      /* Metric pills: stack cleanly */
+      .m-pill { flex: 1 1 auto; min-width: 140px; justify-content: center; }
+    }
   </style>
 </head>
 <body>

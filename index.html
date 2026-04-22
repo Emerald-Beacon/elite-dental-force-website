@@ -196,6 +196,51 @@
       .pia-grid { grid-template-columns: 1fr; gap: 48px; }
       .pia-cards { height: 460px; }
     }
+
+    /* ================================================================
+       HOMEPAGE — Responsive Fixes
+       ================================================================ */
+
+    /* Platform in Action: hide the absolute-positioned floating cards
+       on mobile and show the content without the broken overlay layout */
+    @media (max-width: 768px) {
+      .pia-grid { gap: 32px; }
+      .pia-cards { height: 400px; }
+      .pia-c1 { width: 180px; }
+      .pia-c2 { width: 260px; left: 10px; }
+      .pia-c3 { width: 180px; }
+      .pia-c4 { width: 180px; right: 0; }
+      .pia-content p { max-width: 100%; }
+      .pia-content h2 { font-size: clamp(1.75rem, 4vw, 2.4rem); }
+
+      /* Browser mockup: flatten perspective tilt on small screens */
+      .browser-mockup {
+        transform: none !important;
+        animation: none !important;
+      }
+
+      /* Metric bento: stack on mobile */
+      .metrics-bento {
+        grid-template-columns: 1fr !important;
+      }
+      .metric-card--wide { grid-column: span 1 !important; }
+    }
+
+    @media (max-width: 480px) {
+      .pia-section .btn-primary { width: 100%; justify-content: center; }
+      .pia-cards { height: 340px; }
+      .pia-c1 { width: 155px; top: 0; left: 0; }
+      .pia-c2 { width: 220px; top: 72px; left: 8px; }
+      .pia-c3 { display: none; }
+      .pia-c4 { width: 185px; bottom: 0; right: 0; }
+      .pia-content h2 { font-size: 1.75rem; }
+      .pia-content p { font-size: 0.9rem; }
+
+      /* Hero stat badges: reposition for small screens */
+      .hero-stat-badge { font-size: 0.75rem; padding: 8px 12px; }
+      .hero-stat-badge--1 { left: 0; }
+      .hero-stat-badge--2 { right: 0; }
+    }
   </style>
 
   <!-- Schema: Organization -->

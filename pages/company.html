@@ -564,6 +564,71 @@
       .photo-gallery { grid-template-columns: repeat(2, 1fr); }
       .photo-gallery-item.featured { grid-column: span 2; grid-row: span 1; }
     }
+
+    /* ================================================================
+       COMPANY PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .co-hero { padding: 120px 0 72px; }
+      .co-hero-h1 { font-size: clamp(2rem, 6vw, 2.8rem); }
+      .co-hero-sub { font-size: 1rem; margin-bottom: 40px; }
+
+      /* Founder card: already collapses at 1100px, add spacing fix */
+      .co-founder-card { border-radius: 18px; }
+      .co-founder-photo-col { height: 320px; }
+      .co-founder-quote { font-size: 1rem; }
+
+      /* Bento: already collapses at 1100px, add padding fix */
+      .co-bento-mission { padding: 36px 28px; }
+
+      /* Transformation section */
+      .transformation-section { gap: 36px; }
+
+      /* Partners scroll: tighten gaps */
+      .partners-logos { gap: 28px; }
+      .partner-logo-wrap { width: 120px; height: 48px; }
+      .partner-logo-wrap.logo-lg { width: 200px; height: 80px; }
+
+      /* Section header */
+      .section-header { margin-bottom: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .co-hero { padding: 100px 0 56px; }
+      .co-hero-h1 { font-size: clamp(1.875rem, 7vw, 2.4rem); letter-spacing: -0.02em; }
+      .co-hero-kicker { font-size: 10px; padding: 5px 14px; }
+      .co-stat-strip { grid-template-columns: 1fr 1fr; }
+      .co-stat { padding: 16px 16px; }
+      .co-stat-val { font-size: 1.4rem; }
+
+      /* Founder */
+      .co-founder-photo-col { height: 240px; }
+      .co-founder-content-col { padding: 24px 20px; }
+      .co-founder-name { font-size: 1.5rem; }
+      .co-founder-quote { font-size: 0.95rem; }
+      .co-founder-bio { font-size: 0.85rem; }
+
+      /* Bento */
+      .co-bento-mission { padding: 28px 20px; }
+      .co-bento-val { padding: 24px 20px; }
+
+      /* Team grid: single column on very small */
+      .team-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+
+      /* Advisors: 2 columns */
+      .advisors-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .advisor-card-image { width: 80px; height: 80px; }
+
+      /* Photo gallery */
+      .photo-gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+      /* Partners scroll */
+      .partner-logo-wrap { width: 100px; height: 40px; }
+      .partner-logo-wrap.logo-lg { width: 160px; height: 64px; }
+    }
   </style>
 </head>
 <body>

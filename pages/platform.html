@@ -1366,6 +1366,83 @@
       transform: translateY(-2px);
     }
 
+    /* ================================================================
+       PLATFORM PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .plt-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .plt-hero-content { margin-bottom: 2.5rem; }
+      .plt-hero-actions { flex-wrap: wrap; justify-content: center; }
+      .plt-hero-actions .btn { min-height: 48px; }
+
+      /* Pipeline: already handled by existing rule at 1100px — add tighter fix */
+      .plt-pipeline { flex-direction: column; gap: 0.75rem; }
+      .plt-stage { min-width: 100%; flex: none; }
+      .plt-connector { display: none; }
+
+      /* Stats bar */
+      .plt-hero-stats { gap: 1.5rem; padding-top: 1.5rem; }
+      .ph-val { font-size: 1.6rem; }
+
+      /* Problem grid */
+      .problem-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* Architecture bento: already collapses at 768px via existing rule */
+
+      /* Role grid: 2-col */
+      .role-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+      /* Outcomes grid */
+      .outcomes-grid { grid-template-columns: 1fr 1fr !important; }
+      .oc--featured { grid-row: span 1; }
+
+      /* PMS logo bar */
+      .pms-logo-bar { gap: 1.5rem; }
+      .pms-logo-bar img { height: 36px; }
+
+      /* Security badge grid */
+      .sec-badge-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Metric pills */
+      .metric-pill-row { gap: 0.625rem; }
+      .m-pill { padding: 0.4375rem 0.875rem; }
+
+      /* Split sections: ensure visual below copy */
+      .split-section { gap: 2.5rem !important; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .plt-hero { padding: 5rem 0 2.5rem; }
+      .plt-hero-content h1 { font-size: 1.75rem; }
+      .plt-hero-badge { font-size: 0.68rem; }
+
+      /* Problem grid: single column */
+      .problem-grid { grid-template-columns: 1fr !important; }
+
+      /* Role grid: single column */
+      .role-grid { grid-template-columns: 1fr !important; }
+
+      /* Outcomes: single column */
+      .outcomes-grid { grid-template-columns: 1fr !important; }
+      .oc-val { font-size: 2.25rem; }
+
+      /* Arch bento */
+      .arch-card { padding: 1.75rem; }
+
+      /* Section padding */
+      .section { padding: 2.5rem 0 !important; }
+
+      /* Hero stats: 2 columns */
+      .plt-hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+      /* PMS logos */
+      .pms-logo-bar { gap: 1rem; }
+      .pms-logo-bar img { height: 28px; }
+    }
+
   </style>
 </head>
 <body>

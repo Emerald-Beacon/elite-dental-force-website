@@ -469,6 +469,148 @@
       .inv-competitive-strip { gap: 20px; }
       .inv-comp-callout { margin-left: 0; }
     }
+
+    /* ================================================================
+       INVESTORS PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .inv-hero { min-height: auto; padding: 100px 0 60px; }
+      .inv-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+      .inv-hero .lead { font-size: 1rem; max-width: 100%; }
+      .inv-hero-actions { flex-wrap: wrap; }
+      .btn-gold,
+      .btn-outline-white { min-height: 48px; padding: 13px 22px; }
+
+      /* Hero stat strip: 2 columns */
+      .inv-hero-stats { gap: 0; flex-wrap: wrap; margin-top: 40px; padding-top: 28px; }
+      .inv-hero-stat {
+        flex: 1 1 50%;
+        min-width: 0;
+        padding: 0 16px 20px 0;
+        border-right: none;
+      }
+      .inv-hero-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .inv-hero-stat:nth-child(1),
+      .inv-hero-stat:nth-child(2) { margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; }
+      .inv-hero-stat-num { font-size: 2rem; }
+
+      /* Section padding */
+      .inv-section { padding: 64px 0; }
+      .inv-section-header { margin-bottom: 36px; }
+      .inv-h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+
+      /* Problem grid */
+      .inv-problem-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Market grid: single column */
+      .inv-market-grid { grid-template-columns: 1fr; }
+      .inv-market-hero { grid-row: auto; }
+
+      /* Why now: single column */
+      .inv-why-grid { grid-template-columns: 1fr; }
+
+      /* Traction: 2x2 */
+      .inv-traction-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Validation bar */
+      .inv-validation-bar { padding: 24px 20px; gap: 24px; justify-content: center; }
+
+      /* Business model */
+      .inv-model-grid { grid-template-columns: 1fr; }
+      .inv-model-card { padding: 28px; }
+      .inv-model-price { font-size: 2.2rem; }
+
+      /* Unit economics */
+      .inv-unit-grid { grid-template-columns: 1fr 1fr; }
+
+      /* The Ask */
+      .inv-ask-grid { grid-template-columns: 1fr; }
+      .inv-ask-hero { padding: 32px; }
+      .inv-ask-amount { font-size: 3rem; }
+
+      /* Team */
+      .inv-team-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Advisors */
+      .inv-advisors-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Partners */
+      .inv-partners-grid { grid-template-columns: 1fr; }
+
+      /* CTA form */
+      .inv-form-wrap { padding: 32px 24px; }
+      .inv-form-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Projections table: allow scroll */
+      .inv-proj-wrap { overflow-x: auto; }
+      .inv-proj-table { min-width: 480px; }
+
+      /* Competitive strip */
+      .inv-competitive-strip { padding: 24px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .inv-hero { padding: 90px 0 50px; }
+      .inv-hero h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); }
+      .inv-hero-badge { font-size: 10px; padding: 5px 12px; }
+      .btn-gold,
+      .btn-outline-white { width: 100%; justify-content: center; text-align: center; }
+
+      /* Hero stats: 2-col */
+      .inv-hero-stat { flex: 1 1 100%; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 16px 0; }
+      .inv-hero-stat:last-child { border-bottom: none; }
+
+      /* Problem: single column */
+      .inv-problem-grid { grid-template-columns: 1fr; }
+      .inv-problem-card { padding: 24px 20px; }
+
+      /* Traction: 2-col */
+      .inv-traction-grid { grid-template-columns: 1fr 1fr; }
+      .inv-traction-card { padding: 20px 16px; }
+      .inv-traction-num { font-size: 1.8rem; }
+
+      /* Form inputs: prevent iOS zoom */
+      .inv-form-input,
+      .inv-form-select,
+      .inv-form-textarea { font-size: 16px; min-height: 48px; padding: 12px 14px; }
+      .inv-form-textarea { min-height: 90px; }
+      .inv-form-wrap { padding: 24px 16px; }
+      .inv-form-grid { grid-template-columns: 1fr; gap: 14px; }
+      .inv-form-group.full { grid-column: 1; }
+
+      /* Section */
+      .inv-section { padding: 48px 0; }
+
+      /* Ask */
+      .inv-ask-amount { font-size: 2.4rem; }
+      .inv-ask-hero { padding: 24px 20px; }
+
+      /* Team — override both the class rule and the inline style */
+      .inv-team-grid,
+      .inv-team-grid[style] { grid-template-columns: 1fr !important; }
+      .inv-team-card { padding: 24px 20px; }
+    }
+
+    /* Inline-styled projection scenario grid and inline team grid override */
+    @media (max-width: 768px) {
+      /* The 3-col inline scenario grid inside the projections section */
+      div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      /* The 4-col inline team grid */
+      .inv-team-grid[style*="repeat(4"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .inv-team-grid[style*="repeat(4"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 <body>

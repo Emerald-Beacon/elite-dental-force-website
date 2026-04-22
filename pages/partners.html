@@ -599,6 +599,82 @@
       .ptrs-hero-ctas { flex-direction: column; align-items: center; }
       .ptrs-form-row { grid-template-columns: 1fr; }
     }
+
+    /* ================================================================
+       PARTNERS PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .ptrs-hero { padding: 120px 0 72px; }
+      .ptrs-h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+      .ptrs-hero-sub { font-size: 1rem; }
+      .ptrs-kicker { font-size: 10px; padding: 5px 14px; }
+      .ptrs-hero-ctas { gap: 10px; }
+      .ptrs-btn-ghost { min-height: 48px; padding: 12px 22px; }
+      .btn.btn-primary { min-height: 48px; }
+
+      /* Trust pills: wrap freely */
+      .ptrs-trust-pills { gap: 8px; }
+      .ptrs-pill { font-size: 11px; padding: 6px 12px; }
+
+      /* Stats: already collapses to 1 col at 768px — keep */
+
+      /* Partnership cards: already collapses to 1 col at 768px */
+
+      /* Benefits: already collapses to 1 col at 768px */
+
+      /* Partner card */
+      .ptrs-partner-card { max-width: 100%; }
+
+      /* Form card */
+      .ptrs-form-card { padding: 2rem 1.5rem; }
+      .ptrs-form { gap: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .ptrs-hero { padding: 100px 0 60px; }
+      .ptrs-h1 { font-size: clamp(1.875rem, 7vw, 2.6rem); letter-spacing: -0.03em; }
+      .ptrs-hero-sub { font-size: 0.95rem; }
+      .ptrs-kicker { font-size: 9px; }
+
+      /* Hero CTAs: stack */
+      .ptrs-hero-ctas { flex-direction: column; align-items: stretch; gap: 10px; }
+      .ptrs-btn-ghost,
+      .btn.btn-primary { width: 100%; justify-content: center; text-align: center; min-height: 48px; }
+
+      /* Partnership type cards */
+      .ptrs-card { padding: 1.5rem; }
+      .ptrs-card-icon { width: 44px; height: 44px; border-radius: 12px; }
+      .ptrs-card h3 { font-size: 1.1rem; }
+
+      /* Benefits items */
+      .ptrs-benefit-icon { width: 40px; height: 40px; }
+
+      /* Stat icons */
+      .ptrs-stat-icon { width: 40px; height: 40px; }
+      .ptrs-stat-value { font-size: 1.5rem; }
+
+      /* Form card */
+      .ptrs-form-card { padding: 1.5rem 1.125rem; border-radius: 16px; }
+
+      /* Form rows: stack */
+      .ptrs-form-row { grid-template-columns: 1fr; gap: 14px; }
+
+      /* Form fields: prevent iOS auto-zoom */
+      .ptrs-field input,
+      .ptrs-field select,
+      .ptrs-field textarea {
+        font-size: 16px;
+        min-height: 48px;
+        padding: 13px 14px;
+      }
+      .ptrs-field textarea { min-height: 100px; }
+
+      /* Partner card */
+      .ptrs-partner-card { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body class="ptrs-page">

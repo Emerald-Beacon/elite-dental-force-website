@@ -527,6 +527,104 @@
       background: var(--edifi-green);
       box-shadow: 0 0 5px rgba(39,201,63,0.6);
     }
+
+    /* ================================================================
+       EDIFI PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .ep-hero { padding: 72px 0 0; }
+      .ep-hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); max-width: 100%; }
+      .ep-hero-sub { font-size: 16px; }
+      .ep-hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+      .ep-hero-actions .btn { min-height: 48px; flex: 1 1 160px; text-align: center; }
+      .ep-hero-screen { padding: 0 12px; }
+
+      /* Stats bar */
+      .ep-stats-grid { grid-template-columns: 1fr 1fr; }
+      .ep-stat:nth-child(2) { border-right: none; }
+      .ep-stat:nth-child(3) { border-top: 1px solid var(--edifi-border); }
+      .ep-stat:nth-child(4) { border-top: 1px solid var(--edifi-border); }
+      .ep-stat-value { font-size: 1.75rem; }
+
+      /* Section padding */
+      .ep-section { padding: 60px 0; }
+      .ep-section-header { margin-bottom: 36px; }
+      .ep-section-header h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+      .ep-section-header p { font-size: 15px; }
+
+      /* Tabs: allow scroll, collapse tab content to single column */
+      .ep-tab-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .ep-tab-btn { min-width: 120px; padding: 14px 12px; font-size: 12px; }
+      .ep-tab-content { padding: 20px; gap: 24px; }
+      .ep-tab-content.active { grid-template-columns: 1fr; }
+
+      /* Sidebar layout: nav becomes horizontal row (already handled at 900px) */
+      .ep-sidebar-layout { grid-template-columns: 1fr; gap: 28px; }
+      .ep-sidebar-nav {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .ep-sidebar-link { font-size: 12px; padding: 8px 12px; }
+
+      /* Feature panels */
+      .ep-feature-panel { padding: 32px 0; }
+      .ep-feature-panel h3 { font-size: 1.5rem; }
+      .ep-feature-panel > p { font-size: 14px; }
+
+      /* Detail grid */
+      .ep-detail-grid { grid-template-columns: 1fr; }
+
+      /* Spec grid */
+      .ep-spec-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Comparison table: allow horizontal scroll */
+      .ep-compare-table { font-size: 12px; }
+      .ep-compare-table th,
+      .ep-compare-table td { padding: 12px 14px; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .ep-hero { padding: 60px 0 0; }
+      .ep-hero h1 { font-size: clamp(1.75rem, 5vw, 2.4rem); }
+      .ep-hero-sub { font-size: 14px; }
+      .ep-hero-actions .btn { width: 100%; justify-content: center; }
+      .ep-hero-badge { font-size: 10px; padding: 5px 12px; }
+
+      /* Stats: single column */
+      .ep-stats-grid { grid-template-columns: 1fr 1fr; }
+      .ep-stat { padding: 12px 16px; }
+      .ep-stat-value { font-size: 1.5rem; }
+
+      /* Section */
+      .ep-section { padding: 48px 0; }
+
+      /* Tabs content */
+      .ep-tab-content { padding: 16px; }
+      .ep-tab-btn { min-width: 100px; padding: 12px 10px; font-size: 11px; }
+
+      /* Spec grid */
+      .ep-spec-grid { grid-template-columns: 1fr; }
+
+      /* Feature panel */
+      .ep-feature-panel h3 { font-size: 1.3rem; }
+
+      /* Comparison table wrapper */
+      .ep-tabs { overflow-x: auto; }
+
+      /* Integration pills */
+      .ep-integration-row { gap: 8px; }
+      .ep-integration-pill { font-size: 12px; padding: 6px 14px; }
+    }
   </style>
 
   <!-- Schema: SoftwareApplication (EDiFi product) -->

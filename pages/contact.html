@@ -377,6 +377,93 @@
       .ct-strip-item { border-right: none; border-bottom: 1px solid rgba(75,168,240,0.08); padding: 24px 16px; }
       .ct-strip-item:last-child { border-bottom: none; }
     }
+
+    /* ================================================================
+       CONTACT PAGE — Responsive Additions
+       ================================================================ */
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .ct-hero { padding: 140px 0 72px; }
+      .ct-h1 { font-size: clamp(2.4rem, 7vw, 3.5rem); max-width: 100%; }
+      .ct-sub { font-size: 1rem; max-width: 100%; }
+      .ct-kicker { font-size: 10px; padding: 5px 14px; }
+
+      /* Layout: already collapses to 1 column at 1024px */
+
+      /* Form card */
+      .ct-form-card { padding: 32px 24px; }
+      .ct-form-title { font-size: 1.2rem; }
+
+      /* Info panel */
+      .ct-info-card { padding: 24px 20px; }
+
+      /* Schedule button */
+      .ct-schedule-btn { padding: 14px 16px; }
+
+      /* Strip: already collapses at 640px */
+
+      /* Form inputs: ensure full-width touch targets */
+      .ct-field input,
+      .ct-field select,
+      .ct-field textarea {
+        padding: 14px 14px;
+        font-size: 16px; /* prevents iOS zoom on focus */
+        min-height: 48px;
+      }
+      .ct-field textarea { min-height: 110px; }
+
+      /* Submit button */
+      .ct-submit { min-height: 52px; font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero */
+      .ct-hero { padding: 110px 0 56px; }
+      .ct-h1 { font-size: clamp(2rem, 8vw, 2.8rem); letter-spacing: -0.03em; }
+      .ct-sub { font-size: 0.95rem; }
+
+      /* Form card: tighten padding on small screens */
+      .ct-form-card { padding: 24px 16px; border-radius: 18px; }
+      .ct-form-title { font-size: 1.1rem; }
+      .ct-form-sub { font-size: 0.82rem; margin-bottom: 24px; }
+      .ct-form { gap: 14px; }
+
+      /* All form rows stack */
+      .ct-form-row { grid-template-columns: 1fr; gap: 14px; }
+
+      /* Fields */
+      .ct-field label { font-size: 0.72rem; }
+      .ct-field input,
+      .ct-field select,
+      .ct-field textarea {
+        font-size: 16px; /* prevent iOS auto-zoom */
+        padding: 13px 14px;
+        min-height: 48px;
+      }
+
+      /* Submit */
+      .ct-submit { padding: 14px 20px; font-size: 0.95rem; min-height: 52px; }
+      .ct-form-note { font-size: 0.7rem; }
+
+      /* Info card */
+      .ct-info-card { padding: 20px 16px; }
+      .ct-contact-row { gap: 10px; padding: 12px 0; }
+      .ct-contact-icon { width: 36px; height: 36px; }
+
+      /* Schedule button */
+      .ct-schedule-btn { padding: 12px 14px; gap: 10px; }
+      .ct-schedule-label { font-size: 0.84rem; }
+      .ct-schedule-sub { font-size: 0.68rem; }
+
+      /* Follow us links: wrap */
+      .ct-info-card div[style*="display: flex"] { flex-wrap: wrap; }
+
+      /* Strip items */
+      .ct-strip-item { padding: 20px 16px; }
+      .ct-strip-icon { width: 38px; height: 38px; }
+      .ct-strip-label { font-size: 0.88rem; }
+    }
   </style>
 </head>
 <body>
