@@ -1,213 +1,816 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PMS vendor lock in is quietly killing dental AI adoption. Learn your rights under the 21st Century Cures Act and how to reclaim control of your practice data.">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Elite Dental Force">
-  <meta property="og:title" content="How Data Blocks AI in Dental Billing">
-  <meta property="og:description" content="PMS vendor lock in is quietly killing dental AI adoption. Learn your rights under the 21st Century Cures Act and how to reclaim control of your practice data.">
-  <meta property="og:image" content="https://www.elitedentalforce.com/images/blog/og-data-blocks.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/blog/og-data-blocks.png">
-  <title>How Data Blocks AI in Dental Billing | Elite Dental Force</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/styles.css">
-  <link rel="icon" type="image/png" href="../../../images/favicon.png">
-  <link rel="stylesheet" href="article.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../../../index.html" class="logo" aria-label="Elite Dental Force Home">
-          <img src="../../../images/Grayscale Transparent.png" alt="Elite Dental Force">
-        </a>
-        <nav class="nav" aria-label="Main navigation">
-          <ul class="nav-list">
-            <li class="has-dropdown"><a href="../../platform.html" class="nav-link">Platform</a><ul class="dropdown"><li><a href="../../platform.html">Platform Overview</a></li><li><a href="../../edifi.html">EDiFi Software</a></li></ul></li>
-            <li class="has-dropdown"><a href="../../services.html" class="nav-link">Solutions</a><ul class="dropdown"><li><a href="../../services.html">Services</a></li><li><a href="../../partners.html">Partners</a></li></ul></li>
-            <li class="has-dropdown"><a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a><ul class="dropdown"><li><a href="../blog.html">Blog</a></li><li><a href="../podcast.html">Podcast</a></li><li><a href="../webinars.html">Webinars</a></li><li><a href="../news.html">News</a></li></ul></li>
-            <li class="has-dropdown"><a href="../../company.html" class="nav-link">Company</a><ul class="dropdown"><li><a href="../../company.html">About Us</a></li><li><a href="../../company/security.html">Security</a></li><li><a href="../../company/faq.html">FAQ</a></li><li><a href="../../investors.html">Investors</a></li></ul></li>
-          </ul>
-          <div class="nav-cta"><a href="../../contact.html#sales" class="btn btn-primary">Book a Demo</a></div>
-        </nav>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="article-hero">
-      <div class="article-hero-visual" style="background-image:url('../../../images/blog/data-blocks.jpg');">
-        <div class="article-hero-glow article-hero-glow--billing"></div>
-        <div class="article-hero-illustration">
-          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-            <!-- Database cylinder -->
-            <ellipse cx="100" cy="60" rx="52" ry="16" stroke="rgba(255,215,0,0.35)" stroke-width="1.5"/>
-            <line x1="48" y1="60" x2="48" y2="140" stroke="rgba(255,215,0,0.25)" stroke-width="1.5"/>
-            <line x1="152" y1="60" x2="152" y2="140" stroke="rgba(255,215,0,0.25)" stroke-width="1.5"/>
-            <ellipse cx="100" cy="140" rx="52" ry="16" stroke="rgba(255,215,0,0.35)" stroke-width="1.5"/>
-            <ellipse cx="100" cy="100" rx="52" ry="16" stroke="rgba(255,215,0,0.18)" stroke-width="1" stroke-dasharray="4 4"/>
-            <!-- Lock -->
-            <rect x="84" y="90" width="32" height="26" rx="5" fill="rgba(255,215,0,0.15)" stroke="rgba(255,215,0,0.5)" stroke-width="1.5"/>
-            <path d="M88 90 V82 a12 12 0 0 1 24 0 V90" stroke="rgba(255,215,0,0.5)" stroke-width="1.5" fill="none"/>
-            <circle cx="100" cy="102" r="4" fill="rgba(255,215,0,0.6)"/>
-            <line x1="100" y1="106" x2="100" y2="110" stroke="rgba(255,215,0,0.5)" stroke-width="1.5"/>
-          </svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PMS vendor lock in is quietly killing dental AI adoption. Learn your rights under the 21st Century Cures Act and how to reclaim control of your practice data."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta property="og:title" content="How Data Blocks AI in Dental Billing" />
+    <meta
+      property="og:description"
+      content="PMS vendor lock in is quietly killing dental AI adoption. Learn your rights under the 21st Century Cures Act and how to reclaim control of your practice data."
+    />
+    <meta
+      property="og:image"
+      content="https://www.elitedentalforce.com/images/blog/og-data-blocks.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:url"
+      content="https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://www.elitedentalforce.com/images/blog/og-data-blocks.png"
+    />
+    <title>How Data Blocks AI in Dental Billing | Elite Dental Force</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="icon" type="image/png" href="../../../images/favicon.png" />
+    <link rel="stylesheet" href="article.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Data Blocks AI in Dental Billing",
+        "description": "PMS vendors are creating gaps in AI readiness that most practice owners don't recognize until it's too late. Here's how data access barriers block AI in dental billing and what the law says about it.",
+        "image": "https://www.elitedentalforce.com/images/blog/og-data-blocks.png",
+        "datePublished": "2025-10-21",
+        "dateModified": "2025-10-21",
+        "author": {
+          "@type": "Person",
+          "name": "Alvin Uta'i",
+          "jobTitle": "Founder & CEO",
+          "worksFor": { "@type": "Organization", "name": "Elite Dental Force" }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Elite Dental Force",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.elitedentalforce.com/images/Grayscale Transparent.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.elitedentalforce.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.elitedentalforce.com/pages/resources/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How Data Blocks AI in Dental Billing",
+            "item": "https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alvin Uta'i",
+        "jobTitle": "Co-Founder & CEO",
+        "worksFor": { "@type": "Organization", "name": "Elite Dental Force" },
+        "url": "https://www.elitedentalforce.com",
+        "sameAs": ["https://www.linkedin.com/in/alvinutai"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is information blocking in dental billing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Information blocking in dental billing occurs when a practice management software vendor restricts, delays, or adds excessive costs to data access or portability in ways that prevent the practice from using their own patient and billing data. This includes high API fees, proprietary export formats, slow data transfer processes, and contractual restrictions on connecting third-party tools. The 21st Century Cures Act makes information blocking illegal for vendors handling electronic health information."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the 21st Century Cures Act mean for dental practices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 21st Century Cures Act gives dental practices the legal right to access and move their patient data without excessive fees or barriers from their PMS vendor. It prohibits information blocking — practices that encounter vendors charging unreasonable API fees or refusing data exports can file complaints with the Department of Health and Human Services. Enforcement escalated in 2025, making compliance mandatory for vendors handling electronic health information."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a dental PMS vendor legally prevent access to patient billing data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — the 21st Century Cures Act prohibits dental PMS vendors from imposing unreasonable barriers to accessing or transferring electronic health information, which includes billing records, insurance data, and clinical notes. Practices that face data access restrictions should document the obstruction and consult an attorney or file a complaint with ONC (Office of the National Coordinator for Health Information Technology), which investigates information blocking violations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does limited PMS data access affect dental AI billing tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI billing tools require access to procedure codes, patient insurance records, prior claim history, and fee schedule data to generate accurate claim recommendations and eligibility results. When a PMS vendor restricts API access or charges high integration fees, AI tools either cannot connect at all or operate on incomplete data — significantly reducing their accuracy and value. Dental practices locked into restrictive PMS contracts are at a structural disadvantage when adopting AI-powered billing solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should a dental practice do if their PMS restricts data access?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "First, review your PMS contract for data portability clauses — many contracts allow data exports upon request or at contract termination. If the vendor is charging unreasonable fees or actively blocking integration, document the specific barrier and consult your attorney about your rights under the 21st Century Cures Act. Long-term, evaluate whether your PMS vendor supports open API access, as this will determine how effectively you can adopt AI tools over the next five years."
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".article-lead"]
+        },
+        "url": "https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a
+            href="../../../index.html"
+            class="logo"
+            aria-label="Elite Dental Force Home"
+          >
+            <img src="../../../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="../../platform.html" class="nav-link">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="../../platform.html">Platform Overview</a></li><li><a href="../../eligibility-standalone.html">Eligibility Standalone</a></li>
+                  <li><a href="../../edifi.html">EDiFi Software</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="../../services.html" class="nav-link">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="../../services.html">Services</a></li>
+                  <li><a href="../../partners.html">Partners</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="../blog.html">Blog</a></li>
+                  <li><a href="../podcast.html">Podcast</a></li>
+                  <li><a href="../webinars.html">Webinars</a></li>
+                  <li><a href="../news.html">News</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="../../company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="../../company.html">About Us</a></li>
+                  <li><a href="../../company/security.html">Security</a></li>
+                  <li><a href="../../company/faq.html">FAQ</a></li>
+                  <li><a href="../../investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="../../contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button
+            class="mobile-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-      <div class="container">
-        <div class="article-hero-content">
-          <a href="../blog.html" class="article-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Back to Blog</a>
-          <div class="article-meta-top">
-            <span class="cat-badge cat-badge--billing">Dental Billing</span>
-            <span class="article-read-time"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 min read</span>
-            <span class="article-date">October 21, 2025</span>
+    </header>
+
+    <main>
+      <div class="article-hero">
+        <div
+          class="article-hero-visual"
+          style="
+            background-image: url(&quot;../../../images/blog/data-blocks.jpg&quot;);
+          "
+        >
+          <div class="article-hero-glow article-hero-glow--billing"></div>
+          <div class="article-hero-illustration">
+            <svg
+              width="200"
+              height="200"
+              viewBox="0 0 200 200"
+              fill="none"
+              aria-hidden="true"
+            >
+              <!-- Database cylinder -->
+              <ellipse
+                cx="100"
+                cy="60"
+                rx="52"
+                ry="16"
+                stroke="rgba(255,215,0,0.35)"
+                stroke-width="1.5"
+              />
+              <line
+                x1="48"
+                y1="60"
+                x2="48"
+                y2="140"
+                stroke="rgba(255,215,0,0.25)"
+                stroke-width="1.5"
+              />
+              <line
+                x1="152"
+                y1="60"
+                x2="152"
+                y2="140"
+                stroke="rgba(255,215,0,0.25)"
+                stroke-width="1.5"
+              />
+              <ellipse
+                cx="100"
+                cy="140"
+                rx="52"
+                ry="16"
+                stroke="rgba(255,215,0,0.35)"
+                stroke-width="1.5"
+              />
+              <ellipse
+                cx="100"
+                cy="100"
+                rx="52"
+                ry="16"
+                stroke="rgba(255,215,0,0.18)"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <!-- Lock -->
+              <rect
+                x="84"
+                y="90"
+                width="32"
+                height="26"
+                rx="5"
+                fill="rgba(255,215,0,0.15)"
+                stroke="rgba(255,215,0,0.5)"
+                stroke-width="1.5"
+              />
+              <path
+                d="M88 90 V82 a12 12 0 0 1 24 0 V90"
+                stroke="rgba(255,215,0,0.5)"
+                stroke-width="1.5"
+                fill="none"
+              />
+              <circle cx="100" cy="102" r="4" fill="rgba(255,215,0,0.6)" />
+              <line
+                x1="100"
+                y1="106"
+                x2="100"
+                y2="110"
+                stroke="rgba(255,215,0,0.5)"
+                stroke-width="1.5"
+              />
+            </svg>
           </div>
-          <h1>How Data Blocks AI in Dental Billing</h1>
-          <div class="article-author-bar">
-            <div class="article-author-avatar">AU</div>
-            <div>
-              <div class="article-author-name">Alvin Uta'i</div>
-              <div class="article-author-title">Founder &amp; CEO, Elite Dental Force</div>
+        </div>
+        <div class="container">
+          <div class="article-hero-content">
+            <a href="../blog.html" class="article-back"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M19 12H5M12 5l-7 7 7 7" /></svg
+              >Back to Blog</a
+            >
+            <div class="article-meta-top">
+              <span class="cat-badge cat-badge--billing">Dental Billing</span>
+              <span class="article-read-time"
+                ><svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" /></svg
+                >5 min read</span
+              >
+              <span class="article-date">October 21, 2025</span>
+            </div>
+            <h1>How Data Blocks AI in Dental Billing</h1>
+            <div class="article-author-bar">
+              <div class="article-author-avatar">AU</div>
+              <div>
+                <div class="article-author-name">Alvin Uta'i</div>
+                <div class="article-author-title">
+                  Founder &amp; CEO, Elite Dental Force
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="article-body-wrap">
+      <div class="article-body-wrap">
+        <div class="container">
+          <div class="article-layout">
+            <article class="article-content">
+              <p class="article-lead">
+                The dental industry is transforming rapidly. AI advances
+                diagnostic precision, digital manufacturing streamlines clinical
+                work, and teledentistry expands care access. But a significant
+                obstacle exists: PMS vendors are creating gaps in AI readiness,
+                and most practice owners don't realize it until it's too late.
+              </p>
+
+              <p>
+                Despite industry enthusiasm for digital transformation, practice
+                leaders discover their own technology tools are obstructing
+                progress. Rather than empowering teams and modernizing care,
+                many systems restrict access to vital data, turning technical
+                choices into long term strategic barriers.
+              </p>
+
+              <h2>Know Your Rights: The 21st Century Cures Act</h2>
+
+              <p>
+                Dentists often feel powerless when vendor contracts prevent data
+                access or transfer. Federal law now provides recourse. The 21st
+                Century Cures Act addresses "interoperability" and "information
+                blocking," meaning anything preventing electronic health
+                information access or sharing.
+              </p>
+
+              <p>
+                The legislation confirms practice owners have rights to access
+                and move patient data without excessive fees or barriers. PMS
+                vendors using high API costs, slow export processes, or
+                proprietary formats face legal challenges. With 2025 enforcement
+                escalation, the Department of Health and Human Services conducts
+                audits and issues substantial penalties. Cures Act compliance is
+                now mandatory.
+              </p>
+
+              <div class="article-callout article-callout--billing">
+                <div class="article-callout-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                </div>
+                <p>
+                  <strong>Important:</strong> If your PMS vendor charges
+                  excessive fees for data exports or restricts access to your
+                  own patient records, they may be in violation of federal law.
+                  Document every instance and consult legal counsel if needed.
+                </p>
+              </div>
+
+              <h2>The Hidden Toll of Vendor Lock In</h2>
+
+              <p>
+                Inability to access your own data delays technology adoption and
+                increases both financial and clinical costs. The "data dilemma"
+                manifests through higher expenses and less effective care.
+                Practices often pay twice: for storage and again for data
+                exports or transfers.
+              </p>
+
+              <p>
+                Lack of standardized formats frustrates integration between
+                tools and isolates patient histories in silos. These
+                fragmentation issues prevent AI powered analytics benefits,
+                derail new care technology deployment, and force recurring costs
+                just to maintain data access. Staff time lost to manual
+                processes is significant, and hours meant for care get spent
+                fighting spreadsheets.
+              </p>
+
+              <h2>Why Data Control Is Central to Dentistry's Biggest Shifts</h2>
+
+              <p>
+                Ownership and control of operational data matters beyond
+                technology, it's foundational for adapting to dentistry's next
+                era. Without reliable access to clinical and administrative
+                information, impactful innovations remain unreachable.
+              </p>
+
+              <h3>1. AI Enablement</h3>
+              <p>
+                Whether interpreting X-rays, processing insurance claims, or
+                supporting clinical recommendations, AI requires robust
+                datasets. When PMS vendors act as gatekeepers, data access
+                becomes severely limited, constraining both AI readiness and
+                data ownership.
+              </p>
+
+              <h3>2. Expansion of Teledentistry</h3>
+              <p>
+                Secure, seamless record and treatment note transmission is
+                fundamental for telehealth. Information blocking slows or limits
+                patient access to remote care, a critical gap as teledentistry
+                grows.
+              </p>
+
+              <h3>3. Personalized Digital Experiences</h3>
+              <p>
+                Today's patients expect proactive, customized care. Meeting
+                these expectations requires consolidating and analyzing data
+                across encounters, only possible with full data autonomy.
+              </p>
+
+              <h2>Concrete Measures for Data Control</h2>
+
+              <p>
+                Reasserting data ownership involves proactive vendor engagement
+                and strong internal policies, not confrontation. Practice
+                leaders should take these steps:
+              </p>
+
+              <ol class="article-content">
+                <li>
+                  <strong>Assess Vendor Contracts:</strong> Review contract
+                  language around data access, export, and costs. Choose vendors
+                  guaranteeing full, affordable access in usable formats.
+                </li>
+                <li>
+                  <strong>Seek FHIR-Compliant Solutions:</strong> Favor systems
+                  adhering to Fast Healthcare Interoperability Resources (FHIR)
+                  standards, designed for smoother, safer health data exchange.
+                </li>
+                <li>
+                  <strong>Push for Clarity:</strong> Explicitly discuss
+                  information blocking and Cures Act compliance with vendors
+                  before signing. Quality partners explain data handling
+                  transparently.
+                </li>
+                <li>
+                  <strong>Develop Robust Data Governance:</strong> Set clear
+                  protocols for managing, protecting, and utilizing patient and
+                  operational data. Internal governance enables innovation once
+                  external barriers disappear.
+                </li>
+              </ol>
+
+              <h2>Shaping the Future of Connected Oral Healthcare</h2>
+
+              <p>
+                Digital transformation in dentistry accelerates, but real
+                progress depends on provider ability to freely access and deploy
+                their own data. The industry moves away from closed systems.
+                Regulation and market demand spur open, interoperable solutions.
+              </p>
+
+              <p>
+                Practices reclaiming information control now will lead the
+                coming AI transformation, improving care, optimizing billing,
+                and strengthening patient relationships. This moment demands
+                challenging restrictive vendor models, adopting open standards,
+                and building foundations for dentistry's next chapter.
+              </p>
+
+              <div class="article-tags">
+                <span>Data Ownership</span><span>PMS</span
+                ><span>Vendor Lock In</span><span>21st Century Cures Act</span
+                ><span>FHIR</span><span>AI Billing</span>
+              </div>
+            </article>
+
+            <aside class="article-sidebar">
+              <div class="sidebar-card">
+                <h4>In This Article</h4>
+                <nav class="toc">
+                  <a href="#" class="toc-link"
+                    >Know Your Rights: The Cures Act</a
+                  >
+                  <a href="#" class="toc-link"
+                    >The Hidden Toll of Vendor Lock In</a
+                  >
+                  <a href="#" class="toc-link">Why Data Control Matters</a>
+                  <a href="#" class="toc-link"
+                    >Concrete Measures for Data Control</a
+                  >
+                  <a href="#" class="toc-link"
+                    >The Future of Connected Oral Healthcare</a
+                  >
+                </nav>
+              </div>
+              <div class="sidebar-card sidebar-cta">
+                <div class="sidebar-cta-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                  </svg>
+                </div>
+                <h4>Break Free from Data Silos</h4>
+                <p>
+                  EDiFi connects to your PMS and pulls the data your billing
+                  team needs, without vendor barriers.
+                </p>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  class="btn btn-primary"
+                  style="width: 100%; justify-content: center"
+                  >Book a Demo</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <section class="section bg-light">
+        <div class="container">
+          <div class="blog-section-label"><h2>Related Articles</h2></div>
+          <div class="related-grid">
+            <a
+              href="ai-accelerated-computing.html"
+              class="related-card related-card--ai"
+              ><span class="cat-badge cat-badge--ai">AI &amp; Technology</span>
+              <div class="related-card-title">
+                AI Isn't Enough: Why Accelerated Computing Will Decide Which
+                Dental Organizations Win
+              </div>
+              <span class="related-read-more"
+                >Read
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg></span
+            ></a>
+            <a
+              href="16-billion-data-dilemma.html"
+              class="related-card related-card--revenue"
+              ><span class="cat-badge cat-badge--revenue"
+                >Revenue Intelligence</span
+              >
+              <div class="related-card-title">
+                The $16 Billion Data Dilemma in Dentistry
+              </div>
+              <span class="related-read-more"
+                >Read
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg></span
+            ></a>
+            <a
+              href="dental-industry-crisis.html"
+              class="related-card related-card--industry"
+              ><span class="cat-badge cat-badge--industry"
+                >Industry Analysis</span
+              >
+              <div class="related-card-title">
+                The Dental Industry Crisis: Why Your Practice Needs Modern
+                Solutions Now
+              </div>
+              <span class="related-read-more"
+                >Read
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <div>
+            <h2>
+              Ready to Find Out How Much
+              <span class="gradient-text">You're Owed?</span>
+            </h2>
+            <p>
+              Join 500+ practices on the waitlist. We'll show you exactly what
+              EDiFi finds in your claims before you commit to anything.
+            </p>
+            <div class="cta-band-actions">
+              <a
+                href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                target="_blank"
+                class="btn btn-primary btn-lg"
+                >Book a Demo</a
+              >
+              <a href="../blog.html" class="btn btn-secondary btn-lg"
+                >Back to Blog</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <div class="container">
-        <div class="article-layout">
-          <article class="article-content">
-
-            <p class="article-lead">The dental industry is transforming rapidly. AI advances diagnostic precision, digital manufacturing streamlines clinical work, and teledentistry expands care access. But a significant obstacle exists: PMS vendors are creating gaps in AI readiness, and most practice owners don't realize it until it's too late.</p>
-
-            <p>Despite industry enthusiasm for digital transformation, practice leaders discover their own technology tools are obstructing progress. Rather than empowering teams and modernizing care, many systems restrict access to vital data, turning technical choices into long term strategic barriers.</p>
-
-            <h2>Know Your Rights: The 21st Century Cures Act</h2>
-
-            <p>Dentists often feel powerless when vendor contracts prevent data access or transfer. Federal law now provides recourse. The 21st Century Cures Act addresses "interoperability" and "information blocking," meaning anything preventing electronic health information access or sharing.</p>
-
-            <p>The legislation confirms practice owners have rights to access and move patient data without excessive fees or barriers. PMS vendors using high API costs, slow export processes, or proprietary formats face legal challenges. With 2025 enforcement escalation, the Department of Health and Human Services conducts audits and issues substantial penalties. Cures Act compliance is now mandatory.</p>
-
-            <div class="article-callout article-callout--billing">
-              <div class="article-callout-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-              <p><strong>Important:</strong> If your PMS vendor charges excessive fees for data exports or restricts access to your own patient records, they may be in violation of federal law. Document every instance and consult legal counsel if needed.</p>
-            </div>
-
-            <h2>The Hidden Toll of Vendor Lock In</h2>
-
-            <p>Inability to access your own data delays technology adoption and increases both financial and clinical costs. The "data dilemma" manifests through higher expenses and less effective care. Practices often pay twice: for storage and again for data exports or transfers.</p>
-
-            <p>Lack of standardized formats frustrates integration between tools and isolates patient histories in silos. These fragmentation issues prevent AI powered analytics benefits, derail new care technology deployment, and force recurring costs just to maintain data access. Staff time lost to manual processes is significant, and hours meant for care get spent fighting spreadsheets.</p>
-
-            <h2>Why Data Control Is Central to Dentistry's Biggest Shifts</h2>
-
-            <p>Ownership and control of operational data matters beyond technology, it's foundational for adapting to dentistry's next era. Without reliable access to clinical and administrative information, impactful innovations remain unreachable.</p>
-
-            <h3>1. AI Enablement</h3>
-            <p>Whether interpreting X-rays, processing insurance claims, or supporting clinical recommendations, AI requires robust datasets. When PMS vendors act as gatekeepers, data access becomes severely limited, constraining both AI readiness and data ownership.</p>
-
-            <h3>2. Expansion of Teledentistry</h3>
-            <p>Secure, seamless record and treatment note transmission is fundamental for telehealth. Information blocking slows or limits patient access to remote care, a critical gap as teledentistry grows.</p>
-
-            <h3>3. Personalized Digital Experiences</h3>
-            <p>Today's patients expect proactive, customized care. Meeting these expectations requires consolidating and analyzing data across encounters, only possible with full data autonomy.</p>
-
-            <h2>Concrete Measures for Data Control</h2>
-
-            <p>Reasserting data ownership involves proactive vendor engagement and strong internal policies, not confrontation. Practice leaders should take these steps:</p>
-
-            <ol class="article-content">
-              <li><strong>Assess Vendor Contracts:</strong> Review contract language around data access, export, and costs. Choose vendors guaranteeing full, affordable access in usable formats.</li>
-              <li><strong>Seek FHIR-Compliant Solutions:</strong> Favor systems adhering to Fast Healthcare Interoperability Resources (FHIR) standards, designed for smoother, safer health data exchange.</li>
-              <li><strong>Push for Clarity:</strong> Explicitly discuss information blocking and Cures Act compliance with vendors before signing. Quality partners explain data handling transparently.</li>
-              <li><strong>Develop Robust Data Governance:</strong> Set clear protocols for managing, protecting, and utilizing patient and operational data. Internal governance enables innovation once external barriers disappear.</li>
-            </ol>
-
-            <h2>Shaping the Future of Connected Oral Healthcare</h2>
-
-            <p>Digital transformation in dentistry accelerates, but real progress depends on provider ability to freely access and deploy their own data. The industry moves away from closed systems. Regulation and market demand spur open, interoperable solutions.</p>
-
-            <p>Practices reclaiming information control now will lead the coming AI transformation, improving care, optimizing billing, and strengthening patient relationships. This moment demands challenging restrictive vendor models, adopting open standards, and building foundations for dentistry's next chapter.</p>
-
-            <div class="article-tags"><span>Data Ownership</span><span>PMS</span><span>Vendor Lock In</span><span>21st Century Cures Act</span><span>FHIR</span><span>AI Billing</span></div>
-
-          </article>
-
-          <aside class="article-sidebar">
-            <div class="sidebar-card">
-              <h4>In This Article</h4>
-              <nav class="toc">
-                <a href="#" class="toc-link">Know Your Rights: The Cures Act</a>
-                <a href="#" class="toc-link">The Hidden Toll of Vendor Lock In</a>
-                <a href="#" class="toc-link">Why Data Control Matters</a>
-                <a href="#" class="toc-link">Concrete Measures for Data Control</a>
-                <a href="#" class="toc-link">The Future of Connected Oral Healthcare</a>
-              </nav>
-            </div>
-            <div class="sidebar-card sidebar-cta">
-              <div class="sidebar-cta-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-              <h4>Break Free from Data Silos</h4>
-              <p>EDiFi connects to your PMS and pulls the data your billing team needs, without vendor barriers.</p>
-              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;">Book a Demo</a>
-            </div>
-          </aside>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../../../index.html" class="logo"
+              ><img src="../../../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" /></a>
+            <p>The infrastructure leader in dental revenue intelligence.</p>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="../../platform.html">Overview</a></li>
+              <li><a href="../../edifi.html">EDiFi Software</a></li>
+              <li><a href="../../revnet.html">RevNet</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Resources</h5>
+            <ul class="footer-links">
+              <li><a href="../blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="../../company.html">About Us</a></li>
+              <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="../../terms.html">Terms</a
+            ><a href="../../privacy.html">Privacy</a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/company/elitedentalforce"
+              aria-label="Elite Dental Force on LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/elitedentalforce"
+              aria-label="Elite Dental Force on Facebook"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/elitedentalforce"
+              aria-label="Elite Dental Force on Instagram"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/@elitedentalforceteam"
+              aria-label="Elite Dental Force on YouTube"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                /></svg
+            ></a>
+            <a
+              href="https://x.com/EliteDentalForc"
+              aria-label="Elite Dental Force on X"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <section class="section bg-light">
-      <div class="container">
-        <div class="blog-section-label"><h2>Related Articles</h2></div>
-        <div class="related-grid">
-          <a href="ai-accelerated-computing.html" class="related-card related-card--ai"><span class="cat-badge cat-badge--ai">AI &amp; Technology</span><div class="related-card-title">AI Isn't Enough: Why Accelerated Computing Will Decide Which Dental Organizations Win</div><span class="related-read-more">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-          <a href="16-billion-data-dilemma.html" class="related-card related-card--revenue"><span class="cat-badge cat-badge--revenue">Revenue Intelligence</span><div class="related-card-title">The $16 Billion Data Dilemma in Dentistry</div><span class="related-read-more">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-          <a href="dental-industry-crisis.html" class="related-card related-card--industry"><span class="cat-badge cat-badge--industry">Industry Analysis</span><div class="related-card-title">The Dental Industry Crisis: Why Your Practice Needs Modern Solutions Now</div><span class="related-read-more">Read <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="container"><div>
-        <h2>Ready to Find Out How Much <span class="gradient-text">You're Owed?</span></h2>
-        <p>Join 500+ practices on the waitlist. We'll show you exactly what EDiFi finds in your claims before you commit to anything.</p>
-        <div class="cta-band-actions">
-          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary btn-lg">Book a Demo</a>
-          <a href="../blog.html" class="btn btn-secondary btn-lg">Back to Blog</a>
-        </div>
-      </div></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><a href="../../../index.html" class="logo"><img src="../../../images/Grayscale Transparent.png" alt="Elite Dental Force"></a><p>The infrastructure leader in dental revenue intelligence.</p></div>
-        <div class="footer-column"><h5 class="footer-heading">Platform</h5><ul class="footer-links"><li><a href="../../platform.html">Overview</a></li><li><a href="../../edifi.html">EDiFi Software</a></li><li><a href="../../revnet.html">RevNet</a></li></ul></div>
-        <div class="footer-column"><h5 class="footer-heading">Resources</h5><ul class="footer-links"><li><a href="../blog.html">Blog</a></li></ul></div>
-        <div class="footer-column"><h5 class="footer-heading">Company</h5><ul class="footer-links"><li><a href="../../company.html">About Us</a></li><li><a href="../../contact.html">Contact</a></li></ul></div>
-      </div>
-      <div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p><div class="footer-legal"><a href="../../terms.html">Terms</a><a href="../../privacy.html">Privacy</a></div><div class="social-links">
-          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="Elite Dental Force on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://www.facebook.com/elitedentalforce" aria-label="Elite Dental Force on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.instagram.com/elitedentalforce" aria-label="Elite Dental Force on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://www.youtube.com/@elitedentalforceteam" aria-label="Elite Dental Force on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
-          <a href="https://x.com/EliteDentalForc" aria-label="Elite Dental Force on X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../../../js/main.js"></script>
-  <script src="../../../js/booking-widget.js" defer></script>
-  <script src="../../../js/cookie-consent.js" defer></script>
-</body>
+    </footer>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/booking-widget.js" defer></script>
+    <script src="../../../js/cookie-consent.js" defer></script>
+  <script src="../../../js/booking-modal.js" defer></script>
+  <script src="../../../js/monitoring.js" defer></script>
+  </body>
 </html>
