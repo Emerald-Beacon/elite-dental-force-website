@@ -1,1400 +1,2131 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EDiFi is the AI powered dental revenue intelligence platform: eligibility verification, clean claims, payment audit, voice AI, chairside documentation, and medical billing in one system for dental practices and DSOs.">
-  <link rel="canonical" href="https://www.elitedentalforce.com/pages/edifi.html">
-  <meta property="og:title" content="EDiFi: AI Dental Revenue Intelligence Platform | Elite Dental Force">
-  <meta property="og:description" content="EDiFi automates eligibility, claims, payment audits, and medical billing for dental practices. See every module.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.elitedentalforce.com/pages/edifi.html">
-  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-edifi.png">
-  <meta property="og:site_name" content="Elite Dental Force">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-edifi.png">
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MQJKZLMC');</script>
-  <title>EDiFi: AI Dental Revenue Intelligence Platform | Elite Dental Force</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EDiFi is the AI powered dental revenue intelligence platform: eligibility verification, clean claims, payment audit, voice AI, chairside documentation, and medical billing in one system for dental practices and DSOs."
+    />
+    <link
+      rel="canonical"
+      href="https://www.elitedentalforce.com/pages/edifi.html"
+    />
+    <meta
+      property="og:title"
+      content="EDiFi: AI Dental Revenue Intelligence Platform | Elite Dental Force"
+    />
+    <meta
+      property="og:description"
+      content="EDiFi automates eligibility, claims, payment audits, and medical billing for dental practices. See every module."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.elitedentalforce.com/pages/edifi.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.elitedentalforce.com/images/og-edifi.png"
+    />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://www.elitedentalforce.com/images/og-edifi.png"
+    />
+    <title>
+      EDiFi: AI Dental Revenue Intelligence Platform | Elite Dental Force
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
 
-  <style>
-    /* ================================================================
+    <style>
+      /* ================================================================
        EDiFi Product Page — Distinct Design System
        Intentionally different from homepage: centered layout, sticky
        sidebar, tab explorer, comparison table. No split hero, no orbs.
        ================================================================ */
 
-    :root {
-      --edifi-blue: #4ba8f0;
-      --edifi-navy: #001f71;
-      --edifi-dark: #020917;
-      --edifi-mid: #0a1628;
-      --edifi-card: #0d1e35;
-      --edifi-gold: #ffd700;
-      --edifi-green: #27c93f;
-      --edifi-border: rgba(75,168,240,0.14);
-      --edifi-text: #c5dff0;
-      --edifi-muted: #6b8fa8;
-    }
+      :root {
+        --edifi-blue: #4ba8f0;
+        --edifi-navy: #001f71;
+        --edifi-dark: #020917;
+        --edifi-mid: #0a1628;
+        --edifi-card: #0d1e35;
+        --edifi-gold: #ffd700;
+        --edifi-green: #27c93f;
+        --edifi-border: rgba(75, 168, 240, 0.14);
+        --edifi-text: #c5dff0;
+        --edifi-muted: #6b8fa8;
+      }
 
-    /* ── Hero: centered, gradient band background ── */
-    .ep-hero {
-      background: linear-gradient(180deg, #030d22 0%, #020917 60%);
-      border-bottom: 1px solid rgba(75,168,240,0.1);
-      padding: 100px 0 0;
-      text-align: center;
-      overflow: hidden;
-    }
-    .ep-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(75,168,240,0.08);
-      border: 1px solid rgba(75,168,240,0.22);
-      border-radius: 50px;
-      padding: 6px 16px 6px 10px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--edifi-blue);
-      margin-bottom: 28px;
-    }
-    .ep-hero-badge-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--edifi-green);
-      box-shadow: 0 0 6px rgba(39,201,63,0.8);
-      animation: dot-pulse 2s ease-in-out infinite;
-    }
-    @keyframes dot-pulse {
-      0%,100% { opacity:1; transform:scale(1); }
-      50% { opacity:0.5; transform:scale(1.4); }
-    }
-    .ep-hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.2rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: #f0f7ff;
-      max-width: 800px;
-      margin: 0 auto 20px;
-    }
-    .ep-hero h1 span {
-      background: linear-gradient(135deg, #4ba8f0, #3454f8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .ep-hero-sub {
-      font-size: 18px;
-      color: var(--edifi-muted);
-      max-width: 560px;
-      margin: 0 auto 36px;
-      line-height: 1.6;
-    }
-    .ep-hero-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 60px;
-    }
+      /* ── Hero: centered, gradient band background ── */
+      .ep-hero {
+        background: linear-gradient(180deg, #030d22 0%, #020917 60%);
+        border-bottom: 1px solid rgba(75, 168, 240, 0.1);
+        padding: 100px 0 0;
+        text-align: center;
+        overflow: hidden;
+      }
+      .ep-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.22);
+        border-radius: 50px;
+        padding: 6px 16px 6px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--edifi-blue);
+        margin-bottom: 28px;
+      }
+      .ep-hero-badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--edifi-green);
+        box-shadow: 0 0 6px rgba(39, 201, 63, 0.8);
+        animation: dot-pulse 2s ease-in-out infinite;
+      }
+      @keyframes dot-pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.4);
+        }
+      }
+      .ep-hero h1 {
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #f0f7ff;
+        max-width: 800px;
+        margin: 0 auto 20px;
+      }
+      .ep-hero h1 span {
+        background: linear-gradient(135deg, #4ba8f0, #3454f8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .ep-hero-sub {
+        font-size: 18px;
+        color: var(--edifi-muted);
+        max-width: 560px;
+        margin: 0 auto 36px;
+        line-height: 1.6;
+      }
+      .ep-hero-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 60px;
+      }
 
-    /* ── Hero screenshot — perspective tilt, no browser chrome ── */
-    .ep-hero-screen {
-      position: relative;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .ep-hero-screen-inner {
-      position: relative;
-      border-radius: 16px 16px 0 0;
-      overflow: hidden;
-      box-shadow:
-        0 -1px 0 1px rgba(75,168,240,0.18),
-        0 -40px 80px rgba(75,168,240,0.06),
-        0 60px 120px rgba(0,0,0,0.8);
-      transform: perspective(1600px) rotateX(4deg);
-      transform-origin: bottom center;
-    }
-    .ep-hero-screen-inner img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 16px 16px 0 0;
-    }
-    /* Gradient fade at the bottom of hero screen */
-    .ep-hero-screen-inner::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 120px;
-      background: linear-gradient(to bottom, transparent, #020917);
-      pointer-events: none;
-    }
+      /* ── Hero screenshot — perspective tilt, no browser chrome ── */
+      .ep-hero-screen {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .ep-hero-screen-inner {
+        position: relative;
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+        box-shadow:
+          0 -1px 0 1px rgba(75, 168, 240, 0.18),
+          0 -40px 80px rgba(75, 168, 240, 0.06),
+          0 60px 120px rgba(0, 0, 0, 0.8);
+        transform: perspective(1600px) rotateX(4deg);
+        transform-origin: bottom center;
+      }
+      .ep-hero-screen-inner img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px 16px 0 0;
+      }
+      /* Gradient fade at the bottom of hero screen */
+      .ep-hero-screen-inner::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(to bottom, transparent, #020917);
+        pointer-events: none;
+      }
 
-    /* ── Stats bar ── */
-    .ep-stats {
-      background: rgba(255,255,255,0.02);
-      border-top: 1px solid var(--edifi-border);
-      border-bottom: 1px solid var(--edifi-border);
-      padding: 32px 0;
-    }
-    .ep-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-    .ep-stat {
-      text-align: center;
-      padding: 16px 24px;
-      border-right: 1px solid var(--edifi-border);
-    }
-    .ep-stat:last-child { border-right: none; }
-    .ep-stat-value {
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #fff, #62bcff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .ep-stat-label { font-size: 13px; color: var(--edifi-muted); }
-    @media (max-width: 700px) {
-      .ep-stats-grid { grid-template-columns: 1fr 1fr; }
-      .ep-stat:nth-child(2) { border-right: none; }
-    }
+      /* ── Stats bar ── */
+      .ep-stats {
+        background: rgba(255, 255, 255, 0.02);
+        border-top: 1px solid var(--edifi-border);
+        border-bottom: 1px solid var(--edifi-border);
+        padding: 32px 0;
+      }
+      .ep-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .ep-stat {
+        text-align: center;
+        padding: 16px 24px;
+        border-right: 1px solid var(--edifi-border);
+      }
+      .ep-stat:last-child {
+        border-right: none;
+      }
+      .ep-stat-value {
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #fff, #62bcff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .ep-stat-label {
+        font-size: 13px;
+        color: var(--edifi-muted);
+      }
+      @media (max-width: 700px) {
+        .ep-stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ep-stat:nth-child(2) {
+          border-right: none;
+        }
+      }
 
-    /* ── Section base ── */
-    .ep-section {
-      padding: 96px 0;
-      position: relative;
-    }
-    .ep-section + .ep-section {
-      border-top: 1px solid var(--edifi-border);
-    }
-    .ep-section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .ep-overline {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--edifi-blue);
-      margin-bottom: 12px;
-    }
-    .ep-section-header h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 800;
-      color: #f0f7ff;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-    .ep-section-header p {
-      font-size: 17px;
-      color: var(--edifi-muted);
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
+      /* ── Section base ── */
+      .ep-section {
+        padding: 96px 0;
+        position: relative;
+      }
+      .ep-section + .ep-section {
+        border-top: 1px solid var(--edifi-border);
+      }
+      .ep-section-header {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .ep-overline {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--edifi-blue);
+        margin-bottom: 12px;
+      }
+      .ep-section-header h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        color: #f0f7ff;
+        margin-bottom: 12px;
+        line-height: 1.2;
+      }
+      .ep-section-header p {
+        font-size: 17px;
+        color: var(--edifi-muted);
+        max-width: 560px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
 
-    /* ── Tab Explorer ── */
-    .ep-tabs {
-      background: rgba(6,14,38,0.8);
-      border: 1px solid var(--edifi-border);
-      border-radius: 20px;
-      overflow: hidden;
-    }
-    .ep-tab-nav {
-      display: flex;
-      border-bottom: 1px solid var(--edifi-border);
-      background: rgba(3,8,24,0.6);
-      overflow-x: auto;
-    }
-    .ep-tab-btn {
-      flex: 1;
-      min-width: 140px;
-      padding: 16px 20px;
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      color: var(--edifi-muted);
-      font-size: 13px;
-      font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .ep-tab-btn:hover { color: #f0f7ff; background: rgba(75,168,240,0.04); }
-    .ep-tab-btn.active {
-      color: var(--edifi-blue);
-      border-bottom-color: var(--edifi-blue);
-      background: rgba(75,168,240,0.06);
-    }
-    .ep-tab-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.5;
-    }
-    .ep-tab-btn.active .ep-tab-dot {
-      opacity: 1;
-      background: var(--edifi-green);
-      box-shadow: 0 0 6px rgba(39,201,63,0.7);
-      animation: dot-pulse 2s ease-in-out infinite;
-    }
-    .ep-tab-content {
-      display: none;
-      padding: 32px;
-      gap: 40px;
-      align-items: flex-start;
-    }
-    .ep-tab-content.active {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-    }
-    @media (max-width: 900px) {
-      .ep-tab-content.active { grid-template-columns: 1fr; }
-    }
-    .ep-tab-screen {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(75,168,240,0.15);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    }
-    .ep-tab-screen img { display: block; width: 100%; height: auto; }
-    .ep-tab-info { display: flex; flex-direction: column; gap: 24px; }
-    .ep-tab-info h3 { font-size: 22px; font-weight: 800; color: #f0f7ff; margin: 0; }
-    .ep-tab-info p { font-size: 15px; color: var(--edifi-text); line-height: 1.7; margin: 0; }
-    .ep-tab-metrics {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .ep-tab-metric {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--edifi-border);
-      border-radius: 10px;
-      padding: 12px 16px;
-    }
-    .ep-tab-metric-label { font-size: 12px; color: var(--edifi-muted); }
-    .ep-tab-metric-value { font-size: 16px; font-weight: 700; color: #f0f7ff; }
-    .ep-tab-metric-value.green { color: var(--edifi-green); }
-    .ep-tab-metric-value.gold { color: var(--edifi-gold); }
-    .ep-tab-metric-value.blue { color: var(--edifi-blue); }
+      /* ── Tab Explorer ── */
+      .ep-tabs {
+        background: rgba(6, 14, 38, 0.8);
+        border: 1px solid var(--edifi-border);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .ep-tab-nav {
+        display: flex;
+        border-bottom: 1px solid var(--edifi-border);
+        background: rgba(3, 8, 24, 0.6);
+        overflow-x: auto;
+      }
+      .ep-tab-btn {
+        flex: 1;
+        min-width: 140px;
+        padding: 16px 20px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: var(--edifi-muted);
+        font-size: 13px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .ep-tab-btn:hover {
+        color: #f0f7ff;
+        background: rgba(75, 168, 240, 0.04);
+      }
+      .ep-tab-btn.active {
+        color: var(--edifi-blue);
+        border-bottom-color: var(--edifi-blue);
+        background: rgba(75, 168, 240, 0.06);
+      }
+      .ep-tab-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 0.5;
+      }
+      .ep-tab-btn.active .ep-tab-dot {
+        opacity: 1;
+        background: var(--edifi-green);
+        box-shadow: 0 0 6px rgba(39, 201, 63, 0.7);
+        animation: dot-pulse 2s ease-in-out infinite;
+      }
+      .ep-tab-content {
+        display: none;
+        padding: 32px;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .ep-tab-content.active {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+      }
+      @media (max-width: 900px) {
+        .ep-tab-content.active {
+          grid-template-columns: 1fr;
+        }
+      }
+      .ep-tab-screen {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(75, 168, 240, 0.15);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      }
+      .ep-tab-screen img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .ep-tab-info {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .ep-tab-info h3 {
+        font-size: 22px;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin: 0;
+      }
+      .ep-tab-info p {
+        font-size: 15px;
+        color: var(--edifi-text);
+        line-height: 1.7;
+        margin: 0;
+      }
+      .ep-tab-metrics {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .ep-tab-metric {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--edifi-border);
+        border-radius: 10px;
+        padding: 12px 16px;
+      }
+      .ep-tab-metric-label {
+        font-size: 12px;
+        color: var(--edifi-muted);
+      }
+      .ep-tab-metric-value {
+        font-size: 16px;
+        font-weight: 700;
+        color: #f0f7ff;
+      }
+      .ep-tab-metric-value.green {
+        color: var(--edifi-green);
+      }
+      .ep-tab-metric-value.gold {
+        color: var(--edifi-gold);
+      }
+      .ep-tab-metric-value.blue {
+        color: var(--edifi-blue);
+      }
 
-    /* ── Sticky sidebar feature deep-dive ── */
-    .ep-sidebar-layout {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-    .ep-sidebar-nav {
-      position: sticky;
-      top: 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .ep-sidebar-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--edifi-muted);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-      text-decoration: none;
-    }
-    .ep-sidebar-link:hover {
-      color: #f0f7ff;
-      background: rgba(75,168,240,0.06);
-    }
-    .ep-sidebar-link.active {
-      color: var(--edifi-blue);
-      background: rgba(75,168,240,0.08);
-      border-color: rgba(75,168,240,0.2);
-    }
-    .ep-sidebar-link-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.4;
-      flex-shrink: 0;
-    }
-    .ep-sidebar-link.active .ep-sidebar-link-dot {
-      opacity: 1;
-      background: var(--edifi-blue);
-      box-shadow: 0 0 6px rgba(75,168,240,0.6);
-    }
-    .ep-sidebar-divider {
-      height: 1px;
-      background: var(--edifi-border);
-      margin: 8px 0;
-    }
-    @media (max-width: 900px) {
-      .ep-sidebar-layout { grid-template-columns: 1fr; }
-      .ep-sidebar-nav { position: static; flex-direction: row; flex-wrap: wrap; }
-    }
+      /* ── Sticky sidebar feature deep-dive ── */
+      .ep-sidebar-layout {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .ep-sidebar-nav {
+        position: sticky;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .ep-sidebar-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--edifi-muted);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        text-decoration: none;
+      }
+      .ep-sidebar-link:hover {
+        color: #f0f7ff;
+        background: rgba(75, 168, 240, 0.06);
+      }
+      .ep-sidebar-link.active {
+        color: var(--edifi-blue);
+        background: rgba(75, 168, 240, 0.08);
+        border-color: rgba(75, 168, 240, 0.2);
+      }
+      .ep-sidebar-link-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 0.4;
+        flex-shrink: 0;
+      }
+      .ep-sidebar-link.active .ep-sidebar-link-dot {
+        opacity: 1;
+        background: var(--edifi-blue);
+        box-shadow: 0 0 6px rgba(75, 168, 240, 0.6);
+      }
+      .ep-sidebar-divider {
+        height: 1px;
+        background: var(--edifi-border);
+        margin: 8px 0;
+      }
+      @media (max-width: 900px) {
+        .ep-sidebar-layout {
+          grid-template-columns: 1fr;
+        }
+        .ep-sidebar-nav {
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
 
-    /* ── Feature panel ── */
-    .ep-feature-panel {
-      padding: 48px 0;
-      border-top: 1px solid var(--edifi-border);
-    }
-    .ep-feature-panel:first-child { border-top: none; padding-top: 0; }
-    .ep-panel-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--edifi-blue);
-      margin-bottom: 12px;
-    }
-    .ep-panel-tag::before {
-      content: '';
-      width: 16px;
-      height: 1px;
-      background: var(--edifi-blue);
-    }
-    .ep-feature-panel h3 {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: #f0f7ff;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-    .ep-feature-panel > p {
-      font-size: 16px;
-      color: var(--edifi-text);
-      line-height: 1.7;
-      margin-bottom: 32px;
-      max-width: 580px;
-    }
-    .ep-screen-card {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(75,168,240,0.16);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(75,168,240,0.06);
-      margin-bottom: 32px;
-    }
-    .ep-screen-card img { display: block; width: 100%; height: auto; }
-    .ep-detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .ep-detail-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--edifi-border);
-      border-left: 3px solid var(--edifi-blue);
-      border-radius: 10px;
-      padding: 16px 18px;
-    }
-    .ep-detail-card h5 {
-      font-size: 13px;
-      font-weight: 700;
-      color: #f0f7ff;
-      margin-bottom: 4px;
-    }
-    .ep-detail-card p { font-size: 12px; color: var(--edifi-muted); margin: 0; line-height: 1.5; }
+      /* ── Feature panel ── */
+      .ep-feature-panel {
+        padding: 48px 0;
+        border-top: 1px solid var(--edifi-border);
+      }
+      .ep-feature-panel:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+      .ep-panel-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--edifi-blue);
+        margin-bottom: 12px;
+      }
+      .ep-panel-tag::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        background: var(--edifi-blue);
+      }
+      .ep-feature-panel h3 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin-bottom: 12px;
+        line-height: 1.2;
+      }
+      .ep-feature-panel > p {
+        font-size: 16px;
+        color: var(--edifi-text);
+        line-height: 1.7;
+        margin-bottom: 32px;
+        max-width: 580px;
+      }
+      .ep-screen-card {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(75, 168, 240, 0.16);
+        box-shadow:
+          0 24px 64px rgba(0, 0, 0, 0.55),
+          0 0 0 1px rgba(75, 168, 240, 0.06);
+        margin-bottom: 32px;
+      }
+      .ep-screen-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .ep-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .ep-detail-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--edifi-border);
+        border-left: 3px solid var(--edifi-blue);
+        border-radius: 10px;
+        padding: 16px 18px;
+      }
+      .ep-detail-card h5 {
+        font-size: 13px;
+        font-weight: 700;
+        color: #f0f7ff;
+        margin-bottom: 4px;
+      }
+      .ep-detail-card p {
+        font-size: 12px;
+        color: var(--edifi-muted);
+        margin: 0;
+        line-height: 1.5;
+      }
 
-    /* ── Comparison table ── */
-    .ep-compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      border: 1px solid var(--edifi-border);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .ep-compare-table thead {
-      background: rgba(75,168,240,0.08);
-    }
-    .ep-compare-table th {
-      padding: 18px 24px;
-      text-align: left;
-      font-size: 13px;
-      font-weight: 700;
-      color: #f0f7ff;
-      border-bottom: 1px solid var(--edifi-border);
-    }
-    .ep-compare-table th:first-child { color: var(--edifi-muted); font-weight: 600; }
-    .ep-compare-table th.edifi-col {
-      background: rgba(75,168,240,0.12);
-      color: var(--edifi-blue);
-    }
-    .ep-compare-table td {
-      padding: 16px 24px;
-      font-size: 14px;
-      color: var(--edifi-text);
-      border-bottom: 1px solid rgba(75,168,240,0.07);
-    }
-    .ep-compare-table tr:last-child td { border-bottom: none; }
-    .ep-compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
-    .ep-compare-table td.feature-name { color: #f0f7ff; font-weight: 600; }
-    .ep-compare-table td.manual { color: #ef4444; }
-    .ep-compare-table td.edifi { color: var(--edifi-green); font-weight: 600; }
-    .check { color: var(--edifi-green); font-size: 16px; margin-right: 4px; }
-    .cross { color: #ef4444; font-size: 16px; margin-right: 4px; }
+      /* ── Comparison table ── */
+      .ep-compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--edifi-border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .ep-compare-table thead {
+        background: rgba(75, 168, 240, 0.08);
+      }
+      .ep-compare-table th {
+        padding: 18px 24px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 700;
+        color: #f0f7ff;
+        border-bottom: 1px solid var(--edifi-border);
+      }
+      .ep-compare-table th:first-child {
+        color: var(--edifi-muted);
+        font-weight: 600;
+      }
+      .ep-compare-table th.edifi-col {
+        background: rgba(75, 168, 240, 0.12);
+        color: var(--edifi-blue);
+      }
+      .ep-compare-table td {
+        padding: 16px 24px;
+        font-size: 14px;
+        color: var(--edifi-text);
+        border-bottom: 1px solid rgba(75, 168, 240, 0.07);
+      }
+      .ep-compare-table tr:last-child td {
+        border-bottom: none;
+      }
+      .ep-compare-table tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.015);
+      }
+      .ep-compare-table td.feature-name {
+        color: #f0f7ff;
+        font-weight: 600;
+      }
+      .ep-compare-table td.manual {
+        color: #ef4444;
+      }
+      .ep-compare-table td.edifi {
+        color: var(--edifi-green);
+        font-weight: 600;
+      }
+      .check {
+        color: var(--edifi-green);
+        font-size: 16px;
+        margin-right: 4px;
+      }
+      .cross {
+        color: #ef4444;
+        font-size: 16px;
+        margin-right: 4px;
+      }
 
-    /* ── Tech spec list ── */
-    .ep-spec-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .ep-spec-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--edifi-border);
-      border-radius: 14px;
-      padding: 24px;
-    }
-    .ep-spec-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--edifi-muted);
-      margin-bottom: 8px;
-    }
-    .ep-spec-value {
-      font-size: 20px;
-      font-weight: 800;
-      color: #f0f7ff;
-      margin-bottom: 4px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .ep-spec-desc { font-size: 12px; color: var(--edifi-muted); line-height: 1.5; }
-    @media (max-width: 900px) {
-      .ep-spec-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 560px) {
-      .ep-spec-grid { grid-template-columns: 1fr; }
-    }
+      /* ── Tech spec list ── */
+      .ep-spec-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .ep-spec-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--edifi-border);
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .ep-spec-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--edifi-muted);
+        margin-bottom: 8px;
+      }
+      .ep-spec-value {
+        font-size: 20px;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin-bottom: 4px;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .ep-spec-desc {
+        font-size: 12px;
+        color: var(--edifi-muted);
+        line-height: 1.5;
+      }
+      @media (max-width: 900px) {
+        .ep-spec-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .ep-spec-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    /* ── Integration pills ── */
-    .ep-integration-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 32px;
-    }
-    .ep-integration-pill {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--edifi-border);
-      border-radius: 50px;
-      padding: 8px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--edifi-text);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .ep-integration-pill::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--edifi-green);
-      box-shadow: 0 0 5px rgba(39,201,63,0.6);
-    }
+      /* ── Integration pills ── */
+      .ep-integration-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 32px;
+      }
+      .ep-integration-pill {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--edifi-border);
+        border-radius: 50px;
+        padding: 8px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--edifi-text);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ep-integration-pill::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--edifi-green);
+        box-shadow: 0 0 5px rgba(39, 201, 63, 0.6);
+      }
 
-    /* ================================================================
+      /* ================================================================
        EDIFI PAGE — Responsive Additions
        ================================================================ */
 
-    @media (max-width: 768px) {
-      /* Hero */
-      .ep-hero { padding: 72px 0 0; }
-      .ep-hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); max-width: 100%; }
-      .ep-hero-sub { font-size: 16px; }
-      .ep-hero-actions {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 40px;
+      @media (max-width: 768px) {
+        /* Hero */
+        .ep-hero {
+          padding: 72px 0 0;
+        }
+        .ep-hero h1 {
+          font-size: clamp(2rem, 5vw, 2.8rem);
+          max-width: 100%;
+        }
+        .ep-hero-sub {
+          font-size: 16px;
+        }
+        .ep-hero-actions {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 40px;
+        }
+        .ep-hero-actions .btn {
+          min-height: 48px;
+          flex: 1 1 160px;
+          text-align: center;
+        }
+        .ep-hero-screen {
+          padding: 0 12px;
+        }
+
+        /* Stats bar */
+        .ep-stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ep-stat:nth-child(2) {
+          border-right: none;
+        }
+        .ep-stat:nth-child(3) {
+          border-top: 1px solid var(--edifi-border);
+        }
+        .ep-stat:nth-child(4) {
+          border-top: 1px solid var(--edifi-border);
+        }
+        .ep-stat-value {
+          font-size: 1.75rem;
+        }
+
+        /* Section padding */
+        .ep-section {
+          padding: 60px 0;
+        }
+        .ep-section-header {
+          margin-bottom: 36px;
+        }
+        .ep-section-header h2 {
+          font-size: clamp(1.5rem, 3.5vw, 2rem);
+        }
+        .ep-section-header p {
+          font-size: 15px;
+        }
+
+        /* Tabs: allow scroll, collapse tab content to single column */
+        .ep-tab-nav {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .ep-tab-btn {
+          min-width: 120px;
+          padding: 14px 12px;
+          font-size: 12px;
+        }
+        .ep-tab-content {
+          padding: 20px;
+          gap: 24px;
+        }
+        .ep-tab-content.active {
+          grid-template-columns: 1fr;
+        }
+
+        /* Sidebar layout: nav becomes horizontal row (already handled at 900px) */
+        .ep-sidebar-layout {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .ep-sidebar-nav {
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+        .ep-sidebar-link {
+          font-size: 12px;
+          padding: 8px 12px;
+        }
+
+        /* Feature panels */
+        .ep-feature-panel {
+          padding: 32px 0;
+        }
+        .ep-feature-panel h3 {
+          font-size: 1.5rem;
+        }
+        .ep-feature-panel > p {
+          font-size: 14px;
+        }
+
+        /* Detail grid */
+        .ep-detail-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Spec grid */
+        .ep-spec-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        /* Comparison table: allow horizontal scroll */
+        .ep-compare-table {
+          font-size: 12px;
+        }
+        .ep-compare-table th,
+        .ep-compare-table td {
+          padding: 12px 14px;
+        }
       }
-      .ep-hero-actions .btn { min-height: 48px; flex: 1 1 160px; text-align: center; }
-      .ep-hero-screen { padding: 0 12px; }
 
-      /* Stats bar */
-      .ep-stats-grid { grid-template-columns: 1fr 1fr; }
-      .ep-stat:nth-child(2) { border-right: none; }
-      .ep-stat:nth-child(3) { border-top: 1px solid var(--edifi-border); }
-      .ep-stat:nth-child(4) { border-top: 1px solid var(--edifi-border); }
-      .ep-stat-value { font-size: 1.75rem; }
+      @media (max-width: 480px) {
+        /* Hero */
+        .ep-hero {
+          padding: 60px 0 0;
+        }
+        .ep-hero h1 {
+          font-size: clamp(1.75rem, 5vw, 2.4rem);
+        }
+        .ep-hero-sub {
+          font-size: 14px;
+        }
+        .ep-hero-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+        .ep-hero-badge {
+          font-size: 10px;
+          padding: 5px 12px;
+        }
 
-      /* Section padding */
-      .ep-section { padding: 60px 0; }
-      .ep-section-header { margin-bottom: 36px; }
-      .ep-section-header h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
-      .ep-section-header p { font-size: 15px; }
+        /* Stats: single column */
+        .ep-stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ep-stat {
+          padding: 12px 16px;
+        }
+        .ep-stat-value {
+          font-size: 1.5rem;
+        }
 
-      /* Tabs: allow scroll, collapse tab content to single column */
-      .ep-tab-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .ep-tab-btn { min-width: 120px; padding: 14px 12px; font-size: 12px; }
-      .ep-tab-content { padding: 20px; gap: 24px; }
-      .ep-tab-content.active { grid-template-columns: 1fr; }
+        /* Section */
+        .ep-section {
+          padding: 48px 0;
+        }
 
-      /* Sidebar layout: nav becomes horizontal row (already handled at 900px) */
-      .ep-sidebar-layout { grid-template-columns: 1fr; gap: 28px; }
-      .ep-sidebar-nav {
-        position: static;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 6px;
+        /* Tabs content */
+        .ep-tab-content {
+          padding: 16px;
+        }
+        .ep-tab-btn {
+          min-width: 100px;
+          padding: 12px 10px;
+          font-size: 11px;
+        }
+
+        /* Spec grid */
+        .ep-spec-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Feature panel */
+        .ep-feature-panel h3 {
+          font-size: 1.3rem;
+        }
+
+        /* Comparison table wrapper */
+        .ep-tabs {
+          overflow-x: auto;
+        }
+
+        /* Integration pills */
+        .ep-integration-row {
+          gap: 8px;
+        }
+        .ep-integration-pill {
+          font-size: 12px;
+          padding: 6px 14px;
+        }
       }
-      .ep-sidebar-link { font-size: 12px; padding: 8px 12px; }
+    </style>
 
-      /* Feature panels */
-      .ep-feature-panel { padding: 32px 0; }
-      .ep-feature-panel h3 { font-size: 1.5rem; }
-      .ep-feature-panel > p { font-size: 14px; }
-
-      /* Detail grid */
-      .ep-detail-grid { grid-template-columns: 1fr; }
-
-      /* Spec grid */
-      .ep-spec-grid { grid-template-columns: 1fr 1fr; }
-
-      /* Comparison table: allow horizontal scroll */
-      .ep-compare-table { font-size: 12px; }
-      .ep-compare-table th,
-      .ep-compare-table td { padding: 12px 14px; }
-    }
-
-    @media (max-width: 480px) {
-      /* Hero */
-      .ep-hero { padding: 60px 0 0; }
-      .ep-hero h1 { font-size: clamp(1.75rem, 5vw, 2.4rem); }
-      .ep-hero-sub { font-size: 14px; }
-      .ep-hero-actions .btn { width: 100%; justify-content: center; }
-      .ep-hero-badge { font-size: 10px; padding: 5px 12px; }
-
-      /* Stats: single column */
-      .ep-stats-grid { grid-template-columns: 1fr 1fr; }
-      .ep-stat { padding: 12px 16px; }
-      .ep-stat-value { font-size: 1.5rem; }
-
-      /* Section */
-      .ep-section { padding: 48px 0; }
-
-      /* Tabs content */
-      .ep-tab-content { padding: 16px; }
-      .ep-tab-btn { min-width: 100px; padding: 12px 10px; font-size: 11px; }
-
-      /* Spec grid */
-      .ep-spec-grid { grid-template-columns: 1fr; }
-
-      /* Feature panel */
-      .ep-feature-panel h3 { font-size: 1.3rem; }
-
-      /* Comparison table wrapper */
-      .ep-tabs { overflow-x: auto; }
-
-      /* Integration pills */
-      .ep-integration-row { gap: 8px; }
-      .ep-integration-pill { font-size: 12px; padding: 6px 14px; }
-    }
-  </style>
-
-  <!-- Schema: SoftwareApplication (EDiFi product) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "EDiFi",
-    "alternateName": "EDiFi Enterprise",
-    "applicationCategory": "BusinessApplication",
-    "applicationSubCategory": "Dental Practice Management Software",
-    "operatingSystem": "Web",
-    "url": "https://www.elitedentalforce.com/pages/edifi.html",
-    "description": "EDiFi is an AI powered dental revenue intelligence platform that automates insurance eligibility verification, clean claim submissions, payment auditing, chairside documentation, voice AI for perio charting, and medical billing crossover for dental practices and DSOs.",
-    "offers": {
-      "@type": "Offer",
-      "price": "499",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "499",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
+    <!-- Schema: SoftwareApplication (EDiFi product) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EDiFi",
+        "alternateName": "EDiFi Enterprise",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Dental Practice Management Software",
+        "operatingSystem": "Web",
+        "url": "https://www.elitedentalforce.com/pages/edifi.html",
+        "description": "EDiFi is an AI powered dental revenue intelligence platform that automates insurance eligibility verification, clean claim submissions, payment auditing, chairside documentation, voice AI for perio charting, and medical billing crossover for dental practices and DSOs.",
+        "offers": {
+          "@type": "Offer",
+          "price": "499",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "499",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          }
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "Elite Dental Force",
+          "url": "https://www.elitedentalforce.com"
+        },
+        "featureList": [
+          "AI powered dental insurance eligibility verification",
+          "Automated clean dental claim submissions",
+          "Dental payment audit and underpayment detection",
+          "Voice AI for hands free perio charting",
+          "Medical billing crossover from dental to medical",
+          "DSO multi location orchestration dashboard",
+          "Chairside AI clinical documentation",
+          "Claim denial analytics and prevention",
+          "Open Dental integration",
+          "Dentrix integration",
+          "Eaglesoft integration"
+        ],
+        "screenshot": "https://www.elitedentalforce.com/images/edifi-dashboard.png",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "47",
+          "bestRating": "5"
+        }
       }
-    },
-    "creator": {
-      "@type": "Organization",
-      "name": "Elite Dental Force",
-      "url": "https://www.elitedentalforce.com"
-    },
-    "featureList": [
-      "AI powered dental insurance eligibility verification",
-      "Automated clean dental claim submissions",
-      "Dental payment audit and underpayment detection",
-      "Voice AI for hands free perio charting",
-      "Medical billing crossover from dental to medical",
-      "DSO multi location orchestration dashboard",
-      "Chairside AI clinical documentation",
-      "Claim denial analytics and prevention",
-      "Open Dental integration",
-      "Dentrix integration",
-      "Eaglesoft integration"
-    ],
-    "screenshot": "https://www.elitedentalforce.com/images/edifi-dashboard.png",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "47",
-      "bestRating": "5"
-    }
-  }
-  </script>
+    </script>
 
-  <!-- Schema: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.elitedentalforce.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Platform", "item": "https://www.elitedentalforce.com/pages/platform.html"},
-      {"@type": "ListItem", "position": 3, "name": "EDiFi Software", "item": "https://www.elitedentalforce.com/pages/edifi.html"}
-    ]
-  }
-  </script>
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="logo">
-          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
-        </a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="has-dropdown">
-              <a href="platform.html" class="nav-link active">Platform</a>
-              <ul class="dropdown">
-                <li><a href="platform.html">Platform Overview</a></li>
-                
-                <li><a href="edifi.html">EDiFi Software</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="services.html" class="nav-link">Solutions</a>
-              <ul class="dropdown">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="partners.html">Partners</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
-              <ul class="dropdown">
-                <li><a href="resources/blog.html">Blog</a></li>
-                <li><a href="resources/podcast.html">Podcast</a></li>
-                <li><a href="resources/webinars.html">Webinars</a></li>
-                <li><a href="resources/news.html">News</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="company.html" class="nav-link">Company</a>
-              <ul class="dropdown">
-                <li><a href="company.html">About Us</a></li>
-                <li><a href="company/security.html">Security</a></li>
-                <li><a href="investors.html">Investors</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="nav-cta">
-            <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
-          </div>
-        </nav>
-        <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.elitedentalforce.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Platform",
+            "item": "https://www.elitedentalforce.com/pages/platform.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "EDiFi Software",
+            "item": "https://www.elitedentalforce.com/pages/edifi.html"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does EDiFi cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi starts at $499 per month for a single-location practice. Enterprise pricing for DSOs and multi-location groups is customized based on number of locations and production volume. Most practices recover the cost of EDiFi in the first month through underpayment recovery alone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What practice management software does EDiFi integrate with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi currently integrates with Open Dental, Dentrix, and Eaglesoft through a lightweight desktop agent called EDiFi Connect. The agent reads appointment and insurance data from your PMS without requiring any changes to your existing workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is EDiFi different from outsourcing billing to an RCM company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "RCM companies work on your behalf after the claim is filed. EDiFi works before and during claim submission to prevent denials and underpayments from occurring in the first place. You keep control of your revenue cycle, your data, and your patient relationships, while EDiFi eliminates the errors that RCM companies are paid to chase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can EDiFi replace our current billing staff?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi is designed to augment your billing team, not replace them. It automates the repetitive, time-consuming work like eligibility checks, claim scrubbing, and payment reconciliation so your team can focus on exceptions, patient communication, and high-value tasks. Most practices find their existing team can handle significantly higher production volume once EDiFi is running."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the typical ROI of using EDiFi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Practices using EDiFi typically recover 12 to 18 percent of previously uncollected revenue within the first 90 days. Our payment audit engine found $59,000 in underpayments in a single pilot practice audit. Most practices achieve full ROI within 30 days of going live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does EDiFi handle denied claims?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi's AI claim scrubbing engine analyzes each claim against payer-specific rules before submission to catch denial-triggering errors. When denials do occur, EDiFi logs them, categorizes the denial reason, and surfaces appeal opportunities with supporting documentation. The denial prevention system learns from each denial to improve future claim accuracy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does EDiFi require a long-term contract?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi offers flexible monthly agreements for single-location practices. Enterprise and DSO agreements are typically annual. Contact the sales team to discuss contract options that fit your practice's situation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What support does EDiFi provide during and after onboarding?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every EDiFi customer receives a dedicated onboarding specialist during implementation and ongoing access to customer support. Enterprise customers receive a dedicated customer success manager who monitors performance metrics and proactively surfaces revenue optimization opportunities."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: Speakable -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "EDiFi — Dental Revenue Intelligence Platform",
+        "url": "https://www.elitedentalforce.com/pages/edifi.html",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".ep-hero-sub"]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="../index.html" class="logo">
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+          </a>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="platform.html" class="nav-link active">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+
+                  <li><a href="edifi.html">EDiFi Software</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="services.html" class="nav-link">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="partners.html">Partners</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="resources/blog.html">Blog</a></li>
+                  <li><a href="resources/podcast.html">Podcast</a></li>
+                  <li><a href="resources/webinars.html">Webinars</a></li>
+                  <li><a href="resources/news.html">News</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="company.html">About Us</a></li>
+                  <li><a href="company/security.html">Security</a></li>
+                  <li><a href="investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- ============================================================
+    <main>
+      <!-- ============================================================
          HERO — Centered, large product screenshot below headline
          ============================================================ -->
-    <section class="ep-hero">
-      <div class="container">
-        <div class="ep-hero-badge">
-          <div class="ep-hero-badge-dot"></div>
-          Live Platform Demo Available
+      <section class="ep-hero">
+        <div class="container">
+          <div class="ep-hero-badge">
+            <div class="ep-hero-badge-dot"></div>
+            Live Platform Demo Available
+          </div>
+          <h1>
+            The Software That Runs<br /><span>Dental Revenue Intelligence</span>
+          </h1>
+          <p class="ep-hero-sub">
+            EDiFi connects to your PMS, monitors every payer transaction, and
+            surfaces the revenue your current process leaves behind.
+          </p>
+          <div class="ep-hero-actions">
+            <a
+              href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+              target="_blank"
+              class="btn btn-primary btn-lg"
+              >Schedule a Live Demo</a
+            >
+            <a href="#modules" class="btn btn-secondary btn-lg"
+              >Explore Modules</a
+            >
+          </div>
         </div>
-        <h1>The Software That Runs<br><span>Dental Revenue Intelligence</span></h1>
-        <p class="ep-hero-sub">EDiFi connects to your PMS, monitors every payer transaction, and surfaces the revenue your current process leaves behind.</p>
-        <div class="ep-hero-actions">
-          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary btn-lg">Schedule a Live Demo</a>
-          <a href="#modules" class="btn btn-secondary btn-lg">Explore Modules</a>
-        </div>
-      </div>
 
-      <!-- Full-width perspective-tilted product screenshot -->
-      <div class="ep-hero-screen">
-        <div class="ep-hero-screen-inner">
-          <img src="../images/screenshots/ss-dashboard.png"
-               alt="EDiFi Revenue Intelligence Platform: live dashboard showing eligibility status, appointment schedule, claims pipeline and A/R alerts">
+        <!-- Full-width perspective-tilted product screenshot -->
+        <div class="ep-hero-screen">
+          <div class="ep-hero-screen-inner">
+            <img
+              src="../images/screenshots/ss-dashboard.png"
+              alt="EDiFi Revenue Intelligence Platform: live dashboard showing eligibility status, appointment schedule, claims pipeline and A/R alerts" width="2880" height="1800" loading="lazy" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============================================================
+      <!-- ============================================================
          STATS BAR
          ============================================================ -->
-    <div class="ep-stats">
-      <div class="container">
-        <div class="ep-stats-grid">
-          <div class="ep-stat">
-            <div class="ep-stat-value">$59K+</div>
-            <div class="ep-stat-label">Underpayments found in beta cohort</div>
-          </div>
-          <div class="ep-stat">
-            <div class="ep-stat-value">94.2%</div>
-            <div class="ep-stat-label">Clean claim rate (vs. 75% industry avg)</div>
-          </div>
-          <div class="ep-stat">
-            <div class="ep-stat-value">Real Time</div>
-            <div class="ep-stat-label">Eligibility status verification</div>
-          </div>
-          <div class="ep-stat">
-            <div class="ep-stat-value">27%</div>
-            <div class="ep-stat-label">Avg. denial rate reduction after 90 days</div>
+      <div class="ep-stats">
+        <div class="container">
+          <div class="ep-stats-grid">
+            <div class="ep-stat">
+              <div class="ep-stat-value">$59K+</div>
+              <div class="ep-stat-label">
+                Underpayments found in beta cohort
+              </div>
+            </div>
+            <div class="ep-stat">
+              <div class="ep-stat-value">94.2%</div>
+              <div class="ep-stat-label">
+                Clean claim rate (vs. 75% industry avg)
+              </div>
+            </div>
+            <div class="ep-stat">
+              <div class="ep-stat-value">Real Time</div>
+              <div class="ep-stat-label">Eligibility status verification</div>
+            </div>
+            <div class="ep-stat">
+              <div class="ep-stat-value">27%</div>
+              <div class="ep-stat-label">
+                Avg. denial rate reduction after 90 days
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ============================================================
+      <!-- ============================================================
          TAB EXPLORER — Click-through 4 platform views
          ============================================================ -->
-    <section class="ep-section" id="modules">
-      <div class="container">
-        <div class="ep-section-header">
-          <span class="ep-overline">Interactive Tour</span>
-          <h2>Four Systems. One Platform.</h2>
-          <p>Click any module to see the actual EDiFi interface your team will use every day.</p>
+      <section class="ep-section" id="modules">
+        <div class="container">
+          <div class="ep-section-header">
+            <span class="ep-overline">Interactive Tour</span>
+            <h2>Four Systems. One Platform.</h2>
+            <p>
+              Click any module to see the actual EDiFi interface your team will
+              use every day.
+            </p>
+          </div>
+
+          <div class="ep-tabs">
+            <div class="ep-tab-nav">
+              <button class="ep-tab-btn active" data-tab="dashboard">
+                <div class="ep-tab-dot"></div>
+                Revenue Dashboard
+              </button>
+              <button class="ep-tab-btn" data-tab="claims">
+                <div class="ep-tab-dot"></div>
+                Claim Intelligence
+              </button>
+              <button class="ep-tab-btn" data-tab="voice">
+                <div class="ep-tab-dot"></div>
+                Voice AI Monitor
+              </button>
+              <button class="ep-tab-btn" data-tab="perio">
+                <div class="ep-tab-dot"></div>
+                Perio Charting AI
+              </button>
+            </div>
+
+            <!-- Tab 1: Dashboard -->
+            <div class="ep-tab-content active" id="tab-dashboard">
+              <div class="ep-tab-screen">
+                <img
+                  src="../images/screenshots/ss-dashboard.png"
+                  alt="EDiFi Dashboard: real time revenue health, urgent appointments, and today's appointment schedule with AI decision insights" width="2880" height="1800" loading="lazy" />
+              </div>
+              <div class="ep-tab-info">
+                <div>
+                  <span class="ep-overline">Module 01</span>
+                  <h3>Revenue Dashboard</h3>
+                  <p>
+                    Every morning starts here. The dashboard surfaces what needs
+                    attention before the first patient walks in: unverified
+                    insurance, urgent appointments, pending claims, and A/R
+                    aging over 90 days.
+                  </p>
+                </div>
+                <div class="ep-tab-metrics">
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Unverified Today</span>
+                    <span class="ep-tab-metric-value">3 flagged</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">A/R Over 90 Days</span>
+                    <span class="ep-tab-metric-value gold">$4,280</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">AI Decision Insight</span>
+                    <span class="ep-tab-metric-value blue"
+                      >Per appointment</span
+                    >
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Schedule Sync</span>
+                    <span class="ep-tab-metric-value green">Live</span>
+                  </div>
+                </div>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  style="width: fit-content"
+                  >See it live in a demo</a
+                >
+              </div>
+            </div>
+
+            <!-- Tab 2: Claims -->
+            <div class="ep-tab-content" id="tab-claims">
+              <div class="ep-tab-screen">
+                <img
+                  src="../images/screenshots/ss-claim-scrubber.png"
+                  alt="EDiFi Claim Scrubber: AI pre submission validation showing clean vs. flagged claims with denial probability scoring" width="2880" height="1800" loading="lazy" />
+              </div>
+              <div class="ep-tab-info">
+                <div>
+                  <span class="ep-overline">Module 02</span>
+                  <h3>Claim Intelligence</h3>
+                  <p>
+                    EDiFi scrubs every claim before it leaves your office. The
+                    AI assigns a denial probability score and flags exactly what
+                    needs to be fixed, so claims go out clean instead of coming
+                    back denied.
+                  </p>
+                </div>
+                <div class="ep-tab-metrics">
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Clean Claim Rate</span>
+                    <span class="ep-tab-metric-value green">94.2%</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label"
+                      >Denial Probability Score</span
+                    >
+                    <span class="ep-tab-metric-value">Per claim</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label"
+                      >Industry Avg Clean Rate</span
+                    >
+                    <span class="ep-tab-metric-value">75-80%</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Auto Scrub</span>
+                    <span class="ep-tab-metric-value blue"
+                      >Before submission</span
+                    >
+                  </div>
+                </div>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  style="width: fit-content"
+                  >See the scrubber live</a
+                >
+              </div>
+            </div>
+
+            <!-- Tab 3: Voice AI -->
+            <div class="ep-tab-content" id="tab-voice">
+              <div class="ep-tab-screen">
+                <img
+                  src="../images/screenshots/ss-voice-ai.png"
+                  alt="EDiFi Voice AI Monitor: live call activity showing Bella handling insurance verification calls with real time transcripts" width="2880" height="1800" loading="lazy" />
+              </div>
+              <div class="ep-tab-info">
+                <div>
+                  <span class="ep-overline">Module 03</span>
+                  <h3>Voice AI Monitor</h3>
+                  <p>
+                    Bella, EDiFi's Voice AI, answers after hours calls, verifies
+                    insurance directly with payers, and books appointments. The
+                    Voice AI Monitor shows every active session, live
+                    transcript, and outcome in real time.
+                  </p>
+                </div>
+                <div class="ep-tab-metrics">
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label"
+                      >Avg. Confidence Score</span
+                    >
+                    <span class="ep-tab-metric-value green">91.4%</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Active Sessions</span>
+                    <span class="ep-tab-metric-value blue"
+                      >Live monitoring</span
+                    >
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Call Types Handled</span>
+                    <span class="ep-tab-metric-value">Insurance + Booking</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Human Escalations</span>
+                    <span class="ep-tab-metric-value">Routed instantly</span>
+                  </div>
+                </div>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  style="width: fit-content"
+                  >Hear Bella in action</a
+                >
+              </div>
+            </div>
+
+            <!-- Tab 4: Perio -->
+            <div class="ep-tab-content" id="tab-perio">
+              <div class="ep-tab-screen">
+                <img
+                  src="../images/screenshots/ss-perio-charting.png"
+                  alt="EDiFi Perio Charting AI: voice controlled clinical documentation with AI risk assessment, CDT coding, and auto generated clinical narrative" width="2880" height="1800" loading="lazy" />
+              </div>
+              <div class="ep-tab-info">
+                <div>
+                  <span class="ep-overline">Module 04</span>
+                  <h3>Perio Charting AI</h3>
+                  <p>
+                    Hygienists call out pocket depths, BOP, and recession, and
+                    EDiFi records every measurement, generates the clinical
+                    narrative, and codes the visit automatically. No more
+                    dual-charting. No documentation lag.
+                  </p>
+                </div>
+                <div class="ep-tab-metrics">
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Voice Model</span>
+                    <span class="ep-tab-metric-value blue"
+                      >Deepgram Nova-3 Medical</span
+                    >
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">AI Confidence</span>
+                    <span class="ep-tab-metric-value green">94.1%</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">CDT Codes</span>
+                    <span class="ep-tab-metric-value">Auto suggested</span>
+                  </div>
+                  <div class="ep-tab-metric">
+                    <span class="ep-tab-metric-label">Clinical Narrative</span>
+                    <span class="ep-tab-metric-value">AI Generated</span>
+                  </div>
+                </div>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  style="width: fit-content"
+                  >See it with a hygienist</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="ep-tabs">
-          <div class="ep-tab-nav">
-            <button class="ep-tab-btn active" data-tab="dashboard">
-              <div class="ep-tab-dot"></div>
-              Revenue Dashboard
-            </button>
-            <button class="ep-tab-btn" data-tab="claims">
-              <div class="ep-tab-dot"></div>
-              Claim Intelligence
-            </button>
-            <button class="ep-tab-btn" data-tab="voice">
-              <div class="ep-tab-dot"></div>
-              Voice AI Monitor
-            </button>
-            <button class="ep-tab-btn" data-tab="perio">
-              <div class="ep-tab-dot"></div>
-              Perio Charting AI
-            </button>
-          </div>
-
-          <!-- Tab 1: Dashboard -->
-          <div class="ep-tab-content active" id="tab-dashboard">
-            <div class="ep-tab-screen">
-              <img src="../images/screenshots/ss-dashboard.png"
-                   alt="EDiFi Dashboard: real time revenue health, urgent appointments, and today's appointment schedule with AI decision insights">
-            </div>
-            <div class="ep-tab-info">
-              <div>
-                <span class="ep-overline">Module 01</span>
-                <h3>Revenue Dashboard</h3>
-                <p>Every morning starts here. The dashboard surfaces what needs attention before the first patient walks in: unverified insurance, urgent appointments, pending claims, and A/R aging over 90 days.</p>
-              </div>
-              <div class="ep-tab-metrics">
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Unverified Today</span>
-                  <span class="ep-tab-metric-value">3 flagged</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">A/R Over 90 Days</span>
-                  <span class="ep-tab-metric-value gold">$4,280</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">AI Decision Insight</span>
-                  <span class="ep-tab-metric-value blue">Per appointment</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Schedule Sync</span>
-                  <span class="ep-tab-metric-value green">Live</span>
-                </div>
-              </div>
-              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-secondary" style="width:fit-content;">See it live in a demo</a>
-            </div>
-          </div>
-
-          <!-- Tab 2: Claims -->
-          <div class="ep-tab-content" id="tab-claims">
-            <div class="ep-tab-screen">
-              <img src="../images/screenshots/ss-claim-scrubber.png"
-                   alt="EDiFi Claim Scrubber: AI pre submission validation showing clean vs. flagged claims with denial probability scoring">
-            </div>
-            <div class="ep-tab-info">
-              <div>
-                <span class="ep-overline">Module 02</span>
-                <h3>Claim Intelligence</h3>
-                <p>EDiFi scrubs every claim before it leaves your office. The AI assigns a denial probability score and flags exactly what needs to be fixed, so claims go out clean instead of coming back denied.</p>
-              </div>
-              <div class="ep-tab-metrics">
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Clean Claim Rate</span>
-                  <span class="ep-tab-metric-value green">94.2%</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Denial Probability Score</span>
-                  <span class="ep-tab-metric-value">Per claim</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Industry Avg Clean Rate</span>
-                  <span class="ep-tab-metric-value">75-80%</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Auto Scrub</span>
-                  <span class="ep-tab-metric-value blue">Before submission</span>
-                </div>
-              </div>
-              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-secondary" style="width:fit-content;">See the scrubber live</a>
-            </div>
-          </div>
-
-          <!-- Tab 3: Voice AI -->
-          <div class="ep-tab-content" id="tab-voice">
-            <div class="ep-tab-screen">
-              <img src="../images/screenshots/ss-voice-ai.png"
-                   alt="EDiFi Voice AI Monitor: live call activity showing Bella handling insurance verification calls with real time transcripts">
-            </div>
-            <div class="ep-tab-info">
-              <div>
-                <span class="ep-overline">Module 03</span>
-                <h3>Voice AI Monitor</h3>
-                <p>Bella, EDiFi's Voice AI, answers after hours calls, verifies insurance directly with payers, and books appointments. The Voice AI Monitor shows every active session, live transcript, and outcome in real time.</p>
-              </div>
-              <div class="ep-tab-metrics">
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Avg. Confidence Score</span>
-                  <span class="ep-tab-metric-value green">91.4%</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Active Sessions</span>
-                  <span class="ep-tab-metric-value blue">Live monitoring</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Call Types Handled</span>
-                  <span class="ep-tab-metric-value">Insurance + Booking</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Human Escalations</span>
-                  <span class="ep-tab-metric-value">Routed instantly</span>
-                </div>
-              </div>
-              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-secondary" style="width:fit-content;">Hear Bella in action</a>
-            </div>
-          </div>
-
-          <!-- Tab 4: Perio -->
-          <div class="ep-tab-content" id="tab-perio">
-            <div class="ep-tab-screen">
-              <img src="../images/screenshots/ss-perio-charting.png"
-                   alt="EDiFi Perio Charting AI: voice controlled clinical documentation with AI risk assessment, CDT coding, and auto generated clinical narrative">
-            </div>
-            <div class="ep-tab-info">
-              <div>
-                <span class="ep-overline">Module 04</span>
-                <h3>Perio Charting AI</h3>
-                <p>Hygienists call out pocket depths, BOP, and recession, and EDiFi records every measurement, generates the clinical narrative, and codes the visit automatically. No more dual-charting. No documentation lag.</p>
-              </div>
-              <div class="ep-tab-metrics">
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Voice Model</span>
-                  <span class="ep-tab-metric-value blue">Deepgram Nova-3 Medical</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">AI Confidence</span>
-                  <span class="ep-tab-metric-value green">94.1%</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">CDT Codes</span>
-                  <span class="ep-tab-metric-value">Auto suggested</span>
-                </div>
-                <div class="ep-tab-metric">
-                  <span class="ep-tab-metric-label">Clinical Narrative</span>
-                  <span class="ep-tab-metric-value">AI Generated</span>
-                </div>
-              </div>
-              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-secondary" style="width:fit-content;">See it with a hygienist</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
+      <!-- ============================================================
          STICKY SIDEBAR — Module Deep-Dive
          ============================================================ -->
-    <section class="ep-section" style="background:rgba(6,14,38,0.5);">
-      <div class="container">
-        <div class="ep-section-header">
-          <span class="ep-overline">Deep Dive</span>
-          <h2>Every Module, Explained</h2>
-          <p>How each system works, what it catches, and what it automates.</p>
-        </div>
+      <section class="ep-section" style="background: rgba(6, 14, 38, 0.5)">
+        <div class="container">
+          <div class="ep-section-header">
+            <span class="ep-overline">Deep Dive</span>
+            <h2>Every Module, Explained</h2>
+            <p>
+              How each system works, what it catches, and what it automates.
+            </p>
+          </div>
 
-        <div class="ep-sidebar-layout">
-          <!-- Sticky left nav -->
-          <nav class="ep-sidebar-nav" aria-label="Module navigation">
-            <a href="#panel-dashboard" class="ep-sidebar-link active" data-panel="panel-dashboard">
-              <div class="ep-sidebar-link-dot"></div>
-              Revenue Dashboard
-            </a>
-            <a href="#panel-claims" class="ep-sidebar-link" data-panel="panel-claims">
-              <div class="ep-sidebar-link-dot"></div>
-              Claim Intelligence
-            </a>
-            <div class="ep-sidebar-divider"></div>
-            <a href="#panel-voice" class="ep-sidebar-link" data-panel="panel-voice">
-              <div class="ep-sidebar-link-dot"></div>
-              Voice AI Monitor
-            </a>
-            <a href="#panel-perio" class="ep-sidebar-link" data-panel="panel-perio">
-              <div class="ep-sidebar-link-dot"></div>
-              Perio Charting AI
-            </a>
-          </nav>
+          <div class="ep-sidebar-layout">
+            <!-- Sticky left nav -->
+            <nav class="ep-sidebar-nav" aria-label="Module navigation">
+              <a
+                href="#panel-dashboard"
+                class="ep-sidebar-link active"
+                data-panel="panel-dashboard"
+              >
+                <div class="ep-sidebar-link-dot"></div>
+                Revenue Dashboard
+              </a>
+              <a
+                href="#panel-claims"
+                class="ep-sidebar-link"
+                data-panel="panel-claims"
+              >
+                <div class="ep-sidebar-link-dot"></div>
+                Claim Intelligence
+              </a>
+              <div class="ep-sidebar-divider"></div>
+              <a
+                href="#panel-voice"
+                class="ep-sidebar-link"
+                data-panel="panel-voice"
+              >
+                <div class="ep-sidebar-link-dot"></div>
+                Voice AI Monitor
+              </a>
+              <a
+                href="#panel-perio"
+                class="ep-sidebar-link"
+                data-panel="panel-perio"
+              >
+                <div class="ep-sidebar-link-dot"></div>
+                Perio Charting AI
+              </a>
+            </nav>
 
-          <!-- Right: scrolling panels -->
-          <div class="ep-feature-panels">
-
-            <!-- Panel 1: Dashboard -->
-            <div class="ep-feature-panel" id="panel-dashboard">
-              <span class="ep-panel-tag">Revenue Dashboard</span>
-              <h3>Your Daily Command Center</h3>
-              <p>The EDiFi dashboard replaces the morning scramble of checking your PMS, payer portals, and spreadsheets. Everything your front desk and billing team needs is surfaced in one real time view, prioritized by urgency.</p>
-              <div class="ep-screen-card">
-                <img src="../images/screenshots/ss-dashboard.png"
-                     alt="EDiFi Revenue Dashboard with appointment schedule, insurance status, and A/R alerts">
+            <!-- Right: scrolling panels -->
+            <div class="ep-feature-panels">
+              <!-- Panel 1: Dashboard -->
+              <div class="ep-feature-panel" id="panel-dashboard">
+                <span class="ep-panel-tag">Revenue Dashboard</span>
+                <h3>Your Daily Command Center</h3>
+                <p>
+                  The EDiFi dashboard replaces the morning scramble of checking
+                  your PMS, payer portals, and spreadsheets. Everything your
+                  front desk and billing team needs is surfaced in one real time
+                  view, prioritized by urgency.
+                </p>
+                <div class="ep-screen-card">
+                  <img
+                    src="../images/screenshots/ss-dashboard.png"
+                    alt="EDiFi Revenue Dashboard with appointment schedule, insurance status, and A/R alerts" width="2880" height="1800" loading="lazy" />
+                </div>
+                <div class="ep-detail-grid">
+                  <div class="ep-detail-card">
+                    <h5>Urgent Queue</h5>
+                    <p>
+                      Appointments in the next 2 hours with unresolved
+                      insurance, flagged eligibility, or billing notes, sorted
+                      by time
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>AI Decision Insight</h5>
+                    <p>
+                      Every appointment row shows a plain-English note: "Covered
+                      100% preventive," "Deductible $450 remaining, patient owes
+                      ~$160"
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>A/R Aging Alerts</h5>
+                    <p>
+                      Balances over 90 days are surfaced with the exact count
+                      and dollar amount requiring immediate follow up action
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Live PMS Sync</h5>
+                    <p>
+                      Appointment board updates as your PMS changes, no manual
+                      refresh, no missed appointments, no stale data
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="ep-detail-grid">
-                <div class="ep-detail-card">
-                  <h5>Urgent Queue</h5>
-                  <p>Appointments in the next 2 hours with unresolved insurance, flagged eligibility, or billing notes, sorted by time</p>
+
+              <!-- Panel 2: Claims -->
+              <div class="ep-feature-panel" id="panel-claims">
+                <span class="ep-panel-tag">Claim Intelligence</span>
+                <h3>Submit Clean. Get Paid Fast.</h3>
+                <p>
+                  The Claim Scrubber intercepts every claim before it hits the
+                  clearinghouse. The AI checks it against payer rules, CDT code
+                  requirements, and past denial patterns, then assigns a denial
+                  probability score with a fix recommendation.
+                </p>
+                <div class="ep-screen-card">
+                  <img
+                    src="../images/screenshots/ss-claim-scrubber.png"
+                    alt="EDiFi Claim Scrubber showing 94.2% clean claim rate with AI scrub warnings and fix recommendations" width="2880" height="1800" loading="lazy" />
                 </div>
-                <div class="ep-detail-card">
-                  <h5>AI Decision Insight</h5>
-                  <p>Every appointment row shows a plain-English note: "Covered 100% preventive," "Deductible $450 remaining, patient owes ~$160"</p>
+                <div class="ep-detail-grid">
+                  <div class="ep-detail-card">
+                    <h5>Pre Submission Scrub</h5>
+                    <p>
+                      Every claim is checked before submission: missing tooth
+                      numbers, surface codes, frequency limit violations, prior
+                      auth requirements
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Denial Probability Score</h5>
+                    <p>
+                      Each flagged claim gets a probability: "87% chance of
+                      denial without correction." Fix it once, not after it
+                      comes back
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Recommended Fix</h5>
+                    <p>
+                      EDiFi tells you exactly what to change: "Add both number
+                      to claim. CDT D2391 requires surface and tooth number"
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>94.2% Clean Rate</h5>
+                    <p>
+                      Beta offices on EDiFi submit at 94.2% first-pass
+                      acceptance vs. the 75-80% industry average without a
+                      scrubber
+                    </p>
+                  </div>
                 </div>
-                <div class="ep-detail-card">
-                  <h5>A/R Aging Alerts</h5>
-                  <p>Balances over 90 days are surfaced with the exact count and dollar amount requiring immediate follow up action</p>
+              </div>
+
+              <!-- Panel 3: Voice AI -->
+              <div class="ep-feature-panel" id="panel-voice">
+                <span class="ep-panel-tag">Voice AI Monitor</span>
+                <h3>Bella Works While You're Closed</h3>
+                <p>
+                  Bella is EDiFi's Voice AI agent. She picks up after hours
+                  calls, verifies insurance by calling payers directly, books
+                  appointments, and logs a full transcript, so your team arrives
+                  to completed eligibility checks, not voicemails.
+                </p>
+                <div class="ep-screen-card">
+                  <img
+                    src="../images/screenshots/ss-voice-ai.png"
+                    alt="EDiFi Voice AI Monitor showing active sessions, live transcripts, and insurance verification calls in progress" width="2880" height="1800" loading="lazy" />
                 </div>
-                <div class="ep-detail-card">
-                  <h5>Live PMS Sync</h5>
-                  <p>Appointment board updates as your PMS changes, no manual refresh, no missed appointments, no stale data</p>
+                <div class="ep-detail-grid">
+                  <div class="ep-detail-card">
+                    <h5>Live Session Monitor</h5>
+                    <p>
+                      Watch Bella's active calls in real time: caller intent,
+                      current status, confidence score, and session duration
+                      displayed as it happens
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Full Transcript</h5>
+                    <p>
+                      Every word of every call is transcribed, stored, and
+                      linked to the patient record. No lost information, no
+                      disputed conversations
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Insurance Verification</h5>
+                    <p>
+                      Bella calls the payer, navigates the IVR, extracts
+                      coverage details, and writes results back to EDiFi
+                      automatically, before the appointment
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>91.4% Confidence</h5>
+                    <p>
+                      Average call confidence score across beta sessions. Calls
+                      below threshold are flagged and routed to a human without
+                      interrupting the patient experience
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 4: Perio -->
+              <div class="ep-feature-panel" id="panel-perio">
+                <span class="ep-panel-tag">Perio Charting AI</span>
+                <h3>Chart with Your Voice. Code Automatically.</h3>
+                <p>
+                  Hygienists speak. EDiFi listens. Every pocket depth, BOP,
+                  furcation, and mobility gets recorded by voice, plotted on the
+                  chart, and used to generate a clinical narrative and CDT code
+                  suggestions, all before the patient leaves the chair.
+                </p>
+                <div class="ep-screen-card">
+                  <img
+                    src="../images/screenshots/ss-perio-charting.png"
+                    alt="EDiFi Perio Charting AI with voice controlled chart recording, clinical intelligence panel, and AI generated clinical narrative" width="2880" height="1800" loading="lazy" />
+                </div>
+                <div class="ep-detail-grid">
+                  <div class="ep-detail-card">
+                    <h5>Voice Controlled Charting</h5>
+                    <p>
+                      Deepgram Nova-3 Medical model trained on dental
+                      terminology. Call out tooth numbers, depths, and findings
+                      and EDiFi records exactly what you say
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Clinical Alert Engine</h5>
+                    <p>
+                      When BOP and pocket depth cross clinical thresholds, EDiFi
+                      flags the site immediately: "Pocket depths 5/4/5 with
+                      bleeding on probing. Localized moderate periodontal
+                      involvement"
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>Auto CDT Coding</h5>
+                    <p>
+                      Based on chart findings, EDiFi recommends D4341, D4342,
+                      D0274 with payer coverage pulled from the patient's active
+                      benefits
+                    </p>
+                  </div>
+                  <div class="ep-detail-card">
+                    <h5>AI Narrative</h5>
+                    <p>
+                      A complete clinical narrative is generated and ready for
+                      doctor review before the patient leaves: "PERIODONTAL
+                      EXAMINATION, Maria Johnson, April 9, 2026"
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Panel 2: Claims -->
-            <div class="ep-feature-panel" id="panel-claims">
-              <span class="ep-panel-tag">Claim Intelligence</span>
-              <h3>Submit Clean. Get Paid Fast.</h3>
-              <p>The Claim Scrubber intercepts every claim before it hits the clearinghouse. The AI checks it against payer rules, CDT code requirements, and past denial patterns, then assigns a denial probability score with a fix recommendation.</p>
-              <div class="ep-screen-card">
-                <img src="../images/screenshots/ss-claim-scrubber.png"
-                     alt="EDiFi Claim Scrubber showing 94.2% clean claim rate with AI scrub warnings and fix recommendations">
-              </div>
-              <div class="ep-detail-grid">
-                <div class="ep-detail-card">
-                  <h5>Pre Submission Scrub</h5>
-                  <p>Every claim is checked before submission: missing tooth numbers, surface codes, frequency limit violations, prior auth requirements</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Denial Probability Score</h5>
-                  <p>Each flagged claim gets a probability: "87% chance of denial without correction." Fix it once, not after it comes back</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Recommended Fix</h5>
-                  <p>EDiFi tells you exactly what to change: "Add both number to claim. CDT D2391 requires surface and tooth number"</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>94.2% Clean Rate</h5>
-                  <p>Beta offices on EDiFi submit at 94.2% first-pass acceptance vs. the 75-80% industry average without a scrubber</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Panel 3: Voice AI -->
-            <div class="ep-feature-panel" id="panel-voice">
-              <span class="ep-panel-tag">Voice AI Monitor</span>
-              <h3>Bella Works While You're Closed</h3>
-              <p>Bella is EDiFi's Voice AI agent. She picks up after hours calls, verifies insurance by calling payers directly, books appointments, and logs a full transcript, so your team arrives to completed eligibility checks, not voicemails.</p>
-              <div class="ep-screen-card">
-                <img src="../images/screenshots/ss-voice-ai.png"
-                     alt="EDiFi Voice AI Monitor showing active sessions, live transcripts, and insurance verification calls in progress">
-              </div>
-              <div class="ep-detail-grid">
-                <div class="ep-detail-card">
-                  <h5>Live Session Monitor</h5>
-                  <p>Watch Bella's active calls in real time: caller intent, current status, confidence score, and session duration displayed as it happens</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Full Transcript</h5>
-                  <p>Every word of every call is transcribed, stored, and linked to the patient record. No lost information, no disputed conversations</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Insurance Verification</h5>
-                  <p>Bella calls the payer, navigates the IVR, extracts coverage details, and writes results back to EDiFi automatically, before the appointment</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>91.4% Confidence</h5>
-                  <p>Average call confidence score across beta sessions. Calls below threshold are flagged and routed to a human without interrupting the patient experience</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Panel 4: Perio -->
-            <div class="ep-feature-panel" id="panel-perio">
-              <span class="ep-panel-tag">Perio Charting AI</span>
-              <h3>Chart with Your Voice. Code Automatically.</h3>
-              <p>Hygienists speak. EDiFi listens. Every pocket depth, BOP, furcation, and mobility gets recorded by voice, plotted on the chart, and used to generate a clinical narrative and CDT code suggestions, all before the patient leaves the chair.</p>
-              <div class="ep-screen-card">
-                <img src="../images/screenshots/ss-perio-charting.png"
-                     alt="EDiFi Perio Charting AI with voice controlled chart recording, clinical intelligence panel, and AI generated clinical narrative">
-              </div>
-              <div class="ep-detail-grid">
-                <div class="ep-detail-card">
-                  <h5>Voice Controlled Charting</h5>
-                  <p>Deepgram Nova-3 Medical model trained on dental terminology. Call out tooth numbers, depths, and findings and EDiFi records exactly what you say</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Clinical Alert Engine</h5>
-                  <p>When BOP and pocket depth cross clinical thresholds, EDiFi flags the site immediately: "Pocket depths 5/4/5 with bleeding on probing. Localized moderate periodontal involvement"</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>Auto CDT Coding</h5>
-                  <p>Based on chart findings, EDiFi recommends D4341, D4342, D0274 with payer coverage pulled from the patient's active benefits</p>
-                </div>
-                <div class="ep-detail-card">
-                  <h5>AI Narrative</h5>
-                  <p>A complete clinical narrative is generated and ready for doctor review before the patient leaves: "PERIODONTAL EXAMINATION, Maria Johnson, April 9, 2026"</p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============================================================
+      <!-- ============================================================
          COMPARISON TABLE
          ============================================================ -->
-    <section class="ep-section">
-      <div class="container">
-        <div class="ep-section-header">
-          <span class="ep-overline">Why EDiFi</span>
-          <h2>What Your Team Does Now vs. What EDiFi Does</h2>
-          <p>Every task your billing team handles manually is a task EDiFi can automate, audit, or eliminate.</p>
+      <section class="ep-section">
+        <div class="container">
+          <div class="ep-section-header">
+            <span class="ep-overline">Why EDiFi</span>
+            <h2>What Your Team Does Now vs. What EDiFi Does</h2>
+            <p>
+              Every task your billing team handles manually is a task EDiFi can
+              automate, audit, or eliminate.
+            </p>
+          </div>
+
+          <table class="ep-compare-table">
+            <thead>
+              <tr>
+                <th style="width: 35%">Task</th>
+                <th>Manual Process</th>
+                <th class="edifi-col">EDiFi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-name">Insurance eligibility verification</td>
+                <td class="manual">
+                  <span class="cross">x</span> 10-15 min per patient, portal by
+                  portal
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Real time status verification,
+                  major carriers, benefit detail varies by payer
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">Pre submission claim scrub</td>
+                <td class="manual">
+                  <span class="cross">x</span> Manual review, only high-dollar
+                  claims checked
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Every claim scored before it
+                  leaves the office
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">EOB payment reconciliation</td>
+                <td class="manual">
+                  <span class="cross">x</span> Manual comparison against fee
+                  schedules, if done at all
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Auto flagged with exact
+                  underpayment amount + appeal draft
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">After hours patient calls</td>
+                <td class="manual">
+                  <span class="cross">x</span> Voicemail, returned next morning
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Bella answers, books, verifies
+                  insurance overnight
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">Perio chart documentation</td>
+                <td class="manual">
+                  <span class="cross">x</span> Dual-entry: assistant calls out,
+                  hygienist types
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Hygienist speaks, EDiFi records,
+                  one person, one step
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">Denial management</td>
+                <td class="manual">
+                  <span class="cross">x</span> Reactive, found after rejection,
+                  researched manually
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Proactive, denial risk scored
+                  before submission
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">A/R aging follow up</td>
+                <td class="manual">
+                  <span class="cross">x</span> Monthly reports, manually
+                  prioritized
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> Daily dashboard, auto-sorted by
+                  age and dollar amount
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-name">CDT code suggestions</td>
+                <td class="manual">
+                  <span class="cross">x</span> Provider memory and manual lookup
+                </td>
+                <td class="edifi">
+                  <span class="check">✓</span> AI generated from chart findings
+                  + payer coverage
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </section>
 
-        <table class="ep-compare-table">
-          <thead>
-            <tr>
-              <th style="width:35%">Task</th>
-              <th>Manual Process</th>
-              <th class="edifi-col">EDiFi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="feature-name">Insurance eligibility verification</td>
-              <td class="manual"><span class="cross">x</span> 10-15 min per patient, portal by portal</td>
-              <td class="edifi"><span class="check">✓</span> Real time status verification, major carriers, benefit detail varies by payer</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Pre submission claim scrub</td>
-              <td class="manual"><span class="cross">x</span> Manual review, only high-dollar claims checked</td>
-              <td class="edifi"><span class="check">✓</span> Every claim scored before it leaves the office</td>
-            </tr>
-            <tr>
-              <td class="feature-name">EOB payment reconciliation</td>
-              <td class="manual"><span class="cross">x</span> Manual comparison against fee schedules, if done at all</td>
-              <td class="edifi"><span class="check">✓</span> Auto flagged with exact underpayment amount + appeal draft</td>
-            </tr>
-            <tr>
-              <td class="feature-name">After hours patient calls</td>
-              <td class="manual"><span class="cross">x</span> Voicemail, returned next morning</td>
-              <td class="edifi"><span class="check">✓</span> Bella answers, books, verifies insurance overnight</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Perio chart documentation</td>
-              <td class="manual"><span class="cross">x</span> Dual-entry: assistant calls out, hygienist types</td>
-              <td class="edifi"><span class="check">✓</span> Hygienist speaks, EDiFi records, one person, one step</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Denial management</td>
-              <td class="manual"><span class="cross">x</span> Reactive, found after rejection, researched manually</td>
-              <td class="edifi"><span class="check">✓</span> Proactive, denial risk scored before submission</td>
-            </tr>
-            <tr>
-              <td class="feature-name">A/R aging follow up</td>
-              <td class="manual"><span class="cross">x</span> Monthly reports, manually prioritized</td>
-              <td class="edifi"><span class="check">✓</span> Daily dashboard, auto-sorted by age and dollar amount</td>
-            </tr>
-            <tr>
-              <td class="feature-name">CDT code suggestions</td>
-              <td class="manual"><span class="cross">x</span> Provider memory and manual lookup</td>
-              <td class="edifi"><span class="check">✓</span> AI generated from chart findings + payer coverage</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ============================================================
+      <!-- ============================================================
          TECH SPECS
          ============================================================ -->
-    <section class="ep-section" style="background:rgba(6,14,38,0.5);">
-      <div class="container">
-        <div class="ep-section-header">
-          <span class="ep-overline">Technical Specifications</span>
-          <h2>Built for Production. Not a Demo.</h2>
-          <p>The infrastructure behind EDiFi is enterprise-grade, not a proof of concept you'll outgrow.</p>
-        </div>
+      <section class="ep-section" style="background: rgba(6, 14, 38, 0.5)">
+        <div class="container">
+          <div class="ep-section-header">
+            <span class="ep-overline">Technical Specifications</span>
+            <h2>Built for Production. Not a Demo.</h2>
+            <p>
+              The infrastructure behind EDiFi is enterprise-grade, not a proof
+              of concept you'll outgrow.
+            </p>
+          </div>
 
-        <div class="ep-spec-grid">
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Eligibility Verification</div>
-            <div class="ep-spec-value">Real Time</div>
-            <div class="ep-spec-desc">Active coverage and group status confirmed in real time via EDI 270/271. Full benefit breakdowns, deductibles, maximums, frequency limits, vary by payer and may require additional outreach.</div>
+          <div class="ep-spec-grid">
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Eligibility Verification</div>
+              <div class="ep-spec-value">Real Time</div>
+              <div class="ep-spec-desc">
+                Active coverage and group status confirmed in real time via EDI
+                270/271. Full benefit breakdowns, deductibles, maximums,
+                frequency limits, vary by payer and may require additional
+                outreach.
+              </div>
+            </div>
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Payer Connections</div>
+              <div class="ep-spec-value">Major Carriers</div>
+              <div class="ep-spec-desc">
+                Direct integrations with the major dental insurance carriers via
+                EDI 270/271 and real time API connections, covering the majority
+                of dental plan members nationwide.
+              </div>
+            </div>
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Platform Uptime</div>
+              <div class="ep-spec-value">99.9%</div>
+              <div class="ep-spec-desc">
+                SLA-backed uptime with 24/7 infrastructure monitoring. Incident
+                response under 15 minutes.
+              </div>
+            </div>
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Voice AI Model</div>
+              <div class="ep-spec-value">Nova-3</div>
+              <div class="ep-spec-desc">
+                Deepgram Nova-3 Medical, purpose built for dental and medical
+                speech recognition. Trained on clinical terminology, tooth
+                numbers, and procedure names.
+              </div>
+            </div>
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Encryption</div>
+              <div class="ep-spec-value">AES-256</div>
+              <div class="ep-spec-desc">
+                All PHI encrypted at rest and in transit. HIPAA compliant
+                architecture with full BAA support.
+              </div>
+            </div>
+            <div class="ep-spec-card">
+              <div class="ep-spec-label">Compliance</div>
+              <div class="ep-spec-value">HIPAA</div>
+              <div class="ep-spec-desc">
+                HIPAA compliant architecture with full BAA support. Role based
+                access controls, complete audit logging, and zero-trust session
+                management.
+              </div>
+            </div>
           </div>
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Payer Connections</div>
-            <div class="ep-spec-value">Major Carriers</div>
-            <div class="ep-spec-desc">Direct integrations with the major dental insurance carriers via EDI 270/271 and real time API connections, covering the majority of dental plan members nationwide.</div>
-          </div>
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Platform Uptime</div>
-            <div class="ep-spec-value">99.9%</div>
-            <div class="ep-spec-desc">SLA-backed uptime with 24/7 infrastructure monitoring. Incident response under 15 minutes.</div>
-          </div>
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Voice AI Model</div>
-            <div class="ep-spec-value">Nova-3</div>
-            <div class="ep-spec-desc">Deepgram Nova-3 Medical, purpose built for dental and medical speech recognition. Trained on clinical terminology, tooth numbers, and procedure names.</div>
-          </div>
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Encryption</div>
-            <div class="ep-spec-value">AES-256</div>
-            <div class="ep-spec-desc">All PHI encrypted at rest and in transit. HIPAA compliant architecture with full BAA support.</div>
-          </div>
-          <div class="ep-spec-card">
-            <div class="ep-spec-label">Compliance</div>
-            <div class="ep-spec-value">HIPAA</div>
-            <div class="ep-spec-desc">HIPAA compliant architecture with full BAA support. Role based access controls, complete audit logging, and zero-trust session management.</div>
+
+          <div style="margin-top: 48px">
+            <p
+              style="
+                text-align: center;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--edifi-muted);
+                margin-bottom: 20px;
+              "
+            >
+              Integrates with your practice management system
+            </p>
+            <div class="ep-integration-row">
+              <div class="ep-integration-pill">Dentrix</div>
+              <div class="ep-integration-pill">Dentrix Ascend</div>
+              <div class="ep-integration-pill">Open Dental</div>
+              <div class="ep-integration-pill">Curve Dental</div>
+              <div class="ep-integration-pill">Eaglesoft</div>
+              <div class="ep-integration-pill">RESTful API</div>
+              <div class="ep-integration-pill">EDI 837/835</div>
+              <div class="ep-integration-pill">HL7 / FHIR</div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div style="margin-top:48px;">
-          <p style="text-align:center;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--edifi-muted);margin-bottom:20px;">Integrates with your practice management system</p>
-          <div class="ep-integration-row">
-            <div class="ep-integration-pill">Dentrix</div>
-            <div class="ep-integration-pill">Dentrix Ascend</div>
-            <div class="ep-integration-pill">Open Dental</div>
-            <div class="ep-integration-pill">Curve Dental</div>
-            <div class="ep-integration-pill">Eaglesoft</div>
-            <div class="ep-integration-pill">RESTful API</div>
-            <div class="ep-integration-pill">EDI 837/835</div>
-            <div class="ep-integration-pill">HL7 / FHIR</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
+      <!-- ============================================================
          CTA BAND
          ============================================================ -->
-    <section class="cta-band">
+      <section class="cta-band">
+        <div class="container">
+          <h2>See the Real Platform. Not a Sales Deck.</h2>
+          <p>
+            Schedule a live demo and we'll walk you through EDiFi in your
+            browser, with real data, real workflows, and real team scenarios.
+          </p>
+          <div class="cta-band-actions">
+            <a
+              href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+              target="_blank"
+              class="btn btn-white btn-lg"
+              >Book a Live Demo</a
+            >
+            <a
+              href="platform.html"
+              class="btn btn-secondary btn-lg"
+              style="border-color: white; color: white"
+              >See Platform Overview</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <h2>See the Real Platform. Not a Sales Deck.</h2>
-        <p>Schedule a live demo and we'll walk you through EDiFi in your browser, with real data, real workflows, and real team scenarios.</p>
-        <div class="cta-band-actions">
-          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-white btn-lg">Book a Live Demo</a>
-          <a href="platform.html" class="btn btn-secondary btn-lg" style="border-color:white;color:white;">See Platform Overview</a>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">
+              <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
+            </a>
+            <p>The infrastructure leader in dental revenue intelligence.</p>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="platform.html">Overview</a></li>
+
+              <li><a href="edifi.html">EDiFi Software</a></li>
+              <li><a href="revnet.html">RevNet</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Resources</h5>
+            <ul class="footer-links">
+              <li><a href="resources/blog.html">Blog</a></li>
+              <li><a href="resources/podcast.html">Podcast</a></li>
+              <li><a href="resources/webinars.html">Webinars</a></li>
+              <li>
+                <a href="dental-revenue-intelligence.html"
+                  >What is Dental Revenue Intelligence?</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="company.html">About Us</a></li>
+              <li><a href="company/security.html">Security</a></li>
+              <li><a href="investors.html">Investors</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Contact</h5>
+            <ul class="footer-links">
+              <li><a href="contact.html#sales">Sales</a></li>
+              <li>
+                <a
+                  href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                  target="_blank"
+                  >Book a Demo</a
+                >
+              </li>
+              <li><a href="contact.html#support">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/company/elitedentalforce"
+              aria-label="Elite Dental Force on LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/elitedentalforce"
+              aria-label="Elite Dental Force on Facebook"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/elitedentalforce"
+              aria-label="Elite Dental Force on Instagram"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/@elitedentalforceteam"
+              aria-label="Elite Dental Force on YouTube"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                /></svg
+            ></a>
+            <a
+              href="https://x.com/EliteDentalForc"
+              aria-label="Elite Dental Force on X"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg
+            ></a>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="logo">
-            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force">
-          </a>
-          <p>The infrastructure leader in dental revenue intelligence.</p>
-        </div>
-        <div class="footer-column">
-          <h5 class="footer-heading">Platform</h5>
-          <ul class="footer-links">
-            <li><a href="platform.html">Overview</a></li>
+    <script src="../js/main.js"></script>
+    <script src="../js/tracking.js" defer></script>
+    <script src="../js/ghl-forms.js" defer></script>
+    <script>
+      (function () {
+        /* ── Tab Explorer ── */
+        const tabBtns = document.querySelectorAll(".ep-tab-btn");
+        const tabPanes = document.querySelectorAll(".ep-tab-content");
 
-            <li><a href="edifi.html">EDiFi Software</a></li>
-            <li><a href="revnet.html">RevNet</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h5 class="footer-heading">Resources</h5>
-          <ul class="footer-links">
-            <li><a href="resources/blog.html">Blog</a></li>
-            <li><a href="resources/podcast.html">Podcast</a></li>
-            <li><a href="resources/webinars.html">Webinars</a></li>
-            <li><a href="dental-revenue-intelligence.html">What is Dental Revenue Intelligence?</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h5 class="footer-heading">Company</h5>
-          <ul class="footer-links">
-            <li><a href="company.html">About Us</a></li>
-            <li><a href="company/security.html">Security</a></li>
-            <li><a href="investors.html">Investors</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h5 class="footer-heading">Contact</h5>
-          <ul class="footer-links">
-            <li><a href="contact.html#sales">Sales</a></li>
-            <li><a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank">Book a Demo</a></li>
-            <li><a href="contact.html#support">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="terms.html">Terms of Service</a>
-          <a href="privacy.html">Privacy Policy</a>
-        </div>
-      <div class="social-links">
-          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="Elite Dental Force on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://www.facebook.com/elitedentalforce" aria-label="Elite Dental Force on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.instagram.com/elitedentalforce" aria-label="Elite Dental Force on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://www.youtube.com/@elitedentalforceteam" aria-label="Elite Dental Force on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
-          <a href="https://x.com/EliteDentalForc" aria-label="Elite Dental Force on X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-  <script src="../js/tracking.js" defer></script>
-  <script src="../js/ghl-forms.js" defer></script>
-  <script>
-    (function () {
-      /* ── Tab Explorer ── */
-      const tabBtns  = document.querySelectorAll('.ep-tab-btn');
-      const tabPanes = document.querySelectorAll('.ep-tab-content');
-
-      tabBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          const target = btn.dataset.tab;
-          tabBtns.forEach(function (b) { b.classList.remove('active'); });
-          tabPanes.forEach(function (p) { p.classList.remove('active'); });
-          btn.classList.add('active');
-          var pane = document.getElementById('tab-' + target);
-          if (pane) pane.classList.add('active');
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const target = btn.dataset.tab;
+            tabBtns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            tabPanes.forEach(function (p) {
+              p.classList.remove("active");
+            });
+            btn.classList.add("active");
+            var pane = document.getElementById("tab-" + target);
+            if (pane) pane.classList.add("active");
+          });
         });
-      });
 
-      /* ── Sticky sidebar active link on scroll ── */
-      const panels   = document.querySelectorAll('.ep-feature-panel');
-      const sideLinks = document.querySelectorAll('.ep-sidebar-link');
+        /* ── Sticky sidebar active link on scroll ── */
+        const panels = document.querySelectorAll(".ep-feature-panel");
+        const sideLinks = document.querySelectorAll(".ep-sidebar-link");
 
-      if (panels.length && sideLinks.length) {
-        var observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              var id = entry.target.id;
-              sideLinks.forEach(function (link) {
-                link.classList.toggle('active', link.dataset.panel === id);
+        if (panels.length && sideLinks.length) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  var id = entry.target.id;
+                  sideLinks.forEach(function (link) {
+                    link.classList.toggle("active", link.dataset.panel === id);
+                  });
+                }
               });
-            }
+            },
+            { rootMargin: "-20% 0px -60% 0px" },
+          );
+
+          panels.forEach(function (panel) {
+            observer.observe(panel);
           });
-        }, { rootMargin: '-20% 0px -60% 0px' });
 
-        panels.forEach(function (panel) { observer.observe(panel); });
-
-        sideLinks.forEach(function (link) {
-          link.addEventListener('click', function (e) {
-            e.preventDefault();
-            var target = document.getElementById(link.dataset.panel);
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          sideLinks.forEach(function (link) {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              var target = document.getElementById(link.dataset.panel);
+              if (target)
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
           });
-        });
-      }
+        }
 
-      /* ── Scroll entrance animations ── */
-      var fadeObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            fadeObs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
+        /* ── Scroll entrance animations ── */
+        var fadeObs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                fadeObs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
 
-      document.querySelectorAll('.ep-section-header, .ep-tabs, .ep-feature-panel, .ep-compare-table, .ep-spec-grid').forEach(function (el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
-        fadeObs.observe(el);
-      });
-    })();
-  </script>
-  <script src="../js/booking-widget.js" defer></script>
-  <script src="../js/cookie-consent.js" defer></script>
-</body>
+        document
+          .querySelectorAll(
+            ".ep-section-header, .ep-tabs, .ep-feature-panel, .ep-compare-table, .ep-spec-grid",
+          )
+          .forEach(function (el) {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(24px)";
+            el.style.transition = "opacity 0.65s ease, transform 0.65s ease";
+            fadeObs.observe(el);
+          });
+      })();
+    </script>
+    <script src="../js/booking-widget.js" defer></script>
+    <script src="../js/cookie-consent.js" defer></script>
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+  </body>
 </html>
