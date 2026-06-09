@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EDiFi vs Weave: Weave handles patient communication. EDiFi recovers insurance revenue. Compare what each platform does and why practices need both."
+    />
+    <link
+      rel="canonical"
+      href="https://www.elitedentalforce.com/pages/edifi-vs-weave.html"
+    />
+    <meta property="og:title" content="EDiFi vs Weave | Elite Dental Force" />
+    <meta
+      property="og:description"
+      content="Weave handles patient communication. EDiFi recovers the insurance revenue your practice is owed. See how they compare and why the best practices use both."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.elitedentalforce.com/pages/edifi-vs-weave.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.elitedentalforce.com/images/og-edifi-vs-weave.png"
+    />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://www.elitedentalforce.com/images/og-edifi-vs-weave.png"
+    />
+    <title>
+      EDiFi vs Weave: Insurance Revenue vs Patient Communication | Elite Dental
+      Force
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <style>
+      body::before {
+        background-image:
+          linear-gradient(rgba(75, 168, 240, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(75, 168, 240, 0.08) 1px, transparent 1px);
+        background-size: 55px 55px;
+      }
+      .cmp-hero {
+        position: relative;
+        padding: 180px 0 100px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .cmp-hero-glow {
+        position: absolute;
+        width: 900px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(9, 91, 167, 0.22) 0%,
+          transparent 65%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        pointer-events: none;
+      }
+      .cmp-hero-inner {
+        position: relative;
+        z-index: 2;
+      }
+      .cmp-breadcrumb {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.35);
+        margin-bottom: 32px;
+      }
+      .cmp-breadcrumb a {
+        color: rgba(75, 168, 240, 0.7);
+        text-decoration: none;
+      }
+      .cmp-vs-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+      .cmp-brand-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.25);
+        border-radius: 100px;
+        padding: 8px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4ba8f0;
+      }
+      .cmp-vs-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.45);
+        letter-spacing: 0.05em;
+      }
+      .cmp-comp-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        padding: 8px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .cmp-hero h1 {
+        font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: #fff;
+        margin: 0 auto 22px;
+        max-width: 820px;
+      }
+      .cmp-hero h1 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #4ba8f0, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .cmp-hero-sub {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.5);
+        max-width: 620px;
+        margin: 0 auto 36px;
+      }
+      .cmp-verdict {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.2);
+        border-radius: 100px;
+        padding: 8px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #4ba8f0;
+      }
+      /* Role split card */
+      .role-split-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .role-card {
+        border-radius: 22px;
+        padding: 36px;
+        position: relative;
+        overflow: hidden;
+      }
+      .role-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+      }
+      .role-card--edifi {
+        background: linear-gradient(
+          145deg,
+          rgba(9, 91, 167, 0.15),
+          rgba(3, 8, 24, 0.95)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.25);
+      }
+      .role-card--edifi::before {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.55),
+          transparent
+        );
+      }
+      .role-card--weave {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(3, 8, 24, 0.95)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .role-card--weave::before {
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.12),
+          transparent
+        );
+      }
+      .role-card-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        display: block;
+      }
+      .role-card--edifi .role-card-label {
+        color: #4ba8f0;
+      }
+      .role-card--weave .role-card-label {
+        color: rgba(255, 255, 255, 0.38);
+      }
+      .role-card h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 14px;
+        letter-spacing: -0.02em;
+      }
+      .role-card p {
+        font-size: 0.9rem;
+        line-height: 1.72;
+        color: rgba(255, 255, 255, 0.48);
+        margin-bottom: 20px;
+      }
+      .role-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .role-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .role-list li:last-child {
+        border-bottom: none;
+      }
+      .role-list li svg {
+        width: 14px;
+        height: 14px;
+        stroke: #4ba8f0;
+        fill: none;
+        stroke-width: 2.5;
+        flex-shrink: 0;
+      }
+      .role-card--weave .role-list li svg {
+        stroke: rgba(255, 255, 255, 0.35);
+      }
+      /* comp table (reuse from other page) */
+      .comp-table-wrap {
+        overflow-x: auto;
+        border-radius: 20px;
+        border: 1px solid rgba(75, 168, 240, 0.14);
+      }
+      .comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 640px;
+      }
+      .comp-table thead tr {
+        background: rgba(4, 12, 32, 0.98);
+        border-bottom: 1px solid rgba(75, 168, 240, 0.14);
+      }
+      .comp-table th {
+        padding: 20px 24px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .comp-table th.edifi-col {
+        color: #4ba8f0;
+        background: rgba(75, 168, 240, 0.04);
+      }
+      .comp-table th.comp-col {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .comp-table tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        transition: background 0.15s;
+      }
+      .comp-table tbody tr:last-child {
+        border-bottom: none;
+      }
+      .comp-table tbody tr:hover {
+        background: rgba(75, 168, 240, 0.03);
+      }
+      .comp-table tbody tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.012);
+      }
+      .comp-table td {
+        padding: 16px 24px;
+        font-size: 13.5px;
+        vertical-align: middle;
+      }
+      .comp-table td.feature-col {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 500;
+      }
+      .comp-table td.edifi-col {
+        background: rgba(75, 168, 240, 0.03);
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .comp-table td.comp-col {
+        color: rgba(255, 255, 255, 0.38);
+      }
+      .check-yes {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #34d399;
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .check-yes svg {
+        width: 16px;
+        height: 16px;
+        stroke: #34d399;
+        fill: none;
+        stroke-width: 2.5;
+      }
+      .check-no {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 255, 255, 0.22);
+        font-size: 13px;
+      }
+      .check-no svg {
+        width: 16px;
+        height: 16px;
+        stroke: rgba(255, 255, 255, 0.2);
+        fill: none;
+        stroke-width: 2;
+      }
+      .check-partial {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 215, 0, 0.7);
+        font-size: 13px;
+      }
+      /* together card */
+      .together-card {
+        background: linear-gradient(
+          135deg,
+          rgba(9, 91, 167, 0.18),
+          rgba(75, 168, 240, 0.07)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.25);
+        border-radius: 22px;
+        padding: 48px 44px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .together-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.55),
+          transparent
+        );
+      }
+      @media (max-width: 900px) {
+        .role-split-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .cmp-hero {
+          padding: 150px 0 72px;
+        }
+        .together-card {
+          padding: 32px 24px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.elitedentalforce.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "EDiFi vs Weave",
+            "item": "https://www.elitedentalforce.com/pages/edifi-vs-weave.html"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is EDiFi a competitor to Weave?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. EDiFi and Weave serve different functions in a dental practice. Weave is a patient communication platform handling texting, reminders, and reviews. EDiFi is a revenue intelligence platform handling insurance eligibility, claim scrubbing, and payment auditing. They are complementary tools, not competitors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Weave do insurance eligibility verification?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Weave offers a basic insurance verification lookup feature, but it is not its primary function. EDiFi performs automated, continuous eligibility verification for every scheduled patient 48 hours before their appointment, with full benefit detail including coverage percentages, maximums, frequency limitations, and patient cost estimates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a dental practice benefit from using both Weave and EDiFi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many forward-thinking practices use both. Weave handles the patient-facing side: appointment reminders, reviews, and communication. EDiFi handles the payer-facing side: eligibility verification, claims, and payment recovery. Together they address both the patient relationship and the revenue cycle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which tool is better for reducing claim denials?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi. Weave does not include claim scrubbing or denial prevention features. EDiFi's AI claim scrubbing engine validates every claim against payer-specific rules before submission, reducing first-pass denial rates to under 5 percent. Claim denial management is not in Weave's product scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does EDiFi help with patient communication or scheduling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. EDiFi is not a patient communication tool. It does not send appointment reminders, text patients, or manage reviews. For patient communication and engagement, Weave is purpose-built for that function. EDiFi focuses entirely on the insurance and billing revenue cycle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does EDiFi find revenue that Weave cannot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi's payment audit module compares every payer remittance against contracted fee schedules to identify systematic underpayments that most practices never notice. This type of revenue recovery, tracking down money payers owe but are not paying, is outside Weave's product scope entirely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which platform has a bigger impact on dental practice revenue?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For direct revenue recovery from insurance, EDiFi has the bigger impact. EDiFi's payment audit found $59,000 in underpayments at a single pilot practice. Weave contributes to revenue by improving patient retention and reducing no-shows, which drives production. Both contribute to revenue through different paths."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do Weave and EDiFi integrate with the same practice management systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both platforms integrate with major dental PMS systems including Dentrix, Open Dental, and Eaglesoft. They connect to the PMS independently and serve different workflows, so running both does not create conflicts or duplicate data entry."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: Speakable -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "EDiFi vs Weave — Revenue Intelligence vs Patient Communication",
+        "url": "https://www.elitedentalforce.com/pages/edifi-vs-weave.html",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".cmp-hero-sub"]
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a
+            href="../index.html"
+            class="logo"
+            aria-label="Elite Dental Force Home"
+          >
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="platform.html" class="nav-link">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+                  <li><a href="edifi.html">EDiFi Software</a></li>
+                  <li><a href="enterprise.html">Enterprise</a></li>
+                  <li><a href="demo.html">Product Tour</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="services.html" class="nav-link">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">For Private Practices</a></li>
+                  <li>
+                    <a href="services.html#groups">For Multi Location Groups</a>
+                  </li>
+                  <li>
+                    <a href="services.html#dso">For DSOs &amp; Enterprises</a>
+                  </li>
+                  <li>
+                    <a href="partners.html">Partners &amp; Integrations</a>
+                  </li>
+                  <li><a href="roi-calculator.html">ROI Calculator</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="resources/blog.html">Blog</a></li>
+                  <li><a href="resources/podcast.html">Podcast</a></li>
+                  <li><a href="resources/webinars.html">Webinars</a></li>
+                  <li><a href="resources/news.html">News</a></li>
+                  <li><a href="resources/case-studies.html">Case Studies</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="company.html">About Us</a></li>
+                  <li><a href="company/security.html">Security</a></li>
+                  <li>
+                    <a href="company/compliance.html">Compliance Center</a>
+                  </li>
+                  <li><a href="company/faq.html">FAQ</a></li>
+                  <li><a href="investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cmp-hero">
+        <div class="cmp-hero-glow" aria-hidden="true"></div>
+        <div class="container">
+          <div class="cmp-hero-inner">
+            <p class="cmp-breadcrumb">
+              <a href="../index.html">Home</a> &rsaquo; Comparisons &rsaquo;
+              EDiFi vs Weave
+            </p>
+
+            <div class="cmp-vs-row">
+              <div class="cmp-brand-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  aria-hidden="true"
+                >
+                  <polygon
+                    points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                  ></polygon>
+                </svg>
+                EDiFi Enterprise
+              </div>
+              <div class="cmp-vs-badge" aria-label="versus">VS</div>
+              <div class="cmp-comp-pill">Weave</div>
+            </div>
+
+            <h1>
+              Insurance Revenue Recovery<br />vs <em>Patient Communication</em>
+            </h1>
+
+            <p class="cmp-hero-sub">
+              Weave is a best in class patient communication and engagement
+              platform. EDiFi is a dental revenue intelligence platform. These
+              tools solve fundamentally different problems, which is why leading
+              practices run both.
+            </p>
+
+            <div class="cmp-verdict" role="note">
+              The honest answer: these platforms are not competitors. Weave
+              serves patients. EDiFi recovers insurance revenue from payers.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Each Does -->
+      <section class="section">
+        <div class="container">
+          <div
+            class="section-header"
+            style="text-align: center; max-width: 620px; margin: 0 auto 44px"
+          >
+            <span class="overline">Role Clarity</span>
+            <h2
+              style="
+                font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+                margin-bottom: 14px;
+              "
+            >
+              Two Different Jobs. Both Critical.
+            </h2>
+            <p
+              style="
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.48);
+                margin: 0;
+              "
+            >
+              If you are comparing Weave and EDiFi, you may be solving the wrong
+              problem. Here is what each platform actually does.
+            </p>
+          </div>
+
+          <div class="role-split-grid">
+            <div class="role-card role-card--edifi">
+              <span class="role-card-label">EDiFi Enterprise</span>
+              <h3>Insurance Revenue Intelligence</h3>
+              <p>
+                EDiFi works between your practice and insurance payers. It
+                verifies eligibility before appointments, scrubs claims before
+                submission, audits every payment against contracted rates,
+                recovers underpayments, and manages denial appeals.
+              </p>
+              <ul class="role-list" aria-label="EDiFi capabilities">
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Real time eligibility verification
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >AI powered claim scrubbing
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Payment audit vs fee schedules
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Underpayment detection and recovery
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Denial command center and AI appeals
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Medical billing crossover (CDT to CPT)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >DSO multi location revenue orchestration
+                </li>
+              </ul>
+            </div>
+
+            <div class="role-card role-card--weave">
+              <span class="role-card-label">Weave</span>
+              <h3>Patient Communication and Engagement</h3>
+              <p>
+                Weave works between your practice and your patients. It handles
+                phone systems, two way texting, appointment reminders, online
+                reviews, patient forms, and patient payment collection (not
+                insurance payments).
+              </p>
+              <ul class="role-list" aria-label="Weave capabilities">
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >VoIP phone system for dental offices
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Two way patient texting
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Appointment reminder automation
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Online review management
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Digital intake and patient forms
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Patient payment collection (not insurance)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Schedule fill and recall campaigns
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Table -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div
+            class="section-header"
+            style="text-align: center; max-width: 580px; margin: 0 auto 40px"
+          >
+            <span class="overline">Capability Comparison</span>
+            <h2
+              style="
+                font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+                margin-bottom: 12px;
+              "
+            >
+              Where They Differ
+            </h2>
+          </div>
+
+          <div
+            class="comp-table-wrap"
+            role="region"
+            aria-label="Feature comparison table"
+          >
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th style="width: 40%">Capability</th>
+                  <th class="edifi-col" style="width: 30%">EDiFi Enterprise</th>
+                  <th class="comp-col" style="width: 30%">Weave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-col">
+                    Insurance eligibility verification
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Core feature</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Insurance payment audit</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Core feature, $59K found</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Underpayment recovery</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >AI powered</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Claim scrubbing and submission</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Full AI CDT/ICD-10 assignment</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Denial management and appeals</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >AI generated appeal letters</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Medical billing crossover</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >CDT to CPT, CMS-1500 builder</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Patient appointment reminders</td>
+                  <td class="edifi-col">
+                    <span class="check-partial">Via Bella AI (calls only)</span>
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.6)"
+                      >Core feature (text and calls)</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Two way patient texting</td>
+                  <td class="edifi-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.6)"
+                      >Core feature</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Online review management</td>
+                  <td class="edifi-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.6)"
+                      >Core feature</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Patient payment collection</td>
+                  <td class="edifi-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Insurance focus only</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.6)"
+                      >Patient payments</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Voice AI for inbound calls</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Bella AI, 24/7 receptionist</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-partial"
+                      >VoIP system, no AI receptionist</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">HIPAA BAA included</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Standard</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.6)"
+                      >Yes</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Together is better -->
+      <section class="section">
+        <div class="container" style="max-width: 860px">
+          <div class="together-card">
+            <span
+              class="overline"
+              style="
+                justify-content: center;
+                display: flex;
+                margin-bottom: 16px;
+              "
+              >The Real Question</span
+            >
+            <h2
+              style="
+                font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+                margin-bottom: 18px;
+                text-align: center;
+              "
+            >
+              Best Practices Use Both
+            </h2>
+            <p
+              style="
+                font-size: 1.05rem;
+                line-height: 1.78;
+                color: rgba(255, 255, 255, 0.55);
+                max-width: 620px;
+                margin: 0 auto 36px;
+                text-align: center;
+              "
+            >
+              Weave helps you attract and retain patients. EDiFi makes sure you
+              get paid correctly for treating them. They solve completely
+              different problems and the best run dental practices we know use
+              both.
+            </p>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                max-width: 640px;
+                margin: 0 auto 36px;
+              "
+            >
+              <div
+                style="
+                  background: rgba(75, 168, 240, 0.06);
+                  border: 1px solid rgba(75, 168, 240, 0.15);
+                  border-radius: 14px;
+                  padding: 22px 20px;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #4ba8f0;
+                    margin-bottom: 8px;
+                  "
+                >
+                  Weave covers
+                </div>
+                <div
+                  style="
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    color: #fff;
+                    margin-bottom: 6px;
+                  "
+                >
+                  Patient Side
+                </div>
+                <div
+                  style="
+                    font-size: 13px;
+                    color: rgba(255, 255, 255, 0.42);
+                    line-height: 1.5;
+                  "
+                >
+                  Scheduling, retention, reminders, reviews, patient payments
+                </div>
+              </div>
+              <div
+                style="
+                  background: rgba(255, 215, 0, 0.06);
+                  border: 1px solid rgba(255, 215, 0, 0.15);
+                  border-radius: 14px;
+                  padding: 22px 20px;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #ffd700;
+                    margin-bottom: 8px;
+                  "
+                >
+                  EDiFi covers
+                </div>
+                <div
+                  style="
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    color: #fff;
+                    margin-bottom: 6px;
+                  "
+                >
+                  Insurance Side
+                </div>
+                <div
+                  style="
+                    font-size: 13px;
+                    color: rgba(255, 255, 255, 0.42);
+                    line-height: 1.5;
+                  "
+                >
+                  Eligibility, claims, payment recovery, underpayments, denials
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center">
+              <a
+                href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                target="_blank"
+                class="btn btn-primary btn-lg"
+              >
+                See EDiFi in Action
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section class="cta-band">
+        <div class="container">
+          <h2>
+            Weave handles your patients.
+            <span class="gradient-text">EDiFi handles your payers.</span>
+          </h2>
+          <p>
+            If your practice already uses Weave and wants to close the insurance
+            revenue gap, EDiFi is designed to complement your existing stack
+            without disrupting your front desk workflows.
+          </p>
+          <div class="cta-band-actions">
+            <a
+              href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+              target="_blank"
+              class="btn btn-primary btn-lg"
+              >Book an EDiFi Demo</a
+            >
+            <a href="roi-calculator.html" class="btn btn-secondary btn-lg"
+              >Calculate Insurance Recovery</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo" aria-label="Home"
+              ><img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" /></a>
+            <p>The infrastructure leader in dental revenue intelligence.</p>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Compare</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="edifi-vs-dentrix-rcm.html">EDiFi vs Dentrix RCM</a>
+              </li>
+              <li><a href="edifi-vs-weave.html">EDiFi vs Weave</a></li>
+              <li>
+                <a href="edifi-vs-manual-billing.html"
+                  >EDiFi vs Manual Billing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="platform.html">Overview</a></li>
+              <li><a href="edifi.html">EDiFi Enterprise</a></li>
+              <li><a href="roi-calculator.html">ROI Calculator</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="company.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="terms.html">Terms</a><a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cookie-consent.js" defer></script>
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+  </body>
+</html>

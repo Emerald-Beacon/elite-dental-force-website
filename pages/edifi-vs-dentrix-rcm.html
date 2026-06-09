@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EDiFi vs Dentrix Revenue Cycle Management: AI native platform vs legacy rules-based billing. Real-time eligibility, payment audit engine, and medical billing crossover vs traditional RCM add-ons."
+    />
+    <link
+      rel="canonical"
+      href="https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html"
+    />
+    <meta
+      property="og:title"
+      content="EDiFi vs Dentrix RCM | Elite Dental Force"
+    />
+    <meta
+      property="og:description"
+      content="Compare EDiFi and Dentrix Revenue Cycle Management. Discover why AI native real-time billing intelligence outperforms legacy rules-based RCM systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.elitedentalforce.com/images/og-edifi-vs-dentrix-rcm.png"
+    />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://www.elitedentalforce.com/images/og-edifi-vs-dentrix-rcm.png"
+    />
+    <title>
+      EDiFi vs Dentrix RCM: AI Native vs Legacy Billing | Elite Dental Force
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <style>
+      /* ============================================================
+       COMPARISON PAGE — shared styles
+       ============================================================ */
+      body::before {
+        background-image:
+          linear-gradient(rgba(75, 168, 240, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(75, 168, 240, 0.08) 1px, transparent 1px);
+        background-size: 55px 55px;
+      }
+
+      /* ── HERO ── */
+      .cmp-hero {
+        position: relative;
+        padding: 180px 0 100px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .cmp-hero-glow {
+        position: absolute;
+        width: 900px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(9, 91, 167, 0.22) 0%,
+          transparent 65%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        pointer-events: none;
+      }
+
+      .cmp-hero-inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .cmp-breadcrumb {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.35);
+        margin-bottom: 32px;
+      }
+
+      .cmp-breadcrumb a {
+        color: rgba(75, 168, 240, 0.7);
+        text-decoration: none;
+      }
+      .cmp-breadcrumb a:hover {
+        color: #4ba8f0;
+      }
+
+      .cmp-vs-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+
+      .cmp-brand-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.25);
+        border-radius: 100px;
+        padding: 8px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4ba8f0;
+      }
+
+      .cmp-vs-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.45);
+        letter-spacing: 0.05em;
+      }
+
+      .cmp-comp-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        padding: 8px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .cmp-hero h1 {
+        font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: #fff;
+        margin: 0 auto 22px;
+        max-width: 780px;
+      }
+
+      .cmp-hero h1 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #4ba8f0, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .cmp-hero-sub {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.5);
+        max-width: 600px;
+        margin: 0 auto 36px;
+      }
+
+      .cmp-verdict {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(52, 211, 153, 0.08);
+        border: 1px solid rgba(52, 211, 153, 0.2);
+        border-radius: 100px;
+        padding: 8px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #34d399;
+      }
+
+      .cmp-verdict-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #34d399;
+        box-shadow: 0 0 7px rgba(52, 211, 153, 0.7);
+        flex-shrink: 0;
+      }
+
+      /* ── DIFFERENTIATORS ── */
+      .diff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .diff-card {
+        background: linear-gradient(145deg, #0d1f3c, #081530);
+        border: 1px solid rgba(75, 168, 240, 0.14);
+        border-radius: 18px;
+        padding: 28px 26px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .diff-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.45),
+          transparent
+        );
+      }
+
+      .diff-card:hover {
+        border-color: rgba(75, 168, 240, 0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.45);
+      }
+
+      .diff-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+
+      .diff-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: #4ba8f0;
+        fill: none;
+        stroke-width: 2;
+      }
+      .diff-icon.gold {
+        background: rgba(255, 215, 0, 0.08);
+        border-color: rgba(255, 215, 0, 0.2);
+      }
+      .diff-icon.gold svg {
+        stroke: #ffd700;
+      }
+      .diff-icon.green {
+        background: rgba(52, 211, 153, 0.08);
+        border-color: rgba(52, 211, 153, 0.2);
+      }
+      .diff-icon.green svg {
+        stroke: #34d399;
+      }
+
+      .diff-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+      }
+      .diff-desc {
+        font-size: 0.88rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.48);
+        margin: 0;
+      }
+
+      /* ── COMPARISON TABLE ── */
+      .comp-table-wrap {
+        overflow-x: auto;
+        border-radius: 20px;
+        border: 1px solid rgba(75, 168, 240, 0.14);
+      }
+
+      .comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 640px;
+      }
+
+      .comp-table thead tr {
+        background: rgba(4, 12, 32, 0.98);
+        border-bottom: 1px solid rgba(75, 168, 240, 0.14);
+      }
+
+      .comp-table th {
+        padding: 20px 24px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .comp-table th.edifi-col {
+        color: #4ba8f0;
+        background: rgba(75, 168, 240, 0.04);
+      }
+
+      .comp-table th.comp-col {
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      .comp-table tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        transition: background 0.15s ease;
+      }
+
+      .comp-table tbody tr:last-child {
+        border-bottom: none;
+      }
+      .comp-table tbody tr:hover {
+        background: rgba(75, 168, 240, 0.03);
+      }
+
+      .comp-table tbody tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.012);
+      }
+
+      .comp-table tbody tr:nth-child(even):hover {
+        background: rgba(75, 168, 240, 0.04);
+      }
+
+      .comp-table td {
+        padding: 16px 24px;
+        font-size: 13.5px;
+        vertical-align: middle;
+      }
+
+      .comp-table td.feature-col {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 500;
+      }
+
+      .comp-table td.edifi-col {
+        background: rgba(75, 168, 240, 0.03);
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .comp-table td.comp-col {
+        color: rgba(255, 255, 255, 0.38);
+      }
+
+      .check-yes {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #34d399;
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .check-yes svg {
+        width: 16px;
+        height: 16px;
+        stroke: #34d399;
+        fill: none;
+        stroke-width: 2.5;
+      }
+
+      .check-no {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 255, 255, 0.22);
+        font-size: 13px;
+      }
+
+      .check-no svg {
+        width: 16px;
+        height: 16px;
+        stroke: rgba(255, 255, 255, 0.2);
+        fill: none;
+        stroke-width: 2;
+      }
+
+      .check-partial {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 215, 0, 0.7);
+        font-size: 13px;
+      }
+
+      /* ── DEEP DIVE ── */
+      .deep-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+
+      .deep-point {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 24px;
+        align-items: flex-start;
+      }
+
+      .deep-point:last-child {
+        margin-bottom: 0;
+      }
+
+      .deep-check {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        background: rgba(52, 211, 153, 0.1);
+        border: 1px solid rgba(52, 211, 153, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .deep-check svg {
+        width: 12px;
+        height: 12px;
+        stroke: #34d399;
+        fill: none;
+        stroke-width: 2.5;
+      }
+
+      .deep-text-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .deep-text-desc {
+        font-size: 13px;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      .deep-stat-card {
+        background: linear-gradient(
+          145deg,
+          rgba(8, 21, 52, 0.95),
+          rgba(4, 12, 32, 0.95)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.16);
+        border-radius: 20px;
+        padding: 36px;
+      }
+
+      .deep-stat {
+        text-align: center;
+        padding: 24px;
+        border-bottom: 1px solid rgba(75, 168, 240, 0.08);
+      }
+
+      .deep-stat:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .deep-stat:first-child {
+        padding-top: 0;
+      }
+
+      .deep-stat-num {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: #ffd700;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .deep-stat-label {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.5;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 960px) {
+        .diff-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .deep-split {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .cmp-hero {
+          padding: 150px 0 72px;
+        }
+        .diff-grid {
+          grid-template-columns: 1fr;
+        }
+        .cmp-vs-row {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.elitedentalforce.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "EDiFi vs Dentrix RCM",
+            "item": "https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is EDiFi different from Dentrix Revenue Cycle Management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dentrix RCM is a billing service that processes claims using your Dentrix PMS data. EDiFi is an AI-native intelligence layer that works across any PMS, including Dentrix, to prevent denials before they occur and find underpayments after they happen. The core difference is preventive versus reactive. EDiFi stops revenue loss at the source."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use EDiFi if my practice already runs Dentrix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. EDiFi integrates with Dentrix through EDiFi Connect, a lightweight desktop agent that reads appointment and claims data from Dentrix without disrupting your existing workflow. You keep Dentrix as your PMS and add EDiFi as the revenue intelligence layer on top."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Dentrix RCM catch underpayments the same way EDiFi does?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Dentrix RCM focuses on claim submission and follow-up. It does not have a dedicated payment audit engine that compares every remittance against contracted fee schedules to identify systematic underpayments. EDiFi's payment audit module found $59,000 in underpayments at a single pilot practice that Dentrix had not flagged."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does EDiFi's eligibility verification compare to Dentrix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dentrix eClaims includes basic eligibility lookup that requires staff to manually initiate the check. EDiFi performs automated, continuous eligibility verification for every patient on the schedule 48 hours before their appointment, with no manual steps required. EDiFi also structures the benefit data into a usable format for treatment planning, not just a raw payer response."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is EDiFi more expensive than Dentrix RCM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EDiFi starts at $499 per month. Most practices recover the cost in the first month through underpayment recovery and denial reduction alone. Dentrix RCM is a percentage-based service that takes a cut of collections, which becomes more expensive as production grows. EDiFi's flat monthly cost scales better for high-production practices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens to my claims workflow if I switch from Dentrix RCM to EDiFi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your claims workflow stays in Dentrix. EDiFi adds an AI validation layer before claims are submitted and a payment audit layer after remittances arrive. Your billing staff keeps using Dentrix for day-to-day operations. EDiFi surfaces the exceptions, errors, and opportunities that Dentrix alone cannot detect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does EDiFi handle the same procedure codes and CDT rules as Dentrix?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. EDiFi covers the full CDT code set and maintains payer-specific billing rules for all major dental carriers. The rule database is continuously updated as payers change their policies, so EDiFi's validation logic reflects current payer requirements rather than static rule sets that may lag policy changes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a DSO use EDiFi across multiple Dentrix locations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. EDiFi Enterprise is designed for DSOs and multi-location groups. Each location runs EDiFi Connect to connect to the local Dentrix instance, and all data rolls up to a central EDiFi dashboard where DSO administrators can monitor eligibility accuracy, claim performance, and payment recovery across the entire portfolio."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema: Speakable -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "EDiFi vs Dentrix RCM — AI Revenue Intelligence vs Legacy Billing",
+        "url": "https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".cmp-hero-sub"]
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a
+            href="../index.html"
+            class="logo"
+            aria-label="Elite Dental Force Home"
+          >
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="platform.html" class="nav-link">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+                  <li><a href="edifi.html">EDiFi Software</a></li>
+                  <li><a href="enterprise.html">Enterprise</a></li>
+                  <li><a href="demo.html">Product Tour</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="services.html" class="nav-link">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">For Private Practices</a></li>
+                  <li>
+                    <a href="services.html#groups">For Multi Location Groups</a>
+                  </li>
+                  <li>
+                    <a href="services.html#dso">For DSOs &amp; Enterprises</a>
+                  </li>
+                  <li>
+                    <a href="partners.html">Partners &amp; Integrations</a>
+                  </li>
+                  <li><a href="roi-calculator.html">ROI Calculator</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="resources/blog.html">Blog</a></li>
+                  <li><a href="resources/podcast.html">Podcast</a></li>
+                  <li><a href="resources/webinars.html">Webinars</a></li>
+                  <li><a href="resources/news.html">News</a></li>
+                  <li><a href="resources/case-studies.html">Case Studies</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="company.html">About Us</a></li>
+                  <li><a href="company/security.html">Security</a></li>
+                  <li>
+                    <a href="company/compliance.html">Compliance Center</a>
+                  </li>
+                  <li><a href="company/faq.html">FAQ</a></li>
+                  <li><a href="investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════ -->
+      <section class="cmp-hero">
+        <div class="cmp-hero-glow" aria-hidden="true"></div>
+        <div class="container">
+          <div class="cmp-hero-inner">
+            <p class="cmp-breadcrumb">
+              <a href="../index.html">Home</a> &rsaquo; Comparisons &rsaquo;
+              EDiFi vs Dentrix RCM
+            </p>
+
+            <div class="cmp-vs-row">
+              <div class="cmp-brand-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  aria-hidden="true"
+                >
+                  <polygon
+                    points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                  ></polygon>
+                </svg>
+                EDiFi Enterprise
+              </div>
+              <div class="cmp-vs-badge" aria-label="versus">VS</div>
+              <div class="cmp-comp-pill">Dentrix RCM</div>
+            </div>
+
+            <h1>
+              AI Native Revenue Intelligence<br />vs
+              <em>Legacy Rules Based Billing</em>
+            </h1>
+
+            <p class="cmp-hero-sub">
+              Dentrix Revenue Cycle Management was designed to bolt billing onto
+              an existing PMS. EDiFi was built from scratch as an AI native
+              intelligence layer that works across any PMS and finds money
+              legacy systems miss entirely.
+            </p>
+
+            <div class="cmp-verdict" role="note" aria-label="Our assessment">
+              <span class="cmp-verdict-dot" aria-hidden="true"></span>
+              EDiFi finds on average 5.47% of total billing volume in
+              underpayments Dentrix RCM leaves uncollected
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         KEY DIFFERENTIATORS
+         ════════════════════════════════════════ -->
+      <section class="section">
+        <div class="container">
+          <div
+            class="section-header"
+            style="text-align: center; max-width: 640px; margin: 0 auto 44px"
+          >
+            <span class="overline">Why EDiFi Wins</span>
+            <h2
+              style="
+                font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+                margin-bottom: 14px;
+              "
+            >
+              Three Capabilities Dentrix RCM Does Not Have
+            </h2>
+          </div>
+
+          <div class="diff-grid">
+            <div class="diff-card">
+              <div class="diff-icon gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                </svg>
+              </div>
+              <div class="diff-title">Payment Audit Engine</div>
+              <p class="diff-desc">
+                EDiFi's payment audit engine compares every insurance payment
+                against your contracted fee schedules and flags underpayments,
+                phantom write offs, and EOB discrepancies automatically. Dentrix
+                RCM has no equivalent capability. $59K was found in a single
+                beta validation.
+              </p>
+            </div>
+
+            <div class="diff-card">
+              <div class="diff-icon green" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <div class="diff-title">Medical Billing Crossover</div>
+              <p class="diff-desc">
+                EDiFi identifies dental procedures billable to medical insurance
+                and generates CMS-1500 forms with full CDT to CPT crosswalk.
+                Dentrix RCM is dental only. Practices using EDiFi access $80K to
+                $200K in new annual medical reimbursement most competitors leave
+                untouched.
+              </p>
+            </div>
+
+            <div class="diff-card">
+              <div class="diff-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                  />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                </svg>
+              </div>
+              <div class="diff-title">Voice AI and Real Time Eligibility</div>
+              <p class="diff-desc">
+                Bella AI handles inbound calls, outbound payer calls for
+                eligibility, and voice driven perio charting chairside. Dentrix
+                RCM relies on manual eligibility checks via batch clearinghouse
+                queries. EDiFi runs real time checks, not overnight batch files.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         COMPARISON TABLE
+         ════════════════════════════════════════ -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div
+            class="section-header"
+            style="text-align: center; max-width: 580px; margin: 0 auto 40px"
+          >
+            <span class="overline">Feature Comparison</span>
+            <h2
+              style="
+                font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+                margin-bottom: 12px;
+              "
+            >
+              Side by Side
+            </h2>
+          </div>
+
+          <div
+            class="comp-table-wrap"
+            role="region"
+            aria-label="Feature comparison table"
+          >
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th style="width: 40%">Feature</th>
+                  <th class="edifi-col" style="width: 30%">EDiFi Enterprise</th>
+                  <th class="comp-col" style="width: 30%">Dentrix RCM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-col">
+                    Real time eligibility verification
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Real time, multi payer</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-partial">Batch clearinghouse only</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Payment audit vs fee schedules</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Automated, every claim</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">
+                    Underpayment detection and recovery
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >AI powered, $59K validated</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">AI powered claim scrubbing</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Full CDT/ICD-10 AI assignment</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-partial">Rules based only</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">
+                    Denial command center and AI appeal letters
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Full AI generated appeals</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-partial">Manual workflow only</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">
+                    Medical billing crossover (CDT to CPT)
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >9 crossover categories</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Dental only</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">CMS-1500 form generation</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Automated builder</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">
+                    Voice AI for inbound calls (Bella)
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >24/7 AI receptionist</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">
+                    Voice AI for payer eligibility calls
+                  </td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Outbound AI calls</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Perio charting voice AI</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Chairside voice charting</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Works with any PMS</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Multi-PMS (Dentrix, Open Dental, Eaglesoft, Curve)</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Dentrix only</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">DSO multi location orchestration</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Built in, cross location analytics</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-partial">Basic group reporting</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">Morning huddle AI briefing</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Daily AI generated briefing</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span class="check-no"
+                      ><svg viewBox="0 0 24 24">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" /></svg
+                      >Not available</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="feature-col">HIPAA BAA included</td>
+                  <td class="edifi-col">
+                    <span class="check-yes"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" /></svg
+                      >Standard at no cost</span
+                    >
+                  </td>
+                  <td class="comp-col">
+                    <span
+                      class="check-yes"
+                      style="color: rgba(255, 255, 255, 0.45)"
+                      >Yes</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         DEEP DIVE
+         ════════════════════════════════════════ -->
+      <section class="section">
+        <div class="container">
+          <div class="deep-split">
+            <div>
+              <span class="overline">The Core Difference</span>
+              <h2
+                style="
+                  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+                  margin-bottom: 16px;
+                "
+              >
+                Purpose Built vs Bolted On
+              </h2>
+              <p
+                style="
+                  font-size: 1rem;
+                  line-height: 1.78;
+                  color: rgba(255, 255, 255, 0.5);
+                  margin-bottom: 32px;
+                "
+              >
+                Dentrix Revenue Cycle Management was designed as an add-on to
+                the Dentrix PMS. It improves existing workflows but is
+                constrained by what the PMS can see. EDiFi was built from the
+                ground up as an AI intelligence layer that works across any data
+                source.
+              </p>
+
+              <div class="deep-point">
+                <div class="deep-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="deep-text-title">
+                    AI learns your payer patterns over time
+                  </div>
+                  <div class="deep-text-desc">
+                    EDiFi's denial prediction and appeal engine learns which
+                    arguments win with each payer and which procedure
+                    combinations trigger reviews. Dentrix RCM applies static
+                    rules that do not adapt.
+                  </div>
+                </div>
+              </div>
+
+              <div class="deep-point">
+                <div class="deep-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="deep-text-title">
+                    Works with your existing PMS, not around it
+                  </div>
+                  <div class="deep-text-desc">
+                    If you switch from Dentrix to Open Dental or Eaglesoft,
+                    EDiFi comes with you. Dentrix RCM is locked to Dentrix. For
+                    DSOs managing mixed PMS portfolios, this is a critical
+                    constraint.
+                  </div>
+                </div>
+              </div>
+
+              <div class="deep-point">
+                <div class="deep-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="deep-text-title">
+                    Finds money Dentrix RCM does not look for
+                  </div>
+                  <div class="deep-text-desc">
+                    The entire payment audit category, underpayment detection,
+                    and EOB reconciliation are capabilities Dentrix RCM does not
+                    offer. In beta validation, 27% of submitted claims had
+                    payment discrepancies worth $59K for a single practice.
+                  </div>
+                </div>
+              </div>
+
+              <div class="deep-point">
+                <div class="deep-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="deep-text-title">
+                    Medical billing opens an entirely new revenue channel
+                  </div>
+                  <div class="deep-text-desc">
+                    Dentrix RCM does not support medical billing crossover.
+                    EDiFi identifies procedures billable to medical insurance at
+                    40% to 200% higher reimbursement and handles the full
+                    CMS-1500 workflow. This alone can add $80K to $200K annually
+                    per practice.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="deep-stat-card">
+                <div class="deep-stat">
+                  <div class="deep-stat-num">$59K</div>
+                  <div class="deep-stat-label">
+                    Found in a single practice audit<br />EDiFi beta validation,
+                    2,399 claims
+                  </div>
+                </div>
+                <div class="deep-stat">
+                  <div class="deep-stat-num" style="color: #4ba8f0">27%</div>
+                  <div class="deep-stat-label">
+                    Of claims had payment discrepancies<br />Dentrix RCM does
+                    not audit payments
+                  </div>
+                </div>
+                <div class="deep-stat">
+                  <div class="deep-stat-num" style="color: #34d399">$200K</div>
+                  <div class="deep-stat-label">
+                    Max new annual medical billing revenue<br />per practice
+                    through EDiFi crossover
+                  </div>
+                </div>
+                <div class="deep-stat">
+                  <div class="deep-stat-num" style="color: #ffd700">5</div>
+                  <div class="deep-stat-label">
+                    PMS systems supported by EDiFi<br />vs Dentrix only for
+                    Dentrix RCM
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 16px; text-align: center">
+                <a
+                  href="roi-calculator.html"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #4ba8f0;
+                    text-decoration: none;
+                  "
+                >
+                  Calculate your recovery potential
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section class="cta-band">
+        <div class="container">
+          <h2>
+            Ready to See What EDiFi Finds
+            <span class="gradient-text">in Your Claims?</span>
+          </h2>
+          <p>
+            Book a 30 minute demo and we will run our payment audit engine
+            against your real claims data. You will see actual underpayments
+            before committing to anything.
+          </p>
+          <div class="cta-band-actions">
+            <a
+              href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+              target="_blank"
+              class="btn btn-primary btn-lg"
+              >Book a Demo</a
+            >
+            <a href="roi-calculator.html" class="btn btn-secondary btn-lg"
+              >Calculate Your ROI</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo" aria-label="Home"
+              ><img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" /></a>
+            <p>The infrastructure leader in dental revenue intelligence.</p>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Compare</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="edifi-vs-dentrix-rcm.html">EDiFi vs Dentrix RCM</a>
+              </li>
+              <li><a href="edifi-vs-weave.html">EDiFi vs Weave</a></li>
+              <li>
+                <a href="edifi-vs-manual-billing.html"
+                  >EDiFi vs Manual Billing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="platform.html">Overview</a></li>
+              <li><a href="edifi.html">EDiFi Enterprise</a></li>
+              <li><a href="roi-calculator.html">ROI Calculator</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="company.html">About Us</a></li>
+              <li><a href="company/security.html">Security</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="terms.html">Terms</a><a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cookie-consent.js" defer></script>
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+  </body>
+</html>

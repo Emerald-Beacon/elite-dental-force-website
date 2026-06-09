@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EDiFi vs manual dental billing: Compare the true cost of in-house billing, outsourced billing services, and AI powered revenue intelligence. See what you're leaving on the table.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/edifi-vs-manual-billing.html">
+  <meta property="og:title" content="EDiFi vs Manual Dental Billing | Elite Dental Force">
+  <meta property="og:description" content="The true cost of manual dental billing vs EDiFi AI powered revenue intelligence. See the staff hours, error rates, and underpayments your current system misses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/edifi-vs-manual-billing.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-edifi-vs-manual-billing.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-edifi-vs-manual-billing.png">
+  <title>EDiFi vs Manual Dental Billing: True Cost Comparison | Elite Dental Force</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <style>
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.08) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+    .cmp-hero {
+      position: relative; padding: 180px 0 100px;
+      text-align: center; overflow: hidden;
+    }
+    .cmp-hero-glow {
+      position: absolute; width: 900px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,91,167,0.22) 0%, transparent 65%);
+      top: 50%; left: 50%; transform: translate(-50%, -60%); pointer-events: none;
+    }
+    .cmp-hero-inner { position: relative; z-index: 2; }
+    .cmp-breadcrumb { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 32px; }
+    .cmp-breadcrumb a { color: rgba(75,168,240,0.7); text-decoration: none; }
+    .cmp-vs-row { display: inline-flex; align-items: center; gap: 24px; margin-bottom: 28px; }
+    .cmp-brand-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(75,168,240,0.08); border: 1px solid rgba(75,168,240,0.25);
+      border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 700; color: #4ba8f0;
+    }
+    .cmp-vs-badge {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800; color: rgba(255,255,255,0.45); letter-spacing: 0.05em;
+    }
+    .cmp-comp-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.55);
+    }
+    .cmp-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem); font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.04em; color: #fff; margin: 0 auto 22px; max-width: 820px;
+    }
+    .cmp-hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4ba8f0, #ffd700);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .cmp-hero-sub {
+      font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.5);
+      max-width: 620px; margin: 0 auto 36px;
+    }
+    .cmp-verdict {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 100px; padding: 8px 20px; font-size: 13px; font-weight: 600; color: #ffd700;
+    }
+    /* Cost reality strip */
+    .reality-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    }
+    .reality-card {
+      background: linear-gradient(145deg, #0d1f3c, #081530);
+      border: 1px solid rgba(75,168,240,0.14);
+      border-radius: 18px; padding: 28px 24px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .reality-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.4), transparent);
+    }
+    .reality-num {
+      font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800;
+      letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px;
+    }
+    .reality-num.red { color: #ff6b6b; }
+    .reality-num.gold { color: #ffd700; }
+    .reality-num.blue { color: #4ba8f0; }
+    .reality-label { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    /* comp table */
+    .comp-table-wrap { overflow-x: auto; border-radius: 20px; border: 1px solid rgba(75,168,240,0.14); }
+    .comp-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+    .comp-table thead tr { background: rgba(4,12,32,0.98); border-bottom: 1px solid rgba(75,168,240,0.14); }
+    .comp-table th { padding: 20px 24px; text-align: left; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; text-transform: uppercase; }
+    .comp-table th.edifi-col { color: #4ba8f0; background: rgba(75,168,240,0.04); }
+    .comp-table th.comp-col { color: rgba(255,255,255,0.35); }
+    .comp-table th.comp-col2 { color: rgba(255,255,255,0.28); }
+    .comp-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
+    .comp-table tbody tr:last-child { border-bottom: none; }
+    .comp-table tbody tr:hover { background: rgba(75,168,240,0.03); }
+    .comp-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.012); }
+    .comp-table td { padding: 16px 24px; font-size: 13.5px; vertical-align: middle; }
+    .comp-table td.feature-col { color: rgba(255,255,255,0.7); font-weight: 500; }
+    .comp-table td.edifi-col { background: rgba(75,168,240,0.03); color: rgba(255,255,255,0.85); }
+    .comp-table td.comp-col { color: rgba(255,255,255,0.4); }
+    .comp-table td.comp-col2 { color: rgba(255,255,255,0.28); }
+    .check-yes { display: inline-flex; align-items: center; gap: 6px; color: #34d399; font-weight: 700; font-size: 13px; }
+    .check-yes svg { width: 16px; height: 16px; stroke: #34d399; fill: none; stroke-width: 2.5; }
+    .check-no { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,100,100,0.7); font-size: 13px; }
+    .check-no svg { width: 16px; height: 16px; stroke: rgba(255,100,100,0.7); fill: none; stroke-width: 2; }
+    .check-partial { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,215,0,0.6); font-size: 13px; }
+    /* cost breakdown */
+    .cost-breakdown {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .cost-card {
+      border-radius: 20px; padding: 36px; position: relative; overflow: hidden;
+    }
+    .cost-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    }
+    .cost-card--manual {
+      background: linear-gradient(145deg, rgba(255,100,100,0.06), rgba(3,8,24,0.95));
+      border: 1px solid rgba(255,100,100,0.14);
+    }
+    .cost-card--manual::before {
+      background: linear-gradient(90deg, transparent, rgba(255,100,100,0.3), transparent);
+    }
+    .cost-card--edifi {
+      background: linear-gradient(145deg, rgba(9,91,167,0.12), rgba(3,8,24,0.95));
+      border: 1px solid rgba(75,168,240,0.22);
+    }
+    .cost-card--edifi::before {
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.45), transparent);
+    }
+    .cost-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 14px; display: block;
+    }
+    .cost-card--manual .cost-card-label { color: rgba(255,100,100,0.7); }
+    .cost-card--edifi .cost-card-label { color: #4ba8f0; }
+    .cost-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .cost-line {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 13px;
+    }
+    .cost-line:last-child { border-bottom: none; }
+    .cost-line-label { color: rgba(255,255,255,0.55); }
+    .cost-line-val { font-weight: 700; color: #fff; }
+    .cost-line-val.red { color: rgba(255,100,100,0.8); }
+    .cost-line-val.green { color: #34d399; }
+    .cost-total {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; border-radius: 10px; margin-top: 16px;
+      font-size: 15px; font-weight: 800;
+    }
+    .cost-total--manual { background: rgba(255,100,100,0.06); color: rgba(255,100,100,0.8); }
+    .cost-total--edifi { background: rgba(52,211,153,0.08); color: #34d399; }
+    @media (max-width: 960px) {
+      .reality-grid { grid-template-columns: repeat(2, 1fr); }
+      .cost-breakdown { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .cmp-hero { padding: 150px 0 72px; }
+      .reality-grid { grid-template-columns: 1fr 1fr; }
+      .cmp-vs-row { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.elitedentalforce.com/"},
+      {"@type": "ListItem", "position": 2, "name": "EDiFi vs Manual Billing", "item": "https://www.elitedentalforce.com/pages/edifi-vs-manual-billing.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between EDiFi and manual dental billing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi automates eligibility verification, claim scrubbing, and payment reconciliation that manual billing handles through phone calls, staff time, and spreadsheets. Manual billing typically catches errors after claims are denied; EDiFi catches them before submission. Practices using EDiFi report reducing claim denial rates from an industry average of 18% to under 3%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can EDiFi replace my outsourced dental billing company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi is designed to replace or significantly reduce dependence on outsourced billing companies by automating the same tasks in-house at a fraction of the cost. Unlike outsourced billing which charges 5–8% of collections, EDiFi charges a flat monthly fee and gives your team real-time visibility into every claim. Most practices recover the cost of EDiFi within the first month through reduced denials and recovered underpayments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does EDiFi replace billing staff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi is built to amplify your billing team, not replace them. It automates the repetitive verification and claim prep tasks so your staff can focus on follow-up, patient communication, and exceptions. Most practices find their existing team can handle higher patient volume without adding headcount after implementing EDiFi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does EDiFi cost compared to manual billing or outsourcing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi starts at $499 per month per location, which is significantly less than the $2,000–$5,000 per month most practices spend on outsourced billing services. Manual in-house billing adds up to full-time staff salaries plus training and error costs. The average EDiFi practice recovers $4,200 per month in previously lost or underpaid claims within the first 90 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the ROI of switching from manual billing to EDiFi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most practices see a positive ROI within 30–60 days of implementing EDiFi. The return comes from three sources: reduced claim denials, recovered underpayments from payer fee schedule audits, and staff time savings on manual eligibility calls. One pilot practice recovered $59,000 in underpayments during their first three months on the platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will switching to EDiFi disrupt my current billing workflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EDiFi is designed for a non-disruptive rollout alongside your existing PMS, not as a replacement for it. Implementation typically takes two to four weeks and includes guided onboarding with an EDiFi specialist. Your team continues working in their existing software while EDiFi handles verification, scrubbing, and audit tasks in the background."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do claim denial rates compare between EDiFi and manual billing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The dental industry average claim denial rate is 15–18% for practices using manual billing processes. EDiFi practices consistently report denial rates under 3% because the AI scrubbing engine catches coding errors, missing attachments, and eligibility mismatches before the claim is submitted. Reducing denials by even 10 percentage points on a $1M revenue practice recovers $100,000 annually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does EDiFi work for practices already using an in-house billing coordinator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, EDiFi is commonly deployed alongside in-house billing coordinators who use it as their primary workflow tool rather than manual processes. The platform gives coordinators a real-time claim dashboard, automated eligibility results before each appointment, and payment audit reports that surface underpayments they would otherwise miss. Most billing coordinators report that EDiFi cuts their daily workload in half."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".cmp-hero-sub"]
+    },
+    "url": "https://www.elitedentalforce.com/pages/edifi-vs-manual-billing.html"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo" aria-label="Elite Dental Force Home">
+          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933">
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <a href="platform.html" class="nav-link">Platform</a>
+              <ul class="dropdown">
+                <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+                <li><a href="edifi.html">EDiFi Software</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="demo.html">Product Tour</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link">Solutions</a>
+              <ul class="dropdown">
+                <li><a href="services.html">For Private Practices</a></li>
+                <li><a href="services.html#groups">For Multi Location Groups</a></li>
+                <li><a href="services.html#dso">For DSOs &amp; Enterprises</a></li>
+                <li><a href="partners.html">Partners &amp; Integrations</a></li>
+                <li><a href="roi-calculator.html">ROI Calculator</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="resources/blog.html">Blog</a></li>
+                <li><a href="resources/podcast.html">Podcast</a></li>
+                <li><a href="resources/webinars.html">Webinars</a></li>
+                <li><a href="resources/news.html">News</a></li>
+                <li><a href="resources/case-studies.html">Case Studies</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="company.html" class="nav-link">Company</a>
+              <ul class="dropdown">
+                <li><a href="company.html">About Us</a></li>
+                <li><a href="company/security.html">Security</a></li>
+                <li><a href="company/compliance.html">Compliance Center</a></li>
+                <li><a href="company/faq.html">FAQ</a></li>
+                <li><a href="investors.html">Investors</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
+          </div>
+        </nav>
+        <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cmp-hero">
+      <div class="cmp-hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cmp-hero-inner">
+
+          <p class="cmp-breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Comparisons &rsaquo; EDiFi vs Manual Billing
+          </p>
+
+          <div class="cmp-vs-row">
+            <div class="cmp-brand-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              EDiFi Enterprise
+            </div>
+            <div class="cmp-vs-badge" aria-label="versus">VS</div>
+            <div class="cmp-comp-pill">Manual Billing</div>
+          </div>
+
+          <h1>AI Powered Revenue Intelligence<br>vs <em>Your Current Billing Process</em></h1>
+
+          <p class="cmp-hero-sub">
+            Whether you use an in-house billing team or an outsourced billing service, the manual billing model has a fundamental ceiling: humans cannot audit every payment, catch every underpayment, or process every appeal at scale. EDiFi can.
+          </p>
+
+          <div class="cmp-verdict" role="note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            EDiFi found $59K in underpayments from 2,399 claims no manual billing team had flagged
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reality Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="text-align:center;max-width:620px;margin:0 auto 44px;">
+          <span class="overline">The Reality of Manual Billing</span>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;">What Your Current Process Costs You</h2>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.48);margin:0;">
+            These are industry benchmarks for dental practices operating manual billing processes. Your numbers may be better or worse, but the structural limitations are the same.
+          </p>
+        </div>
+
+        <div class="reality-grid">
+          <div class="reality-card">
+            <div class="reality-num red">27%</div>
+            <div class="reality-label">Of claims are underpaid by payers and never caught by manual billing teams<br><em style="opacity:0.6;font-style:normal;">(EDiFi beta validation)</em></div>
+          </div>
+          <div class="reality-card">
+            <div class="reality-num red">$59K</div>
+            <div class="reality-label">Average underpayments found per practice in EDiFi's first payment audit<br><em style="opacity:0.6;font-style:normal;">(2,399 claims, single practice)</em></div>
+          </div>
+          <div class="reality-card">
+            <div class="reality-num gold">15-20%</div>
+            <div class="reality-label">Average dental claim denial rate nationally<br><em style="opacity:0.6;font-style:normal;">(ADA and industry benchmarks)</em></div>
+          </div>
+          <div class="reality-card">
+            <div class="reality-num blue">$45K+</div>
+            <div class="reality-label">Average annual fully loaded cost of one billing staff member<br><em style="opacity:0.6;font-style:normal;">(salary, benefits, turnover)</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-header" style="text-align:center;max-width:580px;margin:0 auto 40px;">
+          <span class="overline">Side by Side</span>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:12px;">EDiFi vs Your Billing Team</h2>
+        </div>
+
+        <div class="comp-table-wrap" role="region" aria-label="Feature comparison table">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th style="width:34%;">Capability</th>
+                <th class="edifi-col" style="width:22%;">EDiFi Enterprise</th>
+                <th class="comp-col" style="width:22%;">In-House Team</th>
+                <th class="comp-col2" style="width:22%;">Outsourced Billing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-col">Payment audit against fee schedules</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Every claim, automated</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Rarely or never</span></td>
+                <td class="comp-col2"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not included</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Underpayment detection</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI, 27% catch rate</span></td>
+                <td class="comp-col"><span class="check-partial">Occasional manual review</span></td>
+                <td class="comp-col2"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not in scope</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Eligibility verification before appointments</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Real time, automated</span></td>
+                <td class="comp-col"><span class="check-partial">1 to 2 days before, manual</span></td>
+                <td class="comp-col2"><span class="check-partial">Batch, often delayed</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">AI powered claim scrubbing</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>CDT/ICD-10 AI assignment</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Manual coding</span></td>
+                <td class="comp-col2"><span class="check-partial">Rules based, not AI</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Denial appeal letters</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI generated with clinical context</span></td>
+                <td class="comp-col"><span class="check-partial">Manual, inconsistent quality</span></td>
+                <td class="comp-col2"><span class="check-partial">Template based, generic</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Medical billing crossover</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>9 categories, CMS-1500</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not in scope</span></td>
+                <td class="comp-col2"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not in scope</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Processes 1,000+ claims monthly at scale</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No throughput ceiling</span></td>
+                <td class="comp-col"><span class="check-partial">Limited by headcount</span></td>
+                <td class="comp-col2"><span class="check-partial">Per claim fees increase costs</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Zero turnover risk</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Always on</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>High turnover in dental billing</span></td>
+                <td class="comp-col2"><span class="check-partial">Reduced but present</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">EOB reconciliation</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Automated, every payment</span></td>
+                <td class="comp-col"><span class="check-partial">Spot checks only</span></td>
+                <td class="comp-col2"><span class="check-partial">Inconsistent</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Perio charting voice AI</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Chairside, hands free</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Manual entry</span></td>
+                <td class="comp-col2"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not in scope</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Cross location analytics (DSOs)</td>
+                <td class="edifi-col"><span class="check-yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Built in portfolio view</span></td>
+                <td class="comp-col"><span class="check-no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Not scalable</span></td>
+                <td class="comp-col2"><span class="check-partial">Limited reporting</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- True Cost Breakdown -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="text-align:center;max-width:620px;margin:0 auto 44px;">
+          <span class="overline">True Cost Analysis</span>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;">The Full Picture for a Single Office</h2>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.48);margin:0;">
+            Based on a single location dental practice submitting approximately 300 claims per month at $450 average claim value. Estimates use industry benchmarks and EDiFi beta validation data.
+          </p>
+        </div>
+
+        <div class="cost-breakdown">
+
+          <div class="cost-card cost-card--manual">
+            <span class="cost-card-label">Manual In-House Billing</span>
+            <h3>True Annual Cost</h3>
+
+            <div class="cost-line">
+              <span class="cost-line-label">Billing coordinator salary</span>
+              <span class="cost-line-val red">$45,000</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Benefits and payroll taxes (~25%)</span>
+              <span class="cost-line-val red">$11,250</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Training and continuing education</span>
+              <span class="cost-line-val red">$2,000</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Turnover cost (average 1 per 2 years)</span>
+              <span class="cost-line-val red">$8,000</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Underpayments not caught (27% of claims)</span>
+              <span class="cost-line-val red">$77,000+</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Denials not recovered (manual process)</span>
+              <span class="cost-line-val red">$20,000+</span>
+            </div>
+            <div class="cost-total cost-total--manual">
+              <span>True Annual Cost to Practice</span>
+              <span>$163,250+</span>
+            </div>
+          </div>
+
+          <div class="cost-card cost-card--edifi">
+            <span class="cost-card-label">EDiFi Enterprise</span>
+            <h3>True Annual Cost</h3>
+
+            <div class="cost-line">
+              <span class="cost-line-label">EDiFi subscription (1 location)</span>
+              <span class="cost-line-val red">$5,988/yr</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Onboarding and setup</span>
+              <span class="cost-line-val">Included</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Training for your team</span>
+              <span class="cost-line-val">Included</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Underpayments recovered</span>
+              <span class="cost-line-val green">+$77,000</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Denial recovery (incremental)</span>
+              <span class="cost-line-val green">+$21,870</span>
+            </div>
+            <div class="cost-line">
+              <span class="cost-line-label">Medical billing crossover (new channel)</span>
+              <span class="cost-line-val green">+$80K to $200K</span>
+            </div>
+            <div class="cost-total cost-total--edifi">
+              <span>Net Annual Gain vs Manual</span>
+              <span>$92,000+</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p style="text-align:center;font-size:12px;color:rgba(255,255,255,0.25);margin-top:20px;max-width:720px;margin-left:auto;margin-right:auto;line-height:1.7;">
+          Estimates based on EDiFi beta validation data (2,399 claims, single practice) and national dental industry benchmarks. Individual results vary based on payer mix, claim volume, existing billing capability, and market conditions. Contact us for a practice specific analysis.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>See What Your Practice is <span class="gradient-text">Actually Owed</span></h2>
+        <p>Book a 30 minute demo and we will run EDiFi's audit engine on your real claims data. You will see actual underpayments, not estimates, before you spend a dollar.</p>
+        <div class="cta-band-actions">
+          <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team" target="_blank" class="btn btn-primary btn-lg">Book a Free Audit Demo</a>
+          <a href="roi-calculator.html" class="btn btn-secondary btn-lg">Calculate Your ROI</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="Home"><img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy"></a>
+          <p>The infrastructure leader in dental revenue intelligence.</p>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Compare</h5>
+          <ul class="footer-links">
+            <li><a href="edifi-vs-dentrix-rcm.html">EDiFi vs Dentrix RCM</a></li>
+            <li><a href="edifi-vs-weave.html">EDiFi vs Weave</a></li>
+            <li><a href="edifi-vs-manual-billing.html">EDiFi vs Manual Billing</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Platform</h5>
+          <ul class="footer-links">
+            <li><a href="platform.html">Overview</a></li>
+            <li><a href="edifi.html">EDiFi Enterprise</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company/compliance.html">Compliance Center</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
+        <div class="footer-legal"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/cookie-consent.js" defer></script>
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+</body>
+</html>
