@@ -1,0 +1,2190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate how much revenue EDiFi could recover for your dental practice. Based on validated beta data: 27% of claims underpaid, $59K found in a single practice audit."
+    />
+    <link
+      rel="canonical"
+      href="https://www.elitedentalforce.com/pages/roi-calculator.html"
+    />
+    <meta
+      property="og:title"
+      content="Dental Revenue Recovery Calculator | Elite Dental Force"
+    />
+    <meta
+      property="og:description"
+      content="See how much EDiFi could recover for your practice in 12 months. Based on real validated data from our payment audit engine."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.elitedentalforce.com/pages/roi-calculator.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.elitedentalforce.com/images/og-roi-calculator.png"
+    />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://www.elitedentalforce.com/images/og-roi-calculator.png"
+    />
+
+
+    <title>Dental Revenue Recovery Calculator | Elite Dental Force</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+    <style>
+      /* ============================================================
+       ROI CALCULATOR PAGE — Elite Dental Force
+       ============================================================ */
+
+      body::before {
+        background-image:
+          linear-gradient(rgba(75, 168, 240, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(75, 168, 240, 0.08) 1px, transparent 1px);
+        background-size: 55px 55px;
+      }
+
+      /* ── HERO ── */
+      .roi-hero {
+        position: relative;
+        padding: 160px 0 80px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .roi-hero-glow {
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(9, 91, 167, 0.22) 0%,
+          transparent 62%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        pointer-events: none;
+      }
+
+      .roi-hero-inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .roi-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #ffd700;
+        border: 1px solid rgba(255, 215, 0, 0.32);
+        background: rgba(255, 215, 0, 0.07);
+        padding: 6px 18px;
+        border-radius: 100px;
+        margin-bottom: 28px;
+      }
+
+      .roi-kicker-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ffd700;
+        box-shadow: 0 0 7px rgba(255, 215, 0, 0.8);
+        animation: kicker-pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes kicker-pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.75);
+        }
+      }
+
+      .roi-hero h1 {
+        font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        color: #fff;
+        margin: 0 auto 22px;
+        max-width: 860px;
+      }
+
+      .roi-hero h1 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #4ba8f0, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .roi-hero-sub {
+        font-size: 1.1rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.52);
+        max-width: 580px;
+        margin: 0 auto 40px;
+      }
+
+      /* Validation pills */
+      .roi-validation-pills {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .roi-vpill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(75, 168, 240, 0.07);
+        border: 1px solid rgba(75, 168, 240, 0.2);
+        border-radius: 100px;
+        padding: 8px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .roi-vpill strong {
+        color: #fff;
+      }
+
+      .roi-vpill-icon {
+        width: 18px;
+        height: 18px;
+        background: rgba(75, 168, 240, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .roi-vpill-icon svg {
+        width: 10px;
+        height: 10px;
+        stroke: #4ba8f0;
+        fill: none;
+        stroke-width: 2.5;
+      }
+
+      /* ── CALCULATOR SECTION ── */
+      .calc-section {
+        background: transparent;
+        padding: 48px 0 96px;
+      }
+
+      .calc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      /* ── INPUT PANEL ── */
+      .calc-inputs-card {
+        background: linear-gradient(
+          145deg,
+          rgba(8, 21, 52, 0.95),
+          rgba(4, 12, 32, 0.95)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.18);
+        border-radius: 24px;
+        padding: 40px 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .calc-inputs-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.5),
+          transparent
+        );
+      }
+
+      .calc-panel-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #4ba8f0;
+        margin-bottom: 28px;
+        display: block;
+      }
+
+      /* Practice type pills */
+      .practice-type-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 32px;
+      }
+
+      .pt-btn {
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      .pt-btn:hover {
+        border-color: rgba(75, 168, 240, 0.35);
+        color: rgba(255, 255, 255, 0.8);
+        background: rgba(75, 168, 240, 0.07);
+      }
+
+      .pt-btn.active {
+        background: rgba(75, 168, 240, 0.12);
+        border-color: rgba(75, 168, 240, 0.5);
+        color: #4ba8f0;
+        box-shadow: 0 0 14px rgba(75, 168, 240, 0.12);
+      }
+
+      .pt-btn .pt-btn-name {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .pt-btn .pt-btn-sub {
+        display: block;
+        font-size: 10px;
+        opacity: 0.6;
+        margin-top: 2px;
+      }
+
+      /* Slider group */
+      .slider-group {
+        margin-bottom: 28px;
+      }
+
+      .slider-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .slider-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .slider-value {
+        font-size: 15px;
+        font-weight: 800;
+        color: #fff;
+        background: rgba(75, 168, 240, 0.1);
+        border: 1px solid rgba(75, 168, 240, 0.2);
+        border-radius: 8px;
+        padding: 3px 12px;
+        min-width: 80px;
+        text-align: center;
+        transition: all 0.15s ease;
+      }
+
+      .slider-value.updated {
+        background: rgba(75, 168, 240, 0.18);
+        border-color: rgba(75, 168, 240, 0.45);
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 4px;
+        background: rgba(75, 168, 240, 0.15);
+        border-radius: 100px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #62bcff, #095ba7);
+        border: 2px solid rgba(75, 168, 240, 0.5);
+        box-shadow: 0 0 12px rgba(75, 168, 240, 0.4);
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+
+      input[type="range"]::-webkit-slider-thumb:hover {
+        box-shadow: 0 0 20px rgba(75, 168, 240, 0.65);
+        transform: scale(1.15);
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #62bcff, #095ba7);
+        border: 2px solid rgba(75, 168, 240, 0.5);
+        cursor: pointer;
+      }
+
+      .slider-range-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6px;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.28);
+      }
+
+      /* Locations input */
+      .locations-group {
+        margin-bottom: 28px;
+      }
+
+      .locations-input-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .loc-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.2);
+        color: #4ba8f0;
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.15s ease;
+        flex-shrink: 0;
+      }
+
+      .loc-btn:hover {
+        background: rgba(75, 168, 240, 0.16);
+        border-color: rgba(75, 168, 240, 0.4);
+      }
+
+      .loc-display {
+        flex: 1;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+      }
+
+      .loc-sublabel {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 3px;
+        text-align: center;
+      }
+
+      /* ── RESULTS PANEL ── */
+      .calc-results-card {
+        background: linear-gradient(
+          145deg,
+          rgba(6, 14, 40, 0.98),
+          rgba(3, 8, 24, 0.98)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.22);
+        border-radius: 24px;
+        padding: 40px 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .calc-results-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 215, 0, 0.6),
+          transparent
+        );
+      }
+
+      /* Featured recovery metric */
+      .featured-recovery {
+        text-align: center;
+        padding: 32px 20px 28px;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 215, 0, 0.04),
+          rgba(75, 168, 240, 0.04)
+        );
+        border: 1px solid rgba(255, 215, 0, 0.15);
+        border-radius: 18px;
+        margin-bottom: 28px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .featured-recovery::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 215, 0, 0.4),
+          transparent
+        );
+      }
+
+      .featured-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 215, 0, 0.7);
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .featured-number {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        background: linear-gradient(135deg, #ffd700, #f5c842, #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: block;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .featured-sublabel {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.38);
+      }
+
+      /* Metric grid */
+      .results-metric-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .result-metric {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 16px 18px;
+        transition: all 0.2s ease;
+      }
+
+      .result-metric.highlight {
+        background: rgba(75, 168, 240, 0.05);
+        border-color: rgba(75, 168, 240, 0.15);
+      }
+
+      .result-metric-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.38);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .result-metric-value {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.03em;
+        transition: all 0.3s ease;
+      }
+
+      .result-metric-value.blue {
+        color: #4ba8f0;
+      }
+      .result-metric-value.gold {
+        color: #ffd700;
+      }
+      .result-metric-value.green {
+        color: #34d399;
+      }
+
+      /* Payback bar */
+      .payback-section {
+        background: rgba(52, 211, 153, 0.05);
+        border: 1px solid rgba(52, 211, 153, 0.15);
+        border-radius: 14px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .payback-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(52, 211, 153, 0.1);
+        border: 1px solid rgba(52, 211, 153, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .payback-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: #34d399;
+        fill: none;
+        stroke-width: 2;
+      }
+
+      .payback-text-wrap {
+        flex: 1;
+      }
+
+      .payback-value {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #34d399;
+      }
+
+      .payback-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.42);
+        margin-top: 2px;
+      }
+
+      /* Results CTA */
+      .results-cta-section {
+        text-align: center;
+      }
+
+      .results-cta-section .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 15px;
+        background: linear-gradient(135deg, #095ba7, #4ba8f0);
+        box-shadow: 0 8px 28px rgba(75, 168, 240, 0.28);
+      }
+
+      .results-disclaimer {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.25);
+        line-height: 1.6;
+        margin-top: 14px;
+        text-align: center;
+      }
+
+      /* ── VALIDATION STRIP ── */
+      .validation-strip {
+        background: rgba(8, 21, 48, 0.55);
+        border-top: 1px solid rgba(75, 168, 240, 0.1);
+        border-bottom: 1px solid rgba(75, 168, 240, 0.1);
+        position: relative;
+      }
+
+      .validation-strip::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.4),
+          transparent
+        );
+      }
+
+      .validation-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+      }
+
+      .validation-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 32px 16px;
+        border-right: 1px solid rgba(75, 168, 240, 0.08);
+        text-align: center;
+      }
+
+      .validation-item:last-child {
+        border-right: none;
+      }
+
+      .validation-num {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+
+      .validation-num.gold {
+        color: #ffd700;
+      }
+      .validation-num.blue {
+        color: #4ba8f0;
+      }
+
+      .validation-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.42);
+        line-height: 1.4;
+      }
+
+      /* ── METHODOLOGY ── */
+      .methodology-card {
+        background: rgba(4, 12, 32, 0.7);
+        border: 1px solid rgba(75, 168, 240, 0.12);
+        border-radius: 20px;
+        padding: 40px;
+      }
+
+      .methodology-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .method-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .method-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        background: rgba(75, 168, 240, 0.08);
+        border: 1px solid rgba(75, 168, 240, 0.16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .method-icon svg {
+        width: 18px;
+        height: 18px;
+        stroke: #4ba8f0;
+        fill: none;
+        stroke-width: 2;
+      }
+
+      .method-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .method-desc {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.6;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 960px) {
+        .calc-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .validation-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .validation-item:nth-child(2) {
+          border-right: none;
+        }
+        .validation-item:nth-child(3),
+        .validation-item:nth-child(4) {
+          border-top: 1px solid rgba(75, 168, 240, 0.08);
+        }
+        .methodology-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .roi-hero {
+          padding: 140px 0 56px;
+        }
+        .practice-type-group {
+          grid-template-columns: 1fr 1fr;
+        }
+        .results-metric-grid {
+          grid-template-columns: 1fr;
+        }
+        .validation-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .methodology-card {
+          padding: 28px 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .calc-inputs-card,
+        .calc-results-card {
+          padding: 28px 22px;
+        }
+        .featured-number {
+          font-size: 2.8rem;
+        }
+      }
+
+      /* ── Lead Gate Modal ── */
+      .roi-modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        background: rgba(1, 5, 18, 0.85);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        animation: modal-fade-in 0.2s ease;
+      }
+      @keyframes modal-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .roi-modal-card {
+        background: rgba(6, 14, 38, 0.98);
+        border: 1px solid rgba(75, 168, 240, 0.25);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 440px;
+        width: 100%;
+        position: relative;
+        box-shadow:
+          0 32px 80px rgba(0, 0, 0, 0.6),
+          0 0 0 1px rgba(75, 168, 240, 0.1);
+        animation: modal-slide-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes modal-slide-up {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .roi-modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 6px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 0;
+        transition:
+          background 0.15s,
+          color 0.15s;
+      }
+      .roi-modal-close:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .roi-modal-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          rgba(75, 168, 240, 0.18),
+          rgba(9, 91, 167, 0.18)
+        );
+        border: 1px solid rgba(75, 168, 240, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin: 0 auto 16px;
+        color: #4ba8f0;
+      }
+      .roi-modal-header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .roi-modal-header h3 {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin-bottom: 6px;
+        letter-spacing: -0.02em;
+      }
+      .roi-modal-header p {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.48);
+        margin: 0;
+      }
+      .roi-modal-field {
+        margin-bottom: 14px;
+      }
+      .roi-modal-field label {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        margin-bottom: 6px;
+      }
+      .roi-modal-field input {
+        width: 100%;
+        padding: 10px 14px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: #f0f7ff;
+        font-size: 0.93rem;
+        font-family: inherit;
+        transition: border-color 0.15s;
+      }
+      .roi-modal-field input::placeholder {
+        color: rgba(255, 255, 255, 0.22);
+      }
+      .roi-modal-field input:focus {
+        outline: none;
+        border-color: rgba(75, 168, 240, 0.5);
+        background: rgba(75, 168, 240, 0.04);
+      }
+      .roi-modal-submit {
+        width: 100%;
+        margin-top: 8px;
+      }
+      .roi-modal-disclaimer {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.28);
+        text-align: center;
+        margin: 12px 0 0;
+      }
+    </style>
+
+    <!-- Schema: WebPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Dental Revenue Recovery Calculator | Elite Dental Force",
+        "url": "https://www.elitedentalforce.com/pages/roi-calculator.html",
+        "description": "Calculate how much revenue EDiFi could recover for your dental practice based on validated beta data.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Elite Dental Force",
+          "url": "https://www.elitedentalforce.com"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.elitedentalforce.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ROI Calculator",
+            "item": "https://www.elitedentalforce.com/pages/roi-calculator.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a
+            href="../index.html"
+            class="logo"
+            aria-label="Elite Dental Force Home"
+          >
+            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="platform.html" class="nav-link">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+                  <li><a href="edifi.html">EDiFi Enterprise</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="services.html" class="nav-link">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">For Private Practices</a></li>
+                  <li>
+                    <a href="services.html#groups">For Multi Location Groups</a>
+                  </li>
+                  <li>
+                    <a href="services.html#dso">For DSOs &amp; Enterprises</a>
+                  </li>
+                  <li>
+                    <a href="partners.html">Partners &amp; Integrations</a>
+                  </li>
+                  <li><a href="roi-calculator.html">ROI Calculator</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="resources/blog.html">Blog</a></li>
+                  <li><a href="resources/podcast.html">Podcast</a></li>
+                  <li><a href="resources/webinars.html">Webinars</a></li>
+                  <li><a href="resources/news.html">News</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="company.html">About Us</a></li>
+                  <li><a href="company/security.html">Security</a></li>
+                  <li>
+                    <a href="company/compliance.html">Compliance Center</a>
+                  </li>
+                  <li><a href="company/faq.html">FAQ</a></li>
+                  <li><a href="investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button
+            class="mobile-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════ -->
+      <section class="roi-hero">
+        <div class="roi-hero-glow"></div>
+        <div class="container">
+          <div class="roi-hero-inner">
+            <div class="roi-kicker">
+              <span class="roi-kicker-dot" aria-hidden="true"></span>
+              Powered by EDiFi Validation Data
+            </div>
+
+            <h1>Calculate Your <em>Revenue Recovery</em> Potential</h1>
+
+            <p class="roi-hero-sub">
+              See how much EDiFi could recover for your practice in the next 12
+              months. Every estimate is grounded in real beta validation data,
+              not projections.
+            </p>
+
+            <div
+              class="roi-validation-pills"
+              role="list"
+              aria-label="Validation statistics"
+            >
+              <span class="roi-vpill" role="listitem">
+                <span class="roi-vpill-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                ></span>
+                <strong>$59K</strong>&nbsp;found in a single audit
+              </span>
+              <span class="roi-vpill" role="listitem">
+                <span class="roi-vpill-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                ></span>
+                <strong>27%</strong>&nbsp;of claims underpaid
+              </span>
+              <span class="roi-vpill" role="listitem">
+                <span class="roi-vpill-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" /></svg
+                ></span>
+                <strong>2,399</strong>&nbsp;real claims validated
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         CALCULATOR
+         ════════════════════════════════════════ -->
+      <section class="calc-section">
+        <div class="container">
+          <div class="calc-grid">
+            <!-- LEFT: Inputs -->
+            <div
+              class="calc-inputs-card"
+              role="form"
+              aria-label="Practice profile inputs"
+            >
+              <span class="calc-panel-label">Your Practice Profile</span>
+
+              <!-- Practice Type -->
+              <div class="slider-group" style="margin-bottom: 24px">
+                <div class="slider-header" style="margin-bottom: 12px">
+                  <span class="slider-label">Practice Type</span>
+                </div>
+                <div
+                  class="practice-type-group"
+                  role="group"
+                  aria-label="Practice type"
+                >
+                  <button
+                    class="pt-btn active"
+                    data-type="single"
+                    onclick="setPracticeType(this, 1)"
+                    aria-pressed="true"
+                  >
+                    <span class="pt-btn-name">Single Office</span>
+                    <span class="pt-btn-sub">1 location</span>
+                  </button>
+                  <button
+                    class="pt-btn"
+                    data-type="group"
+                    onclick="setPracticeType(this, 3)"
+                    aria-pressed="false"
+                  >
+                    <span class="pt-btn-name">Small Group</span>
+                    <span class="pt-btn-sub">2 to 5 locations</span>
+                  </button>
+                  <button
+                    class="pt-btn"
+                    data-type="regional"
+                    onclick="setPracticeType(this, 8)"
+                    aria-pressed="false"
+                  >
+                    <span class="pt-btn-name">Regional DSO</span>
+                    <span class="pt-btn-sub">6 to 20 locations</span>
+                  </button>
+                  <button
+                    class="pt-btn"
+                    data-type="enterprise"
+                    onclick="setPracticeType(this, 30)"
+                    aria-pressed="false"
+                  >
+                    <span class="pt-btn-name">Enterprise</span>
+                    <span class="pt-btn-sub">20+ locations</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Monthly Claims -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label class="slider-label" for="slider-claims"
+                    >Monthly Claims Per Location</label
+                  >
+                  <span class="slider-value" id="val-claims" aria-live="polite"
+                    >300</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="slider-claims"
+                  min="50"
+                  max="2000"
+                  value="300"
+                  step="10"
+                  oninput="updateSlider('claims', this.value)"
+                  aria-label="Monthly claims per location"
+                />
+                <div class="slider-range-labels">
+                  <span>50 claims</span><span>2,000 claims</span>
+                </div>
+              </div>
+
+              <!-- Avg Claim Value -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label class="slider-label" for="slider-claim-value"
+                    >Average Claim Value</label
+                  >
+                  <span
+                    class="slider-value"
+                    id="val-claim-value"
+                    aria-live="polite"
+                    >$450</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="slider-claim-value"
+                  min="150"
+                  max="1500"
+                  value="450"
+                  step="10"
+                  oninput="updateSlider('claimValue', this.value)"
+                  aria-label="Average claim value in dollars"
+                />
+                <div class="slider-range-labels">
+                  <span>$150</span><span>$1,500</span>
+                </div>
+              </div>
+
+              <!-- Number of Locations -->
+              <div class="slider-group locations-group">
+                <div class="slider-header" style="margin-bottom: 12px">
+                  <span class="slider-label">Number of Locations</span>
+                </div>
+                <div class="locations-input-wrap">
+                  <button
+                    class="loc-btn"
+                    onclick="changeLocations(-1)"
+                    aria-label="Decrease locations"
+                  >
+                    &#8722;
+                  </button>
+                  <div>
+                    <div
+                      class="loc-display"
+                      id="val-locations"
+                      aria-live="polite"
+                    >
+                      1
+                    </div>
+                    <div class="loc-sublabel">location(s)</div>
+                  </div>
+                  <button
+                    class="loc-btn"
+                    onclick="changeLocations(1)"
+                    aria-label="Increase locations"
+                  >
+                    &#43;
+                  </button>
+                </div>
+              </div>
+
+              <!-- Denial Rate -->
+              <div class="slider-group" style="margin-bottom: 0">
+                <div class="slider-header">
+                  <label class="slider-label" for="slider-denial"
+                    >Current Claim Denial Rate</label
+                  >
+                  <span class="slider-value" id="val-denial" aria-live="polite"
+                    >18%</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="slider-denial"
+                  min="5"
+                  max="35"
+                  value="18"
+                  step="1"
+                  oninput="updateSlider('denial', this.value)"
+                  aria-label="Current claim denial rate percentage"
+                />
+                <div class="slider-range-labels">
+                  <span>5%</span><span>35%</span>
+                </div>
+                <p
+                  style="
+                    font-size: 11px;
+                    color: rgba(255, 255, 255, 0.28);
+                    margin-top: 6px;
+                    margin-bottom: 0;
+                  "
+                >
+                  National average: 15% to 20%
+                </p>
+              </div>
+            </div>
+            <!-- /.calc-inputs-card -->
+
+            <!-- RIGHT: Results -->
+            <div
+              class="calc-results-card"
+              aria-label="Recovery projections"
+              aria-live="polite"
+            >
+              <span class="calc-panel-label">Your Recovery Projection</span>
+
+              <!-- Featured number -->
+              <div
+                class="featured-recovery"
+                role="region"
+                aria-label="Total annual recovery estimate"
+              >
+                <span class="featured-label">Projected Annual Recovery</span>
+                <span class="featured-number" id="result-annual-total"
+                  >$98,748</span
+                >
+                <span class="featured-sublabel"
+                  >across underpayments and denial recovery</span
+                >
+              </div>
+
+              <!-- Metric grid -->
+              <div class="results-metric-grid">
+                <div class="result-metric highlight">
+                  <span class="result-metric-label">Underpayment Recovery</span>
+                  <span
+                    class="result-metric-value blue"
+                    id="result-underpayment"
+                    >$76,878</span
+                  >
+                </div>
+                <div class="result-metric highlight">
+                  <span class="result-metric-label">Denial Recovery</span>
+                  <span class="result-metric-value blue" id="result-denial"
+                    >$21,870</span
+                  >
+                </div>
+                <div class="result-metric">
+                  <span class="result-metric-label">Monthly Recovery</span>
+                  <span class="result-metric-value" id="result-monthly"
+                    >$8,229</span
+                  >
+                </div>
+                <div class="result-metric">
+                  <span class="result-metric-label"
+                    >Monthly Insurance Volume</span
+                  >
+                  <span class="result-metric-value" id="result-volume"
+                    >$135,000</span
+                  >
+                </div>
+                <div class="result-metric">
+                  <span class="result-metric-label"
+                    >EDiFi Annual Investment</span
+                  >
+                  <span class="result-metric-value" id="result-edifi-annual"
+                    >$5,988</span
+                  >
+                </div>
+                <div class="result-metric">
+                  <span class="result-metric-label">Net Annual Gain</span>
+                  <span class="result-metric-value gold" id="result-net-gain"
+                    >$92,760</span
+                  >
+                </div>
+              </div>
+
+              <!-- Payback -->
+              <div
+                class="payback-section"
+                role="region"
+                aria-label="Payback period"
+              >
+                <div class="payback-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
+                </div>
+                <div class="payback-text-wrap">
+                  <div class="payback-value" id="result-payback">
+                    EDiFi pays for itself in under 30 days
+                  </div>
+                  <div class="payback-desc">
+                    Based on your monthly recovery vs. EDiFi subscription cost
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROI badge -->
+              <div
+                style="
+                  background: rgba(52, 211, 153, 0.05);
+                  border: 1px solid rgba(52, 211, 153, 0.15);
+                  border-radius: 12px;
+                  padding: 14px 20px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <span
+                  style="
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.55);
+                  "
+                  >Return on Investment</span
+                >
+                <span
+                  style="
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    color: #34d399;
+                    letter-spacing: -0.03em;
+                  "
+                  id="result-roi"
+                  >1,549%</span
+                >
+              </div>
+
+              <!-- CTA -->
+              <div class="results-cta-section">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  id="calc-cta-btn"
+                  onclick="openRoiModal()"
+                >
+                  See These Numbers in Your Real Data
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <p class="results-disclaimer">
+                  Estimates based on EDiFi beta validation data (2,399 claims,
+                  single practice). Your results will vary based on payer mix,
+                  procedure mix, and existing billing processes. This calculator
+                  is for illustration purposes only.
+                </p>
+              </div>
+            </div>
+            <!-- /.calc-results-card -->
+          </div>
+          <!-- /.calc-grid -->
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         VALIDATION STRIP
+         ════════════════════════════════════════ -->
+      <div
+        class="validation-strip"
+        role="region"
+        aria-label="Validation data sources"
+      >
+        <div class="validation-grid">
+          <div class="validation-item">
+            <span class="validation-num gold">$59K</span>
+            <span class="validation-desc"
+              >Underpayments found<br />in a single practice audit</span
+            >
+          </div>
+          <div class="validation-item">
+            <span class="validation-num blue">27%</span>
+            <span class="validation-desc"
+              >Of submitted claims<br />had payment discrepancies</span
+            >
+          </div>
+          <div class="validation-item">
+            <span class="validation-num">2,399</span>
+            <span class="validation-desc"
+              >Real claims audited<br />in beta validation</span
+            >
+          </div>
+          <div class="validation-item">
+            <span class="validation-num gold">$29.5M</span>
+            <span class="validation-desc"
+              >Projected recovery<br />across 500+ offices</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════
+         METHODOLOGY
+         ════════════════════════════════════════ -->
+      <section class="section bg-alt">
+        <div class="container">
+          <div
+            class="section-header"
+            style="
+              max-width: 680px;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+              margin-bottom: 40px;
+            "
+          >
+            <span class="overline">Methodology</span>
+            <h2
+              style="font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 14px"
+            >
+              How We Calculate Your Recovery
+            </h2>
+            <p
+              style="
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.48);
+                margin: 0;
+              "
+            >
+              Every number in this calculator is anchored to real data from
+              EDiFi's beta validation, not industry averages or vendor marketing
+              claims.
+            </p>
+          </div>
+
+          <div class="methodology-card">
+            <div class="methodology-grid">
+              <div class="method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="12" y1="1" x2="12" y2="23" />
+                    <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="method-title">Underpayment Recovery Rate</div>
+                  <div class="method-desc">
+                    EDiFi's payment audit engine finds approximately 5.47% of
+                    your total insurance billing volume in underpayments
+                    (validated: $59K / 2,399 claims at ~$450 avg claim). The
+                    calculator applies an 87% recovery efficiency based on beta
+                    outcomes.
+                  </div>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="method-title">Denial Recovery Increment</div>
+                  <div class="method-desc">
+                    Most practices recover 5% to 8% of denied claims manually.
+                    EDiFi's AI appeal engine targets an additional 10% recovery
+                    on top of your current baseline, using clinical context and
+                    payer specific argument libraries.
+                  </div>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="method-title">EDiFi Investment Model</div>
+                  <div class="method-desc">
+                    EDiFi is priced at $499 per location per month. The ROI and
+                    payback calculations use this baseline. Enterprise and DSO
+                    pricing varies. Contact sales for multi location pricing
+                    that reflects your specific portfolio size.
+                  </div>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="method-title">Important Limitations</div>
+                  <div class="method-desc">
+                    Results vary significantly by payer mix, procedure mix,
+                    geographic market, and existing billing team capability.
+                    This calculator is designed to illustrate potential, not
+                    guarantee specific outcomes. Book a demo to run the analysis
+                    on your actual claims data.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+         CTA BAND
+         ════════════════════════════════════════ -->
+      <section class="cta-band">
+        <div class="container">
+          <div data-animate>
+            <h2>
+              Ready to Run This on Your
+              <span class="gradient-text">Real Claims Data?</span>
+            </h2>
+            <p>
+              Book a 30 minute demo and we will run EDiFi's audit engine against
+              your actual submitted claims. You will see real underpayments and
+              real recoverable amounts, before you commit to anything.
+            </p>
+            <div class="cta-band-actions">
+              <a
+                href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                target="_blank"
+                class="btn btn-primary btn-lg"
+                >Book a Demo</a
+              >
+              <a href="contact.html" class="btn btn-secondary btn-lg"
+                >Contact Sales</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a
+              href="../index.html"
+              class="logo"
+              aria-label="Elite Dental Force Home"
+            >
+              <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
+            </a>
+            <p>
+              The infrastructure leader in dental revenue intelligence.
+              Transforming how dental practices manage eligibility, billing, and
+              revenue optimization.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+              <li><a href="edifi.html">EDiFi Enterprise</a></li>
+              <li><a href="roi-calculator.html">ROI Calculator</a></li>
+              <li><a href="revnet.html">RevNet</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Resources</h5>
+            <ul class="footer-links">
+              <li><a href="resources/blog.html">Blog</a></li>
+              <li><a href="resources/podcast.html">Podcast</a></li>
+              <li><a href="resources/webinars.html">Webinars</a></li>
+              <li><a href="resources/news.html">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="company.html">About Us</a></li>
+              <li><a href="company/security.html">Security</a></li>
+              <li><a href="company/compliance.html">Compliance Center</a></li>
+              <li><a href="company/faq.html">FAQ</a></li>
+              <li><a href="investors.html">Investors</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-heading">Contact</h5>
+            <ul class="footer-links">
+              <li><a href="contact.html#sales">Sales Inquiries</a></li>
+              <li><a href="contact.html#support">Support</a></li>
+              <li><a href="contact.html#partnerships">Partnerships</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/company/elitedentalforce"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/@elitedentalforceteam"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking-widget.js" defer></script>
+    <script src="../js/cookie-consent.js" defer></script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // ── State ────────────────────────────────────────────────────────
+        var state = {
+          claims: 300,
+          claimValue: 450,
+          locations: 1,
+          denial: 18,
+        };
+
+        // ── Calculation Engine ───────────────────────────────────────────
+        function calculate() {
+          var totalClaims = state.claims * state.locations;
+          var monthlyVolume = totalClaims * state.claimValue;
+
+          // Underpayment recovery — based on $59K / 2,399 claims = 5.47% of claim value * 87% recovery
+          var underpaymentPerClaim = state.claimValue * 0.0547 * 0.87;
+          var monthlyUnderpayment = totalClaims * underpaymentPerClaim;
+          var annualUnderpayment = monthlyUnderpayment * 12;
+
+          // Denial recovery — incremental 10% on denied claim values (net new vs manual baseline)
+          var monthlyDeniedClaims = totalClaims * (state.denial / 100);
+          var monthlyDenialRecovery =
+            monthlyDeniedClaims * state.claimValue * 0.75 * 0.1;
+          var annualDenialRecovery = monthlyDenialRecovery * 12;
+
+          // Totals
+          var annualTotal = annualUnderpayment + annualDenialRecovery;
+          var monthlyTotal = annualTotal / 12;
+
+          // Investment
+          var edifiMonthly = 499 * state.locations;
+          var edifiAnnual = edifiMonthly * 12;
+
+          // Returns
+          var netGain = annualTotal - edifiAnnual;
+          var roi = edifiAnnual > 0 ? (netGain / edifiAnnual) * 100 : 0;
+          var paybackDays =
+            monthlyTotal > 0 ? (edifiMonthly / monthlyTotal) * 30 : 0;
+
+          return {
+            monthlyVolume: monthlyVolume,
+            annualUnderpayment: annualUnderpayment,
+            annualDenialRecovery: annualDenialRecovery,
+            annualTotal: annualTotal,
+            monthlyTotal: monthlyTotal,
+            edifiMonthly: edifiMonthly,
+            edifiAnnual: edifiAnnual,
+            netGain: netGain,
+            roi: roi,
+            paybackDays: paybackDays,
+          };
+        }
+
+        // ── Formatting ───────────────────────────────────────────────────
+        function fmt$(n) {
+          if (n >= 1000000) return "$" + (n / 1000000).toFixed(1) + "M";
+          if (n >= 1000) return "$" + Math.round(n).toLocaleString();
+          return "$" + Math.round(n);
+        }
+
+        function fmtPct(n) {
+          if (n >= 10000) return Math.round(n / 100) * 100 + "%+";
+          return Math.round(n).toLocaleString() + "%";
+        }
+
+        // ── Animate number update ────────────────────────────────────────
+        function setVal(id, text) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          if (el.textContent !== text) {
+            el.style.transform = "scale(1.04)";
+            el.style.transition = "transform 0.12s ease";
+            el.textContent = text;
+            setTimeout(function () {
+              el.style.transform = "";
+            }, 120);
+          }
+        }
+
+        // ── Render ───────────────────────────────────────────────────────
+        function render() {
+          var r = calculate();
+
+          setVal("result-annual-total", fmt$(r.annualTotal));
+          setVal("result-underpayment", fmt$(r.annualUnderpayment));
+          setVal("result-denial", fmt$(r.annualDenialRecovery));
+          setVal("result-monthly", fmt$(r.monthlyTotal));
+          setVal("result-volume", fmt$(r.monthlyVolume));
+          setVal("result-edifi-annual", fmt$(r.edifiAnnual));
+          setVal("result-net-gain", fmt$(r.netGain));
+          setVal("result-roi", fmtPct(r.roi));
+
+          // Payback message
+          var payback;
+          if (r.paybackDays < 14) {
+            payback = "EDiFi pays for itself in under 2 weeks";
+          } else if (r.paybackDays < 30) {
+            payback = "EDiFi pays for itself in under 30 days";
+          } else if (r.paybackDays < 60) {
+            payback = "EDiFi pays for itself in under 60 days";
+          } else {
+            payback =
+              "EDiFi pays for itself in " + Math.round(r.paybackDays) + " days";
+          }
+          setVal("result-payback", payback);
+
+          // Update CTA href with context
+          var cta = document.getElementById("calc-cta-btn");
+          if (cta) {
+            cta.setAttribute("data-calc-total", Math.round(r.annualTotal));
+            cta.setAttribute("data-calc-roi", Math.round(r.roi));
+          }
+        }
+
+        // ── Slider update ────────────────────────────────────────────────
+        window.updateSlider = function (key, rawValue) {
+          var val = parseInt(rawValue);
+          state[
+            key === "claimValue"
+              ? "claimValue"
+              : key === "denial"
+                ? "denial"
+                : "claims"
+          ] = val;
+
+          var displayEl;
+          var displayText;
+
+          if (key === "claims") {
+            state.claims = val;
+            displayEl = "val-claims";
+            displayText = val.toLocaleString();
+          } else if (key === "claimValue") {
+            state.claimValue = val;
+            displayEl = "val-claim-value";
+            displayText = "$" + val.toLocaleString();
+          } else if (key === "denial") {
+            state.denial = val;
+            displayEl = "val-denial";
+            displayText = val + "%";
+          }
+
+          if (displayEl) {
+            var el = document.getElementById(displayEl);
+            if (el) {
+              el.textContent = displayText;
+              el.classList.add("updated");
+              setTimeout(function () {
+                el.classList.remove("updated");
+              }, 600);
+            }
+          }
+
+          render();
+        };
+
+        // ── Practice type ────────────────────────────────────────────────
+        window.setPracticeType = function (btn, defaultLocations) {
+          document.querySelectorAll(".pt-btn").forEach(function (b) {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-pressed", "true");
+          state.locations = defaultLocations;
+          document.getElementById("val-locations").textContent =
+            defaultLocations;
+          render();
+        };
+
+        // ── Locations stepper ────────────────────────────────────────────
+        window.changeLocations = function (delta) {
+          state.locations = Math.max(1, Math.min(100, state.locations + delta));
+          document.getElementById("val-locations").textContent =
+            state.locations;
+          render();
+        };
+
+        // ── CTA tracking ─────────────────────────────────────────────────
+        window.trackCalcCTA = function () {
+          var r = calculate();
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "roi_calculator_cta",
+            calc_annual_recovery: Math.round(r.annualTotal),
+            calc_roi_pct: Math.round(r.roi),
+            calc_locations: state.locations,
+            calc_claims: state.claims,
+          });
+        };
+
+        window.getRoiCalcData = function () {
+          var r = calculate();
+          return {
+            annualTotal: r.annualTotal,
+            roi: r.roi,
+            locations: state.locations,
+            claims: state.claims,
+          };
+        };
+
+        // ── Init ─────────────────────────────────────────────────────────
+        render();
+      })();
+    </script>
+
+    <!-- ════════════════════════════════════════
+         ROI LEAD GATE MODAL
+         ════════════════════════════════════════ -->
+    <div
+      id="roi-lead-modal"
+      class="roi-modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="roi-modal-title"
+      style="display: none"
+    >
+      <div class="roi-modal-card">
+        <button
+          class="roi-modal-close"
+          onclick="closeRoiModal()"
+          aria-label="Close"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="roi-modal-header">
+          <div class="roi-modal-icon" aria-hidden="true">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="22 4 12 14.01 9 11.01" />
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            </svg>
+          </div>
+          <h3 id="roi-modal-title">Your Numbers Are Ready</h3>
+          <p>Tell us where to send your personalized recovery report.</p>
+        </div>
+        <form id="roi-lead-form" novalidate>
+          <div class="roi-modal-field">
+            <label for="roi-name">Full Name</label>
+            <input
+              type="text"
+              id="roi-name"
+              name="name"
+              placeholder="Dr. Jane Smith"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="roi-modal-field">
+            <label for="roi-email">Work Email</label>
+            <input
+              type="email"
+              id="roi-email"
+              name="email"
+              placeholder="jane@mypractice.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="roi-modal-field">
+            <label for="roi-practice">Practice Name</label>
+            <input
+              type="text"
+              id="roi-practice"
+              name="practice"
+              placeholder="Smith Family Dental"
+              required
+              autocomplete="organization"
+            />
+          </div>
+          <div class="roi-modal-field">
+            <label for="roi-phone">
+              Phone
+              <span style="opacity: 0.45; font-weight: 400">(optional)</span>
+            </label>
+            <input
+              type="tel"
+              id="roi-phone"
+              name="phone"
+              placeholder="(801) 555-0100"
+              autocomplete="tel"
+            />
+          </div>
+          <button
+            type="submit"
+            id="roi-lead-submit"
+            class="btn btn-primary roi-modal-submit"
+          >
+            See My Numbers
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <p class="roi-modal-disclaimer">
+            No spam. Your information is shared only with the EDF team.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var BOOKING_URL =
+          "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team";
+        var AUDIT_WEBHOOK =
+          "https://n8n-production-6004.up.railway.app/webhook/edf-audit";
+
+        window.openRoiModal = function () {
+          if (window.trackCalcCTA) window.trackCalcCTA();
+          var modal = document.getElementById("roi-lead-modal");
+          if (!modal) return;
+          modal.style.display = "flex";
+          document.body.style.overflow = "hidden";
+          var first = modal.querySelector("input");
+          if (first)
+            setTimeout(function () {
+              first.focus();
+            }, 50);
+        };
+
+        window.closeRoiModal = function () {
+          var modal = document.getElementById("roi-lead-modal");
+          if (!modal) return;
+          modal.style.display = "none";
+          document.body.style.overflow = "";
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var modal = document.getElementById("roi-lead-modal");
+          if (modal) {
+            modal.addEventListener("click", function (e) {
+              if (e.target === modal) window.closeRoiModal();
+            });
+          }
+
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") window.closeRoiModal();
+          });
+
+          var form = document.getElementById("roi-lead-form");
+          if (!form) return;
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var nameEl = document.getElementById("roi-name");
+            var emailEl = document.getElementById("roi-email");
+            var practiceEl = document.getElementById("roi-practice");
+            var phoneEl = document.getElementById("roi-phone");
+            var submitBtn = document.getElementById("roi-lead-submit");
+
+            var name = nameEl ? nameEl.value.trim() : "";
+            var email = emailEl ? emailEl.value.trim() : "";
+            var practice = practiceEl ? practiceEl.value.trim() : "";
+            var phone = phoneEl ? phoneEl.value.trim() : "";
+
+            if (!name || !email || !practice) return;
+
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.textContent = "Opening your session…";
+            }
+
+            var calcData = window.getRoiCalcData ? window.getRoiCalcData() : {};
+            var parts = name.split(/\s+/);
+            var utm = {};
+            try {
+              utm = JSON.parse(sessionStorage.getItem("edf_utm") || "{}");
+            } catch (ex) {}
+
+            var payload = {
+              firstName: parts[0] || "",
+              lastName: parts.slice(1).join(" ") || "",
+              email: email,
+              phone: phone,
+              companyName: practice,
+              source: "Website — ROI Calculator",
+              sourceUrl: window.location.href,
+              tags: ["roi-calculator-lead", "source-website"],
+              customFields: Object.assign({}, utm, {
+                calc_annual_recovery: Math.round(calcData.annualTotal || 0),
+                calc_roi_pct: Math.round(calcData.roi || 0),
+                calc_locations: calcData.locations || 1,
+                calc_claims: calcData.claims || 0,
+              }),
+            };
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: "form_submission",
+              form_type: "roi_calculator",
+              lead_email: email,
+              page_path: window.location.pathname,
+              conversion: true,
+            });
+
+            fetch(AUDIT_WEBHOOK, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            })
+              .catch(function (err) {
+                console.error("[EDF] ROI lead capture error:", err);
+              })
+              .finally(function () {
+                window.closeRoiModal();
+                window.open(BOOKING_URL, "_blank");
+              });
+          });
+        });
+      })();
+    </script>
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+  </body>
+</html>

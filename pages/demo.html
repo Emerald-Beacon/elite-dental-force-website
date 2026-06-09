@@ -1,0 +1,1093 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watch the EDiFi platform in action: eligibility verification, AI claim scrubbing, payment audit, and denial recovery — an interactive product tour of the full dental revenue cycle.">
+  <link rel="canonical" href="https://www.elitedentalforce.com/pages/demo.html">
+  <meta property="og:title" content="EDiFi Interactive Product Tour | Elite Dental Force">
+  <meta property="og:description" content="See EDiFi handle the complete dental revenue cycle in 60 seconds: eligibility, claims, payment audit, and recovery — all automated.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.elitedentalforce.com/pages/demo.html">
+  <meta property="og:image" content="https://www.elitedentalforce.com/images/og-platform.png">
+  <meta property="og:site_name" content="Elite Dental Force">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.elitedentalforce.com/images/og-platform.png">
+
+
+  <title>EDiFi Interactive Product Tour | See the Platform in Action</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <style>
+    /* ============================================================
+       INTERACTIVE PRODUCT DEMO TOUR — Elite Dental Force
+       ============================================================ */
+
+    body::before {
+      background-image:
+        linear-gradient(rgba(75,168,240,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,168,240,0.06) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    /* ── HERO ── */
+    .demo-hero {
+      padding: 160px 0 56px;
+      text-align: center;
+      position: relative;
+    }
+
+    .demo-hero-glow {
+      position: absolute; width: 800px; height: 600px;
+      border-radius: 50%; top: 0; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(9,91,167,0.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .demo-hero-inner { position: relative; z-index: 2; }
+
+    .demo-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #4ba8f0;
+      border: 1px solid rgba(75,168,240,0.28);
+      padding: 6px 18px; border-radius: 100px; margin-bottom: 22px;
+    }
+
+    .demo-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.6rem); font-weight: 800;
+      line-height: 1.1; letter-spacing: -0.04em; color: #fff;
+      margin: 0 auto 18px; max-width: 760px;
+    }
+
+    .demo-hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4ba8f0, #ffd700);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .demo-hero-sub {
+      font-size: 1rem; line-height: 1.72;
+      color: rgba(255,255,255,0.48); max-width: 560px;
+      margin: 0 auto 0;
+    }
+
+    /* ── TOUR LAYOUT ── */
+    .tour-section {
+      padding: 24px 0 80px;
+      position: relative; z-index: 1;
+    }
+
+    .tour-wrap {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* ── CHAPTER SIDEBAR ── */
+    .tour-chapters {
+      position: sticky; top: 100px;
+    }
+
+    .tour-chapters-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+      margin-bottom: 12px; display: block; padding-left: 2px;
+    }
+
+    .chapter-list { display: flex; flex-direction: column; gap: 4px; }
+
+    .chapter-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 12px; border-radius: 10px;
+      cursor: pointer; transition: all 0.2s ease;
+      border: 1px solid transparent;
+      background: transparent;
+      text-align: left; font-family: inherit;
+    }
+
+    .chapter-item:hover {
+      background: rgba(75,168,240,0.05);
+      border-color: rgba(75,168,240,0.12);
+    }
+
+    .chapter-item.active {
+      background: rgba(75,168,240,0.08);
+      border-color: rgba(75,168,240,0.22);
+    }
+
+    .chapter-num {
+      width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.3);
+      transition: all 0.2s ease; margin-top: 1px;
+    }
+
+    .chapter-item.active .chapter-num {
+      background: rgba(75,168,240,0.15);
+      border-color: rgba(75,168,240,0.35);
+      color: #4ba8f0;
+    }
+
+    .chapter-text-wrap { flex: 1; min-width: 0; }
+
+    .chapter-title {
+      display: block; font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,0.45); line-height: 1.3;
+      transition: color 0.2s ease;
+    }
+
+    .chapter-item.active .chapter-title { color: rgba(255,255,255,0.85); }
+
+    .chapter-time {
+      display: block; font-size: 10px; color: rgba(255,255,255,0.22);
+      margin-top: 2px; font-weight: 500;
+    }
+
+    /* Chapter progress line */
+    .chapter-progress-bar {
+      width: 2px; height: 0; background: #4ba8f0;
+      border-radius: 100px; margin: 3px 0 3px 22px;
+      transition: height 0.1s linear;
+      opacity: 0;
+    }
+
+    .chapter-item.active + .chapter-progress-bar {
+      opacity: 1;
+    }
+
+    /* ── PLAYER ── */
+    .tour-player-wrap {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    .tour-player {
+      position: relative;
+      background: rgba(3,8,22,0.98);
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(75,168,240,0.08);
+    }
+
+    /* Scene badge overlay */
+    .scene-badge {
+      position: absolute; top: 16px; left: 16px; z-index: 10;
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(3,8,22,0.88);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(75,168,240,0.25);
+      border-radius: 100px; padding: 6px 14px;
+      font-size: 11px; font-weight: 700; color: #4ba8f0;
+      letter-spacing: 0.04em;
+      transition: opacity 0.3s ease;
+    }
+
+    .scene-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #34d399; box-shadow: 0 0 6px rgba(52,211,153,0.7);
+      animation: live-pulse 2s infinite;
+    }
+
+    @keyframes live-pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+    /* Book demo overlay button */
+    .player-book-btn {
+      position: absolute; top: 16px; right: 16px; z-index: 10;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,215,0,0.12);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,215,0,0.35);
+      border-radius: 100px; padding: 7px 16px;
+      font-size: 12px; font-weight: 700; color: #ffd700;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+    }
+
+    .player-book-btn:hover {
+      background: rgba(255,215,0,0.2);
+      border-color: rgba(255,215,0,0.6);
+      transform: translateY(-1px);
+    }
+
+    .player-book-btn svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2.5; }
+
+    /* Browser mockup inside player */
+    .player-browser {
+      margin: 16px;
+      background: rgba(6,14,38,0.97);
+      border: 1px solid rgba(75,168,240,0.18);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .player-browser-bar {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 14px;
+      background: rgba(3,8,24,0.99);
+      border-bottom: 1px solid rgba(75,168,240,0.1);
+    }
+
+    .player-browser-dots { display: flex; gap: 5px; flex-shrink: 0; }
+    .player-browser-dots span { width: 9px; height: 9px; border-radius: 50%; display: block; }
+    .player-browser-dots span:nth-child(1) { background: rgba(255,95,87,0.7); }
+    .player-browser-dots span:nth-child(2) { background: rgba(255,189,46,0.7); }
+    .player-browser-dots span:nth-child(3) { background: rgba(40,202,66,0.7); }
+
+    .player-browser-url {
+      display: flex; align-items: center; gap: 5px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 5px; padding: 3px 10px;
+      font-size: 11px; color: rgba(255,255,255,0.35);
+      flex: 1; max-width: 280px;
+    }
+
+    .player-browser-url svg { width: 11px; height: 11px; stroke: rgba(75,168,240,0.55); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+    /* Scene container */
+    .scene-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+    }
+
+    .scene-slide {
+      position: absolute; inset: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: scale(1.01);
+    }
+
+    .scene-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .scene-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top left;
+      display: block;
+    }
+
+    /* Caption overlay */
+    .scene-caption-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 5;
+      background: linear-gradient(to top, rgba(3,8,22,0.95) 0%, rgba(3,8,22,0.7) 60%, transparent 100%);
+      padding: 32px 24px 20px;
+    }
+
+    .scene-caption-text {
+      font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.78);
+      max-width: 680px; display: none;
+    }
+
+    .scene-caption-text.active { display: block; }
+    .scene-caption-text strong { color: #fff; font-weight: 700; }
+
+    /* ── VIDEO CONTROLS ── */
+    .player-controls {
+      padding: 14px 20px 16px;
+      background: rgba(3,8,22,0.99);
+      border-top: 1px solid rgba(75,168,240,0.1);
+      display: flex; align-items: center; gap: 16px;
+    }
+
+    /* Play/Pause */
+    .play-btn {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(75,168,240,0.12);
+      border: 1px solid rgba(75,168,240,0.25);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.15s ease;
+      color: #4ba8f0;
+    }
+
+    .play-btn:hover {
+      background: rgba(75,168,240,0.2);
+      border-color: rgba(75,168,240,0.45);
+      transform: scale(1.08);
+    }
+
+    .play-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* Progress track */
+    .progress-track {
+      flex: 1; height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 100px; cursor: pointer;
+      position: relative; overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%; border-radius: 100px;
+      background: linear-gradient(90deg, #095ba7, #4ba8f0);
+      width: 0%; transition: width 0.1s linear;
+    }
+
+    /* Scene dots on progress track */
+    .progress-markers {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; pointer-events: none;
+    }
+
+    .progress-marker {
+      flex: 1; border-left: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .progress-marker:first-child { border-left: none; }
+
+    /* Scene counter */
+    .scene-counter {
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.35);
+      white-space: nowrap; flex-shrink: 0;
+    }
+
+    /* Keyboard hint */
+    .keyboard-hint {
+      font-size: 11px; color: rgba(255,255,255,0.2);
+      text-align: center; margin-top: 8px;
+    }
+
+    .kbd {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px; padding: 1px 6px;
+      font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.3);
+    }
+
+    /* ── MOBILE DOT NAV ── */
+    .mobile-dot-nav {
+      display: none; justify-content: center; gap: 8px; margin-top: 16px;
+    }
+
+    .mobile-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: none; padding: 0; cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-dot.active {
+      background: #4ba8f0;
+      box-shadow: 0 0 8px rgba(75,168,240,0.5);
+    }
+
+    /* ── SCENE DETAIL CARDS ── */
+    .scene-details-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+
+    .scene-detail-card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px; padding: 24px;
+      position: relative; overflow: hidden;
+      cursor: pointer; transition: all 0.25s ease;
+    }
+
+    .scene-detail-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.3), transparent);
+      opacity: 0; transition: opacity 0.25s ease;
+    }
+
+    .scene-detail-card:hover, .scene-detail-card.active {
+      background: rgba(75,168,240,0.06);
+      border-color: rgba(75,168,240,0.2);
+      transform: translateY(-3px);
+    }
+
+    .scene-detail-card:hover::before, .scene-detail-card.active::before { opacity: 1; }
+
+    .scene-detail-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(75,168,240,0.6);
+      margin-bottom: 10px; display: block;
+    }
+
+    .scene-detail-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+
+    .scene-detail-desc { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.42); margin: 0; }
+
+    /* ── AFTER-TOUR CTA ── */
+    .after-tour {
+      background: linear-gradient(135deg, rgba(9,91,167,0.18), rgba(75,168,240,0.07));
+      border: 1px solid rgba(75,168,240,0.22);
+      border-radius: 24px; padding: 56px 52px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+
+    .after-tour::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+    }
+
+    .after-tour h2 {
+      font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.03em; margin-bottom: 14px;
+    }
+
+    .after-tour h2 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #4ba8f0, #ffd700);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .after-tour p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.5);
+      max-width: 520px; margin: 0 auto 36px; line-height: 1.75;
+    }
+
+    .after-tour-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .tour-wrap { grid-template-columns: 180px 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .tour-wrap { grid-template-columns: 1fr; }
+      .tour-chapters { display: none; }
+      .mobile-dot-nav { display: flex; }
+      .scene-details-grid { grid-template-columns: 1fr 1fr; }
+      .after-tour { padding: 36px 28px; }
+    }
+
+    @media (max-width: 540px) {
+      .demo-hero { padding: 140px 0 40px; }
+      .scene-details-grid { grid-template-columns: 1fr; }
+      .after-tour-actions { flex-direction: column; align-items: center; }
+      .scene-caption-text { font-size: 12px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.elitedentalforce.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Product Tour", "item": "https://www.elitedentalforce.com/pages/demo.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo" aria-label="Elite Dental Force Home">
+          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933">
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li class="has-dropdown">
+              <a href="platform.html" class="nav-link">Platform</a>
+              <ul class="dropdown">
+                <li><a href="platform.html">Platform Overview</a></li>
+                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
+                <li><a href="edifi.html">EDiFi Enterprise</a></li>
+                <li><a href="demo.html">Product Tour</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link">Solutions</a>
+              <ul class="dropdown">
+                <li><a href="services.html">For Private Practices</a></li>
+                <li><a href="services.html#groups">For Multi Location Groups</a></li>
+                <li><a href="services.html#dso">For DSOs &amp; Enterprises</a></li>
+                <li><a href="partners.html">Partners &amp; Integrations</a></li>
+                <li><a href="roi-calculator.html">ROI Calculator</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
+              <ul class="dropdown">
+                <li><a href="resources/blog.html">Blog</a></li>
+                <li><a href="resources/podcast.html">Podcast</a></li>
+                <li><a href="resources/webinars.html">Webinars</a></li>
+                <li><a href="resources/news.html">News</a></li>
+                <li><a href="resources/case-studies.html">Case Studies</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="company.html" class="nav-link">Company</a>
+              <ul class="dropdown">
+                <li><a href="company.html">About Us</a></li>
+                <li><a href="company/security.html">Security</a></li>
+                <li><a href="company/compliance.html">Compliance Center</a></li>
+                <li><a href="company/faq.html">FAQ</a></li>
+                <li><a href="investors.html">Investors</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-cta">
+            <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
+          </div>
+        </nav>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════ -->
+    <section class="demo-hero">
+      <div class="demo-hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="demo-hero-inner">
+
+          <div class="demo-kicker">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Interactive Product Tour
+          </div>
+
+          <h1>EDiFi End to End:<br><em>Patient Scheduled to Revenue Recovered</em></h1>
+
+          <p class="demo-hero-sub">
+            Watch EDiFi handle the complete dental revenue cycle in six scenes. Real platform. Real workflows. No actors, no mockups.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         TOUR
+         ════════════════════════════════════════ -->
+    <section class="tour-section">
+      <div class="container">
+        <div class="tour-wrap">
+
+          <!-- LEFT: Chapter Sidebar -->
+          <aside class="tour-chapters" aria-label="Scene navigation">
+            <span class="tour-chapters-label">Scenes</span>
+            <div class="chapter-list" role="list">
+
+              <button class="chapter-item active" onclick="goToScene(0)" aria-label="Go to scene 1: Morning Huddle" role="listitem">
+                <div class="chapter-num">1</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Morning Huddle</span>
+                  <span class="chapter-time">8:00 AM</span>
+                </div>
+              </button>
+
+              <button class="chapter-item" onclick="goToScene(1)" aria-label="Go to scene 2: Eligibility Check" role="listitem">
+                <div class="chapter-num">2</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Eligibility Verified</span>
+                  <span class="chapter-time">Day before</span>
+                </div>
+              </button>
+
+              <button class="chapter-item" onclick="goToScene(2)" aria-label="Go to scene 3: Claim Built" role="listitem">
+                <div class="chapter-num">3</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Claim Auto-Built</span>
+                  <span class="chapter-time">Post-treatment</span>
+                </div>
+              </button>
+
+              <button class="chapter-item" onclick="goToScene(3)" aria-label="Go to scene 4: Payment Audited" role="listitem">
+                <div class="chapter-num">4</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Payment Audited</span>
+                  <span class="chapter-time">EOB arrives</span>
+                </div>
+              </button>
+
+              <button class="chapter-item" onclick="goToScene(4)" aria-label="Go to scene 5: Underpayment Flagged" role="listitem">
+                <div class="chapter-num">5</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Underpayment Flagged</span>
+                  <span class="chapter-time">Appeal automated</span>
+                </div>
+              </button>
+
+              <button class="chapter-item" onclick="goToScene(5)" aria-label="Go to scene 6: Revenue Recovered" role="listitem">
+                <div class="chapter-num">6</div>
+                <div class="chapter-text-wrap">
+                  <span class="chapter-title">Revenue Recovered</span>
+                  <span class="chapter-time">Full picture</span>
+                </div>
+              </button>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT: Player -->
+          <div class="tour-player-wrap">
+
+            <div class="tour-player" role="region" aria-label="Product tour player" aria-live="polite">
+
+              <!-- Overlays -->
+              <div class="scene-badge" id="scene-badge" aria-live="polite">
+                <span class="scene-badge-dot" aria-hidden="true"></span>
+                <span id="scene-badge-text">8:00 AM — Morning Huddle</span>
+              </div>
+
+              <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                 target="_blank" class="player-book-btn"
+                 onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'demo_tour_book_btn'});">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                Book Live Demo
+              </a>
+
+              <!-- Browser mockup -->
+              <div class="player-browser">
+                <div class="player-browser-bar">
+                  <div class="player-browser-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="player-browser-url">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    app.edifi.ai
+                  </div>
+                </div>
+
+                <!-- Scene slides -->
+                <div class="scene-container" aria-label="Product screenshot">
+
+                  <div class="scene-slide active" id="scene-0" aria-hidden="false">
+                    <img src="../images/screenshots/ss-dashboard.png" alt="EDiFi Dashboard — Morning Huddle showing today's patient schedule with eligibility status indicators" loading="eager">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text active" id="caption-0">
+                        <strong>Morning Huddle, Automated.</strong> EDiFi's dashboard shows every patient on today's schedule with real-time eligibility status. Green means confirmed and covered. Yellow means a coverage question needs resolution before the appointment. Red means do not treat without verification. Your front desk knows exactly what to expect before the first patient walks in.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="scene-slide" id="scene-1" aria-hidden="true">
+                    <img src="../images/screenshots/ss-verify-insurance.png" alt="EDiFi Insurance Verification — real time eligibility check showing coverage details, deductible, and benefit breakdown for a patient" loading="lazy">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text" id="caption-1">
+                        <strong>Coverage Confirmed Before They Arrive.</strong> EDiFi verifies insurance coverage in real time — not the night before, not at check-in, but automatically as soon as the appointment is scheduled. Benefit breakdowns, deductibles, frequencies, and missing tooth clauses are all surfaced and documented before the patient walks through the door.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="scene-slide" id="scene-2" aria-hidden="true">
+                    <img src="../images/screenshots/ss-claim-scrubber.png" alt="EDiFi Claim Scrubber — AI automatically assigns CDT procedure codes and ICD-10 diagnosis codes from clinical treatment data" loading="lazy">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text" id="caption-2">
+                        <strong>Claims Built from Clinical Data, Not Memory.</strong> After treatment, EDiFi's AI claim scrubber reads the clinical documentation and auto-assigns CDT procedure codes and ICD-10 diagnosis codes. Every claim is formatted to that specific payer's submission requirements. Coding errors, missing modifiers, and invalid code combinations are caught before submission — not after denial.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="scene-slide" id="scene-3" aria-hidden="true">
+                    <img src="../images/screenshots/edifi-product-payment-audit.png" alt="EDiFi Payment Audit — compares insurance EOB payments against contracted fee schedules and flags discrepancies" loading="lazy">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text" id="caption-3">
+                        <strong>Every Payment Audited Against Your Fee Schedule.</strong> When the insurance EOB arrives, EDiFi's Payment Audit Engine automatically compares what was paid against your contracted rate for every procedure, every payer, every time. This is the step that found <strong>$59,000 in underpayments</strong> across 2,399 claims in a single practice — discrepancies a billing team never had time to catch manually.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="scene-slide" id="scene-4" aria-hidden="true">
+                    <img src="../images/screenshots/ss-denial-center.png" alt="EDiFi Denial Command Center — underpayments flagged with appeal probability scores and automated AI generated appeal letters" loading="lazy">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text" id="caption-4">
+                        <strong>Underpayments Flagged. Appeals Automated.</strong> Every discrepancy is classified as Collectible, Appealable, or Adjustable and routed to the right action queue. EDiFi generates appeal letters with clinical context specific to the denial reason and the payer's known objections. The appeal engine learns which arguments win — improving recovery rates over time.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="scene-slide" id="scene-5" aria-hidden="true">
+                    <img src="../images/screenshots/edifi-product-analytics.png" alt="EDiFi Analytics — revenue recovery dashboard showing total amount recovered, appeal outcomes, and payer performance" loading="lazy">
+                    <div class="scene-caption-overlay">
+                      <p class="scene-caption-text" id="caption-5">
+                        <strong>Revenue Recovered. Full Visibility.</strong> The analytics dashboard shows exactly how much was recovered, which payers are underpaying systematically, which procedures are most frequently denied, and where your billing team should focus next. This is the intelligence layer that turns your revenue cycle from a cost center into a competitive advantage.
+                      </p>
+                    </div>
+                  </div>
+
+                </div><!-- /.scene-container -->
+              </div><!-- /.player-browser -->
+
+              <!-- Controls -->
+              <div class="player-controls">
+                <button class="play-btn" id="play-btn" onclick="togglePlay()" aria-label="Pause tour">
+                  <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <svg id="pause-icon" viewBox="0 0 24 24" style="display:none;" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </button>
+
+                <div class="progress-track" id="progress-track" onclick="scrubProgress(event)" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Tour progress">
+                  <div class="progress-fill" id="progress-fill"></div>
+                  <div class="progress-markers" aria-hidden="true">
+                    <div class="progress-marker"></div>
+                    <div class="progress-marker"></div>
+                    <div class="progress-marker"></div>
+                    <div class="progress-marker"></div>
+                    <div class="progress-marker"></div>
+                    <div class="progress-marker"></div>
+                  </div>
+                </div>
+
+                <div class="scene-counter" aria-live="polite" id="scene-counter">1 / 6</div>
+              </div>
+
+            </div><!-- /.tour-player -->
+
+            <!-- Keyboard hint -->
+            <p class="keyboard-hint" aria-hidden="true">
+              <span class="kbd">Space</span> pause &nbsp;&middot;&nbsp;
+              <span class="kbd">&larr;</span><span class="kbd">&rarr;</span> navigate scenes
+            </p>
+
+            <!-- Mobile dot nav -->
+            <div class="mobile-dot-nav" role="list" aria-label="Scene indicators">
+              <button class="mobile-dot active" onclick="goToScene(0)" aria-label="Scene 1" role="listitem"></button>
+              <button class="mobile-dot" onclick="goToScene(1)" aria-label="Scene 2" role="listitem"></button>
+              <button class="mobile-dot" onclick="goToScene(2)" aria-label="Scene 3" role="listitem"></button>
+              <button class="mobile-dot" onclick="goToScene(3)" aria-label="Scene 4" role="listitem"></button>
+              <button class="mobile-dot" onclick="goToScene(4)" aria-label="Scene 5" role="listitem"></button>
+              <button class="mobile-dot" onclick="goToScene(5)" aria-label="Scene 6" role="listitem"></button>
+            </div>
+
+          </div><!-- /.tour-player-wrap -->
+        </div><!-- /.tour-wrap -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         SCENE DETAILS
+         ════════════════════════════════════════ -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-header" style="text-align:center;max-width:580px;margin:0 auto 40px;">
+          <span class="overline">What You Just Saw</span>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:12px;">Six Workflows. One Platform.</h2>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.48);margin:0;">
+            Every scene in this tour is a real EDiFi feature in production use with our beta practices today.
+          </p>
+        </div>
+
+        <div class="scene-details-grid">
+
+          <div class="scene-detail-card" onclick="goToScene(0)">
+            <span class="scene-detail-num">Scene 1</span>
+            <div class="scene-detail-title">Morning Huddle Dashboard</div>
+            <p class="scene-detail-desc">AI generated daily briefing with patient eligibility status, production targets, unscheduled treatment, and flags for the front desk team before the day starts.</p>
+          </div>
+
+          <div class="scene-detail-card" onclick="goToScene(1)">
+            <span class="scene-detail-num">Scene 2</span>
+            <div class="scene-detail-title">Real Time Eligibility Verification</div>
+            <p class="scene-detail-desc">Live payer API queries return coverage details, benefit breakdowns, deductibles, frequencies, and authorization requirements before the appointment.</p>
+          </div>
+
+          <div class="scene-detail-card" onclick="goToScene(2)">
+            <span class="scene-detail-num">Scene 3</span>
+            <div class="scene-detail-title">AI Claim Scrubbing</div>
+            <p class="scene-detail-desc">Clinical notes are parsed, CDT and ICD-10 codes are assigned by AI, and every claim is validated against that specific payer's formatting rules before submission.</p>
+          </div>
+
+          <div class="scene-detail-card" onclick="goToScene(3)">
+            <span class="scene-detail-num">Scene 4</span>
+            <div class="scene-detail-title">Payment Audit Engine</div>
+            <p class="scene-detail-desc">Every EOB payment is compared against contracted fee schedules. Underpayments, phantom write-offs, and EOB discrepancies are flagged automatically. $59K found in beta validation.</p>
+          </div>
+
+          <div class="scene-detail-card" onclick="goToScene(4)">
+            <span class="scene-detail-num">Scene 5</span>
+            <div class="scene-detail-title">Denial Command Center</div>
+            <p class="scene-detail-desc">Denied and underpaid claims are classified, prioritized, and routed. AI generates appeal letters with clinical context specific to the payer and denial reason.</p>
+          </div>
+
+          <div class="scene-detail-card" onclick="goToScene(5)">
+            <span class="scene-detail-num">Scene 6</span>
+            <div class="scene-detail-title">Revenue Intelligence Analytics</div>
+            <p class="scene-detail-desc">Cross-practice analytics show recovery rates, payer performance, denial patterns, and where revenue is being systematically lost — so you can fix the root cause, not just the symptom.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         AFTER-TOUR CTA
+         ════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container" style="max-width:900px;">
+        <div class="after-tour">
+          <span class="overline" style="display:flex;justify-content:center;margin-bottom:16px;">Ready for the Real Thing?</span>
+          <h2>See EDiFi Run on <em>Your Actual Claims</em></h2>
+          <p>
+            This tour uses screenshots. A live demo uses your data. In 30 minutes, our team will connect EDiFi to your practice and show you exactly what it finds in your real claim history. No commitment required.
+          </p>
+          <div class="after-tour-actions">
+            <a href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+               target="_blank" class="btn btn-primary btn-lg"
+               onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'demo_tour_completed_cta'});">
+              Book a Live Demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="roi-calculator.html" class="btn btn-secondary btn-lg">
+              Calculate Your ROI First
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>500+ Practices on the Waitlist. <span class="gradient-text">Your Spot is Open.</span></h2>
+        <p>Join the practices already using EDiFi to find what they are owed.</p>
+        <div class="cta-band-actions">
+          <a href="contact.html#sales" class="btn btn-primary btn-lg">Join the Waitlist</a>
+          <a href="resources/case-studies.html" class="btn btn-secondary btn-lg">Read Case Studies</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="Home"><img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy"></a>
+          <p>The infrastructure leader in dental revenue intelligence.</p>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Platform</h5>
+          <ul class="footer-links">
+            <li><a href="platform.html">Overview</a></li>
+            <li><a href="edifi.html">EDiFi Enterprise</a></li>
+            <li><a href="demo.html">Product Tour</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="resources/blog.html">Blog</a></li>
+            <li><a href="resources/case-studies.html">Case Studies</a></li>
+            <li><a href="resources/webinars.html">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company/security.html">Security</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
+        <div class="footer-legal"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.youtube.com/@elitedentalforceteam" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/cookie-consent.js" defer></script>
+
+  <script>
+  (function() {
+    'use strict';
+
+    var SCENE_DURATION = 9000; // 9 seconds per scene
+    var TICK_INTERVAL  = 80;   // ms between progress ticks
+    var TOTAL_SCENES   = 6;
+
+    var state = {
+      current: 0,
+      playing: true,
+      elapsed: 0,
+      timer: null
+    };
+
+    var sceneBadgeLabels = [
+      '8:00 AM — Morning Huddle',
+      'Before the Appointment — Eligibility',
+      'Post-Treatment — Claim Scrubbing',
+      'EOB Arrives — Payment Audit',
+      'Underpayment Detected — Appeals',
+      'Recovery Complete — Analytics'
+    ];
+
+    // ── Tick ───────────────────────────────────────────────────
+    function tick() {
+      if (!state.playing) return;
+      state.elapsed += TICK_INTERVAL;
+      var pct = (state.elapsed / SCENE_DURATION) * 100;
+      updateProgressBar(pct);
+      if (state.elapsed >= SCENE_DURATION) {
+        var next = (state.current + 1) % TOTAL_SCENES;
+        goToScene(next);
+      }
+    }
+
+    // ── Progress bar ───────────────────────────────────────────
+    function updateProgressBar(pct) {
+      var fill = document.getElementById('progress-fill');
+      if (fill) {
+        var total = ((state.current + pct / 100) / TOTAL_SCENES) * 100;
+        fill.style.width = Math.min(total, 100) + '%';
+      }
+      var track = document.getElementById('progress-track');
+      if (track) track.setAttribute('aria-valuenow', Math.round(pct));
+    }
+
+    // ── Go to scene ────────────────────────────────────────────
+    window.goToScene = function(n) {
+      if (n < 0 || n >= TOTAL_SCENES) return;
+      var prev = state.current;
+      state.current = n;
+      state.elapsed = 0;
+
+      // Swap slides
+      var prevSlide = document.getElementById('scene-' + prev);
+      var nextSlide = document.getElementById('scene-' + n);
+      if (prevSlide) { prevSlide.classList.remove('active'); prevSlide.setAttribute('aria-hidden', 'true'); }
+      if (nextSlide) { nextSlide.classList.add('active'); nextSlide.setAttribute('aria-hidden', 'false'); }
+
+      // Swap captions
+      var prevCap = document.getElementById('caption-' + prev);
+      var nextCap = document.getElementById('caption-' + n);
+      if (prevCap) prevCap.classList.remove('active');
+      if (nextCap) nextCap.classList.add('active');
+
+      // Update badge
+      var badge = document.getElementById('scene-badge-text');
+      if (badge) badge.textContent = sceneBadgeLabels[n];
+
+      // Update counter
+      var counter = document.getElementById('scene-counter');
+      if (counter) counter.textContent = (n + 1) + ' / ' + TOTAL_SCENES;
+
+      // Update chapter items
+      document.querySelectorAll('.chapter-item').forEach(function(el, i) {
+        el.classList.toggle('active', i === n);
+      });
+
+      // Update mobile dots
+      document.querySelectorAll('.mobile-dot').forEach(function(el, i) {
+        el.classList.toggle('active', i === n);
+      });
+
+      // Update scene detail cards
+      document.querySelectorAll('.scene-detail-card').forEach(function(el, i) {
+        el.classList.toggle('active', i === n);
+      });
+
+      // Progress bar reset to scene start
+      updateProgressBar(0);
+
+      // GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'demo_tour_scene', scene_num: n + 1, scene_name: sceneBadgeLabels[n] });
+    };
+
+    // ── Play / Pause ───────────────────────────────────────────
+    window.togglePlay = function() {
+      state.playing = !state.playing;
+      var playIcon  = document.getElementById('play-icon');
+      var pauseIcon = document.getElementById('pause-icon');
+      var btn = document.getElementById('play-btn');
+      if (state.playing) {
+        if (playIcon)  playIcon.style.display  = 'none';
+        if (pauseIcon) pauseIcon.style.display = '';
+        if (btn) btn.setAttribute('aria-label', 'Pause tour');
+      } else {
+        if (playIcon)  playIcon.style.display  = '';
+        if (pauseIcon) pauseIcon.style.display = 'none';
+        if (btn) btn.setAttribute('aria-label', 'Play tour');
+      }
+    };
+
+    // ── Scrub progress bar ─────────────────────────────────────
+    window.scrubProgress = function(e) {
+      var track = document.getElementById('progress-track');
+      if (!track) return;
+      var rect = track.getBoundingClientRect();
+      var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      var sceneIndex = Math.floor(pct * TOTAL_SCENES);
+      goToScene(Math.min(sceneIndex, TOTAL_SCENES - 1));
+    };
+
+    // ── Keyboard controls ──────────────────────────────────────
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); togglePlay(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goToScene((state.current + 1) % TOTAL_SCENES); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); goToScene((state.current + TOTAL_SCENES - 1) % TOTAL_SCENES); }
+    });
+
+    // ── Pause when tab not visible ─────────────────────────────
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden && state.playing) {
+        state.playing = false;
+      }
+    });
+
+    // ── Init: set pause icon as initial state visible (playing) ─
+    (function init() {
+      var playIcon  = document.getElementById('play-icon');
+      var pauseIcon = document.getElementById('pause-icon');
+      if (playIcon)  playIcon.style.display  = 'none';
+      if (pauseIcon) pauseIcon.style.display = '';
+      var btn = document.getElementById('play-btn');
+      if (btn) btn.setAttribute('aria-label', 'Pause tour');
+
+      // Activate first scene detail card
+      var first = document.querySelector('.scene-detail-card');
+      if (first) first.classList.add('active');
+
+      // Start tick
+      state.timer = setInterval(tick, TICK_INTERVAL);
+
+      // Preload images for all scenes after DOM ready
+      var screenshots = [
+        '../images/screenshots/ss-verify-insurance.png',
+        '../images/screenshots/ss-claim-scrubber.png',
+        '../images/screenshots/edifi-product-payment-audit.png',
+        '../images/screenshots/ss-denial-center.png',
+        '../images/screenshots/edifi-product-analytics.png'
+      ];
+
+      screenshots.forEach(function(src) {
+        var img = new Image();
+        img.src = src;
+      });
+    })();
+
+  })();
+  </script>
+
+  <script src="../js/booking-modal.js" defer></script>
+  <script src="../js/monitoring.js" defer></script>
+</body>
+</html>
