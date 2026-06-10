@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 675px;
+        overflow: hidden;
+        background: #020917;
+      }
+      .stage {
+        position: relative;
+        width: 1200px;
+        height: 675px;
+        overflow: hidden;
+      }
+      .photo {
+        position: absolute;
+        inset: 0;
+        background-image: url("{{IMG}}");
+        background-size: cover;
+        background-position: center;
+        filter: {{FILTER}};
+      }
+      .grade-navy {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          168deg,
+          rgba(2, 9, 23, 0.12) 30%,
+          rgba(2, 9, 23, 0.6) 100%
+        );
+      }
+      .grade-blue {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 31, 113, 0.5) 0%,
+          rgba(0, 31, 113, 0) 55%
+        );
+        mix-blend-mode: multiply;
+      }
+      .tint {
+        position: absolute;
+        inset: 0;
+        background: rgba(9, 91, 167, 0.22);
+        mix-blend-mode: color;
+      }
+      .vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 1150px 720px at 50% 42%,
+          transparent 55%,
+          rgba(1, 4, 11, 0.5) 100%
+        );
+      }
+      .edge-glow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          #4ba8f0 0%,
+          rgba(75, 168, 240, 0.25) 45%,
+          rgba(255, 215, 0, 0.6) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="photo"></div>
+      <div class="grade-blue"></div>
+      <div class="tint"></div>
+      <div class="grade-navy"></div>
+      <div class="vignette"></div>
+      <div class="edge-glow"></div>
+    </div>
+  </body>
+</html>
