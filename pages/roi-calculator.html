@@ -1630,7 +1630,7 @@
             </p>
             <div class="cta-band-actions">
               <a
-                href="https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+                href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
                 target="_blank"
                 class="btn btn-primary btn-lg"
                 >Book a Demo</a
@@ -1745,6 +1745,7 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/tracking.js" defer></script>
     <script src="../js/booking-widget.js" defer></script>
     <script src="../js/cookie-consent.js" defer></script>
 
@@ -2078,9 +2079,8 @@
     <script>
       (function () {
         var BOOKING_URL =
-          "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team";
-        var AUDIT_WEBHOOK =
-          "https://n8n-production-6004.up.railway.app/webhook/edf-audit";
+          "https://api.leadconnectorhq.com/widget/bookings/alvin-calendar";
+        var AUDIT_WEBHOOK = "/.netlify/functions/ghl-lead";
 
         window.openRoiModal = function () {
           if (window.trackCalcCTA) window.trackCalcCTA();

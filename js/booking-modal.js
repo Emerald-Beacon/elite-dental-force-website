@@ -5,15 +5,14 @@
  * 2-field lead capture modal before opening the calendar. Fires on every
  * page sitewide via a single script tag.
  *
- * On successful form submission: POSTs lead to n8n, then opens the booking
- * URL in a new tab.
+ * On successful form submission: POSTs the lead to the same-origin
+ * GHL capture function, then opens the booking URL in a new tab.
  */
 (function () {
   "use strict";
 
-  var BOOKING_HOST = "b.elitedentalforce.com/widget/bookings/";
-  var WEBHOOK_URL =
-    "https://n8n-production-6004.up.railway.app/webhook/edf-contact";
+  var BOOKING_HOST = "api.leadconnectorhq.com/widget/bookings/";
+  var WEBHOOK_URL = "/.netlify/functions/ghl-lead";
 
   var modalOpen = false;
 

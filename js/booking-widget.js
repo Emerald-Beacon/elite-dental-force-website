@@ -11,8 +11,8 @@
   var scriptSrc = (scripts[scripts.length - 1] || {}).src || '';
   var BASE = scriptSrc ? scriptSrc.replace(/js\/booking-widget\.js.*$/, '') : '/';
   var LOGO_URL    = BASE + 'images/edf-icon-logo.png';
-  var TEAM_CAL    = 'https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team';
-  var FOUNDER_CAL = 'https://b.elitedentalforce.com/widget/bookings/elitedentalforce';
+  var TEAM_CAL    = 'https://api.leadconnectorhq.com/widget/bookings/alvin-calendar';
+  var FOUNDER_CAL = 'https://api.leadconnectorhq.com/widget/bookings/alvin-calendar';
 
   var AUTO_REPLIES = {
     revenue: "Most dental practices lose 12–18% of collectible revenue to billing errors and unchecked denials. We can show you exactly how much your practice is leaving on the table — sometimes $50K+ per year. Want to see a quick demo?",

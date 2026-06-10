@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  functions = "netlify/functions"
 
 # Redirect rules
 [[redirects]]
@@ -39,12 +40,12 @@
 
 [[redirects]]
   from = "/demo"
-  to = "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+  to = "https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
   status = 302
 
 [[redirects]]
   from = "/book"
-  to = "https://b.elitedentalforce.com/widget/bookings/outsource-edf-30mins-consultation/edf-team"
+  to = "https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
   status = 302
 
 # Custom error pages

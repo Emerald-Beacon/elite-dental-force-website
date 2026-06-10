@@ -377,8 +377,8 @@
         <div style="background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-structural) 100%); padding: var(--space-16); border-radius: var(--radius-xl); text-align: center; color: white;">
           <h2 style="color: white; margin-bottom: var(--space-4);">Stay Informed</h2>
           <p style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-8);">Get the latest insights delivered directly to your inbox. No spam, just valuable content.</p>
-          <form style="display: flex; gap: var(--space-4); max-width: 500px; margin: 0 auto;">
-            <input type="email" placeholder="Enter your email" class="form-input" style="flex: 1;" required>
+          <form data-newsletter novalidate style="display: flex; gap: var(--space-4); max-width: 500px; margin: 0 auto;" aria-label="Newsletter signup">
+            <input type="email" name="email" placeholder="Enter your email" class="form-input" style="flex: 1;" required>
             <button type="submit" class="btn btn-white">Subscribe</button>
           </form>
           <p style="font-size: var(--text-xs); color: rgba(255,255,255,0.6); margin-top: var(--space-4);">We respect your inbox. No spam, ever.</p>
