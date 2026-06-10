@@ -12,7 +12,8 @@
   "use strict";
 
   var BOOKING_HOST = "api.leadconnectorhq.com/widget/bookings/";
-  var WEBHOOK_URL = "/.netlify/functions/ghl-lead";
+  var WEBHOOK_URL =
+    "https://exquisite-dango-095989.netlify.app/.netlify/functions/ghl-lead";
 
   var modalOpen = false;
 

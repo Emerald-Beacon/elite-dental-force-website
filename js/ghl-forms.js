@@ -10,7 +10,8 @@
 var EDF_GHL = (function () {
   "use strict";
 
-  var ENDPOINT = "/.netlify/functions/ghl-lead";
+  var ENDPOINT =
+    "https://exquisite-dango-095989.netlify.app/.netlify/functions/ghl-lead";
 
   // ─── Helpers ─────────────────────────────────────────────────────────────
 

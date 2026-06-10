@@ -49,6 +49,27 @@ const ALLOWED_TAGS = new Set([
   "source-website",
 ]);
 
+// CORS: the production domain is served by a separate Netlify site that
+// cannot reach this function same-origin until its env vars are set.
+const ALLOWED_ORIGINS = new Set([
+  "https://elitedentalforce.com",
+  "https://www.elitedentalforce.com",
+  "https://exquisite-dango-095989.netlify.app",
+]);
+
+function corsHeaders(event) {
+  const origin =
+    (event.headers && (event.headers.origin || event.headers.Origin)) || "";
+  return ALLOWED_ORIGINS.has(origin)
+    ? {
+        "Access-Control-Allow-Origin": origin,
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Max-Age": "86400",
+      }
+    : {};
+}
+
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/;
 
 function clean(value, max) {
@@ -68,6 +89,16 @@ function json(statusCode, body) {
 }
 
 exports.handler = async function (event) {
+  const cors = corsHeaders(event);
+  if (event.httpMethod === "OPTIONS") {
+    return { statusCode: 204, headers: cors, body: "" };
+  }
+  const result = await handleLead(event);
+  result.headers = Object.assign({}, result.headers, cors);
+  return result;
+};
+
+async function handleLead(event) {
   if (event.httpMethod !== "POST") {
     return json(405, { success: false, error: "Method not allowed" });
   }
@@ -174,4 +205,4 @@ exports.handler = async function (event) {
     console.error("[ghl-lead] GHL request error", err);
     return json(502, { success: false, error: "CRM unreachable" });
   }
-};
+}
