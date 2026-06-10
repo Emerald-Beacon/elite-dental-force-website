@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="_base.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="dots"></div>
+      <svg class="scene" viewBox="0 0 1200 675" fill="none">
+        <defs>
+          <linearGradient id="arc" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#095ba7" />
+            <stop offset="0.6" stop-color="#4ba8f0" />
+            <stop offset="1" stop-color="#ffd700" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="9" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- main gauge -->
+        <g transform="translate(600 400)">
+          <!-- outer track -->
+          <path
+            d="M -260 0 A 260 260 0 0 1 260 0"
+            stroke="rgba(75,168,240,0.15)"
+            stroke-width="26"
+            stroke-linecap="round"
+          />
+          <!-- progress arc to high zone -->
+          <path
+            d="M -260 0 A 260 260 0 0 1 184 -184"
+            stroke="url(#arc)"
+            stroke-width="26"
+            stroke-linecap="round"
+            filter="url(#glow)"
+          />
+          <!-- tick marks -->
+          <g
+            stroke="rgba(211,237,252,0.4)"
+            stroke-width="3"
+            stroke-linecap="round"
+          >
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(0)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(30)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(60)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(90)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(120)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(150)" />
+            <line x1="-218" y1="0" x2="-196" y2="0" transform="rotate(180)" />
+          </g>
+          <!-- needle pointing into gold zone (45deg up right) -->
+          <g transform="rotate(-45)">
+            <path
+              d="M 190 0 L 0 -14 L 0 14 Z"
+              fill="#ffd700"
+              filter="url(#glow)"
+            />
+          </g>
+          <circle r="30" fill="#0a1f42" stroke="#4ba8f0" stroke-width="3" />
+          <circle r="10" fill="#ffd700" filter="url(#glow)" />
+        </g>
+
+        <!-- mini KPI sparklines, top corners -->
+        <g transform="translate(110 110)">
+          <rect
+            x="0"
+            y="0"
+            width="210"
+            height="92"
+            rx="14"
+            fill="rgba(10,28,56,0.75)"
+            stroke="rgba(75,168,240,0.25)"
+            stroke-width="1.5"
+          />
+          <path
+            d="M22 62 L55 50 L88 56 L121 38 L154 42 L188 24"
+            stroke="#4ba8f0"
+            stroke-width="3"
+            stroke-linecap="round"
+            filter="url(#glow)"
+          />
+          <circle cx="188" cy="24" r="4.5" fill="#4ba8f0" />
+        </g>
+        <g transform="translate(880 110)">
+          <rect
+            x="0"
+            y="0"
+            width="210"
+            height="92"
+            rx="14"
+            fill="rgba(10,28,56,0.75)"
+            stroke="rgba(255,215,0,0.3)"
+            stroke-width="1.5"
+          />
+          <path
+            d="M22 66 L55 58 L88 44 L121 48 L154 30 L188 20"
+            stroke="#ffd700"
+            stroke-width="3"
+            stroke-linecap="round"
+            filter="url(#glow)"
+          />
+          <circle cx="188" cy="20" r="4.5" fill="#ffd700" />
+        </g>
+
+        <!-- ascending step bars bottom -->
+        <g fill="rgba(75,168,240,0.35)">
+          <rect x="180" y="610" width="44" height="26" rx="5" />
+          <rect x="244" y="596" width="44" height="40" rx="5" />
+          <rect x="308" y="580" width="44" height="56" rx="5" />
+          <rect
+            x="372"
+            y="560"
+            width="44"
+            height="76"
+            rx="5"
+            fill="rgba(75,168,240,0.55)"
+          />
+        </g>
+        <g fill="rgba(255,215,0,0.45)">
+          <rect x="784" y="560" width="44" height="76" rx="5" />
+          <rect
+            x="848"
+            y="580"
+            width="44"
+            height="56"
+            rx="5"
+            fill="rgba(75,168,240,0.45)"
+          />
+          <rect
+            x="912"
+            y="596"
+            width="44"
+            height="40"
+            rx="5"
+            fill="rgba(75,168,240,0.35)"
+          />
+          <rect
+            x="976"
+            y="610"
+            width="44"
+            height="26"
+            rx="5"
+            fill="rgba(75,168,240,0.25)"
+          />
+        </g>
+      </svg>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* Shared base for EDF blog cover renders (1200x675) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 1200px;
+  height: 675px;
+  overflow: hidden;
+  background: #020917;
+}
+.stage {
+  position: relative;
+  width: 1200px;
+  height: 675px;
+  background:
+    radial-gradient(
+      ellipse 900px 600px at 75% 20%,
+      rgba(9, 91, 167, 0.22) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 15% 85%,
+      rgba(75, 168, 240, 0.1) 0%,
+      transparent 65%
+    ),
+    linear-gradient(160deg, #041027 0%, #020917 55%, #01060f 100%);
+  overflow: hidden;
+}
+.dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 1100px 700px at 50% 50%,
+    transparent 55%,
+    rgba(1, 4, 11, 0.55) 100%
+  );
+}
+svg.scene {
+  position: absolute;
+  inset: 0;
+  width: 1200px;
+  height: 675px;
+}

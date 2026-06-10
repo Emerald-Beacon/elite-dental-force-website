@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="_base.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="dots"></div>
+      <svg class="scene" viewBox="0 0 1200 675" fill="none">
+        <defs>
+          <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4ba8f0" stop-opacity="0.5" />
+            <stop offset="1" stop-color="#4ba8f0" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4ba8f0" />
+            <stop offset="1" stop-color="#095ba7" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="9" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- radar rings -->
+        <g transform="translate(600 350)">
+          <circle r="280" stroke="rgba(75,168,240,0.12)" stroke-width="1.5" />
+          <circle r="215" stroke="rgba(75,168,240,0.16)" stroke-width="1.5" />
+          <circle r="150" stroke="rgba(75,168,240,0.22)" stroke-width="1.5" />
+          <circle r="85" stroke="rgba(75,168,240,0.3)" stroke-width="1.5" />
+          <!-- crosshair lines -->
+          <g stroke="rgba(75,168,240,0.10)" stroke-width="1">
+            <line x1="-290" y1="0" x2="290" y2="0" />
+            <line x1="0" y1="-290" x2="0" y2="290" />
+            <line x1="-205" y1="-205" x2="205" y2="205" />
+            <line x1="205" y1="-205" x2="-205" y2="205" />
+          </g>
+          <!-- radar sweep wedge -->
+          <path
+            d="M0 0 L 270 -95 A 286 286 0 0 0 95 -270 Z"
+            fill="url(#sweep)"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="270"
+            y2="-95"
+            stroke="#4ba8f0"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            filter="url(#glow)"
+          />
+
+          <!-- detected blips: threats caught early -->
+          <circle cx="160" cy="-130" r="8" fill="#ffd700" filter="url(#glow)" />
+          <circle
+            cx="160"
+            cy="-130"
+            r="20"
+            stroke="#ffd700"
+            stroke-opacity="0.4"
+            stroke-width="2"
+          />
+          <circle
+            cx="-110"
+            cy="-170"
+            r="6"
+            fill="#4ba8f0"
+            filter="url(#glow)"
+          />
+          <circle
+            cx="-110"
+            cy="-170"
+            r="15"
+            stroke="#4ba8f0"
+            stroke-opacity="0.35"
+            stroke-width="2"
+          />
+          <circle cx="-180" cy="95" r="5" fill="#ff5a6a" filter="url(#glow)" />
+          <circle
+            cx="-180"
+            cy="95"
+            r="13"
+            stroke="#ff5a6a"
+            stroke-opacity="0.35"
+            stroke-width="2"
+          />
+          <circle cx="120" cy="170" r="4" fill="#4ba8f0" opacity="0.7" />
+
+          <!-- center shield -->
+          <g filter="url(#glow)">
+            <path
+              d="M0 -72 C 28 -56, 52 -50, 64 -48 C 64 8, 44 52, 0 76 C -44 52, -64 8, -64 -48 C -52 -50, -28 -56, 0 -72 Z"
+              fill="rgba(10,31,66,0.92)"
+              stroke="url(#shield)"
+              stroke-width="4"
+            />
+            <path
+              d="M-22 2 L-6 18 L26 -20"
+              stroke="#ffd700"
+              stroke-width="6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </g>
+        </g>
+
+        <!-- circuit traces from radar to edges: ai brain reach -->
+        <g stroke="rgba(75,168,240,0.3)" stroke-width="2" fill="none">
+          <path d="M320 350 L 220 350 L 190 320 L 110 320" />
+          <path d="M880 350 L 980 350 L 1010 380 L 1090 380" />
+          <path d="M600 70 L 600 110" />
+        </g>
+        <g fill="#4ba8f0">
+          <circle cx="110" cy="320" r="5" opacity="0.8" />
+          <circle cx="1090" cy="380" r="5" opacity="0.8" />
+          <circle cx="600" cy="70" r="5" opacity="0.8" />
+        </g>
+      </svg>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>

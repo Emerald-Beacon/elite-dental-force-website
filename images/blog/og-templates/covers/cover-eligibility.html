@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="_base.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="dots"></div>
+      <svg class="scene" viewBox="0 0 1200 675" fill="none">
+        <defs>
+          <linearGradient id="cardFace2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#10305e" />
+            <stop offset="1" stop-color="#081a36" />
+          </linearGradient>
+          <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd700" />
+            <stop offset="1" stop-color="#c9a300" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="9" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- insurance card -->
+        <g transform="translate(180 170) rotate(-5)">
+          <rect
+            width="460"
+            height="290"
+            rx="24"
+            fill="url(#cardFace2)"
+            stroke="rgba(75,168,240,0.4)"
+            stroke-width="2.5"
+          />
+          <rect
+            x="0"
+            y="0"
+            width="460"
+            height="64"
+            rx="24"
+            fill="rgba(75,168,240,0.12)"
+          />
+          <rect
+            x="30"
+            y="24"
+            width="150"
+            height="14"
+            rx="7"
+            fill="rgba(211,237,252,0.5)"
+          />
+          <!-- chip -->
+          <rect
+            x="34"
+            y="96"
+            width="64"
+            height="48"
+            rx="10"
+            fill="url(#chip)"
+            opacity="0.9"
+          />
+          <g stroke="rgba(2,9,23,0.5)" stroke-width="2">
+            <line x1="34" y1="120" x2="98" y2="120" />
+            <line x1="66" y1="96" x2="66" y2="144" />
+          </g>
+          <!-- member lines -->
+          <rect
+            x="34"
+            y="170"
+            width="220"
+            height="12"
+            rx="6"
+            fill="rgba(211,237,252,0.4)"
+          />
+          <rect
+            x="34"
+            y="196"
+            width="160"
+            height="10"
+            rx="5"
+            fill="rgba(211,237,252,0.22)"
+          />
+          <rect
+            x="34"
+            y="236"
+            width="120"
+            height="10"
+            rx="5"
+            fill="rgba(75,168,240,0.5)"
+          />
+          <rect
+            x="300"
+            y="230"
+            width="120"
+            height="22"
+            rx="11"
+            fill="rgba(75,168,240,0.2)"
+            stroke="rgba(75,168,240,0.45)"
+            stroke-width="1.5"
+          />
+        </g>
+
+        <!-- verification beam from card to badge -->
+        <path
+          d="M640 320 C 720 320, 740 320, 800 320"
+          stroke="rgba(75,168,240,0.5)"
+          stroke-width="3.5"
+          stroke-dasharray="3 12"
+          stroke-linecap="round"
+        />
+
+        <!-- verified badge -->
+        <g transform="translate(900 320)">
+          <circle
+            r="118"
+            fill="rgba(10,31,66,0.9)"
+            stroke="#4ba8f0"
+            stroke-width="4"
+            filter="url(#glow)"
+          />
+          <circle r="92" stroke="rgba(75,168,240,0.25)" stroke-width="2" />
+          <!-- scalloped seal ring -->
+          <g fill="#4ba8f0" opacity="0.7">
+            <circle cx="0" cy="-118" r="7" />
+            <circle cx="59" cy="-102" r="7" />
+            <circle cx="102" cy="-59" r="7" />
+            <circle cx="118" cy="0" r="7" />
+            <circle cx="102" cy="59" r="7" />
+            <circle cx="59" cy="102" r="7" />
+            <circle cx="0" cy="118" r="7" />
+            <circle cx="-59" cy="102" r="7" />
+            <circle cx="-102" cy="59" r="7" />
+            <circle cx="-118" cy="0" r="7" />
+            <circle cx="-102" cy="-59" r="7" />
+            <circle cx="-59" cy="-102" r="7" />
+          </g>
+          <path
+            d="M-40 4 L-12 32 L48 -34"
+            stroke="#ffd700"
+            stroke-width="12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            filter="url(#glow)"
+          />
+        </g>
+
+        <!-- coverage matrix mini grid bottom left -->
+        <g transform="translate(180 540)">
+          <g fill="rgba(75,168,240,0.25)">
+            <rect x="0" y="0" width="54" height="26" rx="6" />
+            <rect
+              x="64"
+              y="0"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.5)"
+            />
+            <rect
+              x="128"
+              y="0"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.35)"
+            />
+            <rect
+              x="192"
+              y="0"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(255,215,0,0.4)"
+            />
+            <rect
+              x="0"
+              y="36"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.4)"
+            />
+            <rect
+              x="64"
+              y="36"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.2)"
+            />
+            <rect
+              x="128"
+              y="36"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.55)"
+            />
+            <rect
+              x="192"
+              y="36"
+              width="54"
+              height="26"
+              rx="6"
+              fill="rgba(75,168,240,0.3)"
+            />
+          </g>
+        </g>
+
+        <!-- floating check chips top right -->
+        <g transform="translate(1010 120)">
+          <rect
+            x="-64"
+            y="-22"
+            width="128"
+            height="44"
+            rx="22"
+            fill="rgba(10,28,56,0.85)"
+            stroke="rgba(75,168,240,0.35)"
+            stroke-width="1.5"
+          />
+          <path
+            d="M-34 0 L-22 12 L0 -14"
+            stroke="#4ba8f0"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+          <rect
+            x="14"
+            y="-5"
+            width="36"
+            height="10"
+            rx="5"
+            fill="rgba(211,237,252,0.3)"
+          />
+        </g>
+        <g transform="translate(420 100) rotate(4)">
+          <rect
+            x="-64"
+            y="-22"
+            width="128"
+            height="44"
+            rx="22"
+            fill="rgba(10,28,56,0.85)"
+            stroke="rgba(75,168,240,0.35)"
+            stroke-width="1.5"
+          />
+          <path
+            d="M-34 0 L-22 12 L0 -14"
+            stroke="#4ba8f0"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+          <rect
+            x="14"
+            y="-5"
+            width="36"
+            height="10"
+            rx="5"
+            fill="rgba(211,237,252,0.3)"
+          />
+        </g>
+      </svg>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>

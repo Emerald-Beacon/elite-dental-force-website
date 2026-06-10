@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="_base.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="dots"></div>
+      <svg class="scene" viewBox="0 0 1200 675" fill="none">
+        <defs>
+          <linearGradient id="cubeTop" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4ba8f0" />
+            <stop offset="1" stop-color="#095ba7" />
+          </linearGradient>
+          <linearGradient id="cubeLeft" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d2c55" />
+            <stop offset="1" stop-color="#071a36" />
+          </linearGradient>
+          <linearGradient id="cubeRight" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#123d75" />
+            <stop offset="1" stop-color="#0a2347" />
+          </linearGradient>
+          <linearGradient id="cubeTopGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd700" />
+            <stop offset="1" stop-color="#c9a300" />
+          </linearGradient>
+          <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#4ba8f0" stop-opacity="0" />
+            <stop offset="0.5" stop-color="#4ba8f0" />
+            <stop offset="1" stop-color="#ffd700" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="8" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- isometric cube cluster: unit = 64w 37h faces -->
+        <!-- cube template via reuse of path shapes, drawn manually in grid -->
+        <g transform="translate(310 180)">
+          <!-- row 1 -->
+          <g transform="translate(0 0)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTop)"
+              opacity="0.9"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+          <g transform="translate(150 0)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTop)"
+              opacity="0.55"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+          <g transform="translate(300 0)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTopGold)"
+              filter="url(#glow)"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+          <!-- row 2 offset -->
+          <g transform="translate(75 90)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTop)"
+              opacity="0.7"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+          <g transform="translate(225 90)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTop)"
+              opacity="0.95"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+          <!-- row 3 -->
+          <g transform="translate(150 180)">
+            <path
+              d="M0 37 L64 0 L128 37 L64 74 Z"
+              fill="url(#cubeTop)"
+              opacity="0.45"
+            />
+            <path d="M0 37 L64 74 L64 148 L0 111 Z" fill="url(#cubeLeft)" />
+            <path
+              d="M128 37 L64 74 L64 148 L128 111 Z"
+              fill="url(#cubeRight)"
+            />
+          </g>
+        </g>
+
+        <!-- data flow lines out of the gold block -->
+        <path
+          d="M740 230 C 880 200, 950 260, 1080 240"
+          stroke="url(#flow)"
+          stroke-width="3.5"
+          stroke-linecap="round"
+          filter="url(#glow)"
+        />
+        <path
+          d="M720 280 C 870 300, 960 360, 1090 350"
+          stroke="url(#flow)"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          opacity="0.7"
+        />
+        <path
+          d="M700 330 C 850 400, 940 470, 1070 460"
+          stroke="url(#flow)"
+          stroke-width="2"
+          stroke-linecap="round"
+          opacity="0.45"
+        />
+        <circle cx="1080" cy="240" r="7" fill="#ffd700" filter="url(#glow)" />
+        <circle cx="1090" cy="350" r="5" fill="#4ba8f0" filter="url(#glow)" />
+        <circle cx="1070" cy="460" r="4" fill="#4ba8f0" opacity="0.7" />
+
+        <!-- scattered data points lower left -->
+        <g fill="#4ba8f0">
+          <circle cx="140" cy="520" r="4" opacity="0.8" />
+          <circle cx="190" cy="560" r="3" opacity="0.5" />
+          <circle cx="120" cy="590" r="2.5" opacity="0.4" />
+          <circle cx="230" cy="500" r="2.5" opacity="0.6" />
+          <circle cx="170" cy="470" r="2" opacity="0.35" />
+        </g>
+        <g stroke="rgba(75,168,240,0.25)" stroke-width="1">
+          <line x1="140" y1="520" x2="190" y2="560" />
+          <line x1="190" y1="560" x2="230" y2="500" />
+          <line x1="140" y1="520" x2="230" y2="500" />
+        </g>
+      </svg>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>

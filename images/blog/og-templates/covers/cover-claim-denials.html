@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="_base.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="dots"></div>
+      <svg class="scene" viewBox="0 0 1200 675" fill="none">
+        <defs>
+          <linearGradient id="rise" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#095ba7" stop-opacity="0.15" />
+            <stop offset="1" stop-color="#4ba8f0" stop-opacity="0.85" />
+          </linearGradient>
+          <linearGradient id="riseRed" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#7a1f2b" stop-opacity="0.25" />
+            <stop offset="1" stop-color="#ff5a6a" stop-opacity="0.95" />
+          </linearGradient>
+          <linearGradient id="trend" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#4ba8f0" />
+            <stop offset="0.7" stop-color="#ffb84b" />
+            <stop offset="1" stop-color="#ff5a6a" />
+          </linearGradient>
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="10" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="4" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- baseline grid -->
+        <g stroke="rgba(75,168,240,0.10)" stroke-width="1">
+          <line x1="120" y1="540" x2="1080" y2="540" />
+          <line x1="120" y1="440" x2="1080" y2="440" />
+          <line x1="120" y1="340" x2="1080" y2="340" />
+          <line x1="120" y1="240" x2="1080" y2="240" />
+          <line x1="120" y1="140" x2="1080" y2="140" />
+        </g>
+
+        <!-- denial rate bars, rising left to right -->
+        <g>
+          <rect
+            x="150"
+            y="468"
+            width="58"
+            height="72"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="240"
+            y="452"
+            width="58"
+            height="88"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="330"
+            y="430"
+            width="58"
+            height="110"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="420"
+            y="402"
+            width="58"
+            height="138"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="510"
+            y="380"
+            width="58"
+            height="160"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="600"
+            y="344"
+            width="58"
+            height="196"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="690"
+            y="300"
+            width="58"
+            height="240"
+            rx="6"
+            fill="url(#rise)"
+          />
+          <rect
+            x="780"
+            y="252"
+            width="58"
+            height="288"
+            rx="6"
+            fill="url(#riseRed)"
+            opacity="0.8"
+          />
+          <rect
+            x="870"
+            y="196"
+            width="58"
+            height="344"
+            rx="6"
+            fill="url(#riseRed)"
+            filter="url(#soft)"
+          />
+        </g>
+
+        <!-- trend line -->
+        <path
+          d="M179 455 L269 438 L359 412 L449 385 L539 362 L629 322 L719 272 L809 220 L899 152"
+          stroke="url(#trend)"
+          stroke-width="5"
+          stroke-linecap="round"
+          filter="url(#glow)"
+        />
+        <circle cx="899" cy="152" r="10" fill="#ff5a6a" filter="url(#glow)" />
+        <circle
+          cx="899"
+          cy="152"
+          r="22"
+          stroke="#ff5a6a"
+          stroke-opacity="0.4"
+          stroke-width="2"
+        />
+
+        <!-- floating denied claim document -->
+        <g transform="translate(940 120) rotate(6)">
+          <rect
+            x="0"
+            y="0"
+            width="170"
+            height="216"
+            rx="14"
+            fill="#0a1c38"
+            stroke="rgba(75,168,240,0.35)"
+            stroke-width="1.5"
+          />
+          <rect
+            x="22"
+            y="28"
+            width="92"
+            height="10"
+            rx="5"
+            fill="rgba(211,237,252,0.5)"
+          />
+          <rect
+            x="22"
+            y="54"
+            width="126"
+            height="7"
+            rx="3.5"
+            fill="rgba(211,237,252,0.22)"
+          />
+          <rect
+            x="22"
+            y="72"
+            width="110"
+            height="7"
+            rx="3.5"
+            fill="rgba(211,237,252,0.22)"
+          />
+          <rect
+            x="22"
+            y="90"
+            width="120"
+            height="7"
+            rx="3.5"
+            fill="rgba(211,237,252,0.22)"
+          />
+          <rect
+            x="22"
+            y="108"
+            width="84"
+            height="7"
+            rx="3.5"
+            fill="rgba(211,237,252,0.22)"
+          />
+          <g transform="translate(85 160)">
+            <circle
+              r="34"
+              fill="rgba(255,90,106,0.12)"
+              stroke="#ff5a6a"
+              stroke-width="3"
+            />
+            <line
+              x1="-13"
+              y1="-13"
+              x2="13"
+              y2="13"
+              stroke="#ff5a6a"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="13"
+              y1="-13"
+              x2="-13"
+              y2="13"
+              stroke="#ff5a6a"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+          </g>
+        </g>
+      </svg>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>
