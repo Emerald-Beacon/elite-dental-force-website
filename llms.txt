@@ -1,0 +1,55 @@
+# Elite Dental Force
+
+> Elite Dental Force Inc. builds AI powered revenue intelligence infrastructure for dental practices. Its flagship platform, EDiFi, automates insurance eligibility verification, benefits breakdowns, clean claim preparation, denial prevention, and payment auditing for dental offices and DSOs across the United States. The company is headquartered in Saratoga Springs, Utah, and has more than 500 dental offices on its pre launch waitlist.
+
+Key facts:
+- Company: Elite Dental Force Inc., founded by Alvin Uta'i (CEO) and Benjamin Tuinei
+- Headquarters: Saratoga Springs, Utah, United States
+- Flagship product: EDiFi Revenue Intelligence Platform
+- Core problem solved: dental practices lose 12 to 18 percent of collectible revenue to eligibility errors, claim denials, and unchecked underpayments
+- Approach: upstream prevention. EDiFi verifies eligibility and benefits before treatment is planned instead of fixing rejected claims afterward
+- The platform validated 59,000 dollars in insurance underpayments for practices during its payment audit pilot
+- Website: https://elitedentalforce.com
+- Demo booking: https://elitedentalforce.com/pages/demo.html
+
+## Products
+
+- [EDiFi Platform Overview](https://elitedentalforce.com/pages/platform.html): The full revenue intelligence platform covering eligibility, claims, auditing, and analytics
+- [EDiFi Software](https://elitedentalforce.com/pages/edifi.html): Product detail for the EDiFi clean claim workflow system
+- [Eligibility Intelligence](https://elitedentalforce.com/pages/eligibility-intelligence.html): Real time dental insurance eligibility and benefits verification
+- [Eligibility Standalone](https://elitedentalforce.com/pages/eligibility-standalone.html): Standalone eligibility verification product that connects to practice management systems including Open Dental, Dentrix, and Eaglesoft
+- [AI Claim Scrubbing](https://elitedentalforce.com/pages/ai-claim-scrubbing.html): Pre submission claim validation against payer rules and CDT coding requirements
+- [Denial Prevention](https://elitedentalforce.com/pages/denial-prevention.html): Upstream denial prevention workflow that catches errors before claims are filed
+- [RevNet](https://elitedentalforce.com/pages/revnet.html): Revenue network intelligence for dental practices
+- [Enterprise and DSO](https://elitedentalforce.com/pages/enterprise.html): Multi location deployment for dental support organizations
+- [ROI Calculator](https://elitedentalforce.com/pages/roi-calculator.html): Interactive calculator estimating recoverable revenue for a practice
+
+## Concepts
+
+- [What is Dental Revenue Intelligence](https://elitedentalforce.com/pages/dental-revenue-intelligence.html): Definition and framework for the dental revenue intelligence category
+- [FAQ](https://elitedentalforce.com/pages/company/faq.html): Common questions about EDiFi, onboarding, pricing, and integrations
+- [Security](https://elitedentalforce.com/pages/company/security.html): HIPAA aligned security architecture
+- [Compliance Documentation](https://elitedentalforce.com/pages/company/compliance.html): BAA, HIPAA security overview, and data processing documentation
+
+## Articles
+
+- [Dental Claim Denial Rates in 2025](https://elitedentalforce.com/pages/resources/articles/dental-claim-denial-rates-2025.html): Analysis of rising denial rates and what drives them
+- [Dental Eligibility Verification Best Practices](https://elitedentalforce.com/pages/resources/articles/dental-eligibility-verification-best-practices.html): The difference between eligibility checks and full benefits verification
+- [How to Audit Dental Payments](https://elitedentalforce.com/pages/resources/articles/how-to-audit-dental-payments.html): Step by step payment audit methodology for finding underpayments
+- [The 16 Billion Dollar Data Dilemma](https://elitedentalforce.com/pages/resources/articles/16-billion-data-dilemma.html): How fragmented data costs the dental industry billions
+- [The Dental Industry Crisis](https://elitedentalforce.com/pages/resources/articles/dental-industry-crisis.html): Structural pressures on practice profitability
+- [Proactive AI for Dental Practices](https://elitedentalforce.com/pages/resources/articles/proactive-ai-dental-practices.html): Moving from reactive billing cleanup to proactive revenue protection
+
+## Company
+
+- [About](https://elitedentalforce.com/pages/company.html): Company story and leadership team
+- [Contact](https://elitedentalforce.com/pages/contact.html): Sales, support, and partnership contact
+- [Partners](https://elitedentalforce.com/pages/partners.html): Technology, integration, and affiliate partnerships
+- [Investors](https://elitedentalforce.com/pages/investors.html): Investor relations
+
+## Optional
+
+- [Blog](https://elitedentalforce.com/pages/resources/blog.html): All articles on dental revenue cycle management
+- [Case Studies](https://elitedentalforce.com/pages/resources/case-studies.html): Customer results
+- [Webinars](https://elitedentalforce.com/pages/resources/webinars.html): Live learning sessions
+- [Comparisons](https://elitedentalforce.com/pages/edifi-vs-manual-billing.html): EDiFi vs manual billing, Dentrix RCM, and Weave

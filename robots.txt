@@ -1,13 +1,57 @@
+# Elite Dental Force — crawler policy
+# Search engines and AI answer engines are welcome.
+
 User-agent: *
 Allow: /
-
-# Block admin paths if they exist
 Disallow: /admin/
 Disallow: /staging/
 Disallow: /.git/
+Disallow: /images/blog/og-templates/
 
-# Crawl-delay for well-behaved bots
-Crawl-delay: 1
+# AI and answer engine crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
 
-# Sitemap
-Sitemap: https://www.elitedentalforce.com/sitemap.xml
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# AI guidance file
+# https://elitedentalforce.com/llms.txt
+
+Sitemap: https://elitedentalforce.com/sitemap.xml

@@ -1,241 +1,249 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://www.elitedentalforce.com/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://elitedentalforce.com/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Platform Pages -->
   <url>
-    <loc>https://www.elitedentalforce.com/pages/platform.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/edifi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/eligibility-standalone.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/enterprise.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Solutions Pages -->
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/services.html</loc>
+    <loc>https://elitedentalforce.com/pages/ai-claim-scrubbing.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/partners.html</loc>
+    <loc>https://elitedentalforce.com/pages/company.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Resources Pages -->
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources.html</loc>
+    <loc>https://elitedentalforce.com/pages/company/compliance.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/company/faq.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/company/security.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/contact.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/demo.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/denial-prevention.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/dental-revenue-intelligence.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/edifi-vs-manual-billing.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/edifi-vs-weave.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/edifi.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/eligibility-intelligence.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/eligibility-standalone.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/enterprise.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/investors.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/partners.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/platform.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/privacy.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/resources.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/blog.html</loc>
+    <loc>https://elitedentalforce.com/pages/resources/articles/16-billion-data-dilemma.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/podcast.html</loc>
+    <loc>https://elitedentalforce.com/pages/resources/articles/ai-accelerated-computing.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/webinars.html</loc>
+    <loc>https://elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/news.html</loc>
+    <loc>https://elitedentalforce.com/pages/resources/articles/dental-claim-denial-rates-2025.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- AEO Definition Pages -->
   <url>
-    <loc>https://www.elitedentalforce.com/pages/dental-revenue-intelligence.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/revnet.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/eligibility-intelligence.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/ai-claim-scrubbing.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/denial-prevention.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-04-22</lastmod>
-  </url>
-
-  <!-- Blog Articles -->
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/dental-claim-denial-rates-2025.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-04-15</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/how-to-audit-dental-payments.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/dental-eligibility-verification-best-practices.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2026-03-28</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/ai-accelerated-computing.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/dental-eligibility-verification-best-practices.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-12-18</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/data-blocks-ai-billing.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/dental-industry-crisis.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/16-billion-data-dilemma.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/how-to-audit-dental-payments.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-13</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/optimize-dental-practice-2025.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/life-of-cda.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-09-10</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/proactive-ai-dental-practices.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/optimize-dental-practice-2025.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-07-20</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/life-of-cda.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/articles/proactive-ai-dental-practices.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-08-20</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/articles/dental-industry-crisis.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-08-16</lastmod>
-  </url>
-
-  <!-- Demo & Tour -->
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/demo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-05</lastmod>
-  </url>
-
-  <!-- Case Studies -->
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/resources/case-studies.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-05</lastmod>
-  </url>
-
-  <!-- Conversion Pages -->
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/roi-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2026-05-05</lastmod>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/company/compliance.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/blog.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-05</lastmod>
   </url>
-
-  <!-- Comparison Pages -->
   <url>
-    <loc>https://www.elitedentalforce.com/pages/edifi-vs-dentrix-rcm.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/case-studies.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-05</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/edifi-vs-weave.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/news.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-05</lastmod>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/edifi-vs-manual-billing.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://elitedentalforce.com/pages/resources/podcast.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-05-05</lastmod>
   </url>
-
-  <!-- Company Pages -->
   <url>
-    <loc>https://www.elitedentalforce.com/pages/company.html</loc>
+    <loc>https://elitedentalforce.com/pages/resources/webinars.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/revnet.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.elitedentalforce.com/pages/company/security.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/company/faq.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/investors.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.elitedentalforce.com/pages/contact.html</loc>
+    <loc>https://elitedentalforce.com/pages/roi-calculator.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/services.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitedentalforce.com/pages/terms.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
