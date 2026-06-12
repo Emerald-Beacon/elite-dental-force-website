@@ -1,1453 +1,2579 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elite Dental Force delivers AI powered dental revenue solutions for private practices, multi location groups, and DSOs: eligibility, claims, analytics, and more.">
-  <link rel="canonical" href="https://elitedentalforce.com/pages/services.html">
-  <meta property="og:title" content="Dental Revenue Solutions | Elite Dental Force">
-  <meta property="og:description" content="Revenue intelligence, clean claim workflows, and AI powered billing solutions for every dental practice size.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elitedentalforce.com/pages/services.html">
-  <meta property="og:image" content="https://elitedentalforce.com/images/og-services.png">
-  <meta property="og:site_name" content="Elite Dental Force">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://elitedentalforce.com/images/og-services.png">
-  <title>Dental Revenue Solutions | Elite Dental Force</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elite Dental Force delivers AI powered dental revenue solutions for private practices, multi location groups, and DSOs: eligibility, claims, analytics, and more."
+    />
+    <link
+      rel="canonical"
+      href="https://elitedentalforce.com/pages/services.html"
+    />
+    <meta
+      property="og:title"
+      content="Dental Revenue Solutions | Elite Dental Force"
+    />
+    <meta
+      property="og:description"
+      content="Revenue intelligence, clean claim workflows, and AI powered billing solutions for every dental practice size."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://elitedentalforce.com/pages/services.html"
+    />
+    <meta
+      property="og:image"
+      content="https://elitedentalforce.com/images/og-services.png"
+    />
+    <meta property="og:site_name" content="Elite Dental Force" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://elitedentalforce.com/images/og-services.png"
+    />
+    <title>Dental Revenue Solutions | Elite Dental Force</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
 
-  <style>
-    /* ================================================================
+    <style>
+      /* ================================================================
        SERVICES PAGE — Premium Dark Design System
        Matches platform.html / edifi.html visual language
        ================================================================ */
 
-    /* ── Page base ── */
-    body { background: #020917; }
-
-    /* ── Dot-grid background ── */
-    .svc-bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(75,168,240,0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(75,168,240,0.055) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-    }
-    .svc-bg-vignette {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 30%, #020917 100%);
-      pointer-events: none;
-    }
-
-    /* ── Ambient orbs ── */
-    .svc-orb {
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    /* ── Section wrapper ── */
-    .svc-section {
-      position: relative;
-      overflow: hidden;
-      padding: 6rem 0;
-    }
-    .svc-section--alt {
-      background: rgba(255,255,255,0.015);
-    }
-
-    /* ── Section header ── */
-    .svc-section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-    .svc-overline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 50px;
-      background: rgba(75,168,240,0.1);
-      color: #4ba8f0;
-      border: 1px solid rgba(75,168,240,0.22);
-      margin-bottom: 1.25rem;
-    }
-    .svc-h2 {
-      font-size: clamp(1.875rem, 4vw, 2.75rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin: 0 0 1.25rem;
-      background: linear-gradient(135deg, #ffffff 0%, #4ba8f0 60%, #3454f8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .svc-subtext {
-      font-size: 1.0625rem;
-      color: rgba(240,247,255,0.72);
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* ── Tour labels ── */
-    .svc-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 50px;
-      white-space: nowrap;
-    }
-    .svc-label--blue   { background: rgba(75,168,240,0.12);  color: #4ba8f0;  border: 1px solid rgba(75,168,240,0.25); }
-    .svc-label--gold   { background: rgba(255,215,0,0.1);    color: #ffd700;  border: 1px solid rgba(255,215,0,0.25); }
-    .svc-label--green  { background: rgba(34,197,94,0.1);    color: #34d399;  border: 1px solid rgba(34,197,94,0.25); }
-    .svc-label--indigo { background: rgba(129,140,248,0.1);  color: #818cf8;  border: 1px solid rgba(129,140,248,0.25); }
-    .svc-label--orange { background: rgba(251,146,60,0.1);   color: #fb923c;  border: 1px solid rgba(251,146,60,0.25); }
-    .svc-label--purple { background: rgba(192,132,252,0.1);  color: #c084fc;  border: 1px solid rgba(192,132,252,0.25); }
-
-    /* ── Metric pills ── */
-    .metric-pill-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2.5rem;
-    }
-    .m-pill {
-      display: flex;
-      align-items: center;
-      gap: 0.625rem;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(75,168,240,0.2);
-      border-radius: 50px;
-      padding: 0.5rem 1.1rem;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      transition: border-color 0.3s ease, background 0.3s ease;
-    }
-    .m-pill:hover {
-      border-color: rgba(75,168,240,0.38);
-      background: rgba(75,168,240,0.08);
-    }
-    .m-pill-val { font-size: 0.9375rem; font-weight: 800; color: #4ba8f0; }
-    .m-pill-lbl { font-size: 0.7rem; color: rgba(133,184,216,0.85); white-space: nowrap; }
-
-    /* ─────────────────────────────────────────────────────
-       HERO
-    ───────────────────────────────────────────────────── */
-    .svc-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 8rem 0 6rem;
-      text-align: center;
-    }
-    .svc-hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-    .svc-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 50px;
-      background: rgba(75,168,240,0.1);
-      color: #4ba8f0;
-      border: 1px solid rgba(75,168,240,0.25);
-      margin-bottom: 1.75rem;
-      position: relative;
-    }
-    .svc-hero-badge::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #4ba8f0;
-      box-shadow: 0 0 8px rgba(75,168,240,0.8);
-      animation: badge-pulse 2s ease-in-out infinite;
-    }
-    @keyframes badge-pulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50%      { opacity: 0.5; transform: scale(1.4); }
-    }
-    .svc-hero-h1 {
-      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin: 0 0 1.5rem;
-      background: linear-gradient(135deg, #ffffff 0%, #4ba8f0 60%, #3454f8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .svc-hero-sub {
-      font-size: 1.125rem;
-      color: rgba(240,247,255,0.72);
-      line-height: 1.75;
-      max-width: 600px;
-      margin: 0 auto 2.25rem;
-    }
-    .svc-hero-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .svc-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #ffffff;
-      color: #020917;
-      font-size: 0.9375rem;
-      font-weight: 700;
-      padding: 0.8125rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .svc-btn-primary::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%; width: 60%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.2), transparent);
-      animation: btn-shimmer 2.5s ease-in-out infinite;
-    }
-    @keyframes btn-shimmer { 0% { left: -100%; } 100% { left: 200%; } }
-    .svc-btn-primary:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 32px rgba(255,255,255,0.2);
-    }
-    .svc-btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: #4ba8f0;
-      font-size: 0.9375rem;
-      font-weight: 700;
-      padding: 0.8125rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      border: 1px solid rgba(75,168,240,0.4);
-      cursor: pointer;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.25s ease,
-                  box-shadow 0.25s ease,
-                  background 0.25s ease;
-    }
-    .svc-btn-outline:hover {
-      transform: translateY(-2px);
-      border-color: rgba(75,168,240,0.7);
-      background: rgba(75,168,240,0.07);
-      box-shadow: 0 8px 24px rgba(75,168,240,0.18);
-    }
-
-    /* ─────────────────────────────────────────────────────
-       WHO WE SERVE
-    ───────────────────────────────────────────────────── */
-    .seg-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-    }
-    @media (max-width: 900px) { .seg-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
-    @media (min-width: 640px) and (max-width: 900px) { .seg-grid { grid-template-columns: 1fr 1fr; max-width: 100%; } }
-
-    .seg-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(75,168,240,0.16);
-      border-radius: 22px;
-      padding: 2.25rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s ease,
-                  box-shadow 0.3s ease;
-    }
-    .seg-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--seg-grad, linear-gradient(90deg, transparent, rgba(75,168,240,0.55), transparent));
-    }
-    .seg-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(75,168,240,0.3);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 0 28px rgba(75,168,240,0.08);
-    }
-    .seg-card-label-row { margin-bottom: 1.25rem; }
-    .seg-card h3 {
-      font-size: 1.1875rem;
-      font-weight: 800;
-      color: #f0f7ff;
-      margin: 0 0 0.625rem;
-    }
-    .seg-card p {
-      font-size: 0.875rem;
-      color: rgba(133,184,216,0.85);
-      line-height: 1.65;
-      margin: 0 0 1.5rem;
-    }
-    .seg-divider {
-      height: 1px;
-      background: rgba(255,255,255,0.05);
-      margin-bottom: 1.25rem;
-    }
-    .seg-feat-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .seg-feat-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.5rem 0;
-      font-size: 0.875rem;
-      color: rgba(240,247,255,0.8);
-      line-height: 1.5;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .seg-feat-list li:last-child { border-bottom: none; }
-    .seg-check {
-      flex-shrink: 0;
-      margin-top: 2px;
-      color: #4ba8f0;
-    }
-    .seg-card-cta {
-      margin-top: auto;
-    }
-    .seg-cta-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #4ba8f0;
-      text-decoration: none;
-      padding: 0.625rem 1.25rem;
-      border: 1px solid rgba(75,168,240,0.3);
-      border-radius: 8px;
-      transition: background 0.25s ease, border-color 0.25s ease, gap 0.2s ease;
-    }
-    .seg-cta-link:hover {
-      background: rgba(75,168,240,0.1);
-      border-color: rgba(75,168,240,0.55);
-      gap: 0.65rem;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       CORE SERVICES GRID
-    ───────────────────────────────────────────────────── */
-    .svc-card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    @media (max-width: 1024px) { .svc-card-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px)  { .svc-card-grid { grid-template-columns: 1fr; } }
-
-    .svc-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(75,168,240,0.14);
-      border-radius: 20px;
-      padding: 1.875rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s ease,
-                  box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .svc-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--card-a, #4ba8f0), var(--card-b, #3454f8));
-    }
-    .svc-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(75,168,240,0.28);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.3), 0 0 24px rgba(75,168,240,0.09);
-    }
-    .svc-card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.125rem;
-      background: var(--icon-bg, rgba(75,168,240,0.1));
-      border: 1px solid var(--icon-border, rgba(75,168,240,0.2));
-      flex-shrink: 0;
-    }
-    .svc-card-label-row {
-      margin-bottom: 0.75rem;
-    }
-    .svc-card h4 {
-      font-size: 1.0625rem;
-      font-weight: 700;
-      color: #f0f7ff;
-      margin: 0 0 0.625rem;
-    }
-    .svc-card p {
-      font-size: 0.8125rem;
-      color: #85b8d8;
-      line-height: 1.65;
-      margin: 0 0 1.25rem;
-      flex: 1;
-    }
-    .wf-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 50px;
-      margin-top: auto;
-    }
-    .wf-tag--auto   { background: rgba(34,197,94,0.12);   color: #34d399; border: 1px solid rgba(34,197,94,0.25); }
-    .wf-tag--ai     { background: rgba(75,168,240,0.12);  color: #4ba8f0; border: 1px solid rgba(75,168,240,0.25); }
-    .wf-tag--rt     { background: rgba(129,140,248,0.12); color: #818cf8; border: 1px solid rgba(129,140,248,0.25); }
-    .wf-tag--audit  { background: rgba(255,215,0,0.12);   color: #ffd700; border: 1px solid rgba(255,215,0,0.25); }
-    .wf-tag--ent    { background: rgba(251,146,60,0.12);  color: #fb923c; border: 1px solid rgba(251,146,60,0.25); }
-    .wf-tag--live   { background: rgba(192,132,252,0.12); color: #c084fc; border: 1px solid rgba(192,132,252,0.25); }
-
-    /* ─────────────────────────────────────────────────────
-       PRICING
-    ───────────────────────────────────────────────────── */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-    }
-    @media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
-    @media (min-width: 640px) and (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 100%; } }
-
-    .pricing-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(75,168,240,0.16);
-      border-radius: 22px;
-      padding: 2.25rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s ease,
-                  box-shadow 0.3s ease;
-    }
-    .pricing-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.4), transparent);
-    }
-    .pricing-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 48px rgba(0,0,0,0.35), 0 0 24px rgba(75,168,240,0.08);
-    }
-    .pricing-card--featured {
-      border-color: rgba(75,168,240,0.35);
-      background: rgba(75,168,240,0.04);
-      box-shadow: 0 0 0 1px rgba(75,168,240,0.15), 0 8px 32px rgba(0,0,0,0.3);
-    }
-    .pricing-card--featured::before {
-      background: linear-gradient(90deg, #4ba8f0, #3454f8);
-      opacity: 1;
-    }
-    .pricing-card--featured:hover {
-      border-color: rgba(75,168,240,0.5);
-      box-shadow: 0 0 0 1px rgba(75,168,240,0.3), 0 24px 56px rgba(0,0,0,0.4), 0 0 40px rgba(75,168,240,0.12);
-    }
-    .pricing-popular-badge {
-      position: absolute;
-      top: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(90deg, #4ba8f0, #3454f8);
-      color: #ffffff;
-      font-size: 0.6rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 5px 16px;
-      border-radius: 0 0 10px 10px;
-      white-space: nowrap;
-    }
-    .pricing-tier {
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #4ba8f0;
-      margin-bottom: 0.375rem;
-    }
-    .pricing-name {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #f0f7ff;
-      margin: 0 0 0.625rem;
-    }
-    .pricing-desc {
-      font-size: 0.875rem;
-      color: rgba(133,184,216,0.85);
-      line-height: 1.65;
-      margin: 0 0 1.75rem;
-    }
-    .pricing-price-box {
-      padding: 1.25rem 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 1.75rem;
-    }
-    .pricing-price-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: rgba(133,184,216,0.7);
-      margin-bottom: 0.25rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .pricing-price-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #f0f7ff;
-      line-height: 1.3;
-    }
-    .pricing-includes {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .pricing-includes li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.5rem 0;
-      font-size: 0.875rem;
-      color: rgba(240,247,255,0.82);
-      line-height: 1.5;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .pricing-includes li:last-child { border-bottom: none; }
-    .pricing-check { flex-shrink: 0; margin-top: 2px; color: #4ba8f0; }
-    .pricing-card-cta {
-      margin-top: auto;
-    }
-    .pricing-cta-link {
-      display: block;
-      text-align: center;
-      font-size: 0.9375rem;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 10px;
-      border: 1px solid rgba(75,168,240,0.35);
-      color: #4ba8f0;
-      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-    .pricing-cta-link:hover {
-      background: rgba(75,168,240,0.1);
-      border-color: rgba(75,168,240,0.6);
-      box-shadow: 0 6px 20px rgba(75,168,240,0.15);
-    }
-    .pricing-cta-link--primary {
-      background: linear-gradient(135deg, #4ba8f0, #3454f8);
-      border-color: transparent;
-      color: #ffffff;
-      position: relative;
-      overflow: hidden;
-    }
-    .pricing-cta-link--primary::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%; width: 60%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-      animation: btn-shimmer 2.5s ease-in-out infinite;
-    }
-    .pricing-cta-link--primary:hover {
-      background: linear-gradient(135deg, #62bcff, #4468ff);
-      border-color: transparent;
-      box-shadow: 0 8px 28px rgba(75,168,240,0.35);
-    }
-    .pricing-note {
-      text-align: center;
-      margin-top: 2.5rem;
-      font-size: 0.875rem;
-      color: rgba(133,184,216,0.7);
-      line-height: 1.65;
-    }
-    .pricing-note a {
-      color: #4ba8f0;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .pricing-note a:hover { text-decoration: underline; }
-
-    /* ─────────────────────────────────────────────────────
-       CTA BAND
-    ───────────────────────────────────────────────────── */
-    .svc-cta-band {
-      position: relative;
-      overflow: hidden;
-      padding: 6rem 0;
-      background: linear-gradient(135deg, #001f71 0%, #030d22 100%);
-      border-top: 1px solid rgba(75,168,240,0.2);
-      text-align: center;
-    }
-    .svc-cta-band::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(75,168,240,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(75,168,240,0.05) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-    }
-    .svc-cta-band-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 660px;
-      margin: 0 auto;
-    }
-    .svc-cta-band h2 {
-      font-size: clamp(1.875rem, 4vw, 2.75rem);
-      font-weight: 800;
-      color: #ffffff;
-      margin: 0 0 1.125rem;
-      line-height: 1.15;
-    }
-    .svc-cta-band p {
-      font-size: 1.0625rem;
-      color: rgba(240,247,255,0.72);
-      line-height: 1.7;
-      margin: 0 0 2.5rem;
-    }
-    .svc-cta-band-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .svc-cta-btn-white {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #ffffff;
-      color: #020917;
-      font-size: 0.9375rem;
-      font-weight: 700;
-      padding: 0.8125rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
-    }
-    .svc-cta-btn-white::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%; width: 60%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.2), transparent);
-      animation: btn-shimmer 2.5s ease-in-out infinite;
-    }
-    .svc-cta-btn-white:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 32px rgba(255,255,255,0.2);
-    }
-    .svc-cta-btn-outline-white {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: rgba(255,255,255,0.85);
-      font-size: 0.9375rem;
-      font-weight: 700;
-      padding: 0.8125rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.3);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background 0.25s ease;
-    }
-    .svc-cta-btn-outline-white:hover {
-      transform: translateY(-2px);
-      border-color: rgba(255,255,255,0.6);
-      background: rgba(255,255,255,0.08);
-    }
-
-    /* ── Spotlight card hover ── */
-    .seg-card, .svc-card, .pricing-card {
-      --mouse-x: 50%;
-      --mouse-y: 50%;
-    }
-    .seg-card::after, .svc-card::after, .pricing-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(75,168,240,0.07), transparent 60%);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    .seg-card:hover::after, .svc-card:hover::after, .pricing-card:hover::after { opacity: 1; }
-
-    /* ── Divider line ── */
-    .svc-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(75,168,240,0.25), transparent);
-      margin: 0;
-    }
-
-    /* ── Mobile adjustments ── */
-    @media (max-width: 480px) {
-      .svc-hero { padding: 5rem 0 4rem; }
-      .svc-section { padding: 4rem 0; }
-      .svc-hero-actions { flex-direction: column; align-items: center; }
-      .svc-cta-band-actions { flex-direction: column; align-items: center; }
-      .metric-pill-row { gap: 0.625rem; }
-      .m-pill { padding: 0.4375rem 0.875rem; }
-      .seg-card, .pricing-card { padding: 1.75rem 1.5rem; }
-    }
-
-    /* ================================================================
-       SERVICES PAGE — Responsive Additions
-       ================================================================ */
-
-    @media (max-width: 768px) {
-      /* Hero */
-      .svc-hero { padding: 6rem 0 4rem; }
-      .svc-hero-h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
-      .svc-hero-sub { font-size: 1rem; }
-      .svc-hero-actions { flex-wrap: wrap; justify-content: center; }
-      .svc-btn-primary,
-      .svc-btn-outline { min-height: 48px; }
-
-      /* Section padding */
-      .svc-section { padding: 3rem 0; }
-      .svc-section-header { margin-bottom: 2.5rem; }
-
-      /* Segment / "Who We Serve" grid */
-      .seg-grid {
-        grid-template-columns: 1fr;
-        max-width: 100%;
+      /* ── Page base ── */
+      body {
+        background: #020917;
       }
 
-      /* Core services grid */
-      .svc-card-grid { grid-template-columns: 1fr 1fr; }
+      /* ── Dot-grid background ── */
+      .svc-bg-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(75, 168, 240, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(75, 168, 240, 0.055) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
+      }
+      .svc-bg-vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 65% at 50% 50%,
+          transparent 30%,
+          #020917 100%
+        );
+        pointer-events: none;
+      }
 
-      /* Pricing grid */
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
+      /* ── Ambient orbs ── */
+      .svc-orb {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      /* ── Section wrapper ── */
+      .svc-section {
+        position: relative;
+        overflow: hidden;
+        padding: 6rem 0;
+      }
+      .svc-section--alt {
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      /* ── Section header ── */
+      .svc-section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .svc-overline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 50px;
+        background: rgba(75, 168, 240, 0.1);
+        color: #4ba8f0;
+        border: 1px solid rgba(75, 168, 240, 0.22);
+        margin-bottom: 1.25rem;
+      }
+      .svc-h2 {
+        font-size: clamp(1.875rem, 4vw, 2.75rem);
+        font-weight: 800;
+        line-height: 1.15;
+        margin: 0 0 1.25rem;
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #4ba8f0 60%,
+          #3454f8 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .svc-subtext {
+        font-size: 1.0625rem;
+        color: rgba(240, 247, 255, 0.72);
+        line-height: 1.7;
+        max-width: 600px;
         margin: 0 auto;
       }
 
-      /* CTA band */
-      .svc-cta-band { padding: 4rem 0; }
-      .svc-cta-band-inner { max-width: 100%; }
+      /* ── Tour labels ── */
+      .svc-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 50px;
+        white-space: nowrap;
+      }
+      .svc-label--blue {
+        background: rgba(75, 168, 240, 0.12);
+        color: #4ba8f0;
+        border: 1px solid rgba(75, 168, 240, 0.25);
+      }
+      .svc-label--gold {
+        background: rgba(255, 215, 0, 0.1);
+        color: #ffd700;
+        border: 1px solid rgba(255, 215, 0, 0.25);
+      }
+      .svc-label--green {
+        background: rgba(34, 197, 94, 0.1);
+        color: #34d399;
+        border: 1px solid rgba(34, 197, 94, 0.25);
+      }
+      .svc-label--indigo {
+        background: rgba(129, 140, 248, 0.1);
+        color: #818cf8;
+        border: 1px solid rgba(129, 140, 248, 0.25);
+      }
+      .svc-label--orange {
+        background: rgba(251, 146, 60, 0.1);
+        color: #fb923c;
+        border: 1px solid rgba(251, 146, 60, 0.25);
+      }
+      .svc-label--purple {
+        background: rgba(192, 132, 252, 0.1);
+        color: #c084fc;
+        border: 1px solid rgba(192, 132, 252, 0.25);
+      }
 
-      /* Metric pills: allow 2 per row */
-      .metric-pill-row { justify-content: flex-start; }
-    }
+      /* ── Metric pills ── */
+      .metric-pill-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2.5rem;
+      }
+      .m-pill {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(75, 168, 240, 0.2);
+        border-radius: 50px;
+        padding: 0.5rem 1.1rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        transition:
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+      .m-pill:hover {
+        border-color: rgba(75, 168, 240, 0.38);
+        background: rgba(75, 168, 240, 0.08);
+      }
+      .m-pill-val {
+        font-size: 0.9375rem;
+        font-weight: 800;
+        color: #4ba8f0;
+      }
+      .m-pill-lbl {
+        font-size: 0.7rem;
+        color: rgba(133, 184, 216, 0.85);
+        white-space: nowrap;
+      }
 
-    @media (max-width: 480px) {
-      /* Hero */
-      .svc-hero { padding: 5rem 0 3rem; }
-      .svc-btn-primary,
-      .svc-btn-outline { width: 100%; justify-content: center; }
+      /* ─────────────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────────────── */
+      .svc-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 8rem 0 6rem;
+        text-align: center;
+      }
+      .svc-hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      .svc-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 50px;
+        background: rgba(75, 168, 240, 0.1);
+        color: #4ba8f0;
+        border: 1px solid rgba(75, 168, 240, 0.25);
+        margin-bottom: 1.75rem;
+        position: relative;
+      }
+      .svc-hero-badge::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4ba8f0;
+        box-shadow: 0 0 8px rgba(75, 168, 240, 0.8);
+        animation: badge-pulse 2s ease-in-out infinite;
+      }
+      @keyframes badge-pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.4);
+        }
+      }
+      .svc-hero-h1 {
+        font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin: 0 0 1.5rem;
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #4ba8f0 60%,
+          #3454f8 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .svc-hero-sub {
+        font-size: 1.125rem;
+        color: rgba(240, 247, 255, 0.72);
+        line-height: 1.75;
+        max-width: 600px;
+        margin: 0 auto 2.25rem;
+      }
+      .svc-hero-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .svc-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #ffffff;
+        color: #020917;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        padding: 0.8125rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .svc-btn-primary::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.2),
+          transparent
+        );
+        animation: btn-shimmer 2.5s ease-in-out infinite;
+      }
+      @keyframes btn-shimmer {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 200%;
+        }
+      }
+      .svc-btn-primary:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
+      }
+      .svc-btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: transparent;
+        color: #4ba8f0;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        padding: 0.8125rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 1px solid rgba(75, 168, 240, 0.4);
+        cursor: pointer;
+        transition:
+          transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.25s ease,
+          box-shadow 0.25s ease,
+          background 0.25s ease;
+      }
+      .svc-btn-outline:hover {
+        transform: translateY(-2px);
+        border-color: rgba(75, 168, 240, 0.7);
+        background: rgba(75, 168, 240, 0.07);
+        box-shadow: 0 8px 24px rgba(75, 168, 240, 0.18);
+      }
 
-      /* Section */
-      .svc-section { padding: 2.5rem 0; }
+      /* ─────────────────────────────────────────────────────
+       WHO WE SERVE
+    ───────────────────────────────────────────────────── */
+      .seg-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+      }
+      @media (max-width: 900px) {
+        .seg-grid {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+          margin: 0 auto;
+        }
+      }
+      @media (min-width: 640px) and (max-width: 900px) {
+        .seg-grid {
+          grid-template-columns: 1fr 1fr;
+          max-width: 100%;
+        }
+      }
 
-      /* Core services: single column */
-      .svc-card-grid { grid-template-columns: 1fr; }
-      .svc-card { padding: 1.5rem; }
+      .seg-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(75, 168, 240, 0.16);
+        border-radius: 22px;
+        padding: 2.25rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .seg-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(
+          --seg-grad,
+          linear-gradient(
+            90deg,
+            transparent,
+            rgba(75, 168, 240, 0.55),
+            transparent
+          )
+        );
+      }
+      .seg-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(75, 168, 240, 0.3);
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, 0.35),
+          0 0 28px rgba(75, 168, 240, 0.08);
+      }
+      .seg-card-label-row {
+        margin-bottom: 1.25rem;
+      }
+      .seg-card h3 {
+        font-size: 1.1875rem;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin: 0 0 0.625rem;
+      }
+      .seg-card p {
+        font-size: 0.875rem;
+        color: rgba(133, 184, 216, 0.85);
+        line-height: 1.65;
+        margin: 0 0 1.5rem;
+      }
+      .seg-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.05);
+        margin-bottom: 1.25rem;
+      }
+      .seg-feat-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .seg-feat-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
+        color: rgba(240, 247, 255, 0.8);
+        line-height: 1.5;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .seg-feat-list li:last-child {
+        border-bottom: none;
+      }
+      .seg-check {
+        flex-shrink: 0;
+        margin-top: 2px;
+        color: #4ba8f0;
+      }
+      .seg-card-cta {
+        margin-top: auto;
+      }
+      .seg-cta-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #4ba8f0;
+        text-decoration: none;
+        padding: 0.625rem 1.25rem;
+        border: 1px solid rgba(75, 168, 240, 0.3);
+        border-radius: 8px;
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease,
+          gap 0.2s ease;
+      }
+      .seg-cta-link:hover {
+        background: rgba(75, 168, 240, 0.1);
+        border-color: rgba(75, 168, 240, 0.55);
+        gap: 0.65rem;
+      }
 
-      /* Seg cards */
-      .seg-card { padding: 1.5rem; }
+      /* ─────────────────────────────────────────────────────
+       CORE SERVICES GRID
+    ───────────────────────────────────────────────────── */
+      .svc-card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      @media (max-width: 1024px) {
+        .svc-card-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .svc-card-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-      /* Pricing */
-      .pricing-card { padding: 1.5rem; }
-      .pricing-popular-badge { font-size: 0.55rem; padding: 4px 12px; }
+      .svc-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(75, 168, 240, 0.14);
+        border-radius: 20px;
+        padding: 1.875rem;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .svc-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          var(--card-a, #4ba8f0),
+          var(--card-b, #3454f8)
+        );
+      }
+      .svc-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(75, 168, 240, 0.28);
+        box-shadow:
+          0 16px 40px rgba(0, 0, 0, 0.3),
+          0 0 24px rgba(75, 168, 240, 0.09);
+      }
+      .svc-card-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.125rem;
+        background: var(--icon-bg, rgba(75, 168, 240, 0.1));
+        border: 1px solid var(--icon-border, rgba(75, 168, 240, 0.2));
+        flex-shrink: 0;
+      }
+      .svc-card-label-row {
+        margin-bottom: 0.75rem;
+      }
+      .svc-card h4 {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: #f0f7ff;
+        margin: 0 0 0.625rem;
+      }
+      .svc-card p {
+        font-size: 0.8125rem;
+        color: #85b8d8;
+        line-height: 1.65;
+        margin: 0 0 1.25rem;
+        flex: 1;
+      }
+      .wf-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 50px;
+        margin-top: auto;
+      }
+      .wf-tag--auto {
+        background: rgba(34, 197, 94, 0.12);
+        color: #34d399;
+        border: 1px solid rgba(34, 197, 94, 0.25);
+      }
+      .wf-tag--ai {
+        background: rgba(75, 168, 240, 0.12);
+        color: #4ba8f0;
+        border: 1px solid rgba(75, 168, 240, 0.25);
+      }
+      .wf-tag--rt {
+        background: rgba(129, 140, 248, 0.12);
+        color: #818cf8;
+        border: 1px solid rgba(129, 140, 248, 0.25);
+      }
+      .wf-tag--audit {
+        background: rgba(255, 215, 0, 0.12);
+        color: #ffd700;
+        border: 1px solid rgba(255, 215, 0, 0.25);
+      }
+      .wf-tag--ent {
+        background: rgba(251, 146, 60, 0.12);
+        color: #fb923c;
+        border: 1px solid rgba(251, 146, 60, 0.25);
+      }
+      .wf-tag--live {
+        background: rgba(192, 132, 252, 0.12);
+        color: #c084fc;
+        border: 1px solid rgba(192, 132, 252, 0.25);
+      }
 
-      /* CTA band buttons */
-      .svc-cta-btn-white,
-      .svc-cta-btn-outline-white { width: 100%; justify-content: center; min-height: 48px; }
+      /* ─────────────────────────────────────────────────────
+       PRICING
+    ───────────────────────────────────────────────────── */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+      }
+      @media (max-width: 960px) {
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 420px;
+          margin: 0 auto;
+        }
+      }
+      @media (min-width: 640px) and (max-width: 960px) {
+        .pricing-grid {
+          grid-template-columns: 1fr 1fr;
+          max-width: 100%;
+        }
+      }
 
-      /* Metric pills: stack cleanly */
-      .m-pill { flex: 1 1 auto; min-width: 140px; justify-content: center; }
-    }
-  </style>
+      .pricing-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(75, 168, 240, 0.16);
+        border-radius: 22px;
+        padding: 2.25rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .pricing-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.4),
+          transparent
+        );
+      }
+      .pricing-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 18px 48px rgba(0, 0, 0, 0.35),
+          0 0 24px rgba(75, 168, 240, 0.08);
+      }
+      .pricing-card--featured {
+        border-color: rgba(75, 168, 240, 0.35);
+        background: rgba(75, 168, 240, 0.04);
+        box-shadow:
+          0 0 0 1px rgba(75, 168, 240, 0.15),
+          0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+      .pricing-card--featured::before {
+        background: linear-gradient(90deg, #4ba8f0, #3454f8);
+        opacity: 1;
+      }
+      .pricing-card--featured:hover {
+        border-color: rgba(75, 168, 240, 0.5);
+        box-shadow:
+          0 0 0 1px rgba(75, 168, 240, 0.3),
+          0 24px 56px rgba(0, 0, 0, 0.4),
+          0 0 40px rgba(75, 168, 240, 0.12);
+      }
+      .pricing-popular-badge {
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #4ba8f0, #3454f8);
+        color: #ffffff;
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 16px;
+        border-radius: 0 0 10px 10px;
+        white-space: nowrap;
+      }
+      .pricing-tier {
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #4ba8f0;
+        margin-bottom: 0.375rem;
+      }
+      .pricing-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #f0f7ff;
+        margin: 0 0 0.625rem;
+      }
+      .pricing-desc {
+        font-size: 0.875rem;
+        color: rgba(133, 184, 216, 0.85);
+        line-height: 1.65;
+        margin: 0 0 1.75rem;
+      }
+      .pricing-price-box {
+        padding: 1.25rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        margin-bottom: 1.75rem;
+      }
+      .pricing-price-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(133, 184, 216, 0.7);
+        margin-bottom: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .pricing-price-value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #f0f7ff;
+        line-height: 1.3;
+      }
+      .pricing-includes {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .pricing-includes li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
+        color: rgba(240, 247, 255, 0.82);
+        line-height: 1.5;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .pricing-includes li:last-child {
+        border-bottom: none;
+      }
+      .pricing-check {
+        flex-shrink: 0;
+        margin-top: 2px;
+        color: #4ba8f0;
+      }
+      .pricing-card-cta {
+        margin-top: auto;
+      }
+      .pricing-cta-link {
+        display: block;
+        text-align: center;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        border: 1px solid rgba(75, 168, 240, 0.35);
+        color: #4ba8f0;
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .pricing-cta-link:hover {
+        background: rgba(75, 168, 240, 0.1);
+        border-color: rgba(75, 168, 240, 0.6);
+        box-shadow: 0 6px 20px rgba(75, 168, 240, 0.15);
+      }
+      .pricing-cta-link--primary {
+        background: linear-gradient(135deg, #4ba8f0, #3454f8);
+        border-color: transparent;
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+      .pricing-cta-link--primary::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.18),
+          transparent
+        );
+        animation: btn-shimmer 2.5s ease-in-out infinite;
+      }
+      .pricing-cta-link--primary:hover {
+        background: linear-gradient(135deg, #62bcff, #4468ff);
+        border-color: transparent;
+        box-shadow: 0 8px 28px rgba(75, 168, 240, 0.35);
+      }
+      .pricing-note {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-size: 0.875rem;
+        color: rgba(133, 184, 216, 0.7);
+        line-height: 1.65;
+      }
+      .pricing-note a {
+        color: #4ba8f0;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .pricing-note a:hover {
+        text-decoration: underline;
+      }
+
+      /* ─────────────────────────────────────────────────────
+       CTA BAND
+    ───────────────────────────────────────────────────── */
+      .svc-cta-band {
+        position: relative;
+        overflow: hidden;
+        padding: 6rem 0;
+        background: linear-gradient(135deg, #001f71 0%, #030d22 100%);
+        border-top: 1px solid rgba(75, 168, 240, 0.2);
+        text-align: center;
+      }
+      .svc-cta-band::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(75, 168, 240, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(75, 168, 240, 0.05) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
+      }
+      .svc-cta-band-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 660px;
+        margin: 0 auto;
+      }
+      .svc-cta-band h2 {
+        font-size: clamp(1.875rem, 4vw, 2.75rem);
+        font-weight: 800;
+        color: #ffffff;
+        margin: 0 0 1.125rem;
+        line-height: 1.15;
+      }
+      .svc-cta-band p {
+        font-size: 1.0625rem;
+        color: rgba(240, 247, 255, 0.72);
+        line-height: 1.7;
+        margin: 0 0 2.5rem;
+      }
+      .svc-cta-band-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .svc-cta-btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #ffffff;
+        color: #020917;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        padding: 0.8125rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.25s ease;
+      }
+      .svc-cta-btn-white::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.2),
+          transparent
+        );
+        animation: btn-shimmer 2.5s ease-in-out infinite;
+      }
+      .svc-cta-btn-white:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
+      }
+      .svc-cta-btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
+        font-weight: 700;
+        padding: 0.8125rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition:
+          transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+      .svc-cta-btn-outline-white:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Spotlight card hover ── */
+      .seg-card,
+      .svc-card,
+      .pricing-card {
+        --mouse-x: 50%;
+        --mouse-y: 50%;
+      }
+      .seg-card::after,
+      .svc-card::after,
+      .pricing-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+          400px circle at var(--mouse-x) var(--mouse-y),
+          rgba(75, 168, 240, 0.07),
+          transparent 60%
+        );
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .seg-card:hover::after,
+      .svc-card:hover::after,
+      .pricing-card:hover::after {
+        opacity: 1;
+      }
+
+      /* ── Divider line ── */
+      .svc-divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(75, 168, 240, 0.25),
+          transparent
+        );
+        margin: 0;
+      }
+
+      /* ── Mobile adjustments ── */
+      @media (max-width: 480px) {
+        .svc-hero {
+          padding: 5rem 0 4rem;
+        }
+        .svc-section {
+          padding: 4rem 0;
+        }
+        .svc-hero-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+        .svc-cta-band-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+        .metric-pill-row {
+          gap: 0.625rem;
+        }
+        .m-pill {
+          padding: 0.4375rem 0.875rem;
+        }
+        .seg-card,
+        .pricing-card {
+          padding: 1.75rem 1.5rem;
+        }
+      }
+
+      /* ================================================================
+       SERVICES PAGE — Responsive Additions
+       ================================================================ */
+
+      @media (max-width: 768px) {
+        /* Hero */
+        .svc-hero {
+          padding: 6rem 0 4rem;
+        }
+        .svc-hero-h1 {
+          font-size: clamp(2rem, 5vw, 2.75rem);
+        }
+        .svc-hero-sub {
+          font-size: 1rem;
+        }
+        .svc-hero-actions {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .svc-btn-primary,
+        .svc-btn-outline {
+          min-height: 48px;
+        }
+
+        /* Section padding */
+        .svc-section {
+          padding: 3rem 0;
+        }
+        .svc-section-header {
+          margin-bottom: 2.5rem;
+        }
+
+        /* Segment / "Who We Serve" grid */
+        .seg-grid {
+          grid-template-columns: 1fr;
+          max-width: 100%;
+        }
+
+        /* Core services grid */
+        .svc-card-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        /* Pricing grid */
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+          margin: 0 auto;
+        }
+
+        /* CTA band */
+        .svc-cta-band {
+          padding: 4rem 0;
+        }
+        .svc-cta-band-inner {
+          max-width: 100%;
+        }
+
+        /* Metric pills: allow 2 per row */
+        .metric-pill-row {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Hero */
+        .svc-hero {
+          padding: 5rem 0 3rem;
+        }
+        .svc-btn-primary,
+        .svc-btn-outline {
+          width: 100%;
+          justify-content: center;
+        }
+
+        /* Section */
+        .svc-section {
+          padding: 2.5rem 0;
+        }
+
+        /* Core services: single column */
+        .svc-card-grid {
+          grid-template-columns: 1fr;
+        }
+        .svc-card {
+          padding: 1.5rem;
+        }
+
+        /* Seg cards */
+        .seg-card {
+          padding: 1.5rem;
+        }
+
+        /* Pricing */
+        .pricing-card {
+          padding: 1.5rem;
+        }
+        .pricing-popular-badge {
+          font-size: 0.55rem;
+          padding: 4px 12px;
+        }
+
+        /* CTA band buttons */
+        .svc-cta-btn-white,
+        .svc-cta-btn-outline-white {
+          width: 100%;
+          justify-content: center;
+          min-height: 48px;
+        }
+
+        /* Metric pills: stack cleanly */
+        .m-pill {
+          flex: 1 1 auto;
+          min-width: 140px;
+          justify-content: center;
+        }
+      }
+    </style>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","name":"Dental Revenue Cycle Services","provider":{"@type":"Organization","name":"Elite Dental Force","url":"https://elitedentalforce.com","logo":"https://elitedentalforce.com/images/favicon.png"},"serviceType":"Dental revenue cycle management, insurance verification, claims support","areaServed":{"@type":"Country","name":"United States"},"url":"https://elitedentalforce.com/pages/services.html"}
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Dental Revenue Cycle Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "Elite Dental Force",
+          "url": "https://elitedentalforce.com",
+          "logo": "https://elitedentalforce.com/images/favicon.png"
+        },
+        "serviceType": "Dental revenue cycle management, insurance verification, claims support",
+        "areaServed": { "@type": "Country", "name": "United States" },
+        "url": "https://elitedentalforce.com/pages/services.html"
+      }
     </script>
   </head>
-<body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="logo">
-          <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933">
-        </a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="has-dropdown">
-              <a href="platform.html" class="nav-link">Platform</a>
-              <ul class="dropdown">
-                <li><a href="platform.html">Platform Overview</a></li>
-                  <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
-                <li><a href="edifi.html">EDiFi Software</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="services.html" class="nav-link active">Solutions</a>
-              <ul class="dropdown">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="partners.html">Partners</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="javascript:void(0)" class="nav-link" style="cursor:pointer">Resources</a>
-              <ul class="dropdown">
-                <li><a href="resources/blog.html">Blog</a></li>
-                <li><a href="resources/podcast.html">Podcast</a></li>
-                <li><a href="resources/webinars.html">Webinars</a></li>
-                <li><a href="resources/news.html">News</a></li>
-                <li><a href="dental-revenue-intelligence.html">What is Dental Revenue Intelligence?</a></li>
-              </ul>
-            </li>
-            <li class="has-dropdown">
-              <a href="company.html" class="nav-link">Company</a>
-              <ul class="dropdown">
-                <li><a href="company.html">About Us</a></li>
-                <li><a href="company/security.html">Security</a></li>
-                <li><a href="company/faq.html">FAQ</a></li>
-                <li><a href="investors.html">Investors</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="nav-cta">
-            <a href="contact.html#sales" class="btn btn-primary">Book a Demo</a>
-          </div>
-        </nav>
-        <button class="mobile-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="../index.html" class="logo">
+            <img
+              src="../images/Grayscale Transparent.png"
+              alt="Elite Dental Force"
+              width="2229"
+              height="933"
+            />
+          </a>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="platform.html" class="nav-link">Platform</a>
+                <ul class="dropdown">
+                  <li><a href="platform.html">Platform Overview</a></li>
+                  <li>
+                    <a href="eligibility-standalone.html"
+                      >Eligibility Standalone</a
+                    >
+                  </li>
+                  <li><a href="edifi.html">EDiFi Software</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="services.html" class="nav-link active">Solutions</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="partners.html">Partners</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link"
+                  style="cursor: pointer"
+                  >Resources</a
+                >
+                <ul class="dropdown">
+                  <li><a href="resources/blog.html">Blog</a></li>
+                  <li><a href="resources/podcast.html">Podcast</a></li>
+                  <li><a href="resources/webinars.html">Webinars</a></li>
+                  <li><a href="resources/news.html">News</a></li>
+                  <li>
+                    <a href="dental-revenue-intelligence.html"
+                      >What is Dental Revenue Intelligence?</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="company.html" class="nav-link">Company</a>
+                <ul class="dropdown">
+                  <li><a href="company.html">About Us</a></li>
+                  <li><a href="company/security.html">Security</a></li>
+                  <li><a href="company/faq.html">FAQ</a></li>
+                  <li><a href="investors.html">Investors</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="contact.html#sales" class="btn btn-primary"
+                >Book a Demo</a
+              >
+            </div>
+          </nav>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-
-    <!-- ══════════════════════════════════════════════
+    <main>
+      <!-- ══════════════════════════════════════════════
          HERO
     ══════════════════════════════════════════════ -->
-    <section class="svc-hero">
-      <!-- Dot grid -->
-      <div class="svc-bg-grid"></div>
-      <div class="svc-bg-vignette"></div>
+      <section class="svc-hero">
+        <!-- Dot grid -->
+        <div class="svc-bg-grid"></div>
+        <div class="svc-bg-vignette"></div>
 
-      <!-- Ambient orbs -->
-      <div class="svc-orb" style="width:600px;height:600px;top:-160px;left:-120px;background:#001f71;filter:blur(130px);opacity:0.45;"></div>
-      <div class="svc-orb" style="width:480px;height:480px;bottom:-100px;right:-80px;background:rgba(75,168,240,0.3);filter:blur(120px);opacity:0.35;"></div>
+        <!-- Ambient orbs -->
+        <div
+          class="svc-orb"
+          style="
+            width: 600px;
+            height: 600px;
+            top: -160px;
+            left: -120px;
+            background: #001f71;
+            filter: blur(130px);
+            opacity: 0.45;
+          "
+        ></div>
+        <div
+          class="svc-orb"
+          style="
+            width: 480px;
+            height: 480px;
+            bottom: -100px;
+            right: -80px;
+            background: rgba(75, 168, 240, 0.3);
+            filter: blur(120px);
+            opacity: 0.35;
+          "
+        ></div>
 
-      <div class="container">
-        <div class="svc-hero-inner">
-          <div class="svc-hero-badge">Solutions</div>
+        <div class="container">
+          <div class="svc-hero-inner">
+            <div class="svc-hero-badge">Solutions</div>
 
-          <h1 class="svc-hero-h1">
-            Dental Revenue Solutions<br>
-            Built for Your Practice
-          </h1>
+            <h1 class="svc-hero-h1">
+              Dental Revenue Solutions<br />
+              Built for Your Practice
+            </h1>
 
-          <p class="svc-hero-sub">
-            Stop revenue leakage before it costs you another dollar. Elite Dental Force delivers the AI infrastructure that ensures your practice gets paid exactly what it's earned, every claim, every payer, every time.
-          </p>
+            <p class="svc-hero-sub">
+              Most practices are not getting paid what they earned. The gap is
+              not bad luck. It is eligibility errors, missed denials, and
+              payments that never got audited. EDiFi is built to close that gap.
+            </p>
 
-          <div class="svc-hero-actions">
-            <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="svc-btn-primary">
-              Book a Demo
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="edifi.html" class="svc-btn-outline">
-              See the Platform
-            </a>
-          </div>
-
-          <!-- Metric pills -->
-          <div class="metric-pill-row">
-            <div class="m-pill">
-              <span class="m-pill-val">500+</span>
-              <span class="m-pill-lbl">Waitlisted Offices</span>
+            <div class="svc-hero-actions">
+              <a
+                href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                target="_blank"
+                class="svc-btn-primary"
+              >
+                Book a Demo
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="edifi.html" class="svc-btn-outline">
+                See the Platform
+              </a>
             </div>
-            <div class="m-pill">
-              <span class="m-pill-val">35%</span>
-              <span class="m-pill-lbl">Avg. Denial Reduction</span>
-            </div>
-            <div class="m-pill">
-              <span class="m-pill-val">$59K+</span>
-              <span class="m-pill-lbl">Found in First Audit</span>
-            </div>
-            <div class="m-pill">
-              <span class="m-pill-val">Real Time</span>
-              <span class="m-pill-lbl">Eligibility Checks</span>
+
+            <!-- Metric pills -->
+            <div class="metric-pill-row">
+              <div class="m-pill">
+                <span class="m-pill-val">500+</span>
+                <span class="m-pill-lbl">Waitlisted Offices</span>
+              </div>
+              <div class="m-pill">
+                <span class="m-pill-val">35%</span>
+                <span class="m-pill-lbl">Avg. Denial Reduction</span>
+              </div>
+              <div class="m-pill">
+                <span class="m-pill-val">$59K+</span>
+                <span class="m-pill-lbl">Found in First Audit</span>
+              </div>
+              <div class="m-pill">
+                <span class="m-pill-val">Real Time</span>
+                <span class="m-pill-lbl">Eligibility Checks</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="svc-divider"></div>
+      <div class="svc-divider"></div>
 
-    <!-- ══════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════
          WHO WE SERVE
     ══════════════════════════════════════════════ -->
-    <section class="svc-section" id="who-we-serve">
-      <!-- Subtle ambient orb -->
-      <div class="svc-orb" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,31,113,0.6);filter:blur(160px);opacity:0.35;pointer-events:none;"></div>
+      <section class="svc-section" id="who-we-serve">
+        <!-- Subtle ambient orb -->
+        <div
+          class="svc-orb"
+          style="
+            width: 500px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 31, 113, 0.6);
+            filter: blur(160px);
+            opacity: 0.35;
+            pointer-events: none;
+          "
+        ></div>
 
-      <div class="container" style="position:relative;z-index:2;">
-        <div class="svc-section-header">
-          <div><span class="svc-overline">WHO WE SERVE</span></div>
-          <h2 class="svc-h2">One Platform. Every Practice Size.</h2>
-          <p class="svc-subtext">Whether you run a single operatory or 200 locations, our solutions are engineered for your scale, your team, and your payer mix.</p>
+        <div class="container" style="position: relative; z-index: 2">
+          <div class="svc-section-header">
+            <div><span class="svc-overline">WHO WE SERVE</span></div>
+            <h2 class="svc-h2">One Platform. Every Practice Size.</h2>
+            <p class="svc-subtext">
+              Whether you run a single operatory or 200 locations, EDiFi is
+              built to fit your billing workflow from day one.
+            </p>
+          </div>
+
+          <div class="seg-grid">
+            <!-- Private Practice -->
+            <div
+              class="seg-card"
+              style="
+                --seg-grad: linear-gradient(
+                  90deg,
+                  transparent,
+                  rgba(75, 168, 240, 0.6),
+                  transparent
+                );
+              "
+            >
+              <div class="seg-card-label-row">
+                <span class="svc-label svc-label--blue">Private Practice</span>
+              </div>
+              <h3>Solo &amp; Independent Offices</h3>
+              <p>
+                Most independent practices have underpayments sitting in closed
+                claims they never audit. EDiFi finds them.
+              </p>
+              <div class="seg-divider"></div>
+              <ul class="seg-feat-list">
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Real time eligibility verification
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Automated clean claim submission
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Revenue analytics dashboard
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Denial management &amp; appeals
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  AI billing consultant, on demand
+                </li>
+              </ul>
+              <div class="seg-card-cta">
+                <a
+                  href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                  target="_blank"
+                  class="seg-cta-link"
+                >
+                  Get Started
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Multi-Location Groups -->
+            <div
+              class="seg-card"
+              id="groups"
+              style="
+                --seg-grad: linear-gradient(
+                  90deg,
+                  transparent,
+                  rgba(255, 215, 0, 0.5),
+                  transparent
+                );
+              "
+            >
+              <div class="seg-card-label-row">
+                <span class="svc-label svc-label--gold">Multi Location</span>
+              </div>
+              <h3>Groups &amp; Regional Practices</h3>
+              <p>
+                Standardize billing across every location without adding
+                headcount. Centralized controls with full location-level
+                visibility and accountability.
+              </p>
+              <div class="seg-divider"></div>
+              <ul class="seg-feat-list">
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Multi location eligibility management
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Centralized payer rule library
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Cross location revenue analytics
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Payment audit across all locations
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Dedicated onboarding support
+                </li>
+              </ul>
+              <div class="seg-card-cta">
+                <a
+                  href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                  target="_blank"
+                  class="seg-cta-link"
+                  style="color: #ffd700; border-color: rgba(255, 215, 0, 0.3)"
+                >
+                  Talk to Sales
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- DSOs & Enterprise -->
+            <div
+              class="seg-card"
+              id="dso"
+              style="
+                --seg-grad: linear-gradient(
+                  90deg,
+                  transparent,
+                  rgba(52, 211, 153, 0.5),
+                  transparent
+                );
+              "
+            >
+              <div class="seg-card-label-row">
+                <span class="svc-label svc-label--green">Enterprise</span>
+              </div>
+              <h3>DSOs &amp; Enterprise Groups</h3>
+              <p>
+                Built for organizations running multiple locations. Centralized billing controls, consolidated revenue reporting, and a dedicated account team that knows your payer mix.
+              </p>
+              <div class="seg-divider"></div>
+              <ul class="seg-feat-list">
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Enterprise API &amp; PMS integrations
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Multi tenant DSO architecture
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Custom fee schedule management
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Aggregate revenue reporting
+                </li>
+                <li>
+                  <svg
+                    class="seg-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Dedicated account manager
+                </li>
+              </ul>
+              <div class="seg-card-cta">
+                <a
+                  href="contact.html#sales"
+                  class="seg-cta-link"
+                  style="color: #34d399; border-color: rgba(52, 211, 153, 0.3)"
+                >
+                  Contact Enterprise
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="seg-grid">
+      <div class="svc-divider"></div>
 
-          <!-- Private Practice -->
-          <div class="seg-card" style="--seg-grad:linear-gradient(90deg,transparent,rgba(75,168,240,0.6),transparent);">
-            <div class="seg-card-label-row">
-              <span class="svc-label svc-label--blue">Private Practice</span>
-            </div>
-            <h3>Solo &amp; Independent Offices</h3>
-            <p>Stop leaving money on the table. EDiFi gives independent practices enterprise-grade revenue tools without the enterprise complexity or price tag.</p>
-            <div class="seg-divider"></div>
-            <ul class="seg-feat-list">
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Real time eligibility verification
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Automated clean claim submission
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Revenue analytics dashboard
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Denial management &amp; appeals
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                AI billing consultant, on demand
-              </li>
-            </ul>
-            <div class="seg-card-cta">
-              <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="seg-cta-link">
-                Get Started
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Multi-Location Groups -->
-          <div class="seg-card" id="groups" style="--seg-grad:linear-gradient(90deg,transparent,rgba(255,215,0,0.5),transparent);">
-            <div class="seg-card-label-row">
-              <span class="svc-label svc-label--gold">Multi Location</span>
-            </div>
-            <h3>Groups &amp; Regional Practices</h3>
-            <p>Standardize billing across every location without adding headcount. Centralized controls with full location-level visibility and accountability.</p>
-            <div class="seg-divider"></div>
-            <ul class="seg-feat-list">
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Multi location eligibility management
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Centralized payer rule library
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Cross location revenue analytics
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Payment audit across all locations
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Dedicated onboarding support
-              </li>
-            </ul>
-            <div class="seg-card-cta">
-              <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="seg-cta-link" style="color:#ffd700;border-color:rgba(255,215,0,0.3);">
-                Talk to Sales
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- DSOs & Enterprise -->
-          <div class="seg-card" id="dso" style="--seg-grad:linear-gradient(90deg,transparent,rgba(52,211,153,0.5),transparent);">
-            <div class="seg-card-label-row">
-              <span class="svc-label svc-label--green">Enterprise</span>
-            </div>
-            <h3>DSOs &amp; Enterprise Groups</h3>
-            <p>Carrier grade infrastructure for large organizations. Custom integrations, SOC 2 security, multi tenant architecture, and white glove service at scale.</p>
-            <div class="seg-divider"></div>
-            <ul class="seg-feat-list">
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Enterprise API &amp; PMS integrations
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Multi tenant DSO architecture
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Custom fee schedule management
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Aggregate revenue reporting
-              </li>
-              <li>
-                <svg class="seg-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Dedicated account manager
-              </li>
-            </ul>
-            <div class="seg-card-cta">
-              <a href="contact.html#sales" class="seg-cta-link" style="color:#34d399;border-color:rgba(52,211,153,0.3);">
-                Contact Enterprise
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="svc-divider"></div>
-
-    <!-- ══════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════
          CORE SERVICES
     ══════════════════════════════════════════════ -->
-    <section class="svc-section svc-section--alt">
-      <!-- Dot grid -->
-      <div class="svc-bg-grid" style="opacity:0.5;"></div>
+      <section class="svc-section svc-section--alt">
+        <!-- Dot grid -->
+        <div class="svc-bg-grid" style="opacity: 0.5"></div>
 
-      <!-- Ambient orb -->
-      <div class="svc-orb" style="width:700px;height:400px;top:50%;right:-200px;transform:translateY(-50%);background:rgba(0,31,113,0.5);filter:blur(160px);opacity:0.3;pointer-events:none;"></div>
+        <!-- Ambient orb -->
+        <div
+          class="svc-orb"
+          style="
+            width: 700px;
+            height: 400px;
+            top: 50%;
+            right: -200px;
+            transform: translateY(-50%);
+            background: rgba(0, 31, 113, 0.5);
+            filter: blur(160px);
+            opacity: 0.3;
+            pointer-events: none;
+          "
+        ></div>
 
-      <div class="container" style="position:relative;z-index:2;">
-        <div class="svc-section-header">
-          <div><span class="svc-overline">WHAT'S INCLUDED</span></div>
-          <h2 class="svc-h2">A Full Revenue Intelligence Stack</h2>
-          <p class="svc-subtext">Every service runs on the EDiFi platform, purpose built for dental billing intelligence and designed to eliminate revenue leakage at every stage.</p>
+        <div class="container" style="position: relative; z-index: 2">
+          <div class="svc-section-header">
+            <div><span class="svc-overline">WHAT'S INCLUDED</span></div>
+            <h2 class="svc-h2">A Full Revenue Intelligence Stack</h2>
+            <p class="svc-subtext">
+              Every service runs on the EDiFi platform, purpose built for dental
+              billing intelligence and designed to eliminate revenue leakage at
+              every stage.
+            </p>
+          </div>
+
+          <div class="svc-card-grid">
+            <!-- 1. Eligibility Verification -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #4ba8f0;
+                --card-b: #3454f8;
+                --icon-bg: rgba(75, 168, 240, 0.1);
+                --icon-border: rgba(75, 168, 240, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#4ba8f0"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 11l3 3L22 4" />
+                  <path
+                    d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+                  />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--blue">Eligibility</span>
+              </div>
+              <h4>Eligibility Verification</h4>
+              <p>
+                Real time benefits checks before every appointment. Know what's
+                covered, what's not, and what the patient owes, before they sit
+                down.
+              </p>
+              <span class="wf-tag wf-tag--rt">Real Time</span>
+            </div>
+
+            <!-- 2. Clean-Claim Submission -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #818cf8;
+                --card-b: #3454f8;
+                --icon-bg: rgba(129, 140, 248, 0.1);
+                --icon-border: rgba(129, 140, 248, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#818cf8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--indigo">Claims</span>
+              </div>
+              <h4>Clean Claim Submission</h4>
+              <p>
+                Automated claim scrubbing and submission that catches errors
+                before they reach the payer, reducing denials at the source, not
+                after the fact.
+              </p>
+              <span class="wf-tag wf-tag--auto">Automated</span>
+            </div>
+
+            <!-- 3. Revenue Analytics -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #ffd700;
+                --card-b: #fb923c;
+                --icon-bg: rgba(255, 215, 0, 0.1);
+                --icon-border: rgba(255, 215, 0, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ffd700"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--gold">Analytics</span>
+              </div>
+              <h4>Revenue Analytics</h4>
+              <p>
+                Live dashboards that surface collection rates, denial trends,
+                payer performance, and reimbursement gaps across your entire
+                practice.
+              </p>
+              <span class="wf-tag wf-tag--rt">Live Data</span>
+            </div>
+
+            <!-- 4. Denial Management -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #fb923c;
+                --card-b: #ffd700;
+                --icon-bg: rgba(251, 146, 60, 0.1);
+                --icon-border: rgba(251, 146, 60, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fb923c"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--orange">Denials</span>
+              </div>
+              <h4>Denial Management</h4>
+              <p>
+                Identify, track, and appeal denied claims with AI assisted
+                workflows that dramatically cut the time from denial to
+                resolution and recovery.
+              </p>
+              <span class="wf-tag wf-tag--ai">AI Powered</span>
+            </div>
+
+            <!-- 5. Payment Audit -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #34d399;
+                --card-b: #4ba8f0;
+                --icon-bg: rgba(52, 211, 153, 0.1);
+                --icon-border: rgba(52, 211, 153, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#34d399"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path
+                    d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"
+                  />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--green">Audit</span>
+              </div>
+              <h4>Payment Audit</h4>
+              <p>
+                Automatically compare payments received against your contracted
+                fee schedules to catch underpayments before they're written off
+                and forgotten.
+              </p>
+              <span class="wf-tag wf-tag--audit">Fee Schedules</span>
+            </div>
+
+            <!-- 6. AI Billing Consultants -->
+            <div
+              class="svc-card"
+              style="
+                --card-a: #c084fc;
+                --card-b: #818cf8;
+                --icon-bg: rgba(192, 132, 252, 0.1);
+                --icon-border: rgba(192, 132, 252, 0.2);
+              "
+            >
+              <div class="svc-card-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#c084fc"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div class="svc-card-label-row">
+                <span class="svc-label svc-label--purple">AI Agents</span>
+              </div>
+              <h4>AI Billing Consultants</h4>
+              <p>
+                On demand AI agents trained on dental billing rules, CDT coding,
+                and payer policy, available to your front desk any time guidance
+                is needed.
+              </p>
+              <span class="wf-tag wf-tag--live">On Demand</span>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="svc-card-grid">
+      <div class="svc-divider"></div>
 
-          <!-- 1. Eligibility Verification -->
-          <div class="svc-card" style="--card-a:#4ba8f0;--card-b:#3454f8;--icon-bg:rgba(75,168,240,0.1);--icon-border:rgba(75,168,240,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4ba8f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--blue">Eligibility</span>
-            </div>
-            <h4>Eligibility Verification</h4>
-            <p>Real time benefits checks before every appointment. Know what's covered, what's not, and what the patient owes, before they sit down.</p>
-            <span class="wf-tag wf-tag--rt">Real Time</span>
-          </div>
-
-          <!-- 2. Clean-Claim Submission -->
-          <div class="svc-card" style="--card-a:#818cf8;--card-b:#3454f8;--icon-bg:rgba(129,140,248,0.1);--icon-border:rgba(129,140,248,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="5" width="20" height="14" rx="2"/>
-                <line x1="2" y1="10" x2="22" y2="10"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--indigo">Claims</span>
-            </div>
-            <h4>Clean Claim Submission</h4>
-            <p>Automated claim scrubbing and submission that catches errors before they reach the payer, reducing denials at the source, not after the fact.</p>
-            <span class="wf-tag wf-tag--auto">Automated</span>
-          </div>
-
-          <!-- 3. Revenue Analytics -->
-          <div class="svc-card" style="--card-a:#ffd700;--card-b:#fb923c;--icon-bg:rgba(255,215,0,0.1);--icon-border:rgba(255,215,0,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="20" x2="18" y2="10"/>
-                <line x1="12" y1="20" x2="12" y2="4"/>
-                <line x1="6" y1="20" x2="6" y2="14"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--gold">Analytics</span>
-            </div>
-            <h4>Revenue Analytics</h4>
-            <p>Live dashboards that surface collection rates, denial trends, payer performance, and reimbursement gaps across your entire practice.</p>
-            <span class="wf-tag wf-tag--rt">Live Data</span>
-          </div>
-
-          <!-- 4. Denial Management -->
-          <div class="svc-card" style="--card-a:#fb923c;--card-b:#ffd700;--icon-bg:rgba(251,146,60,0.1);--icon-border:rgba(251,146,60,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 8v4l3 3"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--orange">Denials</span>
-            </div>
-            <h4>Denial Management</h4>
-            <p>Identify, track, and appeal denied claims with AI assisted workflows that dramatically cut the time from denial to resolution and recovery.</p>
-            <span class="wf-tag wf-tag--ai">AI Powered</span>
-          </div>
-
-          <!-- 5. Payment Audit -->
-          <div class="svc-card" style="--card-a:#34d399;--card-b:#4ba8f0;--icon-bg:rgba(52,211,153,0.1);--icon-border:rgba(52,211,153,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 20h9"/>
-                <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--green">Audit</span>
-            </div>
-            <h4>Payment Audit</h4>
-            <p>Automatically compare payments received against your contracted fee schedules to catch underpayments before they're written off and forgotten.</p>
-            <span class="wf-tag wf-tag--audit">Fee Schedules</span>
-          </div>
-
-          <!-- 6. AI Billing Consultants -->
-          <div class="svc-card" style="--card-a:#c084fc;--card-b:#818cf8;--icon-bg:rgba(192,132,252,0.1);--icon-border:rgba(192,132,252,0.2);">
-            <div class="svc-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-            </div>
-            <div class="svc-card-label-row">
-              <span class="svc-label svc-label--purple">AI Agents</span>
-            </div>
-            <h4>AI Billing Consultants</h4>
-            <p>On demand AI agents trained on dental billing rules, CDT coding, and payer policy, available to your front desk any time guidance is needed.</p>
-            <span class="wf-tag wf-tag--live">On Demand</span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="svc-divider"></div>
-
-    <!-- ══════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════
          PRICING
     ══════════════════════════════════════════════ -->
-    <section class="svc-section" id="pricing">
-      <!-- Ambient orb -->
-      <div class="svc-orb" style="width:600px;height:600px;top:-100px;left:-150px;background:#001f71;filter:blur(150px);opacity:0.4;pointer-events:none;"></div>
+      <section class="svc-section" id="pricing">
+        <!-- Ambient orb -->
+        <div
+          class="svc-orb"
+          style="
+            width: 600px;
+            height: 600px;
+            top: -100px;
+            left: -150px;
+            background: #001f71;
+            filter: blur(150px);
+            opacity: 0.4;
+            pointer-events: none;
+          "
+        ></div>
 
-      <div class="container" style="position:relative;z-index:2;">
-        <div class="svc-section-header">
-          <div><span class="svc-overline">PRICING</span></div>
-          <h2 class="svc-h2">Simple, Transparent Pricing</h2>
-          <p class="svc-subtext">Plans for every practice size. No hidden fees, no long term lock in. Pricing is available upon request so we can tailor it to your workflow.</p>
+        <div class="container" style="position: relative; z-index: 2">
+          <div class="svc-section-header">
+            <div><span class="svc-overline">PRICING</span></div>
+            <h2 class="svc-h2">Simple, Transparent Pricing</h2>
+            <p class="svc-subtext">
+              Plans for every practice size. No hidden fees, no long term lock
+              in. Pricing is available upon request so we can tailor it to your
+              workflow.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="pricing-card">
+              <div class="pricing-tier">Starter</div>
+              <div class="pricing-name">Solo Practice</div>
+              <p class="pricing-desc">
+                For single-location practices ready to modernize their revenue
+                cycle with proven AI tools and real time eligibility.
+              </p>
+              <div class="pricing-price-box">
+                <div class="pricing-price-label">Starting At</div>
+                <div class="pricing-price-value">$499 / location / mo</div>
+              </div>
+              <ul class="pricing-includes">
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Eligibility verification
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Clean claim submission
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Revenue analytics dashboard
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Email &amp; chat support
+                </li>
+              </ul>
+              <div class="pricing-card-cta">
+                <a
+                  href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                  target="_blank"
+                  class="pricing-cta-link"
+                  >Get Pricing</a
+                >
+              </div>
+            </div>
+
+            <!-- Growth (featured) -->
+            <div class="pricing-card pricing-card--featured">
+              <div class="pricing-popular-badge">Most Popular</div>
+              <div class="pricing-tier" style="margin-top: 0.875rem">
+                Growth
+              </div>
+              <div class="pricing-name">Multi Location</div>
+              <p class="pricing-desc">
+                For growing groups that need centralized control, deeper cross
+                location analytics, and dedicated onboarding.
+              </p>
+              <div
+                class="pricing-price-box"
+                style="border-color: rgba(75, 168, 240, 0.15)"
+              >
+                <div class="pricing-price-label">Starting At</div>
+                <div class="pricing-price-value">$499 / location / mo</div>
+              </div>
+              <ul class="pricing-includes">
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Everything in Starter
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Multi location management
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Denial management &amp; appeals
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Payment audit engine
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Dedicated onboarding support
+                </li>
+              </ul>
+              <div class="pricing-card-cta">
+                <a
+                  href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                  target="_blank"
+                  class="pricing-cta-link pricing-cta-link--primary"
+                  >Get Pricing</a
+                >
+              </div>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="pricing-card">
+              <div class="pricing-tier">Enterprise</div>
+              <div class="pricing-name">DSO &amp; Enterprise</div>
+              <p class="pricing-desc">
+                Custom configurations for large organizations requiring
+                enterprise integrations, SLAs, and white glove service at scale.
+              </p>
+              <div class="pricing-price-box">
+                <div class="pricing-price-label">Pricing</div>
+                <div class="pricing-price-value">Custom, contact us</div>
+              </div>
+              <ul class="pricing-includes">
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Everything in Growth
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Enterprise API &amp; integrations
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  AI billing consultants add on
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Dedicated account manager
+                </li>
+                <li>
+                  <svg
+                    class="pricing-check"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  Custom SLA &amp; security review
+                </li>
+              </ul>
+              <div class="pricing-card-cta">
+                <a href="contact.html#sales" class="pricing-cta-link"
+                  >Contact Sales</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="pricing-note">
+            Beta offices receive complimentary access during the launch
+            program.&nbsp;
+            <a
+              href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+              target="_blank"
+              >Apply for beta access &rarr;</a
+            >
+          </p>
         </div>
+      </section>
 
-        <div class="pricing-grid">
-
-          <!-- Starter -->
-          <div class="pricing-card">
-            <div class="pricing-tier">Starter</div>
-            <div class="pricing-name">Solo Practice</div>
-            <p class="pricing-desc">For single-location practices ready to modernize their revenue cycle with proven AI tools and real time eligibility.</p>
-            <div class="pricing-price-box">
-              <div class="pricing-price-label">Starting At</div>
-              <div class="pricing-price-value">$499 / location / mo</div>
-            </div>
-            <ul class="pricing-includes">
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Eligibility verification
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Clean claim submission
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Revenue analytics dashboard
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Email &amp; chat support
-              </li>
-            </ul>
-            <div class="pricing-card-cta">
-              <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="pricing-cta-link">Get Pricing</a>
-            </div>
-          </div>
-
-          <!-- Growth (featured) -->
-          <div class="pricing-card pricing-card--featured">
-            <div class="pricing-popular-badge">Most Popular</div>
-            <div class="pricing-tier" style="margin-top:0.875rem;">Growth</div>
-            <div class="pricing-name">Multi Location</div>
-            <p class="pricing-desc">For growing groups that need centralized control, deeper cross location analytics, and dedicated onboarding.</p>
-            <div class="pricing-price-box" style="border-color:rgba(75,168,240,0.15);">
-              <div class="pricing-price-label">Starting At</div>
-              <div class="pricing-price-value">$499 / location / mo</div>
-            </div>
-            <ul class="pricing-includes">
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Everything in Starter
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Multi location management
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Denial management &amp; appeals
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Payment audit engine
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Dedicated onboarding support
-              </li>
-            </ul>
-            <div class="pricing-card-cta">
-              <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="pricing-cta-link pricing-cta-link--primary">Get Pricing</a>
-            </div>
-          </div>
-
-          <!-- Enterprise -->
-          <div class="pricing-card">
-            <div class="pricing-tier">Enterprise</div>
-            <div class="pricing-name">DSO &amp; Enterprise</div>
-            <p class="pricing-desc">Custom configurations for large organizations requiring enterprise integrations, SLAs, and white glove service at scale.</p>
-            <div class="pricing-price-box">
-              <div class="pricing-price-label">Pricing</div>
-              <div class="pricing-price-value">Custom, contact us</div>
-            </div>
-            <ul class="pricing-includes">
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Everything in Growth
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Enterprise API &amp; integrations
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                AI billing consultants add on
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Dedicated account manager
-              </li>
-              <li>
-                <svg class="pricing-check" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                Custom SLA &amp; security review
-              </li>
-            </ul>
-            <div class="pricing-card-cta">
-              <a href="contact.html#sales" class="pricing-cta-link">Contact Sales</a>
-            </div>
-          </div>
-
-        </div>
-
-        <p class="pricing-note">
-          Beta offices receive complimentary access during the launch program.&nbsp;
-          <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank">Apply for beta access &rarr;</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════
          CTA BAND
     ══════════════════════════════════════════════ -->
-    <section class="svc-cta-band">
+      <section class="svc-cta-band">
+        <div class="container">
+          <div class="svc-cta-band-inner">
+            <h2>Ready to Recover What's Yours?</h2>
+            <p>
+              Join 500+ dental practices and see exactly how much revenue you're
+              leaving on the table, before it becomes a write off.
+            </p>
+            <div class="svc-cta-band-actions">
+              <a
+                href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+                target="_blank"
+                class="svc-cta-btn-white"
+              >
+                Book a Demo
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="contact.html" class="svc-cta-btn-outline-white"
+                >Contact Sales</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <div class="svc-cta-band-inner">
-          <h2>Ready to Recover What's Yours?</h2>
-          <p>Join 500+ dental practices and see exactly how much revenue you're leaving on the table, before it becomes a write off.</p>
-          <div class="svc-cta-band-actions">
-            <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="svc-cta-btn-white">
-              Book a Demo
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">
+              <img
+                src="../images/Grayscale Transparent.png"
+                alt="Elite Dental Force"
+                width="2229"
+                height="933"
+                loading="lazy"
+              />
             </a>
-            <a href="contact.html" class="svc-cta-btn-outline-white">Contact Sales</a>
+            <p>
+              We built EDiFi because dental billing was never designed to work
+              for the practice. We are fixing that.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-heading">Platform</h5>
+            <ul class="footer-links">
+              <li><a href="platform.html">Overview</a></li>
+              <li><a href="edifi.html">EDiFi Software</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="revnet.html">RevNet</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-heading">Resources</h5>
+            <ul class="footer-links">
+              <li><a href="resources/blog.html">Blog</a></li>
+              <li><a href="resources/podcast.html">Podcast</a></li>
+              <li><a href="resources/webinars.html">Webinars</a></li>
+              <li>
+                <a href="dental-revenue-intelligence.html"
+                  >What is Dental Revenue Intelligence?</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-heading">Company</h5>
+            <ul class="footer-links">
+              <li><a href="company.html">About Us</a></li>
+              <li><a href="company/security.html">Security</a></li>
+              <li><a href="company/faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="footer-heading">Contact</h5>
+            <ul class="footer-links">
+              <li><a href="contact.html#sales">Sales</a></li>
+              <li><a href="contact.html#support">Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Elite Dental Force Inc. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/company/elitedentalforce"
+              aria-label="Elite Dental Force on LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/elitedentalforce"
+              aria-label="Elite Dental Force on Facebook"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/elitedentalforce"
+              aria-label="Elite Dental Force on Instagram"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.youtube.com/@elitedentalforceteam"
+              aria-label="Elite Dental Force on YouTube"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"
+                /></svg
+            ></a>
+            <a
+              href="https://x.com/EliteDentalForc"
+              aria-label="Elite Dental Force on X"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg
+            ></a>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="logo">
-            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy">
-          </a>
-          <p>The infrastructure leader in dental revenue intelligence.</p>
-        </div>
-
-        <div class="footer-column">
-          <h5 class="footer-heading">Platform</h5>
-          <ul class="footer-links">
-            <li><a href="platform.html">Overview</a></li>
-            <li><a href="edifi.html">EDiFi Software</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="revnet.html">RevNet</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5 class="footer-heading">Resources</h5>
-          <ul class="footer-links">
-            <li><a href="resources/blog.html">Blog</a></li>
-            <li><a href="resources/podcast.html">Podcast</a></li>
-            <li><a href="resources/webinars.html">Webinars</a></li>
-            <li><a href="dental-revenue-intelligence.html">What is Dental Revenue Intelligence?</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5 class="footer-heading">Company</h5>
-          <ul class="footer-links">
-            <li><a href="company.html">About Us</a></li>
-            <li><a href="company/security.html">Security</a></li>
-            <li><a href="company/faq.html">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h5 class="footer-heading">Contact</h5>
-          <ul class="footer-links">
-            <li><a href="contact.html#sales">Sales</a></li>
-            <li><a href="contact.html#support">Support</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Elite Dental Force Inc. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="terms.html">Terms of Service</a>
-          <a href="privacy.html">Privacy Policy</a>
-        </div>
-      <div class="social-links">
-          <a href="https://www.linkedin.com/company/elitedentalforce" aria-label="Elite Dental Force on LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://www.facebook.com/elitedentalforce" aria-label="Elite Dental Force on Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.instagram.com/elitedentalforce" aria-label="Elite Dental Force on Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://www.youtube.com/@elitedentalforceteam" aria-label="Elite Dental Force on YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
-          <a href="https://x.com/EliteDentalForc" aria-label="Elite Dental Force on X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-  <script>
-    // Spotlight card mouse tracking
-    (function() {
-      var cards = document.querySelectorAll('.seg-card, .svc-card, .pricing-card');
-      cards.forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
-          var r = card.getBoundingClientRect();
-          card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
-          card.style.setProperty('--mouse-y', (e.clientY - r.top) + 'px');
+    <script src="../js/main.js"></script>
+    <script>
+      // Spotlight card mouse tracking
+      (function () {
+        var cards = document.querySelectorAll(
+          ".seg-card, .svc-card, .pricing-card",
+        );
+        cards.forEach(function (card) {
+          card.addEventListener("mousemove", function (e) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty("--mouse-x", e.clientX - r.left + "px");
+            card.style.setProperty("--mouse-y", e.clientY - r.top + "px");
+          });
         });
-      });
-    })();
-  </script>
-  <script src="../js/tracking.js" defer></script>
-  <script src="../js/booking-widget.js?v=20260610" defer></script>
-  <script src="../js/cookie-consent.js" defer></script>
-  <script src="../js/booking-modal.js?v=20260610" defer></script>
-  <script src="../js/monitoring.js" defer></script>
-</body>
+      })();
+    </script>
+    <script src="../js/tracking.js" defer></script>
+    <script src="../js/booking-widget.js?v=20260610" defer></script>
+    <script src="../js/cookie-consent.js" defer></script>
+    <script src="../js/booking-modal.js?v=20260610" defer></script>
+    <script src="../js/monitoring.js" defer></script>
+  </body>
 </html>
