@@ -737,8 +737,9 @@
           </h1>
 
           <p class="es-hero-sub">
-            Eligibility intelligence built to help dental teams verify benefits
-            earlier, reduce surprises, and move closer to clean-claim workflows.
+            Patient benefits pulled directly from Open Dental and verified
+            before they walk in. Runs automatically every 24 hours. No manual
+            work from your team.
           </p>
 
           <div class="es-hero-actions">
@@ -769,7 +770,7 @@
         <div class="container">
           <p class="es-label">The Problem</p>
           <h2 class="es-title" id="es-problem-heading">
-            Eligibility Is Still Too Hard to Trust
+            Eligibility Verification Has Not Changed in 15 Years
           </h2>
           <p class="es-body">
             Most dental offices verify eligibility the same way they did fifteen
@@ -887,13 +888,14 @@
               <p class="es-label">What It Does</p>
               <h2 class="es-title" id="es-features-heading">
                 Eligibility Intelligence<br />
-                <span>Built Around the Appointment</span>
+                <span>Built Around Open Dental</span>
               </h2>
               <p class="es-body" style="margin-bottom: 36px">
-                EDiFi Eligibility Standalone organizes eligibility work around
-                the appointment schedule rather than the billing queue. The goal
-                is to surface relevant benefit information before the patient
-                arrives, not after.
+                EDiFi Eligibility Standalone reads directly from Open Dental,
+                pulls your appointment schedule, and surfaces benefit data for
+                every patient before the visit. No manual triggers. No portal
+                logins. The desktop agent runs in the background and updates
+                every 24 hours.
               </p>
 
               <div class="es-feature-list" role="list">
@@ -912,8 +914,9 @@
                   </div>
                   <div class="es-feature-text">
                     <strong>Appointment-driven eligibility workflow</strong>
-                    Eligibility checks organized by the office schedule, not a
-                    manual trigger list.
+                    EDiFi Connect installs on the machine running Open Dental
+                    and reads today's schedule plus the next two days
+                    automatically. No staff action required.
                   </div>
                 </div>
 
@@ -932,8 +935,9 @@
                   </div>
                   <div class="es-feature-text">
                     <strong>Benefit readiness view</strong>
-                    See which patients on the schedule have verified benefit
-                    information and which need attention before the visit.
+                    Each patient on the schedule gets a readiness score, a
+                    confidence rating, and a data source badge showing exactly
+                    where the information came from.
                   </div>
                 </div>
 
@@ -952,8 +956,9 @@
                   </div>
                   <div class="es-feature-text">
                     <strong>Payer and plan visibility</strong>
-                    Surface available plan details, coverage type, and
-                    coordination of benefits information in one view.
+                    Coverage percentages by category (Preventive, Diagnostic,
+                    Basic, Major), annual maximum remaining, and coordination of
+                    benefits flags.
                   </div>
                 </div>
 
@@ -971,9 +976,33 @@
                     </svg>
                   </div>
                   <div class="es-feature-text">
-                    <strong>Historical usage insights</strong>
-                    Where available, surface benefit usage history to support
-                    treatment planning conversations.
+                    <strong>Coverage from claims history</strong>
+                    Pulls 12 months of actual paid claim records from Open
+                    Dental's claimprocs table and derives real effective
+                    coverage percentages from them. In the pilot, 11 of 13
+                    scheduled patients had enough claims history to surface
+                    coverage without any payer portal call.
+                  </div>
+                </div>
+
+                <div class="es-feature-item" role="listitem">
+                  <div class="es-feature-check" aria-hidden="true">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="es-feature-text">
+                    <strong>Frequency limitations</strong>
+                    Exam, bitewing, filling, crown, and SRP frequency limits
+                    surfaced per patient from Open Dental benefit data. Know
+                    what is remaining before the appointment.
                   </div>
                 </div>
 
@@ -992,8 +1021,9 @@
                   </div>
                   <div class="es-feature-text">
                     <strong>Eligibility explanation layer</strong>
-                    Instead of hiding uncertainty, surface confidence levels,
-                    data gaps, and what the office should verify manually.
+                    Confidence scores (0 to 100), completeness scores, and
+                    source badges on every data point so your team knows what to
+                    trust and what to verify.
                   </div>
                 </div>
 
@@ -1026,15 +1056,16 @@
               <div class="es-callout" style="margin-bottom: 24px">
                 <p class="es-callout-label">Current Integration</p>
                 <p>
-                  EDiFi Eligibility Standalone is currently being validated
-                  through a focused Open Dental pilot workflow. The pilot is
-                  testing the appointment-driven sync path, benefit data
-                  accuracy, and front-office usability.
+                  EDiFi Eligibility Standalone is in active production pilot
+                  with an Open Dental practice in Utah. The pilot has validated:
+                  automatic appointment sync, claimprocs-based coverage
+                  calculation, frequency limitation surfacing, patient photos,
+                  and fee schedule reads. A BAA is in place with the pilot
+                  office.
                 </p>
                 <p>
-                  Broader PMS expansion is part of the product roadmap. EDF has
-                  not committed to specific timelines or additional integrations
-                  at this stage.
+                  Broader PMS expansion is on the roadmap after Open Dental
+                  validation is complete.
                 </p>
               </div>
 
@@ -1089,14 +1120,15 @@
               Part of a Larger Roadmap
             </p>
             <h2 id="es-bridge-heading">
-              The First Step in the EDiFi Revenue Roadmap
+              Eligibility Is Where Clean Claims Begin
             </h2>
             <p>
-              EDiFi Eligibility Standalone is the first focused release from the
-              broader EDiFi revenue intelligence platform. Once eligibility is
-              validated and refined through pilot, EDF will expand into
+              Getting eligibility right before the patient arrives is what
+              prevents denials, billing surprises, and write-offs downstream.
+              EDiFi Eligibility Standalone is the first product EDF is
+              releasing. Once eligibility is solid, the platform expands into
               clean-claim workflows, payment audit, denial intelligence, and
-              full enterprise operations.
+              full enterprise revenue operations.
             </p>
             <a href="edifi.html" class="es-bridge-link">
               Explore the full EDiFi Enterprise platform
@@ -1320,8 +1352,8 @@
             Get Early Access to<br />EDiFi Eligibility Standalone
           </h2>
           <p>
-            Early access slots are limited to practices actively working with
-            Open Dental. If that is you, reach out now.
+            Early access is limited to Open Dental practices. We will show you
+            what EDiFi finds in your data before you commit to anything.
           </p>
           <div class="es-cta-actions">
             <a href="contact.html#sales" class="btn-es-primary">
