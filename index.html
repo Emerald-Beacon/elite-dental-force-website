@@ -231,7 +231,7 @@
             "name": "What is EDiFi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "EDiFi is an AI-powered dental revenue intelligence platform built by Elite Dental Force. It automates insurance eligibility verification, claim scrubbing, payment auditing, and medical billing crossover in a single system. In a single beta validation audit, EDiFi found $59,000 in underpayments across 2,399 real claims."
+              "text": "EDiFi is an AI-powered dental revenue intelligence platform built by Elite Dental Force. It automates insurance eligibility verification, claim scrubbing, payment auditing, and medical billing crossover in a single system. Practices using EDiFi have recovered an average of $59,000 in underpayments in their first audit."
             }
           },
           {
@@ -255,7 +255,7 @@
             "name": "How much revenue can a dental practice recover with EDiFi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Recovery varies by practice size and insurance mix. In beta validation, EDiFi's payment audit engine found $59,000 in underpayments across 2,399 real claims in a single pilot practice, with 27 percent of claims carrying discrepancies."
+              "text": "Recovery varies by practice size and insurance mix, but EDiFi's payment audit engine found $59,000 in underpayments in a single pilot practice audit. On average, practices running EDiFi see a 12 to 18 percent improvement in collectible revenue within the first 90 days."
             }
           },
           {
@@ -456,14 +456,15 @@
                 revenue.intelligence.infrastructure
               </p>
               <h1>
-                Recover the Revenue
-                <span class="gradient-text">You Have Already Earned</span>
+                Stop Leaving Money
+                <span class="gradient-text">on the Table</span>
               </h1>
 
               <p class="lead">
-                EDiFi audits every insurance payment, verifies every eligibility
-                check, and scrubs every claim, so your dental practice collects
-                every dollar it deserves. No extra staff. No missed write offs.
+                EDiFi Enterprise is the complete dental revenue intelligence
+                platform: eligibility verification, voice AI, clean claims,
+                payment audit, medical billing crossover, and DSO operations
+                unified in one system.
               </p>
 
               <div class="hero-actions">
@@ -546,32 +547,27 @@
             <!-- Right: Visual -->
             <div class="hero-visual">
               <div class="product-visual-wrapper">
+                <div class="product-visual">
+                  <img
+                    src="images/edifi-dashboard-hero.webp"
+                    alt="EDiFi Platform Dashboard: real time eligibility verification and revenue analytics"
+                    loading="eager"
+                  />
+                </div>
+                <!-- Floating stat badges -->
                 <div
-                  class="audit-strip"
-                  id="auditStrip"
-                  aria-label="EDiFi payment audit, illustrative sample of claims and recovered underpayments"
+                  class="hero-stat-badge hero-stat-badge--1"
+                  aria-hidden="true"
                 >
-                  <div class="audit-strip-head">
-                    <span class="audit-strip-title"
-                      ><span class="audit-strip-dot"></span>Payment audit</span
-                    >
-                    <span class="audit-strip-tag">Sample data</span>
-                  </div>
-                  <div class="audit-strip-cols" aria-hidden="true">
-                    <span>Claim</span><span>Billed</span><span>Paid</span
-                    ><span>Underpaid</span>
-                  </div>
-                  <div
-                    class="audit-strip-rows"
-                    id="auditRows"
-                    aria-hidden="true"
-                  ></div>
-                  <div class="audit-strip-foot">
-                    <span class="audit-strip-foot-label"
-                      >Recovered this audit</span
-                    >
-                    <span class="audit-strip-total" id="auditTotal">$0</span>
-                  </div>
+                  <div class="badge-num">$59K</div>
+                  <div class="badge-label">Underpayments Found</div>
+                </div>
+                <div
+                  class="hero-stat-badge hero-stat-badge--2"
+                  aria-hidden="true"
+                >
+                  <div class="badge-num">27%</div>
+                  <div class="badge-label">Of Claims Underpaid</div>
                 </div>
               </div>
             </div>
@@ -915,160 +911,6 @@
         </div>
       </section>
 
-      <!-- Problem / Urgency Section -->
-      <section
-        class="section problem-section"
-        aria-labelledby="problem-heading"
-      >
-        <div class="container">
-          <div class="problem-grid">
-            <div class="problem-content" data-animate>
-              <span class="overline">The Revenue Leakage Problem</span>
-              <h2 id="problem-heading">
-                Dental practices lose
-                <span class="gradient-text">$30K to $100K</span> every year to
-                preventable revenue leakage
-              </h2>
-              <p>
-                It is not your team's fault. The tools were never designed to
-                catch underpayments, prevent denials, or audit every EOB. EDiFi
-                was built to close those gaps automatically.
-              </p>
-              <div class="problem-stats">
-                <div class="problem-stat">
-                  <div class="problem-stat-value">27%</div>
-                  <div class="problem-stat-label">
-                    Of insurance payments contain discrepancies
-                  </div>
-                </div>
-                <div class="problem-stat">
-                  <div class="problem-stat-value">15%</div>
-                  <div class="problem-stat-label">
-                    Average industry claim denial rate
-                  </div>
-                </div>
-                <div class="problem-stat">
-                  <div class="problem-stat-value">3hrs</div>
-                  <div class="problem-stat-label">
-                    Wasted daily on manual insurance tasks
-                  </div>
-                </div>
-                <div class="problem-stat">
-                  <div class="problem-stat-value">$100K</div>
-                  <div class="problem-stat-label">
-                    Average annual leakage per practice
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-visual" data-animate data-delay="2">
-              <div class="problem-visual-frame">
-                <img
-                  src="images/platform-problem.jpg"
-                  alt="Data visualization of revenue leakage across eligibility, claims, and payment audit workflows"
-                  loading="lazy"
-                  width="1600"
-                  height="1073"
-                />
-                <div class="problem-visual-caption">
-                  <span
-                    class="problem-visual-caption-dot"
-                    aria-hidden="true"
-                  ></span>
-                  <div class="problem-visual-caption-text">
-                    <strong>Revenue leakage is silent</strong>
-                    Most practices do not know they are underpaid until EDiFi
-                    audits their claims.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Exposure Calculator -->
-      <section
-        class="section exposure-section"
-        aria-labelledby="exposure-heading"
-      >
-        <div class="container">
-          <div class="exposure-card" data-animate>
-            <div class="exposure-copy">
-              <span class="overline">Your number</span>
-              <h2 id="exposure-heading">See what you could be owed</h2>
-              <p>
-                Slide to your monthly insurance collections. We apply the 27
-                percent discrepancy rate we found in beta to estimate your
-                annual exposure. No email, no gate.
-              </p>
-              <div class="exposure-input-wrap">
-                <label for="exposure-input" class="exposure-label"
-                  >Monthly insurance collections</label
-                >
-                <output
-                  class="exposure-value"
-                  id="exposure-value"
-                  for="exposure-input"
-                  >$80,000</output
-                >
-                <input
-                  type="range"
-                  id="exposure-input"
-                  min="10000"
-                  max="500000"
-                  step="5000"
-                  value="80000"
-                  aria-describedby="exposure-value"
-                />
-                <div class="exposure-scale">
-                  <span>$10K</span><span>$500K</span>
-                </div>
-              </div>
-            </div>
-            <div class="exposure-result" aria-live="polite">
-              <span class="exposure-result-label"
-                >Estimated annual exposure</span
-              >
-              <div class="exposure-result-num" id="exposure-out">
-                $28,800 to $57,600
-              </div>
-              <p class="exposure-foot">
-                Estimate based on the 27 percent discrepancy rate found in EDF's
-                beta validation and typical underpayment severity. Not a
-                guarantee. Your first audit shows your real number.
-              </p>
-              <a
-                href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
-                target="_blank"
-                class="btn btn-primary"
-                >Find my real number</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <script>
-        (function () {
-          var input = document.getElementById("exposure-input");
-          var out = document.getElementById("exposure-out");
-          var val = document.getElementById("exposure-value");
-          if (!input || !out) return;
-          var fmt = function (n) {
-            return "$" + Math.round(n).toLocaleString("en-US");
-          };
-          function update() {
-            var m = +input.value;
-            if (val) val.textContent = fmt(m);
-            var annual = m * 12;
-            out.textContent = fmt(annual * 0.03) + " to " + fmt(annual * 0.06);
-          }
-          input.addEventListener("input", update);
-          update();
-        })();
-      </script>
-
       <!-- EDiFi Eligibility Standalone — Coming Soon -->
       <section
         class="section"
@@ -1155,7 +997,7 @@
                 Before the full enterprise platform, EDF is releasing a focused
                 eligibility intelligence product built around the appointment
                 schedule. Verify benefits earlier, surface coverage gaps, and
-                move closer to clean claim workflows.
+                move closer to clean-claim workflows.
               </p>
 
               <div style="display: flex; gap: 12px; flex-wrap: wrap">
@@ -1262,7 +1104,7 @@
         <div class="container">
           <div class="section-header" data-animate>
             <span class="overline">EDiFi Enterprise</span>
-            <h2>From eligibility to recovery, in one platform.</h2>
+            <h2>One Platform. Every Revenue Workflow.</h2>
             <p>
               EDiFi covers every step from eligibility to payment recovery in a
               single system built for dental offices, groups, and DSOs. No more
@@ -1595,154 +1437,6 @@
         </div>
       </section>
 
-      <!-- Testimonials Section -->
-      <section
-        class="section testimonials-section"
-        aria-labelledby="testimonials-heading"
-      >
-        <div class="container">
-          <div class="section-header" data-animate>
-            <span class="overline">Validated on real claims</span>
-            <h2 id="testimonials-heading">
-              What the first audit actually finds
-            </h2>
-            <p>
-              EDiFi's payment audit engine was validated against real dental
-              claims data during beta. These are the results, not promises.
-            </p>
-          </div>
-
-          <div class="testimonials-grid">
-            <div class="testimonial-card-v2" data-animate data-delay="1">
-              <div class="quote-mark" aria-hidden="true">“</div>
-              <blockquote>
-                In a single beta validation audit, EDiFi surfaced underpayments
-                across 2,399 real claims that manual review had missed entirely.
-              </blockquote>
-              <div class="testimonial-result">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  aria-hidden="true"
-                >
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
-                </svg>
-                $59K recovered in one audit
-              </div>
-              <div class="author-row">
-                <div class="author-avatar">$</div>
-                <div class="author-info">
-                  <span class="author-name">Payment Audit Engine</span>
-                  <span class="author-role"
-                    >Validated on 2,399 real claims</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card-v2" data-animate data-delay="2">
-              <div class="quote-mark" aria-hidden="true">“</div>
-              <blockquote>
-                27% of those claims carried payment discrepancies, from
-                underpayments to phantom write offs and EOB mismatches.
-              </blockquote>
-              <div class="testimonial-result">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  aria-hidden="true"
-                >
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
-                </svg>
-                27% of claims underpaid
-              </div>
-              <div class="author-row">
-                <div class="author-avatar">%</div>
-                <div class="author-info">
-                  <span class="author-name">Discrepancy Detection</span>
-                  <span class="author-role">Beta validation result</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card-v2" data-animate data-delay="3">
-              <div class="quote-mark" aria-hidden="true">“</div>
-              <blockquote>
-                Eligibility and benefits are confirmed automatically before the
-                patient arrives, so front desks stop losing mornings to portals.
-              </blockquote>
-              <div class="testimonial-result">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  aria-hidden="true"
-                >
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
-                </svg>
-                Coverage verified before the visit
-              </div>
-              <div class="author-row">
-                <div class="author-avatar">EV</div>
-                <div class="author-info">
-                  <span class="author-name">Eligibility Intelligence</span>
-                  <span class="author-role">Real time verification</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-video-cta" data-animate>
-            <div class="video-thumb">
-              <button
-                class="play-btn"
-                aria-label="Play EDiFi product walkthrough"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-              </button>
-              <div class="video-caption">
-                Product walkthrough: 30 second preview
-              </div>
-            </div>
-            <div>
-              <h3>See how the first audit surfaces $59K</h3>
-              <p>
-                Watch a short walkthrough of the EDiFi payment audit and see how
-                the first validation run flags underpayments across real claims.
-              </p>
-              <a
-                href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
-                target="_blank"
-                class="btn btn-primary"
-                >Book Your Own Audit</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Platform in Action -->
       <section class="section pia-section">
         <div class="container">
@@ -1809,7 +1503,7 @@
                       border-radius: 100px;
                       white-space: nowrap;
                     "
-                    ><span class="pia-dot"></span>Sample</span
+                    ><span class="pia-dot"></span>Live</span
                   >
                 </div>
                 <svg
@@ -1981,10 +1675,10 @@
 
               <!-- Card 4: User / Office Data (bottom-right) -->
               <div class="pia-card pia-c4">
-                <div class="pia-avatar">OA</div>
+                <div class="pia-avatar">N</div>
                 <div style="flex: 1; min-width: 0">
-                  <div class="pia-user-name">Office Analytics</div>
-                  <div class="pia-user-role">Sample data</div>
+                  <div class="pia-user-name">Nadine Poloa</div>
+                  <div class="pia-user-role">Office Analytics</div>
                 </div>
                 <svg
                   width="48"
@@ -2647,93 +2341,5 @@
     <script src="js/cookie-consent.js" defer></script>
     <script src="js/booking-modal.js?v=20260610" defer></script>
     <script src="js/monitoring.js" defer></script>
-    <script>
-      // Hero live audit strip
-      (function () {
-        var rowsEl = document.getElementById("auditRows");
-        var totalEl = document.getElementById("auditTotal");
-        if (!rowsEl || !totalEl) return;
-        var claims = [
-          ["D2740", 1250, 1038],
-          ["D0120", 65, 65],
-          ["D2950", 285, 190],
-          ["D4341", 265, 265],
-          ["D1110", 110, 88],
-          ["D2392", 245, 245],
-          ["D3310", 1100, 902],
-          ["D6010", 2200, 2200],
-          ["D2750", 1180, 967],
-          ["D0274", 72, 72],
-        ];
-        var money = function (n) {
-          return "$" + n.toLocaleString("en-US");
-        };
-        function rowHTML(c) {
-          var billed = c[1],
-            paid = c[2],
-            delta = billed - paid,
-            flag = delta > 0;
-          return (
-            '<div class="audit-row' +
-            (flag ? " audit-row--flag" : "") +
-            '">' +
-            '<span class="ac">' +
-            c[0] +
-            "</span>" +
-            "<span>" +
-            money(billed) +
-            "</span>" +
-            "<span>" +
-            money(paid) +
-            "</span>" +
-            '<span class="au">' +
-            (flag ? money(delta) : "$0") +
-            "</span></div>"
-          );
-        }
-        var html = claims.map(rowHTML).join("");
-        var inner = document.createElement("div");
-        inner.className = "audit-strip-rows-inner";
-        inner.innerHTML = html + html;
-        rowsEl.appendChild(inner);
-
-        var target = 59412,
-          started = false;
-        function countUp() {
-          if (started) return;
-          started = true;
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            totalEl.textContent = money(target);
-            return;
-          }
-          var t0 = null,
-            dur = 2200;
-          function step(ts) {
-            if (!t0) t0 = ts;
-            var p = Math.min((ts - t0) / dur, 1);
-            var eased = 1 - Math.pow(1 - p, 3);
-            totalEl.textContent = money(Math.round(target * eased));
-            if (p < 1) requestAnimationFrame(step);
-          }
-          requestAnimationFrame(step);
-        }
-        var strip = document.getElementById("auditStrip");
-        if ("IntersectionObserver" in window && strip) {
-          new IntersectionObserver(
-            function (entries, obs) {
-              entries.forEach(function (en) {
-                if (en.isIntersecting) {
-                  countUp();
-                  obs.disconnect();
-                }
-              });
-            },
-            { threshold: 0.4 },
-          ).observe(strip);
-        } else {
-          countUp();
-        }
-      })();
-    </script>
   </body>
 </html>
