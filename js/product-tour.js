@@ -12,6 +12,7 @@
     const dialog = document.createElement('dialog');
     active = dialog;
     dialog.className = 'product-tour-dialog';
+    dialog.setAttribute('aria-modal', 'true');
     dialog.setAttribute('aria-labelledby', 'product-tour-title');
     dialog.setAttribute('aria-describedby', 'product-tour-note');
     const header = document.createElement('div');
