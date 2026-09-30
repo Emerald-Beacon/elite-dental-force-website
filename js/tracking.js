@@ -9,6 +9,7 @@
 
   // ─── Configuration ───────────────────────────────────────────────────────
   const GTM_ID = 'GTM-MQJKZLMC'; // ← REPLACE with your GTM container ID
+  window.dataLayer = window.dataLayer || [];
 
   // ─── Google Tag Manager Install ──────────────────────────────────────────
   function installGTM(id) {
@@ -18,6 +19,52 @@
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
     document.head.appendChild(s);
+  }
+
+  function deferGTM() {
+    var started = false, idle, timer, deadline, observer, frame;
+    var interactions = ['pointerdown', 'keydown', 'touchstart', 'wheel', 'click'];
+    function start() {
+      if (started) return;
+      started = true;
+      window.removeEventListener('load', afterLoad);
+      interactions.forEach(function (name) { window.removeEventListener(name, start); });
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+      clearTimeout(timer);
+      clearTimeout(deadline);
+      observer?.disconnect();
+      cancelAnimationFrame(frame);
+      installGTM(GTM_ID);
+    }
+    function schedule() {
+      if (started) return;
+      if ('requestIdleCallback' in window) idle = window.requestIdleCallback(start, { timeout: 3000 });
+      else timer = setTimeout(start, 0);
+    }
+    function afterLoad() {
+      if (started) return;
+      deadline = setTimeout(start, 5000);
+      var image = document.querySelector('[data-home-motion] .product-visual img');
+      if (!image) return schedule();
+      if (window.PerformanceObserver?.supportedEntryTypes?.includes('largest-contentful-paint')) {
+        observer = new PerformanceObserver(function (list) {
+          if (!list.getEntries().some(function (entry) { return entry.element === image; })) return;
+          observer.disconnect();
+          schedule();
+        });
+        observer.observe({ type: 'largest-contentful-paint', buffered: true });
+      } else {
+        image.decode().catch(function () {}).then(function () {
+          if (started) return;
+          frame = requestAnimationFrame(function () {
+            frame = requestAnimationFrame(schedule);
+          });
+        });
+      }
+    }
+    interactions.forEach(function (name) { window.addEventListener(name, start, { passive: true }); });
+    if (document.readyState === 'complete') afterLoad();
+    else window.addEventListener('load', afterLoad, { once: true });
   }
 
   // ─── Push to dataLayer (safe wrapper) ────────────────────────────────────
@@ -125,7 +172,7 @@
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────
-  installGTM(GTM_ID);
+  deferGTM();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
