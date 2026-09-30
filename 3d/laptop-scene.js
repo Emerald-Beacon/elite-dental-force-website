@@ -1,5 +1,7 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js';
 
+const yieldTask = () => new Promise(resolve => setTimeout(resolve, 0));
+
 export async function createLaptopScene({ canvas, textureUrl }) {
   // Inline procedural helpers keep all runtime library requests on cdnjs.
   class RoundedBoxGeometry extends THREE.ExtrudeGeometry {
@@ -53,6 +55,7 @@ export async function createLaptopScene({ canvas, textureUrl }) {
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.12;
   try {
+    await yieldTask();
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(34, 1, .05, 100);
     const pmrem = new THREE.PMREMGenerator(renderer);
@@ -61,6 +64,7 @@ export async function createLaptopScene({ canvas, textureUrl }) {
     scene.environment = environment.texture;
     room.dispose();
     pmrem.dispose();
+    await yieldTask();
     scene.add(new THREE.HemisphereLight(0xe5e7ef, 0x030139, .4));
     function light(color, intensity, x, y, z) {
       const source = new THREE.DirectionalLight(color, intensity);
@@ -107,6 +111,7 @@ export async function createLaptopScene({ canvas, textureUrl }) {
     box(layers.base, 3.34, .15, 2.22, .075, aluminum, 0, -.008);
     box(layers.deck, 3.23, .007, 2.1, .06, aluminum, 0, .068);
     box(layers.deck, 2.94, .009, 1.19, .035, black, 0, .073, -.32);
+    await yieldTask();
     const rows = [
       ['esc', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', '●'],
       ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', ['delete', 1.7]],
@@ -150,6 +155,7 @@ export async function createLaptopScene({ canvas, textureUrl }) {
     legends.rotation.x = -Math.PI / 2;
     legends.position.set(0, .094, -.32);
     layers.deck.add(legends);
+    await yieldTask();
     const trackpadMaterial = new THREE.MeshPhysicalMaterial({ color: 0x383b42, metalness: .35, roughness: .24, clearcoat: mobile ? 0 : .85, clearcoatRoughness: .12 });
     box(layers.deck, 1.29, .002, .64, .028, black, 0, .073, .67);
     box(layers.deck, 1.276, .002, .626, .024, trackpadMaterial, 0, .074, .67);
@@ -197,6 +203,7 @@ export async function createLaptopScene({ canvas, textureUrl }) {
     const webcam = new THREE.Mesh(new THREE.SphereGeometry(.012, 8, 6), black);
     webcam.position.set(0, 2.015, -1.286);
     layers.display.add(webcam);
+    await yieldTask();
     const shadowCanvas = document.createElement('canvas');
     shadowCanvas.width = shadowCanvas.height = 128;
     const shadowContext = shadowCanvas.getContext('2d');
@@ -316,7 +323,11 @@ export async function createLaptopScene({ canvas, textureUrl }) {
       renderer.dispose();
       renderer.forceContextLoss();
     }
+    await yieldTask();
+    await renderer.compileAsync(scene, camera);
+    await yieldTask();
     resize();
+    await yieldTask();
     return { setProgress, resize, dispose };
   } catch (error) {
     screenTexture.dispose();
@@ -429,20 +440,25 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   const badges = [...hero.querySelectorAll('.hero-stat-badge')];
   const leader = hero.querySelector('.hero-leader');
   const path = leader.querySelector('path'), dot = leader.querySelector('circle');
-  let scene, trigger, timeline, observer, releaseRuntime, stopped = false;
+  let scene, trigger, timeline, pinRefresh, observer, releaseRuntime, stopped = false;
   let resizing = false;
   let visible = true, lastProgress = 0, slowFrames = 0;
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
   const scrollStyle = document.documentElement.style.scrollBehavior;
+  const killPin = () => {
+    // Timeline pins schedule an initial delayed update that trigger.kill() leaves alive.
+    if (pinRefresh) window.gsap.killTweensOf(pinRefresh);
+    trigger?.kill(true);
+    timeline?.kill();
+  };
   function restore(reason = 'fallback', toPoster = false) {
     if (stopped) return;
     stopped = true;
     const distance = trigger ? Math.max(0, Math.min(scrollY - trigger.start, trigger.end - trigger.start)) : 0;
     listeners.abort();
     observer?.disconnect();
-    trigger?.kill(true);
-    timeline?.kill();
+    killPin();
     scene?.dispose();
     releaseRuntime?.();
     document.documentElement.style.scrollBehavior = scrollStyle;
@@ -512,6 +528,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
       trigger = ScrollTrigger.create({ trigger: hero, pin: stage, pinSpacing: true,
         start: () => hero.getBoundingClientRect().top + scrollY + parseFloat(hero.style.getPropertyValue('--motion-top')) - header.offsetHeight - 12,
         end: () => `+=${innerHeight * 1.8}`, animation: timeline, scrub: .5 });
+      pinRefresh = trigger.update;
     };
     createPin();
     canvas.addEventListener('laptopframe', update, options);
@@ -525,8 +542,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
       const beforePin = Math.max(0, trigger.start - scrollY), afterPin = Math.max(0, scrollY - trigger.end);
       resizing = true;
       try {
-        trigger.kill(true);
-        timeline.kill();
+        killPin();
         scrollTo({ top: 0, behavior: 'instant' });
         measurePadding();
         if (stage.offsetHeight > innerHeight - header.offsetHeight - 24) return restore('short-viewport', true);

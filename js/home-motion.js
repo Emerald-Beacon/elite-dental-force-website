@@ -14,8 +14,15 @@
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       if (!eligible() || !atTop()) return;
       const canvas = hero.querySelector('.hero-laptop');
-      gl = canvas.getContext('webgl2', { alpha: true, antialias: true }) || canvas.getContext('webgl', { alpha: true, antialias: true });
+      const attributes = { alpha: true, antialias: true, failIfMajorPerformanceCaveat: true };
+      gl = canvas.getContext('webgl2', attributes) || canvas.getContext('webgl', attributes);
       if (!gl) return;
+      const info = gl.getExtension('WEBGL_debug_renderer_info');
+      const renderer = info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);
+      if (/SwiftShader|llvmpipe|Software|Microsoft Basic Render/i.test(renderer)) {
+        release();
+        return;
+      }
       let expired = false;
       timeout = setTimeout(() => { expired = true; hero.dataset.motion = 'fallback'; release(); }, 8000);
       const module = await import('../3d/laptop-scene.js');

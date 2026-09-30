@@ -485,6 +485,14 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Ambient glow orbs — vibrant & dramatic */
+.hero-atmosphere {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+@media (min-width: 1025px) {
+  /* Pin spacing must not change the orbs' percentage and bottom anchors. */
+  .hero-atmosphere { height: 100vh; bottom: auto; }
+}
 .hero-orb {
   position: absolute; border-radius: var(--r-full);
   pointer-events: none; z-index: 0;
