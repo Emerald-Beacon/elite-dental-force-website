@@ -1,4 +1,5 @@
 (() => {
+  const ASSET_VERSION = '20260930b';
   const hero = document.querySelector('[data-home-motion]');
   if (!hero) return;
   const media = matchMedia('(min-width: 1025px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)');
@@ -25,7 +26,7 @@
       }
       let expired = false;
       timeout = setTimeout(() => { expired = true; hero.dataset.motion = 'fallback'; release(); }, 8000);
-      const module = await import('../3d/laptop-scene.js');
+      const module = await import(`../3d/laptop-scene.js?v=${ASSET_VERSION}`);
       clearTimeout(timeout);
       if (expired || !eligible() || !atTop()) {
         release();
