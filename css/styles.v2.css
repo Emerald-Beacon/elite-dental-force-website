@@ -2649,6 +2649,7 @@ body::before {
 #revenue-cta::before, #revenue-cta::after { display: none; }
 #revenue-cta > .container { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; text-align: left; gap: var(--s8); }
 #revenue-cta .cta-panel { position: relative; z-index: 1; padding: var(--s12); border: 1px solid var(--border-blue); border-radius: var(--r-xl); background: linear-gradient(135deg, var(--bg-card-hover), var(--bg-surface)); box-shadow: var(--shadow-card), inset 0 1px 0 var(--blue-glow); }
+#revenue-cta .cta-panel::after { content: ''; position: absolute; inset: -1px; border: 1px solid var(--blue); border-radius: inherit; box-shadow: 0 0 18px var(--blue-glow), 0 0 44px var(--blue-glow), inset 0 0 14px var(--blue-glow); opacity: .6; pointer-events: none; }
 #revenue-cta .cta-panel::before { content: ''; display: block; width: 7px; height: 7px; margin-bottom: var(--s8); background: var(--gold); transform: rotate(45deg); }
 #revenue-cta h2 { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.2; letter-spacing: -.04em; text-wrap: balance; }
 #revenue-cta p { font-size: var(--fs-base); line-height: 1.85; margin: 0 0 var(--s8); }
