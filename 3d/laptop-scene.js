@@ -441,6 +441,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   const leader = hero.querySelector('.hero-leader');
   const path = leader.querySelector('path'), dot = leader.querySelector('circle');
   let scene, trigger, timeline, pinRefresh, observer, releaseRuntime, stopped = false;
+  let reveal = [];
   let resizing = false;
   let visible = true, lastProgress = 0, slowFrames = 0;
   const listeners = new AbortController();
@@ -458,6 +459,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     const distance = trigger ? Math.max(0, Math.min(scrollY - trigger.start, trigger.end - trigger.start)) : 0;
     listeners.abort();
     observer?.disconnect();
+    reveal.forEach(animation => animation.cancel());
     killPin();
     scene?.dispose();
     releaseRuntime?.();
@@ -535,6 +537,10 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     hero.dataset.motion = 'ready';
     skip.hidden = false;
     scene.setProgress(0);
+    // Scripted animations survive ScrollTrigger reparenting the stage during refresh.
+    const fade = { duration: 650, easing: 'ease-in-out' };
+    reveal = [canvas.animate({ opacity: [0, 1] }, fade),
+      hero.querySelector('.product-visual img').animate({ opacity: [1, 0] }, fade)];
     const resize = () => {
       if (stopped || resizing) return;
       if (!eligible()) return restore('fallback', true);
