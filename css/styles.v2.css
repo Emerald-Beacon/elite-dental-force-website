@@ -2433,5 +2433,6 @@ body::before {
 .motion-ready .hero-feature .badge-num { font-size: 1.2rem; }
 .motion-ready .hero-stat-badge--1 { top: 20px; right: 12px; }
 .motion-ready .hero-stat-badge--2 { bottom: 40px; left: 12px; }
+.motion-separating .hero-stat-badge--1 { left: 12px; right: auto; }
 .motion-ready .hero-visual { isolation: isolate; }
 .hero.motion-ready { align-items: flex-start; min-height: 0; padding-top: var(--motion-top); padding-bottom: var(--motion-bottom); }

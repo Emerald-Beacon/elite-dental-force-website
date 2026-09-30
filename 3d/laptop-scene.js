@@ -326,15 +326,98 @@ export async function createLaptopScene({ canvas, textureUrl }) {
   }
 }
 
-function loadScript(url) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    const timer = setTimeout(() => { script.remove(); reject(new Error('Library timeout')); }, 8000);
-    script.onload = () => { clearTimeout(timer); resolve(); };
-    script.onerror = () => { clearTimeout(timer); script.remove(); reject(new Error('Library unavailable')); };
-    script.src = url;
-    document.head.append(script);
+const libraryLoads = new Map();
+const gsapUrl = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js';
+const triggerUrl = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js';
+let runtime;
+
+function loadScript(url, global) {
+  if (window[global]) return Promise.resolve();
+  if (libraryLoads.has(url)) return libraryLoads.get(url);
+  const promise = new Promise((resolve, reject) => {
+    const existing = [...document.scripts].find(script => script.src === url);
+    const script = existing || document.createElement('script');
+    const finish = error => {
+      clearTimeout(timer);
+      script.removeEventListener('load', loaded);
+      script.removeEventListener('error', failed);
+      if (error) { if (!existing) script.remove(); reject(error); }
+      else resolve();
+    };
+    const loaded = () => finish(window[global] ? null : new Error('Library unavailable'));
+    const failed = () => finish(new Error('Library unavailable'));
+    const timer = setTimeout(() => finish(new Error('Library timeout')), 8000);
+    script.addEventListener('load', loaded);
+    script.addEventListener('error', failed);
+    if (!existing) { script.src = url; document.head.append(script); }
   });
+  libraryLoads.set(url, promise);
+  promise.catch(() => libraryLoads.delete(url));
+  return promise;
+}
+
+async function acquireRuntime() {
+  if (!runtime) runtime = { users: 0, active: false, ownGsap: !window.gsap && ![...document.scripts].some(script => script.src === gsapUrl),
+    ownTrigger: !window.ScrollTrigger && ![...document.scripts].some(script => script.src === triggerUrl), cleanups: [] };
+  const shared = runtime;
+  shared.users++;
+  const release = () => {
+    if (--shared.users || !shared.active) return;
+    const { gsap, ScrollTrigger } = window;
+    // Never stop a preexisting plugin or another feature's triggers/ticker work.
+    if (shared.ownTrigger && ScrollTrigger.getAll().length === 0) {
+      ScrollTrigger.disable(true);
+      shared.cleanups.splice(0).reverse().forEach(cleanup => cleanup());
+      shared.active = false;
+      if (shared.ownGsap && gsap.globalTimeline.getChildren().length === 0 &&
+          gsap.ticker._listeners.every(listener => listener === gsap.updateRoot)) gsap.ticker.sleep();
+    }
+  };
+  try {
+    await loadScript(gsapUrl, 'gsap');
+    if (!shared.active) {
+      if (!shared.loading) shared.loading = (async () => {
+        const { gsap } = window;
+        const originalMedia = gsap.matchMedia, originalEvent = gsap.addEventListener, originalDelay = gsap.delayedCall;
+        let enabling = false;
+        const owned = () => shared.ownTrigger && (enabling || document.currentScript?.src === triggerUrl);
+        // 3.13 enable() adds orientation media, GSAP hooks and delayed calls without
+        // returning cleanup handles. Capture only registrations made by this plugin.
+        gsap.matchMedia = function (...args) {
+          if (!owned()) return originalMedia.apply(this, args);
+          return { add(query, setup) {
+            const media = matchMedia(query);
+            let undo;
+            const update = () => { undo?.(); undo = media.matches ? setup() : undefined; };
+            media.addEventListener('change', update);
+            update();
+            shared.cleanups.push(() => { media.removeEventListener('change', update); undo?.(); });
+            return this;
+          } };
+        };
+        gsap.addEventListener = function (name, callback) {
+          if (owned()) shared.cleanups.push(() => gsap.removeEventListener(name, callback));
+          return originalEvent.call(this, name, callback);
+        };
+        gsap.delayedCall = function (...args) {
+          const tween = originalDelay.apply(this, args);
+          if (owned()) shared.cleanups.push(() => tween.kill());
+          return tween;
+        };
+        try {
+          if (!window.ScrollTrigger) await loadScript(triggerUrl, 'ScrollTrigger');
+          else if (shared.ownTrigger) { enabling = true; window.ScrollTrigger.enable(); }
+          shared.active = true;
+        } finally {
+          gsap.matchMedia = originalMedia;
+          gsap.addEventListener = originalEvent;
+          gsap.delayedCall = originalDelay;
+        }
+      })().finally(() => { shared.loading = null; });
+      await shared.loading;
+    }
+    return release;
+  } catch (error) { release(); throw error; }
 }
 
 export async function mountHeroMotion(hero, eligible, atTop) {
@@ -346,33 +429,38 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   const badges = [...hero.querySelectorAll('.hero-stat-badge')];
   const leader = hero.querySelector('.hero-leader');
   const path = leader.querySelector('path'), dot = leader.querySelector('circle');
-  let scene, trigger, timeline, media, observer, stopped = false;
+  let scene, trigger, timeline, observer, releaseRuntime, stopped = false;
+  let resizing = false;
   let visible = true, lastProgress = 0, slowFrames = 0;
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
-  function restore(reason = 'fallback') {
+  const scrollStyle = document.documentElement.style.scrollBehavior;
+  function restore(reason = 'fallback', toPoster = false) {
     if (stopped) return;
     stopped = true;
     const distance = trigger ? Math.max(0, Math.min(scrollY - trigger.start, trigger.end - trigger.start)) : 0;
     listeners.abort();
     observer?.disconnect();
-    media?.revert();
     trigger?.kill(true);
     timeline?.kill();
     scene?.dispose();
+    releaseRuntime?.();
+    document.documentElement.style.scrollBehavior = scrollStyle;
     if (!scene) (canvas.getContext('webgl2') || canvas.getContext('webgl'))?.getExtension('WEBGL_lose_context')?.loseContext();
-    hero.classList.remove('motion-ready');
+    hero.classList.remove('motion-ready', 'motion-separating');
     hero.style.removeProperty('--motion-top');
     hero.style.removeProperty('--motion-bottom');
     hero.dataset.motion = reason;
     skip.hidden = true;
     leader.style.visibility = '';
     for (const badge of badges) badge.removeAttribute('style');
-    if (distance) scrollTo({ top: Math.max(0, scrollY - distance), behavior: 'instant' });
+    if (toPoster && trigger) scrollTo({ top: Math.max(0, visual.getBoundingClientRect().top + scrollY - header.offsetHeight - 12), behavior: 'instant' });
+    else if (distance) scrollTo({ top: Math.max(0, scrollY - distance), behavior: 'instant' });
   }
   function update({ detail: { progress, index, anchor } }) {
     hero.dataset.progress = progress.toFixed(5);
     const hold = progress < .28 || progress >= .88;
+    hero.classList.toggle('motion-separating', progress >= .12 && progress < .28);
     for (const [i, badge] of badges.entries()) {
       badge.style.visibility = hold ? (i < 2 ? 'visible' : 'hidden') : (i === index ? 'visible' : 'hidden');
       badge.style.transform = '';
@@ -390,6 +478,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     dot.setAttribute('cy', anchor.y);
   }
   const draw = p => {
+    if (resizing) return;
     lastProgress = p;
     if (!visible || document.hidden || stopped) return;
     const start = performance.now();
@@ -399,41 +488,67 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     if (slowFrames >= 30) restore('slow-renderer');
   };
   try {
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js');
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js');
-    if (!eligible() || !atTop() || !window.gsap || !window.ScrollTrigger) return restore();
+    document.documentElement.style.scrollBehavior = 'auto';
+    releaseRuntime = await acquireRuntime();
+    if (!eligible() || !atTop()) return restore();
     if (stage.offsetHeight > innerHeight - header.offsetHeight - 24) return restore('short-viewport');
     canvas.addEventListener('webglcontextlost', event => { event.preventDefault(); restore(); }, options);
     scene = await createLaptopScene({ canvas, textureUrl: 'images/motion/edifi-dashboard-v1.webp' });
     if (stopped || !eligible() || !atTop()) { scene.dispose(); return restore(); }
     const { gsap, ScrollTrigger } = window;
-    gsap.registerPlugin(ScrollTrigger);
-    const heroBounds = hero.getBoundingClientRect(), stageBounds = stage.getBoundingClientRect();
-    hero.style.setProperty('--motion-top', `${stageBounds.top - heroBounds.top}px`);
-    hero.style.setProperty('--motion-bottom', `${heroBounds.bottom - stageBounds.bottom}px`);
-    hero.classList.add('motion-ready');
-    media = gsap.matchMedia();
-    media.add('(min-width: 1025px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)', () => {
+    const measurePadding = () => {
+      hero.classList.remove('motion-ready');
+      hero.style.removeProperty('--motion-top');
+      hero.style.removeProperty('--motion-bottom');
+      const heroBounds = hero.getBoundingClientRect(), stageBounds = stage.getBoundingClientRect();
+      hero.style.setProperty('--motion-top', `${stageBounds.top - heroBounds.top}px`);
+      hero.style.setProperty('--motion-bottom', `${heroBounds.bottom - stageBounds.bottom}px`);
+      hero.classList.add('motion-ready');
+    };
+    measurePadding();
+    const createPin = () => {
       const state = { p: 0 };
       timeline = gsap.timeline({ paused: true }).to(state, { p: 1, duration: 1, ease: 'none', onUpdate: () => draw(state.p) });
-      trigger = ScrollTrigger.create({ trigger: stage, pin: stage, pinSpacing: true, start: () => `top top+=${header.offsetHeight + 12}`, end: () => `+=${innerHeight * 1.8}`, animation: timeline, scrub: .5, invalidateOnRefresh: true });
-      return () => { if (!stopped) queueMicrotask(() => restore()); };
-    });
+      trigger = ScrollTrigger.create({ trigger: hero, pin: stage, pinSpacing: true,
+        start: () => hero.getBoundingClientRect().top + scrollY + parseFloat(hero.style.getPropertyValue('--motion-top')) - header.offsetHeight - 12,
+        end: () => `+=${innerHeight * 1.8}`, animation: timeline, scrub: .5 });
+    };
+    createPin();
     canvas.addEventListener('laptopframe', update, options);
     hero.dataset.motion = 'ready';
     skip.hidden = false;
     scene.setProgress(0);
     const resize = () => {
-      if (!eligible() || stage.offsetHeight > innerHeight - header.offsetHeight - 24) return restore();
-      try { if (visible && !document.hidden) scene.resize(); }
-      catch { restore(); }
+      if (stopped || resizing) return;
+      if (!eligible()) return restore('fallback', true);
+      const progress = lastProgress;
+      const beforePin = Math.max(0, trigger.start - scrollY), afterPin = Math.max(0, scrollY - trigger.end);
+      resizing = true;
+      try {
+        trigger.kill(true);
+        timeline.kill();
+        scrollTo({ top: 0, behavior: 'instant' });
+        measurePadding();
+        if (stage.offsetHeight > innerHeight - header.offsetHeight - 24) return restore('short-viewport', true);
+        scene.resize();
+        createPin();
+        ScrollTrigger.refresh();
+        const position = afterPin ? trigger.end + afterPin : beforePin ? Math.max(0, trigger.start - beforePin) : trigger.start + progress * (trigger.end - trigger.start);
+        scrollTo({ top: position, behavior: 'instant' });
+        trigger.update();
+        trigger.getTween()?.pause();
+        timeline.progress(progress);
+      } catch { restore('fallback', true); }
+      finally { resizing = false; if (!stopped) draw(progress); }
     };
-    addEventListener('resize', resize, options);
+    addEventListener('resize', resize, { ...options, capture: true });
+    const media = matchMedia('(min-width: 1025px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)');
+    media.addEventListener('change', () => { if (!eligible()) restore('fallback', true); }, options);
     navigator.connection?.addEventListener('change', () => { if (!eligible()) restore(); }, options);
     addEventListener('offline', () => restore(), options);
     addEventListener('pagehide', () => restore(), options);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) draw(lastProgress); }, options);
-    observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (visible) { resize(); draw(lastProgress); } });
+    observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (visible && !stopped) { scene.resize(); draw(lastProgress); } });
     observer.observe(stage);
     skip.addEventListener('click', event => {
       event.preventDefault();
