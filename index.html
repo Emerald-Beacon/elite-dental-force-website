@@ -426,19 +426,14 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" data-home-motion>
         <!-- Ambient orbs -->
         <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
         <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
         <div class="hero-orb hero-orb--3" aria-hidden="true"></div>
         <div class="hero-orb hero-orb--4" aria-hidden="true"></div>
 
-        <!-- Canvas animation -->
-        <div class="hero-glass-animation" aria-hidden="true">
-          <canvas id="glassRippleCanvas"></canvas>
-        </div>
-
-        <div class="container">
+        <div class="container hero-stage">
           <div class="hero-split">
             <!-- Left: Copy -->
             <div class="hero-content">
@@ -554,6 +549,8 @@
 
             <!-- Right: Visual -->
             <div class="hero-visual">
+              <canvas class="hero-laptop" aria-hidden="true"></canvas>
+              <svg class="hero-leader" aria-hidden="true"><path /><circle r="3" /></svg>
               <div class="product-visual-wrapper">
                 <div class="product-visual">
                   <img
@@ -583,13 +580,23 @@
                   <div class="badge-label">Of Claims Underpaid</div>
                 </div>
               </div>
+              <div class="hero-stat-badge hero-feature" data-feature="eligibility" aria-hidden="true">
+                <div class="badge-num">ELIGIBILITY</div>
+                <div class="badge-label">VERIFIED BEFORE THE VISIT</div>
+              </div>
+              <div class="hero-stat-badge hero-feature" data-feature="claims" aria-hidden="true">
+                <div class="badge-num">CLAIMS</div>
+                <div class="badge-label">TRACKED END TO END</div>
+              </div>
+              <p class="hero-motion-description">Underpayments Found: $59K. Of Claims Underpaid: 27%. Eligibility: Verified Before the Visit. Claims: Tracked End to End.</p>
+              <a class="hero-skip" href="#after-hero" hidden>Skip animation</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Trust Bar -->
-      <section class="trust-bar" aria-label="PMS Integrations">
+      <section class="trust-bar" id="after-hero" tabindex="-1" aria-label="PMS Integrations">
         <div class="container">
           <p class="trust-bar-label">
             Integrates with leading dental practice management systems
@@ -2300,6 +2307,7 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/home-motion.js" defer></script>
     <script src="js/tracking.js" defer></script>
     <script src="js/ghl-forms.js?v=20260610" defer></script>
 
