@@ -1965,6 +1965,11 @@ body.menu-open { overflow: hidden; }
     left: 200%;
   }
 }
+.home-page .btn-primary::after { animation-name: home-shimmer-sweep; }
+@keyframes home-shimmer-sweep {
+  0% { transform: translateX(0); }
+  55%, 100% { transform: translateX(546%); }
+}
 
 /* === PIA: Platform in Action floating cards === */
 .pia-section {
