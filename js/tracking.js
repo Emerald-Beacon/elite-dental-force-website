@@ -22,7 +22,7 @@
   }
 
   function deferGTM() {
-    var started = false, idle, timer, deadline, observer, frame;
+    var started = false, idle, timer, deadline, observer;
     var interactions = ['pointerdown', 'keydown', 'touchstart', 'wheel', 'click'];
     function start() {
       if (started) return;
@@ -33,7 +33,6 @@
       clearTimeout(timer);
       clearTimeout(deadline);
       observer?.disconnect();
-      cancelAnimationFrame(frame);
       installGTM(GTM_ID);
     }
     function schedule() {
@@ -53,14 +52,9 @@
           schedule();
         });
         observer.observe({ type: 'largest-contentful-paint', buffered: true });
-      } else {
-        image.decode().catch(function () {}).then(function () {
-          if (started) return;
-          frame = requestAnimationFrame(function () {
-            frame = requestAnimationFrame(schedule);
-          });
-        });
       }
+      // Without a paint notification, decode and animation frames do not prove the hero is on screen:
+      // wait for the first interaction or the 5 second deadline set above.
     }
     interactions.forEach(function (name) { window.addEventListener(name, start, { passive: true }); });
     if (document.readyState === 'complete') afterLoad();
