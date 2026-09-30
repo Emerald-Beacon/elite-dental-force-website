@@ -449,14 +449,27 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     return active && active !== document.body && hero.contains(active) ? active : null;
   };
   // Rebuilding or removing the pin reparents the stage, which drops keyboard focus; put it back
-  // on the same control (or its nearest visible sibling) and keep it inside the viewport.
-  function revealFocus(element) {
-    if (!element?.isConnected) return;
+  // on the same control (or its nearest visible sibling) without moving the page.
+  function refocus(element) {
+    if (!element?.isConnected) return null;
     const target = element === skip && skip.hidden ? [...hero.querySelectorAll('.hero-actions a')].at(-1) : element;
     if (document.activeElement !== target) target.focus({ preventScroll: true });
+    return target;
+  }
+  function scrollIntoReach(target) {
     const top = header.offsetHeight + 12, box = target.getBoundingClientRect();
     const overflow = box.top < top ? box.top - top : box.bottom > innerHeight - 12 ? box.bottom - innerHeight + 12 : 0;
     if (overflow) scrollTo({ top: scrollY + overflow, behavior: 'instant' });
+  }
+  // Unpinned poster: geometry is final, so correct the scroll right away.
+  const revealFocus = element => { const target = refocus(element); if (target) scrollIntoReach(target); };
+  // Active pin: the pin restores its own scroll and progress, and mid rebuild rectangles are transient.
+  // Scroll only if the control is still out of view once the geometry has settled.
+  function settleFocus(element) {
+    const target = refocus(element);
+    if (target) requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (!stopped && !resizing && target.isConnected) scrollIntoReach(target);
+    }));
   }
   let resizing = false;
   let visible = true, lastProgress = 0, slowFrames = 0;
@@ -559,7 +572,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     skip.hidden = false;
     scene.setProgress(0);
     ScrollTrigger.refresh();
-    revealFocus(mountFocus);
+    settleFocus(mountFocus);
     // Scripted animations survive ScrollTrigger reparenting the stage during refresh.
     // The poster and first 3D frame differ in silhouette (measured overlap 0.44, best camera only 0.68),
     // so the window where both are visible is kept to 200ms; the badges ease over their own 650ms.
@@ -593,7 +606,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
         trigger.update();
         trigger.getTween()?.pause();
         timeline.progress(progress);
-        revealFocus(pendingFocus);
+        settleFocus(pendingFocus);
         pendingFocus = null;
       } catch { restore('fallback', true); }
       finally { resizing = false; pendingFocus = null; if (!stopped) draw(progress); }
