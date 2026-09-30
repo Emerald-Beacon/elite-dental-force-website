@@ -51,6 +51,9 @@
   const platform = document.querySelector('#enterprise-modules');
   if (!platform) return;
   const action = document.querySelector('#platform-action');
+  const workflow = document.querySelector('#revenue-workflow');
+  const steps = workflow?.querySelector('.workflow-steps');
+  const nodes = workflow ? [...workflow.querySelectorAll('.workflow-step')] : [];
   const cards = action?.querySelector('.pia-cards');
   const pointer = matchMedia('(hover: hover) and (pointer: fine)');
   const media = matchMedia('(min-width: 1025px) and (prefers-reduced-motion: no-preference)');
@@ -66,6 +69,12 @@
       if (section === action) {
         section.style.setProperty('--pointer-x', `${pointerX}deg`);
         section.style.setProperty('--pointer-y', `${pointerY}deg`);
+      }
+      if (section === workflow) {
+        const top = steps.getBoundingClientRect().top;
+        const fill = Math.max(0, Math.min(1, (innerHeight * .8 - top) / (innerHeight * .65)));
+        workflow.style.setProperty('--workflow-progress', fill);
+        nodes.forEach((node, index) => node.style.setProperty('--node-lit', fill >= index / 3 ? 1 : 0));
       }
     }
   };
@@ -94,6 +103,8 @@
     action?.style.removeProperty('--pointer-y');
     pointerX = 0;
     pointerY = 2;
+    workflow?.style.removeProperty('--workflow-progress');
+    nodes.forEach(node => node.style.removeProperty('--node-lit'));
   };
   const start = () => {
     stop();
@@ -124,6 +135,7 @@
       }
     });
     observer.observe(platform);
+    if (workflow) observer.observe(workflow);
     if (action) {
       observer.observe(action);
       cards.addEventListener('pointermove', move, { passive: true });

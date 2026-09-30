@@ -2595,3 +2595,33 @@ body::before {
   #platform-action .pia-bar-lbl { font-size: 11px; }
   #platform-action .pia-content .btn { max-width: 100%; font-size: var(--fs-sm); }
 }
+
+/* P4: an unpinned revenue timeline; only its highlight moves. */
+#revenue-workflow { background: var(--navy-deep); }
+#revenue-workflow::after { display: none; }
+#revenue-workflow .section-header { max-width: 960px; margin: 0 0 var(--s16); text-align: left; border-left: 1px solid var(--border-blue); padding-left: var(--s6); }
+#revenue-workflow h2 { font-size: clamp(2rem, 3.6vw, 3.5rem); line-height: 1.2; text-wrap: balance; }
+#revenue-workflow .section-header > p { font-size: var(--fs-base); max-width: 700px; line-height: 1.8; }
+#revenue-workflow .workflow-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+#revenue-workflow .workflow-steps::before, #revenue-workflow .workflow-steps::after { content: ''; display: block; position: absolute; top: 64px; left: 32px; right: calc(25% - 32px); height: 1px; background: var(--border-blue); z-index: 0; }
+#revenue-workflow .workflow-steps::after { background: var(--blue); transform: scaleX(var(--workflow-progress, 1)); transform-origin: left center; }
+#revenue-workflow .workflow-step { text-align: left; border-left: 1px solid var(--border-blue); padding: 0 var(--s6) var(--s4); }
+#revenue-workflow .workflow-step-head { align-items: flex-start; gap: var(--s3); margin-bottom: var(--s5); }
+#revenue-workflow .workflow-step-num { width: 40px; height: 40px; margin: 0 0 40px; justify-content: flex-start; background: none; border: 0; border-radius: 0; box-shadow: none; font-size: var(--fs-3xl); color: var(--blue); transition: none; transform: none; }
+#revenue-workflow .workflow-step-num::after { inset: auto; top: 56px; left: 0; width: 16px; height: 16px; border: 1px solid var(--blue); border-radius: 50%; background: var(--navy-deep); }
+#revenue-workflow .workflow-step-num::before { content: ''; position: absolute; top: 60px; left: 4px; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); opacity: var(--node-lit, 1); z-index: 1; }
+#revenue-workflow .workflow-step-icon { border-radius: var(--r-full); color: var(--blue); background: var(--bg-card-hover); border-color: var(--border-blue); }
+#revenue-workflow h4 { font-size: var(--fs-lg); min-height: 2.8em; line-height: 1.4; }
+#revenue-workflow .workflow-step p { line-height: 1.85; }
+@media (max-width: 1024px) {
+  #revenue-workflow .workflow-steps { grid-template-columns: 1fr 1fr; gap: var(--s10) 0; }
+  #revenue-workflow .workflow-steps::before, #revenue-workflow .workflow-steps::after, #revenue-workflow .workflow-step-num::before, #revenue-workflow .workflow-step-num::after { display: none; }
+  #revenue-workflow .workflow-step-head { flex-direction: row; align-items: center; justify-content: space-between; }
+  #revenue-workflow .workflow-step-num { margin: 0; }
+}
+@media (max-width: 640px) {
+  #revenue-workflow .workflow-steps { grid-template-columns: 1fr; gap: var(--s8); }
+  #revenue-workflow .section-header { margin-bottom: var(--s10); padding-left: var(--s5); }
+  #revenue-workflow .workflow-step { padding-left: var(--s5); }
+  #revenue-workflow h4 { min-height: 0; font-size: var(--fs-xl); }
+}
