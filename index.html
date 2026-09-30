@@ -53,12 +53,20 @@
 
     <title>Dental Revenue Intelligence Platform | Elite Dental Force</title>
 
-    <!-- Fonts: Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <!-- Fonts: Plus Jakarta Sans + JetBrains Mono -->
+    <!-- Fonts: local Latin variable subsets -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="fonts/plus-jakarta-sans-latin-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/jetbrains-mono-latin-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
 
     <!-- Styles -->
@@ -551,7 +559,10 @@
                   <img
                     src="images/edifi-dashboard-hero.webp"
                     alt="EDiFi Platform Dashboard: real time eligibility verification and revenue analytics"
+                    width="1191"
+                    height="1299"
                     loading="eager"
+                    fetchpriority="high"
                   />
                 </div>
                 <!-- Floating stat badges -->
