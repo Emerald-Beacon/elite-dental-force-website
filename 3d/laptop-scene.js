@@ -375,6 +375,8 @@ async function acquireRuntime() {
   const release = () => {
     if (--shared.users || !shared.active) return;
     const { gsap, ScrollTrigger } = window;
+    // ScrollTrigger keeps two passive wheel listeners (its scroll tween guard) that no public API removes;
+    // they are created once per page and do not grow with mount cycles.
     // Never stop a preexisting plugin or another feature's triggers/ticker work.
     if (shared.ownTrigger && ScrollTrigger.getAll().length === 0) {
       ScrollTrigger.disable(true);
@@ -441,7 +443,21 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   const leader = hero.querySelector('.hero-leader');
   const path = leader.querySelector('path'), dot = leader.querySelector('circle');
   let scene, trigger, timeline, pinRefresh, observer, releaseRuntime, stopped = false;
-  let reveal = [];
+  let reveal = [], pendingFocus, badgeOrigin;
+  const heroFocus = () => {
+    const active = document.activeElement;
+    return active && active !== document.body && hero.contains(active) ? active : null;
+  };
+  // Rebuilding or removing the pin reparents the stage, which drops keyboard focus; put it back
+  // on the same control (or its nearest visible sibling) and keep it inside the viewport.
+  function revealFocus(element) {
+    if (!element?.isConnected) return;
+    const target = element === skip && skip.hidden ? [...hero.querySelectorAll('.hero-actions a')].at(-1) : element;
+    if (document.activeElement !== target) target.focus({ preventScroll: true });
+    const top = header.offsetHeight + 12, box = target.getBoundingClientRect();
+    const overflow = box.top < top ? box.top - top : box.bottom > innerHeight - 12 ? box.bottom - innerHeight + 12 : 0;
+    if (overflow) scrollTo({ top: scrollY + overflow, behavior: 'instant' });
+  }
   let resizing = false;
   let visible = true, lastProgress = 0, slowFrames = 0;
   const listeners = new AbortController();
@@ -456,6 +472,8 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   function restore(reason = 'fallback', toPoster = false) {
     if (stopped) return;
     stopped = true;
+    const focused = pendingFocus || heroFocus();
+    pendingFocus = null;
     const distance = trigger ? Math.max(0, Math.min(scrollY - trigger.start, trigger.end - trigger.start)) : 0;
     listeners.abort();
     observer?.disconnect();
@@ -474,6 +492,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     for (const badge of badges) badge.removeAttribute('style');
     if (toPoster && trigger) scrollTo({ top: Math.max(0, visual.getBoundingClientRect().top + scrollY - header.offsetHeight - 12), behavior: 'instant' });
     else if (distance) scrollTo({ top: Math.max(0, scrollY - distance), behavior: 'instant' });
+    if (reason !== 'skipped') revealFocus(focused);
   }
   function update({ detail: { progress, index, anchor } }) {
     hero.dataset.progress = progress.toFixed(5);
@@ -515,6 +534,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     if (stopped || !eligible() || !atTop()) { scene.dispose(); return restore(); }
     const { gsap, ScrollTrigger } = window;
     const measurePadding = () => {
+      badgeOrigin ||= badges.slice(0, 2).map(badge => badge.getBoundingClientRect());
       hero.classList.remove('motion-ready');
       hero.style.removeProperty('--motion-top');
       hero.style.removeProperty('--motion-bottom');
@@ -523,6 +543,7 @@ export async function mountHeroMotion(hero, eligible, atTop) {
       hero.style.setProperty('--motion-bottom', `${heroBounds.bottom - stageBounds.bottom}px`);
       hero.classList.add('motion-ready');
     };
+    const mountFocus = heroFocus();
     measurePadding();
     const createPin = () => {
       const state = { p: 0 };
@@ -537,14 +558,26 @@ export async function mountHeroMotion(hero, eligible, atTop) {
     hero.dataset.motion = 'ready';
     skip.hidden = false;
     scene.setProgress(0);
+    ScrollTrigger.refresh();
+    revealFocus(mountFocus);
     // Scripted animations survive ScrollTrigger reparenting the stage during refresh.
-    const fade = { duration: 650, easing: 'ease-in-out' };
+    // The poster and first 3D frame differ in silhouette (measured overlap 0.44, best camera only 0.68),
+    // so the window where both are visible is kept to 200ms; the badges ease over their own 650ms.
+    const fade = { duration: 200, easing: 'ease-in-out' };
+    const glide = { duration: 650, easing: 'ease-in-out' };
     reveal = [canvas.animate({ opacity: [0, 1] }, fade),
       hero.querySelector('.product-visual img').animate({ opacity: [1, 0] }, fade)];
+    // The ready class changes the badge offsets; start each badge exactly where the poster state
+    // left it and ease to the new offset (transform only).
+    badges.slice(0, 2).forEach((badge, i) => {
+      const now = badge.getBoundingClientRect(), dx = badgeOrigin[i].left - now.left, dy = badgeOrigin[i].top - now.top;
+      if (Math.hypot(dx, dy) > .5) reveal.push(badge.animate({ transform: [`translate(${dx}px,${dy}px)`, 'translate(0px,0px)'] }, glide));
+    });
     const resize = () => {
       if (stopped || resizing) return;
       if (!eligible()) return restore('fallback', true);
       const progress = lastProgress;
+      pendingFocus = heroFocus();
       const beforePin = Math.max(0, trigger.start - scrollY), afterPin = Math.max(0, scrollY - trigger.end);
       resizing = true;
       try {
@@ -560,8 +593,10 @@ export async function mountHeroMotion(hero, eligible, atTop) {
         trigger.update();
         trigger.getTween()?.pause();
         timeline.progress(progress);
+        revealFocus(pendingFocus);
+        pendingFocus = null;
       } catch { restore('fallback', true); }
-      finally { resizing = false; if (!stopped) draw(progress); }
+      finally { resizing = false; pendingFocus = null; if (!stopped) draw(progress); }
     };
     addEventListener('resize', resize, { ...options, capture: true });
     const media = matchMedia('(min-width: 1025px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)');
