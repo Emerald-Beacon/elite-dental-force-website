@@ -318,7 +318,7 @@
       }
     </script>
   </head>
-  <body class="home-page">
+  <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -1132,23 +1132,9 @@
       </section>
 
       <!-- EDiFi Enterprise Platform -->
-      <section class="section" id="enterprise-modules">
+      <section class="section">
         <div class="container">
-          <svg class="section-links module-links module-links--across module-links--first" viewBox="0 0 24 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M-18 8 L42 48" /><circle cx="6" cy="24" r="2.5" /><circle cx="18" cy="32" r="2.5" />
-          </svg>
-          <svg class="section-links module-links module-links--down" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M200 -24 L200 64" /><circle cx="200" cy="14" r="2.5" /><circle cx="200" cy="27" r="2.5" />
-          </svg>
-          <svg class="section-links module-links module-links--across module-links--second" viewBox="0 0 24 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M-18 8 L42 48" /><circle cx="6" cy="24" r="2.5" /><circle cx="18" cy="32" r="2.5" />
-          </svg>
-          <svg class="section-links module-links module-links--branch" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M510 -30 L510 10 L250 95 M510 10 L840 95" /><ellipse cx="342" cy="65" rx="2.5" ry="4.7" /><ellipse cx="724" cy="65" rx="2.5" ry="4.7" />
-          </svg>
-          <div class="section-ghost module-ghost module-ghost--left" aria-hidden="true"></div>
-          <div class="section-ghost module-ghost module-ghost--right" aria-hidden="true"></div>
-          <div class="section-header section-header--left" data-section-reveal>
+          <div class="section-header section-header--left" data-animate>
             <span class="overline">EDiFi Enterprise</span>
             <h2>One Platform. Every Revenue Workflow.</h2>
             <p>
@@ -1158,9 +1144,11 @@
             </p>
           </div>
 
-          <div class="enterprise-modules-grid" data-section-reveal>
+          <div class="enterprise-modules-grid" data-animate>
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="1"
             >
               <div class="platform-card-top">
                 <span class="platform-badge">Module 01</span>
@@ -1193,6 +1181,8 @@
 
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="2"
             >
               <div class="platform-card-top">
                 <span class="platform-badge">Module 02</span>
@@ -1231,6 +1221,8 @@
 
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="3"
             >
               <div class="platform-card-top">
                 <span class="platform-badge platform-badge--gold"
@@ -1279,6 +1271,8 @@
 
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="4"
             >
               <div class="platform-card-top">
                 <span class="platform-badge">Module 04</span>
@@ -1313,6 +1307,8 @@
 
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="5"
             >
               <div class="platform-card-top">
                 <span class="platform-badge platform-badge--gold"
@@ -1351,6 +1347,8 @@
 
             <div
               class="platform-card enterprise-module-card"
+              data-animate
+              data-delay="6"
             >
               <div class="platform-card-top">
                 <span class="platform-badge">Module 06</span>
@@ -1384,7 +1382,7 @@
             </div>
           </div>
 
-          <div class="text-center mt-12" data-section-reveal>
+          <div class="text-center mt-12" data-animate>
             <a href="pages/edifi.html" class="btn btn-primary btn-lg"
               >Explore All EDiFi Enterprise Modules
               <svg
@@ -1403,11 +1401,11 @@
       </section>
 
       <!-- Outcomes / Metrics -->
-      <section class="section bg-light section-grid-bg" id="audit-results">
+      <section class="section bg-light section-grid-bg">
         <div class="container">
-          <div class="section-header">
+          <div class="section-header" data-animate>
             <span class="overline">Validated in the Field</span>
-            <h2><span>$59K Found.</span> <span>2,399 Claims Audited.</span> <span>One Practice.</span></h2>
+            <h2>$59K Found. 2,399 Claims Audited. One Practice.</h2>
             <p>
               EDiFi's Payment Audit Engine ran against real dental claims data
               during beta validation. Here is what it found.
@@ -1417,6 +1415,8 @@
           <div class="metrics-bento">
             <div
               class="metric-card metric-card--featured"
+              data-animate
+              data-delay="1"
             >
               <div class="metric-card-accent"></div>
               <span class="metric-tag">Validated Result</span>
@@ -1433,6 +1433,8 @@
             </div>
             <div
               class="metric-card metric-card--sm"
+              data-animate
+              data-delay="2"
             >
               <div class="metric-card-accent metric-card-accent--gold"></div>
               <span class="metric-value mono-stat"
@@ -1444,6 +1446,8 @@
             </div>
             <div
               class="metric-card metric-card--sm"
+              data-animate
+              data-delay="3"
             >
               <div class="metric-card-accent"></div>
               <span class="metric-value mono-stat">2,399</span>
@@ -1451,6 +1455,8 @@
             </div>
             <div
               class="metric-card metric-card--wide"
+              data-animate
+              data-delay="4"
             >
               <div class="metric-card-accent metric-card-accent--gold"></div>
               <span class="metric-tag">Projected Impact</span>
@@ -1464,7 +1470,7 @@
       </section>
 
       <!-- Platform in Action -->
-      <section class="section pia-section" id="platform-action">
+      <section class="section pia-section">
         <div class="container">
           <div class="pia-grid">
             <!-- Left: content -->
@@ -1492,15 +1498,6 @@
 
             <!-- Right: floating cards -->
             <div class="pia-cards">
-              <svg class="section-links pia-links" viewBox="0 0 560 560" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <path d="M235 80 L325 80 L400 135 M140 115 L140 260 M250 300 L370 260 L440 260 M470 330 L470 440 L390 515" />
-                <circle cx="280" cy="80" r="2.5" /><circle cx="350" cy="98" r="2.5" />
-                <circle cx="140" cy="173" r="2.5" /><circle cx="140" cy="217" r="2.5" />
-                <circle cx="293" cy="286" r="2.5" /><circle cx="339" cy="270" r="2.5" />
-                <circle cx="470" cy="400" r="2.5" /><circle cx="440" cy="468" r="2.5" />
-              </svg>
-              <div class="section-ghost pia-ghost pia-ghost--back" aria-hidden="true"></div>
-              <div class="section-ghost pia-ghost pia-ghost--front" aria-hidden="true"></div>
               <!-- Card 1: EDiFi Live Status (top-left) -->
               <div class="pia-card pia-c1">
                 <div
@@ -1681,7 +1678,7 @@
                       y="76"
                       text-anchor="middle"
                       font-size="8.5"
-                      fill="var(--text-secondary)"
+                      fill="rgba(255,255,255,0.38)"
                       font-family="system-ui,sans-serif"
                       letter-spacing="1"
                     >
@@ -1699,7 +1696,7 @@
                   <div class="pia-gauge-item">
                     <div
                       class="pia-gauge-val"
-                      style="color: var(--text-secondary)"
+                      style="color: rgba(255, 255, 255, 0.38)"
                     >
                       $2.1K
                     </div>
@@ -1740,9 +1737,9 @@
       </section>
 
       <!-- How It Works -->
-      <section class="section section-line-bg" id="revenue-workflow">
+      <section class="section section-line-bg">
         <div class="container">
-          <div class="section-header">
+          <div class="section-header" data-animate>
             <span class="overline">How It Works</span>
             <h2>The Complete Revenue Cycle. Automated End to End.</h2>
             <p>
@@ -1752,7 +1749,7 @@
           </div>
 
           <div class="workflow-steps">
-            <div class="workflow-step">
+            <div class="workflow-step" data-animate data-delay="1">
               <div class="workflow-step-head">
                 <div class="workflow-step-num">1</div>
                 <div class="workflow-step-icon" aria-hidden="true">
@@ -1775,7 +1772,7 @@
                 surprises and front desk delays.
               </p>
             </div>
-            <div class="workflow-step">
+            <div class="workflow-step" data-animate data-delay="2">
               <div class="workflow-step-head">
                 <div class="workflow-step-num">2</div>
                 <div class="workflow-step-icon" aria-hidden="true">
@@ -1800,7 +1797,7 @@
                 submission rules before it leaves your office.
               </p>
             </div>
-            <div class="workflow-step">
+            <div class="workflow-step" data-animate data-delay="3">
               <div class="workflow-step-head">
                 <div class="workflow-step-num">3</div>
                 <div class="workflow-step-icon" aria-hidden="true">
@@ -1825,7 +1822,7 @@
                 write offs, and EOB discrepancies automatically.
               </p>
             </div>
-            <div class="workflow-step">
+            <div class="workflow-step" data-animate data-delay="4">
               <div class="workflow-step-head">
                 <div class="workflow-step-num">4</div>
                 <div class="workflow-step-icon" aria-hidden="true">
@@ -2111,9 +2108,9 @@
       </section>
 
       <!-- CTA Band -->
-      <section class="cta-band" id="revenue-cta">
+      <section class="cta-band">
         <div class="container">
-          <div class="cta-panel">
+          <div data-animate>
             <h2>
               Ready to Find Out How Much
               <span class="gradient-text">You're Owed?</span>
@@ -2134,7 +2131,6 @@
               >
             </div>
           </div>
-          <img class="cta-laptop" src="images/edifi-dashboard-hero.webp" srcset="images/edifi-dashboard-hero-760.webp 760w, images/edifi-dashboard-hero.webp 1191w" sizes="(max-width: 640px) 75vw, (max-width: 1024px) 40vw, 520px" width="1191" height="1299" loading="lazy" decoding="async" alt="" aria-hidden="true" />
         </div>
       </section>
     </main>
