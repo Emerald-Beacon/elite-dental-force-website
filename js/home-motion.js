@@ -50,19 +50,34 @@
 (() => {
   const platform = document.querySelector('#enterprise-modules');
   if (!platform) return;
+  const action = document.querySelector('#platform-action');
+  const cards = action?.querySelector('.pia-cards');
+  const pointer = matchMedia('(hover: hover) and (pointer: fine)');
   const media = matchMedia('(min-width: 1025px) and (prefers-reduced-motion: no-preference)');
   const visible = new Set(), animations = new Set(), revealed = new WeakSet();
-  let observer, frame = 0;
+  let observer, frame = 0, pointerX = 0, pointerY = 2;
   const update = () => {
     frame = 0;
     if (document.hidden) return;
     for (const section of visible) {
       const rect = section.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1, (innerHeight - rect.top) / (innerHeight + rect.height)));
-      section.style.setProperty('--section-drift', `${(progress - .5) * 24}px`);
+      if (section === platform) section.style.setProperty('--section-drift', `${(progress - .5) * 24}px`);
+      if (section === action) {
+        section.style.setProperty('--pointer-x', `${pointerX}deg`);
+        section.style.setProperty('--pointer-y', `${pointerY}deg`);
+      }
     }
   };
   const schedule = () => { if (!frame && visible.size && !document.hidden) frame = requestAnimationFrame(update); };
+  const move = event => {
+    if (!pointer.matches || !visible.has(action)) return;
+    const rect = cards.getBoundingClientRect();
+    pointerX = Math.max(-3, Math.min(3, (event.clientX - rect.left) / rect.width * 6 - 3));
+    pointerY = Math.max(-1, Math.min(5, 5 - (event.clientY - rect.top) / rect.height * 6));
+    schedule();
+  };
+  const resetPointer = () => { pointerX = 0; pointerY = 2; schedule(); };
   const stop = () => {
     observer?.disconnect();
     visible.clear();
@@ -73,6 +88,12 @@
     for (const animation of animations) animation.cancel();
     animations.clear();
     platform.style.removeProperty('--section-drift');
+    cards?.removeEventListener('pointermove', move);
+    cards?.removeEventListener('pointerleave', resetPointer);
+    action?.style.removeProperty('--pointer-x');
+    action?.style.removeProperty('--pointer-y');
+    pointerX = 0;
+    pointerY = 2;
   };
   const start = () => {
     stop();
@@ -103,6 +124,11 @@
       }
     });
     observer.observe(platform);
+    if (action) {
+      observer.observe(action);
+      cards.addEventListener('pointermove', move, { passive: true });
+      cards.addEventListener('pointerleave', resetPointer);
+    }
   };
   media.addEventListener('change', start);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(frame); frame = 0; } else schedule(); });
