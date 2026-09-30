@@ -2141,7 +2141,7 @@ body.menu-open { overflow: hidden; }
 }
 .pia-user-role {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.38);
+  color: var(--text-secondary);
 }
 @media (max-width: 960px) {
   .pia-grid {
@@ -2480,10 +2480,9 @@ body::before {
   margin: 0; padding: var(--s6); gap: var(--s4); border-radius: var(--r-lg);
   border-color: var(--border-blue); background: linear-gradient(145deg, var(--navy-mid), var(--bg-surface));
   box-shadow: var(--shadow-card); backdrop-filter: none; -webkit-backdrop-filter: none;
-  transition: none;
+  transition: none; transform: none;
 }
 #enterprise-modules .enterprise-module-card::before { background: linear-gradient(90deg, transparent, var(--blue), transparent); opacity: .4; height: 1px; }
-#enterprise-modules .enterprise-module-card:hover { transform: none; }
 #enterprise-modules .enterprise-module-card > p { font-size: var(--fs-sm); line-height: 1.7; }
 #enterprise-modules .platform-badge { padding: 0; border: 0; background: none; }
 #enterprise-modules .feature-icon { width: 40px; height: 40px; margin: 0; background: var(--bg-card-hover); border: 1px solid var(--border-blue); color: var(--blue); }
