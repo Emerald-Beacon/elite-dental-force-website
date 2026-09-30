@@ -2414,7 +2414,12 @@ body::before {
   overflow: hidden; clip-path: inset(50%); white-space: nowrap;
 }
 .hero-skip {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.hero-skip:focus {
   position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: auto; height: auto; overflow: visible; clip-path: none;
   z-index: 12; padding: 8px 14px; font-size: .75rem;
   color: #d3edfc; background: #030139; border-radius: 4px;
 }

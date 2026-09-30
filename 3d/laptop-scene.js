@@ -221,9 +221,19 @@ export async function createLaptopScene({ canvas, textureUrl }) {
     const final = { ...rest, cx: 2.1, cy: 2.65, cz: 8.8, ty: .7 };
     const frames = [[0, rest], [.12, rest], [.28, separated], [.31, ar], [.37, ar], [.41, claims], [.47, claims], [.51, eligibility], [.57, eligibility], [.61, tracked], [.68, tracked], [.73, separated], [.88, final], [1, final]];
     const anchors = [[.884, .24], [.635, .779], [.487, .491], [.091, .667]];
+    const layerBounds = Object.values(layers).map(layer => {
+      const bounds = new THREE.Box3().setFromObject(layer);
+      const corners = [];
+      for (const x of [bounds.min.x, bounds.max.x])
+        for (const y of [bounds.min.y, bounds.max.y])
+          for (const z of [bounds.min.z, bounds.max.z]) corners.push(new THREE.Vector3(x, y, z));
+      return { layer, corners };
+    });
     let progress = 0, disposed = false, width = 1, height = 1;
     const point = new THREE.Vector3();
     const target = new THREE.Vector3();
+    const fitPoint = new THREE.Vector3();
+    const viewDirection = new THREE.Vector3();
     function render() {
       if (disposed || document.hidden) return;
       const upper = frames.findIndex(([p]) => p > progress);
@@ -239,6 +249,23 @@ export async function createLaptopScene({ canvas, textureUrl }) {
       camera.lookAt(target);
       camera.updateMatrixWorld();
       scene.updateMatrixWorld(true);
+      // Fit every rigid layer with 24px of breathing room, including between stops.
+      const vertical = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      const horizontal = vertical * camera.aspect;
+      const safeX = Math.max(.1, 1 - 48 / width), safeY = Math.max(.1, 1 - 48 / height);
+      let retreat = 0;
+      for (const { layer, corners } of layerBounds) {
+        for (const corner of corners) {
+          fitPoint.copy(corner).applyMatrix4(layer.matrixWorld).applyMatrix4(camera.matrixWorldInverse);
+          retreat = Math.max(retreat, Math.abs(fitPoint.x) / (horizontal * safeX) + fitPoint.z,
+            Math.abs(fitPoint.y) / (vertical * safeY) + fitPoint.z, fitPoint.z + camera.near + .05);
+        }
+      }
+      if (retreat > 0) {
+        camera.getWorldDirection(viewDirection);
+        camera.position.addScaledVector(viewDirection, -retreat);
+        camera.updateMatrixWorld();
+      }
       renderer.render(scene, camera);
       const index = progress >= .31 && progress < .68 ? Math.min(3, Math.floor((progress - .28) / .1)) : -1;
       let anchor = null;
