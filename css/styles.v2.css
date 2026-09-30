@@ -2625,3 +2625,30 @@ body::before {
   #revenue-workflow .workflow-step { padding-left: var(--s5); }
   #revenue-workflow h4 { min-height: 0; font-size: var(--fs-xl); }
 }
+
+/* P4: a quiet glass close, using the approved hero still. */
+#revenue-cta { background: var(--navy-deep); padding: var(--s20) 0; }
+#revenue-cta::before, #revenue-cta::after { display: none; }
+#revenue-cta > .container { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; text-align: left; gap: var(--s8); }
+#revenue-cta .cta-panel { position: relative; z-index: 1; padding: var(--s12); border: 1px solid var(--border-blue); border-radius: var(--r-xl); background: linear-gradient(135deg, var(--bg-card-hover), var(--bg-surface)); box-shadow: var(--shadow-card), inset 0 1px 0 var(--blue-glow); }
+#revenue-cta .cta-panel::before { content: ''; display: block; width: 7px; height: 7px; margin-bottom: var(--s8); background: var(--gold); transform: rotate(45deg); }
+#revenue-cta h2 { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.2; letter-spacing: -.04em; text-wrap: balance; }
+#revenue-cta p { font-size: var(--fs-base); line-height: 1.85; margin: 0 0 var(--s8); }
+#revenue-cta .cta-band-actions { justify-content: flex-start; flex-wrap: nowrap; gap: var(--s3); }
+#revenue-cta .btn { font-size: var(--fs-sm); padding: var(--s4) var(--s6); white-space: nowrap; }
+#revenue-cta .btn::after { display: none; }
+#revenue-cta a:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; }
+#revenue-cta .cta-laptop { display: block; width: 100%; height: auto; aspect-ratio: 1191 / 1299; }
+@media (max-width: 1024px) {
+  #revenue-cta > .container { grid-template-columns: 1.3fr 1fr; gap: var(--s4); }
+  #revenue-cta .cta-panel { padding: var(--s8); }
+  #revenue-cta .cta-band-actions { flex-direction: column; align-items: stretch; }
+  #revenue-cta .btn { max-width: none; width: 100%; justify-content: center; }
+}
+@media (max-width: 640px) {
+  #revenue-cta { padding: var(--s12) 0; }
+  #revenue-cta > .container { grid-template-columns: 1fr; gap: var(--s6); }
+  #revenue-cta .cta-panel { padding: var(--s6); }
+  #revenue-cta h2 { font-size: var(--fs-3xl); }
+  #revenue-cta .cta-laptop { width: 75%; max-width: 320px; justify-self: center; }
+}
