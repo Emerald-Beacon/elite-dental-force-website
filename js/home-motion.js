@@ -46,3 +46,67 @@
   if (document.readyState === 'complete') schedule();
   else addEventListener('load', schedule, { once: true });
 })();
+
+(() => {
+  const platform = document.querySelector('#enterprise-modules');
+  if (!platform) return;
+  const media = matchMedia('(min-width: 1025px) and (prefers-reduced-motion: no-preference)');
+  const visible = new Set(), animations = new Set(), revealed = new WeakSet();
+  let observer, frame = 0;
+  const update = () => {
+    frame = 0;
+    if (document.hidden) return;
+    for (const section of visible) {
+      const rect = section.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, (innerHeight - rect.top) / (innerHeight + rect.height)));
+      section.style.setProperty('--section-drift', `${(progress - .5) * 24}px`);
+    }
+  };
+  const schedule = () => { if (!frame && visible.size && !document.hidden) frame = requestAnimationFrame(update); };
+  const stop = () => {
+    observer?.disconnect();
+    visible.clear();
+    cancelAnimationFrame(frame);
+    frame = 0;
+    removeEventListener('scroll', schedule);
+    removeEventListener('resize', schedule);
+    for (const animation of animations) animation.cancel();
+    animations.clear();
+    platform.style.removeProperty('--section-drift');
+  };
+  const start = () => {
+    stop();
+    if (!media.matches || !('IntersectionObserver' in window)) return;
+    observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          visible.add(entry.target);
+          if (!revealed.has(entry.target)) {
+            revealed.add(entry.target);
+            entry.target.querySelectorAll('[data-section-reveal]').forEach((target, index) => {
+              const animation = target.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 500, delay: Math.min(index * 80, 240), easing: 'ease-out' });
+              animations.add(animation);
+              animation.onfinish = () => animations.delete(animation);
+            });
+          }
+        } else visible.delete(entry.target);
+      }
+      if (visible.size) {
+        addEventListener('scroll', schedule, { passive: true });
+        addEventListener('resize', schedule, { passive: true });
+        schedule();
+      } else {
+        removeEventListener('scroll', schedule);
+        removeEventListener('resize', schedule);
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    });
+    observer.observe(platform);
+  };
+  media.addEventListener('change', start);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(frame); frame = 0; } else schedule(); });
+  addEventListener('pagehide', stop);
+  addEventListener('pageshow', start);
+  start();
+})();
