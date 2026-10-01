@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 // Change this token for each release, then run this script from any directory.
-const RELEASE = '20260930d';
+const RELEASE = '20260930e';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const files = execFileSync('git', ['ls-files', '-z', '*.html'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean);
 let changed = 0;
