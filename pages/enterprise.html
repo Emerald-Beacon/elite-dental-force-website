@@ -38,7 +38,11 @@
       EDiFi Enterprise: Revenue Intelligence for DSOs | Elite Dental Force
     </title>
     <link rel="preload" href="../fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/jetbrains-mono-latin-variable.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 761px)" />
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 760px)" href="../images/pages/enterprise-hero-fallback-700.avif" fetchpriority="high" />
+    <link rel="preload" as="image" media="(min-width: 761px)" href="../images/edifi-dashboard-hero-760.webp" imagesrcset="../images/edifi-dashboard-hero-760.webp 760w, ../images/edifi-dashboard-hero.webp 1191w" imagesizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) 46vw, 606px" fetchpriority="high" />
     <link rel="stylesheet" href="../css/styles.v2.css?v=20260930d" />
+    <link rel="stylesheet" href="../css/page-enterprise.css?v=20260930e" />
     <link rel="icon" type="image/png" href="../images/favicon.png" />
 
     <script type="application/ld+json">
@@ -172,809 +176,14 @@
       }
     </script>
 
-    <style>
-      :root {
-        --ent-blue: #4ba8f0;
-        --ent-navy: #001f71;
-        --ent-dark: #020917;
-        --ent-mid: #0a1628;
-        --ent-card: #0d1e35;
-        --ent-gold: #ffd700;
-        --ent-green: #27c93f;
-        --ent-border: rgba(75, 168, 240, 0.14);
-        --ent-text: #c5dff0;
-        --ent-muted: #6b8fa8;
-      }
-
-      /* Hero */
-      .ent-hero {
-        padding: 120px 0 72px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .ent-hero::before {
-        content: "";
-        position: absolute;
-        top: -180px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 900px;
-        height: 900px;
-        background: radial-gradient(
-          circle,
-          rgba(75, 168, 240, 0.07) 0%,
-          transparent 65%
-        );
-        pointer-events: none;
-      }
-      .ent-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(255, 215, 0, 0.07);
-        border: 1px solid rgba(255, 215, 0, 0.22);
-        border-radius: 999px;
-        padding: 6px 18px;
-        font-size: 11.5px;
-        font-weight: 700;
-        color: var(--ent-gold);
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 28px;
-      }
-      .ent-badge-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--ent-gold);
-        animation: ent-pulse 2s infinite;
-      }
-      @keyframes ent-pulse {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.4;
-          transform: scale(0.75);
-        }
-      }
-      .ent-hero h1 {
-        font-size: clamp(2.4rem, 5vw, 3.8rem);
-        font-weight: 800;
-        line-height: 1.1;
-        color: #f0f7ff;
-        margin-bottom: 20px;
-        max-width: 820px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .ent-hero h1 span {
-        background: linear-gradient(135deg, #4ba8f0 30%, #ffd700 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .ent-hero-sub {
-        font-size: 1.1rem;
-        color: var(--ent-text);
-        max-width: 600px;
-        margin: 0 auto 40px;
-        line-height: 1.7;
-      }
-      .ent-hero-actions {
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 56px;
-      }
-      .btn-ent-primary {
-        background: linear-gradient(135deg, #095ba7, #4ba8f0);
-        color: #fff;
-        padding: 14px 32px;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.25s ease;
-        box-shadow: 0 4px 20px rgba(75, 168, 240, 0.28);
-      }
-      .btn-ent-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 32px rgba(75, 168, 240, 0.42);
-      }
-      .btn-ent-ghost {
-        background: transparent;
-        color: var(--ent-blue);
-        padding: 14px 32px;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-decoration: none;
-        display: inline-block;
-        border: 1px solid rgba(75, 168, 240, 0.28);
-        transition: all 0.25s ease;
-      }
-      .btn-ent-ghost:hover {
-        background: rgba(75, 168, 240, 0.07);
-        border-color: rgba(75, 168, 240, 0.5);
-      }
-      .ent-trust-strip {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-        flex-wrap: wrap;
-      }
-      .ent-trust-item {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: var(--ent-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-      }
-      .ent-trust-item svg {
-        color: var(--ent-green);
-        flex-shrink: 0;
-      }
-
-      /* Stats Bar */
-      .ent-stats-bar {
-        border-top: 1px solid var(--ent-border);
-        border-bottom: 1px solid var(--ent-border);
-      }
-      .ent-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        background: var(--ent-border);
-        gap: 1px;
-      }
-      .ent-stat {
-        background: var(--ent-dark);
-        padding: 28px 24px;
-        text-align: center;
-      }
-      .ent-stat-val {
-        font-size: 2.1rem;
-        font-weight: 800;
-        color: var(--ent-gold);
-        font-family: "JetBrains Mono", monospace;
-        display: block;
-        line-height: 1;
-        margin-bottom: 6px;
-      }
-      .ent-stat-lbl {
-        font-size: 0.75rem;
-        color: var(--ent-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        font-weight: 600;
-        line-height: 1.4;
-      }
-
-      /* Shared section helpers */
-      .ent-section {
-        padding: 80px 0;
-      }
-      .ent-section-label {
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--ent-blue);
-        margin-bottom: 10px;
-      }
-      .ent-section-title {
-        font-size: clamp(1.7rem, 3vw, 2.4rem);
-        font-weight: 800;
-        color: #f0f7ff;
-        line-height: 1.2;
-        margin-bottom: 14px;
-      }
-      .ent-section-body {
-        font-size: 1rem;
-        color: var(--ent-text);
-        line-height: 1.7;
-        max-width: 560px;
-      }
-
-      /* Feature Grid */
-      .ent-features {
-        background: var(--ent-mid);
-      }
-      .ent-feat-header {
-        text-align: center;
-        margin-bottom: 52px;
-      }
-      .ent-feat-header .ent-section-body {
-        margin: 0 auto;
-      }
-      .ent-feat-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
-        background: var(--ent-border);
-        border-radius: 18px;
-        overflow: hidden;
-      }
-      .ent-feat-card {
-        background: var(--ent-card);
-        padding: 32px 28px;
-        transition: background 0.2s ease;
-      }
-      .ent-feat-card:hover {
-        background: #112236;
-      }
-      .ent-feat-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: rgba(75, 168, 240, 0.08);
-        border: 1px solid rgba(75, 168, 240, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 16px;
-        color: var(--ent-blue);
-      }
-      .ent-feat-name {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #f0f7ff;
-        margin-bottom: 8px;
-      }
-      .ent-feat-desc {
-        font-size: 0.855rem;
-        color: var(--ent-text);
-        line-height: 1.62;
-      }
-      .ent-feat-pill {
-        display: inline-block;
-        margin-top: 14px;
-        padding: 3px 10px;
-        border-radius: 6px;
-        font-size: 0.68rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        background: rgba(255, 215, 0, 0.08);
-        color: var(--ent-gold);
-        border: 1px solid rgba(255, 215, 0, 0.18);
-      }
-
-      /* Integrations */
-      .ent-int-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        align-items: start;
-      }
-      .ent-int-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      .ent-int-card {
-        background: var(--ent-card);
-        border: 1px solid var(--ent-border);
-        border-radius: 12px;
-        padding: 18px 16px;
-        transition: border-color 0.2s ease;
-      }
-      .ent-int-card:hover {
-        border-color: rgba(75, 168, 240, 0.3);
-      }
-      .ent-int-cat {
-        font-size: 0.62rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--ent-blue);
-        margin-bottom: 6px;
-      }
-      .ent-int-names {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #f0f7ff;
-        line-height: 1.55;
-      }
-      .ent-int-note {
-        font-size: 0.75rem;
-        color: var(--ent-muted);
-        margin-top: 4px;
-      }
-
-      /* Security */
-      .ent-security {
-        background: linear-gradient(160deg, #0a1628 0%, #020917 100%);
-        border-top: 1px solid var(--ent-border);
-        border-bottom: 1px solid var(--ent-border);
-        padding: 80px 0;
-      }
-      .ent-sec-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        align-items: center;
-      }
-      .ent-sec-badges {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-      .ent-sec-badge {
-        background: rgba(13, 30, 53, 0.8);
-        border: 1px solid var(--ent-border);
-        border-radius: 14px;
-        padding: 22px 18px;
-        text-align: center;
-      }
-      .ent-sec-badge-icon {
-        width: 40px;
-        height: 40px;
-        margin: 0 auto 10px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(75, 168, 240, 0.08);
-        border: 1px solid rgba(75, 168, 240, 0.18);
-        color: var(--ent-blue);
-      }
-      .ent-sec-badge-name {
-        font-size: 0.82rem;
-        font-weight: 700;
-        color: #f0f7ff;
-        margin-bottom: 4px;
-      }
-      .ent-sec-badge-note {
-        font-size: 0.7rem;
-        color: var(--ent-muted);
-        line-height: 1.4;
-      }
-      .ent-sec-list {
-        list-style: none;
-        padding: 0;
-        margin: 24px 0 0;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .ent-sec-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 11px;
-        font-size: 0.875rem;
-        color: var(--ent-text);
-        line-height: 1.55;
-      }
-      .ent-sec-check {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: rgba(39, 201, 63, 0.12);
-        border: 1px solid rgba(39, 201, 63, 0.28);
-        flex-shrink: 0;
-        margin-top: 1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--ent-green);
-      }
-
-      /* Case Study */
-      .ent-case-study {
-        padding: 80px 0;
-      }
-      .ent-cs-card {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 215, 0, 0.03) 0%,
-          rgba(75, 168, 240, 0.05) 100%
-        );
-        border: 1px solid rgba(255, 215, 0, 0.14);
-        border-radius: 20px;
-        padding: 56px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-      }
-      .ent-cs-number {
-        font-size: 4.2rem;
-        font-weight: 800;
-        color: var(--ent-gold);
-        font-family: "JetBrains Mono", monospace;
-        line-height: 1;
-        margin-bottom: 6px;
-      }
-      .ent-cs-headline {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #f0f7ff;
-        margin-bottom: 14px;
-      }
-      .ent-cs-body {
-        font-size: 0.875rem;
-        color: var(--ent-text);
-        line-height: 1.7;
-      }
-      .ent-cs-details {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .ent-cs-detail {
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        padding: 14px 18px;
-        background: rgba(13, 30, 53, 0.7);
-        border-radius: 10px;
-        border: 1px solid var(--ent-border);
-      }
-      .ent-cs-detail-inner .ent-cs-detail-cat {
-        font-size: 0.68rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        font-weight: 700;
-        color: var(--ent-blue);
-        margin-bottom: 3px;
-      }
-      .ent-cs-detail-inner .ent-cs-detail-val {
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: #f0f7ff;
-      }
-
-      /* Comparison Table */
-      .ent-compare {
-        background: var(--ent-mid);
-        padding: 80px 0;
-      }
-      .ent-compare-header {
-        text-align: center;
-        margin-bottom: 48px;
-      }
-      .ent-compare-wrap {
-        overflow-x: auto;
-      }
-      .ent-compare-table {
-        width: 100%;
-        border-collapse: collapse;
-        border-radius: 16px;
-        overflow: hidden;
-        min-width: 640px;
-      }
-      .ent-compare-table thead th {
-        padding: 18px 22px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-        background: var(--ent-card);
-        border-bottom: 2px solid var(--ent-border);
-        text-align: center;
-      }
-      .ent-compare-table thead th:first-child {
-        text-align: left;
-        color: var(--ent-muted);
-      }
-      .ent-compare-table thead th:nth-child(2) {
-        color: var(--ent-blue);
-        background: rgba(75, 168, 240, 0.06);
-        border-bottom-color: var(--ent-blue);
-      }
-      .ent-compare-table thead th:nth-child(3),
-      .ent-compare-table thead th:nth-child(4) {
-        color: var(--ent-muted);
-      }
-      .ent-compare-table tbody tr {
-        border-bottom: 1px solid var(--ent-border);
-      }
-      .ent-compare-table tbody tr:last-child {
-        border-bottom: none;
-      }
-      .ent-compare-table tbody td {
-        padding: 13px 22px;
-        font-size: 0.865rem;
-        color: var(--ent-text);
-        background: var(--ent-card);
-        text-align: center;
-      }
-      .ent-compare-table tbody td:first-child {
-        text-align: left;
-        font-weight: 600;
-        color: #f0f7ff;
-      }
-      .ent-compare-table tbody td:nth-child(2) {
-        background: rgba(75, 168, 240, 0.04);
-      }
-      .tc {
-        color: var(--ent-green);
-        font-size: 1rem;
-      }
-      .tx {
-        color: #ef4444;
-        font-size: 1rem;
-      }
-      .tp {
-        color: var(--ent-gold);
-        font-size: 0.78rem;
-        font-weight: 700;
-      }
-
-      /* Enterprise Form */
-      .ent-form-section {
-        padding: 80px 0;
-      }
-      .ent-form-section .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: start;
-      }
-      .ent-form-pitch {
-        padding-top: 8px;
-      }
-      .ent-form-pitch p {
-        font-size: 0.9rem;
-        color: var(--ent-text);
-        line-height: 1.72;
-        margin-bottom: 28px;
-      }
-      .ent-pitch-list {
-        display: flex;
-        flex-direction: column;
-        gap: 11px;
-      }
-      .ent-pitch-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        font-size: 0.875rem;
-        color: var(--ent-text);
-        line-height: 1.5;
-      }
-      .ent-pitch-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--ent-blue);
-        flex-shrink: 0;
-        margin-top: 7px;
-      }
-      #ent-form-wrap {
-        background: var(--ent-card);
-        border: 1px solid var(--ent-border);
-        border-radius: 20px;
-        padding: 40px;
-      }
-      .ent-form-header-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #f0f7ff;
-        margin-bottom: 4px;
-      }
-      .ent-form-header-sub {
-        font-size: 0.82rem;
-        color: var(--ent-muted);
-        margin-bottom: 28px;
-      }
-      #enterprise-form {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-      .ent-f-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-      .ent-field {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
-      .ent-field label {
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: rgba(197, 223, 240, 0.75);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-      }
-      .ent-field input,
-      .ent-field select,
-      .ent-field textarea {
-        background: rgba(2, 9, 23, 0.65);
-        border: 1px solid rgba(75, 168, 240, 0.16);
-        border-radius: 8px;
-        padding: 10px 13px;
-        color: #f0f7ff;
-        font-size: 0.875rem;
-        font-family:
-          "Plus Jakarta Sans",
-          -apple-system,
-          sans-serif;
-        transition: border-color 0.2s ease;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .ent-field input:focus,
-      .ent-field select:focus,
-      .ent-field textarea:focus {
-        outline: none;
-        border-color: rgba(75, 168, 240, 0.48);
-      }
-      .ent-field select {
-        appearance: none;
-        cursor: pointer;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234ba8f0' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        padding-right: 34px;
-      }
-      .ent-field input::placeholder,
-      .ent-field textarea::placeholder {
-        color: var(--ent-muted);
-      }
-      .ent-field option {
-        background: #0a1628;
-        color: #f0f7ff;
-      }
-      .ent-field textarea {
-        resize: vertical;
-        min-height: 80px;
-      }
-      #enterprise-form button[type="submit"] {
-        background: linear-gradient(135deg, #095ba7, #4ba8f0);
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 14px;
-        font-size: 0.95rem;
-        font-weight: 700;
-        font-family:
-          "Plus Jakarta Sans",
-          -apple-system,
-          sans-serif;
-        cursor: pointer;
-        width: 100%;
-        transition: all 0.25s ease;
-        box-shadow: 0 4px 16px rgba(75, 168, 240, 0.22);
-        margin-top: 4px;
-      }
-      #enterprise-form button[type="submit"]:hover:not(:disabled) {
-        transform: translateY(-1px);
-        box-shadow: 0 7px 24px rgba(75, 168, 240, 0.38);
-      }
-      #enterprise-form button[type="submit"]:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-      }
-      .ent-form-disclaimer {
-        font-size: 0.7rem;
-        color: var(--ent-muted);
-        text-align: center;
-        line-height: 1.5;
-      }
-      #ent-success {
-        display: none;
-        text-align: center;
-        padding: 3rem 2rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-      #ent-success h3 {
-        color: var(--ent-gold);
-        font-size: 1.15rem;
-        font-weight: 700;
-        margin: 0;
-      }
-      #ent-success p {
-        color: rgba(197, 223, 240, 0.75);
-        font-size: 0.875rem;
-        margin: 0;
-      }
-
-      /* CTA */
-      .ent-cta {
-        padding: 80px 0;
-        text-align: center;
-        border-top: 1px solid var(--ent-border);
-      }
-      .ent-cta h2 {
-        font-size: clamp(1.6rem, 3vw, 2.3rem);
-        font-weight: 800;
-        color: #f0f7ff;
-        margin-bottom: 14px;
-      }
-      .ent-cta p {
-        color: var(--ent-text);
-        font-size: 0.975rem;
-        max-width: 480px;
-        margin: 0 auto 36px;
-        line-height: 1.65;
-      }
-      .ent-cta-actions {
-        display: flex;
-        gap: 14px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      /* Fade-in animation class */
-      .ent-fade {
-        opacity: 0;
-        transform: translateY(22px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-      .ent-fade.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Responsive */
-      @media (max-width: 960px) {
-        .ent-stats-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .ent-feat-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ent-int-layout,
-        .ent-sec-layout,
-        .ent-cs-card {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-        .ent-cs-card {
-          padding: 36px;
-        }
-        .ent-form-section .container {
-          grid-template-columns: 1fr;
-          gap: 48px;
-        }
-      }
-      @media (max-width: 640px) {
-        .ent-feat-grid {
-          grid-template-columns: 1fr;
-        }
-        .ent-int-grid {
-          grid-template-columns: 1fr;
-        }
-        .ent-sec-badges {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ent-f-row {
-          grid-template-columns: 1fr;
-        }
-        #ent-form-wrap {
-          padding: 24px;
-        }
-        .ent-cs-number {
-          font-size: 3rem;
-        }
-      }
-    </style>
   </head>
-  <body>
+  <body class="enterprise-page">
 
     <header class="header">
       <div class="container">
         <div class="header-inner">
           <a href="../index.html" class="logo">
-            <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
+            <img src="../images/pages/enterprise-logo-lossless.webp" alt="Elite Dental Force" width="2229" height="933" />
           </a>
           <nav class="nav">
             <ul class="nav-list">
@@ -1034,13 +243,14 @@
       <!-- ============================================================
            HERO
            ============================================================ -->
-      <section class="ent-hero">
-        <div class="container">
+      <section class="ent-hero" aria-labelledby="ent-hero-heading">
+        <div class="container ent-hero-layout">
+          <div class="ent-hero-copy">
           <div class="ent-badge">
             <div class="ent-badge-dot"></div>
             For DSOs and Multi-Location Groups
           </div>
-          <h1>Built for DSOs.<br /><span>Engineered for Scale.</span></h1>
+          <h1 id="ent-hero-heading">Built for DSOs.<br /><span>Engineered for Scale.</span></h1>
           <p class="ent-hero-sub">
             EDiFi Enterprise brings revenue intelligence to dental organizations
             managing 2 to 50 or more locations. One platform for eligibility,
@@ -1127,13 +337,20 @@
               SOC 2 In Progress
             </span>
           </div>
+          </div>
+          <div class="ent-hero-visual" aria-hidden="true">
+            <picture>
+              <source type="image/avif" media="(max-width: 760px)" srcset="../images/pages/enterprise-hero-fallback-700.avif" />
+              <img src="../images/edifi-dashboard-hero-760.webp" srcset="../images/edifi-dashboard-hero-760.webp 760w, ../images/edifi-dashboard-hero.webp 1191w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1240px) 46vw, 606px" width="1191" height="1299" alt="" fetchpriority="high" decoding="async" />
+            </picture>
+          </div>
         </div>
       </section>
 
       <!-- Eligibility Standalone entry path -->
-      <div style="background:rgba(75,168,240,0.04);border-top:1px solid rgba(75,168,240,0.12);border-bottom:1px solid rgba(75,168,240,0.12);padding:20px 0;">
+      <div class="ent-entry-path">
         <div class="container" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:center;">
-          <p style="font-size:0.875rem;color:#6b8fa8;margin:0;line-height:1.6;">
+          <p class="ent-entry-copy">
             Looking for a focused eligibility release before the full enterprise rollout? <a href="eligibility-standalone.html" style="color:#4ba8f0;font-weight:600;text-decoration:none;">EDiFi Eligibility Standalone</a> is EDF&rsquo;s near-term product for dental teams that need clearer benefit readiness, earlier eligibility visibility, and stronger clean-claim workflows.
           </p>
         </div>
@@ -1203,7 +420,7 @@
                   <rect x="3" y="14" width="7" height="7"></rect>
                 </svg>
               </div>
-              <div class="ent-feat-name">Multi-Location Dashboard</div>
+              <h3 class="ent-feat-name">Multi-Location Dashboard</h3>
               <p class="ent-feat-desc">
                 Unified view of eligibility status, claim performance, denial
                 rates, and payment recovery across all locations in real time.
@@ -1227,7 +444,7 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <div class="ent-feat-name">Role-Based Access Control</div>
+              <h3 class="ent-feat-name">Role-Based Access Control</h3>
               <p class="ent-feat-desc">
                 Four-tier RBAC model: Group Owner, Regional Manager, Location
                 Admin, and Staff. Each role sees exactly what it needs and
@@ -1251,7 +468,7 @@
                   <circle cx="7" cy="7" r="3"></circle>
                 </svg>
               </div>
-              <div class="ent-feat-name">Dedicated Customer Success</div>
+              <h3 class="ent-feat-name">Dedicated Customer Success</h3>
               <p class="ent-feat-desc">
                 A named Customer Success Manager coordinates your rollout,
                 monitors performance across locations, and runs quarterly
@@ -1274,7 +491,7 @@
                   <line x1="6" y1="20" x2="6" y2="14"></line>
                 </svg>
               </div>
-              <div class="ent-feat-name">Executive Reporting Suite</div>
+              <h3 class="ent-feat-name">Executive Reporting Suite</h3>
               <p class="ent-feat-desc">
                 Cross-location benchmarking, denial rate trending, revenue
                 recovery tracking, and payer performance analysis. Scheduled
@@ -1294,7 +511,7 @@
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <div class="ent-feat-name">BAA and Compliance Package</div>
+              <h3 class="ent-feat-name">BAA and Compliance Package</h3>
               <p class="ent-feat-desc">
                 Business Associate Agreement included at no cost. Full HIPAA
                 compliance documentation, audit log exports, and breach
@@ -1317,7 +534,7 @@
                   ></path>
                 </svg>
               </div>
-              <div class="ent-feat-name">99.9% Uptime SLA</div>
+              <h3 class="ent-feat-name">99.9% Uptime SLA</h3>
               <p class="ent-feat-desc">
                 Contractual 99.9% SLA backed by redundant cloud infrastructure
                 with automated failover. Dedicated P1 support channel with a
@@ -1597,9 +814,9 @@
           <div class="ent-cs-card ent-fade">
             <div>
               <div class="ent-cs-number">$59K+</div>
-              <div class="ent-cs-headline" id="ent-cs-heading">
+              <h2 class="ent-cs-headline" id="ent-cs-heading">
                 Underpayments Recovered at a Single Practice
-              </div>
+              </h2>
               <p class="ent-cs-body">
                 During validation testing, EDiFi's Payment Audit Module
                 identified over $59,000 in insurance underpayments at one pilot
@@ -1725,14 +942,14 @@
               what most groups are using today.
             </p>
           </div>
-          <div class="ent-compare-wrap ent-fade">
+          <div class="ent-compare-wrap ent-fade" tabindex="0" role="region" aria-labelledby="ent-cmp-heading">
             <table class="ent-compare-table">
               <thead>
                 <tr>
-                  <th>Capability</th>
-                  <th>EDiFi Enterprise</th>
-                  <th>Manual / In-House</th>
-                  <th>Legacy RCM Software</th>
+                  <th scope="col">Capability</th>
+                  <th scope="col">EDiFi Enterprise</th>
+                  <th scope="col">Manual / In-House</th>
+                  <th scope="col">Legacy RCM Software</th>
                 </tr>
               </thead>
               <tbody>
@@ -1861,7 +1078,7 @@
           </div>
           <div>
             <div id="ent-form-wrap" class="ent-fade">
-              <div class="ent-form-header-title">Enterprise Inquiry</div>
+              <h3 class="ent-form-header-title">Enterprise Inquiry</h3>
               <div class="ent-form-header-sub">
                 We respond within one business day.
               </div>
@@ -2039,7 +1256,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="../index.html" class="logo">
-              <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
+              <img src="../images/pages/enterprise-logo-lossless.webp" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
             </a>
             <p>We built EDiFi because dental billing was never designed to work for the practice. We are fixing that.</p>
           </div>
@@ -2192,32 +1409,47 @@
     <script src="../js/ghl-forms.js?v=20260930d" defer></script>
     <script>
       (function () {
-        /* Scroll fade-in */
-        var obs = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                obs.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.08 },
-        );
-        document.querySelectorAll(".ent-fade").forEach(function (el) {
-          obs.observe(el);
-        });
+        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          document.querySelectorAll(".ent-fade").forEach(function (el) { el.classList.add("visible"); });
+        } else {
+          document.body.classList.add("ent-motion");
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.08 },
+          );
+          document.querySelectorAll(".ent-fade").forEach(function (el) {
+            obs.observe(el);
+          });
+        }
 
         /* Anchor-link smooth scroll */
         document.querySelectorAll('a[href^="#"]').forEach(function (a) {
           a.addEventListener("click", function (e) {
+            if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
             var id = a.getAttribute("href").slice(1);
             var target = document.getElementById(id);
             if (target) {
               e.preventDefault();
-              target.scrollIntoView({ behavior: "smooth", block: "start" });
+              e.stopImmediatePropagation();
+              var nav = a.closest(".nav");
+              if (nav) {
+                nav.classList.remove("active");
+                document.body.classList.remove("menu-open");
+                var toggle = document.querySelector(".mobile-toggle");
+                toggle.classList.remove("active");
+                toggle.setAttribute("aria-expanded", "false");
+              }
+              target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
             }
-          });
+          }, true);
         });
       })();
     </script>
