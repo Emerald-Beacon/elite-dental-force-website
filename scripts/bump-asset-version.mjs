@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 // Change this token for each release, then run this script from any directory.
-const RELEASE = '20260930b';
+const RELEASE = '20260930c';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const files = execFileSync('git', ['ls-files', '-z', '*.html'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean);
 let changed = 0;
@@ -16,7 +16,7 @@ for (const file of files) {
     return tag.replace(script ? /\bsrc\s*=\s*(["'])(.*?)\1/i : /\bhref\s*=\s*(["'])(.*?)\1/i, (attr, quote, value) => {
       if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(value)) return attr;
       const resolved = new URL(value, `https://assets.local/${file}`);
-      if (!/^\/(?:css|js|3d)\//.test(resolved.pathname)) return attr;
+      if (!/^\/(?:css|js|3d)\//.test(resolved.pathname) && !(file.startsWith('pages/') && resolved.pathname.endsWith('.css'))) return attr;
       const [withoutHash, hash] = value.split('#');
       const [pathname, query] = withoutHash.split('?');
       const params = new URLSearchParams(query);
