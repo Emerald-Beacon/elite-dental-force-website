@@ -38,822 +38,12 @@
       EDiFi: AI Dental Revenue Intelligence Platform | Elite Dental Force
     </title>
     <link rel="preload" href="../fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/jetbrains-mono-latin-variable.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 761px)" />
     <link rel="stylesheet" href="../css/styles.v2.css?v=20260930d" />
     <link rel="icon" type="image/png" href="../images/favicon.png" />
 
-    <style>
-      /* ================================================================
-       EDiFi Product Page — Distinct Design System
-       Intentionally different from homepage: centered layout, sticky
-       sidebar, tab explorer, comparison table. No split hero, no orbs.
-       ================================================================ */
-
-      :root {
-        --edifi-blue: #4ba8f0;
-        --edifi-navy: #001f71;
-        --edifi-dark: #020917;
-        --edifi-mid: #0a1628;
-        --edifi-card: #0d1e35;
-        --edifi-gold: #ffd700;
-        --edifi-green: #27c93f;
-        --edifi-border: rgba(75, 168, 240, 0.14);
-        --edifi-text: #c5dff0;
-        --edifi-muted: #6b8fa8;
-      }
-
-      /* ── Hero: centered, gradient band background ── */
-      .ep-hero {
-        background: linear-gradient(180deg, #030d22 0%, #020917 60%);
-        border-bottom: 1px solid rgba(75, 168, 240, 0.1);
-        padding: 100px 0 0;
-        text-align: center;
-        overflow: hidden;
-      }
-      .ep-hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(75, 168, 240, 0.08);
-        border: 1px solid rgba(75, 168, 240, 0.22);
-        border-radius: 50px;
-        padding: 6px 16px 6px 10px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--edifi-blue);
-        margin-bottom: 28px;
-      }
-      .ep-hero-badge-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--edifi-green);
-        box-shadow: 0 0 6px rgba(39, 201, 63, 0.8);
-        animation: dot-pulse 2s ease-in-out infinite;
-      }
-      @keyframes dot-pulse {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.5;
-          transform: scale(1.4);
-        }
-      }
-      .ep-hero h1 {
-        font-size: clamp(2.4rem, 5vw, 4.2rem);
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        color: #f0f7ff;
-        max-width: 800px;
-        margin: 0 auto 20px;
-      }
-      .ep-hero h1 span {
-        background: linear-gradient(135deg, #4ba8f0, #3454f8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .ep-hero-sub {
-        font-size: 18px;
-        color: var(--edifi-muted);
-        max-width: 560px;
-        margin: 0 auto 36px;
-        line-height: 1.6;
-      }
-      .ep-hero-actions {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin-bottom: 60px;
-      }
-
-      /* ── Hero screenshot — perspective tilt, no browser chrome ── */
-      .ep-hero-screen {
-        position: relative;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-      .ep-hero-screen-inner {
-        position: relative;
-        border-radius: 16px 16px 0 0;
-        overflow: hidden;
-        box-shadow:
-          0 -1px 0 1px rgba(75, 168, 240, 0.18),
-          0 -40px 80px rgba(75, 168, 240, 0.06),
-          0 60px 120px rgba(0, 0, 0, 0.8);
-        transform: perspective(1600px) rotateX(4deg);
-        transform-origin: bottom center;
-      }
-      .ep-hero-screen-inner img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 16px 16px 0 0;
-      }
-      /* Gradient fade at the bottom of hero screen */
-      .ep-hero-screen-inner::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 120px;
-        background: linear-gradient(to bottom, transparent, #020917);
-        pointer-events: none;
-      }
-
-      /* ── Stats bar ── */
-      .ep-stats {
-        background: rgba(255, 255, 255, 0.02);
-        border-top: 1px solid var(--edifi-border);
-        border-bottom: 1px solid var(--edifi-border);
-        padding: 32px 0;
-      }
-      .ep-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-      }
-      .ep-stat {
-        text-align: center;
-        padding: 16px 24px;
-        border-right: 1px solid var(--edifi-border);
-      }
-      .ep-stat:last-child {
-        border-right: none;
-      }
-      .ep-stat-value {
-        font-size: 2.2rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #fff, #62bcff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1;
-        margin-bottom: 6px;
-      }
-      .ep-stat-label {
-        font-size: 13px;
-        color: var(--edifi-muted);
-      }
-      @media (max-width: 700px) {
-        .ep-stats-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ep-stat:nth-child(2) {
-          border-right: none;
-        }
-      }
-
-      /* ── Section base ── */
-      .ep-section {
-        padding: 96px 0;
-        position: relative;
-      }
-      .ep-section + .ep-section {
-        border-top: 1px solid var(--edifi-border);
-      }
-      .ep-section-header {
-        text-align: center;
-        margin-bottom: 56px;
-      }
-      .ep-overline {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--edifi-blue);
-        margin-bottom: 12px;
-      }
-      .ep-section-header h2 {
-        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-        font-weight: 800;
-        color: #f0f7ff;
-        margin-bottom: 12px;
-        line-height: 1.2;
-      }
-      .ep-section-header p {
-        font-size: 17px;
-        color: var(--edifi-muted);
-        max-width: 560px;
-        margin: 0 auto;
-        line-height: 1.6;
-      }
-
-      /* ── Tab Explorer ── */
-      .ep-tabs {
-        background: rgba(6, 14, 38, 0.8);
-        border: 1px solid var(--edifi-border);
-        border-radius: 20px;
-        overflow: hidden;
-      }
-      .ep-tab-nav {
-        display: flex;
-        border-bottom: 1px solid var(--edifi-border);
-        background: rgba(3, 8, 24, 0.6);
-        overflow-x: auto;
-      }
-      .ep-tab-btn {
-        flex: 1;
-        min-width: 140px;
-        padding: 16px 20px;
-        background: none;
-        border: none;
-        border-bottom: 2px solid transparent;
-        color: var(--edifi-muted);
-        font-size: 13px;
-        font-weight: 600;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        white-space: nowrap;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-      }
-      .ep-tab-btn:hover {
-        color: #f0f7ff;
-        background: rgba(75, 168, 240, 0.04);
-      }
-      .ep-tab-btn.active {
-        color: var(--edifi-blue);
-        border-bottom-color: var(--edifi-blue);
-        background: rgba(75, 168, 240, 0.06);
-      }
-      .ep-tab-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: currentColor;
-        opacity: 0.5;
-      }
-      .ep-tab-btn.active .ep-tab-dot {
-        opacity: 1;
-        background: var(--edifi-green);
-        box-shadow: 0 0 6px rgba(39, 201, 63, 0.7);
-        animation: dot-pulse 2s ease-in-out infinite;
-      }
-      .ep-tab-content {
-        display: none;
-        padding: 32px;
-        gap: 40px;
-        align-items: flex-start;
-      }
-      .ep-tab-content.active {
-        display: grid;
-        grid-template-columns: 1fr 340px;
-      }
-      @media (max-width: 900px) {
-        .ep-tab-content.active {
-          grid-template-columns: 1fr;
-        }
-      }
-      .ep-tab-screen {
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(75, 168, 240, 0.15);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-      }
-      .ep-tab-screen img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      .ep-tab-info {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .ep-tab-info h3 {
-        font-size: 22px;
-        font-weight: 800;
-        color: #f0f7ff;
-        margin: 0;
-      }
-      .ep-tab-info p {
-        font-size: 15px;
-        color: var(--edifi-text);
-        line-height: 1.7;
-        margin: 0;
-      }
-      .ep-tab-metrics {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .ep-tab-metric {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--edifi-border);
-        border-radius: 10px;
-        padding: 12px 16px;
-      }
-      .ep-tab-metric-label {
-        font-size: 12px;
-        color: var(--edifi-muted);
-      }
-      .ep-tab-metric-value {
-        font-size: 16px;
-        font-weight: 700;
-        color: #f0f7ff;
-      }
-      .ep-tab-metric-value.green {
-        color: var(--edifi-green);
-      }
-      .ep-tab-metric-value.gold {
-        color: var(--edifi-gold);
-      }
-      .ep-tab-metric-value.blue {
-        color: var(--edifi-blue);
-      }
-
-      /* ── Sticky sidebar feature deep-dive ── */
-      .ep-sidebar-layout {
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 48px;
-        align-items: start;
-      }
-      .ep-sidebar-nav {
-        position: sticky;
-        top: 100px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-      .ep-sidebar-link {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 16px;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--edifi-muted);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: 1px solid transparent;
-        text-decoration: none;
-      }
-      .ep-sidebar-link:hover {
-        color: #f0f7ff;
-        background: rgba(75, 168, 240, 0.06);
-      }
-      .ep-sidebar-link.active {
-        color: var(--edifi-blue);
-        background: rgba(75, 168, 240, 0.08);
-        border-color: rgba(75, 168, 240, 0.2);
-      }
-      .ep-sidebar-link-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: currentColor;
-        opacity: 0.4;
-        flex-shrink: 0;
-      }
-      .ep-sidebar-link.active .ep-sidebar-link-dot {
-        opacity: 1;
-        background: var(--edifi-blue);
-        box-shadow: 0 0 6px rgba(75, 168, 240, 0.6);
-      }
-      .ep-sidebar-divider {
-        height: 1px;
-        background: var(--edifi-border);
-        margin: 8px 0;
-      }
-      @media (max-width: 900px) {
-        .ep-sidebar-layout {
-          grid-template-columns: 1fr;
-        }
-        .ep-sidebar-nav {
-          position: static;
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-      }
-
-      /* ── Feature panel ── */
-      .ep-feature-panel {
-        padding: 48px 0;
-        border-top: 1px solid var(--edifi-border);
-      }
-      .ep-feature-panel:first-child {
-        border-top: none;
-        padding-top: 0;
-      }
-      .ep-panel-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--edifi-blue);
-        margin-bottom: 12px;
-      }
-      .ep-panel-tag::before {
-        content: "";
-        width: 16px;
-        height: 1px;
-        background: var(--edifi-blue);
-      }
-      .ep-feature-panel h3 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        color: #f0f7ff;
-        margin-bottom: 12px;
-        line-height: 1.2;
-      }
-      .ep-feature-panel > p {
-        font-size: 16px;
-        color: var(--edifi-text);
-        line-height: 1.7;
-        margin-bottom: 32px;
-        max-width: 580px;
-      }
-      .ep-screen-card {
-        border-radius: 14px;
-        overflow: hidden;
-        border: 1px solid rgba(75, 168, 240, 0.16);
-        box-shadow:
-          0 24px 64px rgba(0, 0, 0, 0.55),
-          0 0 0 1px rgba(75, 168, 240, 0.06);
-        margin-bottom: 32px;
-      }
-      .ep-screen-card img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      .ep-detail-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      .ep-detail-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--edifi-border);
-        border-left: 3px solid var(--edifi-blue);
-        border-radius: 10px;
-        padding: 16px 18px;
-      }
-      .ep-detail-card h5 {
-        font-size: 13px;
-        font-weight: 700;
-        color: #f0f7ff;
-        margin-bottom: 4px;
-      }
-      .ep-detail-card p {
-        font-size: 12px;
-        color: var(--edifi-muted);
-        margin: 0;
-        line-height: 1.5;
-      }
-
-      /* ── Comparison table ── */
-      .ep-compare-table {
-        width: 100%;
-        border-collapse: collapse;
-        border: 1px solid var(--edifi-border);
-        border-radius: 16px;
-        overflow: hidden;
-      }
-      .ep-compare-table thead {
-        background: rgba(75, 168, 240, 0.08);
-      }
-      .ep-compare-table th {
-        padding: 18px 24px;
-        text-align: left;
-        font-size: 13px;
-        font-weight: 700;
-        color: #f0f7ff;
-        border-bottom: 1px solid var(--edifi-border);
-      }
-      .ep-compare-table th:first-child {
-        color: var(--edifi-muted);
-        font-weight: 600;
-      }
-      .ep-compare-table th.edifi-col {
-        background: rgba(75, 168, 240, 0.12);
-        color: var(--edifi-blue);
-      }
-      .ep-compare-table td {
-        padding: 16px 24px;
-        font-size: 14px;
-        color: var(--edifi-text);
-        border-bottom: 1px solid rgba(75, 168, 240, 0.07);
-      }
-      .ep-compare-table tr:last-child td {
-        border-bottom: none;
-      }
-      .ep-compare-table tr:nth-child(even) td {
-        background: rgba(255, 255, 255, 0.015);
-      }
-      .ep-compare-table td.feature-name {
-        color: #f0f7ff;
-        font-weight: 600;
-      }
-      .ep-compare-table td.manual {
-        color: #ef4444;
-      }
-      .ep-compare-table td.edifi {
-        color: var(--edifi-green);
-        font-weight: 600;
-      }
-      .check {
-        color: var(--edifi-green);
-        font-size: 16px;
-        margin-right: 4px;
-      }
-      .cross {
-        color: #ef4444;
-        font-size: 16px;
-        margin-right: 4px;
-      }
-
-      /* ── Tech spec list ── */
-      .ep-spec-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-      .ep-spec-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--edifi-border);
-        border-radius: 14px;
-        padding: 24px;
-      }
-      .ep-spec-label {
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--edifi-muted);
-        margin-bottom: 8px;
-      }
-      .ep-spec-value {
-        font-size: 20px;
-        font-weight: 800;
-        color: #f0f7ff;
-        margin-bottom: 4px;
-        font-family: "JetBrains Mono", monospace;
-      }
-      .ep-spec-desc {
-        font-size: 12px;
-        color: var(--edifi-muted);
-        line-height: 1.5;
-      }
-      @media (max-width: 900px) {
-        .ep-spec-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 560px) {
-        .ep-spec-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* ── Integration pills ── */
-      .ep-integration-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 32px;
-      }
-      .ep-integration-pill {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--edifi-border);
-        border-radius: 50px;
-        padding: 8px 20px;
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--edifi-text);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .ep-integration-pill::before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--edifi-green);
-        box-shadow: 0 0 5px rgba(39, 201, 63, 0.6);
-      }
-
-      /* ================================================================
-       EDIFI PAGE — Responsive Additions
-       ================================================================ */
-
-      @media (max-width: 768px) {
-        /* Hero */
-        .ep-hero {
-          padding: 72px 0 0;
-        }
-        .ep-hero h1 {
-          font-size: clamp(2rem, 5vw, 2.8rem);
-          max-width: 100%;
-        }
-        .ep-hero-sub {
-          font-size: 16px;
-        }
-        .ep-hero-actions {
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-          margin-bottom: 40px;
-        }
-        .ep-hero-actions .btn {
-          min-height: 48px;
-          flex: 1 1 160px;
-          text-align: center;
-        }
-        .ep-hero-screen {
-          padding: 0 12px;
-        }
-
-        /* Stats bar */
-        .ep-stats-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ep-stat:nth-child(2) {
-          border-right: none;
-        }
-        .ep-stat:nth-child(3) {
-          border-top: 1px solid var(--edifi-border);
-        }
-        .ep-stat:nth-child(4) {
-          border-top: 1px solid var(--edifi-border);
-        }
-        .ep-stat-value {
-          font-size: 1.75rem;
-        }
-
-        /* Section padding */
-        .ep-section {
-          padding: 60px 0;
-        }
-        .ep-section-header {
-          margin-bottom: 36px;
-        }
-        .ep-section-header h2 {
-          font-size: clamp(1.5rem, 3.5vw, 2rem);
-        }
-        .ep-section-header p {
-          font-size: 15px;
-        }
-
-        /* Tabs: allow scroll, collapse tab content to single column */
-        .ep-tab-nav {
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-        }
-        .ep-tab-btn {
-          min-width: 120px;
-          padding: 14px 12px;
-          font-size: 12px;
-        }
-        .ep-tab-content {
-          padding: 20px;
-          gap: 24px;
-        }
-        .ep-tab-content.active {
-          grid-template-columns: 1fr;
-        }
-
-        /* Sidebar layout: nav becomes horizontal row (already handled at 900px) */
-        .ep-sidebar-layout {
-          grid-template-columns: 1fr;
-          gap: 28px;
-        }
-        .ep-sidebar-nav {
-          position: static;
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 6px;
-        }
-        .ep-sidebar-link {
-          font-size: 12px;
-          padding: 8px 12px;
-        }
-
-        /* Feature panels */
-        .ep-feature-panel {
-          padding: 32px 0;
-        }
-        .ep-feature-panel h3 {
-          font-size: 1.5rem;
-        }
-        .ep-feature-panel > p {
-          font-size: 14px;
-        }
-
-        /* Detail grid */
-        .ep-detail-grid {
-          grid-template-columns: 1fr;
-        }
-
-        /* Spec grid */
-        .ep-spec-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        /* Comparison table: allow horizontal scroll */
-        .ep-compare-table {
-          font-size: 12px;
-        }
-        .ep-compare-table th,
-        .ep-compare-table td {
-          padding: 12px 14px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        /* Hero */
-        .ep-hero {
-          padding: 60px 0 0;
-        }
-        .ep-hero h1 {
-          font-size: clamp(1.75rem, 5vw, 2.4rem);
-        }
-        .ep-hero-sub {
-          font-size: 14px;
-        }
-        .ep-hero-actions .btn {
-          width: 100%;
-          justify-content: center;
-        }
-        .ep-hero-badge {
-          font-size: 10px;
-          padding: 5px 12px;
-        }
-
-        /* Stats: single column */
-        .ep-stats-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ep-stat {
-          padding: 12px 16px;
-        }
-        .ep-stat-value {
-          font-size: 1.5rem;
-        }
-
-        /* Section */
-        .ep-section {
-          padding: 48px 0;
-        }
-
-        /* Tabs content */
-        .ep-tab-content {
-          padding: 16px;
-        }
-        .ep-tab-btn {
-          min-width: 100px;
-          padding: 12px 10px;
-          font-size: 11px;
-        }
-
-        /* Spec grid */
-        .ep-spec-grid {
-          grid-template-columns: 1fr;
-        }
-
-        /* Feature panel */
-        .ep-feature-panel h3 {
-          font-size: 1.3rem;
-        }
-
-        /* Comparison table wrapper */
-        .ep-tabs {
-          overflow-x: auto;
-        }
-
-        /* Integration pills */
-        .ep-integration-row {
-          gap: 8px;
-        }
-        .ep-integration-pill {
-          font-size: 12px;
-          padding: 6px 14px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../css/page-edifi.css?v=20260930e" />
+    <noscript><style>.edifi-page .ep-tab-content { display: grid; grid-template-columns: 1fr; }.edifi-page .ep-tab-nav { display: none; }</style></noscript>
 
     <!-- Schema: SoftwareApplication (EDiFi product) -->
     <script type="application/ld+json">
@@ -1023,7 +213,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="edifi-page">
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -1085,17 +275,17 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- ============================================================
          HERO — Centered, large product screenshot below headline
          ============================================================ -->
-      <section class="ep-hero">
+      <section class="ep-hero" aria-labelledby="edifi-heading">
         <div class="container">
           <div class="ep-hero-badge">
             <div class="ep-hero-badge-dot"></div>
             Live Platform Demo Available
           </div>
-          <h1>
+          <h1 id="edifi-heading">
             The Software That Runs<br /><span>Dental Revenue Intelligence</span>
           </h1>
           <p class="ep-hero-sub">
@@ -1115,12 +305,14 @@
           </div>
         </div>
 
-        <!-- Full-width perspective-tilted product screenshot -->
+        <!-- Reserved hero artwork surface -->
         <div class="ep-hero-screen">
           <div class="ep-hero-screen-inner">
             <img
-              src="../images/screenshots/ss-dashboard.png"
-              alt="EDiFi Revenue Intelligence Platform: live dashboard showing eligibility status, appointment schedule, claims pipeline and A/R alerts" width="2880" height="1800" loading="lazy" />
+              src="../images/pages/edifi-hero-800.webp"
+              srcset="../images/pages/edifi-hero-800.webp 800w, ../images/pages/edifi-hero.webp 1600w"
+              sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1050px) 760px, 600px"
+              alt="Glass platform connecting eligibility, payments, voice and claims" width="1600" height="900" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </section>
@@ -1172,27 +364,27 @@
           </div>
 
           <div class="ep-tabs">
-            <div class="ep-tab-nav">
-              <button class="ep-tab-btn active" data-tab="dashboard">
+            <div class="ep-tab-nav" role="tablist" aria-label="Platform modules">
+              <button class="ep-tab-btn active" data-tab="dashboard" id="module-dashboard" role="tab" aria-controls="tab-dashboard" aria-selected="true" tabindex="0">
                 <div class="ep-tab-dot"></div>
                 Revenue Dashboard
               </button>
-              <button class="ep-tab-btn" data-tab="claims">
+              <button class="ep-tab-btn" data-tab="claims" id="module-claims" role="tab" aria-controls="tab-claims" aria-selected="false" tabindex="-1">
                 <div class="ep-tab-dot"></div>
                 Claim Intelligence
               </button>
-              <button class="ep-tab-btn" data-tab="voice">
+              <button class="ep-tab-btn" data-tab="voice" id="module-voice" role="tab" aria-controls="tab-voice" aria-selected="false" tabindex="-1">
                 <div class="ep-tab-dot"></div>
                 Voice AI Monitor
               </button>
-              <button class="ep-tab-btn" data-tab="perio">
+              <button class="ep-tab-btn" data-tab="perio" id="module-perio" role="tab" aria-controls="tab-perio" aria-selected="false" tabindex="-1">
                 <div class="ep-tab-dot"></div>
                 Perio Charting AI
               </button>
             </div>
 
             <!-- Tab 1: Dashboard -->
-            <div class="ep-tab-content active" id="tab-dashboard">
+            <div class="ep-tab-content active" id="tab-dashboard" role="tabpanel" aria-labelledby="module-dashboard" tabindex="0">
               <div class="ep-tab-screen">
                 <img
                   src="../images/screenshots/ss-dashboard.png"
@@ -1240,7 +432,7 @@
             </div>
 
             <!-- Tab 2: Claims -->
-            <div class="ep-tab-content" id="tab-claims">
+            <div class="ep-tab-content" id="tab-claims" role="tabpanel" aria-labelledby="module-claims" tabindex="0">
               <div class="ep-tab-screen">
                 <img
                   src="../images/screenshots/ss-claim-scrubber.png"
@@ -1292,7 +484,7 @@
             </div>
 
             <!-- Tab 3: Voice AI -->
-            <div class="ep-tab-content" id="tab-voice">
+            <div class="ep-tab-content" id="tab-voice" role="tabpanel" aria-labelledby="module-voice" tabindex="0">
               <div class="ep-tab-screen">
                 <img
                   src="../images/screenshots/ss-voice-ai.png"
@@ -1342,7 +534,7 @@
             </div>
 
             <!-- Tab 4: Perio -->
-            <div class="ep-tab-content" id="tab-perio">
+            <div class="ep-tab-content" id="tab-perio" role="tabpanel" aria-labelledby="module-perio" tabindex="0">
               <div class="ep-tab-screen">
                 <img
                   src="../images/screenshots/ss-perio-charting.png"
@@ -1395,7 +587,7 @@
       <!-- ============================================================
          STICKY SIDEBAR — Module Deep-Dive
          ============================================================ -->
-      <section class="ep-section" style="background: rgba(6, 14, 38, 0.5)">
+      <section class="ep-section ep-section-surface">
         <div class="container">
           <div class="ep-section-header">
             <span class="ep-overline">Deep Dive</span>
@@ -1665,12 +857,12 @@
             </p>
           </div>
 
-          <table class="ep-compare-table">
+          <div class="ep-table-scroll" tabindex="0" role="region" aria-label="Manual process and EDiFi comparison"><table class="ep-compare-table">
             <thead>
               <tr>
-                <th style="width: 35%">Task</th>
-                <th>Manual Process</th>
-                <th class="edifi-col">EDiFi</th>
+                <th scope="col" style="width: 35%">Task</th>
+                <th scope="col">Manual Process</th>
+                <th scope="col" class="edifi-col">EDiFi</th>
               </tr>
             </thead>
             <tbody>
@@ -1761,14 +953,14 @@
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </section>
 
       <!-- ============================================================
          TECH SPECS
          ============================================================ -->
-      <section class="ep-section" style="background: rgba(6, 14, 38, 0.5)">
+      <section class="ep-section ep-section-surface">
         <div class="container">
           <div class="ep-section-header">
             <span class="ep-overline">Technical Specifications</span>
@@ -2040,22 +1232,33 @@
     <script src="../js/ghl-forms.js?v=20260930d" defer></script>
     <script>
       (function () {
-        /* ── Tab Explorer ── */
+        /* Tabs use the standard arrow-key and roving-focus pattern. */
         const tabBtns = document.querySelectorAll(".ep-tab-btn");
         const tabPanes = document.querySelectorAll(".ep-tab-content");
 
-        tabBtns.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            const target = btn.dataset.tab;
-            tabBtns.forEach(function (b) {
-              b.classList.remove("active");
-            });
-            tabPanes.forEach(function (p) {
-              p.classList.remove("active");
-            });
-            btn.classList.add("active");
-            var pane = document.getElementById("tab-" + target);
-            if (pane) pane.classList.add("active");
+        function activateTab(btn) {
+          tabBtns.forEach(function (tab) {
+            const selected = tab === btn;
+            tab.classList.toggle("active", selected);
+            tab.setAttribute("aria-selected", String(selected));
+            tab.tabIndex = selected ? 0 : -1;
+          });
+          tabPanes.forEach(function (pane) {
+            pane.classList.toggle("active", pane.id === "tab-" + btn.dataset.tab);
+          });
+        }
+        tabBtns.forEach(function (btn, index) {
+          btn.addEventListener("click", function () { activateTab(btn); });
+          btn.addEventListener("keydown", function (event) {
+            let next;
+            if (event.key === "ArrowRight") next = (index + 1) % tabBtns.length;
+            if (event.key === "ArrowLeft") next = (index + tabBtns.length - 1) % tabBtns.length;
+            if (event.key === "Home") next = 0;
+            if (event.key === "End") next = tabBtns.length - 1;
+            if (next === undefined) return;
+            event.preventDefault();
+            activateTab(tabBtns[next]);
+            tabBtns[next].focus();
           });
         });
 
@@ -2082,40 +1285,38 @@
             observer.observe(panel);
           });
 
-          sideLinks.forEach(function (link) {
-            link.addEventListener("click", function (e) {
-              e.preventDefault();
-              var target = document.getElementById(link.dataset.panel);
-              if (target)
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-          });
         }
 
-        /* ── Scroll entrance animations ── */
-        var fadeObs = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-                fadeObs.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1 },
-        );
+        /* Capture before the shared handler so reduced motion stays immediate. */
+        document.querySelector("main").addEventListener("click", function (event) {
+          const link = event.target.closest('a[href^="#"]');
+          if (!link || link.getAttribute("href") === "#") return;
+          const target = document.getElementById(link.getAttribute("href").slice(1));
+          if (!target) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          const headerHeight = document.querySelector(".header").offsetHeight;
+          window.scrollTo({
+            top: target.getBoundingClientRect().top + window.scrollY - Math.max(headerHeight + 20, 160),
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
+          });
+          target.tabIndex = -1;
+          target.focus({ preventScroll: true });
+        }, true);
 
-        document
-          .querySelectorAll(
-            ".ep-section-header, .ep-tabs, .ep-feature-panel, .ep-compare-table, .ep-spec-grid",
-          )
-          .forEach(function (el) {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(24px)";
-            el.style.transition = "opacity 0.65s ease, transform 0.65s ease";
+        /* Content remains visible before enhancement and under reduced motion. */
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          const fadeObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("ep-entered");
+              fadeObs.unobserve(entry.target);
+            });
+          }, { threshold: 0.08 });
+          document.querySelectorAll(".ep-feature-panel, .ep-spec-card").forEach(function (el) {
             fadeObs.observe(el);
           });
+        }
       })();
     </script>
     <script src="../js/booking-widget.js?v=20260930d" defer></script>
