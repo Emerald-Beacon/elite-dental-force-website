@@ -18,7 +18,7 @@
   const update = () => {
     frame = 0;
     let active = headings[0];
-    for (const heading of headings) { if (heading.getBoundingClientRect().top <= 160) active = heading; }
+    for (const heading of headings) { if (Math.floor(heading.getBoundingClientRect().top) <= 160) active = heading; }
     links.forEach(link => {
       if (link.hash === `#${active?.id}`) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
@@ -50,7 +50,7 @@
   }, true));
   document.querySelector('[data-copy-link]').addEventListener('click', async () => {
     const status = document.querySelector('[data-share-status]');
-    try { await navigator.clipboard.writeText(document.querySelector('link[rel="canonical"]').href); status.textContent = 'Link copied'; }
+    try { await navigator.clipboard.writeText(document.querySelector('link[rel="canonical"]')?.href || location.href); status.textContent = 'Link copied'; }
     catch { status.textContent = 'Copy the address from your browser to share this article.'; }
   });
   update();

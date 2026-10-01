@@ -3,7 +3,7 @@
 .article-content p, .article-content li { font-size: 1rem; line-height: 1.85; color: var(--text-secondary); }
 .article-content p { margin: 0 0 1.5rem; }
 .article-content strong { color: var(--text); font-weight: 700; }
-.article-content h2, .article-content h3 { color: var(--text); scroll-margin-top: 7rem; letter-spacing: -.025em; text-wrap: balance; }
+.article-content h2, .article-content h3 { color: var(--text); scroll-margin-top: 10rem; letter-spacing: -.025em; text-wrap: balance; }
 .article-content h2 { font-size: clamp(1.45rem,2.3vw,1.9rem); line-height: 1.35; margin: 3rem 0 1.25rem; }
 .article-content h3 { font-size: 1.2rem; line-height: 1.45; margin: 2rem 0 1rem; }
 .article-content ul, .article-content ol { padding-left: 1.25rem; margin-bottom: 1.5rem; }
@@ -25,7 +25,9 @@
 .article-tags span { padding: .4rem .65rem; border: 1px solid var(--border-blue); color: var(--text-secondary); font-size: .7rem; border-radius: .25rem; }
 .article-content code, .article-content pre { font-family: 'JetBrains Mono', monospace; font-size: .85em; color: var(--blue-light); background: var(--navy-mid); }
 .article-content pre { padding: 1.25rem; overflow: auto; }
-.article-content table { width: 100%; border-collapse: collapse; font-size: .875rem; display: block; overflow-x: auto; }
+.article-table-scroll { overflow-x: auto; }
+.article-table-scroll:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.article-content table { width: 100%; border-collapse: collapse; font-size: .875rem; }
 .article-content th, .article-content td { border-bottom: 1px solid var(--border-blue); padding: .8rem; text-align: left; color: var(--text-secondary); }
 .article-content th { color: var(--text); }
 .article-content figure { margin: 2rem 0; }

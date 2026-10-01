@@ -518,6 +518,8 @@
     var el = document.createElement('div');
     el.className = large ? 'edf-header-avatar' : 'edf-msg-avatar';
     var img = document.createElement('img');
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
     img.src = LOGO_URL;
     img.style.cssText = 'width:' + imgSz + 'px;height:' + imgSz + 'px;object-fit:contain;border-radius:50%;';
     img.onerror = function () {
