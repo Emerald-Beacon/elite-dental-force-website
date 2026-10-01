@@ -923,10 +923,11 @@
     var SCENE_DURATION = 9000; // 9 seconds per scene
     var TICK_INTERVAL  = 80;   // ms between progress ticks
     var TOTAL_SCENES   = 6;
+    var motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 
     var state = {
       current: 0,
-      playing: true,
+      playing: !motionPreference.matches,
       elapsed: 0,
       timer: null
     };
@@ -1014,8 +1015,14 @@
     };
 
     // ── Play / Pause ───────────────────────────────────────────
-    window.togglePlay = function() {
-      state.playing = !state.playing;
+    function setPlaying(playing) {
+      state.playing = playing;
+      if (playing && state.timer === null) {
+        state.timer = setInterval(tick, TICK_INTERVAL);
+      } else if (!playing && state.timer !== null) {
+        clearInterval(state.timer);
+        state.timer = null;
+      }
       var playIcon  = document.getElementById('play-icon');
       var pauseIcon = document.getElementById('pause-icon');
       var btn = document.getElementById('play-btn');
@@ -1028,6 +1035,10 @@
         if (pauseIcon) pauseIcon.style.display = 'none';
         if (btn) btn.setAttribute('aria-label', 'Play tour');
       }
+    }
+
+    window.togglePlay = function() {
+      setPlaying(!state.playing);
     };
 
     // ── Scrub progress bar ─────────────────────────────────────
@@ -1042,8 +1053,12 @@
 
     // ── Keyboard controls ──────────────────────────────────────
     document.addEventListener('keydown', function(e) {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); togglePlay(); }
+      if (e.target.matches('input, textarea, select') || e.target.isContentEditable) return;
+      if (e.key === ' ' || e.key === 'Spacebar') {
+        if (e.target.closest('button, a, [role="button"]')) return;
+        e.preventDefault();
+        togglePlay();
+      }
       if (e.key === 'ArrowRight') { e.preventDefault(); goToScene((state.current + 1) % TOTAL_SCENES); }
       if (e.key === 'ArrowLeft')  { e.preventDefault(); goToScene((state.current + TOTAL_SCENES - 1) % TOTAL_SCENES); }
     });
@@ -1051,25 +1066,35 @@
     // ── Pause when tab not visible ─────────────────────────────
     document.addEventListener('visibilitychange', function() {
       if (document.hidden && state.playing) {
-        state.playing = false;
+        setPlaying(false);
       }
     });
 
-    // ── Init: set pause icon as initial state visible (playing) ─
+    motionPreference.addEventListener('change', function(e) {
+      if (e.matches) setPlaying(false);
+    });
+    window.addEventListener('pagehide', function() { setPlaying(false); });
+
+    // ── Init ───────────────────────────────────────────────────
     (function init() {
-      var playIcon  = document.getElementById('play-icon');
-      var pauseIcon = document.getElementById('pause-icon');
-      if (playIcon)  playIcon.style.display  = 'none';
-      if (pauseIcon) pauseIcon.style.display = '';
-      var btn = document.getElementById('play-btn');
-      if (btn) btn.setAttribute('aria-label', 'Pause tour');
+      setPlaying(state.playing);
+
+      // Scene detail cards: keyboard route to the same scenes as the chapter buttons
+      document.querySelectorAll('.scene-detail-card').forEach(function(card, i) {
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            goToScene(i);
+          }
+        });
+      });
 
       // Activate first scene detail card
       var first = document.querySelector('.scene-detail-card');
       if (first) first.classList.add('active');
-
-      // Start tick
-      state.timer = setInterval(tick, TICK_INTERVAL);
 
       // Preload images for all scenes after DOM ready
       var screenshots = [

@@ -569,3 +569,18 @@ html.pv-ready [data-pv].pv-in {
     padding: 1.5rem;
   }
 }
+
+/* Gate fixes: contrast (deep brand gradient behind white text), no layout-changing shimmer */
+.pv2-elig .btn-es-primary,
+.pv2-elig .btn-es-primary:hover,
+.pv2-elig .btn-es-primary:focus-visible {
+  background: var(--grad-brand-deep);
+  color: var(--white);
+}
+.pv2-elig .btn-es-primary:hover {
+  box-shadow: 0 12px 38px rgba(75, 168, 240, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+.pv2-elig .btn-primary::after {
+  animation: none;
+  display: none;
+}

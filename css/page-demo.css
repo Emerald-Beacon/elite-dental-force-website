@@ -353,3 +353,34 @@ html.pv-ready [data-pv].pv-in {
     padding: 0.9rem 0.6rem;
   }
 }
+
+/* Gate fixes: contrast (existing tokens), no layout-changing shimmer, reduced motion static */
+.pv2-demo .btn-primary,
+.pv2-demo .btn-primary:hover,
+.pv2-demo .btn-primary:focus-visible {
+  background: var(--grad-brand-deep);
+  color: var(--white);
+}
+.pv2-demo .btn-primary::after {
+  animation: none;
+  display: none;
+}
+.pv2-demo .chapter-num { color: var(--blue-light); }
+.pv2-demo .chapter-item.active .chapter-num { color: var(--blue-light); }
+.pv2-demo .chapter-title { color: var(--text-secondary); }
+.pv2-demo .chapter-item.active .chapter-title { color: var(--white); }
+.pv2-demo .chapter-time { color: var(--text-secondary); }
+.pv2-demo .scene-counter,
+.pv2-demo .kbd,
+.pv2-demo .player-browser-url { color: var(--blue-light); }
+.pv2-demo .scene-detail-num { color: var(--blue); }
+.pv2-demo .scene-detail-card[tabindex]:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pv2-demo *,
+  .pv2-demo *::before,
+  .pv2-demo *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
