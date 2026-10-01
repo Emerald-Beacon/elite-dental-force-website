@@ -25,19 +25,23 @@ function initMobileMenu() {
 
   if (!toggle || !nav) return;
 
+  toggle.setAttribute('aria-expanded', 'false');
   toggle.addEventListener('click', function() {
     toggle.classList.toggle('active');
     nav.classList.toggle('active');
     document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', String(nav.classList.contains('active')));
   });
 
   // Close menu when clicking a link
-  const navLinks = nav.querySelectorAll('.nav-link');
+  const navLinks = nav.querySelectorAll('.nav-link, .dropdown a');
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
+      if (window.innerWidth <= 768 && link.matches('.has-dropdown > .nav-link')) return;
       toggle.classList.remove('active');
       nav.classList.remove('active');
       document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -47,6 +51,8 @@ function initMobileMenu() {
       toggle.classList.remove('active');
       nav.classList.remove('active');
       document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
     }
   });
 }
