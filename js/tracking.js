@@ -43,7 +43,7 @@
     function afterLoad() {
       if (started) return;
       deadline = setTimeout(start, 5000);
-      var image = document.querySelector('[data-home-motion] .product-visual img');
+      var image = document.querySelector('[data-home-motion] .product-visual img, .journal-featured img, .journal-article-cover img');
       if (!image) return schedule();
       if (window.PerformanceObserver?.supportedEntryTypes?.includes('largest-contentful-paint')) {
         observer = new PerformanceObserver(function (list) {
