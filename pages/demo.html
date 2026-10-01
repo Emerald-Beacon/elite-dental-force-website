@@ -18,6 +18,7 @@
   <title>EDiFi Interactive Product Tour | See the Platform in Action</title>
 
   <link rel="preload" href="../fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/jetbrains-mono-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/styles.v2.css?v=20260930d">
   <link rel="icon" type="image/png" href="../images/favicon.png">
 
@@ -472,6 +473,7 @@
       .scene-caption-text { font-size: 12px; }
     }
   </style>
+  <link rel="stylesheet" href="../css/page-demo.css?v=20260930e">
 
   <script type="application/ld+json">
   {
@@ -484,7 +486,7 @@
   }
   </script>
 </head>
-<body>
+<body class="pv2-demo">
 
   <!-- Header -->
   <header class="header">
@@ -775,7 +777,7 @@
          ════════════════════════════════════════ -->
     <section class="section bg-alt">
       <div class="container">
-        <div class="section-header" style="text-align:center;max-width:580px;margin:0 auto 40px;">
+        <div class="section-header" data-pv style="text-align:center;max-width:580px;margin:0 auto 40px;">
           <span class="overline">What You Just Saw</span>
           <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:12px;">Six Workflows. One Platform.</h2>
           <p style="font-size:1rem;color:rgba(255,255,255,0.48);margin:0;">
@@ -783,7 +785,7 @@
           </p>
         </div>
 
-        <div class="scene-details-grid">
+        <div class="scene-details-grid" data-pv>
 
           <div class="scene-detail-card" onclick="goToScene(0)">
             <span class="scene-detail-num">Scene 1</span>
@@ -830,7 +832,7 @@
          ════════════════════════════════════════ -->
     <section class="section section-line-bg">
       <div class="container" style="max-width:900px;">
-        <div class="after-tour">
+        <div class="after-tour" data-pv>
           <span class="overline" style="display:flex;justify-content:center;margin-bottom:16px;">Ready for the Real Thing?</span>
           <h2>See EDiFi Run on <em>Your Actual Claims</em></h2>
           <p>
@@ -1089,5 +1091,17 @@
 
   <script src="../js/booking-modal.js?v=20260930d" defer></script>
   <script src="../js/monitoring.js?v=20260930d" defer></script>
+<script>
+  // Reveal on scroll (transform and opacity only; content stays visible without JS or with reduced motion)
+  (function () {
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var items = document.querySelectorAll("[data-pv]");
+    document.documentElement.classList.add("pv-ready");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("pv-in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 </body>
 </html>

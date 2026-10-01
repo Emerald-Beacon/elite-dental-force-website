@@ -1,0 +1,355 @@
+/* Demo (product tour): pages v2. Scoped to body.pv2-demo; loads after the page's inline styles. */
+
+.pv2-demo {
+  --pv-glass: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(75, 168, 240, 0.045) 46%,
+    rgba(2, 9, 23, 0.55) 100%
+  );
+  --pv-rim:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 0 0 1px rgba(75, 168, 240, 0.16);
+  --pv-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  --pv-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+.pv2-demo :focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+/* ── Hero ───────────────────────────────────────────── */
+.pv2-demo .demo-hero {
+  padding: 150px 0 40px;
+  isolation: isolate;
+  overflow: hidden;
+}
+.pv2-demo .demo-hero-glow {
+  width: 1100px;
+  height: 800px;
+  top: -280px;
+  background: radial-gradient(
+    circle,
+    rgba(75, 168, 240, 0.18) 0%,
+    rgba(0, 31, 113, 0.14) 40%,
+    transparent 68%
+  );
+}
+/* decorative glass panes behind the headline */
+.pv2-demo .demo-hero::before,
+.pv2-demo .demo-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 1.4rem;
+  pointer-events: none;
+  background: var(--pv-glass);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: var(--pv-rim);
+}
+.pv2-demo .demo-hero::before {
+  width: 17rem;
+  height: 11rem;
+  left: max(2vw, calc(50% - 40rem));
+  top: 7rem;
+  transform: rotate(-8deg) skewX(-6deg);
+  opacity: 0.55;
+}
+.pv2-demo .demo-hero::after {
+  width: 14rem;
+  height: 9rem;
+  right: max(2vw, calc(50% - 40rem));
+  top: 11rem;
+  transform: rotate(7deg) skewX(5deg);
+  opacity: 0.45;
+}
+.pv2-demo .demo-kicker {
+  font-family: var(--pv-mono);
+  font-weight: 500;
+  background: rgba(75, 168, 240, 0.07);
+  letter-spacing: 0.1em;
+}
+.pv2-demo .demo-hero h1 {
+  font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  max-width: 52rem;
+}
+.pv2-demo .demo-hero-sub {
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+  max-width: 38rem;
+}
+
+/* ── Tour: glass frame, rim light ───────────────────── */
+.pv2-demo .tour-section {
+  padding: 24px 0 clamp(4rem, 8vw, 6.5rem);
+}
+.pv2-demo .tour-chapters {
+  padding: 1.1rem 0.8rem;
+  border-radius: 1.4rem;
+  background: var(--pv-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--pv-rim), var(--pv-shadow);
+}
+.pv2-demo .tour-chapters-label {
+  font-family: var(--pv-mono);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--blue);
+}
+.pv2-demo .chapter-item {
+  border-radius: 0.9rem;
+}
+.pv2-demo .chapter-item:hover {
+  background: rgba(75, 168, 240, 0.06);
+}
+.pv2-demo .chapter-item.active {
+  background: rgba(75, 168, 240, 0.12);
+  border-color: rgba(75, 168, 240, 0.4);
+  box-shadow: 0 0 30px rgba(75, 168, 240, 0.12);
+}
+.pv2-demo .chapter-time {
+  font-family: var(--pv-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+.pv2-demo .tour-player {
+  border-radius: 1.75rem;
+  background: linear-gradient(
+    160deg,
+    rgba(14, 28, 58, 0.96),
+    rgba(3, 8, 22, 0.99)
+  );
+  border: 1px solid rgba(75, 168, 240, 0.28);
+  box-shadow:
+    var(--pv-rim),
+    0 50px 110px rgba(0, 0, 0, 0.7),
+    0 0 90px rgba(75, 168, 240, 0.1);
+}
+.pv2-demo .tour-player::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.45),
+    rgba(75, 168, 240, 0.7),
+    transparent
+  );
+}
+.pv2-demo .player-browser {
+  border-radius: 1rem;
+  border-color: rgba(75, 168, 240, 0.24);
+}
+.pv2-demo .progress-track {
+  height: 5px;
+}
+.pv2-demo .scene-counter,
+.pv2-demo .keyboard-hint,
+.pv2-demo .kbd {
+  font-family: var(--pv-mono);
+}
+.pv2-demo .keyboard-hint {
+  color: var(--text-secondary);
+}
+.pv2-demo .scene-caption-text {
+  color: #fff;
+}
+
+/* ── Six workflows: staggered glass cards ───────────── */
+.pv2-demo .section.bg-alt {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: rgba(4, 22, 80, 0.22);
+}
+.pv2-demo .section.bg-alt .section-header h2 {
+  letter-spacing: -0.04em;
+}
+.pv2-demo .section.bg-alt .section-header > p {
+  color: var(--text-secondary) !important;
+}
+.pv2-demo .scene-details-grid {
+  gap: 1.5rem;
+}
+@media (min-width: 1025px) {
+  .pv2-demo .scene-details-grid > :nth-child(3n + 2) {
+    margin-top: 2.75rem;
+  }
+  .pv2-demo .scene-details-grid > :nth-child(3n) {
+    margin-top: 1.25rem;
+  }
+}
+.pv2-demo .scene-detail-card {
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  background: var(--pv-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    var(--pv-rim),
+    0 18px 46px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.pv2-demo .scene-detail-card::before {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(75, 168, 240, 0.6),
+    transparent
+  );
+}
+.pv2-demo .scene-detail-card:hover,
+.pv2-demo .scene-detail-card.active {
+  transform: translateY(-5px);
+  border-color: var(--border-blue);
+  box-shadow:
+    var(--pv-rim),
+    0 26px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(75, 168, 240, 0.12);
+}
+.pv2-demo .scene-detail-card:nth-child(4)::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.5),
+    rgba(75, 168, 240, 0.5),
+    transparent
+  );
+}
+.pv2-demo .scene-detail-num {
+  font-family: var(--pv-mono);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.pv2-demo .scene-detail-title {
+  letter-spacing: -0.015em;
+  font-size: 1.1rem;
+}
+.pv2-demo .scene-detail-desc {
+  color: var(--text-secondary);
+}
+
+/* ── Book a live demo: glass CTA (links and onclick handlers untouched) ─── */
+.pv2-demo .after-tour,
+.pv2-demo .cta-band .container {
+  background: var(--pv-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.75rem;
+  box-shadow: var(--pv-rim), var(--pv-shadow);
+}
+.pv2-demo .after-tour {
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+}
+.pv2-demo .after-tour::before {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.5),
+    rgba(75, 168, 240, 0.6),
+    transparent
+  );
+}
+.pv2-demo .after-tour::after,
+.pv2-demo .cta-band .container::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  right: -18%;
+  top: -45%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(75, 168, 240, 0.2), transparent 65%);
+}
+.pv2-demo .after-tour > * {
+  position: relative;
+  z-index: 1;
+}
+.pv2-demo .after-tour h2 {
+  letter-spacing: -0.04em;
+}
+.pv2-demo .after-tour p {
+  color: var(--text-secondary);
+}
+.pv2-demo .after-tour-actions {
+  gap: 1rem;
+}
+.pv2-demo .after-tour .btn-primary {
+  box-shadow:
+    0 12px 38px rgba(75, 168, 240, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+.pv2-demo .cta-band .container {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--px);
+  max-width: calc(var(--max-w) - 2 * var(--px));
+}
+.pv2-demo .cta-band .container::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(75, 168, 240, 0.6),
+    transparent
+  );
+}
+.pv2-demo .cta-band .container > * {
+  position: relative;
+  z-index: 1;
+}
+.pv2-demo .cta-band h2 {
+  letter-spacing: -0.04em;
+}
+.pv2-demo .cta-band p {
+  color: var(--text-secondary);
+}
+
+/* Reveal (JS adds html.pv-ready; no JS or reduced motion keeps everything visible) */
+html.pv-ready [data-pv] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.pv-ready [data-pv].pv-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.pv-ready [data-pv] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .pv2-demo .scene-detail-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .pv2-demo .demo-hero {
+    padding: 118px 0 28px;
+  }
+  .pv2-demo .demo-hero::before,
+  .pv2-demo .demo-hero::after {
+    display: none;
+  }
+  .pv2-demo .tour-chapters {
+    padding: 0.9rem 0.6rem;
+  }
+}
