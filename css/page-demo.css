@@ -365,16 +365,33 @@ html.pv-ready [data-pv].pv-in {
   animation: none;
   display: none;
 }
-.pv2-demo .chapter-num { color: var(--blue-light); }
-.pv2-demo .chapter-item.active .chapter-num { color: var(--blue-light); }
-.pv2-demo .chapter-title { color: var(--text-secondary); }
-.pv2-demo .chapter-item.active .chapter-title { color: var(--white); }
-.pv2-demo .chapter-time { color: var(--text-secondary); }
+.pv2-demo .chapter-num {
+  color: var(--blue-light);
+}
+.pv2-demo .chapter-item.active .chapter-num {
+  color: var(--blue-light);
+}
+.pv2-demo .chapter-title {
+  color: var(--text-secondary);
+}
+.pv2-demo .chapter-item.active .chapter-title {
+  color: var(--white);
+}
+.pv2-demo .chapter-time {
+  color: var(--text-secondary);
+}
 .pv2-demo .scene-counter,
 .pv2-demo .kbd,
-.pv2-demo .player-browser-url { color: var(--blue-light); }
-.pv2-demo .scene-detail-num { color: var(--blue); }
-.pv2-demo .scene-detail-card[tabindex]:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.pv2-demo .player-browser-url {
+  color: var(--blue-light);
+}
+.pv2-demo .scene-detail-num {
+  color: var(--blue);
+}
+.pv2-demo .scene-detail-card[tabindex]:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .pv2-demo *,
@@ -382,5 +399,11 @@ html.pv-ready [data-pv].pv-in {
   .pv2-demo *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) and (min-width: 641px) {
+  /* transitions are off, so the scrolled header must not jump from 20px to 12px padding */
+  .pv2-demo .header.scrolled {
+    padding: var(--s5) 0 !important;
   }
 }
