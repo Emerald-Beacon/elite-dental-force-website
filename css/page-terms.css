@@ -1,0 +1,338 @@
+/* terms: original inline styles (verbatim), upgrade layer below */
+/* ====================================================
+   LEGAL PAGE — TERMS OF SERVICE
+   ==================================================== */
+body { background: #020917; }
+
+.legal-hero {
+  background: linear-gradient(180deg, #020d22 0%, #020917 100%);
+  border-bottom: 1px solid rgba(75,168,240,0.1);
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.legal-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  background: rgba(75,168,240,0.1);
+  color: #4ba8f0;
+  border: 1px solid rgba(75,168,240,0.22);
+  margin-bottom: 1.25rem;
+}
+
+.legal-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #f0f7ff;
+  margin: 0 0 1rem;
+}
+
+.legal-hero p {
+  font-size: 0.9375rem;
+  color: rgba(133,184,216,0.7);
+}
+
+.legal-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.legal-section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(75,168,240,0.08);
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+}
+
+.legal-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f7ff;
+  margin: 0 0 1rem;
+}
+
+.legal-section p,
+.legal-section li {
+  font-size: 0.9375rem;
+  color: rgba(133,184,216,0.8);
+  line-height: 1.75;
+}
+
+.legal-section ul {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.legal-section li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-section a {
+  color: #4ba8f0;
+}
+
+.legal-section strong {
+  color: #f0f7ff;
+  font-weight: 600;
+}
+
+.legal-nav-strip {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.legal-nav-strip a {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(133,184,216,0.6);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.legal-nav-strip a:hover,
+.legal-nav-strip a.active {
+  color: #4ba8f0;
+}
+
+.legal-nav-strip span {
+  color: rgba(133,184,216,0.25);
+}
+/* ================= v5 upgrade layer: readable long-form legal typography, sticky TOC, no decorative motion ================= */
+body.legal-page {
+  background: var(--navy-deep);
+}
+body.legal-page::before {
+  opacity: 0.3;
+}
+.legal-page main :is(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 4px;
+}
+.legal-page .legal-hero {
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.12),
+      transparent 60%
+    ),
+    var(--navy-deep);
+  padding: 9rem 0 2.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-blue);
+}
+.legal-page .legal-hero .container {
+  max-width: 1120px;
+}
+.legal-page .legal-badge {
+  font-family: "EDF V3 Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  border-radius: 0.25rem;
+  background: rgba(75, 168, 240, 0.06);
+  color: var(--blue-bright);
+}
+.legal-page .legal-hero h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  color: var(--text);
+  text-wrap: balance;
+}
+.legal-page .legal-hero p {
+  font-family: "EDF V3 Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+.legal-page .legal-nav-strip {
+  justify-content: flex-start;
+}
+.legal-page .legal-nav-strip a {
+  color: var(--text-secondary);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.legal-page .legal-nav-strip a:hover,
+.legal-page .legal-nav-strip a.active {
+  color: var(--blue-bright);
+}
+.legal-page .legal-nav-strip span {
+  color: var(--text-muted);
+}
+
+.legal-page .legal-body {
+  max-width: 1120px;
+  padding: 3.5rem 1.5rem 6rem;
+  display: block;
+}
+.legal-page .legal-toc {
+  margin-bottom: 2rem;
+}
+.legal-page .legal-toc::before {
+  content: "On this page" / "";
+  display: block;
+  font:
+    500 0.72rem/1.6 "EDF V3 Mono",
+    monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  margin-bottom: 0.75rem;
+}
+.legal-page .legal-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding-bottom: 0.5rem;
+}
+.legal-page .legal-toc a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.85rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--r-full);
+}
+.legal-page .legal-toc a:hover {
+  color: var(--blue-bright);
+  border-color: var(--blue);
+}
+.legal-page .legal-section {
+  margin-bottom: 0;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border-blue);
+  scroll-margin-top: 110px;
+}
+.legal-page .legal-section h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
+.legal-page .legal-section p,
+.legal-page .legal-section li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c5dff0;
+  max-width: 72ch;
+}
+.legal-page .legal-section a {
+  color: var(--blue-bright);
+  text-underline-offset: 3px;
+}
+.legal-page .legal-section strong {
+  color: var(--text);
+}
+
+@media (min-width: 1024px) {
+  .legal-page .legal-body {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    column-gap: 4rem;
+    align-items: start;
+  }
+  .legal-page .legal-toc {
+    grid-column: 1;
+    grid-row: 1 / span 40;
+    position: sticky;
+    top: 110px;
+    margin: 0;
+  }
+  .legal-page .legal-toc ol {
+    display: grid;
+    gap: 0;
+    overflow: visible;
+    border-left: 1px solid var(--border-blue);
+    padding: 0;
+  }
+  .legal-page .legal-toc a {
+    display: flex;
+    white-space: normal;
+    min-height: 44px;
+    padding: 0.55rem 0.9rem;
+    border: 0;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    border-radius: 0;
+    line-height: 1.45;
+  }
+  .legal-page .legal-toc a:hover,
+  .legal-page .legal-toc a.active {
+    background: rgba(75, 168, 240, 0.06);
+    border-left-color: var(--blue);
+  }
+  .legal-page .legal-section {
+    grid-column: 2;
+  }
+  .legal-page .legal-section:first-of-type {
+    padding-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  .legal-page .legal-hero {
+    padding: 7rem 0 2rem;
+  }
+}
+@media (min-width: 641px) {
+  .legal-page .header.scrolled {
+    padding: var(--s5) 0;
+  }
+}
+
+/* Separate families avoid inheriting the shared swap faces during cold rendering. */
+@font-face {
+  font-family: "EDF V3 Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+  src: url("../fonts/plus-jakarta-sans-latin-variable.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "EDF V3 Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: optional;
+  src: url("../fonts/jetbrains-mono-latin-variable.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+.legal-page {
+  --font:
+    "EDF V3 Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-primary: var(--font);
+  --font-heading: var(--font);
+}
+
+/* the shared header CTA shimmer animates left and registers layout shifts */
+.legal-page .btn-primary::after { display: none; }
+
+.legal-page .legal-section p a, .legal-page .legal-section li a { text-decoration: underline; text-decoration-thickness: 1px; }
