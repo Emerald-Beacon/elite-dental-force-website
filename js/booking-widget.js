@@ -94,6 +94,9 @@
     }
 
     /* ── Unread badge ── */
+    @media (prefers-reduced-motion: reduce) {
+      .edf-btn-online { animation: none; }
+    }
     .edf-unread-badge {
       position: absolute;
       top: -4px;
