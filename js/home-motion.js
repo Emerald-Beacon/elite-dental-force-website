@@ -1,5 +1,5 @@
 (() => {
-  const ASSET_VERSION = '20260930f';
+  const ASSET_VERSION = '20261004a';
   const hero = document.querySelector('[data-home-motion]');
   if (!hero) return;
   const media = matchMedia('(min-width: 1025px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)');
