@@ -1034,7 +1034,8 @@
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(payload),
             })
-              .then(function () {
+              .then(function (res) {
+                if (!res.ok) throw new Error("HTTP " + res.status);
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                   event: "compliance_doc_request",
