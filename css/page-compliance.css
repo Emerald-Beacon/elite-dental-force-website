@@ -951,5 +951,7 @@ body.cpl-page::before {
 
 @media (prefers-reduced-motion: reduce) {
   .cpl-page :is(.modal-overlay, .modal-card) { transition: none; }
+  .cpl-page .modal-overlay * { transition: none; }
   .cpl-page .modal-card, .cpl-page .modal-overlay.open .modal-card { transform: none; }
+  .cpl-page .modal-submit-btn:hover { transform: none; }
 }
