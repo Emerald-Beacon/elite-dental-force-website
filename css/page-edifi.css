@@ -170,3 +170,6 @@
   .edifi-page *, .edifi-page *::before, .edifi-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .edifi-page .ep-hero-screen-inner { transform: none; }
 }
+@media (prefers-reduced-motion: reduce) and (min-width: 641px) {
+  .edifi-page .header.scrolled { padding: var(--s5) 0; }
+}
