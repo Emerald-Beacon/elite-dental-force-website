@@ -36,17 +36,13 @@
     />
     <title>How the EDiFi Platform Works | Dental Revenue Automation</title>
 
+    <link rel="preload" href="../fonts/jetbrains-mono-latin-variable.woff2" media="(min-width: 800px)" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="../fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../css/styles.v2.css?v=20260930f" />
     <link rel="icon" type="image/png" href="../images/favicon.png" />
 
     <!-- Three.js — hero WebGL background -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
-      defer
-    ></script>
-
-    <style>
+<style>
       /* ================================================================
        PLATFORM PAGE — Enterprise-Grade Styles
        ================================================================ */
@@ -3138,8 +3134,9 @@
         }
       }
     </script>
+    <link rel="stylesheet" href="../css/page-platform.css?v=20260930f" />
   </head>
-  <body>
+  <body class="platform-page">
     <!-- ═══════ HEADER ═══════ -->
     <header class="header">
       <div class="container">
@@ -5082,8 +5079,8 @@
           <div class="role-grid">
             <div class="role-card">
               <img
-                src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Friendly dental front desk professional at reception desk"
+                src="../images/blog/cover-dental-eligibility-verification-best-practices-800.webp"
+                alt="Glass insurance card with verification shield"
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Front Desk</div>
@@ -5096,8 +5093,8 @@
             </div>
             <div class="role-card">
               <img
-                src="https://images.pexels.com/photos/7578803/pexels-photo-7578803.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Doctor reviewing patient treatment plan in clinical setting"
+                src="../images/blog/cover-life-of-cda-800.webp"
+                alt="Glass dental chart with mirror and hourglass"
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Doctor</div>
@@ -5110,8 +5107,8 @@
             </div>
             <div class="role-card">
               <img
-                src="https://images.pexels.com/photos/8867434/pexels-photo-8867434.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Dental billing coordinator working at computer in professional office"
+                src="../images/blog/cover-how-to-audit-dental-payments-800.webp"
+                alt="Magnifying glass examining a stack of payment records"
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Billing Team</div>
@@ -5124,8 +5121,8 @@
             </div>
             <div class="role-card">
               <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Dental office manager reviewing revenue analytics and performance charts"
+                src="../images/blog/cover-optimize-dental-practice-2025-800.webp"
+                alt="Glass calendar with interlocking gears"
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Office Manager</div>
@@ -7126,247 +7123,7 @@
     <script src="../js/tracking.js?v=20260930f" defer></script>
     <script src="../js/ghl-forms.js?v=20260930f" defer></script>
 
-    <!-- ================================================================
-       PLT-HERO — Three.js WebGL Particle + Data-Line Background
-       z-index: 0  |  pointer-events: none  |  alpha transparent
-       Mobile: scene is disabled below 768 px (CSS-only orbs remain)
-       ================================================================ -->
-    <script>
-      (function () {
-        "use strict";
 
-        // ── Guard: skip on mobile, skip if Three.js failed to load ──────────
-        if (window.matchMedia("(max-width: 768px)").matches) return;
-        if (typeof THREE === "undefined") return;
-
-        // ── Target container ─────────────────────────────────────────────────
-        var hero = document.querySelector(".plt-hero");
-        if (!hero) return;
-
-        // ── Canvas ───────────────────────────────────────────────────────────
-        var canvas = document.createElement("canvas");
-        canvas.style.cssText = [
-          "position:absolute",
-          "top:0",
-          "left:0",
-          "width:100%",
-          "height:100%",
-          "z-index:0",
-          "pointer-events:none",
-          "display:block",
-        ].join(";");
-        // Insert as the very first child so everything else renders on top
-        hero.insertBefore(canvas, hero.firstChild);
-
-        // ── Renderer ─────────────────────────────────────────────────────────
-        var W = hero.offsetWidth;
-        var H = hero.offsetHeight;
-
-        var renderer = new THREE.WebGLRenderer({
-          canvas: canvas,
-          alpha: true,
-          antialias: false, // off for perf — particles don't need it
-          powerPreference: "low-power",
-        });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        renderer.setSize(W, H);
-        renderer.setClearColor(0x000000, 0); // fully transparent — #020917 bg shows through
-
-        // ── Scene + Camera ───────────────────────────────────────────────────
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(60, W / H, 0.1, 200);
-        camera.position.z = 28;
-
-        // ── Brand colours ────────────────────────────────────────────────────
-        var C_BLUE = new THREE.Color(0x4ba8f0); // EDF electric blue
-        var C_NAVY = new THREE.Color(0x095ba7); // mid blue
-        var C_DEEP = new THREE.Color(0x001f71); // deep navy
-        var C_GOLD = new THREE.Color(0xffd700); // gold accent
-        var C_WHITE = new THREE.Color(0xd0eaff); // icy white-blue
-
-        // ── ① PARTICLE FIELD — 1 800 drifting points ─────────────────────────
-        var PARTICLE_COUNT = 1800;
-        var pPositions = new Float32Array(PARTICLE_COUNT * 3);
-        var pColors = new Float32Array(PARTICLE_COUNT * 3);
-        var pSizes = new Float32Array(PARTICLE_COUNT);
-        var pSpeeds = new Float32Array(PARTICLE_COUNT); // per-particle y-drift rate
-
-        var colourPool = [C_BLUE, C_NAVY, C_WHITE, C_WHITE, C_GOLD];
-
-        for (var i = 0; i < PARTICLE_COUNT; i++) {
-          // Spread wider than viewport so edges never look thin
-          pPositions[i * 3] = (Math.random() - 0.5) * 80; // x
-          pPositions[i * 3 + 1] = (Math.random() - 0.5) * 50; // y
-          pPositions[i * 3 + 2] = (Math.random() - 0.5) * 30; // z depth
-
-          // Gold particles are rare (~6 %)
-          var col =
-            Math.random() < 0.06
-              ? C_GOLD
-              : colourPool[Math.floor(Math.random() * (colourPool.length - 1))];
-
-          pColors[i * 3] = col.r;
-          pColors[i * 3 + 1] = col.g;
-          pColors[i * 3 + 2] = col.b;
-
-          // Gold particles are slightly larger and more visible
-          var isGold = col === C_GOLD;
-          pSizes[i] = isGold
-            ? 1.6 + Math.random() * 1.4
-            : 0.6 + Math.random() * 1.1;
-          pSpeeds[i] =
-            (Math.random() * 0.012 + 0.004) * (Math.random() < 0.5 ? 1 : -1);
-        }
-
-        var pGeo = new THREE.BufferGeometry();
-        pGeo.setAttribute("position", new THREE.BufferAttribute(pPositions, 3));
-        pGeo.setAttribute("color", new THREE.BufferAttribute(pColors, 3));
-        pGeo.setAttribute("size", new THREE.BufferAttribute(pSizes, 1));
-
-        var pMat = new THREE.PointsMaterial({
-          size: 0.18,
-          vertexColors: true,
-          transparent: true,
-          opacity: 0.55,
-          sizeAttenuation: true,
-          depthWrite: false,
-        });
-
-        var particles = new THREE.Points(pGeo, pMat);
-        scene.add(particles);
-
-        // ── ② DATA LINES — flowing line segments ─────────────────────────────
-        // A set of horizontal/diagonal line segments that suggest data flow /
-        // signal paths — very low opacity, subtle shimmer via uniform opacity.
-        var LINE_COUNT = 38;
-        var lineGroup = new THREE.Group();
-
-        var lineMats = []; // track for opacity animation
-
-        for (var li = 0; li < LINE_COUNT; li++) {
-          var lLen = 4 + Math.random() * 14; // line length
-          var lX = (Math.random() - 0.5) * 70;
-          var lY = (Math.random() - 0.5) * 44;
-          var lZ = -2 - Math.random() * 12; // behind particles
-          var lAngle = (Math.random() - 0.5) * 0.4; // slight diagonal
-
-          var x2 = lX + Math.cos(lAngle) * lLen;
-          var y2 = lY + Math.sin(lAngle) * lLen;
-
-          var lGeo = new THREE.BufferGeometry().setFromPoints([
-            new THREE.Vector3(lX, lY, lZ),
-            new THREE.Vector3(x2, y2, lZ),
-          ]);
-
-          // Alternate blue / gold lines; gold lines are rarer
-          var isGoldLine = Math.random() < 0.12;
-          var lineColor = isGoldLine
-            ? 0xffd700
-            : Math.random() < 0.5
-              ? 0x4ba8f0
-              : 0x095ba7;
-
-          var lMat = new THREE.LineBasicMaterial({
-            color: lineColor,
-            transparent: true,
-            opacity: 0.04 + Math.random() * 0.1,
-            depthWrite: false,
-          });
-
-          lineMats.push({
-            mat: lMat,
-            base: lMat.opacity,
-            phase: Math.random() * Math.PI * 2,
-            speed: 0.3 + Math.random() * 0.7,
-          });
-          lineGroup.add(new THREE.Line(lGeo, lMat));
-        }
-        scene.add(lineGroup);
-
-        // ── ③ WIREFRAME ICOSAHEDRON — distant, barely visible ────────────────
-        var icoGeo = new THREE.IcosahedronGeometry(14, 1);
-        var icoMat = new THREE.MeshBasicMaterial({
-          color: 0x4ba8f0,
-          wireframe: true,
-          transparent: true,
-          opacity: 0.028,
-          depthWrite: false,
-        });
-        var ico = new THREE.Mesh(icoGeo, icoMat);
-        ico.position.set(18, -6, -18);
-        scene.add(ico);
-
-        // ── Animation state ──────────────────────────────────────────────────
-        var clock = new THREE.Clock();
-        var rafId = null;
-        var running = true;
-
-        // ── Resize handler ───────────────────────────────────────────────────
-        function onResize() {
-          W = hero.offsetWidth;
-          H = hero.offsetHeight;
-          camera.aspect = W / H;
-          camera.updateProjectionMatrix();
-          renderer.setSize(W, H);
-        }
-        window.addEventListener("resize", onResize);
-
-        // ── Pause when tab hidden, resume when visible ───────────────────────
-        document.addEventListener("visibilitychange", function () {
-          if (document.hidden) {
-            running = false;
-            if (rafId) {
-              cancelAnimationFrame(rafId);
-              rafId = null;
-            }
-          } else {
-            running = true;
-            clock.start();
-            animate();
-          }
-        });
-
-        // ── Render loop ──────────────────────────────────────────────────────
-        function animate() {
-          if (!running) return;
-          rafId = requestAnimationFrame(animate);
-
-          var t = clock.getElapsedTime();
-
-          // Slow whole-scene yaw — gives a gentle parallax feel
-          scene.rotation.y = Math.sin(t * 0.06) * 0.08;
-          scene.rotation.x = Math.sin(t * 0.04) * 0.03;
-
-          // Per-particle y-drift — particles gently float up/down
-          var pos = pGeo.attributes.position;
-          for (var j = 0; j < PARTICLE_COUNT; j++) {
-            pos.array[j * 3 + 1] += pSpeeds[j] * 0.016;
-            // Wrap — particle teleports to bottom when it drifts too high
-            if (pos.array[j * 3 + 1] > 25) pos.array[j * 3 + 1] = -25;
-            if (pos.array[j * 3 + 1] < -25) pos.array[j * 3 + 1] = 25;
-          }
-          pos.needsUpdate = true;
-
-          // Icosahedron slow spin
-          ico.rotation.x += 0.0008;
-          ico.rotation.y += 0.0014;
-
-          // Line shimmer — each line pulses gently in opacity
-          for (var k = 0; k < lineMats.length; k++) {
-            var ld = lineMats[k];
-            ld.mat.opacity =
-              ld.base * (0.55 + 0.45 * Math.sin(t * ld.speed + ld.phase));
-          }
-
-          renderer.render(scene, camera);
-        }
-
-        // ── Start — only once the hero section is visible in the DOM ─────────
-        // (The section is above-the-fold so it is visible immediately on load,
-        //  but using rAF via the loop means we never block the critical path.)
-        animate();
-      })();
-    </script>
     <script src="../js/booking-widget.js?v=20260930f" defer></script>
     <script src="../js/cookie-consent.js?v=20260930f" defer></script>
   <script src="../js/booking-modal.js?v=20260930f" defer></script>
