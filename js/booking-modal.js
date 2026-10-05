@@ -191,7 +191,7 @@
       ".edf-bm-group input:focus{border-color:rgba(75,168,240,.55);background:rgba(75,168,240,.05)}",
       ".edf-bm-group input::placeholder{color:rgba(255,255,255,.25)}",
       "#edf-bm-error{font-size:.82rem;color:#f87171;min-height:18px;margin:4px 0 10px}",
-      "#edf-bm-submit{width:100%;padding:13px;background:linear-gradient(135deg,#095ba7,#4ba8f0);border:none;border-radius:12px;color:#fff;font-size:.95rem;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s,transform .2s;margin-top:4px}",
+      "#edf-bm-submit{width:100%;padding:13px;background:var(--blue);border:none;border-radius:12px;color:var(--navy-deep);font-size:.95rem;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s,transform .2s;margin-top:4px}",
       "#edf-bm-submit:hover{opacity:.9;transform:translateY(-1px)}",
       "#edf-bm-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}",
       "#edf-bm-skip{display:block;text-align:center;margin-top:14px;font-size:.78rem;color:rgba(133,184,216,.5);text-decoration:none}",
