@@ -342,3 +342,7 @@ body.legal-page::before {
 @media (max-width: 1023px) {
   .legal-page .legal-toc ol { min-height: 64px; }
 }
+
+@media (min-width: 1024px) {
+  .legal-page .legal-toc { top: 165px; }
+}

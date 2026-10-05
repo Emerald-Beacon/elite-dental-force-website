@@ -494,3 +494,7 @@ body.faq-page::before { opacity: .3; }
 }
 
 .faq-page .fq-nav-link .fq-nav-count { color: var(--text-secondary); }
+
+@media (min-width: 1024px) {
+  .faq-page .fq-nav { top: 165px; }
+}
