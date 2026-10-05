@@ -510,10 +510,12 @@ export async function mountHeroMotion(hero, eligible, atTop) {
   function update({ detail: { progress, index, anchor } }) {
     hero.dataset.progress = progress.toFixed(5);
     const hold = progress < .28 || progress >= .88;
-    hero.classList.toggle('motion-separating', progress >= .12 && progress < .28);
+    const separating = progress >= .12 && progress < .28;
+    hero.classList.toggle('motion-separating', separating);
     for (const [i, badge] of badges.entries()) {
       badge.style.visibility = hold ? (i < 2 ? 'visible' : 'hidden') : (i === index ? 'visible' : 'hidden');
-      badge.style.transform = '';
+      // Slide badge 1 from its right anchor to the left edge with a transform, so the move never changes layout.
+      badge.style.transform = i === 0 && separating ? `translateX(${-(badge.offsetParent.getBoundingClientRect().width - badge.offsetParent.clientLeft * 2 - badge.getBoundingClientRect().width - 24)}px)` : '';
       badge.style.left = badge.style.right = badge.style.top = badge.style.bottom = '';
     }
     leader.style.visibility = index < 0 || !anchor?.visible ? 'hidden' : 'visible';
