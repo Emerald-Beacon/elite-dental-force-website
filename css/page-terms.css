@@ -336,3 +336,9 @@ body.legal-page::before {
 .legal-page .btn-primary::after { display: none; }
 
 .legal-page .legal-section p a, .legal-page .legal-section li a { text-decoration: underline; text-decoration-thickness: 1px; }
+
+.legal-page .legal-nav-strip span { color: var(--text-secondary); }
+
+@media (max-width: 1023px) {
+  .legal-page .legal-toc ol { min-height: 64px; }
+}

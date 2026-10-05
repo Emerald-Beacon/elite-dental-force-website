@@ -492,3 +492,5 @@ body.faq-page::before { opacity: .3; }
   --font-primary: var(--font);
   --font-heading: var(--font);
 }
+
+.faq-page .fq-nav-link .fq-nav-count { color: var(--text-secondary); }

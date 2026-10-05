@@ -94,7 +94,7 @@
   <!-- BODY -->
   <main class="legal-body">
 
-    <nav class="legal-toc" aria-label="Table of contents"><ol><li><a href="#s1">1. Acceptance of Terms</a></li><li><a href="#s2">2. Use of the Website</a></li><li><a href="#s3">3. Intellectual Property</a></li><li><a href="#s4">4. EDiFi Platform: Separate Agreement</a></li><li><a href="#s5">5. Disclaimer of Warranties</a></li><li><a href="#s6">6. Limitation of Liability</a></li><li><a href="#s7">7. Indemnification</a></li><li><a href="#s8">8. Third Party Links and Content</a></li><li><a href="#s9">9. Governing Law and Dispute Resolution</a></li><li><a href="#s10">10. Changes to These Terms</a></li><li><a href="#s11">11. General Provisions</a></li><li><a href="#s12">12. Contact Us</a></li></ol></nav>
+    <nav class="legal-toc" aria-label="Table of contents"><ol></ol></nav>
 
     <div class="legal-section">
       <p>Please read these Terms of Service ("Terms") carefully before using the website located at <a href="https://elitedentalforce.com">www.elitedentalforce.com</a> (the "Site"), operated by Elite Dental Force Inc. ("Elite Dental Force," "we," "us," or "our"), a company incorporated in the State of Utah.</p>
@@ -299,5 +299,24 @@
 
   <script src="../js/booking-modal.js?v=20261005b" defer></script>
   <script src="../js/monitoring.js?v=20261005b" defer></script>
+  <script>
+    (function () {
+      var toc = document.querySelector(".legal-toc");
+      var list = toc.querySelector("ol");
+      document.querySelectorAll(".legal-section h2[id]").forEach(function (heading) {
+        var item = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = "#" + heading.id;
+        link.textContent = heading.textContent;
+        link.addEventListener("click", function () {
+          heading.tabIndex = -1;
+          requestAnimationFrame(function () { heading.focus({ preventScroll: true }); });
+        });
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+      toc.appendChild(list);
+    })();
+  </script>
 </body>
 </html>

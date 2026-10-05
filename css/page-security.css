@@ -967,3 +967,5 @@ body.sec-page::before {
   --font-primary: var(--font);
   --font-heading: var(--font);
 }
+
+.sec-page .sec-cc-tag { color: var(--text-secondary); }

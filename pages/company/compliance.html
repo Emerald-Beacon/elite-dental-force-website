@@ -897,7 +897,7 @@
         </div>
 
         <!-- Success state -->
-        <div class="modal-success" id="modal-success" aria-live="polite">
+        <div class="modal-success" id="modal-success" aria-live="polite" tabindex="-1">
           <div class="modal-success-icon">
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
           </div>
@@ -1062,5 +1062,39 @@
 
     <script src="../../js/booking-modal.js?v=20261005b" defer></script>
     <script src="../../js/monitoring.js?v=20261005b" defer></script>
+      <script>
+      (function () {
+        var modal = document.getElementById("download-modal");
+        var open = window.openModal;
+        var close = window.closeModal;
+        var trigger;
+        window.openModal = function () {
+          trigger = document.activeElement;
+          open.apply(this, arguments);
+          setTimeout(function () {
+            if (modal.classList.contains("open")) document.getElementById("comp-name").focus();
+          }, 350);
+        };
+        window.closeModal = function () {
+          var wasOpen = modal.classList.contains("open");
+          close.apply(this, arguments);
+          if (wasOpen && trigger && trigger.isConnected) trigger.focus();
+        };
+        modal.addEventListener("keydown", function (event) {
+          if (event.key !== "Tab") return;
+          var items = Array.from(modal.querySelectorAll('button, input:not([type="hidden"]), select, a[href]'))
+            .filter(function (node) { return !node.disabled && node.getClientRects().length; });
+          var first = items[0];
+          var last = items[items.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
