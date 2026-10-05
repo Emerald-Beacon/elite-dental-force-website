@@ -194,8 +194,8 @@
       "#edf-bm-submit{width:100%;padding:13px;background:var(--blue);border:none;border-radius:12px;color:var(--navy-deep);font-size:.95rem;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s,transform .2s;margin-top:4px}",
       "#edf-bm-submit:hover{opacity:.9;transform:translateY(-1px)}",
       "#edf-bm-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}",
-      "#edf-bm-skip{display:block;text-align:center;margin-top:14px;font-size:.78rem;color:rgba(133,184,216,.5);text-decoration:none}",
-      "#edf-bm-skip:hover{color:rgba(133,184,216,.8);text-decoration:underline}",
+      "#edf-bm-skip{display:block;text-align:center;margin-top:14px;font-size:.78rem;color:var(--text-secondary);text-decoration:none}",
+      "#edf-bm-skip:hover{color:var(--text);text-decoration:underline}",
     ].join("");
     document.head.appendChild(css);
 
