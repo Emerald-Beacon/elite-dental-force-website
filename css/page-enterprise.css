@@ -1459,3 +1459,6 @@
 .enterprise-page main > section:not(.ent-hero) {
   contain: layout style;
 }
+@media (prefers-reduced-motion: reduce) and (min-width: 641px) {
+  .enterprise-page .header.scrolled { padding: var(--s5) 0; }
+}
