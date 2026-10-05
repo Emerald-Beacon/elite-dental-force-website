@@ -1,6 +1,6 @@
 # Elite Dental Force
 
-> Elite Dental Force Inc. builds AI powered revenue intelligence infrastructure for dental practices. Its flagship platform, EDiFi, automates insurance eligibility verification, benefits breakdowns, clean claim preparation, denial prevention, and payment auditing for dental offices and DSOs across the United States. The company is headquartered in Saratoga Springs, Utah, and has more than 500 dental offices on its pre launch waitlist.
+> Elite Dental Force Inc. builds AI powered revenue intelligence infrastructure for dental practices. Its flagship platform, EDiFi, automates insurance eligibility verification, benefits breakdowns, clean claim preparation, denial prevention, and payment auditing for dental offices and DSOs across the United States. The company is headquartered in Saratoga Springs, Utah, and is running a pre launch early access waitlist.
 
 Key facts:
 - Company: Elite Dental Force Inc., founded by Alvin Uta'i (CEO) and Benjamin Tuinei
