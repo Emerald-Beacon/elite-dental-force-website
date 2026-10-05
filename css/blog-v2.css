@@ -1,6 +1,19 @@
 .journal-index, .journal-article { position: relative; color: var(--text); }
+/* Keep a cold font load from swapping metrics after the journal has painted. */
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: optional; src: url('../fonts/plus-jakarta-sans-latin-variable.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 500; font-display: optional; src: url('../fonts/jetbrains-mono-latin-variable.woff2') format('woff2'); }
+/* Topic anchors can scroll before the shared header initializes. Keep its geometry stable. */
+.blog-page .header { border-bottom: 1px solid transparent; }
+.blog-page .header.scrolled { padding: var(--s5) 0; }
+@media (max-width: 640px) { .blog-page .header.scrolled { padding: var(--s3) 0; } }
 .blog-page .btn-primary::after { display: none; }
 .journal-index [hidden], .journal-article [hidden] { display: none !important; }
+html[data-initial-blog-topic]:not([data-initial-blog-topic="claims-denials"]) .journal-feature,
+html[data-initial-blog-topic="eligibility"] [data-blog-card]:not([data-topic="eligibility"]),
+html[data-initial-blog-topic="payment-integrity"] [data-blog-card]:not([data-topic="payment-integrity"]),
+html[data-initial-blog-topic="claims-denials"] [data-blog-card]:not([data-topic="claims-denials"]),
+html[data-initial-blog-topic="ai-operations"] [data-blog-card]:not([data-topic="ai-operations"]) { display: none !important; }
+.journal-index #article-count { width: 12ch; text-align: right; }
 .journal-index a, .journal-article a { color: inherit; }
 .journal-index :focus-visible, .journal-article :focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
 .journal-kicker, .journal-mono { font-family: 'JetBrains Mono', monospace; font-size: .72rem; font-weight: 500; letter-spacing: .04em; color: var(--text-secondary); }

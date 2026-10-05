@@ -39,4 +39,5 @@
   document.querySelector('[data-reset-search]').addEventListener('click', () => { input.value = ''; topic = 'all'; write(true); input.focus(); });
   addEventListener('popstate', read);
   read();
+  delete document.documentElement.dataset.initialBlogTopic;
 })();

@@ -31,6 +31,14 @@
     <meta property="og:site_name" content="Elite Dental Force" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Dental Revenue Intelligence Blog | Elite Dental Force</title>
+    <script>
+      (() => {
+        const topic = new URLSearchParams(location.search).get('topic');
+        if (['eligibility', 'payment-integrity', 'claims-denials', 'ai-operations'].includes(topic)) {
+          document.documentElement.dataset.initialBlogTopic = topic;
+        }
+      })();
+    </script>
 
     <link rel="preload" href="../../fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="../../css/styles.v2.css?v=20261005c" />
