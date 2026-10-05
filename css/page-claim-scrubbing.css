@@ -337,7 +337,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--acs-blue);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "EDF V4 Mono", monospace;
   margin-bottom: 6px;
 }
 .acs-component-card h4 {
@@ -400,7 +400,7 @@
 .acs-stat-value {
   font-size: 1.9rem;
   font-weight: 800;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "EDF V4 Mono", monospace;
   background: linear-gradient(135deg, #fff 0%, #62bcff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -449,7 +449,7 @@
   color: var(--acs-blue);
   flex-shrink: 0;
   margin-top: 2px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "EDF V4 Mono", monospace;
 }
 .acs-process-step h4 {
   font-size: 0.95rem;
@@ -716,11 +716,11 @@ body.acs-page { background: var(--navy-deep); counter-reset: sec; --acs-muted: #
 
 .acs-page .acs-hero { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.14), transparent 62%), var(--navy-deep); padding-block: 130px 80px; }
 .acs-page .acs-hero::before { display: none; }
-.acs-page .acs-hero-badge { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: .12em; background: rgba(75,168,240,.06); border-color: rgba(75,168,240,.32); color: var(--blue-bright); }
+.acs-page .acs-hero-badge { font-family: 'EDF V4 Mono', monospace; font-weight: 500; letter-spacing: .12em; background: rgba(75,168,240,.06); border-color: rgba(75,168,240,.32); color: var(--blue-bright); }
 .acs-page .acs-hero-badge-dot { background: var(--blue-bright); box-shadow: 0 0 14px var(--blue-glow); }
 .acs-page .acs-hero h1 { letter-spacing: -.05em; color: var(--text); }
 .acs-page .acs-hero h1 :is(span, em) { background: none; -webkit-text-fill-color: currentColor; color: var(--blue-bright); filter: none; }
-.acs-page .acs-hero-meta, .acs-page .acs-breadcrumb { font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; color: var(--text-secondary); }
+.acs-page .acs-hero-meta, .acs-page .acs-breadcrumb { font-family: 'EDF V4 Mono', monospace; letter-spacing: .04em; color: var(--text-secondary); }
 .acs-page .acs-breadcrumb a { color: var(--blue-bright); }
 .acs-page .acs-breadcrumb-current { color: #c5dff0; }
 .acs-page .acs-hero p { color: var(--text-secondary); }
@@ -730,26 +730,26 @@ body.acs-page { background: var(--navy-deep); counter-reset: sec; --acs-muted: #
   box-shadow: 0 24px 60px rgba(0,0,0,.34), inset 0 1px rgba(255,255,255,.14);
 }
 .acs-page .acs-answer-box::before { content: ""; position: absolute; top: 0; left: 8%; right: 8%; height: 1px; background: linear-gradient(90deg, transparent, rgba(75,168,240,.8), rgba(255,215,0,.5), transparent); }
-.acs-page .acs-answer-box-label { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
+.acs-page .acs-answer-box-label { font-family: 'EDF V4 Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
 .acs-page .acs-answer-box p { color: #c5dff0; }
 
-.acs-page .acs-toc-title { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
+.acs-page .acs-toc-title { font-family: 'EDF V4 Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
 .acs-page .acs-toc-item { padding: 9px 10px; margin-left: -10px; border-left: 2px solid transparent; color: var(--text-secondary); }
 .acs-page .acs-toc-item:is(:hover, .active) { color: var(--blue-bright); background: rgba(75,168,240,.06); border-left-color: var(--blue); }
 .acs-page .acs-toc-cta { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 65%), linear-gradient(145deg, #172332, #08111f); border-color: rgba(75,168,240,.4); box-shadow: inset 0 1px rgba(255,255,255,.12); }
 .acs-page .acs-toc a[style*="font-size: 12.5px"] { min-height: 44px; display: flex !important; align-items: center; color: var(--blue-bright) !important; }
 
 .acs-page .acs-article h2 { counter-increment: sec; letter-spacing: -.035em; font-size: clamp(1.625rem, 3vw, 2.25rem); line-height: 1.15; border-top-color: rgba(75,168,240,.2); }
-.acs-page .acs-article h2[id]::before { content: "0" counter(sec) / ""; display: block; font: 500 11px/1.6 'JetBrains Mono', monospace; letter-spacing: .12em; color: var(--blue-bright); margin-bottom: 12px; }
+.acs-page .acs-article h2[id]::before { content: "0" counter(sec) / ""; display: block; font: 500 11px/1.6 'EDF V4 Mono', monospace; letter-spacing: .12em; color: var(--blue-bright); margin-bottom: 12px; }
 .acs-page .acs-article h2.acs-faq-title::before, .acs-page .acs-cta h2::before { display: none; content: none; }
 .acs-page .acs-article p { color: #c5dff0; }
 .acs-page .acs-article :is(li, p) strong { color: var(--text); }
 
 .acs-page :is(.acs-stat-card, .acs-component-card, .acs-cause-card, .acs-faq-item, .acs-process-step, .acs-callout) { background: linear-gradient(145deg, #15212e, #09121f 70%); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07), 0 16px 40px rgba(0,0,0,.2); }
-.acs-page .acs-stat-value { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: -.07em; background: none; -webkit-text-fill-color: currentColor; color: var(--text); }
+.acs-page .acs-stat-value { font-family: 'EDF V4 Mono', monospace; font-weight: 500; letter-spacing: -.07em; background: none; -webkit-text-fill-color: currentColor; color: var(--text); }
 .acs-page .acs-stat-card:first-child .acs-stat-value { color: var(--gold); }
 .acs-page :is(.acs-stat-label, .acs-stat-source) { color: var(--text-secondary); }
-.acs-page :is(.acs-component-card-num, .acs-cause-num, .acs-process-num, .acs-callout-label) { font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--blue-bright); }
+.acs-page :is(.acs-component-card-num, .acs-cause-num, .acs-process-num, .acs-callout-label) { font-family: 'EDF V4 Mono', monospace; font-weight: 500; color: var(--blue-bright); }
 .acs-page :is(.acs-component-card, .acs-cause-card, .acs-process-step) p { color: #c5dff0; }
 .acs-page .acs-model-side { background: linear-gradient(145deg, #14202e, #0a1321); }
 .acs-page .acs-model-side--reactive { background: linear-gradient(145deg, #231820, #0e1220); border-color: rgba(248,113,113,.3); }
@@ -764,8 +764,8 @@ body.acs-page { background: var(--navy-deep); counter-reset: sec; --acs-muted: #
 .acs-page .acs-compare-table th:first-child, .acs-page .acs-compare-table td:first-child { color: var(--text); }
 
 .acs-page .acs-edifi-callout, .acs-page .acs-cta { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); border-radius: 24px; }
-.acs-page .acs-edifi-callout-label { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
-.acs-page .acs-edifi-module { font-family: 'JetBrains Mono', monospace; border-radius: 6px; color: #c5dff0; }
+.acs-page .acs-edifi-callout-label { font-family: 'EDF V4 Mono', monospace; font-weight: 500; }
+.acs-page .acs-edifi-module { font-family: 'EDF V4 Mono', monospace; border-radius: 6px; color: #c5dff0; }
 .acs-page .acs-faq-q { color: var(--text); }
 .acs-page .acs-faq-a { color: #c5dff0; }
 .acs-page .acs-cta p { color: var(--text-secondary); }
@@ -777,4 +777,33 @@ body.acs-page { background: var(--navy-deep); counter-reset: sec; --acs-muted: #
 @media (prefers-reduced-motion: reduce) {
   .acs-page .acs-hero-badge-dot { animation: none; }
   .acs-page .fade-in { opacity: 1; transform: none; transition: none; }
+}
+
+/* Keep header geometry stable through scrolling in either motion setting. */
+@media (min-width: 641px) {
+  .acs-page .header.scrolled { padding: var(--s5) 0; }
+}
+
+/* Separate families keep late fonts from replacing the first rendered metrics. */
+@font-face {
+  font-family: 'EDF V4 Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+  src: url('../fonts/plus-jakarta-sans-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'EDF V4 Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: optional;
+  src: url('../fonts/jetbrains-mono-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.acs-page {
+  --font: 'EDF V4 Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-primary: var(--font);
+  --font-heading: var(--font);
 }
