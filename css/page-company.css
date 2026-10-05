@@ -1,0 +1,118 @@
+
+.company-page {
+  --v3-bg: #0b111b;
+  --v3-panel: #111e2e;
+  --v3-line: rgba(148, 191, 226, .22);
+  --v3-copy: #bccbdb;
+  --v3-blue: #4ba8f0;
+  background: var(--v3-bg);
+  color: #edf3fa;
+}
+.company-page::before { display: none; }
+.company-page main { overflow: clip; }
+.company-page main .container { max-width: 1240px; padding-inline: 24px; }
+.company-page main .section { padding: 64px 0; background: var(--v3-bg); }
+.company-page main .section.bg-light, .company-page main .section.bg-alt { background: #0e1825; }
+.company-page main h1, .company-page main h2, .company-page main h3 { text-wrap: balance; letter-spacing: -.035em; }
+.company-page main h2 { font-size: clamp(1.85rem, 3.1vw, 2.85rem); line-height: 1.2; }
+.company-page main p { color: var(--v3-copy); line-height: 1.8; }
+.company-page main .section-header { text-align: left; max-width: 780px; margin: 0 0 36px; }
+.company-page main .section-header p { margin-left: 0; max-width: 660px; }
+.company-page main .overline { color: var(--v3-blue); font: 600 .7rem/1.6 "JetBrains Mono", monospace; letter-spacing: .12em; }
+.company-page main .btn { border-radius: 8px; transition: transform .2s; }
+.company-page main .btn-primary, .company-page main .btn-white, .company-page main button[type="submit"] {
+  background: #4ba8f0; color: #081321; border: 1px solid #4ba8f0; box-shadow: 0 8px 28px #030b162b;
+}
+.company-page main .btn-secondary { background: #152334; color: #edf3fa; border-color: #63819e; }
+.company-page :is(a, button, input, select, textarea, [tabindex]):focus-visible { outline: 2px solid #ffd700; outline-offset: 5px; }
+.company-page main :is(input, select, textarea) { background: #0a1422; color: #edf3fa; border-color: #637b94; min-height: 48px; }
+.company-page main :is(input, textarea)::placeholder { color: #acbdd0; opacity: 1; }
+.company-page main label { color: #c9d7e6; }
+.company-page main .cta-band { background: var(--v3-bg); padding: 0 24px 64px; border: 0; }
+.company-page main .cta-band::before { display: none; }
+.company-page main .cta-band > .container {
+  padding: 48px 24px; border: 1px solid #36546f; border-radius: 20px;
+  background: radial-gradient(ellipse at 50% 0%, #24436166, transparent 70%), linear-gradient(140deg, #142335, #0d1724);
+  box-shadow: 0 1px 0 #99cfff26 inset, 0 24px 60px #03091444;
+}
+.company-page main .cta-band h2 { max-width: 800px; margin-inline: auto; }
+.company-page main .cta-band p { max-width: 650px; margin-inline: auto; }
+.company-page main .cta-band-actions { gap: 12px; }
+.company-page main [data-animate] { opacity: 1; transform: none; }
+@media (min-width: 800px) {
+  .company-page main .section { padding: 96px 0; }
+  .company-page main .section-header { margin-bottom: 48px; }
+  .company-page main .cta-band { padding-bottom: 96px; }
+  .company-page main .cta-band > .container { padding: 72px 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .company-page main *, .company-page main ::before, .company-page main ::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .company-page main [data-animate] { opacity: 1 !important; transform: none !important; }
+}
+
+.company-page .co-hero { padding: 92px 0 40px; text-align: left; background: radial-gradient(ellipse at 85% 0%,#23486555,transparent 65%),#0b111b; }
+.company-page .co-hero-glow { display: none; }
+.company-page .co-hero-kicker { border: 0; border-left: 2px solid #ffd700; border-radius: 0; padding: 0 0 0 12px; margin-bottom: 26px; font: 600 .7rem/1.7 "JetBrains Mono",monospace; color: #a5ccea; }
+.company-page .co-hero-h1 { font-size: clamp(2.6rem,5.4vw,5rem); line-height: 1.08; margin: 0 0 26px; }
+.company-page .co-h1-accent, .company-page .co-stat-val { color: #4ba8f0; background: none; -webkit-text-fill-color: currentColor; }
+.company-page .co-hero-sub { margin: 0 0 36px; color: #bccbdb; font-size: 1rem; line-height: 1.9; }
+.company-page .co-stat-strip { min-width: 0; width: 100%; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border: 1px solid var(--v3-line); border-radius: 14px; background: linear-gradient(130deg,#172738,#0e1826); }
+.company-page .co-stat { align-items: flex-start; padding: 24px; gap: 12px; border-bottom: 1px solid var(--v3-line); }
+.company-page .co-stat-val { color: #edf3fa; font-variant-numeric: tabular-nums; font-size: 2rem; }
+.company-page .co-stat:first-child .co-stat-val { color: #ffd700; }
+.company-page .co-stat-lbl { font: 500 .64rem/1.6 "JetBrains Mono",monospace; color: #bccbdb; }
+.company-page .co-founder-card { grid-template-columns: 1fr; background: linear-gradient(130deg,#182738,#101b29); border-color: #36546f; border-radius: 18px; box-shadow: 0 1px 0 #a5d4ff26 inset,0 30px 60px #03091444; }
+.company-page .co-founder-photo-col { height: 380px; }
+.company-page .co-founder-photo-fade { display: none; }
+.company-page .co-founder-content-col { padding: 32px 26px; }
+.company-page .co-founder-quote { color: #e1eaf4; border-color: #ffd700; font-style: normal; }
+.company-page .co-founder-bio { color: #bccbdb; }
+.company-page .co-chip { border-radius: 4px; color: #aad8fa; }
+.company-page .co-bento-mission, .company-page .co-bento-val { background: linear-gradient(135deg,#182b40,#111d2d); border-color: var(--v3-line); border-radius: 14px; box-shadow: 0 1px 0 #bddfff12 inset; }
+.company-page .co-bento-mission { padding: 32px 26px; }
+.company-page .co-bento-mission h2 { font-size: clamp(1.8rem,2.8vw,2.5rem); }
+.company-page .co-bento-mission p, .company-page .co-bento-val p { color: #bccbdb; }
+.company-page .team-grid { gap: 20px; }
+.company-page .team-card, .company-page .advisor-card { background: #132133; border: 1px solid var(--v3-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 36px #03091433; }
+.company-page .team-card-image { aspect-ratio: 4/5; height: auto; }
+.company-page .team-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.company-page .team-card-info { padding: 24px; }
+.company-page .team-bio { color: #bccbdb; }
+.company-page .team-title { color: #9cd3ff; }
+.company-page .advisors-grid { gap: 18px; }
+.company-page .photo-gallery { gap: 16px; }
+.company-page .photo-gallery-item { border-radius: 12px; overflow: hidden; }
+.company-page .partners-scroll { background: #101b29; border-block: 1px solid var(--v3-line); }
+@media (min-width: 1000px) {
+  .company-page .co-hero { padding: 112px 0 52px; }
+  .company-page .co-hero-inner { display: grid; grid-template-columns: 1.6fr 1fr; gap: 0 72px; align-items: start; }
+  .company-page .co-hero-kicker { grid-column: 1 / -1; justify-self: start; }
+  .company-page .co-hero-h1 { grid-column: 1; grid-row: 2 / 4; }
+  .company-page .co-hero-sub { grid-column: 2; grid-row: 2; padding-top: 8px; margin-bottom: 28px; font-size: .9rem; }
+  .company-page .co-stat-strip { grid-column: 2; grid-row: 3; }
+  .company-page .co-stat { padding: 20px; }
+  .company-page .co-stat-val { font-size: 1.85rem; }
+  .company-page .co-founder-card { grid-template-columns: .9fr 1.2fr; }
+  .company-page .co-founder-photo-col { height: auto; min-height: 580px; }
+  .company-page .co-founder-content-col { padding: 48px; }
+  .company-page .team-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .company-page .co-bento { grid-template-columns: 1.15fr 1fr; }
+  .company-page .co-bento-mission { padding: 44px; }
+}
+@media (max-width: 799px) {
+  .company-page .co-hero-h1 br { display: none; }
+  .company-page .co-bento { grid-template-columns: 1fr; }
+  .company-page .co-stat-lbl { font-size: .56rem; }
+  .company-page .co-stat { padding: 22px 18px; }
+}
+
+/* Keep the shared header geometry intact; only suppress its layout-moving shimmer. */
+.company-page .btn-primary::after { display: none; }
+
+@media (min-width: 1000px) { .company-page .co-hero { padding-top: 180px; } }
+
+.company-page .transformation-section > div:last-child > div { background: linear-gradient(135deg,#172a3f,#101b2a) !important; border-color: #36546f !important; }
+.company-page main [style*="color: rgba(255, 255, 255, 0.4)"] { color: #bccbdb !important; }
+.company-page main [style*="color: rgba(255, 100, 100, 0.7)"] { color: #ffaba6 !important; }
+
+@media (max-width: 799px) { .company-page main :is(.overline,.plt-hero-badge,.plt-stage-num,.tour-label,.co-hero-kicker,.co-stat-lbl,.ct-kicker,.ct-strip-label,.ct-info-card-label,.ptrs-kicker) { font-family: ui-monospace, monospace; } }
