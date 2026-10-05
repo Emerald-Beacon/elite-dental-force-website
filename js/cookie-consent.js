@@ -14,8 +14,9 @@
     return (prefix ? prefix + '/' : '') + 'pages/privacy.html';
   })();
 
-  var existing = localStorage.getItem(STORAGE_KEY);
-  if (existing) {
+  var existing = null;
+  try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  if (existing === 'accepted' || existing === 'declined') {
     if (existing === 'accepted') fireConsent();
     return;
   }
@@ -177,7 +178,7 @@
     });
 
     function dismiss(choice) {
-      localStorage.setItem(STORAGE_KEY, choice);
+      try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
       banner.style.transform = 'translateY(100%)';
       banner.style.transition = 'transform 0.35s ease';
       setTimeout(function () { banner.remove(); }, 400);
