@@ -17,7 +17,7 @@ $specs = @(
   @{ out = 'images\og-demo.png';            cat = 'Product Walkthrough';  title = 'See <em>EDiFi</em> in Action';                      sub = 'Book a 30 minute walkthrough of the dental revenue intelligence platform.'; right = 'Book a Demo' },
   @{ out = 'images\og-security.png';        cat = 'Security';             title = 'Enterprise Grade <em>Security</em>';                sub = 'HIPAA aligned infrastructure protecting patient data at every layer.'; right = 'Elite Dental Force' },
   @{ out = 'images\og-faq.png';             cat = 'Questions Answered';   title = 'Frequently Asked <em>Questions</em>';               sub = 'Everything offices ask about EDiFi, onboarding, and pricing.'; right = 'Elite Dental Force' },
-  @{ out = 'images\og-investors.png';       cat = 'Investor Relations';   title = 'Invest in Dental <em>Revenue Intelligence</em>';    sub = 'AI infrastructure for the dental economy. 500 offices on the waitlist.'; right = 'Elite Dental Force' },
+  @{ out = 'images\og-investors.png';       cat = 'Investor Relations';   title = 'Invest in Dental <em>Revenue Intelligence</em>';    sub = 'AI infrastructure for the dental economy. Join the waitlist for early access.'; right = 'Elite Dental Force' },
   @{ out = 'images\blog\og-proactive-ai.png'; cat = 'AI and Automation';  title = 'Proactive AI for <em>Dental Practices</em>';        sub = 'Shift from reactive billing cleanup to proactive revenue protection.'; right = 'Elite Dental Force Blog' }
 )
 
