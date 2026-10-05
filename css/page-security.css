@@ -1,0 +1,969 @@
+/* company/security: original inline styles (verbatim), upgrade layer below */
+/* ====================================================
+   SECURITY PAGE — Elite Dental Force
+   ==================================================== */
+
+/* Grid backdrop — stronger lines */
+body::before {
+  background-image:
+    linear-gradient(rgba(75,168,240,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75,168,240,0.10) 1px, transparent 1px);
+  background-size: 55px 55px;
+}
+
+/* Section tints — let grid show through */
+.sec-page main .section             { background: rgba(2,9,23,0.35); }
+.sec-page main .section.bg-light    { background: rgba(8,21,48,0.42); }
+.sec-page main .section.bg-alt      { background: rgba(10,26,58,0.42); }
+.sec-page main .section-header h2,
+.sec-page main .section h2          { color: #fff; }
+.sec-page main .section-header p    { color: rgba(255,255,255,0.48); }
+.sec-page main .section .overline   { color: #4ba8f0 !important; }
+
+/* ── 1. HERO ── */
+.sec-hero {
+  position: relative;
+  padding: 196px 0 108px;
+  text-align: center;
+  overflow: hidden;
+  background: rgba(2,9,23,0.45);
+}
+
+.sec-hero-glow {
+  position: absolute;
+  width: 960px;
+  height: 960px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(9,91,167,0.24) 0%, transparent 62%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  pointer-events: none;
+}
+
+.sec-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.sec-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4ba8f0;
+  border: 1px solid rgba(75,168,240,0.28);
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 36px;
+}
+
+.sec-hero-h1 {
+  font-size: clamp(3rem, 6.5vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 auto 28px;
+  max-width: 780px;
+}
+
+.sec-h1-accent {
+  background: linear-gradient(90deg, #4ba8f0 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sec-hero-sub {
+  font-size: 1.08rem;
+  line-height: 1.78;
+  color: rgba(255,255,255,0.5);
+  max-width: 620px;
+  margin: 0 auto 52px;
+}
+
+/* Trust pills row */
+.sec-trust-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(75,168,240,0.07);
+  border: 1px solid rgba(75,168,240,0.22);
+  border-radius: 100px;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  letter-spacing: 0.01em;
+}
+
+.sec-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 6px rgba(52,211,153,0.6);
+  flex-shrink: 0;
+}
+
+/* ── 2. STAT STRIP ── */
+.sec-stat-strip {
+  background: rgba(8,21,48,0.55);
+  border-top: 1px solid rgba(75,168,240,0.12);
+  border-bottom: 1px solid rgba(75,168,240,0.12);
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.sec-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.sec-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 36px 16px;
+  border-right: 1px solid rgba(75,168,240,0.08);
+  text-align: center;
+}
+
+.sec-stat-item:last-child {
+  border-right: none;
+}
+
+.sec-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(75,168,240,0.08);
+  border: 1px solid rgba(75,168,240,0.16);
+  flex-shrink: 0;
+}
+
+.sec-stat-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sec-stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.sec-stat-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.36);
+  margin-top: -4px;
+}
+
+/* ── 3. HIPAA SPLIT ── */
+.sec-hipaa-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.sec-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sec-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(75,168,240,0.07);
+  color: rgba(255,255,255,0.68);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.sec-checklist li:last-child {
+  border-bottom: none;
+}
+
+.sec-checklist-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Security layer visualization card */
+.sec-layers-card {
+  background: linear-gradient(145deg, #0a1938, #060e24);
+  border: 1px solid rgba(75,168,240,0.18);
+  border-radius: 24px;
+  padding: 48px 40px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-layers-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(75,168,240,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.sec-layers-visual {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1;
+}
+
+/* Nested layer rings */
+.sec-layer-ring {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-layer-outer {
+  inset: 0;
+  border: 1.5px solid rgba(75,168,240,0.45);
+  background: rgba(75,168,240,0.04);
+}
+
+.sec-layer-mid {
+  inset: 18%;
+  border: 1.5px solid rgba(255,215,0,0.38);
+  background: rgba(255,215,0,0.03);
+}
+
+.sec-layer-inner {
+  inset: 36%;
+  border: 1.5px solid rgba(52,211,153,0.5);
+  background: rgba(52,211,153,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-layer-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sec-layer-outer .sec-layer-label {
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #4ba8f0;
+}
+
+.sec-layer-mid .sec-layer-label {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,215,0,0.85);
+}
+
+.sec-layer-inner .sec-layer-label {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(52,211,153,0.85);
+}
+
+.sec-shield-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  z-index: 2;
+}
+
+/* ── 4. SECURITY PILLARS GRID ── */
+.sec-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sec-pillar-card {
+  background: linear-gradient(145deg, #0d1f3c, #081530);
+  border: 1px solid rgba(75,168,240,0.14);
+  border-radius: 20px;
+  padding: 36px 32px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-pillar-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(75,168,240,0.07), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sec-pillar-card:hover {
+  border-color: rgba(75,168,240,0.32);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(75,168,240,0.12);
+  transform: translateY(-4px);
+}
+
+.sec-pillar-card:hover::before {
+  opacity: 1;
+}
+
+/* Top highlight line on pillar cards */
+.sec-pillar-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75,168,240,0.45), transparent);
+  border-radius: inherit;
+}
+
+.sec-pillar-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(75,168,240,0.08);
+  border: 1px solid rgba(75,168,240,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-pillar-card:hover .sec-pillar-icon {
+  background: rgba(75,168,240,0.14);
+  border-color: rgba(75,168,240,0.35);
+  box-shadow: 0 0 20px rgba(75,168,240,0.18);
+}
+
+.sec-pillar-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sec-pillar-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.sec-pillar-card p {
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: rgba(255,255,255,0.48);
+  margin: 0;
+}
+
+/* ── 5. COMPLIANCE CARDS ── */
+.sec-compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.sec-compliance-card {
+  background: linear-gradient(145deg, #0d1f3c, #071428);
+  border: 1px solid rgba(75,168,240,0.16);
+  border-radius: 24px;
+  padding: 48px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-compliance-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75,168,240,0.5), transparent);
+}
+
+.sec-compliance-card:hover {
+  border-color: rgba(75,168,240,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(75,168,240,0.1);
+  transform: translateY(-3px);
+}
+
+.sec-cc-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(75,168,240,0.08);
+  border: 1px solid rgba(75,168,240,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.sec-cc-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.sec-cc-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4ba8f0;
+  background: rgba(75,168,240,0.1);
+  border: 1px solid rgba(75,168,240,0.2);
+  border-radius: 100px;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+}
+
+.sec-compliance-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.sec-compliance-card > p {
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 32px;
+}
+
+.sec-cc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sec-cc-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(75,168,240,0.07);
+  color: rgba(255,255,255,0.62);
+  font-size: 0.9rem;
+}
+
+.sec-cc-list li:last-child {
+  border-bottom: none;
+}
+
+.sec-cc-list li svg {
+  width: 16px;
+  height: 16px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 2.5;
+  flex-shrink: 0;
+}
+
+.sec-cc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.36);
+  letter-spacing: 0.04em;
+}
+
+.sec-cc-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(52,211,153,0.7);
+  box-shadow: 0 0 5px rgba(52,211,153,0.4);
+}
+
+/* ── 6. DATA PRACTICES GRID ── */
+.sec-data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sec-data-card {
+  background: linear-gradient(145deg, rgba(8,21,48,0.7), rgba(6,14,36,0.7));
+  border: 1px solid rgba(75,168,240,0.12);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-data-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75,168,240,0.35), transparent);
+}
+
+.sec-data-card:hover {
+  border-color: rgba(75,168,240,0.26);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.sec-data-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(75,168,240,0.08);
+  border: 1px solid rgba(75,168,240,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-data-card:hover .sec-data-icon {
+  background: rgba(75,168,240,0.14);
+  box-shadow: 0 0 16px rgba(75,168,240,0.16);
+}
+
+.sec-data-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sec-data-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.sec-data-card p {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.44);
+  margin: 0;
+}
+
+/* ── CTA BAND overrides (btn-white) ── */
+.btn-white {
+  background: #fff;
+  color: #020917;
+  font-weight: 700;
+  border-color: transparent;
+}
+.btn-white:hover {
+  background: rgba(255,255,255,0.92);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255,255,255,0.2);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .sec-hipaa-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .sec-layers-card {
+    min-height: 340px;
+  }
+  .sec-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec-data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .sec-stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sec-stat-item:nth-child(3) {
+    border-right: none;
+  }
+  .sec-stat-item:nth-child(4),
+  .sec-stat-item:nth-child(5) {
+    border-top: 1px solid rgba(75,168,240,0.08);
+  }
+  .sec-stat-item:nth-child(5) {
+    border-right: none;
+  }
+  .sec-compliance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sec-hero {
+    padding: 150px 0 80px;
+  }
+  .sec-hero-h1 {
+    font-size: 2.6rem;
+  }
+  .sec-hero-sub {
+    font-size: 0.97rem;
+  }
+  .sec-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec-stat-item:nth-child(2) {
+    border-right: none;
+  }
+  .sec-stat-item:nth-child(3),
+  .sec-stat-item:nth-child(4),
+  .sec-stat-item:nth-child(5) {
+    border-top: 1px solid rgba(75,168,240,0.08);
+  }
+  .sec-stat-item:nth-child(3),
+  .sec-stat-item:nth-child(5) {
+    border-right: none;
+  }
+  .sec-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .sec-data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec-compliance-card {
+    padding: 32px 24px;
+  }
+  .sec-layers-visual {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sec-data-grid {
+    grid-template-columns: 1fr;
+  }
+  .sec-trust-pills {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ================= v5 upgrade layer: graphite glass, rim light, no decorative motion ================= */
+body.sec-page {
+  background: var(--navy-deep);
+}
+body.sec-page::before {
+  opacity: 0.3;
+}
+.sec-page main {
+  overflow: clip;
+  position: relative;
+  z-index: 1;
+}
+.sec-page main :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+.sec-page main :is(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 4px;
+}
+.sec-page .btn-primary::after {
+  display: none;
+}
+.sec-page main .btn-primary,
+.sec-page main .btn-primary:hover {
+  background: var(--blue-bright);
+  color: var(--navy-deep);
+}
+.sec-page .sec-hero {
+  background: radial-gradient(
+    ellipse at 50% 0,
+    rgba(75, 168, 240, 0.14),
+    transparent 62%
+  );
+}
+.sec-page .sec-hero-glow {
+  display: none;
+}
+.sec-page .sec-hero-kicker {
+  font-family: "EDF V3 Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--blue-bright);
+}
+.sec-page .sec-hero-h1 {
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+  color: var(--text);
+}
+.sec-page .sec-h1-accent {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--blue-bright);
+}
+.sec-page .sec-hero-sub {
+  color: var(--text-secondary);
+}
+.sec-page .sec-pill {
+  font-family: "EDF V3 Mono", monospace;
+  letter-spacing: 0.04em;
+  background: linear-gradient(145deg, #152231, #09121f);
+  border: 1px solid var(--border-blue);
+  color: #c5dff0;
+}
+.sec-page .sec-pill-dot {
+  animation: none;
+}
+
+.sec-page .sec-stat-strip {
+  border-block: 1px solid var(--border-blue);
+  background: linear-gradient(
+    110deg,
+    rgba(18, 32, 50, 0.7),
+    rgba(7, 15, 29, 0.85)
+  );
+}
+.sec-page .sec-stat-item {
+  border-color: var(--border-blue);
+}
+.sec-page :is(.sec-stat-item strong, .sec-stat-item .sec-stat-num) {
+  font-family: "EDF V3 Mono", monospace;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+.sec-page :is(.sec-stat-label, .sec-stat-sub) {
+  color: var(--text-secondary);
+}
+
+.sec-page
+  :is(
+    .sec-pillar-card,
+    .sec-data-card,
+    .sec-compliance-card,
+    .sec-layers-card
+  ) {
+  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  border: 1px solid var(--border-blue);
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
+  transition: none;
+}
+.sec-page :is(.sec-pillar-card, .sec-data-card, .sec-compliance-card):hover {
+  transform: none;
+  border-color: var(--blue);
+}
+.sec-page :is(.sec-pillar-card, .sec-data-card, .sec-compliance-card) h3 {
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+.sec-page :is(.sec-pillar-card, .sec-data-card, .sec-compliance-card) p {
+  color: #c5dff0;
+  line-height: 1.7;
+}
+.sec-page
+  :is(
+    .sec-pillar-icon,
+    .sec-data-icon,
+    .sec-cc-icon,
+    .sec-stat-icon,
+    .sec-checklist-icon
+  ) {
+  color: var(--blue-bright);
+}
+.sec-page :is(.sec-cc-badge, .sec-cc-tag) {
+  font-family: "EDF V3 Mono", monospace;
+  letter-spacing: 0.06em;
+  border-radius: 0.25rem;
+}
+.sec-page .sec-layer-label {
+  font-family: "EDF V3 Mono", monospace;
+  letter-spacing: 0.08em;
+  color: #c5dff0;
+}
+.sec-page .sec-layers-visual * {
+  animation: none !important;
+}
+.sec-page .sec-checklist li {
+  color: #c5dff0;
+  border-color: var(--border-blue);
+}
+
+.sec-page .section-header .overline,
+.sec-page .overline {
+  font-family: "EDF V3 Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--blue-bright);
+}
+.sec-page .section-header h2,
+.sec-page .section h2 {
+  letter-spacing: -0.035em;
+}
+.sec-page .section-header p {
+  color: var(--text-secondary);
+}
+.sec-page .section.bg-alt {
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(75, 168, 240, 0.04),
+      transparent 55%
+    ),
+    #050d1a;
+}
+.sec-page .cta-band {
+  background: transparent;
+  border: 0;
+  padding: 88px 24px;
+}
+.sec-page .cta-band > .container {
+  max-width: 1100px;
+  border: 1px solid rgba(75, 168, 240, 0.4);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.13),
+      transparent 60%
+    ),
+    linear-gradient(140deg, #172332, #08111f);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
+  padding: 64px 32px;
+}
+.sec-page .cta-band .gradient-text {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--blue-bright);
+}
+.sec-page .cta-band p {
+  color: var(--text-secondary);
+}
+.sec-page
+  :is(
+    [style*="rgba(255,255,255,0.2"],
+    [style*="rgba(255,255,255,0.3"],
+    [style*="rgba(255,255,255,0.4"],
+    [style*="rgba(255, 255, 255, 0.2"],
+    [style*="rgba(255, 255, 255, 0.3"],
+    [style*="rgba(255, 255, 255, 0.4"]
+  ) {
+  color: var(--text-secondary) !important;
+}
+@media (max-width: 640px) {
+  .sec-page .cta-band {
+    padding: 48px 16px;
+  }
+  .sec-page .cta-band > .container {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+}
+@media (min-width: 641px) {
+  .sec-page .header.scrolled {
+    padding: var(--s5) 0;
+  }
+}
+
+/* Separate families avoid inheriting the shared swap faces during cold rendering. */
+@font-face {
+  font-family: "EDF V3 Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+  src: url("../fonts/plus-jakarta-sans-latin-variable.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "EDF V3 Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: optional;
+  src: url("../fonts/jetbrains-mono-latin-variable.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+.sec-page {
+  --font:
+    "EDF V3 Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-primary: var(--font);
+  --font-heading: var(--font);
+}
