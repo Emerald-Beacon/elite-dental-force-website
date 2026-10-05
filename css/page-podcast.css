@@ -580,3 +580,7 @@ body.pod-page::before {
 @media (max-width: 1100px) { .pod-page #pod-featured-slot { min-height: 416px; } }
 @media (max-width: 700px) { .pod-page #pod-featured-slot { min-height: 603px; } .pod-page #pod-list { min-height: 130px; } }
 @media (max-width: 480px) { .pod-page #pod-stats-strip { min-height: 306px; } .pod-page #pod-list { min-height: 194px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pod-page .pod-host-dot { animation: none; }
+}

@@ -745,3 +745,14 @@ body.cs-page::before {
 /* inline low-alpha white copy and the coming-soon badge failed 4.5:1 */
 .cs-page [style*="rgba(255,255,255,0.2"], .cs-page [style*="rgba(255,255,255,0.3"], .cs-page [style*="rgba(255,255,255,0.4"], .cs-page [style*="rgba(255, 255, 255, 0.2"], .cs-page [style*="rgba(255, 255, 255, 0.3"], .cs-page [style*="rgba(255, 255, 255, 0.4"] { color: var(--text-secondary) !important; }
 .cs-page .upcoming-badge.coming-soon { color: var(--text-secondary); }
+
+.cs-page .featured-cs-cta {
+  background: linear-gradient(135deg, #095ba7, #1268b5);
+}
+.cs-page .featured-cs-results > div:last-child > p,
+.cs-page .upcoming-preview-stat {
+  color: var(--text-secondary) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-page .cs-kicker-dot { animation: none; }
+}
