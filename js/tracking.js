@@ -165,8 +165,31 @@
     }, 5000);
   }
 
+  // ─── Consent gate ─────────────────────────────────────────────────────────
+  // GTM must not load until the cookie banner records acceptance. The banner stores
+  // 'accepted' or 'declined' under edf_cookie_consent and pushes cookie_consent_accepted
+  // to dataLayer on accept; Decline keeps GTM off for this visit.
+  function gateGTM() {
+    var choice = null;
+    try { choice = localStorage.getItem('edf_cookie_consent'); } catch (e) {}
+    if (choice === 'accepted') return deferGTM();
+    if (choice === 'declined') return;
+    var dl = window.dataLayer;
+    var originalPush = dl.push;
+    var loaded = false;
+    dl.push = function () {
+      for (var i = 0; i < arguments.length; i++) {
+        if (!loaded && arguments[i] && arguments[i].event === 'cookie_consent_accepted') {
+          loaded = true;
+          deferGTM();
+        }
+      }
+      return originalPush.apply(dl, arguments);
+    };
+  }
+
   // ─── Init ─────────────────────────────────────────────────────────────────
-  deferGTM();
+  gateGTM();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
