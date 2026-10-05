@@ -210,7 +210,7 @@
             <p class="comp-hero-sub">
               Download the legal and compliance documentation your organization
               needs to onboard EDiFi with confidence. BAA, HIPAA overview, and
-              data agreements, all available immediately.
+              data agreements, available on request.
             </p>
 
             <div
@@ -258,8 +258,7 @@
                 margin: 0;
               "
             >
-              Fill out a brief form and we'll send the documents directly to
-              your inbox. No sales call required to access compliance materials.
+              Fill out a brief form and we'll email the documents to the address you give us. No sales call required to access compliance materials.
             </p>
           </div>
 
@@ -792,8 +791,7 @@
             Request Your Document
           </h2>
           <p class="modal-subtitle">
-            Enter your details and we'll send the document to your inbox
-            immediately. No sales call required.
+            Enter your details and we'll email the document to the address you give us. No sales call required.
           </p>
 
           <form id="compliance-form" novalidate>
@@ -865,7 +863,7 @@
             </div>
 
             <button type="submit" class="modal-submit-btn" id="comp-submit-btn">
-              Send Document to My Inbox
+              Request My Document
             </button>
 
             <p class="modal-privacy-note">
@@ -885,10 +883,9 @@
           <div class="modal-success-icon">
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
           </div>
-          <h3>Document on its Way</h3>
+          <h3>Request Received</h3>
           <p id="modal-success-msg">
-            We've sent your document to your inbox. If you don't see it within 5
-            minutes, check your spam folder or contact us at
+            Thanks. We received your request and will email your document to the address you gave us. If you do not hear from us, check your spam folder or contact us at
             <a
               href="mailto:compliance@elitedentalforce.com"
               style="color: #4ba8f0; text-decoration: none"
@@ -1034,7 +1031,7 @@
               .catch(function () {
                 if (btn) {
                   btn.disabled = false;
-                  btn.textContent = "Send Document to My Inbox";
+                  btn.textContent = "Request My Document";
                 }
                 alert(
                   "There was an issue submitting your request. Please email compliance@elitedentalforce.com directly.",
