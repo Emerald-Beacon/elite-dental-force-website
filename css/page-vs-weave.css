@@ -1,0 +1,654 @@
+/* edifi-vs-weave: original inline styles (verbatim), upgrade layer below */
+body::before {
+  background-image:
+    linear-gradient(rgba(75, 168, 240, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 168, 240, 0.08) 1px, transparent 1px);
+  background-size: 55px 55px;
+}
+.cmp-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  text-align: center;
+  overflow: hidden;
+}
+.cmp-hero-glow {
+  position: absolute;
+  width: 900px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(9, 91, 167, 0.22) 0%,
+    transparent 65%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+}
+.cmp-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+.cmp-breadcrumb {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 32px;
+}
+.cmp-breadcrumb a {
+  color: rgba(75, 168, 240, 0.7);
+  text-decoration: none;
+}
+.cmp-vs-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.cmp-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(75, 168, 240, 0.08);
+  border: 1px solid rgba(75, 168, 240, 0.25);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4ba8f0;
+}
+.cmp-vs-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.05em;
+}
+.cmp-comp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+}
+.cmp-hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 auto 22px;
+  max-width: 820px;
+}
+.cmp-hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #4ba8f0, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cmp-hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+.cmp-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(75, 168, 240, 0.08);
+  border: 1px solid rgba(75, 168, 240, 0.2);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4ba8f0;
+}
+/* Role split card */
+.role-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.role-card {
+  border-radius: 22px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+}
+.role-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.role-card--edifi {
+  background: linear-gradient(
+    145deg,
+    rgba(9, 91, 167, 0.15),
+    rgba(3, 8, 24, 0.95)
+  );
+  border: 1px solid rgba(75, 168, 240, 0.25);
+}
+.role-card--edifi::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(75, 168, 240, 0.55),
+    transparent
+  );
+}
+.role-card--weave {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(3, 8, 24, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.role-card--weave::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+}
+.role-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: block;
+}
+.role-card--edifi .role-card-label {
+  color: #4ba8f0;
+}
+.role-card--weave .role-card-label {
+  color: rgba(255, 255, 255, 0.38);
+}
+.role-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.role-card p {
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.48);
+  margin-bottom: 20px;
+}
+.role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.role-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.role-list li:last-child {
+  border-bottom: none;
+}
+.role-list li svg {
+  width: 14px;
+  height: 14px;
+  stroke: #4ba8f0;
+  fill: none;
+  stroke-width: 2.5;
+  flex-shrink: 0;
+}
+.role-card--weave .role-list li svg {
+  stroke: rgba(255, 255, 255, 0.35);
+}
+/* comp table (reuse from other page) */
+.comp-table-wrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(75, 168, 240, 0.14);
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+.comp-table thead tr {
+  background: rgba(4, 12, 32, 0.98);
+  border-bottom: 1px solid rgba(75, 168, 240, 0.14);
+}
+.comp-table th {
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.comp-table th.edifi-col {
+  color: #4ba8f0;
+  background: rgba(75, 168, 240, 0.04);
+}
+.comp-table th.comp-col {
+  color: rgba(255, 255, 255, 0.35);
+}
+.comp-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.15s;
+}
+.comp-table tbody tr:last-child {
+  border-bottom: none;
+}
+.comp-table tbody tr:hover {
+  background: rgba(75, 168, 240, 0.03);
+}
+.comp-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.012);
+}
+.comp-table td {
+  padding: 16px 24px;
+  font-size: 13.5px;
+  vertical-align: middle;
+}
+.comp-table td.feature-col {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+.comp-table td.edifi-col {
+  background: rgba(75, 168, 240, 0.03);
+  color: rgba(255, 255, 255, 0.85);
+}
+.comp-table td.comp-col {
+  color: rgba(255, 255, 255, 0.38);
+}
+.check-yes {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #34d399;
+  font-weight: 700;
+  font-size: 13px;
+}
+.check-yes svg {
+  width: 16px;
+  height: 16px;
+  stroke: #34d399;
+  fill: none;
+  stroke-width: 2.5;
+}
+.check-no {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 13px;
+}
+.check-no svg {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(255, 255, 255, 0.2);
+  fill: none;
+  stroke-width: 2;
+}
+.check-partial {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 215, 0, 0.7);
+  font-size: 13px;
+}
+/* together card */
+.together-card {
+  background: linear-gradient(
+    135deg,
+    rgba(9, 91, 167, 0.18),
+    rgba(75, 168, 240, 0.07)
+  );
+  border: 1px solid rgba(75, 168, 240, 0.25);
+  border-radius: 22px;
+  padding: 48px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.together-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(75, 168, 240, 0.55),
+    transparent
+  );
+}
+@media (max-width: 900px) {
+  .role-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .cmp-hero {
+    padding: 150px 0 72px;
+  }
+  .together-card {
+    padding: 32px 24px;
+  }
+}
+/* ================= v4 upgrade layer: comparison pages, graphite glass, ledger tables ================= */
+body.vs-page {
+  background: var(--navy-deep);
+}
+body.vs-page::before {
+  opacity: 0.35;
+}
+.vs-page main {
+  overflow: clip;
+  position: relative;
+  z-index: 1;
+}
+.vs-page main :is(h2, h3) {
+  text-wrap: balance;
+}
+.vs-page main :is(a, button, [tabindex]):focus-visible {
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 4px;
+}
+.vs-page .btn-primary::after {
+  display: none;
+}
+.vs-page main .btn-primary,
+.vs-page main .btn-primary:hover {
+  background: var(--blue-bright);
+  color: var(--navy-deep);
+}
+
+.vs-page .cmp-hero {
+  background: radial-gradient(
+    ellipse at 50% 0,
+    rgba(75, 168, 240, 0.14),
+    transparent 62%
+  );
+  padding-bottom: 72px;
+}
+.vs-page .cmp-hero-glow {
+  display: none;
+}
+.vs-page .cmp-breadcrumb {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+.vs-page .cmp-breadcrumb a {
+  color: var(--blue-bright);
+}
+.vs-page .cmp-hero h1 {
+  letter-spacing: -0.05em;
+  color: var(--text);
+}
+.vs-page .cmp-hero h1 :is(span, em) {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--blue-bright);
+}
+.vs-page .cmp-hero-sub {
+  color: var(--text-secondary);
+}
+.vs-page :is(.cmp-brand-pill, .cmp-comp-pill) {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background: linear-gradient(145deg, #152231, #09121f);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+}
+.vs-page .cmp-brand-pill {
+  color: var(--blue-bright);
+  border-color: rgba(75, 168, 240, 0.4);
+}
+.vs-page .cmp-comp-pill {
+  color: #c5dff0;
+  border-color: rgba(75, 168, 240, 0.22);
+}
+.vs-page .cmp-vs-badge {
+  color: var(--text-secondary);
+}
+.vs-page .cmp-verdict {
+  background: linear-gradient(145deg, #172332, #08111f);
+  border-color: rgba(75, 168, 240, 0.4);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
+  color: #c5dff0;
+}
+.vs-page .cmp-verdict-dot {
+  background: var(--blue-bright);
+  box-shadow: 0 0 14px var(--blue-glow);
+}
+
+.vs-page .overline {
+  font:
+    500 11px/1.6 "JetBrains Mono",
+    monospace;
+  letter-spacing: 0.12em;
+  color: var(--blue-bright);
+}
+.vs-page .section-header h2,
+.vs-page .section h2 {
+  letter-spacing: -0.035em;
+}
+.vs-page .section-header p[style],
+.vs-page .section p[style*="rgba(255, 255, 255, 0."] {
+  color: var(--text-secondary) !important;
+}
+.vs-page .section.bg-alt {
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(75, 168, 240, 0.04),
+      transparent 55%
+    ),
+    #050d1a;
+}
+
+.vs-page
+  :is(
+    .deep-stat-card,
+    .diff-card,
+    .cost-card,
+    .reality-card,
+    .role-card,
+    .together-card
+  ) {
+  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  border-color: rgba(75, 168, 240, 0.24);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.07),
+    0 16px 40px rgba(0, 0, 0, 0.2);
+}
+.vs-page .cost-card--manual,
+.vs-page .role-card--weave {
+  border-color: rgba(75, 168, 240, 0.22);
+}
+.vs-page .cost-card--edifi,
+.vs-page .role-card--edifi {
+  border-color: rgba(75, 168, 240, 0.45);
+  background:
+    radial-gradient(ellipse at 50% 0, rgba(75, 168, 240, 0.1), transparent 60%),
+    linear-gradient(145deg, #172332, #08111f);
+}
+.vs-page :is(.deep-stat-num, .reality-num, .cost-total, .cost-line-val) {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: -0.05em;
+}
+.vs-page
+  :is(
+    .deep-stat-label,
+    .deep-text-desc,
+    .diff-desc,
+    .cost-line-label,
+    .reality-label,
+    .role-list li,
+    .cost-card-label,
+    .role-card-label
+  ) {
+  color: var(--text-secondary);
+}
+.vs-page :is(.deep-text-title, .diff-title) {
+  color: var(--text);
+}
+.vs-page .diff-icon {
+  color: var(--blue-bright);
+}
+.vs-page :is(.deep-point, .role-list li, .cost-line) {
+  border-color: rgba(75, 168, 240, 0.14);
+}
+.vs-page .together-card {
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.13),
+      transparent 60%
+    ),
+    linear-gradient(140deg, #172332, #08111f);
+  border-color: rgba(75, 168, 240, 0.4);
+  box-shadow:
+    0 0 40px rgba(75, 168, 240, 0.06),
+    inset 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.vs-page .comp-table-wrap {
+  background: #0a1321;
+  border: 1px solid rgba(75, 168, 240, 0.22);
+  border-radius: 16px;
+  overflow-x: auto;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+}
+.vs-page .comp-table-wrap:focus-visible {
+  outline: 3px solid var(--blue-bright);
+  outline-offset: 2px;
+}
+.vs-page .comp-table {
+  min-width: 680px;
+}
+.vs-page .comp-table th {
+  background: #111f30;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.vs-page .comp-table :is(td, th) {
+  border-color: rgba(75, 168, 240, 0.14);
+}
+.vs-page .comp-table td {
+  color: #c5dff0;
+}
+.vs-page .comp-table td:first-child {
+  color: var(--text);
+  font-weight: 600;
+}
+.vs-page .comp-table :is(td, th):nth-child(2) {
+  background: rgba(75, 168, 240, 0.045);
+}
+.vs-page .check-yes {
+  color: #6ee7b7;
+}
+.vs-page .check-partial {
+  color: #fcd34d;
+}
+.vs-page .check-no {
+  color: #a8bfd0;
+}
+
+.vs-page .cta-band {
+  background: transparent;
+  border: 0;
+  padding: 88px 24px;
+}
+.vs-page .cta-band > .container {
+  max-width: 1100px;
+  border: 1px solid rgba(75, 168, 240, 0.4);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.13),
+      transparent 60%
+    ),
+    linear-gradient(140deg, #172332, #08111f);
+  box-shadow:
+    0 0 40px rgba(75, 168, 240, 0.06),
+    inset 0 1px rgba(255, 255, 255, 0.14);
+  padding: 64px 32px;
+}
+.vs-page .cta-band h2 {
+  letter-spacing: -0.04em;
+}
+.vs-page .cta-band .gradient-text {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--blue-bright);
+}
+.vs-page .cta-band p {
+  color: var(--text-secondary);
+}
+
+.vs-page .rv-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.vs-page .rv-reveal.rv-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .vs-page .cta-band {
+    padding: 48px 16px;
+  }
+  .vs-page .cta-band > .container {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vs-page .rv-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* inline low-alpha white copy fails 4.5:1 on the graphite surfaces */
+.vs-page [style*="rgba(255, 255, 255, 0.2"], .vs-page [style*="rgba(255, 255, 255, 0.3"], .vs-page [style*="rgba(255, 255, 255, 0.4"] { color: var(--text-secondary) !important; }
+.vs-page [style*="rgba(255,255,255,0.2"], .vs-page [style*="rgba(255,255,255,0.3"], .vs-page [style*="rgba(255,255,255,0.4"] { color: var(--text-secondary) !important; }
