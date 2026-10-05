@@ -18,7 +18,7 @@
 .partners-page main p { color: var(--v3-copy); line-height: 1.8; }
 .partners-page main .section-header { text-align: left; max-width: 780px; margin: 0 0 36px; }
 .partners-page main .section-header p { margin-left: 0; max-width: 660px; }
-.partners-page main .overline { color: var(--v3-blue); font: 600 .7rem/1.6 "JetBrains Mono", monospace; letter-spacing: .12em; }
+.partners-page main .overline { color: var(--v3-blue); font: 600 .7rem/1.6 "EDF V3 Mono", monospace; letter-spacing: .12em; }
 .partners-page main .btn { border-radius: 8px; transition: transform .2s; }
 .partners-page main .btn-primary, .partners-page main .btn-white, .partners-page main button[type="submit"] {
   background: #4ba8f0; color: #081321; border: 1px solid #4ba8f0; box-shadow: 0 8px 28px #030b162b;
@@ -53,7 +53,7 @@
 .partners-page .ptrs-hero { padding: 92px 0 48px; text-align: left; background: radial-gradient(ellipse at 85% 40%,#234f7566,transparent 60%),#0b111b; }
 .partners-page .ptrs-hero-glow { display: none; }
 .partners-page .ptrs-hero-inner { max-width: none; }
-.partners-page .ptrs-kicker { border: 0; border-left: 2px solid #ffd700; border-radius: 0; padding: 0 0 0 12px; margin-bottom: 28px; color: #a5ccea; font: 600 .7rem/1.6 "JetBrains Mono",monospace; }
+.partners-page .ptrs-kicker { border: 0; border-left: 2px solid #ffd700; border-radius: 0; padding: 0 0 0 12px; margin-bottom: 28px; color: #a5ccea; font: 600 .7rem/1.6 "EDF V3 Mono",monospace; }
 .partners-page .ptrs-h1 { margin: 0 0 26px; max-width: 800px; font-size: clamp(2.5rem,4.7vw,4.3rem); line-height: 1.1; }
 .partners-page .ptrs-h1 em { color: #4ba8f0; background: none; -webkit-text-fill-color: currentColor; }
 .partners-page .ptrs-hero-sub { margin: 0 0 26px; max-width: 550px; color: #bccbdb; font-size: 1rem; line-height: 1.85; }
@@ -125,3 +125,29 @@
 }
 
 @media (max-width: 799px) { .partners-page main :is(.overline,.plt-hero-badge,.plt-stage-num,.tour-label,.co-hero-kicker,.co-stat-lbl,.ct-kicker,.ct-strip-label,.ct-info-card-label,.ptrs-kicker) { font-family: ui-monospace, monospace; } }
+/* Separate families avoid inheriting the shared swap faces during cold rendering. */
+@font-face {
+  font-family: 'EDF V3 Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+  src: url('../fonts/plus-jakarta-sans-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EDF V3 Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: optional;
+  src: url('../fonts/jetbrains-mono-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (min-width: 641px) {
+  .partners-page .header.scrolled { padding: var(--s5) 0; }
+}
+
+.partners-page {
+  --font: 'EDF V3 Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-primary: var(--font);
+  --font-heading: var(--font);
+}

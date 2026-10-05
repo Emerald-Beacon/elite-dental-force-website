@@ -138,7 +138,7 @@
   text-transform: uppercase;
   color: var(--rv-blue);
   margin-bottom: 12px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "EDF V3 Mono", monospace;
 }
 .rv-definition {
   font-size: 1.05rem;
@@ -446,7 +446,7 @@
   text-transform: uppercase;
   color: #f87171;
   margin-bottom: 6px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "EDF V3 Mono", monospace;
 }
 .rv-leak-card h4 {
   font-size: 0.9rem;
@@ -867,12 +867,12 @@
 /* hero */
 .rv-page .rv-hero { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.14), transparent 62%), var(--navy-deep); padding: 130px 0 80px; }
 .rv-page .rv-hero::before { display: none; }
-.rv-page .rv-hero-badge { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: .12em; background: rgba(75,168,240,.06); border-color: rgba(75,168,240,.32); color: var(--blue-bright); }
+.rv-page .rv-hero-badge { font-family: 'EDF V3 Mono', monospace; font-weight: 500; letter-spacing: .12em; background: rgba(75,168,240,.06); border-color: rgba(75,168,240,.32); color: var(--blue-bright); }
 .rv-page .rv-hero-badge-dot { background: var(--blue-bright); box-shadow: 0 0 14px var(--blue-glow); }
 .rv-page .rv-hero h1 { letter-spacing: -.05em; color: var(--text); }
 .rv-page .rv-highlight { background: none; -webkit-text-fill-color: currentColor; color: var(--blue-bright); filter: none; }
 .rv-page .rv-hero-subtitle { color: var(--text-secondary); max-width: 58ch; }
-.rv-page .rv-breadcrumb, .rv-page .rv-hero-meta { font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+.rv-page .rv-breadcrumb, .rv-page .rv-hero-meta { font-family: 'EDF V3 Mono', monospace; letter-spacing: .04em; }
 .rv-page .rv-breadcrumb-current { color: #c5dff0; }
 .rv-page .rv-definition-box {
   position: relative; border: 1px solid rgba(75,168,240,.4); border-left: 1px solid rgba(75,168,240,.4); border-radius: 22px;
@@ -886,7 +886,7 @@
 /* layout + toc */
 .rv-page .rv-layout { max-width: 1180px; gap: 64px; }
 .rv-page .rv-toc { background: linear-gradient(145deg, #14202e, #0a1321); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07); }
-.rv-page .rv-toc-title { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
+.rv-page .rv-toc-title { font-family: 'EDF V3 Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
 .rv-page .rv-toc-list a { padding: 9px 10px; margin-left: -10px; border-left: 2px solid transparent; }
 .rv-page .rv-toc-list a:hover, .rv-page .rv-toc-list a.active { color: var(--blue-bright); background: rgba(75,168,240,.06); border-left-color: var(--blue); }
 .rv-page .rv-sidebar-cta { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 65%), linear-gradient(145deg, #172332, #08111f); border-color: rgba(75,168,240,.4); box-shadow: inset 0 1px rgba(255,255,255,.12); }
@@ -897,7 +897,7 @@
 /* article type */
 .rv-page .rv-article h2 { counter-increment: rvsec; letter-spacing: -.035em; font-size: clamp(1.625rem, 3vw, 2.25rem); line-height: 1.15; margin-top: 4.5rem; padding-top: 3rem; border-top-color: rgba(75,168,240,.2); }
 .rv-page .rv-article h2:first-of-type { margin-top: 0; }
-.rv-page .rv-article h2[id]::before { content: "0" counter(rvsec) / ""; display: block; font: 500 11px/1.6 'JetBrains Mono', monospace; letter-spacing: .12em; color: var(--blue-bright); margin-bottom: 12px; }
+.rv-page .rv-article h2[id]::before { content: "0" counter(rvsec) / ""; display: block; font: 500 11px/1.6 'EDF V3 Mono', monospace; letter-spacing: .12em; color: var(--blue-bright); margin-bottom: 12px; }
 .rv-page .rv-article h2.rv-faq-title::before, .rv-page .rv-final-cta h2::before { display: none; content: none; }
 .rv-page .rv-article p { color: #c5dff0; }
 .rv-page .rv-article li strong, .rv-page .rv-article p strong { color: var(--text); }
@@ -913,7 +913,7 @@
 .rv-page .rv-leak-num { color: #fca5a5; font-weight: 500; }
 .rv-page .rv-cost-card { border-color: rgba(75,168,240,.22); text-align: left; padding: 26px 22px; }
 .rv-page .rv-cost-card::before { background: linear-gradient(90deg, rgba(75,168,240,.7), transparent); }
-.rv-page .rv-cost-value { font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: -.07em; background: none; -webkit-text-fill-color: currentColor; color: var(--text); font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.rv-page .rv-cost-value { font-family: 'EDF V3 Mono', monospace; font-weight: 500; letter-spacing: -.07em; background: none; -webkit-text-fill-color: currentColor; color: var(--text); font-size: clamp(1.5rem, 2.4vw, 2rem); }
 .rv-page .rv-cost-card:first-child .rv-cost-value, .rv-page .rv-cost-card:nth-child(2) .rv-cost-value { color: var(--gold); }
 .rv-page .rv-cost-label { color: var(--text-secondary); }
 .rv-page .rv-audience-icon { color: var(--blue-bright); }
@@ -922,7 +922,7 @@
 /* tighten timeline */
 .rv-page .rv-tighten-steps { position: relative; }
 .rv-page .rv-tighten-steps::before { content: ""; position: absolute; left: 17px; top: 36px; bottom: 36px; width: 1px; background: linear-gradient(180deg, rgba(75,168,240,.6), rgba(75,168,240,.1)); }
-.rv-page .rv-tighten-step-num { position: relative; z-index: 1; background: #0a1a2e; border-color: rgba(75,168,240,.5); font-family: 'JetBrains Mono', monospace; color: var(--blue-bright); box-shadow: 0 0 18px rgba(75,168,240,.18); }
+.rv-page .rv-tighten-step-num { position: relative; z-index: 1; background: #0a1a2e; border-color: rgba(75,168,240,.5); font-family: 'EDF V3 Mono', monospace; color: var(--blue-bright); box-shadow: 0 0 18px rgba(75,168,240,.18); }
 .rv-page .rv-tighten-step p { color: #c5dff0; }
 
 /* table */
@@ -934,8 +934,8 @@
 
 /* callout, faq, cta */
 .rv-page .rv-edifi-callout { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); }
-.rv-page .rv-edifi-callout-label { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
-.rv-page .rv-edifi-module { font-family: 'JetBrains Mono', monospace; border-radius: 6px; color: #c5dff0; }
+.rv-page .rv-edifi-callout-label { font-family: 'EDF V3 Mono', monospace; font-weight: 500; }
+.rv-page .rv-edifi-module { font-family: 'EDF V3 Mono', monospace; border-radius: 6px; color: #c5dff0; }
 .rv-page .rv-edifi-cta { min-height: 44px; }
 .rv-page .rv-faq-item { border-color: rgba(75,168,240,.2); }
 .rv-page .rv-faq-q { color: var(--text); }
@@ -956,4 +956,30 @@
 @media (prefers-reduced-motion: reduce) {
   .rv-page .rv-hero-badge-dot { animation: none; }
   .rv-page .fade-in { opacity: 1; transform: none; transition: none; }
+}
+/* Separate families avoid inheriting the shared swap faces during cold rendering. */
+@font-face {
+  font-family: 'EDF V3 Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+  src: url('../fonts/plus-jakarta-sans-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EDF V3 Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: optional;
+  src: url('../fonts/jetbrains-mono-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (min-width: 641px) {
+  .rv-page .header.scrolled { padding: var(--s5) 0; }
+}
+
+.rv-page {
+  --font: 'EDF V3 Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-primary: var(--font);
+  --font-heading: var(--font);
 }
