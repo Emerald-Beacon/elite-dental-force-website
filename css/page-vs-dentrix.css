@@ -479,7 +479,7 @@ body.vs-page::before {
   position: relative;
   z-index: 1;
 }
-.vs-page main :is(h1, h2, h3) {
+.vs-page main :is(h2, h3) {
   text-wrap: balance;
 }
 .vs-page main :is(a, button, [tabindex]):focus-visible {
@@ -750,3 +750,7 @@ body.vs-page::before {
     transition: none;
   }
 }
+
+/* inline low-alpha white copy fails 4.5:1 on the graphite surfaces */
+.vs-page [style*="rgba(255, 255, 255, 0.2"], .vs-page [style*="rgba(255, 255, 255, 0.3"], .vs-page [style*="rgba(255, 255, 255, 0.4"] { color: var(--text-secondary) !important; }
+.vs-page [style*="rgba(255,255,255,0.2"], .vs-page [style*="rgba(255,255,255,0.3"], .vs-page [style*="rgba(255,255,255,0.4"] { color: var(--text-secondary) !important; }
