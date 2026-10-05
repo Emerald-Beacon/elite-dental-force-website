@@ -547,6 +547,12 @@ html.pv-ready [data-pv].pv-in {
     grid-row: auto;
     position: static;
   }
+  .pv2-elig .es-callout,
+  .pv2-elig .es-notice {
+    /* Keep the decorative rim anchored when the reveal transform ends. */
+    position: relative;
+    top: auto;
+  }
   .pv2-elig .es-feature-list {
     margin-bottom: 2rem;
   }
