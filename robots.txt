@@ -6,7 +6,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /staging/
 Disallow: /.git/
-Disallow: /images/blog/og-templates/
 
 # AI and answer engine crawlers — explicitly allowed
 User-agent: GPTBot
