@@ -797,7 +797,7 @@
     });
     closeBtn.addEventListener('click', closePanel);
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOpen) closePanel();
+      if (e.key === 'Escape' && isOpen && !document.getElementById('edf-bm-overlay')) closePanel();
     });
 
     /* ── Send message ── */
