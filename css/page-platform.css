@@ -17,6 +17,7 @@
 .platform-page main h2 { font-size: clamp(1.85rem, 3.1vw, 2.85rem); line-height: 1.2; }
 .platform-page main p { color: var(--v3-copy); line-height: 1.8; }
 .platform-page main .section-header { text-align: left; max-width: 780px; margin: 0 0 36px; }
+.platform-page #medical-billing { scroll-margin-top: 176px; }
 .platform-page main .section-header p { margin-left: 0; max-width: 660px; }
 .platform-page main .overline { color: var(--v3-blue); font: 600 .7rem/1.6 "JetBrains Mono", monospace; letter-spacing: .12em; }
 .platform-page main .btn { border-radius: 8px; transition: transform .2s; }
