@@ -275,7 +275,6 @@
         .then(function () {
           push({
             event: "booking_modal_submit",
-            lead_email: email,
             page_path: window.location.pathname,
             conversion: true,
           });

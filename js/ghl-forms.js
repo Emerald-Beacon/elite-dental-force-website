@@ -53,7 +53,6 @@ var EDF_GHL = (function () {
     window.dataLayer.push({
       event: "form_submission",
       form_type: formType,
-      lead_email: email,
       page_path: window.location.pathname,
       conversion: true,
     });
