@@ -31,7 +31,7 @@
     window.dataLayer.push(obj);
   }
 
-  function buildModal(bookingUrl) {
+  function buildModal(bookingUrl, opener) {
     if (modalOpen) return;
     modalOpen = true;
 
@@ -209,7 +209,11 @@
     });
 
     /* ── Dismiss ─────────────────────────────────────────────────────── */
+    var dismissing = false;
     function dismiss() {
+      if (dismissing) return;
+      dismissing = true;
+      document.removeEventListener("keydown", onKey);
       overlay.classList.remove("edf-bm-in");
       overlay.style.opacity = "0";
       setTimeout(function () {
@@ -217,6 +221,7 @@
         var styleEl = document.getElementById("edf-bm-styles");
         if (styleEl) styleEl.remove();
         modalOpen = false;
+        if (opener && opener.isConnected) opener.focus({ preventScroll: true });
       }, 260);
     }
 
@@ -224,12 +229,10 @@
     overlay.addEventListener("click", function (e) {
       if (e.target === overlay) dismiss();
     });
-    document.addEventListener("keydown", function onKey(e) {
-      if (e.key === "Escape") {
-        dismiss();
-        document.removeEventListener("keydown", onKey);
-      }
-    });
+    function onKey(e) {
+      if (e.key === "Escape") dismiss();
+    }
+    document.addEventListener("keydown", onKey);
 
     /* ── Submit ──────────────────────────────────────────────────────── */
     form.addEventListener("submit", function (e) {
@@ -316,7 +319,7 @@
       /* Skip links where target is _self inside the demo page iframe area */
       if (el.closest(".booking-calendar-wrap")) return;
       e.preventDefault();
-      buildModal(el.href);
+      buildModal(el.href, el);
     },
     true,
   );
