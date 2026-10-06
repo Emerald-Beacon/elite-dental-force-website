@@ -263,6 +263,7 @@
         }
       }
     </script>
+    <link rel="stylesheet" href="../css/heading-levels.css?v=20261005f" />
   </head>
   <body class="dp-page">
 
@@ -272,7 +273,7 @@
     <header class="header">
       <div class="container">
         <div class="header-inner">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
           </a>
           <nav class="nav">
@@ -293,13 +294,13 @@
                 </ul>
               </li>
               <li class="has-dropdown">
-                <a
-                  href="javascript:void(0)"
+                <button
+                  type="button"
                   class="nav-link"
-                  style="cursor: pointer"
-                  >Resources</a
+                  aria-expanded="false"
+                  aria-controls="nav-resources-menu">Resources</button
                 >
-                <ul class="dropdown">
+                <ul class="dropdown" id="nav-resources-menu">
                   <li><a href="resources/blog.html">Blog</a></li>
                   <li><a href="resources/podcast.html">Podcast</a></li>
                   <li><a href="resources/webinars.html">Webinars</a></li>
@@ -343,7 +344,7 @@
             class="dp-breadcrumb"
             style="justify-content: center; margin-bottom: 28px"
           >
-            <a href="../index.html">Home</a>
+            <a href="/">Home</a>
             <span class="dp-breadcrumb-sep">/</span>
             <span class="dp-breadcrumb-current"
               >Dental Claim Denial Prevention</span
@@ -440,7 +441,7 @@
                 <div class="dp-model-label dp-model-label--reactive">
                   <span>✗</span> Reactive Denial Management
                 </div>
-                <h4>After the denial occurs</h4>
+                <h3 class="hx4">After the denial occurs</h3>
                 <p>
                   Problems are discovered after claims are rejected. Revenue is
                   delayed or lost permanently.
@@ -458,7 +459,7 @@
                 <div class="dp-model-label dp-model-label--proactive">
                   <span>✓</span> Proactive Denial Prevention
                 </div>
-                <h4>Before the claim is submitted</h4>
+                <h3 class="hx4">Before the claim is submitted</h3>
                 <p>
                   Denial causing conditions caught and corrected before
                   submission. Revenue arrives on schedule.
@@ -557,7 +558,7 @@
             <div class="dp-cause-grid fade-in">
               <div class="dp-cause-card">
                 <div class="dp-cause-num">Cause 01</div>
-                <h4>Eligibility Errors</h4>
+                <h3 class="hx4">Eligibility Errors</h3>
                 <p>
                   Insurance that lapsed before the appointment, a group plan
                   change that was not updated, a member ID discrepancy, or
@@ -569,7 +570,7 @@
               </div>
               <div class="dp-cause-card">
                 <div class="dp-cause-num">Cause 02</div>
-                <h4>CDT Code Violations</h4>
+                <h3 class="hx4">CDT Code Violations</h3>
                 <p>
                   Wrong code for the procedure performed, incorrect bundling or
                   unbundling of related codes, tooth or surface errors on
@@ -580,7 +581,7 @@
               </div>
               <div class="dp-cause-card">
                 <div class="dp-cause-num">Cause 03</div>
-                <h4>Documentation Gaps</h4>
+                <h3 class="hx4">Documentation Gaps</h3>
                 <p>
                   Missing radiograph attachments for crown and endodontic
                   procedures, incomplete perio charting for periodontal codes,
@@ -592,7 +593,7 @@
               </div>
               <div class="dp-cause-card">
                 <div class="dp-cause-num">Cause 04</div>
-                <h4>Payer Specific Rule Violations</h4>
+                <h3 class="hx4">Payer Specific Rule Violations</h3>
                 <p>
                   Delta Dental, Cigna, Aetna, and MetLife each maintain carrier
                   specific exceptions to standard CDT rules. A procedure covered
@@ -604,7 +605,7 @@
               </div>
               <div class="dp-cause-card">
                 <div class="dp-cause-num">Cause 05</div>
-                <h4>Frequency Limit Breaches</h4>
+                <h3 class="hx4">Frequency Limit Breaches</h3>
                 <p>
                   Submitting a cleaning before 6 months have elapsed, a bitewing
                   series before 12 months, or a crown before the plan's
@@ -632,7 +633,7 @@
             <div class="dp-component-grid fade-in">
               <div class="dp-component-card">
                 <div class="dp-component-card-num">Component 01</div>
-                <h4>Pre Appointment Eligibility Verification</h4>
+                <h3 class="hx4">Pre Appointment Eligibility Verification</h3>
                 <p>
                   Automated 24 to 48 hour pre appointment coverage confirmation
                   that catches inactive insurance, incorrect member IDs,
@@ -643,7 +644,7 @@
               </div>
               <div class="dp-component-card">
                 <div class="dp-component-card-num">Component 02</div>
-                <h4>Pre Submission AI Claim Scrubbing</h4>
+                <h3 class="hx4">Pre Submission AI Claim Scrubbing</h3>
                 <p>
                   Every claim reviewed against CDT code rules, payer specific
                   rule sets, documentation requirements, and frequency
@@ -653,7 +654,7 @@
               </div>
               <div class="dp-component-card">
                 <div class="dp-component-card-num">Component 03</div>
-                <h4>Payer Pattern Analytics</h4>
+                <h3 class="hx4">Payer Pattern Analytics</h3>
                 <p>
                   Ongoing analysis of denial patterns by payer, CDT code,
                   provider, and submission type, surfacing systemic issues
@@ -664,7 +665,7 @@
               </div>
               <div class="dp-component-card">
                 <div class="dp-component-card-num">Component 04</div>
-                <h4>CDT Code Compliance Checking</h4>
+                <h3 class="hx4">CDT Code Compliance Checking</h3>
                 <p>
                   Automated check of every CDT code against a 489+ code
                   knowledge base that includes bundling rules, surface
@@ -675,7 +676,7 @@
               </div>
               <div class="dp-component-card">
                 <div class="dp-component-card-num">Component 05</div>
-                <h4>Denial Trend Dashboards</h4>
+                <h3 class="hx4">Denial Trend Dashboards</h3>
                 <p>
                   Real time view of denial rate by payer, reason code, provider,
                   and CDT code, giving the billing team and practice leadership
@@ -1206,13 +1207,13 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
               <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
             </a>
             <p>We built EDiFi because dental billing was never designed to work for the practice. We are fixing that.</p>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Platform</h5>
+            <h2 class="footer-heading">Platform</h2>
             <ul class="footer-links">
               <li><a href="platform.html">Overview</a></li>
               <li><a href="edifi.html">EDiFi Software</a></li>
@@ -1220,7 +1221,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Resources</h5>
+            <h2 class="footer-heading">Resources</h2>
             <ul class="footer-links">
               <li><a href="resources/blog.html">Blog</a></li>
               <li><a href="resources/podcast.html">Podcast</a></li>
@@ -1229,7 +1230,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Company</h5>
+            <h2 class="footer-heading">Company</h2>
             <ul class="footer-links">
               <li><a href="company.html">About Us</a></li>
               <li><a href="company/security.html">Security</a></li>
@@ -1238,7 +1239,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Contact</h5>
+            <h2 class="footer-heading">Contact</h2>
             <ul class="footer-links">
               <li><a href="contact.html#sales">Sales</a></li>
               <li>

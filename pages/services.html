@@ -1156,13 +1156,14 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-services.css?v=20261005f" />
+  <link rel="stylesheet" href="../css/heading-levels.css?v=20261005f" />
 </head>
   <body class="services-page">
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header-inner">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img
               src="../images/Grayscale Transparent.png"
               alt="Elite Dental Force"
@@ -1192,13 +1193,13 @@
                 </ul>
               </li>
               <li class="has-dropdown">
-                <a
-                  href="javascript:void(0)"
+                <button
+                  type="button"
                   class="nav-link"
-                  style="cursor: pointer"
-                  >Resources</a
+                  aria-expanded="false"
+                  aria-controls="nav-resources-menu">Resources</button
                 >
-                <ul class="dropdown">
+                <ul class="dropdown" id="nav-resources-menu">
                   <li><a href="resources/blog.html">Blog</a></li>
                   <li><a href="resources/podcast.html">Podcast</a></li>
                   <li><a href="resources/webinars.html">Webinars</a></li>
@@ -1815,7 +1816,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--blue">Eligibility</span>
               </div>
-              <h4>Eligibility Verification</h4>
+              <h3 class="hx4">Eligibility Verification</h3>
               <p>
                 Real time benefits checks before every appointment. Know what's
                 covered, what's not, and what the patient owes, before they sit
@@ -1852,7 +1853,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--indigo">Claims</span>
               </div>
-              <h4>Clean Claim Submission</h4>
+              <h3 class="hx4">Clean Claim Submission</h3>
               <p>
                 Automated claim scrubbing and submission that catches errors
                 before they reach the payer, reducing denials at the source, not
@@ -1890,7 +1891,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--gold">Analytics</span>
               </div>
-              <h4>Revenue Analytics</h4>
+              <h3 class="hx4">Revenue Analytics</h3>
               <p>
                 Live dashboards that surface collection rates, denial trends,
                 payer performance, and reimbursement gaps across your entire
@@ -1927,7 +1928,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--orange">Denials</span>
               </div>
-              <h4>Denial Management</h4>
+              <h3 class="hx4">Denial Management</h3>
               <p>
                 Identify, track, and appeal denied claims with AI assisted
                 workflows that dramatically cut the time from denial to
@@ -1966,7 +1967,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--green">Audit</span>
               </div>
-              <h4>Payment Audit</h4>
+              <h3 class="hx4">Payment Audit</h3>
               <p>
                 Automatically compare payments received against your contracted
                 fee schedules to catch underpayments before they're written off
@@ -2003,7 +2004,7 @@
               <div class="svc-card-label-row">
                 <span class="svc-label svc-label--purple">AI Agents</span>
               </div>
-              <h4>AI Billing Consultants</h4>
+              <h3 class="hx4">AI Billing Consultants</h3>
               <p>
                 On demand AI agents trained on dental billing rules, CDT coding,
                 and payer policy, available to your front desk any time guidance
@@ -2405,7 +2406,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
               <img
                 src="../images/Grayscale Transparent.png"
                 alt="Elite Dental Force"
@@ -2421,7 +2422,7 @@
           </div>
 
           <div class="footer-column">
-            <h5 class="footer-heading">Platform</h5>
+            <h2 class="footer-heading">Platform</h2>
             <ul class="footer-links">
               <li><a href="platform.html">Overview</a></li>
               <li><a href="edifi.html">EDiFi Software</a></li>
@@ -2431,7 +2432,7 @@
           </div>
 
           <div class="footer-column">
-            <h5 class="footer-heading">Resources</h5>
+            <h2 class="footer-heading">Resources</h2>
             <ul class="footer-links">
               <li><a href="resources/blog.html">Blog</a></li>
               <li><a href="resources/podcast.html">Podcast</a></li>
@@ -2445,7 +2446,7 @@
           </div>
 
           <div class="footer-column">
-            <h5 class="footer-heading">Company</h5>
+            <h2 class="footer-heading">Company</h2>
             <ul class="footer-links">
               <li><a href="company.html">About Us</a></li>
               <li><a href="company/security.html">Security</a></li>
@@ -2454,7 +2455,7 @@
           </div>
 
           <div class="footer-column">
-            <h5 class="footer-heading">Contact</h5>
+            <h2 class="footer-heading">Contact</h2>
             <ul class="footer-links">
               <li><a href="contact.html#sales">Sales</a></li>
               <li><a href="contact.html#support">Support</a></li>

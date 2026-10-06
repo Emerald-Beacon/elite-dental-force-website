@@ -1,0 +1,39 @@
+/* Keeps the look of headings whose tag level was corrected for heading order. hxN renders as the original hN. */
+.hx4.hx4 { font-family: var(--font); font-weight: 700; line-height: 1.15; color: var(--white); letter-spacing: -0.02em; text-wrap: balance; }
+.hx4.hx4 { font-size: var(--fs-2xl); }
+.workflow-step .hx4.hx4 { font-size: var(--fs-xl); margin-bottom: var(--s3); }
+#revenue-workflow .hx4.hx4 { font-size: var(--fs-lg); min-height: 2.8em; line-height: 1.4; }
+@media (max-width: 640px) { #revenue-workflow .hx4.hx4 { min-height: 0px; font-size: var(--fs-xl); } }
+.acs-component-card .hx4.hx4 { font-size: 14px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 6px; letter-spacing: -0.01em; }
+.acs-process-step .hx4.hx4 { font-size: 0.95rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 5px; }
+.team-card-info .hx4.hx4 { font-size: 1.05rem; font-weight: 700; color: rgb(255, 255, 255); margin-bottom: 5px; letter-spacing: -0.01em; }
+.advisor-card .hx4.hx4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; color: rgb(255, 255, 255) !important; }
+.hx3.hx3 { font-family: var(--font); font-weight: 700; line-height: 1.15; color: var(--white); letter-spacing: -0.02em; text-wrap: balance; }
+.hx3.hx3 { font-size: var(--fs-3xl); }
+@media (max-width: 768px) { .hx3.hx3 { font-size: var(--fs-2xl); } }
+@media (max-width: 480px) { .hx3.hx3 { font-size: var(--fs-xl); } }
+.ct-success .hx3.hx3 { font-size: 1.4rem; font-weight: 800; color: rgb(255, 255, 255); margin-bottom: 10px; }
+.contact-page main .hx3.hx3 { text-wrap: balance; letter-spacing: -0.035em; }
+.dp-component-card .hx4.hx4 { font-size: 14px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 6px; letter-spacing: -0.01em; }
+.dp-cause-card .hx4.hx4 { font-size: 0.9rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 6px; }
+.dp-model-side .hx4.hx4 { font-size: 1rem; font-weight: 800; color: rgb(240, 247, 255); margin: 0px 0px 10px; }
+.dri-component-card .hx4.hx4 { font-size: 14px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 6px; letter-spacing: -0.01em; }
+.dri-timeline-content .hx4.hx4 { font-size: 14px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 5px; }
+.dri-audience-card .hx4.hx4 { font-size: 15px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 8px; }
+.hx5.hx5 { font-family: var(--font); font-weight: 700; line-height: 1.15; color: var(--white); letter-spacing: -0.02em; text-wrap: balance; }
+.hx5.hx5 { font-size: var(--fs-xl); }
+.edifi-page .ep-detail-card .hx5.hx5 { font-size: 11px; line-height: 1.55; color: var(--text); margin: 0px 0px 8px; }
+.ei-component-card .hx4.hx4 { font-size: 14px; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 6px; letter-spacing: -0.01em; }
+.wf-card .hx4.hx4 { font-size: 1rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 0.5rem; }
+.role-card .hx4.hx4 { font-size: 1rem; font-weight: 700; color: rgb(240, 247, 255); margin-bottom: 0.5rem; }
+.resources-page .feature-card .hx4.hx4 { font-size: 0.92rem; }
+.rv-article .hx4.hx4 { font-size: 1rem; font-weight: 700; color: var(--rv-blue); margin: 1.25rem 0px 0.5rem; }
+.rv-net-side .hx4.hx4 { font-size: 1rem; font-weight: 800; color: rgb(240, 247, 255); margin: 0px 0px 10px; }
+.rv-leak-card .hx4.hx4 { font-size: 0.9rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 6px; }
+.rv-tighten-step .hx4.hx4 { font-size: 0.95rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 5px; }
+.rv-audience-card .hx4.hx4 { font-size: 0.95rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 8px; }
+.svc-card .hx4.hx4 { font-size: 1.0625rem; font-weight: 700; color: rgb(240, 247, 255); margin: 0px 0px 0.625rem; }
+/* Stops article level h3 rules (margin-top, line-height) from leaking onto headings that keep the h4 look */
+.acs-article .hx4.hx4, .dp-article .hx4.hx4, .dri-article .hx4.hx4, .ei-article .hx4.hx4 { margin-top: 0; line-height: 1.15; }
+/* Enterprise page rule for h1 and h2 letter spacing must not reach footer column headings */
+.enterprise-page :is(h1, h2).footer-heading { letter-spacing: 0.1em; }

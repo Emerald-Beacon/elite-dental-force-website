@@ -414,6 +414,11 @@ p:last-child { margin-bottom: 0; }
   transition: all var(--t-fast);
   position: relative;
 }
+button.nav-link {
+  margin: 0; border: 0; background: transparent; cursor: pointer;
+  font-family: inherit; line-height: inherit; letter-spacing: inherit; text-align: inherit;
+  -webkit-appearance: none; appearance: none;
+}
 .has-dropdown > .nav-link::after {
   content: '';
   display: inline-block;

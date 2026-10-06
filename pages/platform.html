@@ -3135,13 +3135,14 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-platform.css?v=20261005f" />
+    <link rel="stylesheet" href="../css/heading-levels.css?v=20261005f" />
   </head>
   <body class="platform-page">
     <!-- ═══════ HEADER ═══════ -->
     <header class="header">
       <div class="container">
         <div class="header-inner">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" />
           </a>
           <nav class="nav">
@@ -3170,13 +3171,13 @@
                 </ul>
               </li>
               <li class="has-dropdown">
-                <a
-                  href="javascript:void(0)"
+                <button
+                  type="button"
                   class="nav-link"
-                  style="cursor: pointer"
-                  >Resources</a
+                  aria-expanded="false"
+                  aria-controls="nav-resources-menu">Resources</button
                 >
-                <ul class="dropdown">
+                <ul class="dropdown" id="nav-resources-menu">
                   <li><a href="resources/blog.html">Blog</a></li>
                   <li><a href="resources/podcast.html">Podcast</a></li>
                   <li><a href="resources/webinars.html">Webinars</a></li>
@@ -3675,7 +3676,7 @@
                   <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
               </div>
-              <h4>Patient Scheduled</h4>
+              <h3 class="hx4">Patient Scheduled</h3>
               <p>
                 EDiFi connects to your PMS. When an appointment is booked,
                 patient and insurance data flows into the platform
@@ -3704,7 +3705,7 @@
                   <polyline points="9 12 11 14 15 10"></polyline>
                 </svg>
               </div>
-              <h4>Eligibility Verified</h4>
+              <h3 class="hx4">Eligibility Verified</h3>
               <p>
                 EDiFi submits a real time eligibility check 24 to 72 hours
                 before the appointment. Coverage gaps, benefit limits, and
@@ -3737,7 +3738,7 @@
                   <line x1="12" y1="17" x2="8" y2="17"></line>
                 </svg>
               </div>
-              <h4>Chairside Ready</h4>
+              <h3 class="hx4">Chairside Ready</h3>
               <p>
                 Before the patient arrives, the team sees a complete benefits
                 summary: remaining maximums, deductible status, covered
@@ -3784,7 +3785,7 @@
                   <polyline points="9 22 9 12 15 12 15 22"></polyline>
                 </svg>
               </div>
-              <h4>Treatment Planned</h4>
+              <h3 class="hx4">Treatment Planned</h3>
               <p>
                 Providers enter procedure codes and EDiFi shows coverage
                 estimates, prior authorization requirements, and exact patient
@@ -3820,7 +3821,7 @@
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                 </svg>
               </div>
-              <h4>Clean Claims Submitted</h4>
+              <h3 class="hx4">Clean Claims Submitted</h3>
               <p>
                 EDiFi scrubs every claim before transmission, catching coding
                 errors, applying correct modifiers, and routing to the right
@@ -3859,7 +3860,7 @@
                   ></path>
                 </svg>
               </div>
-              <h4>Payments Audited</h4>
+              <h3 class="hx4">Payments Audited</h3>
               <p>
                 When EOBs arrive, the Payment Audit Engine compares every
                 reimbursement against contracted fee schedules. Underpayments
@@ -5084,7 +5085,7 @@
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Front Desk</div>
-                <h4>Eligibility Before the Call Ends</h4>
+                <h3 class="hx4">Eligibility Before the Call Ends</h3>
                 <p>
                   Verify coverage in under 5 minutes before the patient hangs
                   up. No hold time, no callbacks.
@@ -5098,7 +5099,7 @@
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Doctor</div>
-                <h4>Treatment Plans That Close</h4>
+                <h3 class="hx4">Treatment Plans That Close</h3>
                 <p>
                   Present procedures with exact insurance coverage and patient
                   cost, with confidence at case presentation.
@@ -5112,7 +5113,7 @@
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Billing Team</div>
-                <h4>Clean Claims, Faster Reimbursement</h4>
+                <h3 class="hx4">Clean Claims, Faster Reimbursement</h3>
                 <p>
                   AI claim scrubbing catches errors before submission. Spend
                   time on exceptions, not rework.
@@ -5126,7 +5127,7 @@
                 class="role-card-img" width="800" height="600" loading="lazy" />
               <div class="role-card-body">
                 <div class="role-card-role">Office Manager</div>
-                <h4>Revenue Visibility That Drives Action</h4>
+                <h3 class="hx4">Revenue Visibility That Drives Action</h3>
                 <p>
                   A/R aging, collection trends, and denial rates in one
                   dashboard. Know your numbers every morning.
@@ -6980,13 +6981,13 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
               <img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" />
             </a>
             <p>We built EDiFi because dental billing was never designed to work for the practice. We are fixing that.</p>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Platform</h5>
+            <h2 class="footer-heading">Platform</h2>
             <ul class="footer-links">
               <li><a href="platform.html">Overview</a></li>
               <li><a href="edifi.html">EDiFi Enterprise</a></li>
@@ -7004,7 +7005,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Resources</h5>
+            <h2 class="footer-heading">Resources</h2>
             <ul class="footer-links">
               <li><a href="resources/blog.html">Blog</a></li>
               <li><a href="resources/podcast.html">Podcast</a></li>
@@ -7013,7 +7014,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Company</h5>
+            <h2 class="footer-heading">Company</h2>
             <ul class="footer-links">
               <li><a href="company.html">About Us</a></li>
               <li><a href="company/security.html">Security</a></li>
@@ -7022,7 +7023,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Contact</h5>
+            <h2 class="footer-heading">Contact</h2>
             <ul class="footer-links">
               <li><a href="contact.html#sales">Sales</a></li>
               <li><a href="contact.html#support">Support</a></li>

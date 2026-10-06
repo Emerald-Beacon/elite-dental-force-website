@@ -264,6 +264,7 @@
         }
       }
     </script>
+    <link rel="stylesheet" href="../css/heading-levels.css?v=20261005f" />
   </head>
   <body class="rv-page">
 
@@ -271,7 +272,7 @@
     <header class="header">
       <div class="container">
         <div class="header-inner">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img
               src="../images/Grayscale Transparent.png"
               alt="Elite Dental Force"
@@ -297,8 +298,8 @@
                 </ul>
               </li>
               <li class="has-dropdown">
-                <a href="javascript:void(0)" class="nav-link">Resources</a>
-                <ul class="dropdown">
+                <button type="button" class="nav-link" aria-expanded="false" aria-controls="nav-resources-menu">Resources</button>
+                <ul class="dropdown" id="nav-resources-menu">
                   <li><a href="resources/blog.html">Blog</a></li>
                   <li><a href="resources/podcast.html">Podcast</a></li>
                   <li><a href="resources/webinars.html">Webinars</a></li>
@@ -336,7 +337,7 @@
       <section class="rv-hero">
         <div class="container">
           <nav aria-label="Breadcrumb" class="rv-breadcrumb">
-            <a href="../index.html">Home</a>
+            <a href="/">Home</a>
             <span class="rv-breadcrumb-sep">/</span>
             <span class="rv-breadcrumb-current">RevNet</span>
           </nav>
@@ -426,7 +427,7 @@
               <div class="rv-net-label rv-net-label--loose">
                 <span>✗</span> Loose Net: No RevNet
               </div>
-              <h4>Revenue is escaping</h4>
+              <h3 class="hx4">Revenue is escaping</h3>
               <p>
                 Manual processes, reactive billing, no AI: every gap in the
                 workflow is an open hole.
@@ -444,7 +445,7 @@
               <div class="rv-net-label rv-net-label--tight">
                 <span>✓</span> Tight Net: RevNet Active
               </div>
-              <h4>Revenue is captured</h4>
+              <h3 class="hx4">Revenue is captured</h3>
               <p>
                 AI covers every stage simultaneously: eligibility, claims,
                 payments, analytics, all continuous.
@@ -483,7 +484,7 @@
           <div class="rv-leak-grid fade-in">
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 01</div>
-              <h4>Eligibility Not Verified Before the Appointment</h4>
+              <h3 class="hx4">Eligibility Not Verified Before the Appointment</h3>
               <p>
                 When insurance is checked at the front desk while the patient is
                 standing there, errors surface too late. Treatment proceeds on
@@ -494,7 +495,7 @@
             </div>
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 02</div>
-              <h4>Claims Submitted Without AI Pre-Scrubbing</h4>
+              <h3 class="hx4">Claims Submitted Without AI Pre-Scrubbing</h3>
               <p>
                 The average dental claim has a 20 to 25% initial denial rate.
                 Most of those denials are preventable: wrong CDT code
@@ -506,7 +507,7 @@
             </div>
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 03</div>
-              <h4>Denials Worked Reactively, or Not at All</h4>
+              <h3 class="hx4">Denials Worked Reactively, or Not at All</h3>
               <p>
                 A denial that is not worked within 30 to 60 days often becomes
                 uncollectable. Manual billing workflows mean denials stack up,
@@ -516,7 +517,7 @@
             </div>
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 04</div>
-              <h4>EOBs Posted Without Fee Schedule Comparison</h4>
+              <h3 class="hx4">EOBs Posted Without Fee Schedule Comparison</h3>
               <p>
                 Payers underpay. Not always, but consistently, and the variance
                 per claim is small enough that no billing person catches it
@@ -528,7 +529,7 @@
             </div>
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 05</div>
-              <h4>Medical Dental Crossover Billing Missed Entirely</h4>
+              <h3 class="hx4">Medical Dental Crossover Billing Missed Entirely</h3>
               <p>
                 Procedures like sleep apnea appliances, frenectomies, biopsies,
                 and TMJ treatment often have medical billing pathways via CPT
@@ -539,7 +540,7 @@
             </div>
             <div class="rv-leak-card">
               <div class="rv-leak-num">Hole 06</div>
-              <h4>After Hours Patient Calls Going to Voicemail</h4>
+              <h3 class="hx4">After Hours Patient Calls Going to Voicemail</h3>
               <p>
                 A patient who calls after hours to schedule, reschedule, or ask
                 about coverage and gets voicemail has a high probability of
@@ -639,7 +640,7 @@
             <div class="rv-tighten-step">
               <div class="rv-tighten-step-num">1</div>
               <div>
-                <h4>Day 1: Baseline Caught</h4>
+                <h3 class="hx4">Day 1: Baseline Caught</h3>
                 <p>
                   The RevNet activates and immediately begins catching what was
                   already slipping through: unverified appointments queued for
@@ -652,7 +653,7 @@
             <div class="rv-tighten-step">
               <div class="rv-tighten-step-num">2</div>
               <div>
-                <h4>30 Days: Payer Patterns Surface</h4>
+                <h3 class="hx4">30 Days: Payer Patterns Surface</h3>
                 <p>
                   After a month of claims, denial analytics reveal which payers
                   are rejecting which CDT codes and why. The system begins
@@ -664,7 +665,7 @@
             <div class="rv-tighten-step">
               <div class="rv-tighten-step-num">3</div>
               <div>
-                <h4>90 Days: Fee Schedule Variance Mapped</h4>
+                <h3 class="hx4">90 Days: Fee Schedule Variance Mapped</h3>
                 <p>
                   After three months of payment audits, the system has a
                   complete picture of which payers are underpaying on which
@@ -676,7 +677,7 @@
             <div class="rv-tighten-step">
               <div class="rv-tighten-step-num">4</div>
               <div>
-                <h4>6 Months: Revenue Leaks Closed Systemically</h4>
+                <h3 class="hx4">6 Months: Revenue Leaks Closed Systemically</h3>
                 <p>
                   By six months, the RevNet has tightened around the specific
                   leaks in your practice's revenue cycle. Clean claim rates are
@@ -821,7 +822,7 @@
           <div class="rv-audience-grid fade-in">
             <div class="rv-audience-card">
               <div class="rv-audience-icon">◆</div>
-              <h4>Solo Practices (1 Location)</h4>
+              <h3 class="hx4">Solo Practices (1 Location)</h3>
               <p>
                 One billing person cannot manually verify eligibility for every
                 patient, pre-scrub every claim, audit every EOB, and work every
@@ -832,7 +833,7 @@
             </div>
             <div class="rv-audience-card">
               <div class="rv-audience-icon">◈</div>
-              <h4>Group Practices (2 to 10 Locations)</h4>
+              <h3 class="hx4">Group Practices (2 to 10 Locations)</h3>
               <p>
                 Multi location groups run the compounding problem: each location
                 has its own billing habits, its own denial patterns, its own A/R
@@ -843,7 +844,7 @@
             </div>
             <div class="rv-audience-card">
               <div class="rv-audience-icon">◇</div>
-              <h4>DSOs (11+ Locations)</h4>
+              <h3 class="hx4">DSOs (11+ Locations)</h3>
               <p>
                 At DSO scale, a 6% underpayment rate across a network producing
                 $50 million annually is a $3 million annual leak. A RevNet does
@@ -854,7 +855,7 @@
             </div>
             <div class="rv-audience-card">
               <div class="rv-audience-icon">□</div>
-              <h4>Dental Billing Companies</h4>
+              <h3 class="hx4">Dental Billing Companies</h3>
               <p>
                 A billing company managing 20 client practices needs to prove
                 performance. A RevNet gives billing companies measurable clean
@@ -1203,7 +1204,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
               <img
                 src="../images/Grayscale Transparent.png"
                 alt="Elite Dental Force"
@@ -1219,7 +1220,7 @@
             </p>
           </div>
           <div>
-            <h5 class="footer-heading">Platform</h5>
+            <h2 class="footer-heading">Platform</h2>
             <ul class="footer-links">
               <li><a href="platform.html">Platform Overview</a></li>
                   <li><a href="eligibility-standalone.html">Eligibility Standalone</a></li>
@@ -1233,7 +1234,7 @@
             </ul>
           </div>
           <div>
-            <h5 class="footer-heading">Resources</h5>
+            <h2 class="footer-heading">Resources</h2>
             <ul class="footer-links">
               <li><a href="resources/blog.html">Blog</a></li>
               <li><a href="resources/podcast.html">Podcast</a></li>
@@ -1242,7 +1243,7 @@
             </ul>
           </div>
           <div>
-            <h5 class="footer-heading">Company</h5>
+            <h2 class="footer-heading">Company</h2>
             <ul class="footer-links">
               <li><a href="company.html">About Us</a></li>
               <li><a href="company/security.html">Security</a></li>
@@ -1251,7 +1252,7 @@
             </ul>
           </div>
           <div>
-            <h5 class="footer-heading">Contact</h5>
+            <h2 class="footer-heading">Contact</h2>
             <ul class="footer-links">
               <li><a href="contact.html">Get in Touch</a></li>
               <li>

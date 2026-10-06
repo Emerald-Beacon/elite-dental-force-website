@@ -155,7 +155,7 @@
       <div class="container">
         <div class="header-inner">
           <a
-            href="../index.html"
+            href="/"
             class="logo"
             aria-label="Elite Dental Force Home"
           >
@@ -190,13 +190,13 @@
                 </ul>
               </li>
               <li class="has-dropdown">
-                <a
-                  href="javascript:void(0)"
+                <button
+                  type="button"
                   class="nav-link"
-                  style="cursor: pointer"
-                  >Resources</a
+                  aria-expanded="false"
+                  aria-controls="nav-resources-menu">Resources</button
                 >
-                <ul class="dropdown">
+                <ul class="dropdown" id="nav-resources-menu">
                   <li><a href="resources/blog.html">Blog</a></li>
                   <li><a href="resources/podcast.html">Podcast</a></li>
                   <li><a href="resources/webinars.html">Webinars</a></li>
@@ -236,7 +236,7 @@
         <div class="container">
           <div class="cmp-hero-inner">
             <p class="cmp-breadcrumb">
-              <a href="../index.html">Home</a> &rsaquo; Comparisons &rsaquo;
+              <a href="/">Home</a> &rsaquo; Comparisons &rsaquo;
               EDiFi vs Weave
             </p>
 
@@ -840,12 +840,12 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="../index.html" class="logo" aria-label="Home"
+            <a href="/" class="logo" aria-label="Home"
               ><img src="../images/Grayscale Transparent.png" alt="Elite Dental Force" width="2229" height="933" loading="lazy" /></a>
             <p>We built EDiFi because dental billing was never designed to work for the practice. We are fixing that.</p>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Compare</h5>
+            <h2 class="footer-heading">Compare</h2>
             <ul class="footer-links">
               <li>
                 <a href="edifi-vs-dentrix-rcm.html">EDiFi vs Dentrix RCM</a>
@@ -859,7 +859,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Platform</h5>
+            <h2 class="footer-heading">Platform</h2>
             <ul class="footer-links">
               <li><a href="platform.html">Overview</a></li>
               <li><a href="edifi.html">EDiFi Enterprise</a></li>
@@ -867,7 +867,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h5 class="footer-heading">Company</h5>
+            <h2 class="footer-heading">Company</h2>
             <ul class="footer-links">
               <li><a href="company.html">About Us</a></li>
               <li><a href="contact.html">Contact</a></li>

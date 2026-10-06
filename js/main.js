@@ -84,6 +84,20 @@ function initMobileDropdowns() {
     });
   });
 
+  // Keep aria-expanded on button triggers in step with what the CSS (hover/focus) or mobile toggle shows
+  dropdownParents.forEach(parent => {
+    const trigger = parent.querySelector('button.nav-link[aria-controls]');
+    if (!trigger) return;
+    const sync = () => {
+      const open = window.innerWidth <= 768 ? parent.classList.contains('active') : parent.matches(':hover, :focus-within');
+      trigger.setAttribute('aria-expanded', String(open));
+    };
+    ['mouseenter', 'mouseleave', 'focusin', 'focusout', 'click'].forEach(type => {
+      parent.addEventListener(type, () => setTimeout(sync, 0));
+    });
+    window.addEventListener('resize', debounce(sync, 100));
+  });
+
   // Reset dropdowns on window resize
   window.addEventListener('resize', debounce(function() {
     if (window.innerWidth > 768) {
