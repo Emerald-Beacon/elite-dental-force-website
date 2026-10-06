@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unauthorized | Elite Dental Force</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/plus-jakarta-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.v2.css?v=20261005f">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <style>
-    body { background: #020917; min-height: 100vh; display: flex; flex-direction: column; }
+    @font-face {
+      font-family: 'EDF Error Sans';
+      font-style: normal;
+      font-weight: 400 800;
+      font-display: optional;
+      src: url('fonts/plus-jakarta-sans-latin-variable.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    .btn-primary::after { animation-name: home-shimmer-sweep; }
+    body { --font: 'EDF Error Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #020917; min-height: 100vh; display: flex; flex-direction: column; }
     .err-page {
       flex: 1; display: flex; align-items: center; justify-content: center;
       padding: 5rem 1.5rem; position: relative; overflow: hidden;
@@ -44,7 +51,7 @@
     .err-btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 12px 24px; border-radius: 10px;
-      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700;
+      font-family: 'EDF Error Sans', sans-serif; font-size: 14px; font-weight: 700;
       text-decoration: none; transition: all 0.25s ease;
     }
     .err-btn--primary {
@@ -64,7 +71,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="index.html" class="logo">
-          <img src="images/Grayscale Transparent.png" alt="Elite Dental Force">
+          <img src="images/Grayscale Transparent.png" alt="Elite Dental Force" width="460" height="193">
         </a>
         <div class="nav-cta">
           <a href="https://api.leadconnectorhq.com/widget/bookings/alvin-calendar" target="_blank" class="btn btn-primary">Book a Demo</a>

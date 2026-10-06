@@ -516,14 +516,19 @@ export async function mountHeroMotion(hero, eligible, atTop) {
       badge.style.visibility = hold ? (i < 2 ? 'visible' : 'hidden') : (i === index ? 'visible' : 'hidden');
       // Slide badge 1 from its right anchor to the left edge with a transform, so the move never changes layout.
       badge.style.transform = i === 0 && separating ? `translateX(${-(badge.offsetParent.getBoundingClientRect().width - badge.offsetParent.clientLeft * 2 - badge.getBoundingClientRect().width - 24)}px)` : '';
-      badge.style.left = badge.style.right = badge.style.top = badge.style.bottom = '';
     }
     leader.style.visibility = index < 0 || !anchor?.visible ? 'hidden' : 'visible';
     if (index < 0) return;
     const badge = badges[index];
     const x = Math.max(12, Math.min(visual.clientWidth - badge.offsetWidth - 12, index % 2 ? visual.clientWidth - badge.offsetWidth - 16 : 16));
     const y = Math.max(12, Math.min(visual.clientHeight - badge.offsetHeight - 12, 28));
-    Object.assign(badge.style, { left: '0', right: 'auto', top: '0', bottom: 'auto', transform: `translate(${x}px,${y}px)` });
+    // Keep the CSS anchor fixed when a fast scroll skips a badge's hidden state.
+    const origin = badge.getBoundingClientRect();
+    const parent = badge.offsetParent;
+    const parentBounds = parent.getBoundingClientRect();
+    const offsetX = origin.left - parentBounds.left - parent.clientLeft;
+    const offsetY = origin.top - parentBounds.top - parent.clientTop;
+    badge.style.transform = `translate(${x - offsetX}px,${y - offsetY}px)`;
     const lineX = x + badge.offsetWidth / 2, lineY = y + badge.offsetHeight + 6;
     path.setAttribute('d', `M${lineX},${lineY} V${lineY + 12} L${anchor.x},${anchor.y}`);
     dot.setAttribute('cx', anchor.x);
