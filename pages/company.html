@@ -49,7 +49,7 @@
       /* 1. HERO — Magazine Cover */
       .co-hero {
         position: relative;
-        background: rgba(2, 9, 23, 0.45);
+        background: color-mix(in srgb, var(--bg) 45%, transparent);
         padding: 200px 0 120px;
         text-align: center;
         overflow: hidden;
@@ -376,7 +376,7 @@
 
       /* Sections use low-opacity tints so the fixed grid always shows through */
       main .section {
-        background: rgba(2, 9, 23, 0.35);
+        background: color-mix(in srgb, var(--bg) 35%, transparent);
       }
       main .section.bg-light {
         background: rgba(8, 21, 48, 0.42);
@@ -562,11 +562,11 @@
 
       .partners-scroll::before {
         left: 0;
-        background: linear-gradient(to right, #020917, transparent);
+        background: linear-gradient(to right, var(--bg), transparent);
       }
       .partners-scroll::after {
         right: 0;
-        background: linear-gradient(to left, #020917, transparent);
+        background: linear-gradient(to left, var(--bg), transparent);
       }
 
       .partners-logos {
@@ -917,7 +917,9 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-company.css?v=20261005f" />
-  </head>
+    <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
+</head>
   <body class="company-page">
     <!-- Header -->
     <header class="header">
@@ -1756,7 +1758,7 @@
       </section>
 
       <!-- 7. PHOTO GALLERY -->
-      <section class="section bg-light">
+      <section class="section bg-light co-presence">
         <div class="container">
           <div class="section-header">
             <span class="overline">In the Community</span>

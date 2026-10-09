@@ -74,7 +74,7 @@
       :root {
         --ei-blue: #4ba8f0;
         --ei-navy: #001f71;
-        --ei-dark: #020917;
+        --ei-dark: var(--bg);
         --ei-mid: #0a1628;
         --ei-card: #0d1e35;
         --ei-gold: #ffd700;
@@ -87,7 +87,7 @@
 
       /* ── Hero ── */
       .ei-hero {
-        background: linear-gradient(180deg, #030d22 0%, #020917 70%);
+        background: linear-gradient(180deg, #030d22 0%, var(--bg) 70%);
         border-bottom: 1px solid rgba(75, 168, 240, 0.1);
         padding: 120px 0 72px;
         text-align: center;
@@ -950,6 +950,8 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-eligibility-intelligence.css?v=20261005f" />
+  <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
 </head>
   <body class="ei-page">
 

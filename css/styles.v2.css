@@ -143,7 +143,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  background-image: linear-gradient(180deg, #020917 0%, #040e22 50%, #020917 100%);
+  background-image: linear-gradient(180deg, var(--bg) 0%, #040e22 50%, var(--bg) 100%);
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
@@ -1402,7 +1402,7 @@ p:last-child { margin-bottom: 0; }
   padding: var(--s24) 0 var(--s12);
   border-top: 1px solid var(--border);
   position: relative; z-index: 1;
-  background: #020917;
+  background: var(--bg);
 }
 .footer-grid {
   display: grid;
@@ -1980,7 +1980,7 @@ body.menu-open { overflow: hidden; }
 
 /* === PIA: Platform in Action floating cards === */
 .pia-section {
-  background: rgba(2, 9, 23, 0.85);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
 }
 .pia-grid {
   display: grid;

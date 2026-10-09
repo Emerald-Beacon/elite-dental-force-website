@@ -2,10 +2,10 @@
 /* ====================================================
    LEGAL PAGE — PRIVACY POLICY
    ==================================================== */
-body { background: #020917; }
+body { background: var(--bg); }
 
 .legal-hero {
-  background: linear-gradient(180deg, #020d22 0%, #020917 100%);
+  background: linear-gradient(180deg, #020d22 0%, var(--bg) 100%);
   border-bottom: 1px solid rgba(75,168,240,0.1);
   padding: 5rem 0 3rem;
   text-align: center;

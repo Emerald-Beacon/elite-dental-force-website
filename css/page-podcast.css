@@ -10,7 +10,7 @@ body.pod-page::before {
   background-size: 55px 55px;
 }
 
-.pod-page main .section        { background: rgba(2,9,23,0.35); }
+.pod-page main .section        { background: color-mix(in srgb, var(--bg) 35%, transparent); }
 .pod-page main .section.bg-alt { background: rgba(8,21,48,0.42); }
 
 /* ── HERO ── */

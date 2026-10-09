@@ -12,7 +12,7 @@ body::before {
 }
 
 /* Section tints — let grid show through */
-.sec-page main .section             { background: rgba(2,9,23,0.35); }
+.sec-page main .section             { background: color-mix(in srgb, var(--bg) 35%, transparent); }
 .sec-page main .section.bg-light    { background: rgba(8,21,48,0.42); }
 .sec-page main .section.bg-alt      { background: rgba(10,26,58,0.42); }
 .sec-page main .section-header h2,
@@ -26,7 +26,7 @@ body::before {
   padding: 196px 0 108px;
   text-align: center;
   overflow: hidden;
-  background: rgba(2,9,23,0.45);
+  background: color-mix(in srgb, var(--bg) 45%, transparent);
 }
 
 .sec-hero-glow {
@@ -628,7 +628,7 @@ body::before {
 /* ── CTA BAND overrides (btn-white) ── */
 .btn-white {
   background: #fff;
-  color: #020917;
+  color: var(--bg);
   font-weight: 700;
   border-color: transparent;
 }

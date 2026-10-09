@@ -53,7 +53,7 @@
 
       /* Section tints */
       main .section {
-        background: rgba(2, 9, 23, 0.35);
+        background: color-mix(in srgb, var(--bg) 35%, transparent);
       }
       main .section.bg-alt {
         background: rgba(8, 21, 48, 0.42);
@@ -65,7 +65,7 @@
         padding: 196px 0 112px;
         text-align: center;
         overflow: hidden;
-        background: rgba(2, 9, 23, 0.45);
+        background: color-mix(in srgb, var(--bg) 45%, transparent);
       }
 
       .ptrs-hero-glow {
@@ -928,7 +928,9 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-partners.css?v=20261005f" />
-  </head>
+    <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
+</head>
   <body class="ptrs-page partners-page">
     <!-- Header -->
     <header class="header">

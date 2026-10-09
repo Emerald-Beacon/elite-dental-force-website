@@ -1,0 +1,263 @@
+/* Background preview overrides (preview branch only).
+   A = current site, no rules. B = deep navy. C = richer navy. data-light = light reading sections. */
+
+html[data-bg="b"] {
+  --pv-base: #0a1d47;
+  --pv-panel: #102758;
+  --pv-panel-2: #163064;
+}
+html[data-bg="c"] {
+  --pv-base: #0b2455;
+  --pv-panel: #122e66;
+  --pv-panel-2: #193973;
+}
+
+/* Shared tokens */
+html[data-bg="b"],
+html[data-bg="c"] {
+  --bg: var(--pv-base);
+  --navy-deep: var(--pv-base);
+  --navy-mid: var(--pv-panel);
+  --bg-surface: color-mix(in srgb, var(--pv-base) 94%, transparent);
+  --bg-alt: rgba(0, 31, 113, 0.32);
+  --bg-card: rgba(255, 255, 255, 0.055);
+  --bg-card-hover: rgba(75, 168, 240, 0.1);
+  --border: rgba(255, 255, 255, 0.13);
+  --border-blue: rgba(75, 168, 240, 0.34);
+  --text-muted: #8aa6c4;
+  --color-text-muted: #8aa6c4;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-card-border: rgba(255, 255, 255, 0.12);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-bg-base: var(--pv-base);
+  --color-bg-gradient: linear-gradient(
+    180deg,
+    var(--pv-base) 0%,
+    var(--pv-panel) 50%,
+    var(--pv-base) 100%
+  );
+  --color-deep: var(--pv-base);
+}
+html[data-bg="b"] body,
+html[data-bg="c"] body {
+  background-image: linear-gradient(
+    180deg,
+    var(--pv-base) 0%,
+    var(--pv-panel) 50%,
+    var(--pv-base) 100%
+  );
+}
+
+/* Near-black surfaces in styles.v2.css that are not exact token matches */
+html[data-bg="b"] .header.scrolled,
+html[data-bg="c"] .header.scrolled {
+  background: color-mix(in srgb, var(--pv-base) 92%, transparent);
+}
+html[data-bg="b"] .dropdown,
+html[data-bg="c"] .dropdown {
+  background: color-mix(in srgb, var(--pv-panel) 97%, transparent);
+}
+html[data-bg="b"] .hero-stat-badge,
+html[data-bg="c"] .hero-stat-badge {
+  background: color-mix(in srgb, var(--pv-panel) 92%, transparent);
+}
+html[data-bg="b"] .browser-mockup,
+html[data-bg="c"] .browser-mockup {
+  background: color-mix(in srgb, var(--pv-panel) 97%, transparent);
+}
+html[data-bg="b"] .browser-header,
+html[data-bg="c"] .browser-header {
+  background: color-mix(in srgb, var(--pv-base) 96%, transparent);
+}
+@media (max-width: 1024px) {
+  html[data-bg="b"] .nav.active,
+  html[data-bg="c"] .nav.active {
+    background: color-mix(in srgb, var(--pv-base) 98%, transparent);
+  }
+}
+@media (max-width: 768px) {
+  html[data-bg="b"] .header.scrolled,
+  html[data-bg="c"] .header.scrolled {
+    background: color-mix(in srgb, var(--pv-base) 97%, transparent);
+  }
+}
+
+/* Company page: graphite v3 palette mapped onto the navy family */
+html[data-bg="b"] .company-page,
+html[data-bg="c"] .company-page {
+  --v3-bg: var(--pv-base);
+  --v3-panel: var(--pv-panel);
+}
+html[data-bg="b"] .company-page main .section.bg-light,
+html[data-bg="b"] .company-page main .section.bg-alt,
+html[data-bg="c"] .company-page main .section.bg-light,
+html[data-bg="c"] .company-page main .section.bg-alt {
+  background: var(--pv-panel);
+}
+html[data-bg="b"]
+  .company-page
+  :is(.co-founder-card, .co-bento-mission, .co-bento-val),
+html[data-bg="c"]
+  .company-page
+  :is(.co-founder-card, .co-bento-mission, .co-bento-val) {
+  background: linear-gradient(135deg, var(--pv-panel-2), var(--pv-panel));
+}
+html[data-bg="b"] .company-page :is(.team-card, .advisor-card),
+html[data-bg="c"] .company-page :is(.team-card, .advisor-card) {
+  background: var(--pv-panel-2);
+}
+html[data-bg="b"] .company-page .partners-scroll,
+html[data-bg="c"] .company-page .partners-scroll {
+  background: var(--pv-panel);
+}
+html[data-bg="b"] .company-page .transformation-section > div:last-child > div,
+html[data-bg="c"] .company-page .transformation-section > div:last-child > div {
+  background: linear-gradient(
+    135deg,
+    var(--pv-panel-2),
+    var(--pv-panel)
+  ) !important;
+}
+html[data-bg="b"] .company-page main .btn-secondary,
+html[data-bg="c"] .company-page main .btn-secondary {
+  background: var(--pv-panel-2);
+}
+html[data-bg="b"] .company-page main :is(input, select, textarea),
+html[data-bg="c"] .company-page main :is(input, select, textarea) {
+  background: var(--pv-base);
+}
+
+html[data-bg="b"] .company-page .co-hero,
+html[data-bg="c"] .company-page .co-hero {
+  background: radial-gradient(ellipse at 85% 0%, rgba(75, 168, 240, 0.16), transparent 65%), var(--pv-base);
+}
+
+/* EDiFi page: graphite surfaces mapped onto the navy family */
+html[data-bg="b"] .edifi-page .ep-section-surface,
+html[data-bg="c"] .edifi-page .ep-section-surface {
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(75, 168, 240, 0.05),
+      transparent 55%
+    ),
+    var(--pv-panel);
+}
+html[data-bg="b"] .edifi-page :is(.ep-tabs, .ep-feature-panel, .ep-spec-card),
+html[data-bg="c"] .edifi-page :is(.ep-tabs, .ep-feature-panel, .ep-spec-card) {
+  background: linear-gradient(145deg, var(--pv-panel-2), var(--pv-base) 70%);
+}
+html[data-bg="b"] .edifi-page .ep-table-scroll,
+html[data-bg="c"] .edifi-page .ep-table-scroll {
+  background: var(--pv-base);
+}
+html[data-bg="b"] .edifi-page .ep-compare-table th,
+html[data-bg="c"] .edifi-page .ep-compare-table th {
+  background: var(--pv-panel-2);
+}
+html[data-bg="b"] .edifi-page .cta-band > .container,
+html[data-bg="c"] .edifi-page .cta-band > .container {
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.16),
+      transparent 60%
+    ),
+    linear-gradient(140deg, var(--pv-panel-2), var(--pv-base));
+}
+
+/* Company inline section-header copy is white at 48% alpha; lift it so it clears 4.5:1 on navy */
+html[data-bg="b"] .company-page main .section .section-header p,
+html[data-bg="c"] .company-page main .section .section-header p {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+/* ---------- Light sections (&light=1) ---------- */
+html[data-light] :is(#after-hero, #audit-results, #home-resources, .co-presence),
+html[data-light] .journal-article {
+  --text: #001f71;
+  --text-secondary: #2c4870;
+  --text-muted: #445f86;
+  --white: #001f71;
+  --blue: #095ba7;
+  --blue-light: #095ba7;
+  --blue-bright: #095ba7;
+  --navy-deep: #ffffff;
+  --navy-mid: #eef6fd;
+  --grad-text: linear-gradient(135deg, #001f71 0%, #095ba7 100%);
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5faff;
+  --border: rgba(0, 31, 113, 0.12);
+  --border-blue: rgba(9, 91, 167, 0.32);
+  color: var(--text);
+}
+html[data-light] #after-hero {
+  background: #ffffff;
+}
+html[data-light] #after-hero .trust-bar-label {
+  color: #2c4870;
+}
+html[data-light] #after-hero .trust-bar-logos img {
+  filter: brightness(0);
+  opacity: 0.72;
+}
+html[data-light] #after-hero .trust-bar-logos img:hover {
+  filter: brightness(0);
+  opacity: 1;
+}
+html[data-light] #audit-results {
+  background: #d3edfc;
+}
+html[data-light] #audit-results::after,
+html[data-light] #audit-results::before {
+  opacity: 0;
+}
+html[data-light] #audit-results .metric-card {
+  backdrop-filter: none;
+  box-shadow:
+    0 1px 2px rgba(0, 31, 113, 0.06),
+    0 8px 24px rgba(0, 31, 113, 0.06);
+}
+html[data-light] #audit-results .metric-card--featured {
+  background: linear-gradient(145deg, #ffffff, #eef6fd);
+}
+html[data-light] #audit-results .metric-tag {
+  opacity: 1;
+}
+html[data-light] #home-resources {
+  background: #ffffff;
+}
+html[data-light] #home-resources .resource-card {
+  box-shadow:
+    0 1px 2px rgba(0, 31, 113, 0.06),
+    0 8px 24px rgba(0, 31, 113, 0.06);
+}
+html[data-light] #home-resources .resource-card-tag {
+  background: rgba(9, 91, 167, 0.08);
+  border-color: rgba(9, 91, 167, 0.25);
+}
+
+html[data-light] .company-page main .section.co-presence {
+  background: #ffffff;
+}
+html[data-light] .company-page main .section.co-presence {
+  --v3-blue: #095ba7;
+  --v3-copy: #2c4870;
+  --v3-line: rgba(0, 31, 113, 0.14);
+}
+html[data-light] .company-page main .section.co-presence .section-header p {
+  color: #2c4870;
+}
+html[data-light] .company-page main .section.co-presence h2 {
+  color: #001f71;
+}
+html[data-light] .company-page main .section.co-presence .overline {
+  color: #095ba7 !important;
+}
+
+html[data-light] .journal-article {
+  background: #ffffff;
+}
+html[data-light] .journal-article .blog-newsletter .btn {
+  color: #ffffff;
+}

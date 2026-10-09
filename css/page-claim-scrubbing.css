@@ -2,7 +2,7 @@
 :root {
   --acs-blue: #4ba8f0;
   --acs-navy: #001f71;
-  --acs-dark: #020917;
+  --acs-dark: var(--bg);
   --acs-mid: #0a1628;
   --acs-card: #0d1e35;
   --acs-gold: #ffd700;
@@ -15,7 +15,7 @@
 
 /* ── Hero ── */
 .acs-hero {
-  background: linear-gradient(180deg, #030d22 0%, #020917 70%);
+  background: linear-gradient(180deg, #030d22 0%, var(--bg) 70%);
   border-bottom: 1px solid rgba(75, 168, 240, 0.1);
   padding: 120px 0 72px;
   text-align: center;

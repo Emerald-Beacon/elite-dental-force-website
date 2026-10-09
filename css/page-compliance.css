@@ -16,7 +16,7 @@ body::before {
   padding: 180px 0 96px;
   text-align: center;
   overflow: hidden;
-  background: rgba(2, 9, 23, 0.4);
+  background: color-mix(in srgb, var(--bg) 40%, transparent);
 }
 
 .comp-hero-glow {
@@ -326,7 +326,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(2, 9, 23, 0.88);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -786,7 +786,7 @@ body.cpl-page::before {
 }
 
 .cpl-page .modal-overlay {
-  background: rgba(2, 9, 23, 0.82);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
 }
 .cpl-page .modal-card {
   background: linear-gradient(145deg, #172332, #08111f);

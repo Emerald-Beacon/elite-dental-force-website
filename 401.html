@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/styles.v2.css?v=20261005f">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <style>
-    body { background: #020917; min-height: 100vh; display: flex; flex-direction: column; }
+    body { background: var(--bg); min-height: 100vh; display: flex; flex-direction: column; }
     .err-page {
       flex: 1; display: flex; align-items: center; justify-content: center;
       padding: 5rem 1.5rem; position: relative; overflow: hidden;
@@ -24,7 +24,7 @@
     }
     .err-grid::after {
       content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #020917 100%);
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, var(--bg) 100%);
     }
     .err-orb {
       position: absolute; border-radius: 50%; pointer-events: none; filter: blur(120px);
@@ -58,6 +58,8 @@
     }
     .err-btn--outline:hover { border-color: rgba(75,168,240,0.5); color: #f0f7ff; background: rgba(75,168,240,0.06); }
   </style>
+  <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
 </head>
 <body>
   <header class="header">

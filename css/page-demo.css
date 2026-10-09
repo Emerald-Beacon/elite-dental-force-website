@@ -5,7 +5,7 @@
     160deg,
     rgba(255, 255, 255, 0.07) 0%,
     rgba(75, 168, 240, 0.045) 46%,
-    rgba(2, 9, 23, 0.55) 100%
+    color-mix(in srgb, var(--bg) 55%, transparent) 100%
   );
   --pv-rim:
     inset 0 1px 0 rgba(255, 255, 255, 0.14),

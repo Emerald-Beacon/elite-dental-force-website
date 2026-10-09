@@ -993,7 +993,7 @@
         min-height: 100vh;
         display: flex;
         align-items: center;
-        background: rgba(2, 9, 23, 0.92);
+        background: color-mix(in srgb, var(--bg) 92%, transparent);
         padding: 5rem 0 4rem;
       }
 
@@ -1014,7 +1014,7 @@
         background: radial-gradient(
           ellipse 70% 65% at 50% 50%,
           transparent 30%,
-          #020917 100%
+          var(--bg) 100%
         );
       }
 
@@ -2709,7 +2709,7 @@
 
       /* Named depth levels via data-pt attribute */
       main [data-pt="d1"] {
-        background: rgba(2, 9, 23, 0.38);
+        background: color-mix(in srgb, var(--bg) 38%, transparent);
       }
       main [data-pt="d2"] {
         background: rgba(8, 21, 48, 0.42);
@@ -2720,7 +2720,7 @@
 
       /* ── Smooth section fades ───────────────────────────────────
        Each section gets a ::before that fades from the deepest
-       dark (#020917) to transparent — creates a "dark valley"
+       dark (var(--bg)) to transparent — creates a "dark valley"
        at every transition so sections emerge naturally rather
        than sitting against a hard border line.
        Excluded: .plt-hero (has its own bg) and .cta-band (own ::before)
@@ -2734,7 +2734,7 @@
         left: 0;
         right: 0;
         height: 90px;
-        background: linear-gradient(180deg, #020917 0%, transparent 100%);
+        background: linear-gradient(180deg, var(--bg) 0%, transparent 100%);
         pointer-events: none;
         z-index: 2;
       }
@@ -2772,7 +2772,7 @@
 
       /* Outcomes section — deep dark with ambient center glow */
       main [data-pt="outcomes"] {
-        background: rgba(2, 9, 23, 0.38);
+        background: color-mix(in srgb, var(--bg) 38%, transparent);
         position: relative;
         overflow: hidden;
       }
@@ -3135,7 +3135,9 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-platform.css?v=20261005f" />
-  </head>
+    <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
+</head>
   <body class="platform-page">
     <!-- ═══════ HEADER ═══════ -->
     <header class="header">

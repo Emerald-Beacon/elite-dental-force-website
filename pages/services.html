@@ -49,7 +49,7 @@
 
       /* ── Page base ── */
       body {
-        background: #020917;
+        background: var(--bg);
       }
 
       /* ── Dot-grid background ── */
@@ -68,7 +68,7 @@
         background: radial-gradient(
           ellipse 70% 65% at 50% 50%,
           transparent 30%,
-          #020917 100%
+          var(--bg) 100%
         );
         pointer-events: none;
       }
@@ -298,7 +298,7 @@
         align-items: center;
         gap: 0.5rem;
         background: #ffffff;
-        color: #020917;
+        color: var(--bg);
         font-size: 0.9375rem;
         font-weight: 700;
         padding: 0.8125rem 2rem;
@@ -897,7 +897,7 @@
         align-items: center;
         gap: 0.5rem;
         background: #ffffff;
-        color: #020917;
+        color: var(--bg);
         font-size: 0.9375rem;
         font-weight: 700;
         padding: 0.8125rem 2rem;
@@ -1156,6 +1156,8 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-services.css?v=20261005f" />
+  <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
 </head>
   <body class="services-page">
     <!-- Header -->

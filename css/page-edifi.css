@@ -106,7 +106,7 @@
 .edifi-page .cta-band > .container { max-width: 1200px; border: 1px solid rgba(75,168,240,.4); border-radius: 24px; background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); padding: 68px 32px; }
 .edifi-page .cta-band h2 { font-size: clamp(28px, 3.5vw, 44px); letter-spacing: -.04em; max-width: 780px; margin: 0 auto 20px; }
 .edifi-page .cta-band p { color: var(--text-secondary); max-width: 62ch; margin: 0 auto 30px; }
-.edifi-page .cta-band .btn-white { color: #020917; background: var(--blue-bright); }
+.edifi-page .cta-band .btn-white { color: var(--bg); background: var(--blue-bright); }
 @keyframes edifi-entry { from { transform: translateY(16px); opacity: .85; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: no-preference) { .edifi-page .ep-entered { animation: edifi-entry .6s both; } }
 @media (max-width: 1050px) {

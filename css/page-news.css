@@ -14,7 +14,7 @@ body.nws-page::before {
 
 /* ── Section backgrounds ── */
 .nws-page main .section {
-  background: rgba(2,9,23,0.35);
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
   position: relative;
   z-index: 1;
 }

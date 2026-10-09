@@ -519,7 +519,7 @@
 }
 
 .ent-field input, .ent-field select, .ent-field textarea {
-  background: rgba(2, 9, 23, 0.65);
+  background: color-mix(in srgb, var(--bg) 65%, transparent);
   border: 1px solid rgba(75, 168, 240, 0.16);
   border-radius: 8px;
   padding: 10px 13px;

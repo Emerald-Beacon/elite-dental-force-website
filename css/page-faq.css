@@ -12,7 +12,7 @@ body::before {
 }
 
 main .section {
-  background: rgba(2, 9, 23, 0.35);
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
 }
 main .section.bg-light {
   background: rgba(8, 21, 48, 0.42);
@@ -23,7 +23,7 @@ main .section.bg-light {
   position: relative;
   padding: 180px 0 88px;
   text-align: center;
-  background: rgba(2, 9, 23, 0.45);
+  background: color-mix(in srgb, var(--bg) 45%, transparent);
   overflow: hidden;
 }
 .fq-hero-glow {

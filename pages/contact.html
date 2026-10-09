@@ -56,7 +56,7 @@
 
       /* Section tints */
       main .section {
-        background: rgba(2, 9, 23, 0.35);
+        background: color-mix(in srgb, var(--bg) 35%, transparent);
       }
       main .section.bg-light {
         background: rgba(8, 21, 48, 0.42);
@@ -67,7 +67,7 @@
         position: relative;
         padding: 180px 0 96px;
         text-align: center;
-        background: rgba(2, 9, 23, 0.45);
+        background: color-mix(in srgb, var(--bg) 45%, transparent);
         overflow: hidden;
       }
       .ct-hero-glow {
@@ -748,7 +748,9 @@
       }
     </script>
     <link rel="stylesheet" href="../css/page-contact.css?v=20261005f" />
-  </head>
+    <script src="/js/bg-preview.js"></script>
+  <link rel="stylesheet" href="/css/bg-preview.css">
+</head>
   <body class="contact-page">
     <!-- Header -->
     <header class="header">
