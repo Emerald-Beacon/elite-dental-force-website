@@ -125,3 +125,29 @@ html[data-initial-blog-topic="ai-operations"] [data-blog-card]:not([data-topic="
  .journal-index *, .journal-article * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
  .journal-card:hover .journal-cover img, .journal-featured:hover .journal-cover img { transform: none; }
 }
+
+/* Article light reading mode (release 5): white body, navy text; site header and footer stay dark. */
+html:root .journal-article {
+  --text: #001f71;
+  --text-secondary: #2c4870;
+  --text-muted: #445f86;
+  --white: #001f71;
+  --blue: #095ba7;
+  --blue-light: #095ba7;
+  --blue-bright: #095ba7;
+  --navy-deep: #ffffff;
+  --navy-mid: #eef6fd;
+  --grad-text: linear-gradient(135deg, #001f71 0%, #095ba7 100%);
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5faff;
+  --border: rgba(0, 31, 113, 0.12);
+  --border-blue: rgba(9, 91, 167, 0.32);
+  color: var(--text);
+  background: #ffffff;
+}
+html:root .journal-article .blog-newsletter .btn {
+  color: #ffffff;
+}
+html:root body:has(> main.journal-article) .header {
+  background: rgba(10, 29, 71, 0.96);
+}
