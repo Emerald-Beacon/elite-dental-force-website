@@ -742,41 +742,30 @@ button.nav-link {
   color: rgba(255,255,255,0.75);
   margin: 0 0 var(--s6);
 }
-.trust-bar-scroll {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+.trust-groups {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: var(--s8) var(--s12);
 }
-.trust-bar-logos {
-  display: flex; align-items: center; gap: 96px;
-  animation: logos-scroll 40s linear infinite;
-  width: max-content;
+.trust-group { display: flex; flex-direction: column; align-items: center; gap: var(--s4); }
+.trust-group .trust-bar-label { margin: 0; }
+.trust-group--roadmap { padding-left: var(--s12); border-left: 1px solid rgba(255,255,255,0.14); }
+.trust-group-logos {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: var(--s6) var(--s10);
 }
-.trust-bar-logos:hover { animation-play-state: paused; }
-.trust-bar-logos img {
-  height: 80px; width: auto; max-width: 300px;
-  opacity: 0.9;
+.trust-group-logos img {
+  height: 44px; width: auto; max-width: 200px;
   filter: brightness(0) invert(1);
-  transition: filter var(--t-base), transform var(--t-base), opacity var(--t-base);
-  flex-shrink: 0;
+  opacity: 0.55;
 }
-/* Dentrix Ascend — naturally small, needs extra height */
-.trust-bar-logos img[src*="dentrix-ascend"] {
-  height: 110px;
-}
-
-.trust-bar-logos img[src*="eaglesoft-official"] {
-  height: 62px;
-}
-.trust-bar-logos img:hover {
-  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(185deg);
-  transform: translateY(-2px);
-  opacity: 1;
-}
-
-@keyframes logos-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.trust-group-logos img[src*="dentrix-ascend"] { height: 60px; }
+.trust-group--live .trust-group-logos img { height: 64px; max-width: 240px; opacity: 1; }
+@media (max-width: 768px) {
+  .trust-group--roadmap { padding-left: 0; border-left: 0; }
+  .trust-group-logos { gap: var(--s5) var(--s6); }
+  .trust-group-logos img { height: 30px; }
+  .trust-group-logos img[src*="dentrix-ascend"] { height: 42px; }
+  .trust-group--live .trust-group-logos img { height: 48px; }
 }
 
 /* ================================================
@@ -1695,11 +1684,6 @@ body.menu-open { overflow: hidden; }
   .cta-band-actions { flex-direction: column; align-items: center; }
   .cta-band-actions .btn { width: 100%; max-width: 340px; justify-content: center; }
 
-  /* Trust bar */
-  .trust-bar-logos { gap: 56px; }
-  .trust-bar-logos img { height: 52px; }
-  .trust-bar-logos img[src*="dentrix-ascend"] { height: 68px; }
-  .trust-bar-logos img[src*="eaglesoft-official"] { height: 42px; }
 
   /* Platform stat row */
   .platform-stat-row { flex-wrap: wrap; gap: var(--s3); }
@@ -1734,11 +1718,6 @@ body.menu-open { overflow: hidden; }
   .metric-value { font-size: clamp(var(--fs-3xl), 8vw, 2.5rem); }
   .metric-value--hero { font-size: clamp(2rem, 9vw, 3rem); }
 
-  /* Trust bar */
-  .trust-bar-logos { gap: 44px; }
-  .trust-bar-logos img { height: 44px; }
-  .trust-bar-logos img[src*="dentrix-ascend"] { height: 58px; }
-  .trust-bar-logos img[src*="eaglesoft-official"] { height: 36px; }
 }
 
 /* ── Mobile (≤480px) ── */
@@ -1779,11 +1758,6 @@ body.menu-open { overflow: hidden; }
   .cta-band-actions { flex-direction: column; align-items: center; }
   .cta-band-actions .btn { width: 100%; max-width: none; }
 
-  /* Trust bar */
-  .trust-bar-logos { gap: 36px; }
-  .trust-bar-logos img { height: 38px; }
-  .trust-bar-logos img[src*="dentrix-ascend"] { height: 50px; }
-  .trust-bar-logos img[src*="eaglesoft-official"] { height: 32px; }
 
   /* Workflow steps */
   .workflow-step-num { width: 48px; height: 48px; font-size: var(--fs-lg); }
@@ -1834,17 +1808,12 @@ body.menu-open { overflow: hidden; }
   .btn { padding: var(--s3) var(--s5); font-size: var(--fs-sm); }
   .btn-lg { padding: var(--s3) var(--s6); font-size: var(--fs-base); }
 
-  .trust-bar-logos { gap: 28px; }
-  .trust-bar-logos img { height: 32px; }
-  .trust-bar-logos img[src*="dentrix-ascend"] { height: 44px; }
-  .trust-bar-logos img[src*="eaglesoft-official"] { height: 28px; }
 }
 
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
   [data-animate] { opacity: 1; transform: none; transition: none; }
   .product-visual-wrapper { animation: none; }
-  .trust-bar-logos { animation-play-state: paused; }
   .hero-orb--1, .hero-orb--2, .hero-orb--3, .hero-orb--4 { animation: none; }
   .hero-stat-badge { animation: none; }
 }

@@ -884,6 +884,44 @@
       .pms-logo-bar img:hover {
         opacity: 0.85;
       }
+      .pms-logo-bar .pms-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .pms-group-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(133, 184, 216, 0.8);
+      }
+      .pms-group-logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+      }
+      .pms-group--live .pms-group-logos img {
+        height: 56px;
+        opacity: 1;
+      }
+      .pms-logo-bar img.pms-logo-ascend {
+        height: 64px;
+      }
+      @media (max-width: 768px) {
+        .pms-group-logos {
+          gap: 1.25rem 1.5rem;
+        }
+        .pms-group--live .pms-group-logos img {
+          height: 40px;
+        }
+        .pms-logo-bar img.pms-logo-ascend {
+          height: 44px;
+        }
+      }
 
       /* ── Outcomes grid ── */
       .outcomes-grid {
@@ -3074,7 +3112,7 @@
             "name": "How does EDiFi connect to my practice management software?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "EDiFi uses a lightweight desktop agent called EDiFi Connect that installs on a Windows machine at the practice. Once installed, it reads appointment and insurance data directly from Open Dental, Dentrix, or Eaglesoft without requiring any changes to your existing software or workflow."
+              "text": "EDiFi uses a lightweight desktop agent called EDiFi Connect that installs on a Windows machine at the practice. Once installed, it reads appointment and insurance data directly from Open Dental (Dentrix and Eaglesoft are on our roadmap) without requiring any changes to your existing software or workflow."
             }
           },
           {
@@ -5238,8 +5276,7 @@
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  Integrates with Dentrix, Eaglesoft, Open Dental, and Curve, no
-                  duplicate entry
+                  Live with Open Dental, no duplicate entry
                 </li>
               </ul>
               <a href="edifi.html" class="btn btn-primary"
@@ -6423,10 +6460,10 @@
         <div class="container">
           <div class="section-header">
             <span class="overline">Integrations</span>
-            <h2>Works With Your Practice Management System</h2>
+            <h2>Live With Open Dental Today</h2>
             <p>
-              EDiFi integrates directly with the PMS your team already uses, no
-              migration, no disruption, no retraining required.
+              EDiFi connects directly to Open Dental, with no migration and no
+              retraining. Dentrix, Curve, and Eaglesoft are on our roadmap.
             </p>
           </div>
           <div
@@ -6438,17 +6475,21 @@
             "
           >
             <div class="pms-logo-bar">
-              <img src="../images/logos/dentrix.png" alt="Dentrix" width="851" height="315" loading="lazy" />
-              <img
-                src="../images/logos/dentrix-ascend.png"
-                alt="Dentrix Ascend"
-                style="height: 64px" width="851" height="315" loading="lazy" />
-              <img src="../images/logos/open-dental.png" alt="Open Dental" width="851" height="315" loading="lazy" />
-              <img src="../images/logos/curve-dental.webp" alt="Curve Dental" width="851" height="315" loading="lazy" />
-              <img
-                src="../images/logos/eaglesoft-logo.png"
-                alt="Eaglesoft"
-                class="logo-eaglesoft" width="851" height="315" loading="lazy" />
+              <div class="pms-group pms-group--live">
+                <span class="pms-group-label">Live with</span>
+                <div class="pms-group-logos">
+                  <img src="../images/logos/open-dental.png" alt="Open Dental" width="500" height="180" loading="lazy" />
+                </div>
+              </div>
+              <div class="pms-group">
+                <span class="pms-group-label">On our roadmap</span>
+                <div class="pms-group-logos">
+                  <img src="../images/logos/dentrix.png" alt="Dentrix" width="851" height="315" loading="lazy" />
+                  <img src="../images/logos/dentrix-ascend.png" alt="Dentrix Ascend" class="pms-logo-ascend" width="600" height="315" loading="lazy" />
+                  <img src="../images/logos/curve-dental.webp" alt="Curve Dental" width="1563" height="438" loading="lazy" />
+                  <img src="../images/logos/eaglesoft-wordmark.png" alt="Eaglesoft" width="625" height="200" loading="lazy" />
+                </div>
+              </div>
             </div>
             <p
               style="
