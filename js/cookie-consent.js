@@ -114,6 +114,9 @@
       }
       .edf-cb-btn { padding: 8px 12px; }
     }
+    html.edf-cb-open #edf-chat-btn {
+      translate: 0 calc(-1 * var(--edf-cb-h, 60px) - 4px);
+    }
   `;
   document.head.appendChild(css);
 
@@ -135,6 +138,9 @@
     `;
 
     document.body.appendChild(banner);
+    // translate, not bottom, so lifting the chat bubble never counts as a layout shift
+    document.documentElement.style.setProperty('--edf-cb-h', banner.offsetHeight + 'px');
+    document.documentElement.classList.add('edf-cb-open');
 
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
@@ -146,6 +152,7 @@
       try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
       banner.style.transform = 'translateY(calc(100% + 24px))';
       banner.style.transition = 'transform 0.35s ease';
+      document.documentElement.classList.remove('edf-cb-open');
       setTimeout(function () { banner.remove(); }, 400);
       if (choice === 'accepted') fireConsent();
     }
