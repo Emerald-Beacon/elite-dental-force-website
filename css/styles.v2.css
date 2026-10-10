@@ -1062,7 +1062,7 @@ button.nav-link {
 .platform-stat { display: flex; flex-direction: column; gap: 2px; }
 .platform-stat-num {
   font-size: var(--fs-2xl); font-weight: 800;
-  background: linear-gradient(135deg, #ffd700, #4ba8f0);
+  background: linear-gradient(135deg, #3454f8, #4ba8f0);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.03em; line-height: 1;
