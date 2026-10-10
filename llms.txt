@@ -1,14 +1,14 @@
 # Elite Dental Force
 
-> Elite Dental Force Inc. builds AI powered revenue intelligence infrastructure for dental practices. Its flagship platform, EDiFi, automates insurance eligibility verification, benefits breakdowns, clean claim preparation, denial prevention, and payment auditing for dental offices and DSOs across the United States. The company is headquartered in Saratoga Springs, Utah, and is running a pre launch early access waitlist.
+> Elite Dental Force Inc. builds AI powered revenue intelligence infrastructure for dental practices. Its flagship platform, EDiFi, automates insurance eligibility verification, benefits breakdowns, clean claim preparation, denial prevention, and payment auditing for dental offices and DSOs across the United States. The company is headquartered in Saratoga Springs, Utah, and is onboarding Open Dental offices for EDiFi Eligibility.
 
 Key facts:
 - Company: Elite Dental Force Inc., founded by Alvin Uta'i (CEO) and Benjamin Tuinei
 - Headquarters: Saratoga Springs, Utah, United States
 - Flagship product: EDiFi Revenue Intelligence Platform
-- Core problem solved: dental practices lose 12 to 18 percent of collectible revenue to eligibility errors, claim denials, and unchecked underpayments
+- Core problem solved: dental practices lose collectible revenue to eligibility errors, claim denials, and unchecked underpayments
 - Approach: upstream prevention. EDiFi verifies eligibility and benefits before treatment is planned instead of fixing rejected claims afterward
-- The platform validated 59,000 dollars in insurance underpayments for practices during its payment audit pilot
+- The payment audit engine found 59,000 dollars in insurance underpayments across 2,399 claims at one beta practice
 - Website: https://elitedentalforce.com
 - Demo booking: https://elitedentalforce.com/pages/demo.html
 
@@ -17,7 +17,7 @@ Key facts:
 - [EDiFi Platform Overview](https://elitedentalforce.com/pages/platform.html): The full revenue intelligence platform covering eligibility, claims, auditing, and analytics
 - [EDiFi Software](https://elitedentalforce.com/pages/edifi.html): Product detail for the EDiFi clean claim workflow system
 - [Eligibility Intelligence](https://elitedentalforce.com/pages/eligibility-intelligence.html): Real time dental insurance eligibility and benefits verification
-- [Eligibility Standalone](https://elitedentalforce.com/pages/eligibility-standalone.html): Standalone eligibility verification product that connects to practice management systems including Open Dental, Dentrix, and Eaglesoft
+- [Eligibility Standalone](https://elitedentalforce.com/pages/eligibility-standalone.html): Standalone eligibility verification product that live with Open Dental today, with Dentrix, Curve, and Eaglesoft on the roadmap
 - [AI Claim Scrubbing](https://elitedentalforce.com/pages/ai-claim-scrubbing.html): Pre submission claim validation against payer rules and CDT coding requirements
 - [Denial Prevention](https://elitedentalforce.com/pages/denial-prevention.html): Upstream denial prevention workflow that catches errors before claims are filed
 - [RevNet](https://elitedentalforce.com/pages/revnet.html): Revenue network intelligence for dental practices
