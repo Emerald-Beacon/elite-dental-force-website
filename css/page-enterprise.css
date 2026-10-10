@@ -519,7 +519,7 @@
 }
 
 .ent-field input, .ent-field select, .ent-field textarea {
-  background: rgba(2, 9, 23, 0.65);
+  background: color-mix(in srgb, var(--bg) 65%, transparent);
   border: 1px solid rgba(75, 168, 240, 0.16);
   border-radius: 8px;
   padding: 10px 13px;
@@ -550,7 +550,7 @@
 }
 
 .ent-field option {
-  background: rgb(10, 22, 40);
+  background: rgb(16, 39, 89);
   color: rgb(240, 247, 255);
 }
 
@@ -686,9 +686,9 @@
 }
 
 .enterprise-page {
-  --ent-dark: var(--bg-dark, #070b14);
-  --ent-mid: #0c1320;
-  --ent-card: #111c2b;
+  --ent-dark: var(--bg-dark, #0b1e48);
+  --ent-mid: #0f2555;
+  --ent-card: #132b5f;
   --ent-text: var(--text-secondary, #b6c5d7);
   --ent-muted: var(--text-secondary, #b6c5d7);
   --ent-border: rgba(75, 168, 240, .2);
@@ -789,7 +789,7 @@
 
 .btn-ent-primary, #enterprise-form button[type="submit"] {
   background: var(--ent-blue);
-  color: rgb(7, 17, 31);
+  color: rgb(13, 34, 80);
   box-shadow: rgba(75, 168, 240, 0.12) 0px 6px 24px;
   border: 1px solid var(--ent-blue);
   border-radius: 8px;
@@ -864,11 +864,11 @@
   max-width: none;
   height: auto;
   margin-left: -5%;
-  filter: drop-shadow(rgba(0, 8, 24, 0.6) 0px 28px 24px);
+  filter: drop-shadow(rgba(10, 29, 70, 0.6) 0px 28px 24px);
 }
 
 .ent-entry-path {
-  background: rgb(11, 20, 32);
+  background: rgb(14, 36, 84);
   padding: 23px 0px;
   border-block: 1px solid var(--ent-border);
 }
@@ -883,7 +883,7 @@
 
 .ent-stats-bar {
   border-top: 0px;
-  background: rgb(8, 15, 25);
+  background: rgb(12, 32, 77);
 }
 
 .ent-stats-grid {
@@ -980,20 +980,20 @@
   position: relative;
   border: 1px solid var(--ent-border);
   border-radius: 14px;
-  background: linear-gradient(145deg, rgb(23, 36, 52), rgb(14, 24, 38));
+  background: linear-gradient(145deg, rgb(24, 49, 105), rgb(17, 40, 90));
   box-shadow: rgba(0, 6, 17, 0.25) 0px 15px 40px, rgba(187, 221, 255, 0.08) 0px 1px 0px inset;
   padding: 30px 26px;
   transition: transform 0.25s;
 }
 
 .ent-feat-card:hover {
-  background: linear-gradient(145deg, rgb(23, 36, 52), rgb(14, 24, 38));
+  background: linear-gradient(145deg, rgb(24, 49, 105), rgb(17, 40, 90));
   transform: translateY(-4px);
 }
 
 .ent-feat-card:first-child {
   border-color: rgba(255, 215, 0, 0.35);
-  background: linear-gradient(145deg, rgb(36, 40, 32), rgb(16, 27, 40));
+  background: linear-gradient(145deg, #2b3356, rgb(18, 42, 93));
 }
 
 .ent-feat-card:first-child .ent-feat-icon {
@@ -1028,8 +1028,8 @@
   border: 1px solid var(--ent-border);
   border-radius: 16px;
   overflow: hidden;
-  background: rgb(16, 27, 42);
-  box-shadow: rgba(0, 6, 17, 0.35) 0px 24px 56px;
+  background: rgb(18, 42, 94);
+  box-shadow: rgba(8, 26, 65, 0.35) 0px 24px 56px;
 }
 
 .ent-int-card {
@@ -1052,7 +1052,7 @@
 }
 
 .ent-security {
-  background: linear-gradient(120deg, rgb(11, 18, 30), rgb(16, 31, 50));
+  background: linear-gradient(120deg, rgb(14, 36, 82), rgb(21, 46, 99));
 }
 
 .ent-sec-badges {
@@ -1062,7 +1062,7 @@
 .ent-sec-badge {
   text-align: left;
   padding: 28px;
-  background: linear-gradient(145deg, rgba(29, 47, 66, 0.7), rgba(11, 22, 37, 0.85));
+  background: linear-gradient(145deg, rgba(31, 58, 117, 0.7), rgba(16, 38, 87, 0.85));
   box-shadow: rgba(161, 208, 255, 0.07) 0px 1px 0px inset;
 }
 
@@ -1081,7 +1081,7 @@
 }
 
 .ent-cs-card {
-  background: linear-gradient(135deg, rgb(24, 32, 31), rgb(12, 21, 35) 65%);
+  background: linear-gradient(135deg, #1f2f55, rgb(15, 38, 87) 65%);
   border-radius: 20px;
   padding: 56px;
   gap: 64px;
@@ -1128,7 +1128,7 @@
 }
 
 .ent-compare {
-  background: rgb(11, 20, 32);
+  background: rgb(14, 36, 84);
 }
 
 .ent-compare-header {
@@ -1143,7 +1143,7 @@
 .ent-compare-wrap {
   border: 1px solid var(--ent-border);
   border-radius: 12px;
-  scrollbar-color: var(--ent-blue) #142234;
+  scrollbar-color: var(--ent-blue) #173067;
   scrollbar-width: thin;
 }
 
@@ -1156,22 +1156,22 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 0.65rem;
   padding: 22px;
-  background: rgb(21, 34, 51);
+  background: rgb(23, 48, 103);
 }
 
 .ent-compare-table tbody td {
-  background: rgb(16, 26, 40);
+  background: rgb(18, 42, 93);
   font-size: 0.82rem;
   line-height: 1.8;
   padding: 18px 22px;
 }
 
 .ent-compare-table tbody tr:nth-child(2n) td {
-  background: rgb(18, 30, 46);
+  background: rgb(20, 45, 98);
 }
 
 .ent-compare-table tbody td:nth-child(2) {
-  background: rgb(20, 35, 55);
+  background: rgb(24, 49, 105);
 }
 
 .ent-compare-table .tx {
@@ -1198,7 +1198,7 @@
 }
 
 #ent-form-wrap {
-  background: linear-gradient(145deg, rgb(23, 36, 53), rgb(13, 23, 37));
+  background: linear-gradient(145deg, rgb(24, 50, 105), rgb(16, 39, 89));
   padding: 36px;
   box-shadow: rgba(0, 6, 17, 0.25) 0px 30px 60px, rgba(165, 212, 255, 0.1) 0px 1px 0px inset;
 }
@@ -1223,7 +1223,7 @@
 
 .ent-field input, .ent-field textarea, .ent-field select {
   border-color: rgba(147, 188, 223, 0.35);
-  background-color: rgb(9, 18, 31);
+  background-color: rgb(14, 35, 82);
 }
 
 .ent-form-disclaimer {
@@ -1240,8 +1240,8 @@
   max-width: 1192px;
   border: 1px solid rgba(75, 168, 240, 0.32);
   border-radius: 20px;
-  background: radial-gradient(at 50% 0%, rgba(75, 168, 240, 0.14), transparent 70%), linear-gradient(135deg, rgb(20, 35, 54), rgb(11, 19, 31));
-  box-shadow: rgba(0, 6, 17, 0.3) 0px 28px 60px, rgba(137, 204, 255, 0.25) 0px 1px 0px inset, rgba(75, 168, 240, 0.05) 0px 0px 35px;
+  background: radial-gradient(at 50% 0%, rgba(75, 168, 240, 0.14), transparent 70%), linear-gradient(135deg, rgb(23, 49, 104), rgb(14, 36, 83));
+  box-shadow: rgba(8, 26, 65, 0.3) 0px 28px 60px, rgba(137, 204, 255, 0.25) 0px 1px 0px inset, rgba(75, 168, 240, 0.05) 0px 0px 35px;
 }
 
 .ent-cta h2 {

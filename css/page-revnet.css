@@ -2,9 +2,9 @@
 :root {
   --rv-blue: #4ba8f0;
   --rv-navy: #001f71;
-  --rv-dark: #020917;
-  --rv-mid: #0a1628;
-  --rv-card: #0d1e35;
+  --rv-dark: var(--bg);
+  --rv-mid: #102759;
+  --rv-card: #152e63;
   --rv-gold: #ffd700;
   --rv-green: #27c93f;
   --rv-red: #ef4444;
@@ -15,7 +15,7 @@
 
 /* ── Hero ── */
 .rv-hero {
-  background: linear-gradient(180deg, #030d22 0%, #020917 70%);
+  background: linear-gradient(180deg, #0d2250 0%, var(--bg) 70%);
   border-bottom: 1px solid rgba(75, 168, 240, 0.1);
   padding: 120px 0 72px;
   text-align: center;
@@ -173,7 +173,7 @@
   text-decoration: underline;
 }
 .rv-breadcrumb-sep {
-  opacity: 0.4;
+  opacity: 0.85;
 }
 .rv-breadcrumb-current {
   color: var(--rv-text);
@@ -876,7 +876,7 @@
 .rv-page .rv-breadcrumb-current { color: #c5dff0; }
 .rv-page .rv-definition-box {
   position: relative; border: 1px solid rgba(75,168,240,.4); border-left: 1px solid rgba(75,168,240,.4); border-radius: 22px;
-  background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 60%), linear-gradient(145deg, #172332, #08111f);
+  background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 60%), linear-gradient(145deg, #173168, #0d2351);
   box-shadow: 0 24px 60px rgba(0,0,0,.34), inset 0 1px rgba(255,255,255,.14); padding: 32px 36px;
 }
 .rv-page .rv-definition-box::before { content: ""; position: absolute; top: 0; left: 8%; right: 8%; height: 1px; background: linear-gradient(90deg, transparent, rgba(75,168,240,.8), rgba(255,215,0,.5), transparent); }
@@ -885,12 +885,12 @@
 
 /* layout + toc */
 .rv-page .rv-layout { max-width: 1180px; gap: 64px; }
-.rv-page .rv-toc { background: linear-gradient(145deg, #14202e, #0a1321); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07); }
+.rv-page .rv-toc { background: linear-gradient(145deg, #152e63, #0e2454); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07); }
 .rv-page .rv-toc-title { font-family: 'EDF V3 Mono', monospace; font-weight: 500; letter-spacing: .12em; color: var(--blue-bright); }
 .rv-page .rv-toc-list a { padding: 9px 10px; margin-left: -10px; border-left: 2px solid transparent; }
 .rv-page .rv-toc-list a:hover, .rv-page .rv-toc-list a.active { color: var(--blue-bright); background: rgba(75,168,240,.06); border-left-color: var(--blue); }
-.rv-page .rv-sidebar-cta { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 65%), linear-gradient(145deg, #172332, #08111f); border-color: rgba(75,168,240,.4); box-shadow: inset 0 1px rgba(255,255,255,.12); }
-.rv-page .rv-sidebar > div[style] { background: linear-gradient(145deg, #14202e, #0a1321) !important; border-color: rgba(75,168,240,.22) !important; }
+.rv-page .rv-sidebar-cta { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.12), transparent 65%), linear-gradient(145deg, #173168, #0d2351); border-color: rgba(75,168,240,.4); box-shadow: inset 0 1px rgba(255,255,255,.12); }
+.rv-page .rv-sidebar > div[style] { background: linear-gradient(145deg, #152e63, #0e2454) !important; border-color: rgba(75,168,240,.22) !important; }
 .rv-page .rv-sidebar > div[style] a { font-size: 12.5px; min-height: 44px; display: flex !important; align-items: center; }
 .rv-page .rv-sidebar > div[style] a:hover { background: rgba(75,168,240,.12) !important; }
 
@@ -903,11 +903,11 @@
 .rv-page .rv-article li strong, .rv-page .rv-article p strong { color: var(--text); }
 
 /* glass surfaces */
-.rv-page .rv-net-visual { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.06), transparent 60%), #08111f; border-color: rgba(75,168,240,.28); box-shadow: inset 0 1px rgba(255,255,255,.08); }
-.rv-page .rv-net-side { background: linear-gradient(145deg, #14202e, #0a1321); }
-.rv-page .rv-net-side--loose { background: linear-gradient(145deg, #231820, #0e1220); border-color: rgba(248,113,113,.3); }
-.rv-page .rv-net-side--tight { background: linear-gradient(145deg, #13262a, #0a1521); border-color: rgba(110,231,183,.3); }
-.rv-page .rv-leak-card, .rv-page .rv-audience-card, .rv-page .rv-faq-item, .rv-page .rv-cost-card { background: linear-gradient(145deg, #15212e, #09121f 70%); box-shadow: inset 0 1px rgba(255,255,255,.07), 0 16px 40px rgba(0,0,0,.2); }
+.rv-page .rv-net-visual { background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.06), transparent 60%), #0d2351; border-color: rgba(75,168,240,.28); box-shadow: inset 0 1px rgba(255,255,255,.08); }
+.rv-page .rv-net-side { background: linear-gradient(145deg, #152e63, #0e2454); }
+.rv-page .rv-net-side--loose { background: linear-gradient(145deg, #231820, #0f2656); border-color: rgba(248,113,113,.3); }
+.rv-page .rv-net-side--tight { background: linear-gradient(145deg, #13262a, #0e2454); border-color: rgba(110,231,183,.3); }
+.rv-page .rv-leak-card, .rv-page .rv-audience-card, .rv-page .rv-faq-item, .rv-page .rv-cost-card { background: linear-gradient(145deg, #152e64, #0e2352 70%); box-shadow: inset 0 1px rgba(255,255,255,.07), 0 16px 40px rgba(0,0,0,.2); }
 .rv-page .rv-leak-card { border-color: rgba(248,113,113,.22); }
 .rv-page .rv-leak-card:nth-child(odd) { transform: none; }
 .rv-page .rv-leak-num { color: #fca5a5; font-weight: 500; }
@@ -922,25 +922,25 @@
 /* tighten timeline */
 .rv-page .rv-tighten-steps { position: relative; }
 .rv-page .rv-tighten-steps::before { content: ""; position: absolute; left: 17px; top: 36px; bottom: 36px; width: 1px; background: linear-gradient(180deg, rgba(75,168,240,.6), rgba(75,168,240,.1)); }
-.rv-page .rv-tighten-step-num { position: relative; z-index: 1; background: #0a1a2e; border-color: rgba(75,168,240,.5); font-family: 'EDF V3 Mono', monospace; color: var(--blue-bright); box-shadow: 0 0 18px rgba(75,168,240,.18); }
+.rv-page .rv-tighten-step-num { position: relative; z-index: 1; background: #122a5d; border-color: rgba(75,168,240,.5); font-family: 'EDF V3 Mono', monospace; color: var(--blue-bright); box-shadow: 0 0 18px rgba(75,168,240,.18); }
 .rv-page .rv-tighten-step p { color: #c5dff0; }
 
 /* table */
-.rv-page .rv-compare-wrap { background: #0a1321; border-color: rgba(75,168,240,.22); border-radius: 16px; }
+.rv-page .rv-compare-wrap { background: #0e2454; border-color: rgba(75,168,240,.22); border-radius: 16px; }
 .rv-page .rv-compare-table { min-width: 680px; }
-.rv-page .rv-compare-table th { background: #111f30; }
+.rv-page .rv-compare-table th { background: #152d63; }
 .rv-page .rv-compare-table td.without { color: #e8b5b5; }
 .rv-page .rv-compare-table .col-revnet, .rv-page .rv-compare-table .check { color: #6ee7b7; }
 
 /* callout, faq, cta */
-.rv-page .rv-edifi-callout { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); }
+.rv-page .rv-edifi-callout { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #173168, #0d2351); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); }
 .rv-page .rv-edifi-callout-label { font-family: 'EDF V3 Mono', monospace; font-weight: 500; }
 .rv-page .rv-edifi-module { font-family: 'EDF V3 Mono', monospace; border-radius: 6px; color: #c5dff0; }
 .rv-page .rv-edifi-cta { min-height: 44px; }
 .rv-page .rv-faq-item { border-color: rgba(75,168,240,.2); }
 .rv-page .rv-faq-q { color: var(--text); }
 .rv-page .rv-faq-a { color: #c5dff0; }
-.rv-page .rv-final-cta { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); border-radius: 24px; padding: 56px 32px; }
+.rv-page .rv-final-cta { border-color: rgba(75,168,240,.4); background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #173168, #0d2351); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); border-radius: 24px; padding: 56px 32px; }
 .rv-page .rv-final-cta p { color: var(--text-secondary); }
 
 @media (max-width: 900px) {

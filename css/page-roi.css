@@ -164,8 +164,8 @@ body::before {
 .calc-inputs-card {
   background: linear-gradient(
     145deg,
-    rgba(8, 21, 52, 0.95),
-    rgba(4, 12, 32, 0.95)
+    rgba(19, 43, 95, 0.95),
+    rgba(13, 34, 79, 0.95)
   );
   border: 1px solid rgba(75, 168, 240, 0.18);
   border-radius: 24px;
@@ -381,8 +381,8 @@ input[type="range"]::-moz-range-thumb {
 .calc-results-card {
   background: linear-gradient(
     145deg,
-    rgba(6, 14, 40, 0.98),
-    rgba(3, 8, 24, 0.98)
+    rgba(15, 38, 86, 0.98),
+    rgba(11, 30, 72, 0.98)
   );
   border: 1px solid rgba(75, 168, 240, 0.22);
   border-radius: 24px;
@@ -587,7 +587,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* ── VALIDATION STRIP ── */
 .validation-strip {
-  background: rgba(8, 21, 48, 0.55);
+  background: rgba(18, 42, 93, 0.55);
   border-top: 1px solid rgba(75, 168, 240, 0.1);
   border-bottom: 1px solid rgba(75, 168, 240, 0.1);
   position: relative;
@@ -653,7 +653,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* ── METHODOLOGY ── */
 .methodology-card {
-  background: rgba(4, 12, 32, 0.7);
+  background: rgba(13, 34, 79, 0.7);
   border: 1px solid rgba(75, 168, 240, 0.12);
   border-radius: 20px;
   padding: 40px;
@@ -758,7 +758,7 @@ input[type="range"]::-moz-range-thumb {
   position: fixed;
   inset: 0;
   z-index: 10000;
-  background: rgba(1, 5, 18, 0.85);
+  background: rgba(9, 27, 67, 0.85);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -775,7 +775,7 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 .roi-modal-card {
-  background: rgba(6, 14, 38, 0.98);
+  background: rgba(15, 37, 85, 0.98);
   border: 1px solid rgba(75, 168, 240, 0.25);
   border-radius: 20px;
   padding: 40px;
@@ -899,7 +899,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .roi-page .roi-modal-submit {
   background: #4ba8f0;
-  color: #031020;
+  color: #0c214e;
 }
 .roi-page .roi-modal-disclaimer { color: #c5dff0; }
 .roi-page { background: var(--navy-deep); }
@@ -917,13 +917,13 @@ body.roi-page::before { opacity: .35; }
 .roi-page .roi-hero h1 { color: var(--text); letter-spacing: -.05em; }
 .roi-page .roi-hero h1 em { background: none; -webkit-text-fill-color: currentColor; color: var(--blue-bright); }
 .roi-page .roi-hero-sub { color: var(--text-secondary); max-width: 52ch; margin-inline: auto; }
-.roi-page .roi-vpill { background: linear-gradient(145deg, #152231, #09121f); border: 1px solid rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.08); color: #c5dff0; }
+.roi-page .roi-vpill { background: linear-gradient(145deg, #162f66, #0e2352); border: 1px solid rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.08); color: #c5dff0; }
 .roi-page .roi-vpill strong { font-family: 'EDF V3 Mono', monospace; letter-spacing: -.04em; color: var(--text); }
 .roi-page .roi-vpill:first-child strong { color: var(--gold); }
 
 .roi-page .calc-section { padding: 24px 0 96px; }
 .roi-page .calc-inputs-card, .roi-page .calc-results-card {
-  background: linear-gradient(145deg, #152231, #09121f 62%);
+  background: linear-gradient(145deg, #162f66, #0e2352 62%);
   border: 1px solid rgba(75,168,240,.28);
   border-radius: 22px;
   box-shadow: 0 24px 60px rgba(0,0,0,.34), inset 0 1px rgba(255,255,255,.1);
@@ -941,34 +941,34 @@ body.roi-page::before { opacity: .35; }
 .roi-page .slider-value, .roi-page .loc-display, .roi-page .result-metric-value, .roi-page .validation-num { font-family: 'EDF V3 Mono', monospace; letter-spacing: -.04em; }
 .roi-page .slider-range-labels, .roi-page .loc-sublabel, .roi-page .slider-group p[style] { color: var(--text-secondary) !important; }
 .roi-page .loc-btn { min-width: 44px; min-height: 44px; }
-.roi-page .featured-recovery { background: radial-gradient(ellipse at 50% 0, rgba(255,215,0,.07), transparent 65%), rgba(2,9,23,.55); border-color: rgba(255,215,0,.22); }
+.roi-page .featured-recovery { background: radial-gradient(ellipse at 50% 0, rgba(255,215,0,.07), transparent 65%), color-mix(in srgb, var(--bg) 55%, transparent); border-color: rgba(255,215,0,.22); }
 .roi-page .featured-number { font-family: 'EDF V3 Mono', monospace; letter-spacing: -.07em; background: none; -webkit-text-fill-color: currentColor; color: var(--gold); transition: none; }
 .roi-page .featured-sublabel { color: var(--text-secondary); }
 .roi-page .result-metric { background: rgba(75,168,240,.035); border-color: rgba(75,168,240,.16); box-shadow: inset 0 1px rgba(255,255,255,.05); }
 .roi-page .result-metric-label { color: var(--text-secondary); }
 .roi-page .payback-desc, .roi-page .results-disclaimer { color: var(--text-secondary); }
-.roi-page .calc-results-card > div[style] { background: rgba(2,9,23,.5) !important; border-color: rgba(75,168,240,.2) !important; }
+.roi-page .calc-results-card > div[style] { background: color-mix(in srgb, var(--bg) 50%, transparent) !important; border-color: rgba(75,168,240,.2) !important; }
 .roi-page .calc-results-card > div[style] > span:first-child { color: #c5dff0 !important; }
 .roi-page .calc-results-card > div[style] > span:last-child { font-family: 'EDF V3 Mono', monospace; color: #6ee7b7 !important; }
 .roi-page .results-cta-section .btn-primary { min-height: 52px; }
 
-.roi-page .validation-strip { background: linear-gradient(110deg, rgba(18,32,50,.7), rgba(7,15,29,.85)); border-block: 1px solid rgba(75,168,240,.2); }
+.roi-page .validation-strip { background: linear-gradient(110deg, rgba(22, 47, 100, .7), rgba(13, 34, 79, .85)); border-block: 1px solid rgba(75,168,240,.2); }
 .roi-page .validation-desc { color: var(--text-secondary); font-size: 12px; }
 .roi-page .validation-num.blue { color: var(--blue-bright); }
 
-.roi-page .section.bg-alt { background: radial-gradient(ellipse at 85% 20%, rgba(75,168,240,.04), transparent 55%), #050d1a; }
+.roi-page .section.bg-alt { background: radial-gradient(ellipse at 85% 20%, rgba(75,168,240,.04), transparent 55%), #0b204b; }
 .roi-page .section-header p[style] { color: var(--text-secondary) !important; }
-.roi-page .methodology-card { background: linear-gradient(145deg, #14202e, #0a1321); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07); }
+.roi-page .methodology-card { background: linear-gradient(145deg, #152e63, #0e2454); border-color: rgba(75,168,240,.22); box-shadow: inset 0 1px rgba(255,255,255,.07); }
 .roi-page .method-item { padding: 20px 0 0; border-top: 1px solid rgba(75,168,240,.16); }
 .roi-page .method-desc { color: #c5dff0; }
 
 .roi-page .cta-band { background: transparent; border: 0; padding: 88px 24px; }
-.roi-page .cta-band > .container { max-width: 1100px; border: 1px solid rgba(75,168,240,.4); border-radius: 24px; background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #172332, #08111f); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); padding: 64px 32px; }
+.roi-page .cta-band > .container { max-width: 1100px; border: 1px solid rgba(75,168,240,.4); border-radius: 24px; background: radial-gradient(ellipse at 50% 0, rgba(75,168,240,.13), transparent 60%), linear-gradient(140deg, #173168, #0d2351); box-shadow: 0 0 40px rgba(75,168,240,.06), inset 0 1px rgba(255,255,255,.14); padding: 64px 32px; }
 .roi-page .cta-band h2 { letter-spacing: -.04em; }
 .roi-page .cta-band .gradient-text { background: none; -webkit-text-fill-color: currentColor; color: var(--blue-bright); }
 .roi-page .cta-band p { color: var(--text-secondary); }
 
-.roi-page .roi-modal-card { background: linear-gradient(145deg, #172332, #08111f); border-color: rgba(75,168,240,.4); }
+.roi-page .roi-modal-card { background: linear-gradient(145deg, #173168, #0d2351); border-color: rgba(75,168,240,.4); }
 
 .roi-page .rv-reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .roi-page .rv-reveal.rv-in { opacity: 1; transform: none; }

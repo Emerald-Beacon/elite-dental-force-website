@@ -10,8 +10,8 @@ body.pod-page::before {
   background-size: 55px 55px;
 }
 
-.pod-page main .section        { background: rgba(2,9,23,0.35); }
-.pod-page main .section.bg-alt { background: rgba(8,21,48,0.42); }
+.pod-page main .section        { background: color-mix(in srgb, var(--bg) 35%, transparent); }
+.pod-page main .section.bg-alt { background: rgba(18, 42, 93, 0.42); }
 
 /* ── HERO ── */
 .pod-hero {
@@ -80,7 +80,7 @@ body.pod-page::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.9), rgba(18, 42, 93, 0.9));
   border: 1px solid rgba(75,168,240,0.18);
   border-radius: 16px;
   overflow: hidden;
@@ -112,7 +112,7 @@ body.pod-page::before {
 
 /* ── FEATURED APPEARANCE ── */
 .pod-featured {
-  background: linear-gradient(145deg, rgba(13,31,60,0.92), rgba(8,21,48,0.92));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.92), rgba(18, 42, 93, 0.92));
   border: 1px solid rgba(75,168,240,0.2);
   border-radius: 20px;
   overflow: hidden;
@@ -210,7 +210,7 @@ body.pod-page::before {
 .pod-card {
   display: flex; align-items: center; gap: 1.25rem;
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(145deg, rgba(13,31,60,0.85), rgba(8,21,48,0.85));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.85), rgba(18, 42, 93, 0.85));
   border: 1px solid rgba(75,168,240,0.15);
   border-radius: 16px;
   text-decoration: none;
@@ -369,7 +369,7 @@ body.pod-page::before {
 .pod-page .pod-host-pill {
   font-family: "EDF V3 Mono", monospace;
   letter-spacing: 0.04em;
-  background: linear-gradient(145deg, #152231, #09121f);
+  background: linear-gradient(145deg, #162f66, #0e2352);
   border: 1px solid var(--border-blue);
   color: #c5dff0;
 }
@@ -377,8 +377,8 @@ body.pod-page::before {
   border-block: 1px solid var(--border-blue);
   background: linear-gradient(
     110deg,
-    rgba(18, 32, 50, 0.7),
-    rgba(7, 15, 29, 0.85)
+    rgba(22, 47, 100, 0.7),
+    rgba(13, 34, 79, 0.85)
   );
 }
 .pod-page .pod-stat-val {
@@ -397,7 +397,7 @@ body.pod-page::before {
 .pod-page .pod-featured-inner {
   border-radius: 0.5rem;
   border: 1px solid var(--border-blue);
-  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  background: linear-gradient(145deg, #152e64, #0e2352 70%);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
   overflow: hidden;
 }
@@ -408,7 +408,7 @@ body.pod-page::before {
       rgba(75, 168, 240, 0.16),
       transparent 70%
     ),
-    #0a1626;
+    #102657;
 }
 .pod-page .pod-featured-badge {
   font-family: "EDF V3 Mono", monospace;
@@ -496,7 +496,7 @@ body.pod-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
 }
 .pod-page .pod-invite p {
@@ -517,7 +517,7 @@ body.pod-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
   padding: 64px 32px;
 }

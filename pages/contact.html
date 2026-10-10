@@ -56,10 +56,10 @@
 
       /* Section tints */
       main .section {
-        background: rgba(2, 9, 23, 0.35);
+        background: color-mix(in srgb, var(--bg) 35%, transparent);
       }
       main .section.bg-light {
-        background: rgba(8, 21, 48, 0.42);
+        background: rgba(18, 42, 93, 0.42);
       }
 
       /* ── HERO ── */
@@ -67,7 +67,7 @@
         position: relative;
         padding: 180px 0 96px;
         text-align: center;
-        background: rgba(2, 9, 23, 0.45);
+        background: color-mix(in srgb, var(--bg) 45%, transparent);
         overflow: hidden;
       }
       .ct-hero-glow {
@@ -146,7 +146,7 @@
       }
 
       .ct-info-card {
-        background: linear-gradient(145deg, #0d1f3c, #081530);
+        background: linear-gradient(145deg, #173168, #122a5d);
         border: 1px solid rgba(75, 168, 240, 0.14);
         border-radius: 20px;
         padding: 32px;
@@ -271,7 +271,7 @@
 
       /* ── RIGHT: Form card ── */
       .ct-form-card {
-        background: linear-gradient(145deg, #0d1f3c, #071428);
+        background: linear-gradient(145deg, #173168, #0f2657);
         border: 1px solid rgba(75, 168, 240, 0.16);
         border-radius: 24px;
         padding: 48px 44px;
@@ -355,7 +355,7 @@
         color: rgba(255, 255, 255, 0.22);
       }
       .ct-field select option {
-        background: #0d1f3c;
+        background: #173168;
         color: #fff;
       }
 
@@ -454,7 +454,7 @@
 
       /* ── QUICK STRIP ── */
       .ct-strip {
-        background: rgba(8, 21, 48, 0.55);
+        background: rgba(18, 42, 93, 0.55);
         border-top: 1px solid rgba(75, 168, 240, 0.1);
         border-bottom: 1px solid rgba(75, 168, 240, 0.1);
         position: relative;

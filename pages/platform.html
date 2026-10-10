@@ -62,7 +62,7 @@
 
       /* ── Browser mockup (matches edifi.html) ── */
       .browser-mockup {
-        background: rgba(6, 14, 38, 0.96);
+        background: rgba(15, 37, 85, 0.96);
         border: 1px solid rgba(75, 168, 240, 0.22);
         border-radius: 14px;
         overflow: hidden;
@@ -147,7 +147,7 @@
         align-items: center;
         gap: 10px;
         padding: 10px 16px;
-        background: rgba(3, 8, 24, 0.99);
+        background: rgba(11, 30, 72, 0.99);
         border-bottom: 1px solid rgba(75, 168, 240, 0.1);
       }
       .browser-dots {
@@ -205,7 +205,7 @@
       }
       .mockup-pill {
         position: absolute;
-        background: rgba(4, 14, 38, 0.95);
+        background: rgba(14, 36, 83, 0.95);
         border: 1px solid rgba(75, 168, 240, 0.28);
         border-radius: 50px;
         padding: 8px 14px 8px 10px;
@@ -546,7 +546,7 @@
         font-size: 0.65rem;
         font-weight: 800;
         letter-spacing: 0.1em;
-        color: #4ba8f0;
+        color: #7cc4ff;
         background: rgba(75, 168, 240, 0.1);
         border: 1px solid rgba(75, 168, 240, 0.2);
         border-radius: 50px;
@@ -592,7 +592,7 @@
       }
       .wf-tag--ai {
         background: rgba(75, 168, 240, 0.12);
-        color: #4ba8f0;
+        color: #7cc4ff;
         border: 1px solid rgba(75, 168, 240, 0.25);
       }
       .wf-tag--pre {
@@ -602,12 +602,12 @@
       }
       .wf-tag--cov {
         background: rgba(52, 84, 248, 0.12);
-        color: #818cf8;
+        color: #a5b4fc;
         border: 1px solid rgba(52, 84, 248, 0.25);
       }
       .wf-tag--clean {
         background: rgba(52, 84, 248, 0.12);
-        color: #818cf8;
+        color: #a5b4fc;
         border: 1px solid rgba(52, 84, 248, 0.25);
       }
       .wf-tag--audit {
@@ -668,7 +668,7 @@
       }
       .arch-tag--ai {
         background: rgba(75, 168, 240, 0.15);
-        color: #4ba8f0;
+        color: #7cc4ff;
         border: 1px solid rgba(75, 168, 240, 0.3);
       }
       .arch-tag--edifi {
@@ -895,7 +895,7 @@
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(133, 184, 216, 0.8);
+        color: #85b8d8;
       }
       .pms-group-logos {
         display: flex;
@@ -1031,7 +1031,7 @@
         min-height: 100vh;
         display: flex;
         align-items: center;
-        background: rgba(2, 9, 23, 0.92);
+        background: color-mix(in srgb, var(--bg) 92%, transparent);
         padding: 5rem 0 4rem;
       }
 
@@ -1052,7 +1052,7 @@
         background: radial-gradient(
           ellipse 70% 65% at 50% 50%,
           transparent 30%,
-          #020917 100%
+          var(--bg) 100%
         );
       }
 
@@ -1344,13 +1344,13 @@
           -apple-system,
           sans-serif;
         font-size: 9px;
-        color: #1e2a3a;
+        color: #1c3771;
         display: flex;
         flex-direction: column;
         max-height: 440px;
       }
       .ecal-topbar {
-        background: #0d1b3e;
+        background: #183169;
         padding: 6px 10px;
         display: flex;
         align-items: center;
@@ -1379,7 +1379,7 @@
         color: rgba(255, 255, 255, 0.3);
       }
       .ecal-subnav {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.7);
         font-size: 8px;
       }
       .ecal-datenav {
@@ -1412,7 +1412,7 @@
       .ecal-tag--on {
         background: rgba(75, 168, 240, 0.2);
         border-color: rgba(75, 168, 240, 0.5);
-        color: #4ba8f0;
+        color: #9fd3ff;
       }
       .ecal-topbtns {
         display: flex;
@@ -1522,7 +1522,7 @@
       .ecal-pn {
         font-size: 8px;
         font-weight: 700;
-        color: #1e293b;
+        color: #1d3771;
         line-height: 1.2;
       }
       .ecal-pm {
@@ -1613,7 +1613,7 @@
       .ecal-prod-big {
         font-size: 13px;
         font-weight: 800;
-        color: #1e293b;
+        color: #1d3771;
       }
       .ecal-goal {
         color: #94a3b8;
@@ -1647,7 +1647,7 @@
       .ecal-bv {
         font-size: 9.5px;
         font-weight: 800;
-        color: #1e293b;
+        color: #1d3771;
       }
       .ecal-bl {
         font-size: 6px;
@@ -1667,7 +1667,7 @@
       .ecal-er span:last-child {
         margin-left: auto;
         font-weight: 700;
-        color: #1e293b;
+        color: #1d3771;
       }
       .ecal-vbtn {
         margin-top: 6px;
@@ -1691,7 +1691,7 @@
       .ecal-cfr span:last-child {
         margin-left: auto;
         font-weight: 700;
-        color: #1e293b;
+        color: #1d3771;
       }
 
       /* ──────────────────────────────────────────────────────────
@@ -1706,13 +1706,13 @@
           -apple-system,
           sans-serif;
         font-size: 9px;
-        color: #1e2a3a;
+        color: #1c3771;
         display: flex;
         flex-direction: column;
         max-height: 440px;
       }
       .etpl-topbar {
-        background: #0d1b3e;
+        background: #183169;
         padding: 6px 10px;
         display: flex;
         align-items: center;
@@ -1739,7 +1739,7 @@
       }
       .etpl-breadcrumb {
         font-size: 8px;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.7);
       }
       /* step tabs */
       .etpl-steps {
@@ -1764,7 +1764,7 @@
         border-bottom-color: #22c55e;
       }
       .etpl-step--active {
-        color: #1e293b;
+        color: #1d3771;
         border-bottom-color: #4ba8f0;
       }
       /* specialty grid (step 1 preview) */
@@ -1821,7 +1821,7 @@
       .etpl-spec-name {
         font-size: 7.5px;
         font-weight: 700;
-        color: #1e293b;
+        color: #1d3771;
         line-height: 1.3;
       }
       .etpl-spec-desc {
@@ -1840,7 +1840,7 @@
       .etpl-proc-h2 {
         font-size: 10px;
         font-weight: 800;
-        color: #0f172a;
+        color: #122a5d;
         margin-bottom: 2px;
       }
       .etpl-proc-sub {
@@ -1872,7 +1872,7 @@
       .etpl-ptitle {
         font-size: 8.5px;
         font-weight: 700;
-        color: #0f172a;
+        color: #122a5d;
         margin-bottom: 4px;
       }
       .etpl-tags-row {
@@ -1917,7 +1917,7 @@
       }
       .etpl-cat--prev {
         background: #dcfce7;
-        color: #16a34a;
+        color: #15803d;
       }
       .etpl-cat--perio {
         background: #ede9fe;
@@ -1951,7 +1951,7 @@
       }
       .etpl-med--high {
         background: #fff7ed;
-        color: #ea580c;
+        color: #c2410c;
       }
       .etpl-med--dual {
         background: #f8fafc;
@@ -1960,7 +1960,7 @@
       }
       .etpl-med--first {
         background: #fff7ed;
-        color: #ea580c;
+        color: #c2410c;
       }
 
       /* ──────────────────────────────────────────────────────────
@@ -1976,13 +1976,13 @@
           -apple-system,
           sans-serif;
         font-size: 9px;
-        color: #1e2a3a;
+        color: #1c3771;
         display: flex;
         flex-direction: column;
         max-height: 440px;
       }
       .eelig-topbar {
-        background: #0d1b3e;
+        background: #183169;
         padding: 5px 10px;
         display: flex;
         align-items: center;
@@ -2029,7 +2029,7 @@
       .eelig-pt-name {
         font-size: 11px;
         font-weight: 800;
-        color: #0f172a;
+        color: #122a5d;
       }
       .eelig-pt-meta {
         font-size: 7.5px;
@@ -2084,7 +2084,7 @@
         color: #64748b;
       }
       .eelig-ins-field b {
-        color: #0f172a;
+        color: #122a5d;
         font-weight: 600;
       }
       /* quick stat cards */
@@ -2115,7 +2115,7 @@
       .eelig-stat-val {
         font-size: 13px;
         font-weight: 800;
-        color: #0f172a;
+        color: #122a5d;
       }
       .eelig-stat-sub {
         font-size: 6.5px;
@@ -2185,7 +2185,7 @@
       }
       .eelig-cov-tbl td:first-child {
         font-weight: 600;
-        color: #1e293b;
+        color: #1d3771;
       }
       .eelig-pct {
         font-size: 9px;
@@ -2242,7 +2242,7 @@
       }
       .eelig-freq-tbl td:first-child {
         font-weight: 600;
-        color: #1e293b;
+        color: #1d3771;
       }
       .eelig-elig-tag {
         display: inline-flex;
@@ -2273,7 +2273,7 @@
       .eelig-alert-title {
         font-size: 7px;
         font-weight: 700;
-        color: #0f172a;
+        color: #122a5d;
         margin-bottom: 2px;
       }
       .eelig-alert-body {
@@ -2304,7 +2304,7 @@
        EDIFI SECURITY DASHBOARD — HTML/CSS Component
     ────────────────────────────────────────────────────────── */
       .esec-wrap {
-        background: linear-gradient(145deg, #050d24, #0a1535);
+        background: linear-gradient(145deg, #0e2452, #142c61);
         border-radius: 18px;
         border: 1px solid rgba(75, 168, 240, 0.2);
         overflow: hidden;
@@ -2470,7 +2470,7 @@
         gap: 6px;
         font-size: 9px;
         font-weight: 700;
-        color: rgba(133, 184, 216, 0.7);
+        color: #9cc4e0;
         text-transform: uppercase;
         letter-spacing: 0.06em;
       }
@@ -2559,7 +2559,7 @@
       }
       /* ── Payment Audit HTML Component ───────────────────────── */
       .epay-wrap {
-        background: linear-gradient(145deg, #050d24, #0a1535);
+        background: linear-gradient(145deg, #0e2452, #142c61);
         overflow: hidden;
         font-family:
           "Plus Jakarta Sans",
@@ -2667,7 +2667,7 @@
         font-family: monospace;
       }
       .epay-amt {
-        color: rgba(133, 184, 216, 0.7);
+        color: #9cc4e0;
       }
       .epay-paid {
         color: #c9dff0;
@@ -2711,7 +2711,7 @@
         align-items: center;
         justify-content: space-between;
         font-size: 9px;
-        color: rgba(133, 184, 216, 0.5);
+        color: #9cc4e0;
       }
       .epay-export-btn {
         padding: 5px 12px;
@@ -2739,26 +2739,26 @@
 
       /* Override global bg-light / bg-alt — semi-transparent so body grid shows through */
       main .bg-light {
-        background: rgba(8, 21, 48, 0.42);
+        background: rgba(18, 42, 93, 0.42);
       }
       main .bg-alt {
-        background: rgba(10, 26, 58, 0.42);
+        background: rgba(22, 47, 100, 0.42);
       }
 
       /* Named depth levels via data-pt attribute */
       main [data-pt="d1"] {
-        background: rgba(2, 9, 23, 0.38);
+        background: color-mix(in srgb, var(--bg) 38%, transparent);
       }
       main [data-pt="d2"] {
-        background: rgba(8, 21, 48, 0.42);
+        background: rgba(18, 42, 93, 0.42);
       }
       main [data-pt="d3"] {
-        background: rgba(10, 26, 58, 0.42);
+        background: rgba(22, 47, 100, 0.42);
       }
 
       /* ── Smooth section fades ───────────────────────────────────
        Each section gets a ::before that fades from the deepest
-       dark (#020917) to transparent — creates a "dark valley"
+       dark (var(--bg)) to transparent — creates a "dark valley"
        at every transition so sections emerge naturally rather
        than sitting against a hard border line.
        Excluded: .plt-hero (has its own bg) and .cta-band (own ::before)
@@ -2772,7 +2772,7 @@
         left: 0;
         right: 0;
         height: 90px;
-        background: linear-gradient(180deg, #020917 0%, transparent 100%);
+        background: linear-gradient(180deg, var(--bg) 0%, transparent 100%);
         pointer-events: none;
         z-index: 2;
       }
@@ -2810,7 +2810,7 @@
 
       /* Outcomes section — deep dark with ambient center glow */
       main [data-pt="outcomes"] {
-        background: rgba(2, 9, 23, 0.38);
+        background: color-mix(in srgb, var(--bg) 38%, transparent);
         position: relative;
         overflow: hidden;
       }
@@ -3793,7 +3793,7 @@
               <span
                 class="wf-step-badge"
                 style="
-                  color: #818cf8;
+                  color: #a5b4fc;
                   background: rgba(52, 84, 248, 0.12);
                   border-color: rgba(52, 84, 248, 0.25);
                 "
@@ -3832,7 +3832,7 @@
               <span
                 class="wf-step-badge"
                 style="
-                  color: #818cf8;
+                  color: #a5b4fc;
                   background: rgba(52, 84, 248, 0.12);
                   border-color: rgba(52, 84, 248, 0.25);
                 "
@@ -4268,7 +4268,7 @@
                             "
                           >
                             <span>Prophy</span
-                            ><span style="font-weight: 700; color: #0f172a"
+                            ><span style="font-weight: 700; color: #122a5d"
                               >$0</span
                             >
                           </div>
@@ -4282,7 +4282,7 @@
                             "
                           >
                             <span>Exam</span
-                            ><span style="font-weight: 700; color: #0f172a"
+                            ><span style="font-weight: 700; color: #122a5d"
                               >$0</span
                             >
                           </div>
@@ -4296,7 +4296,7 @@
                             "
                           >
                             <span>Radiographs</span
-                            ><span style="font-weight: 700; color: #0f172a"
+                            ><span style="font-weight: 700; color: #122a5d"
                               >$0</span
                             >
                           </div>

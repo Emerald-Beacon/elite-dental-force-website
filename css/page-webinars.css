@@ -9,16 +9,16 @@ body::before {
 
 /* ── Section backgrounds ── */
 main .section {
-  background: rgba(2,9,23,0.35);
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
 }
 main .section.bg-alt {
-  background: rgba(8,21,48,0.42);
+  background: rgba(18, 42, 93, 0.42);
 }
 
 /* ── btn-white (local definition) ── */
 .btn-white {
   background: #ffffff;
-  color: #020917;
+  color: var(--bg);
   font-weight: 700;
   border-color: transparent;
 }
@@ -38,7 +38,7 @@ main .section.bg-alt {
   align-items: center;
   padding: calc(80px + var(--s20)) 0 var(--s20);
   overflow: hidden;
-  background: rgba(2,9,23,0.35);
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
 }
 
 /* ambient orbs */
@@ -245,7 +245,7 @@ main .section.bg-alt {
 
 .wbn-ucard {
   position: relative;
-  background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.9), rgba(18, 42, 93, 0.9));
   border: 1px solid rgba(75,168,240,0.18);
   border-radius: 20px;
   overflow: hidden;
@@ -337,7 +337,7 @@ main .section.bg-alt {
 
 .wbn-od-card {
   position: relative;
-  background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.9), rgba(18, 42, 93, 0.9));
   border: 1px solid rgba(75,168,240,0.18);
   border-radius: 20px;
   overflow: hidden;
@@ -405,7 +405,7 @@ main .section.bg-alt {
   position: absolute;
   bottom: var(--s3);
   right: var(--s3);
-  background: rgba(2,9,23,0.85);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
   color: rgba(133,184,216,0.9);
   padding: 0.2rem 0.55rem;
   border-radius: var(--r-sm);
@@ -608,7 +608,7 @@ body.wbn-page::before {
   letter-spacing: 0.04em;
 }
 .wbn-page .wbn-trust-pill {
-  background: linear-gradient(145deg, #152231, #09121f);
+  background: linear-gradient(145deg, #162f66, #0e2352);
   border: 1px solid var(--border-blue);
   color: #c5dff0;
 }
@@ -709,11 +709,11 @@ body.wbn-page::before {
       rgba(75, 168, 240, 0.16),
       transparent 70%
     ),
-    #0a1626;
+    #102657;
   overflow: hidden;
 }
 .wbn-page .wbn-od-card__play-circle {
-  background: rgba(2, 9, 23, 0.7);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
   border: 1px solid var(--blue);
 }
 .wbn-page .wbn-od-footer p {
@@ -729,7 +729,7 @@ body.wbn-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
 }
 .wbn-page .wbn-request p {
@@ -750,7 +750,7 @@ body.wbn-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
   padding: 64px 32px;
 }

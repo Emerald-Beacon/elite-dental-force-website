@@ -23,8 +23,8 @@
    ================================================ */
 :root {
   --navy: #001f71;
-  --navy-deep: #020917;
-  --navy-mid: #040d20;
+  --navy-deep: #0a1d47;
+  --navy-mid: #102758;
   --blue: #4ba8f0;
   --blue-bright: #62bcff;
   --blue-royal: #095ba7;
@@ -33,18 +33,20 @@
   --gold: #ffd700;
   --white: #ffffff;
 
-  --bg: #020917;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(75, 168, 240, 0.07);
-  --bg-alt: rgba(4, 22, 80, 0.3);
-  --bg-surface: rgba(2, 9, 23, 0.94);
+  --bg: #0a1d47;
+  --bg-panel: #102758;
+  --bg-panel-2: #163064;
+  --bg-card: rgba(255, 255, 255, 0.055);
+  --bg-card-hover: rgba(75, 168, 240, 0.1);
+  --bg-alt: rgba(0, 31, 113, 0.32);
+  --bg-surface: rgba(10, 29, 71, 0.94);
 
   --text: #f0f7ff;
   --text-secondary: #85b8d8;
-  --text-muted: #4a6a85;
+  --text-muted: #8aa6c4;
 
-  --border: rgba(255, 255, 255, 0.08);
-  --border-blue: rgba(75, 168, 240, 0.28);
+  --border: rgba(255, 255, 255, 0.13);
+  --border-blue: rgba(75, 168, 240, 0.34);
   --border-gold: rgba(255, 215, 0, 0.45);
 
   --shadow-card: 0 4px 32px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.06) inset;
@@ -95,19 +97,19 @@
   --color-white: #ffffff;
   --color-text: #edf3fc;
   --color-text-light: #7daac9;
-  --color-text-muted: #4a6a85;
-  --color-border: rgba(255,255,255,0.07);
-  --color-card-bg: rgba(255,255,255,0.035);
-  --color-card-border: rgba(255,255,255,0.07);
+  --color-text-muted: #8aa6c4;
+  --color-border: rgba(255,255,255,0.12);
+  --color-card-bg: rgba(255,255,255,0.05);
+  --color-card-border: rgba(255,255,255,0.12);
   --color-card-hover: rgba(75,168,240,0.055);
   --shadow-float: 0 4px 24px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.05) inset;
   --shadow-float-hover: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(75,168,240,0.15);
   --shadow-glow: 0 0 40px rgba(75,168,240,0.12);
-  --color-bg-base: #030b1a;
-  --color-bg-gradient: linear-gradient(180deg,#030b1a 0%,#040d20 50%,#030b1a 100%);
+  --color-bg-base: #0a1d47;
+  --color-bg-gradient: linear-gradient(180deg,#0a1d47 0%,#102758 50%,#0a1d47 100%);
   --color-highlight: #ffd700;
   --color-accent: #095ba7;
-  --color-deep: #020810;
+  --color-deep: #0a1d47;
   --color-alt-bg: rgba(75,168,240,0.04);
   --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -143,7 +145,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
-  background-image: linear-gradient(180deg, #020917 0%, #040e22 50%, #020917 100%);
+  background-image: linear-gradient(180deg, var(--bg) 0%, var(--bg-panel) 50%, var(--bg) 100%);
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
@@ -321,8 +323,8 @@ p:last-child { margin-bottom: 0; }
 .btn-sm { padding: var(--s2) var(--s5); font-size: var(--fs-sm); }
 
 .btn-primary {
-  background: var(--grad-brand);
-  color: var(--white);
+  background: linear-gradient(135deg, #62bcff 0%, #4ba8f0 100%);
+  color: #001f71;
   box-shadow: var(--shadow-btn);
   border-color: transparent;
   font-weight: 700;
@@ -330,7 +332,7 @@ p:last-child { margin-bottom: 0; }
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-btn-hover);
-  background: linear-gradient(135deg, #75caff 0%, #1a7fd4 100%);
+  background: linear-gradient(135deg, #75caff 0%, #62bcff 100%);
 }
 .btn-primary:active { transform: translateY(0) scale(0.97); }
 .btn-secondary:active, .btn-gold:active { transform: scale(0.97); }
@@ -371,7 +373,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .header.scrolled {
-  background: rgba(3,11,26,0.88);
+  background: rgba(10, 29, 71, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border);
@@ -438,7 +440,7 @@ button.nav-link {
   position: absolute; top: 100%; left: 50%;
   transform: translateX(-50%) translateY(8px);
   min-width: 210px; padding: var(--s2); padding-top: 14px;
-  background: rgba(4,12,30,0.97);
+  background: rgba(12, 33, 78, 0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--border);
@@ -466,7 +468,7 @@ button.nav-link {
 }
 
 .nav-cta { margin-left: var(--s4); }
-.nav-cta .btn-primary, .nav-cta .btn-primary:hover { background: var(--grad-brand-deep); }
+.nav-cta .btn-primary, .nav-cta .btn-primary:hover { background: var(--grad-brand-deep); color: var(--white); }
 
 .mobile-toggle {
   display: none; flex-direction: column; gap: 5px;
@@ -692,7 +694,7 @@ button.nav-link {
 /* Floating stat badges */
 .hero-stat-badge {
   position: absolute;
-  background: rgba(4,14,35,0.92);
+  background: rgba(13, 35, 81, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-blue);
@@ -1313,9 +1315,9 @@ button.nav-link {
   position: absolute; inset: 0;
   transition: opacity var(--t-base);
 }
-.resource-card-image-overlay--ai    { background: linear-gradient(160deg, rgba(2,12,30,0.55) 0%, rgba(9,91,167,0.35) 100%); }
-.resource-card-image-overlay--billing { background: linear-gradient(160deg, rgba(2,12,30,0.55) 0%, rgba(255,215,0,0.2) 100%); }
-.resource-card-image-overlay--revenue { background: linear-gradient(160deg, rgba(2,12,30,0.55) 0%, rgba(75,168,240,0.28) 100%); }
+.resource-card-image-overlay--ai    { background: linear-gradient(160deg, rgba(12, 32, 76, 0.55) 0%, rgba(9,91,167,0.35) 100%); }
+.resource-card-image-overlay--billing { background: linear-gradient(160deg, rgba(12, 32, 76, 0.55) 0%, rgba(255,215,0,0.2) 100%); }
+.resource-card-image-overlay--revenue { background: linear-gradient(160deg, rgba(12, 32, 76, 0.55) 0%, rgba(75,168,240,0.28) 100%); }
 .resource-card:hover .resource-card-image-overlay { opacity: 0.7; }
 .resource-card-image img {
   width: 100%; height: 100%; object-fit: cover;
@@ -1396,7 +1398,7 @@ button.nav-link {
   padding: var(--s24) 0 var(--s12);
   border-top: 1px solid var(--border);
   position: relative; z-index: 1;
-  background: #020917;
+  background: var(--bg);
 }
 .footer-grid {
   display: grid;
@@ -1606,7 +1608,7 @@ body.menu-open { overflow: hidden; }
   .nav.active {
     display: flex;
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(3,11,26,0.98);
+    background: rgba(10, 29, 71, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column; justify-content: center; align-items: center;
@@ -1781,7 +1783,7 @@ body.menu-open { overflow: hidden; }
   }
 
   /* Fixed header loses its blur → give it a near-solid fill */
-  .header.scrolled { background: rgba(3,11,26,0.97); }
+  .header.scrolled { background: rgba(10, 29, 71, 0.97); }
 
   /* Hero orbs: stop the infinite drift animation, drop the subtlest two */
   .hero-orb { animation: none; }
@@ -1828,7 +1830,7 @@ body.menu-open { overflow: hidden; }
   display: block;
 }
 .browser-mockup {
-  background: rgba(6, 14, 38, 0.97);
+  background: rgba(15, 37, 85, 0.97);
   border: 1px solid rgba(75, 168, 240, 0.22);
   border-radius: 14px;
   overflow: hidden;
@@ -1850,7 +1852,7 @@ body.menu-open { overflow: hidden; }
   align-items: center;
   gap: 0.75rem;
   padding: 0.6rem 1rem;
-  background: rgba(4, 10, 28, 0.96);
+  background: rgba(12, 32, 76, 0.96);
   border-bottom: 1px solid rgba(75, 168, 240, 0.14);
 }
 .browser-dots {
@@ -1954,7 +1956,7 @@ body.menu-open { overflow: hidden; }
 
 /* === PIA: Platform in Action floating cards === */
 .pia-section {
-  background: rgba(2, 9, 23, 0.85);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
 }
 .pia-grid {
   display: grid;
@@ -1995,7 +1997,7 @@ body.menu-open { overflow: hidden; }
 }
 .pia-card {
   position: absolute;
-  background: linear-gradient(145deg, #0d1f3c, #081530);
+  background: linear-gradient(145deg, #173168, #122a5d);
   border: 1px solid rgba(75, 168, 240, 0.15);
   border-radius: 18px;
   padding: 22px;
@@ -2107,7 +2109,7 @@ body.menu-open { overflow: hidden; }
   height: 38px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #095ba7, #4ba8f0);
+  background: linear-gradient(135deg, #095ba7, #1777c8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2437,7 +2439,7 @@ body::before {
   border: 1px solid var(--border-blue); border-radius: var(--r-xl);
   box-shadow: 0 32px 80px rgba(0,0,0,.65);
 }
-.product-tour-dialog::backdrop { background: rgba(1,8,24,.86); }
+.product-tour-dialog::backdrop { background: rgba(10, 29, 71, .86); }
 .product-tour-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--s4); margin-bottom: var(--s3); }
 .product-tour-heading h2 { margin: 0; font-size: var(--fs-lg); }
 .product-tour-close {
@@ -2466,12 +2468,12 @@ body::before {
 #enterprise-modules .enterprise-module-card > p { font-size: var(--fs-sm); line-height: 1.7; }
 #enterprise-modules .platform-badge { padding: 0; border: 0; background: none; }
 #enterprise-modules .feature-icon { width: 40px; height: 40px; margin: 0; background: var(--bg-card-hover); border: 1px solid var(--border-blue); color: var(--blue); }
-#enterprise-modules .platform-modules span { font-size: 11px; padding: var(--s1) var(--s2); background: var(--bg-card-hover); border-color: var(--border-blue); color: var(--text-secondary); }
+#enterprise-modules .platform-modules span { font-size: 11px; padding: var(--s1) var(--s2); background: var(--bg-card-hover); border-color: var(--border-blue); color: #b5d3ea; }
 #enterprise-modules .enterprise-module-card:nth-child(3) { border-color: var(--border-gold); background: linear-gradient(145deg, var(--bg-card-hover), var(--navy-deep)); }
 #enterprise-modules .enterprise-module-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 #enterprise-modules .platform-stat-row { padding: var(--s4); gap: var(--s5); background: var(--bg-card); border-color: var(--border-gold); border-radius: var(--r-md); }
 #enterprise-modules .platform-stat-num { color: var(--gold); background: none; -webkit-text-fill-color: currentColor; font-variant-numeric: tabular-nums; }
-#enterprise-modules .platform-stat-label { color: var(--text-secondary); font-size: 11px; }
+#enterprise-modules .platform-stat-label { color: #b5d3ea; font-size: 11px; }
 #enterprise-modules a:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; }
 #enterprise-modules .btn::after { display: none; }
 .section-links, .section-ghost { display: none; pointer-events: none; }
@@ -2655,3 +2657,101 @@ body::before {
   #revenue-cta h2 { font-size: var(--fs-3xl); }
   #revenue-cta .cta-laptop { width: 75%; max-width: 320px; justify-self: center; }
 }
+
+/* Option B navy surfaces (release 5). html:root matches the specificity the preview overrides used so page CSS loaded later does not win ties. */
+html:root .header.scrolled {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+}
+html:root .dropdown {
+  background: color-mix(in srgb, var(--bg-panel) 97%, transparent);
+}
+html:root .hero-stat-badge {
+  background: color-mix(in srgb, var(--bg-panel) 92%, transparent);
+}
+html:root .browser-mockup {
+  background: color-mix(in srgb, var(--bg-panel) 97%, transparent);
+}
+html:root .browser-header {
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+}
+@media (max-width: 1024px) {
+  html:root .nav.active {
+    background: color-mix(in srgb, var(--bg) 98%, transparent);
+  }
+}
+@media (max-width: 768px) {
+  html:root .header.scrolled {
+    background: color-mix(in srgb, var(--bg) 97%, transparent);
+  }
+}
+
+
+html:root .company-page {
+  --v3-bg: var(--bg);
+  --v3-panel: var(--bg-panel);
+}
+html:root .company-page main .section.bg-light,
+html:root .company-page main .section.bg-alt {
+  background: var(--bg-panel);
+}
+html:root .company-page :is(.co-founder-card, .co-bento-mission, .co-bento-val) {
+  background: linear-gradient(135deg, var(--bg-panel-2), var(--bg-panel));
+}
+html:root .company-page :is(.team-card, .advisor-card) {
+  background: var(--bg-panel-2);
+}
+html:root .company-page .partners-scroll {
+  background: var(--bg-panel);
+}
+html:root .company-page .transformation-section > div:last-child > div {
+  background: linear-gradient(
+    135deg,
+    var(--bg-panel-2),
+    var(--bg-panel)
+  ) !important;
+}
+html:root .company-page main .btn-secondary {
+  background: var(--bg-panel-2);
+}
+html:root .company-page main :is(input, select, textarea) {
+  background: var(--bg);
+}
+
+html:root .company-page .co-hero {
+  background: radial-gradient(ellipse at 85% 0%, rgba(75, 168, 240, 0.16), transparent 65%), var(--bg);
+}
+
+
+html:root .edifi-page .ep-section-surface {
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(75, 168, 240, 0.05),
+      transparent 55%
+    ),
+    var(--bg-panel);
+}
+html:root .edifi-page :is(.ep-tabs, .ep-feature-panel, .ep-spec-card) {
+  background: linear-gradient(145deg, var(--bg-panel-2), var(--bg) 70%);
+}
+html:root .edifi-page .ep-table-scroll {
+  background: var(--bg);
+}
+html:root .edifi-page .ep-compare-table th {
+  background: var(--bg-panel-2);
+}
+html:root .edifi-page .cta-band > .container {
+  background:
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(75, 168, 240, 0.16),
+      transparent 60%
+    ),
+    linear-gradient(140deg, var(--bg-panel-2), var(--bg));
+}
+
+
+html:root .company-page main .section .section-header p {
+  color: rgba(255, 255, 255, 0.64);
+}
+

@@ -37,7 +37,7 @@
       width: calc(100% - 32px);
       max-width: 420px;
       box-sizing: border-box;
-      background: rgba(3, 10, 30, 0.97);
+      background: rgba(16, 39, 88, 0.97);
       border: 1px solid rgba(75, 168, 240, 0.22);
       border-radius: 12px;
       backdrop-filter: blur(12px);

@@ -18,7 +18,7 @@
   </script>
   <style>
     .btn-primary::after { animation-name: home-shimmer-sweep; }
-    body { --font: 'EDF Error Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #020917; min-height: 100vh; display: flex; flex-direction: column; }
+    body { --font: 'EDF Error Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); min-height: 100vh; display: flex; flex-direction: column; }
     .err-page {
       flex: 1;
       display: flex;
@@ -39,7 +39,7 @@
     .err-grid::after {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #020917 100%);
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, var(--bg) 100%);
     }
     .err-orb {
       position: absolute; border-radius: 50%; pointer-events: none;
@@ -94,7 +94,7 @@
       transition: all 0.25s ease;
     }
     .err-btn--primary {
-      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      background: linear-gradient(135deg, #095ba7, #1777c8);
       color: #fff;
       border: none;
       box-shadow: 0 4px 20px rgba(75,168,240,0.3);
@@ -113,7 +113,7 @@
     }
     .err-links p {
       font-size: 12px;
-      color: rgba(133,184,216,0.5);
+      color: rgba(133,184,216,0.8);
       margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 0.08em;

@@ -14,12 +14,12 @@ body.nws-page::before {
 
 /* ── Section backgrounds ── */
 .nws-page main .section {
-  background: rgba(2,9,23,0.35);
+  background: color-mix(in srgb, var(--bg) 35%, transparent);
   position: relative;
   z-index: 1;
 }
 .nws-page main .section.bg-alt {
-  background: rgba(8,21,48,0.42);
+  background: rgba(18, 42, 93, 0.42);
 }
 
 /* ── Shared tokens ── */
@@ -43,7 +43,7 @@ body.nws-page::before {
 /* ── Glassmorphism card base ── */
 .nws-card {
   position: relative;
-  background: linear-gradient(145deg, rgba(13,31,60,0.9), rgba(8,21,48,0.9));
+  background: linear-gradient(145deg, rgba(23, 49, 104, 0.9), rgba(18, 42, 93, 0.9));
   border: 1px solid rgba(75,168,240,0.18);
   border-radius: 20px;
   overflow: hidden;
@@ -494,7 +494,7 @@ body.nws-page::before {
 .nws-page .nws-featured {
   border-radius: 0.5rem;
   border: 1px solid var(--border-blue);
-  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  background: linear-gradient(145deg, #152e64, #0e2352 70%);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
   overflow: hidden;
 }
@@ -522,7 +522,7 @@ body.nws-page::before {
       rgba(75, 168, 240, 0.16),
       transparent 70%
     ),
-    #0a1626;
+    #102657;
 }
 .nws-page .nws-featured-number {
   font-family: "EDF V3 Mono", monospace;
@@ -583,11 +583,11 @@ body.nws-page::before {
 }
 
 .nws-page .nws-media-section {
-  background: #050d1a;
+  background: #0b204b;
   border-block: 1px solid var(--border-blue);
 }
 .nws-page .nws-media-card {
-  background: linear-gradient(145deg, #14202e, #0a1321);
+  background: linear-gradient(145deg, #152e63, #0e2454);
   border: 1px solid var(--border-blue);
   border-radius: 0.5rem;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
@@ -630,7 +630,7 @@ body.nws-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
   padding: 64px 32px;
 }

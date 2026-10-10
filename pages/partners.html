@@ -53,10 +53,10 @@
 
       /* Section tints */
       main .section {
-        background: rgba(2, 9, 23, 0.35);
+        background: color-mix(in srgb, var(--bg) 35%, transparent);
       }
       main .section.bg-alt {
-        background: rgba(8, 21, 48, 0.42);
+        background: rgba(18, 42, 93, 0.42);
       }
 
       /* ── HERO ── */
@@ -65,7 +65,7 @@
         padding: 196px 0 112px;
         text-align: center;
         overflow: hidden;
-        background: rgba(2, 9, 23, 0.45);
+        background: color-mix(in srgb, var(--bg) 45%, transparent);
       }
 
       .ptrs-hero-glow {
@@ -190,7 +190,7 @@
 
       /* ── STATS STRIP ── */
       .ptrs-stats {
-        background: rgba(8, 21, 48, 0.55);
+        background: rgba(18, 42, 93, 0.55);
         border-top: 1px solid rgba(75, 168, 240, 0.12);
         border-bottom: 1px solid rgba(75, 168, 240, 0.12);
         position: relative;
@@ -275,8 +275,8 @@
         position: relative;
         background: linear-gradient(
           145deg,
-          rgba(13, 31, 60, 0.9),
-          rgba(8, 21, 48, 0.9)
+          rgba(23, 49, 104, 0.9),
+          rgba(18, 42, 93, 0.9)
         );
         border: 1px solid rgba(75, 168, 240, 0.18);
         border-radius: 20px;
@@ -458,8 +458,8 @@
         position: relative;
         background: linear-gradient(
           145deg,
-          rgba(13, 31, 60, 0.9),
-          rgba(8, 21, 48, 0.9)
+          rgba(23, 49, 104, 0.9),
+          rgba(18, 42, 93, 0.9)
         );
         border: 1px solid rgba(75, 168, 240, 0.18);
         border-radius: 20px;
@@ -543,8 +543,8 @@
         position: relative;
         background: linear-gradient(
           145deg,
-          rgba(13, 31, 60, 0.9),
-          rgba(8, 21, 48, 0.9)
+          rgba(23, 49, 104, 0.9),
+          rgba(18, 42, 93, 0.9)
         );
         border: 1px solid rgba(75, 168, 240, 0.18);
         border-radius: 20px;
@@ -620,7 +620,7 @@
       }
 
       .ptrs-field select option {
-        background: #0d1f3c;
+        background: #173168;
         color: #f0f7ff;
       }
 
@@ -692,7 +692,7 @@
         color: #f0f7ff;
       }
       .ptrs-page .section-header p {
-        color: rgba(133, 184, 216, 0.75);
+        color: rgba(133, 184, 216, 0.9);
       }
       .ptrs-page .overline {
         color: #4ba8f0 !important;

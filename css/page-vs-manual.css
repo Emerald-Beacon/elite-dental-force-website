@@ -57,7 +57,7 @@ body::before {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .reality-card {
-  background: linear-gradient(145deg, #0d1f3c, #081530);
+  background: linear-gradient(145deg, #173168, #122a5d);
   border: 1px solid rgba(75,168,240,0.14);
   border-radius: 18px; padding: 28px 24px; text-align: center;
   position: relative; overflow: hidden;
@@ -77,7 +77,7 @@ body::before {
 /* comp table */
 .comp-table-wrap { overflow-x: auto; border-radius: 20px; border: 1px solid rgba(75,168,240,0.14); }
 .comp-table { width: 100%; border-collapse: collapse; min-width: 700px; }
-.comp-table thead tr { background: rgba(4,12,32,0.98); border-bottom: 1px solid rgba(75,168,240,0.14); }
+.comp-table thead tr { background: rgba(13, 34, 79, 0.98); border-bottom: 1px solid rgba(75,168,240,0.14); }
 .comp-table th { padding: 20px 24px; text-align: left; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; text-transform: uppercase; }
 .comp-table th.edifi-col { color: #4ba8f0; background: rgba(75,168,240,0.04); }
 .comp-table th.comp-col { color: rgba(255,255,255,0.35); }
@@ -107,14 +107,14 @@ body::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
 }
 .cost-card--manual {
-  background: linear-gradient(145deg, rgba(255,100,100,0.06), rgba(3,8,24,0.95));
+  background: linear-gradient(145deg, rgba(255,100,100,0.06), rgba(11, 30, 72, 0.95));
   border: 1px solid rgba(255,100,100,0.14);
 }
 .cost-card--manual::before {
   background: linear-gradient(90deg, transparent, rgba(255,100,100,0.3), transparent);
 }
 .cost-card--edifi {
-  background: linear-gradient(145deg, rgba(9,91,167,0.12), rgba(3,8,24,0.95));
+  background: linear-gradient(145deg, rgba(9,91,167,0.12), rgba(11, 30, 72, 0.95));
   border: 1px solid rgba(75,168,240,0.22);
 }
 .cost-card--edifi::before {
@@ -216,7 +216,7 @@ body.vs-page::before {
   font-family: "EDF V4 Mono", monospace;
   font-weight: 500;
   letter-spacing: 0.06em;
-  background: linear-gradient(145deg, #152231, #09121f);
+  background: linear-gradient(145deg, #162f66, #0e2352);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
 }
 .vs-page .cmp-brand-pill {
@@ -231,7 +231,7 @@ body.vs-page::before {
   color: var(--text-secondary);
 }
 .vs-page .cmp-verdict {
-  background: linear-gradient(145deg, #172332, #08111f);
+  background: linear-gradient(145deg, #173168, #0d2351);
   border-color: rgba(75, 168, 240, 0.4);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
   color: #c5dff0;
@@ -263,7 +263,7 @@ body.vs-page::before {
       rgba(75, 168, 240, 0.04),
       transparent 55%
     ),
-    #050d1a;
+    #0b204b;
 }
 
 .vs-page
@@ -275,7 +275,7 @@ body.vs-page::before {
     .role-card,
     .together-card
   ) {
-  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  background: linear-gradient(145deg, #152e64, #0e2352 70%);
   border-color: rgba(75, 168, 240, 0.24);
   box-shadow:
     inset 0 1px rgba(255, 255, 255, 0.07),
@@ -290,7 +290,7 @@ body.vs-page::before {
   border-color: rgba(75, 168, 240, 0.45);
   background:
     radial-gradient(ellipse at 50% 0, rgba(75, 168, 240, 0.1), transparent 60%),
-    linear-gradient(145deg, #172332, #08111f);
+    linear-gradient(145deg, #173168, #0d2351);
 }
 .vs-page :is(.deep-stat-num, .reality-num, .cost-total, .cost-line-val) {
   font-family: "EDF V4 Mono", monospace;
@@ -325,7 +325,7 @@ body.vs-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   border-color: rgba(75, 168, 240, 0.4);
   box-shadow:
     0 0 40px rgba(75, 168, 240, 0.06),
@@ -333,7 +333,7 @@ body.vs-page::before {
 }
 
 .vs-page .comp-table-wrap {
-  background: #0a1321;
+  background: #0e2454;
   border: 1px solid rgba(75, 168, 240, 0.22);
   border-radius: 16px;
   overflow-x: auto;
@@ -347,7 +347,7 @@ body.vs-page::before {
   min-width: 680px;
 }
 .vs-page .comp-table th {
-  background: #111f30;
+  background: #152d63;
   font-family: "EDF V4 Mono", monospace;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -390,7 +390,7 @@ body.vs-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow:
     0 0 40px rgba(75, 168, 240, 0.06),
     inset 0 1px rgba(255, 255, 255, 0.14);

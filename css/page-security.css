@@ -12,9 +12,9 @@ body::before {
 }
 
 /* Section tints — let grid show through */
-.sec-page main .section             { background: rgba(2,9,23,0.35); }
-.sec-page main .section.bg-light    { background: rgba(8,21,48,0.42); }
-.sec-page main .section.bg-alt      { background: rgba(10,26,58,0.42); }
+.sec-page main .section             { background: color-mix(in srgb, var(--bg) 35%, transparent); }
+.sec-page main .section.bg-light    { background: rgba(18, 42, 93, 0.42); }
+.sec-page main .section.bg-alt      { background: rgba(22, 47, 100, 0.42); }
 .sec-page main .section-header h2,
 .sec-page main .section h2          { color: #fff; }
 .sec-page main .section-header p    { color: rgba(255,255,255,0.48); }
@@ -26,7 +26,7 @@ body::before {
   padding: 196px 0 108px;
   text-align: center;
   overflow: hidden;
-  background: rgba(2,9,23,0.45);
+  background: color-mix(in srgb, var(--bg) 45%, transparent);
 }
 
 .sec-hero-glow {
@@ -119,7 +119,7 @@ body::before {
 
 /* ── 2. STAT STRIP ── */
 .sec-stat-strip {
-  background: rgba(8,21,48,0.55);
+  background: rgba(18, 42, 93, 0.55);
   border-top: 1px solid rgba(75,168,240,0.12);
   border-bottom: 1px solid rgba(75,168,240,0.12);
   padding: 0;
@@ -226,7 +226,7 @@ body::before {
 
 /* Security layer visualization card */
 .sec-layers-card {
-  background: linear-gradient(145deg, #0a1938, #060e24);
+  background: linear-gradient(145deg, #152e63, #0e2453);
   border: 1px solid rgba(75,168,240,0.18);
   border-radius: 24px;
   padding: 48px 40px;
@@ -332,7 +332,7 @@ body::before {
 }
 
 .sec-pillar-card {
-  background: linear-gradient(145deg, #0d1f3c, #081530);
+  background: linear-gradient(145deg, #173168, #122a5d);
   border: 1px solid rgba(75,168,240,0.14);
   border-radius: 20px;
   padding: 36px 32px;
@@ -424,7 +424,7 @@ body::before {
 }
 
 .sec-compliance-card {
-  background: linear-gradient(145deg, #0d1f3c, #071428);
+  background: linear-gradient(145deg, #173168, #0f2657);
   border: 1px solid rgba(75,168,240,0.16);
   border-radius: 24px;
   padding: 48px;
@@ -558,7 +558,7 @@ body::before {
 }
 
 .sec-data-card {
-  background: linear-gradient(145deg, rgba(8,21,48,0.7), rgba(6,14,36,0.7));
+  background: linear-gradient(145deg, rgba(18, 42, 93, 0.7), rgba(14, 36, 83, 0.7));
   border: 1px solid rgba(75,168,240,0.12);
   border-radius: 20px;
   padding: 36px 28px;
@@ -628,7 +628,7 @@ body::before {
 /* ── CTA BAND overrides (btn-white) ── */
 .btn-white {
   background: #fff;
-  color: #020917;
+  color: var(--bg);
   font-weight: 700;
   border-color: transparent;
 }
@@ -781,7 +781,7 @@ body.sec-page::before {
 .sec-page .sec-pill {
   font-family: "EDF V3 Mono", monospace;
   letter-spacing: 0.04em;
-  background: linear-gradient(145deg, #152231, #09121f);
+  background: linear-gradient(145deg, #162f66, #0e2352);
   border: 1px solid var(--border-blue);
   color: #c5dff0;
 }
@@ -793,8 +793,8 @@ body.sec-page::before {
   border-block: 1px solid var(--border-blue);
   background: linear-gradient(
     110deg,
-    rgba(18, 32, 50, 0.7),
-    rgba(7, 15, 29, 0.85)
+    rgba(22, 47, 100, 0.7),
+    rgba(13, 34, 79, 0.85)
   );
 }
 .sec-page .sec-stat-item {
@@ -816,7 +816,7 @@ body.sec-page::before {
     .sec-compliance-card,
     .sec-layers-card
   ) {
-  background: linear-gradient(145deg, #15212e, #09121f 70%);
+  background: linear-gradient(145deg, #152e64, #0e2352 70%);
   border: 1px solid var(--border-blue);
   border-radius: 0.75rem;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
@@ -883,7 +883,7 @@ body.sec-page::before {
       rgba(75, 168, 240, 0.04),
       transparent 55%
     ),
-    #050d1a;
+    #0b204b;
 }
 .sec-page .cta-band {
   background: transparent;
@@ -900,7 +900,7 @@ body.sec-page::before {
       rgba(75, 168, 240, 0.13),
       transparent 60%
     ),
-    linear-gradient(140deg, #172332, #08111f);
+    linear-gradient(140deg, #173168, #0d2351);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
   padding: 64px 32px;
 }

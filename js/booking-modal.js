@@ -177,9 +177,9 @@
     var css = document.createElement("style");
     css.id = "edf-bm-styles";
     css.textContent = [
-      "#edf-bm-overlay{position:fixed;inset:0;z-index:100000;background:rgba(1,8,24,0.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .25s ease}",
+      "#edf-bm-overlay{position:fixed;inset:0;z-index:100000;background:rgba(10, 29, 71, 0.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .25s ease}",
       "#edf-bm-overlay.edf-bm-in{opacity:1}",
-      "#edf-bm-card{position:relative;background:linear-gradient(145deg,#0a1628,#061020);border:1px solid rgba(75,168,240,.22);border-radius:20px;padding:40px;width:100%;max-width:440px;box-shadow:0 32px 80px rgba(0,0,0,.65),0 0 0 1px rgba(75,168,240,.08)}",
+      "#edf-bm-card{position:relative;background:linear-gradient(145deg,#102759,#0d2250);border:1px solid rgba(75,168,240,.22);border-radius:20px;padding:40px;width:100%;max-width:440px;box-shadow:0 32px 80px rgba(0,0,0,.65),0 0 0 1px rgba(75,168,240,.08)}",
       "#edf-bm-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:rgba(255,255,255,.55);font-size:1.1rem;line-height:1;width:32px;height:32px;cursor:pointer;transition:all .2s}",
       "#edf-bm-close:hover{background:rgba(255,255,255,.12);color:#fff}",
       "#edf-bm-icon{width:52px;height:52px;border-radius:14px;background:rgba(75,168,240,.12);border:1px solid rgba(75,168,240,.28);display:flex;align-items:center;justify-content:center;color:#4ba8f0;margin-bottom:18px}",

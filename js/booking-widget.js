@@ -84,7 +84,7 @@
       height: 14px;
       border-radius: 50%;
       background: #22c55e;
-      border: 2px solid #020917;
+      border: 2px solid #0a1d47;
       box-shadow: 0 0 8px rgba(34,197,94,0.7);
       animation: edf-online-pulse 2.5s ease-in-out infinite;
     }
@@ -105,7 +105,7 @@
       height: 20px;
       border-radius: 10px;
       background: #ef4444;
-      border: 2px solid #020917;
+      border: 2px solid #0a1d47;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 10px;
       font-weight: 800;
@@ -131,7 +131,7 @@
       z-index: 9999;
       width: 360px;
       max-height: 560px;
-      background: #030d22;
+      background: #0d2250;
       border: 1px solid rgba(75,168,240,0.22);
       border-radius: 20px;
       box-shadow:
