@@ -15,9 +15,9 @@
   var FOUNDER_CAL = 'https://api.leadconnectorhq.com/widget/bookings/alvin-calendar';
 
   var AUTO_REPLIES = {
-    revenue: "Most dental practices lose 12–18% of collectible revenue to billing errors and unchecked denials. We can show you exactly how much your practice is leaving on the table — sometimes $50K+ per year. Want to see a quick demo?",
-    demo:    "Absolutely! You can book a 30-min session with our team or sit down directly with our founder Alvin. Which works better for you?",
-    edifi:   "EDiFi is our AI-powered revenue intelligence platform — it handles real-time eligibility, clean-claim submission, payment audits, and more in one system. A 30-min demo is the fastest way to see it in action.",
+    revenue: "Many dental practices lose collectible revenue to billing errors and unchecked denials. We can show you where your practice is leaving money on the table. Want to see a quick demo?",
+    demo:    "Absolutely! You can book a 30 minute session with our team or sit down directly with our founder Alvin. Which works better for you?",
+    edifi:   "EDiFi is our AI powered revenue intelligence platform. It handles real time eligibility, clean claim submission, payment audits, and more in one system. A 30 minute demo is the fastest way to see it in action.",
     default: "Thanks for reaching out! One of our team members will get back to you shortly. In the meantime, feel free to book a demo and we'll walk you through everything."
   };
 
@@ -717,7 +717,7 @@
 
     var info = document.createElement('div');
     info.className = 'edf-header-info';
-    info.innerHTML = '<div class="edf-header-name">Elite Dental Force</div><div class="edf-header-status"><span class="edf-status-dot"></span> Online — Typically replies in minutes</div>';
+    info.innerHTML = '<div class="edf-header-name">Elite Dental Force</div><div class="edf-header-status"><span class="edf-status-dot"></span> Online · Typically replies in minutes</div>';
     header.appendChild(info);
 
     var closeBtn = document.createElement('button');

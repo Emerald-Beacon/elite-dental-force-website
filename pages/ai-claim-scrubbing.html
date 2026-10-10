@@ -152,7 +152,7 @@
             "name": "What is the average dental claim denial rate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The average initial dental claim denial rate is 20 to 25 percent industry-wide. This means roughly one in five dental claims is denied on its first submission. The vast majority of these denials are preventable, they result from CDT code violations, missing documentation, incorrect tooth numbers, payer specific rule exceptions, and eligibility errors that a pre submission AI scrub would catch. Practices using AI assisted claim scrubbing through EDiFi achieve a 94.2 percent clean claim rate, compared to the 75 to 80 percent industry average."
+              "text": "The average initial dental claim denial rate is 20 to 25 percent industry wide. This means roughly one in five dental claims is denied on its first submission. The vast majority of these denials are preventable, they result from CDT code violations, missing documentation, incorrect tooth numbers, payer specific rule exceptions, and eligibility errors that a pre submission AI scrub would catch. Practices using AI assisted claim scrubbing through EDiFi achieve a 94.2 percent clean claim rate, compared to the 75 to 80 percent industry average."
             }
           },
           {
@@ -160,7 +160,7 @@
             "name": "How is AI claim scrubbing different from a clearinghouse edit?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Clearinghouse edits are format and transaction-level checks, they verify that the claim is properly structured for electronic transmission. AI claim scrubbing is a clinical and payer rule-level review, it checks the actual procedure codes, tooth numbers, documentation completeness, frequency limitations, and payer specific denial patterns before the claim is even sent to the clearinghouse. A clearinghouse edit catches structural errors. AI claim scrubbing catches clinical and coverage errors that would survive a clearinghouse check and still be denied by the payer."
+              "text": "Clearinghouse edits are format and transaction level checks, they verify that the claim is properly structured for electronic transmission. AI claim scrubbing is a clinical and payer rule level review, it checks the actual procedure codes, tooth numbers, documentation completeness, frequency limitations, and payer specific denial patterns before the claim is even sent to the clearinghouse. A clearinghouse edit catches structural errors. AI claim scrubbing catches clinical and coverage errors that would survive a clearinghouse check and still be denied by the payer."
             }
           },
           {
@@ -168,7 +168,7 @@
             "name": "What does AI claim scrubbing check on each dental claim?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A complete AI claim scrubbing engine checks: CDT code validity and correct coding by procedure type, payer specific rules for CDT code combinations that are routinely rejected, tooth number and surface accuracy for restorative and prosthetic procedures, frequency limitations against the patient's verified benefit data, documentation requirements including radiograph attachments, periodontal charting, and clinical narratives for codes that require them, prior authorization flags for procedures that require pre-approval from specific payers, billing provider and NPI accuracy, coordination of benefits flags when secondary insurance exists, and a denial probability score that surfaces the highest-risk claims for manual review before submission."
+              "text": "A complete AI claim scrubbing engine checks: CDT code validity and correct coding by procedure type, payer specific rules for CDT code combinations that are routinely rejected, tooth number and surface accuracy for restorative and prosthetic procedures, frequency limitations against the patient's verified benefit data, documentation requirements including radiograph attachments, periodontal charting, and clinical narratives for codes that require them, prior authorization flags for procedures that require preapproval from specific payers, billing provider and NPI accuracy, coordination of benefits flags when secondary insurance exists, and a denial probability score that surfaces the highest risk claims for manual review before submission."
             }
           },
           {
@@ -211,31 +211,31 @@
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How AI Claim Scrubbing Works in Dental Billing",
-        "description": "AI claim scrubbing validates every dental claim against payer-specific rules before submission, catching errors and documentation gaps that would cause denials.",
+        "description": "AI claim scrubbing validates every dental claim against payer specific rules before submission, catching errors and documentation gaps that would cause denials.",
         "step": [
           {
             "@type": "HowToStep",
             "position": 1,
             "name": "Ingest the Claim from the PMS",
-            "text": "When a claim is prepared in the practice management software, EDiFi Connect reads the claim data including procedure codes, tooth numbers, surfaces, provider NPI, and date of service and sends it to the EDiFi claim engine for pre-submission analysis."
+            "text": "When a claim is prepared in the practice management software, EDiFi Connect reads the claim data including procedure codes, tooth numbers, surfaces, provider NPI, and date of service and sends it to the EDiFi claim engine for presubmission analysis."
           },
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Apply Payer-Specific Rule Set",
+            "name": "Apply Payer Specific Rule Set",
             "text": "EDiFi's payer intelligence database contains billing rules for every major dental payer. The claim is validated against the specific rule set for the patient's insurance carrier, including CDT code coverage policies, missing tooth clauses, downgrade provisions, frequency limitations, and attachment requirements."
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "Flag Errors and Documentation Gaps",
-            "text": "Any rule violation, missing documentation, or denial-risk condition is flagged with the specific payer rule being violated and the correction required. Common flags include missing X-rays for posterior composites, unbundling violations, and procedures exceeding the annual frequency limit."
+            "text": "Any rule violation, missing documentation, or denial risk condition is flagged with the specific payer rule being violated and the correction required. Common flags include missing X rays for posterior composites, unbundling violations, and procedures exceeding the annual frequency limit."
           },
           {
             "@type": "HowToStep",
             "position": 4,
             "name": "Correct and Revalidate",
-            "text": "The billing team or clinical staff resolves the flagged issues. Once corrections are made, the claim is re-run through the scrubbing engine to confirm all issues are resolved before the claim is approved for submission."
+            "text": "The billing team or clinical staff resolves the flagged issues. Once corrections are made, the claim is rerun through the scrubbing engine to confirm all issues are resolved before the claim is approved for submission."
           },
           {
             "@type": "HowToStep",
@@ -348,7 +348,7 @@
 
           <div class="acs-hero-badge">
             <div class="acs-hero-badge-dot"></div>
-            Category Definition — Published by Elite Dental Force
+            Category Definition · Published by Elite Dental Force
           </div>
 
           <h1>
@@ -432,7 +432,7 @@
               The entire denial rework cycle is preventable. Not partially
               preventable, almost entirely preventable. The conditions that
               cause the overwhelming majority of dental claim denials are
-              predictable, pattern-based, and detectable before submission. AI
+              predictable, pattern based, and detectable before submission. AI
               claim scrubbing is the system that detects them.
             </p>
 
@@ -671,7 +671,7 @@
                     <td class="feature">Frequency limit exceeded</td>
                     <td class="legacy">
                       <span class="cross">&#10005;</span> Denial, payer rejects
-                      as non-covered due to frequency
+                      as noncovered due to frequency
                     </td>
                     <td class="acs">
                       <span class="check">&#10003;</span> Caught against
@@ -760,7 +760,7 @@
               <div class="acs-edifi-callout-label">
                 AI Claim Scrubbing, Powered by EDiFi
               </div>
-              <h3>EDiFi's 5-Layer Pre Submission Scrub Engine</h3>
+              <h3>EDiFi's 5 Layer Pre Submission Scrub Engine</h3>
               <p>
                 EDiFi's AI scrubbing engine runs every claim through CDT code
                 validation, payer rule matching, documentation gap detection,
@@ -884,7 +884,7 @@
                 >
                   <p class="acs-faq-a" itemprop="text">
                     The average initial dental claim denial rate is 20 to 25
-                    percent industry-wide. This means roughly one in five dental
+                    percent industry wide. This means roughly one in five dental
                     claims is denied on its first submission. The vast majority
                     of these denials are preventable, they result from CDT code
                     violations, missing documentation, incorrect tooth numbers,
@@ -912,10 +912,10 @@
                   itemtype="https://schema.org/Answer"
                 >
                   <p class="acs-faq-a" itemprop="text">
-                    Clearinghouse edits are format and transaction-level checks,
+                    Clearinghouse edits are format and transaction level checks,
                     they verify that the claim is properly structured for
                     electronic transmission. AI claim scrubbing is a clinical
-                    and payer rule-level review, it checks the actual procedure
+                    and payer rule level review, it checks the actual procedure
                     codes, tooth numbers, documentation completeness, frequency
                     limitations, and payer specific denial patterns before the
                     claim is even sent to the clearinghouse. A clearinghouse
@@ -949,11 +949,11 @@
                     patient's verified benefit data, documentation requirements
                     including radiograph attachments, periodontal charting, and
                     clinical narratives for codes that require them, prior
-                    authorization flags for procedures that require pre-approval
+                    authorization flags for procedures that require preapproval
                     from specific payers, billing provider and NPI accuracy,
                     coordination of benefits flags when secondary insurance
                     exists, and a denial probability score that surfaces the
-                    highest-risk claims for manual review before submission.
+                    highest risk claims for manual review before submission.
                   </p>
                 </div>
               </div>
@@ -997,7 +997,7 @@
             <div class="acs-cta fade-in">
               <h2>See AI Claim Scrubbing in Action</h2>
               <p>
-                Book a demo of EDiFi and see the 5-layer AI scrubbing engine
+                Book a demo of EDiFi and see the 5 layer AI scrubbing engine
                 running on real claims, with denial probability scores, fix
                 recommendations, and payer specific rule matches.
               </p>
