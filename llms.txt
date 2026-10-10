@@ -17,7 +17,7 @@ Key facts:
 - [EDiFi Platform Overview](https://elitedentalforce.com/pages/platform.html): The full revenue intelligence platform covering eligibility, claims, auditing, and analytics
 - [EDiFi Software](https://elitedentalforce.com/pages/edifi.html): Product detail for the EDiFi clean claim workflow system
 - [Eligibility Intelligence](https://elitedentalforce.com/pages/eligibility-intelligence.html): Real time dental insurance eligibility and benefits verification
-- [Eligibility Standalone](https://elitedentalforce.com/pages/eligibility-standalone.html): Standalone eligibility verification product that live with Open Dental today, with Dentrix, Curve, and Eaglesoft on the roadmap
+- [Eligibility Standalone](https://elitedentalforce.com/pages/eligibility-standalone.html): Standalone eligibility verification product that is live with Open Dental today, with Dentrix, Curve, and Eaglesoft on the roadmap
 - [AI Claim Scrubbing](https://elitedentalforce.com/pages/ai-claim-scrubbing.html): Pre submission claim validation against payer rules and CDT coding requirements
 - [Denial Prevention](https://elitedentalforce.com/pages/denial-prevention.html): Upstream denial prevention workflow that catches errors before claims are filed
 - [RevNet](https://elitedentalforce.com/pages/revnet.html): Revenue network intelligence for dental practices
