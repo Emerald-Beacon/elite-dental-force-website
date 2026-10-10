@@ -2755,3 +2755,87 @@ html:root .company-page main .section .section-header p {
   color: rgba(255, 255, 255, 0.64);
 }
 
+
+/* Light sections (release 5): home logos strip, audit proof, insights, Company Industry Presence. */
+html:root :is(#after-hero, #audit-results, #home-resources, .co-presence) {
+  --text: #001f71;
+  --text-secondary: #2c4870;
+  --text-muted: #445f86;
+  --white: #001f71;
+  --blue: #095ba7;
+  --blue-light: #095ba7;
+  --blue-bright: #095ba7;
+  --navy-deep: #ffffff;
+  --navy-mid: #eef6fd;
+  --grad-text: linear-gradient(135deg, #001f71 0%, #095ba7 100%);
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5faff;
+  --border: rgba(0, 31, 113, 0.12);
+  --border-blue: rgba(9, 91, 167, 0.32);
+  color: var(--text);
+}
+html:root #after-hero {
+  background: #ffffff;
+}
+html:root #after-hero .trust-bar-label {
+  color: #2c4870;
+}
+html:root #after-hero .trust-group-logos img {
+  filter: brightness(0);
+  opacity: 0.6;
+}
+html:root #after-hero .trust-group--live .trust-group-logos img {
+  opacity: 0.85;
+}
+html:root #after-hero .trust-group--roadmap {
+  border-left-color: rgba(0, 31, 113, 0.14);
+}
+html:root #audit-results {
+  background: #d3edfc;
+}
+html:root #audit-results::after,
+html:root #audit-results::before {
+  opacity: 0;
+}
+html:root #audit-results .metric-card {
+  backdrop-filter: none;
+  box-shadow:
+    0 1px 2px rgba(0, 31, 113, 0.06),
+    0 8px 24px rgba(0, 31, 113, 0.06);
+}
+html:root #audit-results .metric-card--featured {
+  background: linear-gradient(145deg, #ffffff, #eef6fd);
+}
+html:root #audit-results .metric-tag {
+  opacity: 1;
+}
+html:root #home-resources {
+  background: #ffffff;
+}
+html:root #home-resources .resource-card {
+  box-shadow:
+    0 1px 2px rgba(0, 31, 113, 0.06),
+    0 8px 24px rgba(0, 31, 113, 0.06);
+}
+html:root #home-resources .resource-card-tag {
+  background: rgba(9, 91, 167, 0.08);
+  border-color: rgba(9, 91, 167, 0.25);
+}
+
+html:root .company-page main .section.co-presence {
+  background: #ffffff;
+}
+html:root .company-page main .section.co-presence {
+  --v3-blue: #095ba7;
+  --v3-copy: #2c4870;
+  --v3-line: rgba(0, 31, 113, 0.14);
+}
+html:root .company-page main .section.co-presence .section-header p {
+  color: #2c4870;
+}
+html:root .company-page main .section.co-presence h2 {
+  color: #001f71;
+}
+html:root .company-page main .section.co-presence .overline {
+  color: #095ba7 !important;
+}
