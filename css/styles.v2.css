@@ -2839,3 +2839,14 @@ html:root .company-page main .section.co-presence h2 {
 html:root .company-page main .section.co-presence .overline {
   color: #095ba7 !important;
 }
+
+/* 2026 lockup (concept A): 36px tall so the mark's bars land on whole pixels; vector colours, no filter. */
+html:root .logo img {
+  height: 36px;
+  width: auto;
+  max-width: none;
+  filter: none;
+}
+html:root .footer-brand .logo {
+  display: inline-block;
+}
