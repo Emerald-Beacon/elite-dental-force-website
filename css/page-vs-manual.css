@@ -474,3 +474,5 @@ body.vs-page::before {
   --font-primary: var(--font);
   --font-heading: var(--font);
 }
+
+.cost-estimate-tag { display: inline-block; margin: 0 0 12px; padding: 2px 8px; border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #ffffff; }

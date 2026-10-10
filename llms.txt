@@ -52,4 +52,4 @@ Key facts:
 - [Blog](https://elitedentalforce.com/pages/resources/blog.html): All articles on dental revenue cycle management
 - [Case Studies](https://elitedentalforce.com/pages/resources/case-studies.html): Customer results
 - [Webinars](https://elitedentalforce.com/pages/resources/webinars.html): Live learning sessions
-- [Comparisons](https://elitedentalforce.com/pages/edifi-vs-manual-billing.html): EDiFi vs manual billing, Dentrix RCM, and Weave
+- [Comparisons](https://elitedentalforce.com/pages/edifi-vs-manual-billing.html): EDiFi vs manual billing and Weave
