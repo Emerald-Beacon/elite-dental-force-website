@@ -461,75 +461,6 @@
                     >$135,000</span
                   >
                 </div>
-                <div class="result-metric">
-                  <span class="result-metric-label"
-                    >EDiFi Annual Investment</span
-                  >
-                  <span class="result-metric-value" id="result-edifi-annual"
-                    >$5,988</span
-                  >
-                </div>
-                <div class="result-metric">
-                  <span class="result-metric-label">Net Annual Gain</span>
-                  <span class="result-metric-value gold" id="result-net-gain"
-                    >$92,760</span
-                  >
-                </div>
-              </div>
-
-              <!-- Payback -->
-              <div
-                class="payback-section"
-                role="region"
-                aria-label="Payback period"
-              >
-                <div class="payback-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                  </svg>
-                </div>
-                <div class="payback-text-wrap">
-                  <div class="payback-value" id="result-payback">
-                    EDiFi pays for itself in under 30 days
-                  </div>
-                  <div class="payback-desc">
-                    Based on your monthly recovery vs. EDiFi subscription cost
-                  </div>
-                </div>
-              </div>
-
-              <!-- ROI badge -->
-              <div
-                style="
-                  background: rgba(52, 211, 153, 0.05);
-                  border: 1px solid rgba(52, 211, 153, 0.15);
-                  border-radius: 12px;
-                  padding: 14px 20px;
-                  margin-bottom: 20px;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                "
-              >
-                <span
-                  style="
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: rgba(255, 255, 255, 0.55);
-                  "
-                  >Return on Investment</span
-                >
-                <span
-                  style="
-                    font-size: 1.4rem;
-                    font-weight: 800;
-                    color: #34d399;
-                    letter-spacing: -0.03em;
-                  "
-                  id="result-roi"
-                  >1,549%</span
-                >
               </div>
 
               <!-- CTA -->
@@ -687,12 +618,11 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="method-title">EDiFi Investment Model</div>
+                  <div class="method-title">EDiFi Pricing</div>
                   <div class="method-desc">
-                    EDiFi is priced at $499 per location per month. The ROI and
-                    payback calculations use this baseline. Enterprise and DSO
-                    pricing varies. Contact sales for multi location pricing
-                    that reflects your specific portfolio size.
+                    This calculator shows the revenue EDiFi finds for your
+                    practice. EDiFi pricing is per location and based on your
+                    practice size. Pricing based on your practice. Book a demo.
                   </div>
                 </div>
               </div>
@@ -885,27 +815,12 @@
           var annualTotal = annualUnderpayment + annualDenialRecovery;
           var monthlyTotal = annualTotal / 12;
 
-          // Investment
-          var edifiMonthly = 499 * state.locations;
-          var edifiAnnual = edifiMonthly * 12;
-
-          // Returns
-          var netGain = annualTotal - edifiAnnual;
-          var roi = edifiAnnual > 0 ? (netGain / edifiAnnual) * 100 : 0;
-          var paybackDays =
-            monthlyTotal > 0 ? (edifiMonthly / monthlyTotal) * 30 : 0;
-
           return {
             monthlyVolume: monthlyVolume,
             annualUnderpayment: annualUnderpayment,
             annualDenialRecovery: annualDenialRecovery,
             annualTotal: annualTotal,
             monthlyTotal: monthlyTotal,
-            edifiMonthly: edifiMonthly,
-            edifiAnnual: edifiAnnual,
-            netGain: netGain,
-            roi: roi,
-            paybackDays: paybackDays,
           };
         }
 
@@ -914,11 +829,6 @@
           if (n >= 1000000) return "$" + (n / 1000000).toFixed(1) + "M";
           if (n >= 1000) return "$" + Math.round(n).toLocaleString();
           return "$" + Math.round(n);
-        }
-
-        function fmtPct(n) {
-          if (n >= 10000) return Math.round(n / 100) * 100 + "%+";
-          return Math.round(n).toLocaleString() + "%";
         }
 
         // ── Animate number update ────────────────────────────────────────
@@ -944,29 +854,11 @@
           setVal("result-denial", fmt$(r.annualDenialRecovery));
           setVal("result-monthly", fmt$(r.monthlyTotal));
           setVal("result-volume", fmt$(r.monthlyVolume));
-          setVal("result-edifi-annual", fmt$(r.edifiAnnual));
-          setVal("result-net-gain", fmt$(r.netGain));
-          setVal("result-roi", fmtPct(r.roi));
-
-          // Payback message
-          var payback;
-          if (r.paybackDays < 14) {
-            payback = "EDiFi pays for itself in under 2 weeks";
-          } else if (r.paybackDays < 30) {
-            payback = "EDiFi pays for itself in under 30 days";
-          } else if (r.paybackDays < 60) {
-            payback = "EDiFi pays for itself in under 60 days";
-          } else {
-            payback =
-              "EDiFi pays for itself in " + Math.round(r.paybackDays) + " days";
-          }
-          setVal("result-payback", payback);
 
           // Update CTA href with context
           var cta = document.getElementById("calc-cta-btn");
           if (cta) {
             cta.setAttribute("data-calc-total", Math.round(r.annualTotal));
-            cta.setAttribute("data-calc-roi", Math.round(r.roi));
           }
         }
 
@@ -1041,7 +933,6 @@
           window.dataLayer.push({
             event: "roi_calculator_cta",
             calc_annual_recovery: Math.round(r.annualTotal),
-            calc_roi_pct: Math.round(r.roi),
             calc_locations: state.locations,
             calc_claims: state.claims,
           });
@@ -1051,7 +942,6 @@
           var r = calculate();
           return {
             annualTotal: r.annualTotal,
-            roi: r.roi,
             locations: state.locations,
             claims: state.claims,
           };
@@ -1261,7 +1151,6 @@
               tags: ["roi-calculator-lead", "source-website"],
               customFields: Object.assign({}, utm, {
                 calc_annual_recovery: Math.round(calcData.annualTotal || 0),
-                calc_roi_pct: Math.round(calcData.roi || 0),
                 calc_locations: calcData.locations || 1,
                 calc_claims: calcData.claims || 0,
               }),
