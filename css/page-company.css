@@ -116,3 +116,9 @@
 .company-page main [style*="color: rgba(255, 100, 100, 0.7)"] { color: #ffaba6 !important; }
 
 @media (max-width: 799px) { .company-page main :is(.overline,.plt-hero-badge,.plt-stage-num,.tour-label,.co-hero-kicker,.co-stat-lbl,.ct-kicker,.ct-strip-label,.ct-info-card-label,.ptrs-kicker) { font-family: ui-monospace, monospace; } }
+
+/* ClearForward: transparent PNG plus white silhouette fallback so no box shows on navy */
+.partner-logo-wrap img[src*="clear-forward-transparent"] {
+  filter: brightness(0) invert(1);
+  mix-blend-mode: normal;
+}

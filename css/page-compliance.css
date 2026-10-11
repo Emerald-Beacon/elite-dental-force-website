@@ -955,3 +955,9 @@ body.cpl-page::before {
   .cpl-page .modal-card, .cpl-page .modal-overlay.open .modal-card { transform: none; }
   .cpl-page .modal-submit-btn:hover { transform: none; }
 }
+
+/* AA on the lighter navy cards (release 5 gate M1) */
+html:root .doc-badge:not(.gold),
+html:root .doc-download-btn:not(.gold) {
+  color: #62bcff;
+}

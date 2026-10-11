@@ -194,7 +194,7 @@ body::before {
 .role-card p {
   font-size: 0.9rem;
   line-height: 1.72;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.62);
   margin-bottom: 20px;
 }
 .role-list {

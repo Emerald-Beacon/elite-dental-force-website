@@ -151,3 +151,6 @@ html:root .journal-article .blog-newsletter .btn {
 html:root body:has(> main.journal-article) .header {
   background: rgba(10, 29, 71, 0.96);
 }
+html:root .journal-article {
+  padding-bottom: 80px;
+}

@@ -86,7 +86,7 @@
       line-height: 1;
     }
     .edf-cb-btn--accept {
-      background: linear-gradient(135deg, #095ba7, #4ba8f0);
+      background: linear-gradient(135deg, #095ba7, #1777c8);
       border: none;
       color: #fff;
     }

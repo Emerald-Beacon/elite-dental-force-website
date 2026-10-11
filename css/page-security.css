@@ -969,3 +969,8 @@ body.sec-page::before {
 }
 
 .sec-page .sec-cc-tag { color: var(--text-secondary); }
+
+/* AA on the lighter navy cards (release 5 gate M1) */
+html:root .sec-cc-badge {
+  color: #62bcff;
+}

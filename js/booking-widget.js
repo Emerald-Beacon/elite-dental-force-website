@@ -109,7 +109,7 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 10px;
       font-weight: 800;
-      color: var(--navy-deep);
+      color: #030139;
       display: flex;
       align-items: center;
       justify-content: center;
