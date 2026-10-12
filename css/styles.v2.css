@@ -75,6 +75,12 @@
   --fs-6xl: 3.75rem;
   --fs-7xl: 4.5rem;
 
+  /* Stat blocks: one featured size, one secondary size, one label size. */
+  --stat-xl: clamp(2.75rem, 4.6vw, 4.25rem);
+  --stat-lg: clamp(2rem, 3vw, 2.75rem);
+  --stat-label: 0.8125rem;
+  --stat-label-track: 0.04em;
+
   --s1: 0.25rem; --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem;
   --s5: 1.25rem; --s6: 1.5rem; --s8: 2rem; --s10: 2.5rem;
   --s12: 3rem; --s16: 4rem; --s20: 5rem; --s24: 6rem; --s32: 8rem;
@@ -2487,7 +2493,7 @@ body::before {
 #enterprise-modules .enterprise-module-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 #enterprise-modules .platform-stat-row { padding: var(--s4); gap: var(--s5); background: var(--bg-card); border-color: var(--border-gold); border-radius: var(--r-md); }
 #enterprise-modules .platform-stat-num { color: var(--gold); background: none; -webkit-text-fill-color: currentColor; font-variant-numeric: tabular-nums; }
-#enterprise-modules .platform-stat-label { color: #b5d3ea; font-size: 11px; }
+#enterprise-modules .platform-stat-label { color: #b5d3ea; font-size: var(--stat-label); }
 #enterprise-modules a:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; }
 #enterprise-modules .btn::after { display: none; }
 .section-links, .section-ghost { display: none; pointer-events: none; }
@@ -2535,22 +2541,21 @@ body::before {
 #audit-results::before, #audit-results::after { display: none; }
 #audit-results .section-header { display: grid; grid-template-columns: 1.8fr 1fr; gap: var(--s6) var(--s12); max-width: none; text-align: left; margin-bottom: var(--s12); }
 #audit-results .overline { grid-column: 1 / -1; margin: 0; }
-#audit-results h2 { margin: 0; font-size: clamp(2rem, 3.7vw, 3.5rem); line-height: 1.15; letter-spacing: -.045em; }
-#audit-results h2 span { display: block; }
+#audit-results h2 { margin: 0; }
 #audit-results .section-header > p { border-left: 1px solid var(--border-blue); padding-left: var(--s10); align-self: stretch; display: flex; align-items: center; font-size: var(--fs-base); line-height: 1.8; }
 #audit-results .metrics-bento { grid-template-columns: 1.5fr 1fr 1fr; gap: 0; margin: 0; border-top: 1px solid var(--border-blue); border-left: 1px solid var(--border-blue); }
 #audit-results .metric-card { padding: var(--s8); border: 0; border-right: 1px solid var(--border-blue); border-bottom: 1px solid var(--border-blue); border-radius: 0; background: none; backdrop-filter: none; transition: none; gap: var(--s5); }
 #audit-results .metric-card:hover { transform: none; box-shadow: none; }
 #audit-results .metric-card--featured { grid-column: 1; grid-row: 1 / 3; padding: var(--s10); background: radial-gradient(ellipse at top left, var(--bg-card-hover), transparent 70%); box-shadow: inset 0 1px 0 var(--blue-glow); }
 #audit-results .metric-card-accent { display: none; }
-#audit-results .metric-tag { font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--text-secondary); letter-spacing: .12em; opacity: 1; }
-#audit-results .metric-value { font-family: var(--font); font-variant-numeric: tabular-nums; font-size: clamp(2.25rem, 4.2vw, 4rem); font-weight: 700; background: none; color: var(--white); -webkit-text-fill-color: currentColor; letter-spacing: -.055em; }
-#audit-results .metric-value--hero { font-size: clamp(5rem, 8.5vw, 8rem); margin: var(--s4) 0 0; }
+#audit-results .metric-tag { font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--text-secondary); font-size: var(--stat-label); letter-spacing: var(--stat-label-track); opacity: 1; }
+#audit-results .metric-value { font-family: var(--font); font-variant-numeric: tabular-nums; font-size: var(--stat-lg); font-weight: 700; background: none; color: var(--white); -webkit-text-fill-color: currentColor; letter-spacing: -.04em; }
+#audit-results .metric-value--hero { font-size: var(--stat-xl); margin: var(--s4) 0 0; }
 #audit-results .metric-label { color: var(--text-secondary); font-size: var(--fs-base); line-height: 1.6; }
 #audit-results .metric-context { color: var(--text-secondary); font-size: var(--fs-sm); border-color: var(--border-blue); padding-top: var(--s6); margin-top: var(--s2); }
 #audit-results .metric-card--sm { justify-content: center; min-height: 210px; }
 #audit-results .metric-card--wide { grid-column: 2 / 4; display: grid; grid-template-columns: auto 1fr; gap: var(--s3) var(--s8); align-content: center; justify-content: start; }
-#audit-results .metric-card--wide .metric-value { grid-column: 1; grid-row: 1 / 3; align-self: center; font-size: clamp(2rem, 3.4vw, 3rem); }
+#audit-results .metric-card--wide .metric-value { grid-column: 1; grid-row: 1 / 3; align-self: center; }
 #audit-results .metric-card--wide .metric-tag { grid-column: 2; }
 #audit-results .metric-card--wide .metric-tag::before { content: ''; display: inline-block; width: 6px; height: 6px; margin-right: var(--s2); background: var(--gold); }
 #audit-results .metric-card--wide .metric-label { grid-column: 2; font-size: var(--fs-sm); }
@@ -2562,8 +2567,6 @@ body::before {
   #audit-results .metric-card--wide { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  #audit-results h2 { font-size: var(--fs-3xl); line-height: 1.25; }
-  #audit-results h2 span { display: inline; }
   #audit-results .metric-card { padding: var(--s6); }
   #audit-results .metric-card--sm { padding: var(--s6) var(--s4); min-height: 190px; }
   #audit-results .metric-card--sm .metric-label { font-size: var(--fs-sm); }
@@ -2783,4 +2786,19 @@ html:root .footer-brand .logo {
 /* Home insights tags sit on navy cards now: #62bcff keeps them at AA (the base #4ba8f0 measured 4.08). */
 html:root #home-resources .resource-card-tag {
   color: #62bcff;
+}
+
+/* Stat blocks sitewide: featured numbers at --stat-xl, secondary numbers at --stat-lg, labels at --stat-label.
+   html:root lifts these over the page stylesheets and inline page styles, which use the same class selectors. */
+html:root :is(.cs-result-hero-num, .ent-cs-number, .inv-ask-amount, .oc--featured .oc-val) {
+  font-size: var(--stat-xl);
+}
+html:root :is(.inv-problem-num, .inv-traction-num, .problem-big, .oc-val, .ent-stat-val, .article-stat-num) {
+  font-size: var(--stat-lg);
+}
+html:root :is(.co-stat-lbl, .cs-hero-stat-label, .cs-result-metric-label, .upcoming-preview-label, .inv-hero-stat-label, .inv-validation-label, .inv-traction-label, .ep-stat-label, .ph-lbl, .dri-stat-label, .ent-stat-lbl, .m-pill-lbl, .platform-stat-label) {
+  font-size: var(--stat-label);
+}
+html:root :is(.co-stat-lbl, .cs-result-metric-label, .upcoming-preview-label, .ent-stat-lbl) {
+  letter-spacing: var(--stat-label-track);
 }
