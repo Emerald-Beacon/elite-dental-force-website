@@ -3,6 +3,11 @@
  * Enterprise SaaS Website Interactions
  */
 
+// Runs synchronously at the end of <body>: anything already on (or above) the first screen
+// is marked revealed before the hidden state can ever apply, so it never blinks.
+document.querySelectorAll('[data-animate]').forEach(el => {
+  if (el.getBoundingClientRect().top < innerHeight) el.classList.add('animated');
+});
 document.documentElement.classList.add('js-motion');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -302,7 +307,7 @@ function handleFormSubmit(form) {
  * Scroll Animations
  */
 function initScrollAnimations() {
-  const animatedElements = document.querySelectorAll('[data-animate]');
+  const animatedElements = document.querySelectorAll('[data-animate]:not(.animated)');
 
   if (!animatedElements.length) return;
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -354,7 +359,7 @@ function initCounterAnimations() {
     });
   }, { threshold: 0.5 });
 
-  counters.forEach(counter => observer.observe(counter));
+  counters.forEach(counter => { if (counter.getBoundingClientRect().top >= innerHeight) observer.observe(counter); });
 }
 
 function animateCount(counter) {
