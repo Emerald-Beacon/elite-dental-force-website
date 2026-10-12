@@ -1533,17 +1533,32 @@ input.error, textarea.error { border-color: #f87171; }
 /* ================================================
    SCROLL ANIMATIONS
    ================================================ */
-[data-animate] {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+/* Hidden state needs html.js-motion (set by main.js), so content stays visible without JS. */
+[data-animate] { transition: opacity 0.65s ease, transform 0.65s ease; }
+@media (prefers-reduced-motion: no-preference) {
+  html.js-motion [data-animate]:not(.animated) { opacity: 0; transform: translateY(20px); }
+  html.js-motion [data-animate="fade"]:not(.animated) { transform: none; }
+  html.js-motion [data-animate="slide-left"]:not(.animated) { transform: translateX(-24px); }
+  html.js-motion [data-animate="slide-right"]:not(.animated) { transform: translateX(24px); }
+  html.js-motion [data-animate="stagger"]:not(.animated) { opacity: 1; transform: none; }
+  html.js-motion [data-animate="stagger"]:not(.animated) > * { opacity: 0; }
+  [data-sheen] > .container::after {
+    content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit;
+    background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.07) 50%, transparent 65%) no-repeat;
+    background-size: 250% 100%;
+    animation: edf-sheen 10s ease-in-out 1s infinite both;
+  }
+  .edifi-page .ep-tab-content.active { animation: edf-fade-in 0.3s ease-out; }
+  html.pv-ready .es-feature-item[data-pv] .es-feature-check polyline { stroke-dasharray: 24; stroke-dashoffset: -24; transition: stroke-dashoffset 0.5s ease 0.3s; }
+  html.pv-ready .es-feature-item[data-pv].pv-in .es-feature-check polyline { stroke-dashoffset: 0; }
 }
-[data-animate].animated { opacity: 1; transform: translateY(0); }
-[data-animate="fade"] { transform: none; }
-[data-animate="slide-left"] { transform: translateX(-24px); }
-[data-animate="slide-right"] { transform: translateX(24px); }
-[data-animate="slide-left"].animated,
-[data-animate="slide-right"].animated { transform: none; }
+@media (max-width: 768px) {
+  html.js-motion [data-animate]:not(.animated) { transform: none; }
+}
+@keyframes edf-sheen { 0% { background-position: 130% 0; } 30%, 100% { background-position: -30% 0; } }
+@keyframes edf-fade-in { from { opacity: 0; } }
+[data-counter].is-counting { position: relative; color: transparent; -webkit-text-fill-color: transparent; text-shadow: none; }
+[data-counter] .counter-overlay { position: absolute; inset: 0; white-space: nowrap; }
 
 [data-delay="1"] { transition-delay: 0.1s; }
 [data-delay="2"] { transition-delay: 0.2s; }
