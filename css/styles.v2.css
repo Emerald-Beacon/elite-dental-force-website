@@ -2289,7 +2289,6 @@ body.menu-open { overflow: hidden; }
   font-size: 0.71rem;
   font-weight: 500;
   color: var(--blue);
-  opacity: 0.75;
   letter-spacing: 0.07em;
   margin-bottom: var(--s3);
   display: flex;

@@ -193,7 +193,7 @@ body.pod-page::before {
   border: 1px solid rgba(75,168,240,0.2);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  font-weight: 800; color: #4ba8f0;
+  font-weight: 800; color: #62bcff;
   font-size: 0.65rem; letter-spacing: 0.1em;
   text-transform: uppercase;
 }
