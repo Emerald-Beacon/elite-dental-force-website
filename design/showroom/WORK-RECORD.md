@@ -29,3 +29,15 @@ Seven stops at 1440 and 390 widths with screenshots; keyboard rail, video and es
 ## Coordination context
 
 HERDR_ENV is set. Read SESSION_START_PROMPT.md and ran eos.ps1 summary. The current task explicitly limits writes to the showroom worktree, so task status and closeout live here rather than changing standalone eligibility operational state. No eligibility investigation, production truth check or installer work is part of this website brief.
+
+## Round 2 lead gate, authorized in this session
+
+The lead passed the original hard rules and requested a stronger visual execution. Keep branch feat/showroom and produce a new local commit without pushing or deploying.
+
+Required changes: larger readable desktop screens; per-room camera push ins focused on day column, frequency row, and Week then 3 Day; distinct dim morning scene with crowding pills; actual cut pieces separating from their screen with staggered reversible scroll progress; fix the morning caption collision and phone rail occlusion; reuse the standard platform header/footer. Rerun and extend verify.mjs, regenerate screenshots, and update EVIDENCE.md.
+
+Implementation ownership continues: builder owns showroom HTML/CSS/JS, asset builder owns full resolution source crops and provenance, independent reviewer owns browser evidence. No homepage/platform redesign and no video changes needed. Final source hashes must match the tested candidate.
+
+Visual acceptance: compare early, middle and late screenshots, and replay in reverse. Important UI text must be readable at the focal stop. Crop alignment and staggered depth must make it clear which piece came from which screen. Mobile anchor headings must clear the header and stop rail. Static fallbacks must show focal details without relying on camera movement.
+
+Round 2 closeout, 2026-10-12: all seven final browser scenarios passed with explicit --headless=new and a fresh temporary profile. Real crop provenance, reversible poses, mobile heading clearance, standard navigation, static fallbacks and media loading passed. Independent review found no blocking issue. Primary source hashes match verification.json. EVIDENCE.md and REVIEW.md record the final measurements and Chromium-only limits. Produce the authorized new local commit for Claude and Alvin review; no push or deployment.

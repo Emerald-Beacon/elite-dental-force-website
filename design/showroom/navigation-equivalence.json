@@ -1,0 +1,600 @@
+{
+  "header": {
+    "same": true,
+    "platformCount": 22,
+    "showroomCount": 22,
+    "platform": [
+      {
+        "tag": "a",
+        "href": "/",
+        "aria": null,
+        "text": "",
+        "alt": "Elite Dental Force"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Platform"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Platform Overview"
+      },
+      {
+        "tag": "a",
+        "href": "eligibility-standalone.html",
+        "aria": null,
+        "text": "Eligibility Standalone"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html",
+        "aria": null,
+        "text": "EDiFi Enterprise"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "Solutions"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "For Private Practices"
+      },
+      {
+        "tag": "a",
+        "href": "services.html#groups",
+        "aria": null,
+        "text": "For Multi Location Groups"
+      },
+      {
+        "tag": "a",
+        "href": "services.html#dso",
+        "aria": null,
+        "text": "For DSOs & Enterprises"
+      },
+      {
+        "tag": "a",
+        "href": "partners.html",
+        "aria": null,
+        "text": "Partners & Integrations"
+      },
+      {
+        "tag": "button",
+        "href": null,
+        "aria": null,
+        "text": "Resources"
+      },
+      {
+        "tag": "a",
+        "href": "resources/blog.html",
+        "aria": null,
+        "text": "Blog"
+      },
+      {
+        "tag": "a",
+        "href": "resources/podcast.html",
+        "aria": null,
+        "text": "Podcast"
+      },
+      {
+        "tag": "a",
+        "href": "resources/webinars.html",
+        "aria": null,
+        "text": "Webinars"
+      },
+      {
+        "tag": "a",
+        "href": "resources/news.html",
+        "aria": null,
+        "text": "News"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "Company"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "About Us"
+      },
+      {
+        "tag": "a",
+        "href": "company/security.html",
+        "aria": null,
+        "text": "Security"
+      },
+      {
+        "tag": "a",
+        "href": "company/faq.html",
+        "aria": null,
+        "text": "FAQ"
+      },
+      {
+        "tag": "a",
+        "href": "investors.html",
+        "aria": null,
+        "text": "Investors"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#sales",
+        "aria": null,
+        "text": "Book a Demo"
+      },
+      {
+        "tag": "button",
+        "href": null,
+        "aria": "Toggle menu",
+        "text": ""
+      }
+    ],
+    "showroom": [
+      {
+        "tag": "a",
+        "href": "/",
+        "aria": null,
+        "text": "",
+        "alt": "Elite Dental Force"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Platform"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Platform Overview"
+      },
+      {
+        "tag": "a",
+        "href": "eligibility-standalone.html",
+        "aria": null,
+        "text": "Eligibility Standalone"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html",
+        "aria": null,
+        "text": "EDiFi Enterprise"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "Solutions"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "For Private Practices"
+      },
+      {
+        "tag": "a",
+        "href": "services.html#groups",
+        "aria": null,
+        "text": "For Multi Location Groups"
+      },
+      {
+        "tag": "a",
+        "href": "services.html#dso",
+        "aria": null,
+        "text": "For DSOs & Enterprises"
+      },
+      {
+        "tag": "a",
+        "href": "partners.html",
+        "aria": null,
+        "text": "Partners & Integrations"
+      },
+      {
+        "tag": "button",
+        "href": null,
+        "aria": null,
+        "text": "Resources"
+      },
+      {
+        "tag": "a",
+        "href": "resources/blog.html",
+        "aria": null,
+        "text": "Blog"
+      },
+      {
+        "tag": "a",
+        "href": "resources/podcast.html",
+        "aria": null,
+        "text": "Podcast"
+      },
+      {
+        "tag": "a",
+        "href": "resources/webinars.html",
+        "aria": null,
+        "text": "Webinars"
+      },
+      {
+        "tag": "a",
+        "href": "resources/news.html",
+        "aria": null,
+        "text": "News"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "Company"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "About Us"
+      },
+      {
+        "tag": "a",
+        "href": "company/security.html",
+        "aria": null,
+        "text": "Security"
+      },
+      {
+        "tag": "a",
+        "href": "company/faq.html",
+        "aria": null,
+        "text": "FAQ"
+      },
+      {
+        "tag": "a",
+        "href": "investors.html",
+        "aria": null,
+        "text": "Investors"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#sales",
+        "aria": null,
+        "text": "Book a Demo"
+      },
+      {
+        "tag": "button",
+        "href": null,
+        "aria": "Toggle menu",
+        "text": ""
+      }
+    ]
+  },
+  "footer": {
+    "same": true,
+    "platformCount": 26,
+    "showroomCount": 26,
+    "platform": [
+      {
+        "tag": "a",
+        "href": "/",
+        "aria": null,
+        "text": "",
+        "alt": "Elite Dental Force"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Overview"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html",
+        "aria": null,
+        "text": "EDiFi Enterprise"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#eligibility",
+        "aria": null,
+        "text": "Eligibility Intelligence"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#medical-billing",
+        "aria": null,
+        "text": "Medical Billing Crossover"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#voice-ai",
+        "aria": null,
+        "text": "Voice AI"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "Services"
+      },
+      {
+        "tag": "a",
+        "href": "revnet.html",
+        "aria": null,
+        "text": "RevNet"
+      },
+      {
+        "tag": "a",
+        "href": "resources/blog.html",
+        "aria": null,
+        "text": "Blog"
+      },
+      {
+        "tag": "a",
+        "href": "resources/podcast.html",
+        "aria": null,
+        "text": "Podcast"
+      },
+      {
+        "tag": "a",
+        "href": "resources/webinars.html",
+        "aria": null,
+        "text": "Webinars"
+      },
+      {
+        "tag": "a",
+        "href": "resources/news.html",
+        "aria": null,
+        "text": "Latest News"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "About Us"
+      },
+      {
+        "tag": "a",
+        "href": "company/security.html",
+        "aria": null,
+        "text": "Security"
+      },
+      {
+        "tag": "a",
+        "href": "company/faq.html",
+        "aria": null,
+        "text": "FAQ"
+      },
+      {
+        "tag": "a",
+        "href": "partners.html",
+        "aria": null,
+        "text": "Partners"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#sales",
+        "aria": null,
+        "text": "Sales"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#support",
+        "aria": null,
+        "text": "Support"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#partnerships",
+        "aria": null,
+        "text": "Partnerships"
+      },
+      {
+        "tag": "a",
+        "href": "terms.html",
+        "aria": null,
+        "text": "Terms of Service"
+      },
+      {
+        "tag": "a",
+        "href": "privacy.html",
+        "aria": null,
+        "text": "Privacy Policy"
+      },
+      {
+        "tag": "a",
+        "href": "https://www.linkedin.com/company/elitedentalforce",
+        "aria": "Elite Dental Force on LinkedIn",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.facebook.com/elitedentalforce",
+        "aria": "Elite Dental Force on Facebook",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.instagram.com/elitedentalforce",
+        "aria": "Elite Dental Force on Instagram",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.youtube.com/@elitedentalforceteam",
+        "aria": "Elite Dental Force on YouTube",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://x.com/EliteDentalForc",
+        "aria": "Elite Dental Force on X",
+        "text": ""
+      }
+    ],
+    "showroom": [
+      {
+        "tag": "a",
+        "href": "/",
+        "aria": null,
+        "text": "",
+        "alt": "Elite Dental Force"
+      },
+      {
+        "tag": "a",
+        "href": "platform.html",
+        "aria": null,
+        "text": "Overview"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html",
+        "aria": null,
+        "text": "EDiFi Enterprise"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#eligibility",
+        "aria": null,
+        "text": "Eligibility Intelligence"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#medical-billing",
+        "aria": null,
+        "text": "Medical Billing Crossover"
+      },
+      {
+        "tag": "a",
+        "href": "edifi.html#voice-ai",
+        "aria": null,
+        "text": "Voice AI"
+      },
+      {
+        "tag": "a",
+        "href": "services.html",
+        "aria": null,
+        "text": "Services"
+      },
+      {
+        "tag": "a",
+        "href": "revnet.html",
+        "aria": null,
+        "text": "RevNet"
+      },
+      {
+        "tag": "a",
+        "href": "resources/blog.html",
+        "aria": null,
+        "text": "Blog"
+      },
+      {
+        "tag": "a",
+        "href": "resources/podcast.html",
+        "aria": null,
+        "text": "Podcast"
+      },
+      {
+        "tag": "a",
+        "href": "resources/webinars.html",
+        "aria": null,
+        "text": "Webinars"
+      },
+      {
+        "tag": "a",
+        "href": "resources/news.html",
+        "aria": null,
+        "text": "Latest News"
+      },
+      {
+        "tag": "a",
+        "href": "company.html",
+        "aria": null,
+        "text": "About Us"
+      },
+      {
+        "tag": "a",
+        "href": "company/security.html",
+        "aria": null,
+        "text": "Security"
+      },
+      {
+        "tag": "a",
+        "href": "company/faq.html",
+        "aria": null,
+        "text": "FAQ"
+      },
+      {
+        "tag": "a",
+        "href": "partners.html",
+        "aria": null,
+        "text": "Partners"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#sales",
+        "aria": null,
+        "text": "Sales"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#support",
+        "aria": null,
+        "text": "Support"
+      },
+      {
+        "tag": "a",
+        "href": "contact.html#partnerships",
+        "aria": null,
+        "text": "Partnerships"
+      },
+      {
+        "tag": "a",
+        "href": "terms.html",
+        "aria": null,
+        "text": "Terms of Service"
+      },
+      {
+        "tag": "a",
+        "href": "privacy.html",
+        "aria": null,
+        "text": "Privacy Policy"
+      },
+      {
+        "tag": "a",
+        "href": "https://www.linkedin.com/company/elitedentalforce",
+        "aria": "Elite Dental Force on LinkedIn",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.facebook.com/elitedentalforce",
+        "aria": "Elite Dental Force on Facebook",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.instagram.com/elitedentalforce",
+        "aria": "Elite Dental Force on Instagram",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://www.youtube.com/@elitedentalforceteam",
+        "aria": "Elite Dental Force on YouTube",
+        "text": ""
+      },
+      {
+        "tag": "a",
+        "href": "https://x.com/EliteDentalForc",
+        "aria": "Elite Dental Force on X",
+        "text": ""
+      }
+    ]
+  }
+}

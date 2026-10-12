@@ -1,0 +1,1682 @@
+[
+  {
+    "file": "images/showroom/r2-day-focus.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      1378,
+      1024
+    ],
+    "width": 1000,
+    "height": 543,
+    "bytes": 20364,
+    "masks": [],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+  },
+  {
+    "file": "images/showroom/r2-day-focus-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      1378,
+      1024
+    ],
+    "width": 660,
+    "height": 358,
+    "bytes": 11686,
+    "masks": [],
+    "note": "Mobile crop from original source."
+  },
+  {
+    "file": "images/showroom/r2-week.webp",
+    "source": "f4/week.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      3820,
+      1500
+    ],
+    "width": 1800,
+    "height": 559,
+    "bytes": 109620,
+    "masks": [],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+  },
+  {
+    "file": "images/showroom/r2-week-mobile.webp",
+    "source": "f4/week.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      3820,
+      1500
+    ],
+    "width": 660,
+    "height": 205,
+    "bytes": 19768,
+    "masks": [],
+    "note": "Mobile crop from original source."
+  },
+  {
+    "file": "images/showroom/r2-3day.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      3820,
+      1500
+    ],
+    "width": 1800,
+    "height": 559,
+    "bytes": 51784,
+    "masks": [],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+  },
+  {
+    "file": "images/showroom/r2-3day-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      3820,
+      1500
+    ],
+    "width": 660,
+    "height": 205,
+    "bytes": 8664,
+    "masks": [],
+    "note": "Mobile crop from original source."
+  },
+  {
+    "file": "images/showroom/r2-week-focus.webp",
+    "source": "f4/week.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      2240,
+      1230
+    ],
+    "width": 1800,
+    "height": 750,
+    "bytes": 107032,
+    "masks": [],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+  },
+  {
+    "file": "images/showroom/r2-week-focus-mobile.webp",
+    "source": "f4/week.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      166,
+      366,
+      2240,
+      1230
+    ],
+    "width": 660,
+    "height": 275,
+    "bytes": 24572,
+    "masks": [],
+    "note": "Mobile crop from original source."
+  },
+  {
+    "file": "images/showroom/r2-frequency.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      0,
+      0,
+      2539,
+      620
+    ],
+    "width": 1800,
+    "height": 440,
+    "bytes": 30916,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+  },
+  {
+    "file": "images/showroom/r2-frequency-mobile.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      0,
+      0,
+      2539,
+      620
+    ],
+    "width": 660,
+    "height": 161,
+    "bytes": 7410,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Mobile crop from original source."
+  },
+  {
+    "file": "images/showroom/r2-frequency-row.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      40,
+      462,
+      2510,
+      614
+    ],
+    "width": 1600,
+    "height": 98,
+    "bytes": 9710,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        40,
+        462,
+        2470,
+        152
+      ],
+      "normalized": [
+        0.015754233950374164,
+        0.7451612903225806,
+        0.9728239464356045,
+        0.24516129032258063
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-frequency-row-mobile.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      40,
+      462,
+      2510,
+      614
+    ],
+    "width": 660,
+    "height": 41,
+    "bytes": 2390,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Mobile crop from original source.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        40,
+        462,
+        2470,
+        152
+      ],
+      "normalized": [
+        0.015754233950374164,
+        0.7451612903225806,
+        0.9728239464356045,
+        0.24516129032258063
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-frequency-rule.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      1040,
+      465,
+      1930,
+      610
+    ],
+    "width": 880,
+    "height": 143,
+    "bytes": 9792,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        1040,
+        465,
+        890,
+        145
+      ],
+      "normalized": [
+        0.40961008270972826,
+        0.75,
+        0.3505317053958251,
+        0.23387096774193547
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-frequency-rule-mobile.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      1040,
+      465,
+      1930,
+      610
+    ],
+    "width": 660,
+    "height": 108,
+    "bytes": 7290,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Mobile crop from original source.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        1040,
+        465,
+        890,
+        145
+      ],
+      "normalized": [
+        0.40961008270972826,
+        0.75,
+        0.3505317053958251,
+        0.23387096774193547
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-frequency-label.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      40,
+      477,
+      430,
+      540
+    ],
+    "width": 390,
+    "height": 63,
+    "bytes": 2268,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        40,
+        477,
+        390,
+        63
+      ],
+      "normalized": [
+        0.015754233950374164,
+        0.7693548387096775,
+        0.15360378101614808,
+        0.10161290322580645
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-frequency-label-mobile.webp",
+    "source": "f3/freq.png",
+    "source_dimensions": [
+      2539,
+      1080
+    ],
+    "source_crop": [
+      40,
+      477,
+      430,
+      540
+    ],
+    "width": 390,
+    "height": 63,
+    "bytes": 2268,
+    "masks": [
+      {
+        "rect": [
+          1045,
+          155,
+          1600,
+          197
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1045,
+          350,
+          1600,
+          392
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Mobile crop from original source.",
+    "attachment": {
+      "parent": "r2-frequency.webp",
+      "parent_source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "rect_in_parent_source": [
+        40,
+        477,
+        390,
+        63
+      ],
+      "normalized": [
+        0.015754233950374164,
+        0.7693548387096775,
+        0.15360378101614808,
+        0.10161290322580645
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-avery.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      511,
+      686,
+      627
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 5560,
+    "masks": [],
+    "note": "Exact source card cutout; same pixels as day focus.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        145,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.22036474164133737,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-avery-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      511,
+      686,
+      627
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 5560,
+    "masks": [],
+    "note": "Mobile exact card cutout.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        145,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.22036474164133737,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-olivia.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      639,
+      686,
+      755
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 5490,
+    "masks": [],
+    "note": "Exact source card cutout; same pixels as day focus.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        273,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.4148936170212766,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-olivia-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      639,
+      686,
+      755
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 5490,
+    "masks": [],
+    "note": "Mobile exact card cutout.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        273,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.4148936170212766,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-liam.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      767,
+      686,
+      883
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 4970,
+    "masks": [],
+    "note": "Exact source card cutout; same pixels as day focus.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        401,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.6094224924012158,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-liam-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      767,
+      686,
+      883
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 4970,
+    "masks": [],
+    "note": "Mobile exact card cutout.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        401,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.6094224924012158,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-mia.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      895,
+      686,
+      1011
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 4646,
+    "masks": [],
+    "note": "Exact source card cutout; same pixels as day focus.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        529,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.8039513677811551,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-appointment-mia-mobile.webp",
+    "source": "f4/3day.png",
+    "source_dimensions": [
+      3840,
+      2400
+    ],
+    "source_crop": [
+      186,
+      895,
+      686,
+      1011
+    ],
+    "width": 500,
+    "height": 116,
+    "bytes": 4646,
+    "masks": [],
+    "note": "Mobile exact card cutout.",
+    "attachment": {
+      "parent": "r2-day-focus.webp",
+      "parent_source_crop": [
+        166,
+        366,
+        1378,
+        1024
+      ],
+      "rect_in_parent_source": [
+        20,
+        529,
+        500,
+        116
+      ],
+      "normalized": [
+        0.0165016501650165,
+        0.8039513677811551,
+        0.41254125412541254,
+        0.1762917933130699
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-verified-avery.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      400,
+      733,
+      1108,
+      1022
+    ],
+    "width": 708,
+    "height": 289,
+    "bytes": 11458,
+    "masks": [
+      {
+        "rect": [
+          418,
+          873,
+          476,
+          913
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          418,
+          949,
+          800,
+          983
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Actual verified card from day board, with currency and ISO date omitted. Different capture from the unverified day list; use as an illustrative reveal."
+  },
+  {
+    "file": "images/showroom/r2-verified-avery-mobile.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      400,
+      733,
+      1108,
+      1022
+    ],
+    "width": 620,
+    "height": 253,
+    "bytes": 10208,
+    "masks": [
+      {
+        "rect": [
+          418,
+          873,
+          476,
+          913
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          418,
+          949,
+          800,
+          983
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Mobile original verified card crop."
+  },
+  {
+    "file": "images/showroom/r2-verified-olivia.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      1833,
+      733,
+      2542,
+      1022
+    ],
+    "width": 709,
+    "height": 289,
+    "bytes": 12626,
+    "masks": [
+      {
+        "rect": [
+          1989,
+          873,
+          2049,
+          913
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1851,
+          949,
+          2233,
+          983
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Actual verified card from day board, with currency and ISO date omitted. Different capture from the unverified day list; use as an illustrative reveal."
+  },
+  {
+    "file": "images/showroom/r2-verified-olivia-mobile.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      1833,
+      733,
+      2542,
+      1022
+    ],
+    "width": 620,
+    "height": 253,
+    "bytes": 10892,
+    "masks": [
+      {
+        "rect": [
+          1989,
+          873,
+          2049,
+          913
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1851,
+          949,
+          2233,
+          983
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Mobile original verified card crop."
+  },
+  {
+    "file": "images/showroom/r2-verified-liam.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      1117,
+      877,
+      1824,
+      1184
+    ],
+    "width": 707,
+    "height": 307,
+    "bytes": 10610,
+    "masks": [
+      {
+        "rect": [
+          1135,
+          1017,
+          1195,
+          1057
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1135,
+          1091,
+          1517,
+          1127
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1135,
+          1157,
+          1287,
+          1197
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Actual verified card from day board, with currency and ISO date omitted. Different capture from the unverified day list; use as an illustrative reveal."
+  },
+  {
+    "file": "images/showroom/r2-verified-liam-mobile.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      1117,
+      877,
+      1824,
+      1184
+    ],
+    "width": 620,
+    "height": 269,
+    "bytes": 9176,
+    "masks": [
+      {
+        "rect": [
+          1135,
+          1017,
+          1195,
+          1057
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1135,
+          1091,
+          1517,
+          1127
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          1135,
+          1157,
+          1287,
+          1197
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Mobile original verified card crop."
+  },
+  {
+    "file": "images/showroom/r2-verified-mia.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      2551,
+      877,
+      3258,
+      1166
+    ],
+    "width": 707,
+    "height": 289,
+    "bytes": 10588,
+    "masks": [
+      {
+        "rect": [
+          2569,
+          1017,
+          2627,
+          1057
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          2569,
+          1093,
+          2951,
+          1127
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Actual verified card from day board, with currency and ISO date omitted. Different capture from the unverified day list; use as an illustrative reveal."
+  },
+  {
+    "file": "images/showroom/r2-verified-mia-mobile.webp",
+    "source": "ui/02-board.png",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "source_crop": [
+      2551,
+      877,
+      3258,
+      1166
+    ],
+    "width": 620,
+    "height": 253,
+    "bytes": 9492,
+    "masks": [
+      {
+        "rect": [
+          2569,
+          1017,
+          2627,
+          1057
+        ],
+        "color": "#effcf3"
+      },
+      {
+        "rect": [
+          2569,
+          1093,
+          2951,
+          1127
+        ],
+        "color": "#effcf3"
+      }
+    ],
+    "note": "Mobile original verified card crop."
+  },
+  {
+    "file": "images/showroom/r2-benefit-detail.webp",
+    "source": "f2/amounts.png",
+    "source_dimensions": [
+      2568,
+      778
+    ],
+    "source_crop": [
+      50,
+      125,
+      1279,
+      483
+    ],
+    "width": 1229,
+    "height": 358,
+    "bytes": 21140,
+    "masks": [
+      {
+        "rect": [
+          83,
+          214,
+          270,
+          273
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          641,
+          219,
+          656,
+          252
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          492,
+          261,
+          681,
+          374
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          908,
+          218,
+          1012,
+          276
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          908,
+          347,
+          958,
+          386
+        ],
+        "color": "#f5f6fa"
+      }
+    ],
+    "note": "Three real benefit cards with monetary values omitted."
+  },
+  {
+    "file": "images/showroom/r2-benefit-detail-mobile.webp",
+    "source": "f2/amounts.png",
+    "source_dimensions": [
+      2568,
+      778
+    ],
+    "source_crop": [
+      50,
+      125,
+      1279,
+      483
+    ],
+    "width": 660,
+    "height": 192,
+    "bytes": 10506,
+    "masks": [
+      {
+        "rect": [
+          83,
+          214,
+          270,
+          273
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          641,
+          219,
+          656,
+          252
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          492,
+          261,
+          681,
+          374
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          908,
+          218,
+          1012,
+          276
+        ],
+        "color": "#f5f6fa"
+      },
+      {
+        "rect": [
+          908,
+          347,
+          958,
+          386
+        ],
+        "color": "#f5f6fa"
+      }
+    ],
+    "note": "Three real benefit cards with monetary values omitted."
+  },
+  {
+    "file": "images/showroom/r2-source-p-badge.webp",
+    "source": "f2/amounts.png",
+    "source_dimensions": [
+      2568,
+      778
+    ],
+    "source_crop": [
+      267,
+      222,
+      317,
+      272
+    ],
+    "width": 50,
+    "height": 50,
+    "bytes": 888,
+    "masks": [],
+    "note": "Literal P badge cutout; keep display at most native size for crispness.",
+    "attachment": {
+      "parent": "r2-benefit-detail.webp",
+      "parent_source_crop": [
+        50,
+        125,
+        1279,
+        483
+      ],
+      "rect_in_parent_source": [
+        217,
+        97,
+        50,
+        50
+      ],
+      "normalized": [
+        0.17656631407648496,
+        0.2709497206703911,
+        0.04068348250610252,
+        0.13966480446927373
+      ]
+    }
+  },
+  {
+    "file": "images/showroom/r2-coverage-detail.webp",
+    "source": "f2/coverage.png",
+    "source_dimensions": [
+      2583,
+      408
+    ],
+    "source_crop": [
+      57,
+      86,
+      1286,
+      290
+    ],
+    "width": 1229,
+    "height": 204,
+    "bytes": 14186,
+    "masks": [
+      {
+        "rect": [
+          735,
+          119,
+          752,
+          148
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Four original coverage categories. X Ray punctuation masked."
+  },
+  {
+    "file": "images/showroom/r2-coverage-detail-mobile.webp",
+    "source": "f2/coverage.png",
+    "source_dimensions": [
+      2583,
+      408
+    ],
+    "source_crop": [
+      57,
+      86,
+      1286,
+      290
+    ],
+    "width": 660,
+    "height": 110,
+    "bytes": 6942,
+    "masks": [
+      {
+        "rect": [
+          735,
+          119,
+          752,
+          148
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Four original coverage categories. X Ray punctuation masked."
+  },
+  {
+    "file": "images/showroom/r2-production.webp",
+    "source": "f4/production.png",
+    "source_dimensions": [
+      542,
+      356
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      356
+    ],
+    "width": 542,
+    "height": 356,
+    "bytes": 9828,
+    "masks": [
+      {
+        "rect": [
+          387,
+          92,
+          514,
+          134
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          28,
+          278,
+          98,
+          314
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  },
+  {
+    "file": "images/showroom/r2-production-mobile.webp",
+    "source": "f4/production.png",
+    "source_dimensions": [
+      542,
+      356
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      356
+    ],
+    "width": 400,
+    "height": 263,
+    "bytes": 6130,
+    "masks": [
+      {
+        "rect": [
+          387,
+          92,
+          514,
+          134
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          28,
+          278,
+          98,
+          314
+        ],
+        "color": "white"
+      }
+    ],
+    "note": "Mobile original operational panel."
+  },
+  {
+    "file": "images/showroom/r2-confirm.webp",
+    "source": "f4/confirm.png",
+    "source_dimensions": [
+      542,
+      533
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      533
+    ],
+    "width": 542,
+    "height": 533,
+    "bytes": 19756,
+    "masks": [],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  },
+  {
+    "file": "images/showroom/r2-confirm-mobile.webp",
+    "source": "f4/confirm.png",
+    "source_dimensions": [
+      542,
+      533
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      533
+    ],
+    "width": 400,
+    "height": 393,
+    "bytes": 13804,
+    "masks": [],
+    "note": "Mobile original operational panel."
+  },
+  {
+    "file": "images/showroom/r2-alerts.webp",
+    "source": "f4/alerts.png",
+    "source_dimensions": [
+      542,
+      302
+    ],
+    "source_crop": [
+      16,
+      101,
+      525,
+      285
+    ],
+    "width": 509,
+    "height": 184,
+    "bytes": 8188,
+    "masks": [],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  },
+  {
+    "file": "images/showroom/r2-alerts-mobile.webp",
+    "source": "f4/alerts.png",
+    "source_dimensions": [
+      542,
+      302
+    ],
+    "source_crop": [
+      16,
+      101,
+      525,
+      285
+    ],
+    "width": 400,
+    "height": 145,
+    "bytes": 6460,
+    "masks": [],
+    "note": "Mobile original operational panel."
+  },
+  {
+    "file": "images/showroom/r2-today.webp",
+    "source": "f4/eligtoday.png",
+    "source_dimensions": [
+      542,
+      436
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      310
+    ],
+    "width": 542,
+    "height": 310,
+    "bytes": 10854,
+    "masks": [],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  },
+  {
+    "file": "images/showroom/r2-today-mobile.webp",
+    "source": "f4/eligtoday.png",
+    "source_dimensions": [
+      542,
+      436
+    ],
+    "source_crop": [
+      0,
+      0,
+      542,
+      310
+    ],
+    "width": 400,
+    "height": 229,
+    "bytes": 7404,
+    "masks": [],
+    "note": "Mobile original operational panel."
+  },
+  {
+    "file": "images/showroom/r2-sync.webp",
+    "source": "f2/syncpill.png",
+    "source_dimensions": [
+      272,
+      74
+    ],
+    "source_crop": [
+      0,
+      0,
+      272,
+      74
+    ],
+    "width": 272,
+    "height": 74,
+    "bytes": 3194,
+    "masks": [],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  },
+  {
+    "file": "images/showroom/r2-verify.webp",
+    "source": "f2/verifybtn.png",
+    "source_dimensions": [
+      363,
+      82
+    ],
+    "source_crop": [
+      0,
+      0,
+      363,
+      82
+    ],
+    "width": 363,
+    "height": 82,
+    "bytes": 5122,
+    "masks": [],
+    "note": "Original real product UI element; prohibited controls/values omitted."
+  }
+]
