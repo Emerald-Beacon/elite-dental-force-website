@@ -2779,3 +2779,8 @@ html:root .logo img {
 html:root .footer-brand .logo {
   display: inline-block;
 }
+
+/* Home insights tags sit on navy cards now: #62bcff keeps them at AA (the base #4ba8f0 measured 4.08). */
+html:root #home-resources .resource-card-tag {
+  color: #62bcff;
+}
