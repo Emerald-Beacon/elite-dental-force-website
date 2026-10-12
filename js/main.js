@@ -3,6 +3,8 @@
  * Enterprise SaaS Website Interactions
  */
 
+document.documentElement.classList.add('js-motion');
+
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize all components
   initMobileMenu();
@@ -303,17 +305,28 @@ function initScrollAnimations() {
   const animatedElements = document.querySelectorAll('[data-animate]');
 
   if (!animatedElements.length) return;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    animatedElements.forEach(el => el.classList.add('animated'));
+    return;
+  }
 
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -100px 0px',
-    threshold: 0.1
+    threshold: 0
   };
+  const rise = matchMedia('(min-width: 769px)').matches;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animated');
+        if (entry.target.dataset.animate === 'stagger') {
+          [...entry.target.children].forEach((child, index) => child.animate(
+            [rise ? { opacity: 0, transform: 'translateY(16px)' } : { opacity: 0 }, {}],
+            { duration: 500, delay: Math.min(index * 80, 400), easing: 'ease-out', fill: 'backwards' }
+          ));
+        }
         observer.unobserve(entry.target);
       }
     });
@@ -325,44 +338,54 @@ function initScrollAnimations() {
 }
 
 /**
- * Counter Animation for Metrics (preserves inner HTML with % suffix spans)
+ * Counter Animation for Metrics. The real value stays in the DOM for screen readers and
+ * no-JS; an aria-hidden overlay counts up on top of it, so layout never changes.
  */
 function initCounterAnimations() {
   const counters = document.querySelectorAll('[data-counter]');
+  if (!counters.length || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  counters.forEach(counter => {
-    const target = parseInt(counter.dataset.counter, 10);
-    // Capture any suffix HTML (e.g. the <span> with %) that comes after the number
-    const suffixHTML = counter.innerHTML.replace(/^\d+/, '');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        observer.unobserve(entry.target);
+        animateCount(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
 
-    const animateCount = () => {
-      const duration = 1800;
-      const start = performance.now();
+  counters.forEach(counter => observer.observe(counter));
+}
 
-      const tick = (now) => {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        // Ease out cubic
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.round(eased * target);
-        counter.innerHTML = current + suffixHTML;
-
-        if (progress < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCount();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    observer.observe(counter);
-  });
+function animateCount(counter) {
+  const text = counter.textContent.trim();
+  const match = text.match(/\d[\d,]*(\.\d+)?/);
+  const style = getComputedStyle(counter);
+  if (!match || style.webkitTextFillColor === 'rgba(0, 0, 0, 0)') return;
+  const digits = match[0];
+  const target = parseFloat(digits.replace(/,/g, ''));
+  const decimals = match[1] ? match[1].length - 1 : 0;
+  const format = new Intl.NumberFormat('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals, useGrouping: digits.includes(',') });
+  const before = text.slice(0, match.index);
+  const after = text.slice(match.index + digits.length);
+  const overlay = document.createElement('span');
+  overlay.className = 'counter-overlay';
+  overlay.setAttribute('aria-hidden', 'true');
+  overlay.style.color = style.color;
+  overlay.style.webkitTextFillColor = style.webkitTextFillColor;
+  overlay.style.textShadow = style.textShadow;
+  const start = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - start) / 1600, 1);
+    overlay.textContent = before + format.format(target * (1 - Math.pow(1 - progress, 3))) + after;
+    if (progress < 1) return requestAnimationFrame(tick);
+    overlay.remove();
+    counter.classList.remove('is-counting');
+  };
+  overlay.textContent = before + format.format(0) + after;
+  counter.classList.add('is-counting');
+  counter.appendChild(overlay);
+  requestAnimationFrame(tick);
 }
 
 // Backward compat alias
