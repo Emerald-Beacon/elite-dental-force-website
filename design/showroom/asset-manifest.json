@@ -1,0 +1,274 @@
+[
+  {
+    "file": "images/showroom/screen-week.webp",
+    "source": "f4/week.png",
+    "width": 1320,
+    "height": 591,
+    "bytes": 77644,
+    "edits": "Crop to schedule columns, excluding toolbar hyphenation and sidebar."
+  },
+  {
+    "file": "images/showroom/screen-3day.webp",
+    "source": "f4/3day.png",
+    "width": 1320,
+    "height": 591,
+    "bytes": 36700,
+    "edits": "Crop to schedule columns, excluding toolbar hyphenation and sidebar."
+  },
+  {
+    "file": "images/showroom/screen-today.webp",
+    "source": "f4/eligtoday.png",
+    "width": 542,
+    "height": 310,
+    "bytes": 9584,
+    "edits": "Crop action button with dash."
+  },
+  {
+    "file": "images/showroom/screen-production.webp",
+    "source": "f4/production.png",
+    "width": 400,
+    "height": 263,
+    "bytes": 4812,
+    "edits": "Mask scheduled and collected currency values; retain labels, no substitute data."
+  },
+  {
+    "file": "images/showroom/screen-confirm.webp",
+    "source": "f4/confirm.png",
+    "width": 400,
+    "height": 393,
+    "bytes": 11132,
+    "edits": "None"
+  },
+  {
+    "file": "images/showroom/screen-alerts.webp",
+    "source": "f4/alerts.png",
+    "width": 400,
+    "height": 145,
+    "bytes": 5508,
+    "edits": "Crop tab bar containing Pinboard."
+  },
+  {
+    "file": "images/showroom/screen-patient.webp",
+    "source": "f2/patient.png (film3.jsx patient scene)",
+    "width": 1320,
+    "height": 367,
+    "bytes": 16336,
+    "edits": "Crop to attention panel and frequency rows; exclude caller buttons, currency conflict row and identity header."
+  },
+  {
+    "file": "images/showroom/frequency.webp",
+    "source": "f3/freq.png",
+    "width": 940,
+    "height": 400,
+    "bytes": 20318,
+    "edits": "Mask ISO date lines containing dashes."
+  },
+  {
+    "file": "images/showroom/source-p.webp",
+    "source": "f3/lt-p.png",
+    "width": 203,
+    "height": 65,
+    "bytes": 2646,
+    "edits": "Crop to white source pill, removing colored shadow."
+  },
+  {
+    "file": "images/showroom/source-o.webp",
+    "source": "f3/lt-o.png",
+    "width": 273,
+    "height": 65,
+    "bytes": 3276,
+    "edits": "Crop to white source pill, removing colored shadow."
+  },
+  {
+    "file": "images/showroom/source-c.webp",
+    "source": "f3/lt-c.png",
+    "width": 253,
+    "height": 65,
+    "bytes": 3042,
+    "edits": "Crop to white source pill, removing colored shadow."
+  },
+  {
+    "file": "images/showroom/source-s.webp",
+    "source": "f3/lt-s.png",
+    "width": 243,
+    "height": 65,
+    "bytes": 3066,
+    "edits": "Crop to white source pill, removing colored shadow."
+  },
+  {
+    "file": "images/showroom/matalena.webp",
+    "source": "people/matalena.png",
+    "width": 400,
+    "height": 400,
+    "bytes": 18776,
+    "edits": "Resize only"
+  },
+  {
+    "file": "images/showroom/richard.webp",
+    "source": "people/richard.png",
+    "width": 400,
+    "height": 400,
+    "bytes": 14102,
+    "edits": "Resize only"
+  },
+  {
+    "file": "images/showroom/siona.webp",
+    "source": "people/siona.png",
+    "width": 400,
+    "height": 400,
+    "bytes": 17608,
+    "edits": "Resize only"
+  },
+  {
+    "file": "images/showroom/og-showroom.webp",
+    "source": "images/blog/og-templates/og-eligibility.html layout; existing edf-icon-logo.png",
+    "width": 1200,
+    "height": 630,
+    "bytes": 24700,
+    "edits": "Native Pillow composition, single navy and established OG template idiom."
+  },
+  {
+    "file": "images/showroom/tour-poster.webp",
+    "source": "f4/week.png and native caption",
+    "width": 1280,
+    "height": 720,
+    "bytes": 54106,
+    "edits": "Sanitized schedule crop framed on page navy."
+  },
+  {
+    "file": "images/showroom/screen-benefits.webp",
+    "source": "f2/amounts.png (film3.jsx)",
+    "width": 1320,
+    "height": 251,
+    "bytes": 15374,
+    "edits": "Mask all currency values and ISO plan date; crop lower family balance row. Preserve benefit labels and provenance badges."
+  },
+  {
+    "file": "images/showroom/screen-coverage.webp",
+    "source": "f2/coverage.png (film3.jsx)",
+    "width": 1320,
+    "height": 209,
+    "bytes": 18028,
+    "edits": "Mask X Ray hyphen; preserve coverage percentages and source letters."
+  },
+  {
+    "file": "images/showroom/screen-3day-preview.webp",
+    "source": "f4/3day.png",
+    "width": 600,
+    "height": 269,
+    "bytes": 8956,
+    "edits": "Preview variant of cropped schedule columns."
+  },
+  {
+    "file": "images/showroom/screen-week-mobile.webp",
+    "source": "screen-week.webp",
+    "width": 660,
+    "height": 296,
+    "bytes": 22840,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-3day-mobile.webp",
+    "source": "screen-3day.webp",
+    "width": 660,
+    "height": 296,
+    "bytes": 10768,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-benefits-mobile.webp",
+    "source": "screen-benefits.webp",
+    "width": 660,
+    "height": 126,
+    "bytes": 5464,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-coverage-mobile.webp",
+    "source": "screen-coverage.webp",
+    "width": 660,
+    "height": 105,
+    "bytes": 6698,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-patient-mobile.webp",
+    "source": "screen-patient.webp",
+    "width": 660,
+    "height": 184,
+    "bytes": 6186,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/frequency-mobile.webp",
+    "source": "frequency.webp",
+    "width": 600,
+    "height": 255,
+    "bytes": 8886,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/matalena-mobile.webp",
+    "source": "matalena.webp",
+    "width": 210,
+    "height": 210,
+    "bytes": 8516,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/richard-mobile.webp",
+    "source": "richard.webp",
+    "width": 210,
+    "height": 210,
+    "bytes": 6996,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/siona-mobile.webp",
+    "source": "siona.webp",
+    "width": 210,
+    "height": 210,
+    "bytes": 7900,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-production-mobile.webp",
+    "source": "screen-production.webp",
+    "width": 320,
+    "height": 210,
+    "bytes": 3660,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-confirm-mobile.webp",
+    "source": "screen-confirm.webp",
+    "width": 320,
+    "height": 314,
+    "bytes": 8164,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-alerts-mobile.webp",
+    "source": "screen-alerts.webp",
+    "width": 320,
+    "height": 116,
+    "bytes": 3670,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-today-mobile.webp",
+    "source": "screen-today.webp",
+    "width": 320,
+    "height": 183,
+    "bytes": 4766,
+    "edits": "Mobile variant."
+  },
+  {
+    "file": "images/showroom/screen-3day-preview-mobile.webp",
+    "source": "screen-3day-preview.webp",
+    "width": 520,
+    "height": 233,
+    "bytes": 6738,
+    "edits": "Mobile variant."
+  }
+]

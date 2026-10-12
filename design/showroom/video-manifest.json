@@ -1,0 +1,66 @@
+{
+  "source": "C:\\Users\\elite\\EDF-Creative\\output\\video\\edifi-explainer\\social\\EDiFi-Explainer-16x9.mp4",
+  "replacement_scenes": [
+    [
+      "scene-schedule",
+      21.3,
+      28.5
+    ],
+    [
+      "scene-patient",
+      28.5,
+      36.9
+    ],
+    [
+      "scene-week",
+      36.9,
+      42.5
+    ],
+    [
+      "scene-operations",
+      42.5,
+      47.5
+    ],
+    [
+      "scene-patient",
+      50.3,
+      56.7
+    ],
+    [
+      "scene-sources",
+      56.7,
+      69.6
+    ],
+    [
+      "scene-frequency",
+      69.6,
+      78.7
+    ]
+  ],
+  "removed_master_interval": [
+    62.933333,
+    69.266667
+  ],
+  "removed_reason": "Remove It goes and finds it through phone call sentence and its captions to avoid implying automated phone caller.",
+  "caption_source": "social/cap_16x9.ass",
+  "narration_source": "vo7/script.json",
+  "method": "Vetted cropped Craft UI stills cover entire original UI scenes. Original footage and audio retained elsewhere. Captions restored from original approved ASS on replaced scenes.",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "codec_name": "aac"
+      }
+    ],
+    "format": {
+      "duration": "88.966667",
+      "size": "2701237"
+    }
+  }
+}

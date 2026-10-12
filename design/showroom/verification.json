@@ -1,0 +1,3036 @@
+{
+  "date": "2026-10-12T05:39:21.049Z",
+  "directory": "C:\\Users\\elite\\edf-website-showroom",
+  "command": "node design/showroom/verify.mjs",
+  "browser": "Playwright Chromium, headless, fresh temporary user data directory",
+  "profile": "C:\\Users\\elite\\AppData\\Local\\Temp\\edf-showroom-qa-qMv3AB",
+  "labOnly": true,
+  "scenarios": [
+    {
+      "width": 1440,
+      "height": 900,
+      "js": true,
+      "reduce": false,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nScroll to step inside ↓\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins.\nThe work is\nalready moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nPending \n\n2 appointments verified\n\nOne schedule\nOne clear starting point\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only\nthe beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nThe details matter\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 147,
+              "boxWidth": 729,
+              "boxHeight": 139,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 123,
+              "boxWidth": 729,
+              "boxHeight": 115,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 547,
+              "naturalHeight": 232,
+              "boxWidth": 524,
+              "boxHeight": 230,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE SOURCES · 04 / 07\n\nA source.\nNever a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nConfirmed facts only\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 64,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 48,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 52,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out.\nStay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nKeep the work in view\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 374,
+              "naturalHeight": 167,
+              "boxWidth": 349,
+              "boxHeight": 156,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 160,
+              "boxWidth": 234,
+              "boxHeight": 153,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 240,
+              "boxWidth": 234,
+              "boxHeight": 229,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 88,
+              "boxWidth": 234,
+              "boxHeight": 85,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices.\nOne bigger\npicture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nStart with your locations\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people\nbehind the\nplatform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day.webp",
+        "/images/showroom/tour-poster.webp",
+        "/js/showroom.js",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits.webp",
+        "/images/showroom/screen-coverage.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena.webp",
+        "/images/showroom/richard.webp",
+        "/images/showroom/siona.webp"
+      ],
+      "resourceBytesExcludingVideo": 467796,
+      "measuredTransferBytesExcludingVideo": 474696,
+      "imageSizingViolations": [],
+      "performance": {
+        "cls": 0.0004992570204662848,
+        "shifts": [
+          {
+            "value": 6.765608924897119e-7,
+            "time": 797.5
+          },
+          {
+            "value": 0.0000012081444508744855,
+            "time": 814.7999999821186
+          },
+          {
+            "value": 0.0000018512490354938275,
+            "time": 831.6999999880791
+          },
+          {
+            "value": 0.0000024723591954946843,
+            "time": 848.0999999940395
+          },
+          {
+            "value": 0.0000031622406550068586,
+            "time": 865.4000000059605
+          },
+          {
+            "value": 0.0000038233125160751026,
+            "time": 883.5
+          },
+          {
+            "value": 0.000004621926976165981,
+            "time": 897.6999999880791
+          },
+          {
+            "value": 0.00000540071547603738,
+            "time": 914.7999999821186
+          },
+          {
+            "value": 0.0000062340253665123455,
+            "time": 931.7999999821186
+          },
+          {
+            "value": 0.000007204877856009945,
+            "time": 947.5999999940395
+          },
+          {
+            "value": 0.000008114703561706962,
+            "time": 964.9000000059605
+          },
+          {
+            "value": 0.000009017714093578531,
+            "time": 981.5
+          },
+          {
+            "value": 0.00001012425049832819,
+            "time": 999.1999999880791
+          },
+          {
+            "value": 0.000011059168434927983,
+            "time": 1014.7999999821186
+          },
+          {
+            "value": 0.000011534991480195474,
+            "time": 1031.9000000059605
+          },
+          {
+            "value": 0.000011858402456275722,
+            "time": 1047.5
+          },
+          {
+            "value": 0.000011804500626929012,
+            "time": 1065.0999999940395
+          },
+          {
+            "value": 0.000012158270104595336,
+            "time": 1081.199999988079
+          },
+          {
+            "value": 0.000012158270104595336,
+            "time": 1098.5999999940395
+          },
+          {
+            "value": 0.000012321834276406035,
+            "time": 1114.5
+          },
+          {
+            "value": 0.0000123763556670096,
+            "time": 1131.699999988079
+          },
+          {
+            "value": 0.000012235715261702675,
+            "time": 1148.4000000059605
+          },
+          {
+            "value": 0.000012033428511338305,
+            "time": 1166.2999999821186
+          },
+          {
+            "value": 0.000010994114502957819,
+            "time": 1181.2999999821186
+          },
+          {
+            "value": 0.00001005145205064729,
+            "time": 1197.5999999940395
+          },
+          {
+            "value": 0.000009060463820301783,
+            "time": 1215.2999999821186
+          },
+          {
+            "value": 0.000008051818094135802,
+            "time": 1231.4000000059605
+          },
+          {
+            "value": 0.0000069700641396604934,
+            "time": 1247.699999988079
+          },
+          {
+            "value": 0.000006007575727130487,
+            "time": 1265.4000000059605
+          },
+          {
+            "value": 0.0000049961419753086425,
+            "time": 1281.4000000059605
+          },
+          {
+            "value": 0.000003961784456983025,
+            "time": 1298.2999999821186
+          },
+          {
+            "value": 0.000002998676483196159,
+            "time": 1314.4000000059605
+          },
+          {
+            "value": 0.000002016671891075103,
+            "time": 1332.0999999940395
+          },
+          {
+            "value": 0.0000010582106267146778,
+            "time": 1348.5
+          },
+          {
+            "value": 6.80897821287723e-7,
+            "time": 3998.699999988079
+          },
+          {
+            "value": 0.0000012081444508744855,
+            "time": 4016.0999999940395
+          },
+          {
+            "value": 0.000001862401138117284,
+            "time": 4032.5999999940395
+          },
+          {
+            "value": 0.0000024438593776791836,
+            "time": 4048.199999988079
+          },
+          {
+            "value": 0.0000031622406550068586,
+            "time": 4064.5999999940395
+          },
+          {
+            "value": 0.0000038233125160751026,
+            "time": 4081.699999988079
+          },
+          {
+            "value": 0.000004609535751028808,
+            "time": 4098.799999982119
+          },
+          {
+            "value": 0.00000540071547603738,
+            "time": 4114.5999999940395
+          },
+          {
+            "value": 0.000006282351144547325,
+            "time": 4131.5999999940395
+          },
+          {
+            "value": 0.000007150976026663238,
+            "time": 4148.9000000059605
+          },
+          {
+            "value": 0.000008154975043402777,
+            "time": 4164.5999999940395
+          },
+          {
+            "value": 0.000009017714093578531,
+            "time": 4182.5999999940395
+          },
+          {
+            "value": 0.00001012425049832819,
+            "time": 4198.199999988079
+          },
+          {
+            "value": 0.000011059168434927983,
+            "time": 4216.0999999940395
+          },
+          {
+            "value": 0.000011561942394868828,
+            "time": 4231.9000000059605
+          },
+          {
+            "value": 0.000011750598797582305,
+            "time": 4248.5999999940395
+          },
+          {
+            "value": 0.000011912304285622429,
+            "time": 4264.699999988079
+          },
+          {
+            "value": 0.000011912304285622429,
+            "time": 4281.299999982119
+          },
+          {
+            "value": 0.000012240052190500685,
+            "time": 4297.799999982119
+          },
+          {
+            "value": 0.000012240052190500685,
+            "time": 4315.0999999940395
+          },
+          {
+            "value": 0.000012403616362311384,
+            "time": 4331.699999988079
+          },
+          {
+            "value": 0.000012430877057613167,
+            "time": 4348.5999999940395
+          },
+          {
+            "value": 0.000012033428511338305,
+            "time": 4365.5999999940395
+          },
+          {
+            "value": 0.000011066603170010287,
+            "time": 4381.799999982119
+          },
+          {
+            "value": 0.000010007463201410322,
+            "time": 4397.799999982119
+          },
+          {
+            "value": 0.000009040637860082304,
+            "time": 4416.4000000059605
+          },
+          {
+            "value": 0.000007998845606674382,
+            "time": 4431
+          },
+          {
+            "value": 0.000007032020265346364,
+            "time": 4447.799999982119
+          },
+          {
+            "value": 0.000006007575727130487,
+            "time": 4464.5999999940395
+          },
+          {
+            "value": 0.000004962685667438272,
+            "time": 4482.5999999940395
+          },
+          {
+            "value": 0.000003979751733431927,
+            "time": 4499.699999988079
+          },
+          {
+            "value": 0.000002998676483196159,
+            "time": 4515.5
+          },
+          {
+            "value": 0.000002021318600501543,
+            "time": 4532.4000000059605
+          },
+          {
+            "value": 0.0000010557323816872429,
+            "time": 4548.699999988079
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 83,
+            "time": 217
+          }
+        ],
+        "scrollFrameMedianMs": 16.699999999999818,
+        "scrollFrameP95Ms": 16.700000000000728,
+        "scrollFrameMaxMs": 16.800000000000182,
+        "framesOver50ms": 0
+      },
+      "metadata": {
+        "title": "Take the EDiFi Tour | Elite Dental Force",
+        "description": "Step inside EDiFi. Explore schedule verification, patient benefits, confirmed sources and the people behind Elite Dental Force in seven stops.",
+        "canonical": "https://elitedentalforce.com/pages/showroom.html",
+        "og": "https://elitedentalforce.com/images/showroom/og-showroom.webp"
+      },
+      "keyboard": {
+        "railCount": 7,
+        "activatedHash": "#patient",
+        "focusAfterRail": {
+          "tag": "BODY",
+          "id": "",
+          "text": "Skip to the tour\n  \n    \n    Explore the platform ↗\n    Book a demo ↗\n  \n  \n    THE TOUR\n    \n      "
+        },
+        "arrowNext": true,
+        "arrowHash": "#sources",
+        "home": true,
+        "end": true
+      },
+      "dialog": {
+        "open": true,
+        "focusInside": true,
+        "preload": "none",
+        "playback": {
+          "width": 1280,
+          "height": 720,
+          "duration": 88.966667,
+          "currentTime": 0.739922,
+          "error": null,
+          "playing": true
+        },
+        "backgroundFocusBlocked": true,
+        "tabFocus": [
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          }
+        ],
+        "escapeClosed": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "js": true,
+      "reduce": false,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins. The work is already moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nVerified ✓\n\n3 appointments verified\n\nOne schedule\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only the beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 65,
+              "boxWidth": 338,
+              "boxHeight": 65,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 54,
+              "boxWidth": 338,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 312,
+              "naturalHeight": 132,
+              "boxWidth": 304,
+              "boxHeight": 133,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SOURCES · 04 / 07\n\nA source. Never a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 46,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 34,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 37,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 39,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out. Stay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 122,
+              "boxWidth": 263,
+              "boxHeight": 118,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 107,
+              "boxWidth": 162,
+              "boxHeight": 106,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 160,
+              "boxWidth": 162,
+              "boxHeight": 159,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 59,
+              "boxWidth": 162,
+              "boxHeight": 59,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices. One bigger picture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people behind the platform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day-mobile.webp",
+        "/images/showroom/tour-poster.webp",
+        "/js/showroom.js",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits-mobile.webp",
+        "/images/showroom/screen-coverage-mobile.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week-mobile.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena-mobile.webp",
+        "/images/showroom/richard-mobile.webp",
+        "/images/showroom/siona-mobile.webp"
+      ],
+      "resourceBytesExcludingVideo": 338746,
+      "measuredTransferBytesExcludingVideo": 345646,
+      "imageSizingViolations": [],
+      "performance": {
+        "cls": 0.000020988299277091366,
+        "shifts": [
+          {
+            "value": 0.000002622061023924751,
+            "time": 590
+          },
+          {
+            "value": 0.000004110257821287448,
+            "time": 606.5
+          },
+          {
+            "value": 0.000006090583189206593,
+            "time": 623.6999999880791
+          },
+          {
+            "value": 0.000008165397242672573,
+            "time": 640.5999999940395
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 68,
+            "time": 21.900000005960464
+          }
+        ],
+        "scrollFrameMedianMs": 16.699999999999818,
+        "scrollFrameP95Ms": 16.800000000000182,
+        "scrollFrameMaxMs": 16.800000000000182,
+        "framesOver50ms": 0
+      }
+    },
+    {
+      "width": 1440,
+      "height": 650,
+      "js": true,
+      "reduce": false,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nScroll to step inside ↓\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins.\nThe work is\nalready moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nPending \n\n2 appointments verified\n\nOne schedule\nOne clear starting point\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only\nthe beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nThe details matter\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 147,
+              "boxWidth": 729,
+              "boxHeight": 139,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 123,
+              "boxWidth": 729,
+              "boxHeight": 115,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 547,
+              "naturalHeight": 232,
+              "boxWidth": 524,
+              "boxHeight": 230,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE SOURCES · 04 / 07\n\nA source.\nNever a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nConfirmed facts only\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 64,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 48,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 52,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out.\nStay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nKeep the work in view\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 374,
+              "naturalHeight": 167,
+              "boxWidth": 349,
+              "boxHeight": 156,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 160,
+              "boxWidth": 234,
+              "boxHeight": 153,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 240,
+              "boxWidth": 234,
+              "boxHeight": 229,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 88,
+              "boxWidth": 234,
+              "boxHeight": 85,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices.\nOne bigger\npicture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nStart with your locations\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "sticky",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people\nbehind the\nplatform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": true
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day.webp",
+        "/images/showroom/tour-poster.webp",
+        "/js/showroom.js",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits.webp",
+        "/images/showroom/screen-coverage.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena.webp",
+        "/images/showroom/richard.webp",
+        "/images/showroom/siona.webp"
+      ],
+      "resourceBytesExcludingVideo": 467796,
+      "measuredTransferBytesExcludingVideo": 474696,
+      "imageSizingViolations": [],
+      "performance": {
+        "cls": 0.0006910237398355887,
+        "shifts": [
+          {
+            "value": 9.427815987060779e-7,
+            "time": 591.5
+          },
+          {
+            "value": 0.0000018122166763117286,
+            "time": 608.4000000059605
+          },
+          {
+            "value": 0.0000025632678952991456,
+            "time": 624.9000000059605
+          },
+          {
+            "value": 0.0000034035359352742165,
+            "time": 641
+          },
+          {
+            "value": 0.000004403364828169515,
+            "time": 659.5999999940395
+          },
+          {
+            "value": 0.000005293817329950143,
+            "time": 679.2000000178814
+          },
+          {
+            "value": 0.000006365277035849952,
+            "time": 691.0999999940395
+          },
+          {
+            "value": 0.000007517375022257835,
+            "time": 708.0999999940395
+          },
+          {
+            "value": 0.000008698640046296296,
+            "time": 725
+          },
+          {
+            "value": 0.000009851595886752137,
+            "time": 741.7000000178814
+          },
+          {
+            "value": 0.000011235743393132717,
+            "time": 758.2000000178814
+          },
+          {
+            "value": 0.000012546973305436845,
+            "time": 774.2000000178814
+          },
+          {
+            "value": 0.000014051649305555557,
+            "time": 792.3000000119209
+          },
+          {
+            "value": 0.000015276664886039886,
+            "time": 808.5
+          },
+          {
+            "value": 0.000016008843315972223,
+            "time": 824.7000000178814
+          },
+          {
+            "value": 0.00001630737652466168,
+            "time": 842
+          },
+          {
+            "value": 0.00001645664312900641,
+            "time": 858.0999999940395
+          },
+          {
+            "value": 0.000016531276431178774,
+            "time": 874.7000000178814
+          },
+          {
+            "value": 0.000016947764571462486,
+            "time": 891.7000000178814
+          },
+          {
+            "value": 0.000017061001305792973,
+            "time": 908.0999999940395
+          },
+          {
+            "value": 0.00001694175959312678,
+            "time": 925.9000000059605
+          },
+          {
+            "value": 0.000016904442942040596,
+            "time": 941.5
+          },
+          {
+            "value": 0.000016661670246468422,
+            "time": 960.9000000059605
+          },
+          {
+            "value": 0.000015222620081018517,
+            "time": 975.3000000119209
+          },
+          {
+            "value": 0.00001394784896575261,
+            "time": 993.3000000119209
+          },
+          {
+            "value": 0.00001254525759734093,
+            "time": 1013.8000000119209
+          },
+          {
+            "value": 0.00001107532468616453,
+            "time": 1026.7000000178814
+          },
+          {
+            "value": 0.00000971519709312678,
+            "time": 1047.800000011921
+          },
+          {
+            "value": 0.000008262850189933523,
+            "time": 1059.300000011921
+          },
+          {
+            "value": 0.000006964059161324787,
+            "time": 1075.7000000178814
+          },
+          {
+            "value": 0.000005485547709668804,
+            "time": 1091.300000011921
+          },
+          {
+            "value": 0.000004142577197590219,
+            "time": 1107.800000011921
+          },
+          {
+            "value": 0.0000027794471153846156,
+            "time": 1125.2000000178814
+          },
+          {
+            "value": 0.0000014652147139126306,
+            "time": 1141.300000011921
+          },
+          {
+            "value": 9.427815987060779e-7,
+            "time": 3791.5
+          },
+          {
+            "value": 0.00000166252114494302,
+            "time": 3808.300000011921
+          },
+          {
+            "value": 0.0000025787092681623933,
+            "time": 3825.2000000178814
+          },
+          {
+            "value": 0.0000034035359352742165,
+            "time": 3842.2000000178814
+          },
+          {
+            "value": 0.000004403364828169515,
+            "time": 3859.4000000059605
+          },
+          {
+            "value": 0.000005264650292319564,
+            "time": 3876.2000000178814
+          },
+          {
+            "value": 0.000006348119954890788,
+            "time": 3892.5999999940395
+          },
+          {
+            "value": 0.000007576566951566951,
+            "time": 3908.800000011921
+          },
+          {
+            "value": 0.000008631727430555556,
+            "time": 3924.9000000059605
+          },
+          {
+            "value": 0.000009851595886752137,
+            "time": 3942.300000011921
+          },
+          {
+            "value": 0.00001129150390625,
+            "time": 3960
+          },
+          {
+            "value": 0.000012577427124139363,
+            "time": 3975.5999999940395
+          },
+          {
+            "value": 0.000014018192997685186,
+            "time": 3991.800000011921
+          },
+          {
+            "value": 0.000015204605146011396,
+            "time": 4008.2000000178814
+          },
+          {
+            "value": 0.000016083476618144588,
+            "time": 4026
+          },
+          {
+            "value": 0.000016195426571403133,
+            "time": 4041.7000000178814
+          },
+          {
+            "value": 0.000016493959780092594,
+            "time": 4058.300000011921
+          },
+          {
+            "value": 0.00001679678225902184,
+            "time": 4074.9000000059605
+          },
+          {
+            "value": 0.000016947764571462486,
+            "time": 4091.300000011921
+          },
+          {
+            "value": 0.000016947764571462486,
+            "time": 4108.5
+          },
+          {
+            "value": 0.000017136492462013293,
+            "time": 4125
+          },
+          {
+            "value": 0.000017053709546385325,
+            "time": 4142.9000000059605
+          },
+          {
+            "value": 0.00001655229385535375,
+            "time": 4159.300000011921
+          },
+          {
+            "value": 0.00001532298900462963,
+            "time": 4175.200000017881
+          },
+          {
+            "value": 0.000013917395147050093,
+            "time": 4191.9000000059605
+          },
+          {
+            "value": 0.000012462903608736943,
+            "time": 4208.4000000059605
+          },
+          {
+            "value": 0.000011148671207264957,
+            "time": 4225.700000017881
+          },
+          {
+            "value": 0.00000971519709312678,
+            "time": 4242.5999999940395
+          },
+          {
+            "value": 0.000008281294051964624,
+            "time": 4259.5999999940395
+          },
+          {
+            "value": 0.0000068714109241453,
+            "time": 4275.5999999940395
+          },
+          {
+            "value": 0.000005547742128145774,
+            "time": 4292.800000011921
+          },
+          {
+            "value": 0.000004152013592117759,
+            "time": 4309.800000011921
+          },
+          {
+            "value": 0.0000027794471153846156,
+            "time": 4324.9000000059605
+          },
+          {
+            "value": 0.0000014720775462962963,
+            "time": 4342.5999999940395
+          }
+        ],
+        "longTasks": [
+          {
+            "duration": 80,
+            "time": 21
+          }
+        ],
+        "scrollFrameMedianMs": 16.699999999999818,
+        "scrollFrameP95Ms": 16.799999999999727,
+        "scrollFrameMaxMs": 16.800000000000182,
+        "framesOver50ms": 0
+      },
+      "metadata": {
+        "title": "Take the EDiFi Tour | Elite Dental Force",
+        "description": "Step inside EDiFi. Explore schedule verification, patient benefits, confirmed sources and the people behind Elite Dental Force in seven stops.",
+        "canonical": "https://elitedentalforce.com/pages/showroom.html",
+        "og": "https://elitedentalforce.com/images/showroom/og-showroom.webp"
+      },
+      "keyboard": {
+        "railCount": 7,
+        "activatedHash": "#patient",
+        "focusAfterRail": {
+          "tag": "BODY",
+          "id": "",
+          "text": "Skip to the tour\n  \n    \n    Explore the platform ↗\n    Book a demo ↗\n  \n  \n    THE TOUR\n    \n      "
+        },
+        "arrowNext": true,
+        "arrowHash": "#sources",
+        "home": true,
+        "end": true
+      },
+      "dialog": {
+        "open": true,
+        "focusInside": true,
+        "preload": "none",
+        "playback": {
+          "width": 1280,
+          "height": 720,
+          "duration": 88.966667,
+          "currentTime": 0.775673,
+          "error": null,
+          "playing": true
+        },
+        "backgroundFocusBlocked": true,
+        "tabFocus": [
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          },
+          {
+            "tag": "VIDEO",
+            "inside": true,
+            "backgroundControl": false
+          }
+        ],
+        "escapeClosed": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "js": true,
+      "reduce": true,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nScroll to step inside ↓\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins.\nThe work is\nalready moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nVerified ✓\n\n3 appointments verified\n\nOne schedule\nOne clear starting point\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only\nthe beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nThe details matter\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 147,
+              "boxWidth": 729,
+              "boxHeight": 139,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 123,
+              "boxWidth": 729,
+              "boxHeight": 115,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 547,
+              "naturalHeight": 232,
+              "boxWidth": 524,
+              "boxHeight": 230,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SOURCES · 04 / 07\n\nA source.\nNever a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nConfirmed facts only\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 64,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 48,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 52,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out.\nStay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nKeep the work in view\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 374,
+              "naturalHeight": 167,
+              "boxWidth": 349,
+              "boxHeight": 156,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 160,
+              "boxWidth": 234,
+              "boxHeight": 153,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 240,
+              "boxWidth": 234,
+              "boxHeight": 229,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 88,
+              "boxWidth": 234,
+              "boxHeight": 85,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices.\nOne bigger\npicture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nStart with your locations\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people\nbehind the\nplatform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day.webp",
+        "/images/showroom/tour-poster.webp",
+        "/js/showroom.js",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits.webp",
+        "/images/showroom/screen-coverage.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena.webp",
+        "/images/showroom/richard.webp",
+        "/images/showroom/siona.webp"
+      ],
+      "resourceBytesExcludingVideo": 467796,
+      "measuredTransferBytesExcludingVideo": 474696,
+      "imageSizingViolations": [],
+      "performance": {
+        "cls": 0,
+        "shifts": [],
+        "longTasks": [],
+        "scrollFrameMedianMs": 16.699999999999818,
+        "scrollFrameP95Ms": 16.800000000000182,
+        "scrollFrameMaxMs": 16.800000000000182,
+        "framesOver50ms": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "js": true,
+      "reduce": true,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins. The work is already moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nVerified ✓\n\n3 appointments verified\n\nOne schedule\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only the beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 65,
+              "boxWidth": 338,
+              "boxHeight": 65,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 54,
+              "boxWidth": 338,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 312,
+              "naturalHeight": 132,
+              "boxWidth": 304,
+              "boxHeight": 133,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SOURCES · 04 / 07\n\nA source. Never a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 46,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 34,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 37,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 39,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out. Stay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 122,
+              "boxWidth": 263,
+              "boxHeight": 118,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 107,
+              "boxWidth": 162,
+              "boxHeight": 106,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 160,
+              "boxWidth": 162,
+              "boxHeight": 159,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 59,
+              "boxWidth": 162,
+              "boxHeight": 59,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices. One bigger picture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people behind the platform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day-mobile.webp",
+        "/images/showroom/tour-poster.webp",
+        "/js/showroom.js",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits-mobile.webp",
+        "/images/showroom/screen-coverage-mobile.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week-mobile.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena-mobile.webp",
+        "/images/showroom/richard-mobile.webp",
+        "/images/showroom/siona-mobile.webp"
+      ],
+      "resourceBytesExcludingVideo": 338746,
+      "measuredTransferBytesExcludingVideo": 345646,
+      "imageSizingViolations": [],
+      "performance": {
+        "cls": 0,
+        "shifts": [],
+        "longTasks": [
+          {
+            "duration": 66,
+            "time": 21.5
+          }
+        ],
+        "scrollFrameMedianMs": 16.699999999999818,
+        "scrollFrameP95Ms": 16.700000000000728,
+        "scrollFrameMaxMs": 16.800000000000182,
+        "framesOver50ms": 0
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "js": false,
+      "reduce": false,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nScroll to step inside ↓\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins.\nThe work is\nalready moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nVerified ✓\n\n3 appointments verified\n\nOne schedule\nOne clear starting point\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only\nthe beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nThe details matter\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 147,
+              "boxWidth": 729,
+              "boxHeight": 139,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 123,
+              "boxWidth": 729,
+              "boxHeight": 115,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 547,
+              "naturalHeight": 232,
+              "boxWidth": 524,
+              "boxHeight": 230,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SOURCES · 04 / 07\n\nA source.\nNever a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nConfirmed facts only\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 64,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 48,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 52,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 201,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out.\nStay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nKeep the work in view\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week.webp",
+              "naturalWidth": 777,
+              "naturalHeight": 348,
+              "boxWidth": 729,
+              "boxHeight": 326,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 374,
+              "naturalHeight": 167,
+              "boxWidth": 349,
+              "boxHeight": 156,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 160,
+              "boxWidth": 234,
+              "boxHeight": 153,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 240,
+              "boxWidth": 234,
+              "boxHeight": 229,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 88,
+              "boxWidth": 234,
+              "boxHeight": 85,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices.\nOne bigger\npicture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nStart with your locations\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people\nbehind the\nplatform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona.webp",
+              "naturalWidth": 244,
+              "naturalHeight": 244,
+              "boxWidth": 231,
+              "boxHeight": 308,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day.webp",
+        "/images/showroom/tour-poster.webp",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits.webp",
+        "/images/showroom/screen-coverage.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena.webp",
+        "/images/showroom/richard.webp",
+        "/images/showroom/siona.webp"
+      ],
+      "resourceBytesExcludingVideo": 463290,
+      "measuredTransferBytesExcludingVideo": 469890,
+      "imageSizingViolations": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "js": false,
+      "reduce": false,
+      "errors": [],
+      "httpErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "videoRequestsBeforeOpen": 0,
+      "rooms": [
+        {
+          "id": "morning",
+          "heading": "A different kind of morning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "INSIDE EDIFI · 01 / 07\n\nA different kind\nof morning.\n\nPhones. Portals. Hold music.\nThere is a better way.\n\nStep inside EDiFi and follow the work, from the first appointment to the whole week.\n\nStart the walkthrough\n↓\nWatch the 90 second tour ↗\nPhones\nPortals\nHold music\nEDiFi\nEligibility Intelligence\nStep inside your morning.\n Before the first patient arrives\nElite Dental Force\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "schedule",
+          "heading": "The day begins. The work is already moving.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SCHEDULE · 02 / 07\n\nThe day begins. The work is already moving.\n\nYour Open Dental schedule. Your appointments. One place to verify.\n\nEDiFi syncs the schedule and verifies appointments before patients arrive.\n\nLook inside a patient\n↓\nEDiFi\nToday's schedule\nOpen Dental schedule → EDiFi\n Schedule synced from Open Dental\nVerify All\nIllustrative sequence\nPATIENT A\nVerified ✓\nPATIENT B\nVerified ✓\nPATIENT C\nVerified ✓\n\n3 appointments verified\n\nOne schedule\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-3day.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "patient",
+          "heading": "Active is only the beginning.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE PATIENT · 03 / 07\n\nActive is only the beginning.\n\nSee what coverage actually means for the appointment.\n\nMaximums. Deductibles. Coverage. And a frequency already used, flagged before the patient is in the chair.\n\nSee how it knows\n↓\nEDiFi\nPatient verification\nThe details behind the appointment.\nMaximums\nDeductibles\nCoverage\n Frequency already used · Review before treatment\nBeyond active\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-benefits.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-benefits-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 65,
+              "boxWidth": 338,
+              "boxHeight": 65,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-coverage.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-coverage-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 54,
+              "boxWidth": 338,
+              "boxHeight": 54,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/frequency.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/frequency-mobile.webp",
+              "naturalWidth": 312,
+              "naturalHeight": 132,
+              "boxWidth": 304,
+              "boxHeight": 133,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "sources",
+          "heading": "A source. Never a guess.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE SOURCES · 04 / 07\n\nA source. Never a guess.\n\nEvery number shows where it came from.\n\nOnly confirmed facts. When a value is not confirmed, EDiFi leaves it unset.\n\nPull back to the week\n↓\nEDiFi Eligibility\nConfirmed\nfacts.\n\nNot confirmed?\nNot set.\n\nFollow the source behind the number.\n\nVisible provenance\nFrom the EDiFi explainer",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/source-p.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-p.webp",
+              "naturalWidth": 203,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 46,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-o.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-o.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 34,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-c.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-c.webp",
+              "naturalWidth": 253,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 37,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/source-s.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/source-s.webp",
+              "naturalWidth": 243,
+              "naturalHeight": 65,
+              "boxWidth": 145,
+              "boxHeight": 39,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "week",
+          "heading": "Zoom out. Stay ahead.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "THE WHOLE WEEK · 05 / 07\n\nZoom out. Stay ahead.\n\nToday is part of a bigger picture.\n\nMove between Week and 3 Day views. See production, confirmations and alerts alongside the schedule.\n\nExplore the group view\n↓\nEDiFi\nWeek view\nThe whole week, in view.\n3 Day view\nProduction\nConfirmations\nAlerts\nToday to the whole week\nProduct screens · Synthetic data",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/screen-week.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-week-mobile.webp",
+              "naturalWidth": 343,
+              "naturalHeight": 153,
+              "boxWidth": 338,
+              "boxHeight": 152,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-3day-preview.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-3day-preview-mobile.webp",
+              "naturalWidth": 273,
+              "naturalHeight": 122,
+              "boxWidth": 263,
+              "boxHeight": 118,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-production.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-production-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 107,
+              "boxWidth": 162,
+              "boxHeight": 106,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-confirm.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-confirm-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 160,
+              "boxWidth": 162,
+              "boxHeight": 159,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/screen-alerts.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/screen-alerts-mobile.webp",
+              "naturalWidth": 163,
+              "naturalHeight": 59,
+              "boxWidth": 162,
+              "boxHeight": 59,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "groups",
+          "heading": "More offices. One bigger picture.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR GROUP · 06 / 07\n\nMore offices. One bigger picture.\n\nFor dental offices, DSOs and groups with multiple practices.\n\nBring your locations into the conversation. See how EDiFi fits the way your group works.\n\nMeet the people\n↓\nOffice A\nOffice B\nOffice C\nEDiFi\nOne view.\n\nConcept diagram · Not a product screen\n\nBuilt around your practice\nA conversation for your demo",
+          "overflow": false,
+          "images": [],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        },
+        {
+          "id": "people",
+          "heading": "The people behind the platform.",
+          "background": "rgb(10, 29, 71)",
+          "position": "relative",
+          "text": "YOUR TEAM · 07 / 07\n\nThe people behind the platform.\n\nTechnology. With people behind it.\n\nMeet Elite Dental Force. Let us show you EDiFi through the work your practice does every day.\n\nBook a demo\n↗\nWatch the 90 second tour ↗\nMatalena\nRichard\nSiona\n\nYour practice. Our people. Elite Dental Force.\n\nThanks for stepping inside\nTake another look ↑\nElite Dental Force",
+          "overflow": false,
+          "images": [
+            {
+              "src": "../images/showroom/matalena.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/matalena-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/richard.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/richard-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            },
+            {
+              "src": "../images/showroom/siona.webp",
+              "currentSrc": "http://127.0.0.1:52323/images/showroom/siona-mobile.webp",
+              "naturalWidth": 109,
+              "naturalHeight": 109,
+              "boxWidth": 105,
+              "boxHeight": 141,
+              "complete": true,
+              "visible": true
+            }
+          ],
+          "readability": {
+            "hiddenCopy": [],
+            "sticky": false
+          }
+        }
+      ],
+      "initialVideoRequests": 0,
+      "bodyBackground": "rgb(10, 29, 71)",
+      "copyViolations": {
+        "dashes": [],
+        "prohibited": [],
+        "prices": []
+      },
+      "uniqueLocalResources": [
+        "/pages/showroom.html",
+        "/fonts/plus-jakarta-sans-latin-variable.woff2",
+        "/css/styles.v2.css",
+        "/css/showroom.css",
+        "/images/showroom/screen-3day-mobile.webp",
+        "/images/showroom/tour-poster.webp",
+        "/images/brand/edf-logo-2026-navy.svg",
+        "/images/showroom/screen-benefits-mobile.webp",
+        "/images/showroom/screen-coverage-mobile.webp",
+        "/images/showroom/frequency-mobile.webp",
+        "/images/showroom/source-p.webp",
+        "/images/showroom/source-o.webp",
+        "/images/showroom/source-c.webp",
+        "/images/showroom/source-s.webp",
+        "/images/showroom/screen-week-mobile.webp",
+        "/images/showroom/screen-3day-preview-mobile.webp",
+        "/images/showroom/screen-production-mobile.webp",
+        "/images/showroom/screen-confirm-mobile.webp",
+        "/images/showroom/screen-alerts-mobile.webp",
+        "/images/showroom/matalena-mobile.webp",
+        "/images/showroom/richard-mobile.webp",
+        "/images/showroom/siona-mobile.webp"
+      ],
+      "resourceBytesExcludingVideo": 334240,
+      "measuredTransferBytesExcludingVideo": 340840,
+      "imageSizingViolations": []
+    }
+  ],
+  "lighthouse": {
+    "available": false,
+    "run": false
+  },
+  "sha256": {
+    "pages/showroom.html": "77510faad0152bb076112ea5035148a2bb3e5a285365fdd4939439e177e32c69",
+    "css/showroom.css": "40667d7556267735daa84c7608855c20f387514fbb3ced7598e45ad5ccba974c",
+    "js/showroom.js": "f56cc2666884e55269bb566709ebb33095e10e45406c98f1ead9bcac518b9498",
+    "media/showroom/tour.mp4": "6a9563163957b496e48519a1fc9aaa18b947fa516144fcf8c14343a6d4f581fd"
+  },
+  "entryLinkSmoke": [
+    {
+      "path": "/index.html",
+      "width": 1440,
+      "count": 1,
+      "visible": true,
+      "bounds": {
+        "x": 120,
+        "y": 595.265625,
+        "width": 174.734375,
+        "height": 61
+      },
+      "horizontalOverflow": false,
+      "externalRequestsBlocked": 0
+    },
+    {
+      "path": "/index.html",
+      "width": 390,
+      "count": 1,
+      "visible": true,
+      "bounds": {
+        "x": 20,
+        "y": 466.671875,
+        "width": 350,
+        "height": 61
+      },
+      "horizontalOverflow": false,
+      "externalRequestsBlocked": 0
+    },
+    {
+      "path": "/pages/platform.html",
+      "width": 1440,
+      "count": 1,
+      "visible": true,
+      "bounds": {
+        "x": 124,
+        "y": 507.984375,
+        "width": 174.734375,
+        "height": 61
+      },
+      "horizontalOverflow": false,
+      "externalRequestsBlocked": 0
+    },
+    {
+      "path": "/pages/platform.html",
+      "width": 390,
+      "count": 1,
+      "visible": true,
+      "bounds": {
+        "x": 24,
+        "y": 476.34375,
+        "width": 342,
+        "height": 61
+      },
+      "horizontalOverflow": false,
+      "externalRequestsBlocked": 0
+    }
+  ],
+  "newImageBytes": 476966,
+  "conservativeBytesExcludingVideo": 649276,
+  "failures": []
+}
