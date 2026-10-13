@@ -60,7 +60,10 @@
     ],
     "format": {
       "duration": "88.966667",
-      "size": "2701237"
+      "size": "2693868"
     }
-  }
+  },
+  "round3_note": "Only frequency replacement artwork changed: internal engineering labels omitted. Monetary values remain masked in video. Existing cuts, narration, captions and duration preserved.",
+  "sha256": "ae8c71762cecaa8eb724d7299e8ef26397425461dfd8b5d1224760a06b996a2f",
+  "audio_sha256": "SHA256=0ea0a0fee86aae9ae580ab619b86fab5e5074c9e7a2d71651051abf0044e81d2"
 }

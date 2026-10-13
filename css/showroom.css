@@ -44,10 +44,10 @@ html:root .showroom .dropdown,html:root .showroom .nav.active,.showroom .footer 
 .detached-piece { position:relative; background:var(--tour-navy); border:1px solid #6685ad; border-radius:9px; box-shadow:0 28px 45px -18px #000b; overflow:hidden; z-index:6; transform-origin:0 0; }
 .detached-piece img { width:100%; height:auto; }
 .detached-piece figcaption { padding:11px 14px; font-size:14px; color:#e9f1fb; }
-.detached-appointments { position:absolute; width:43%; right:0; top:0; display:grid; gap:12px; z-index:8; }
-.appointment-image { position:relative; height:120px; overflow:hidden; background:var(--tour-navy); }
-.appointment-image>img:first-child { width:100%; height:auto; }
-.appointment-image>.verified-capture { position:absolute; inset:0; width:100%; height:120px; object-fit:cover; object-position:top; }
+.detached-appointments { position:absolute; width:43%; right:0; top:0; display:grid; grid-auto-rows:155px; align-items:start; gap:12px; z-index:8; }
+.appointment-image { position:relative; }
+.appointment-image>img:first-child { display:none; width:100%; height:auto; }
+.appointment-image>.verified-capture { display:block; width:100%; height:auto; aspect-ratio:3.4; object-fit:cover; object-position:top; }
 .appointment-piece { border-color:#76e6be; }
 .appointment-piece figcaption { color:#76e6be; font-size:12px; padding:8px 12px; }
 .verification-total { position:absolute; bottom:0; left:0; right:0; border-top:1px solid #42648f; display:flex; align-items:center; gap:16px; padding-top:16px; font-size:12px; }
@@ -59,7 +59,7 @@ html:root .showroom .dropdown,html:root .showroom .nav.active,.showroom .footer 
 .patient-camera { transform-origin:0 0; }
 .patient-camera>img { width:100%; height:auto; }
 .benefit-detail { position:absolute; width:60%; right:0; top:30px; }
-.frequency-detail { position:absolute; width:82%; right:0; bottom:0; border-color:#ffd485; }
+.frequency-detail { position:absolute; width:82%; right:0; top:66%; border-color:#ffd485; }
 .frequency-detail figcaption { color:#ffe1a8; font-size:14px; }
 .frequency-detail strong { display:block; margin:5px 0; font-size:20px; color:white; }
 .frequency-detail small { font-size:10px; color:#c5ccdb; }
@@ -70,12 +70,8 @@ html:root .showroom .dropdown,html:root .showroom .nav.active,.showroom .footer 
 .morning-door>span:last-of-type { font-size:18px; color:#a9c7eb; }
 .morning-door p { font-size:14px; margin-top:30px; }
 .chaos-cloud { position:absolute; inset:0; pointer-events:none; }
-.chaos-cloud span { position:absolute; padding:17px 25px; border:1px solid #6c8bb2; border-radius:8px; font-size:20px; background:var(--tour-navy); box-shadow:0 24px 45px -18px #000b; }
-.chaos-cloud span:nth-child(1) { top:15%; left:1%; transform:rotate(-8deg); }
-.chaos-cloud span:nth-child(2) { top:30%; right:0; transform:rotate(8deg); }
-.chaos-cloud span:nth-child(3) { top:54%; left:3%; transform:rotate(-3deg); }
-.chaos-cloud span:nth-child(4) { bottom:16%; right:0; transform:rotate(5deg); }
-.chaos-cloud span:nth-child(5) { top:43%; left:20%; font-size:14px; }
+.chaos-cloud span { position:absolute; top:0; left:0; max-width:calc(100% - 48px); padding:17px 25px; border:1px solid #6c8bb2; border-radius:8px; font-size:20px; background:var(--tour-navy); box-shadow:0 24px 45px -18px #000b; }
+.chaos-cloud span:nth-child(5) { font-size:14px; }
 .morning-resolution { position:absolute; bottom:0; right:5%; font-size:14px; color:#d8eeff; }
 .source-stage { display:flex; align-items:center; justify-content:center; }
 .source-center { border:1px solid #4f719f; width:54%; padding:42px; background:var(--tour-navy); text-align:center; }
@@ -143,12 +139,13 @@ html:has(.tour-video-dialog[open]) { overflow:hidden; }
   html.js-motion .schedule-stage .camera-frame { width:var(--frame-width,100%); }
   html.js-motion .schedule-stage .camera-viewport img { width:var(--stage-width,100%); max-width:none; }
   html.js-motion [data-detach] { transform:translate3d(var(--piece-x,0px),var(--piece-y,0px),var(--piece-z,0px)) scale(var(--piece-scale,1)); opacity:var(--piece-opacity,1); box-shadow:0 var(--piece-shadow,28px) 48px -18px #000b; }
-  html.js-motion [data-piece-label] { opacity:var(--label-opacity,1); }
+  html.js-motion [data-detach]:not([data-label-visible]) [data-piece-label] { display:none; }
+  html.js-motion .week-panels [data-detach] [data-piece-label] { display:block; }
   html.js-motion .appointment-piece { border-color:var(--verified-border,#6685ad); }
-  html.js-motion .verified-capture { opacity:var(--verified-opacity,1); }
-  html.js-motion .appointment-image>img:first-child { opacity:var(--original-opacity,0); }
+  html.js-motion [data-card-state="pending"] .verified-capture { display:none; }
+  html.js-motion [data-card-state="pending"] .appointment-image>img:first-child { display:block; }
   html.js-motion .morning-door { opacity:var(--door-opacity,1); transform:rotateY(var(--door-tilt,-12deg)) scale(var(--door-scale,.88)); }
-  html.js-motion .chaos-cloud span { opacity:var(--chaos-opacity,1); transform:translate3d(var(--chaos-x,0px),var(--chaos-y,0px),var(--chaos-z,0px)) rotate(var(--chaos-rotate,-5deg)); }
+  html.js-motion .chaos-cloud span { opacity:var(--chaos-opacity,1); transform:translate(var(--chaos-x,0px),var(--chaos-y,0px)) rotate(var(--chaos-rotate,-5deg)) scale(var(--chaos-scale,1)); }
   html.js-motion .morning-resolution { opacity:var(--resolution-opacity,1); }
   html.js-motion .view-name span:first-child { opacity:var(--wide-opacity,1); }
   html.js-motion .view-name span:last-child { opacity:var(--focus-opacity,0); }
@@ -159,10 +156,11 @@ html:has(.tour-video-dialog[open]) { overflow:hidden; }
   .camera-viewport { height:340px; }
   .patient-source { height:355px; }
   .detached-appointments { top:0; gap:10px; width:43%; }
-  .appointment-image,.appointment-image>.verified-capture { height:102px; }
+  .detached-appointments { grid-auto-rows:137px; }
+  .appointment-image>.verified-capture { aspect-ratio:3.8; }
   .appointment-piece figcaption { padding:5px 10px; }
   .benefit-detail { width:56%; }
-  .frequency-detail { width:72%; }
+  .frequency-detail { width:72%; top:62%; }
   .week-stage .camera-frame { height:370px; }
   .week-stage .camera-viewport { height:245px; }
   .week-panels { grid-template-columns:repeat(3,1fr); gap:20px; left:12%; }
@@ -225,8 +223,8 @@ html:has(.tour-video-dialog[open]) { overflow:hidden; }
   .camera-viewport { height:auto; }
   .camera-focus { position:relative; }
   .camera-frame>figcaption { font-size:10px; }
-  .detached-appointments { position:relative; width:100%; top:auto; right:auto; margin-top:24px; gap:17px; }
-  .appointment-image,.appointment-image>.verified-capture { height:145px; }
+  .detached-appointments { position:relative; width:100%; top:auto; right:auto; margin-top:24px; gap:17px; grid-auto-rows:auto; }
+  .appointment-image>.verified-capture { aspect-ratio:2.4; }
   .verification-total { position:relative; flex-wrap:wrap; margin-top:25px; gap:10px; font-size:11px; }
   .verification-total small { width:100%; }
   .appointment-piece figcaption { font-size:13px; }

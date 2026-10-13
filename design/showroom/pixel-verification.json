@@ -1,0 +1,193 @@
+{
+  "benefit_values_visually_compared_to_original": {
+    "annual_maximum": "$1,500",
+    "remaining_conflict": [
+      "$1,125",
+      "$980"
+    ],
+    "individual_deductible": "$50",
+    "deductible_remaining": "$0",
+    "deductible_met": "Yes"
+  },
+  "benefit_pixel_equality": {
+    "images/showroom/r2-benefit-detail.webp": {
+      "equal": true,
+      "dimensions": [
+        1229,
+        358
+      ],
+      "sha256": "7b5ce061698f0b423b8cf23eaf3c47619f357ba21b178289614569f7711ea1c2"
+    },
+    "images/showroom/r2-benefit-detail-mobile.webp": {
+      "equal": true,
+      "dimensions": [
+        660,
+        192
+      ],
+      "sha256": "abe6af9223e2690bfe8ae62f05666d95a74232baf374c013391949d1f931f887"
+    }
+  },
+  "engineering_metadata_regions": [
+    {
+      "file": "frequency",
+      "source_band": [
+        213,
+        251
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency",
+      "source_band": [
+        405,
+        448
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency",
+      "source_band": [
+        696,
+        740
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency",
+      "source_band": [
+        888,
+        933
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency",
+      "source_band": [
+        1034,
+        1079
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        213,
+        251
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        405,
+        448
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        696,
+        740
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        888,
+        933
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "frequency-mobile",
+      "source_band": [
+        1034,
+        1079
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency",
+      "source_band": [
+        213,
+        251
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency",
+      "source_band": [
+        405,
+        448
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency-mobile",
+      "source_band": [
+        213,
+        251
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency-mobile",
+      "source_band": [
+        405,
+        448
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency-mobile",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency-row",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    },
+    {
+      "file": "r2-frequency-row-mobile",
+      "source_band": [
+        551,
+        594
+      ],
+      "near_white_fraction": 1.0
+    }
+  ],
+  "note": "Independent source pixel equality for restored benefit crops; metadata regions sampled inside erased bands. Native full size images and contact sheets separately inspected visually. This does not claim OCR of every frame."
+}

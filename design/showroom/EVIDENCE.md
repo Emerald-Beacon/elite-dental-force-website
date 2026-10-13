@@ -1,64 +1,72 @@
-# Showroom prototype evidence, Round 2
+# Showroom prototype evidence, Round 3
 
-Verdict: BUILT AND VERIFIED locally. Ready for Claude gate and Alvin review. No push, merge or deployment.
+Verdict: BUILT AND VERIFIED locally. All seven final scenarios passed. Local candidate on feat/showroom. No push, merge or deployment.
 
-## Changed files
+## Changed files and requested corrections
 
-- pages/showroom.html: distinct opening scene, real source crops and verified card states, standard platform header navigation and footer.
-- css/showroom.css: larger desktop product stage, readable focal details, room for detached panels beside the schedule, separate morning caption, phone anchor clearance and static fallbacks.
-- js/showroom.js: camera push ins, staggered source aligned panel lifts with depth shadows and labels, reversible scroll progress, verified card transitions, accessible standard navigation and lazy video.
-- images/showroom/: 47 additional optimized WebP files from supplied synthetic captures. The original 34 files, poster and 1200x630 OG remain available.
-- design/showroom/: Round 2 reproducible asset script and crop manifest, expanded motion and mobile anchor checks, regenerated screenshots and independent review.
+- pages/showroom.html, css/showroom.css and js/showroom.js: bounded morning pill paths; tightly fitted lifted cards; updated benefit description and frequency crop coordinates; earlier frequency warning; stable frequency card anchoring.
+- images/showroom/: restored benefit values and cleaned frequency crops, generated from the original supplied synthetic captures.
+- media/showroom/tour.mp4: removed engineering identifiers from the frequency scene. The audio, duration and prior exclusions remain intact.
+- design/showroom/: updated asset generators and manifests, expanded verification, regenerated room screenshots and contact sheets, independent review and this evidence report.
 
-The Round 1 entry links in index.html and pages/platform.html, sitemap URL and sanitized video are unchanged in Round 2.
+The opening pills remain inside the stage and clear of the copy. Their centers follow bounded paths with margins for rotated extents. The lift code sizes each card around its actual image and displayed caption, rather than reserving an empty navy strip. The Olivia card is tightly fitted while pending; its verified capture and label appear later in the same reversible sequence.
 
-## Rooms
+The frequency lift now runs from 24% to 48% of room progress, making the rule and review warning fully visible at 50%. QA also found a real 65.86px image jump when the bottom anchored card gained its caption. Stable top anchoring removes that jump without reserving empty space. Builder measurements across 31 closely spaced poses found maximum adjacent movement of 0.49px at 1440x900 and 1.052px at 1440x650. Independent checks repeat that sweep.
 
-1. Morning: five crowded pills recede from a dim EDiFi gateway as the screen brightens. The schedule is reserved for room 2. The closing caption sits separately below the first patient card.
-2. Schedule: the large tilted 3 Day capture pushes into one day. Real appointment fragments detach beside it, then transition into matching verified captures for Avery Thompson, Olivia Martinez and Liam O'Connor. Scroll controls the count and reverses the sequence.
-3. Patient: camera moves toward real frequency rules. The actual benefit panel and frequency rule detach, with a clearly separate Bitewings review annotation. Currency values are omitted.
-4. Sources: real Craft P, O, C and S source tiles lift from their source positions around confirmed facts and Not set.
-5. Week: actual Week and 3 Day captures move into readable day detail. Production, confirmation and alert panels rise from matching source panels; originals fade as detached copies separate.
-6. Groups: an explicitly labeled concept diagram of three offices feeding one EDiFi view. Office tiles separate with scroll and connectors appear. No fabricated product dashboard.
-7. People: approved Matalena, Richard and Siona portraits separate from their source stack, followed by Book a demo and video close.
+The same review caught Week panel movement introduced by collapsing captions. A Week-only rule keeps those captions attached throughout each panel's lift; the parent panel opacity controls their entry. Panel heights remain constant, removing the approximately 44px jumps. Builder threshold sweeps measured at most 1.07px adjacent movement.
 
-## Craft provenance and intentional substitutions
+## Rooms retained
 
-Product captures from original 3840x2400 f4 sources, frequency and source tiles from f3, benefit and coverage panels from f2 as used in film3.jsx, and approved people portraits. Full crop, mask, size and source details are recorded in asset-manifest.json and round2-asset-manifest.json. The latter records original pixel crop coordinates and normalized positions for docking the lifted pieces.
+1. Morning: crowded phone and portal pills over a dim EDiFi gateway resolve into the bright opening screen.
+2. Schedule: a real 3 Day capture pushes into one day; matching appointment crops lift and become verified.
+3. Patient: real benefit amounts, frequency rules and a clearly separate frequency already used / review before treatment annotation.
+4. Sources: real P, O, C and S provenance tiles and confirmed facts.
+5. Week: Week, 3 Day and focused day views with production, confirmation and alert panels.
+6. Groups: the explicitly labeled office concept diagram.
+7. People: the approved Matalena, Richard and Siona portraits, demo action and lazy video.
 
-Matching green verification cards come from approved ui/02-board captures of the same synthetic appointments. The transition is labeled illustrative; it does not connect to a live verification service. The frequency review label is an editorial annotation, not altered product pixels. The opening gateway and group diagram are intentionally composed scenes.
+The standard platform header/footer, phone anchor clearance, one navy, static fallbacks, entry links, sitemap and existing claims remain in place. No new runtime dependencies or production access.
 
-The lower resolution sw contact captures were replaced by higher resolution f2 source panels already used in film3.jsx. No new product captures or production access were needed.
+## Source evidence
 
-The master video contained excluded controls and currency figures. Those UI scenes use vetted Craft captures. The sentence implying automatic phone calls, from master time 62.933333 to 69.266667 seconds, was removed with its captions and audio. Exact scene replacements and source script/caption paths are in video-manifest.json. Final length 88.966667 seconds, labeled as the 90 second tour. Original unaffected filmed/animated scenes remain. Full audio audition is not claimed; source narration and captions were reviewed, browser playback and full-file decode were verified.
+The user explicitly authorized synthetic benefit amounts, distinguishing them from EDF pricing. The first three benefit cards now show the exact f2/amounts.png values: annual maximum $1,500; remaining conflict $1,125 and $980; individual deductible $50; deductible remaining $0; deductible met Yes. Both conflicting remaining values are preserved. EDF prices remain excluded.
 
-The demo route table and capture inventory had no multi location dashboard, so room 6 uses the diagram option explicitly authorized by the brief. Existing homepage/platform content received no redesign. No new runtime dependencies.
+Restored benefit images use lossless WebP. The asset pipeline asserts decoded RGB equality against the original desktop crop, apart from the existing nonmonetary punctuation mask, and against the exact resized source for mobile. No amounts were invented or typed into the image.
 
-## Verification evidence
+All six internal frequency metadata rows, including CodeGroupNum, BenefitNum and Not writable, are removed before cropping/resizing. The lifted rule is a tight 660x54 crop around the actual rule text. Original crop coordinates, masks and source hashes are in asset-manifest.json, round2-asset-manifest.json and round3-asset-manifest.json.
 
-Directory for every command below: C:/Users/elite/edf-website-showroom.
+The frequency crop also appeared inside the tour video, so that scene was cleaned through the existing rendering pipeline. Final video: H.264/AAC, 1280x720, 88.966667 seconds, 2,693,868 bytes. SHA256: ae8c71762cecaa8eb724d7299e8ef26397425461dfd8b5d1224760a06b996a2f. The AAC packet hash matches the prior committed video exactly. Full-file ffmpeg decode exited 0. Scene boundaries and refreshed video contact sheets were visually inspected. The earlier excluded caller sentence and unsafe controls remain removed. A complete human audio audition is not claimed.
 
-- node design/showroom/verify.mjs: exit 0, failures empty. Chromium launched with explicit --headless=new and a fresh temporary user data directory. Seven scenarios cover 1440x900, 1440x650, 390x844, reduced motion and JavaScript off. All room screenshots, docked/early/middle/late desktop motion states, phone anchor positions, standard footers and refreshed contact sheets are in shots/.
-- Console/runtime errors: 0. HTTP errors: 0. Horizontal overflow: 0. No external requests from showroom.
-- Maximum measured cumulative layout shift: 0.00833240125, below 0.05. Phone: 0. Short desktop: 0.00273473613. This conservatively sums observed shifts, rather than reducing them to a maximum session window.
-- All runtime page resources after traversing rooms: desktop 651,524 bytes, phone 443,110 bytes, excluding video. Conservative union including every original and Round 2 image variant, OG and shared page resources: 1,373,410 bytes, below 6 MB.
-- All 81 WebP image files: 1,173,284 bytes, including 696,318 bytes added in Round 2. Selected sources stay within twice their maximum displayed dimensions across motion and responsive views. Video: 2,701,237 bytes, below 8 MB, H.264/AAC, 1280x720. Video SHA256 is unchanged from Round 1.
-- Video network requests before opening: 0. Native video playback, dimensions and duration verified. Dialog closes with Escape, returns focus and prevents focus on background links.
-- All seven desktop rooms change with forward scroll and exactly restore sampled middle and early transforms on reverse scroll. Real crop coordinates independently match the original source manifest. Labels and source fadeouts were visually reviewed.
-- Rail Arrow keys, Home and End verified. On the phone, click, Enter, fresh direct hash and settled hash reload all place the heading and eyebrow below the 125px combined header and rail, with the entire heading in the viewport. Inherited smooth scrolling is disabled for compact layouts so long jumps land immediately.
-- Standard platform header and footer contents match exactly: 22 header links/buttons and 26 footer items. Desktop keyboard dropdowns, mobile open/close/Escape/focus restoration and no-JavaScript navigation passed. Details: navigation-equivalence.json.
-- Static fallbacks retain every room and focal details. Single navy room backgrounds and visible HTML copy checks passed.
-- Homepage and platform entry link smoke checks at 1440 and 390: link present exactly once and no layout overflow introduced. External services were not exercised.
-- node --check js/showroom.js: exit 0.
-- git diff --check: exit 0.
-- Round 2 asset manifest dimensions and bytes were verified against all 47 files. Native crops and the rebuilt asset contact sheet were visually inspected. Original sitemap, OG and video validation from Round 1 remain applicable because those files are unchanged.
+All 81 WebP image entries validate against their manifests, totaling 1,160,024 bytes. prepare-round3-assets.py reproduces the stills, video and pixel/audio checks. No archive source was modified.
 
-The expanded run initially caught an oversized Liam verification crop and phone samples taken during long inherited smooth scrolls. The asset was cropped from the original capture, and compact navigation now uses immediate jumps. The test also checks fresh hash loading separately from settled hash reload. Hidden lazy images are excluded from forced decoding and empty currentSrc values are handled. Only the subsequent complete passing run is acceptance evidence.
+## Verification method
 
-Detailed performance readings, source SHA256 values, browser assertions and entry link results: verification.json. Independent gate: REVIEW.md. No Lighthouse package was installed, so no Lighthouse score is claimed. Browser readings are local laboratory evidence, not a guarantee for every device or network.
+Directory: C:/Users/elite/edf-website-showroom. Command: node design/showroom/verify.mjs. Chromium uses explicit --headless=new and a fresh temporary user data directory; the test server binds only to 127.0.0.1.
 
-## Closeout
+The seven scenarios cover 1440x900, 1440x650, 390x844, reduced motion and JavaScript disabled. Expanded checks include 101 morning poses at each desktop height, copy intersections, stage boundaries, tight card geometry, midpoint warning visibility, 31 fine poses around caption reveal at each desktop height, exact reverse motion, source crop provenance, image sizing, keyboard/navigation, phone direct links, lazy video and resource errors. An intentional browser-only escaped pill proves the boundary checker rejects a defect.
 
-Local preview: http://127.0.0.1:8765/pages/showroom.html, bound only to 127.0.0.1. HTTP 200 verified.
+CLS now uses the maximum session window defined by [the primary web.dev guidance](https://web.dev/articles/cls): less than one second between shifts, at most five seconds per window. The previous harness conservatively summed every shift over the entire repeated test session. That lifetime total remains recorded as cumulativeShiftSum, together with every event and session. The first Round 3 run failed that older lifetime-sum gate; it is not counted as passing evidence. The actual caption jump was corrected before the final rerun, independently of the metric correction.
 
-Next single action: Claude reviews the committed local candidate and presents it to Alvin. Human gate remains required before publication. Main, production configuration, office systems, archive sources and AI harness configuration were not changed.
+Screenshots in shots/ include every room, docked/early/middle/late desktop states, phone anchors, standard footers and refreshed contacts. Native benefits, frequency crops and the cleaned video frame were visually compared with their source. Primary deliverable hashes are recorded in verification.json. Independent findings: REVIEW.md.
+
+## Final measured results
+
+The frozen run started at 2026-10-13T14:41:24.751Z. node design/showroom/verify.mjs exited 0 with seven complete scenarios and an empty failures list.
+
+- Morning boundaries and copy clearance: all 202 sampled poses passed; the deliberately escaped pill was detected.
+- Lifted image bands: zero excess empty image-container height. The frequency warning is fully visible at midpoint at both desktop heights. Reverse motion and source crop alignment passed.
+- Frequency caption reveal: maximum adjacent movement 0.4904px and 1.0516px across the fine sweeps. Week caption grid height remains constant throughout the tested reveal thresholds.
+- Maximum standard CLS: 0.00509528, below 0.05. Desktop 900 high: 0.00475064. Phone and reduced motion: 0. The stricter lifetime totals are also below 0.05: maximum 0.01526514 across the complete repeated QA session.
+- Conservative page weight including all image variants and shared resources: 1,360,432 bytes, excluding video. Traversed desktop resource files: 634,858 bytes; phone: 443,916 bytes.
+- Runtime, console, HTTP, external request and overflow errors: 0. Video requests before opening: 0. Video playback and dialog focus/keyboard checks passed.
+- Source image sizing, static fallbacks, standard navigation and phone click/keyboard/direct hash/reload clearance passed. Header and footer still match the platform page.
+- Independent pixel-verification.json confirms original benefit pixel equality and clean sampled metadata regions.
+- node --check js/showroom.js, node --check design/showroom/verify.mjs and git diff --check exited 0. Tested deliverable hashes match the final files.
+
+## Limits and next action
+
+Evidence is local Chromium laboratory testing. Safari, physical phones, assistive technology and field networks remain untested. Verification states and the frequency review flag are explicitly illustrative synthetic demonstrations. No Lighthouse score is claimed.
+
+Local preview: http://127.0.0.1:8765/pages/showroom.html, bound only to 127.0.0.1. HTTP 200 verified after restarting the local preview server.
+
+Next single action: Claude reviews the new local commit and presents the candidate to Alvin. No publication from this session.

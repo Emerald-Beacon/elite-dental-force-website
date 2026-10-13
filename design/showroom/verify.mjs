@@ -35,15 +35,16 @@ const profile = await mkdtemp(resolve(tmpdir(), 'edf-showroom-qa-'));
 const report = { date: new Date().toISOString(), directory: root, command: 'node design/showroom/verify.mjs', browser: 'Playwright Chromium, headless, fresh temporary user data directory', profile, labOnly: true, scenarios: [], lighthouse: { available: existsSync('C:/Users/elite/Desktop/edifi-demo-video/node_modules/lighthouse'), run: false } };
 if (existsSync(resolve(output,'navigation-equivalence.json'))) report.navigationEquivalence = JSON.parse(await readFile(resolve(output,'navigation-equivalence.json'),'utf8'));
 report.sha256 = Object.fromEntries(await Promise.all(['pages/showroom.html', 'css/showroom.css', 'js/showroom.js', 'media/showroom/tour.mp4'].map(async path => [path, createHash('sha256').update(await readFile(resolve(root, path))).digest('hex')])));
+report.assetSha256 = Object.fromEntries(await Promise.all(assets.map(async asset => [asset.file, createHash('sha256').update(await readFile(resolve(root,asset.file))).digest('hex')])));
 let context;
-async function motionSample(page, id, progress) {
+async function motionSample(page, id, progress, settleMs = 350) {
   const room = page.locator(`#${id}`);
   await room.evaluate((el, p) => {
     const top = parseFloat(getComputedStyle(el.querySelector('.room-inner')).top) || 0;
     const span = el.offsetHeight - innerHeight + top;
     scrollTo({ top: el.offsetTop - top + Math.max(0, span) * p, behavior: 'instant' });
   }, progress);
-  await page.waitForTimeout(350);
+  await page.waitForTimeout(settleMs);
   return room.evaluate(el => ({
     scrollY, progress: el.dataset.progress || el.style.getPropertyValue('--progress'),
     verified: el.querySelector('[data-verified-count]')?.textContent,
@@ -60,6 +61,30 @@ async function motionSample(page, id, progress) {
       return { origin: piece.dataset.originId, src: piece.querySelector('img')?.getAttribute('src'), sourceSrc: source.getAttribute('src'), sourceFractions: [x,y,w,h], expected, actual: { left: pieceBox.left, top: pieceBox.top, width: pieceBox.width, height: pieceBox.height }, deltaLeft: pieceBox.left-expected.left, deltaTop: pieceBox.top-expected.top, deltaWidth: pieceBox.width-expected.width, deltaHeight: pieceBox.height-expected.height };
     }),
   }));
+}
+
+async function round3Snapshot(page) {
+  return page.evaluate(() => {
+    const rect = node => { const r = node.getBoundingClientRect(); return {left:r.left,top:r.top,right:r.right,bottom:r.bottom,width:r.width,height:r.height}; };
+    const overlaps = (a,b) => Math.min(a.right,b.right)-Math.max(a.left,b.left)>1 && Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1;
+    const opacity = node => { let value=1; for(let el=node;el;el=el.parentElement) value*=Number(getComputedStyle(el).opacity); return value; };
+    const stage=rect(document.querySelector('#morning .room-stage'));
+    const copy=[...document.querySelectorAll('#morning .room-copy h1,#morning .room-copy p,#morning .room-copy a')].map(rect);
+    const pills=[...document.querySelectorAll('.chaos-cloud span')].map(node=>{ const box=rect(node), alpha=opacity(node); return {text:node.textContent,box,opacity:alpha,withinStage:box.left>=stage.left-1&&box.right<=stage.right+1&&box.top>=stage.top-1&&box.bottom<=stage.bottom+1,copyCollision:copy.some(c=>overlaps(c,box))}; });
+    const flag=document.querySelector('.frequency-detail figcaption'), flagBox=rect(flag);
+    const midFlag={text:flag.innerText,opacity:opacity(flag),box:flagBox,visible:opacity(flag)>=.9&&flagBox.top>=80&&flagBox.bottom<=innerHeight&&flagBox.left>=0&&flagBox.right<=innerWidth};
+    const tightPieces=[...document.querySelectorAll('.appointment-piece,.frequency-detail')].map(piece=>{
+      const imageWrapper=piece.querySelector('.appointment-image');
+      const imgs=[...(imageWrapper||piece).querySelectorAll('img')].map(img=>({box:rect(img),opacity:opacity(img),src:img.currentSrc}));
+      const wrapper=imageWrapper?rect(imageWrapper):null;
+      const visible=imgs.filter(img=>img.opacity>.1);
+      const emptyImageBand=wrapper&&visible.length?Math.max(0,wrapper.bottom-Math.max(...visible.map(img=>Math.min(wrapper.bottom,img.box.bottom)))):0;
+      const label=piece.querySelector('figcaption'), labelBox=rect(label), box=rect(piece);
+      const excessFrameHeight=Math.max(0,box.height-(imageWrapper?wrapper.height:imgs[0].box.height)-labelBox.height);
+      return {class:piece.className,opacity:opacity(piece),box,images:imgs,labelOpacity:opacity(label),emptyImageBand,excessFrameHeight};
+    });
+    return {stage,pills,midFlag,tightPieces};
+  });
 }
 
 async function anchorSnapshot(page, id, method) {
@@ -101,7 +126,7 @@ try {
     if (!scenario.js) await cdp.send('Emulation.setScriptExecutionDisabled', { value: true });
     await page.addInitScript(() => {
       window.__qa = { shifts: [], longTasks: [] };
-      new PerformanceObserver(list => list.getEntries().forEach(e => { if (!e.hadRecentInput) window.__qa.shifts.push({ value: e.value, time: e.startTime }); })).observe({ type: 'layout-shift', buffered: true });
+      new PerformanceObserver(list => list.getEntries().forEach(e => { if (!e.hadRecentInput) window.__qa.shifts.push({ value: e.value, time: e.startTime, navigationStart: performance.timeOrigin, sources: e.value > .0001 ? e.sources.map(source=>({tag:source.node?.tagName,class:typeof source.node?.className==='string'?source.node.className:'',previous:{x:source.previousRect.x,y:source.previousRect.y,width:source.previousRect.width,height:source.previousRect.height},current:{x:source.currentRect.x,y:source.currentRect.y,width:source.currentRect.width,height:source.currentRect.height}})) : [] }); })).observe({ type: 'layout-shift', buffered: true });
       new PerformanceObserver(list => list.getEntries().forEach(e => window.__qa.longTasks.push({ duration: e.duration, time: e.startTime }))).observe({ type: 'longtask', buffered: true });
     });
     await page.goto(`${origin}/pages/showroom.html`, { waitUntil: 'networkidle' });
@@ -141,6 +166,42 @@ try {
           return { src: crop.src, sourceSrc: crop.sourceSrc, sharedSource: true, expected, declared: crop.sourceFractions, matches: expected.every((value,index) => Math.abs(value-crop.sourceFractions[index]) < .002) };
         });
         result.motion.push({ room: id, changed: signature(samples.early) !== signature(samples.late), reverseMidMatches: signature(samples.mid) === signature(samples.reverseMid), reverseEarlyMatches: signature(samples.early) === signature(samples.reverseEarly), cropProvenance, samples });
+      }
+    }
+    if (scenario.js && !scenario.reduce && scenario.width === 1440) {
+      result.round3 = { morningSweep: [], tightPieceSamples: [] };
+      for (let step=0;step<=100;step++) {
+        const progress=step/100;
+        await motionSample(page,'morning',progress,100);
+        const snapshot=await round3Snapshot(page);
+        result.round3.morningSweep.push({progress,stage:snapshot.stage,pills:snapshot.pills});
+      }
+      await motionSample(page,'morning',.25);
+      await page.locator('.chaos-cloud span').first().evaluate(el=>{el.dataset.qaOriginalStyle=el.getAttribute('style')||'';el.style.setProperty('transform','translateX(-1000px)','important');el.style.opacity='1';});
+      const broken=await round3Snapshot(page);
+      result.round3.guardDetectsEscapedPill=broken.pills.some(pill=>pill.opacity>.01&&!pill.withinStage);
+      await page.locator('.chaos-cloud span').first().evaluate(el=>{el.setAttribute('style',el.dataset.qaOriginalStyle);delete el.dataset.qaOriginalStyle;});
+      result.round3.weekCaptionStability=[];
+      for(let step=0;step<=10;step++) {
+        const progress=step/10;
+        await motionSample(page,'week',progress,100);
+        const geometry=await page.locator('.week-panels').evaluate(grid=>({height:grid.clientHeight,captionDisplays:[...grid.querySelectorAll('figcaption')].map(label=>getComputedStyle(label).display)}));
+        result.round3.weekCaptionStability.push({progress,...geometry});
+      }
+      result.round3.weekGridHeightRange=Math.max(...result.round3.weekCaptionStability.map(s=>s.height))-Math.min(...result.round3.weekCaptionStability.map(s=>s.height));
+      result.round3.patientCaptionThreshold=[];
+      for(let step=0;step<=30;step++) {
+        const progress=.36+step*.001;
+        await motionSample(page,'patient',progress,100);
+        const geometry=await page.locator('.frequency-detail').evaluate(piece=>{const image=piece.querySelector('img').getBoundingClientRect();return {imageTop:image.top,imageLeft:image.left,imageHeight:image.height,labelDisplay:getComputedStyle(piece.querySelector('figcaption')).display};});
+        result.round3.patientCaptionThreshold.push({progress,...geometry});
+      }
+      result.round3.patientCaptionMaxStep=Math.max(...result.round3.patientCaptionThreshold.slice(1).map((sample,index)=>Math.abs(sample.imageTop-result.round3.patientCaptionThreshold[index].imageTop)));
+      for (const id of ['schedule','patient']) for (const progress of [.35,.5,.6,.75,.9]) {
+        await motionSample(page,id,progress);
+        const snapshot=await round3Snapshot(page);
+        result.round3.tightPieceSamples.push({room:id,progress,pieces:snapshot.tightPieces.filter(piece=>id==='schedule'?piece.class.includes('appointment'):piece.class.includes('frequency'))});
+        if(id==='patient'&&progress===.5) result.round3.midFlag=snapshot.midFlag;
       }
     }
     result.navigation = { header: await page.locator('header.header').count(), footer: await page.locator('footer.footer').count() };
@@ -199,7 +260,7 @@ try {
     }
     result.bodyBackground = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
     result.visibleCopy = await page.locator('body').innerText();
-    result.copyViolations = { dashes: result.visibleCopy.match(/[\u2013\u2014]|\b\w+-\w+\b/g) || [], prohibited: result.visibleCopy.match(/call insurance|ask caller|writes? back|write to open dental|pinboard/gi) || [], prices: result.visibleCopy.match(/\$\s*\d|\b\d+\s*\/\s*month\b/gi) || [] };
+    result.copyViolations = { dashes: result.visibleCopy.match(/[\u2013\u2014]|\b\w+-\w+\b/g) || [], prohibited: result.visibleCopy.match(/call insurance|ask caller|writes? back|write to open dental|pinboard|CodeGroupNum|BenefitNum|Not writable/gi) || [], prices: result.visibleCopy.match(/\$\s*\d|\b\d+\s*\/\s*month\b/gi) || [] };
     result.uniqueLocalResources = [...new Set(requests.filter(url => url.startsWith(origin) && !/\.mp4(?:\?|$)/.test(url)).map(url => new URL(url).pathname))];
     result.resourceBytesExcludingVideo = (await Promise.all(result.uniqueLocalResources.map(async path => (await stat(resolve(root, '.' + path)).catch(() => ({size: 0}))).size))).reduce((a, b) => a + b, 0);
     result.measuredTransferBytesExcludingVideo = await page.evaluate(() => [...performance.getEntriesByType('navigation'), ...performance.getEntriesByType('resource')].filter(entry => !/\.mp4(?:\?|$)/.test(entry.name)).reduce((sum, entry) => sum + entry.transferSize, 0));
@@ -233,6 +294,21 @@ try {
         result.performance.longTasks.unshift(...result.preHashPerformance.longTasks);
         result.performance.includesFreshHashReload = true;
       }
+    }
+    if (result.performance) {
+      const sessions=[];
+      for (const shift of result.performance.shifts) {
+        let session=sessions.at(-1);
+        if (!session || session.navigationStart!==shift.navigationStart || shift.time-session.last>=1000 || shift.time-session.start>=5000) {
+          session={navigationStart:shift.navigationStart,start:shift.time,last:shift.time,value:0,count:0};
+          sessions.push(session);
+        }
+        session.last=shift.time; session.value+=shift.value; session.count++;
+      }
+      result.performance.cumulativeShiftSum=result.performance.shifts.reduce((sum,shift)=>sum+shift.value,0);
+      result.performance.cls=Math.max(0,...sessions.map(session=>session.value));
+      result.performance.clsSessions=sessions;
+      result.performance.clsMethod='Maximum session window: less than 1 second between shifts and less than 5 seconds from first shift; separate document visits.';
     }
     if (scenario.js && !scenario.reduce && scenario.width === 1440) {
       result.metadata = await page.evaluate(() => ({ title: document.title, description: document.querySelector('meta[name="description"]')?.content, canonical: document.querySelector('link[rel="canonical"]')?.href, og: document.querySelector('meta[property="og:image"]')?.content }));
@@ -311,6 +387,12 @@ try {
     if (s.keyboard && (!s.keyboard.arrowNext || !s.keyboard.home || !s.keyboard.end || s.keyboard.activatedHash !== '#patient')) report.failures.push(`${label}: keyboard rail`);
     if (s.motion?.some(room => !room.changed || !room.reverseMidMatches || !room.reverseEarlyMatches)) report.failures.push(`${label}: reversible room motion`);
     if (s.motion?.some(room => room.cropProvenance.some(crop => crop.sharedSource && !crop.matches))) report.failures.push(`${label}: source crop coordinates`);
+    if (s.round3?.morningSweep.some(sample=>sample.pills.some(pill=>!pill.withinStage||(pill.opacity>.01&&pill.copyCollision)))) report.failures.push(`${label}: morning pill bounds or copy collision`);
+    if (s.round3?.weekGridHeightRange>1 || s.round3?.weekCaptionStability.some(sample=>sample.captionDisplays.some(display=>display==='none'))) report.failures.push(`${label}: Week caption grid changes height`);
+    if (s.round3?.patientCaptionMaxStep>3) report.failures.push(`${label}: frequency caption appearance jumps image`);
+    if (s.round3 && !s.round3.guardDetectsEscapedPill) report.failures.push(`${label}: pill guard sensitivity`);
+    if (s.round3 && (!s.round3.midFlag.visible || !/Frequency already used/.test(s.round3.midFlag.text) || !/Review before treatment/.test(s.round3.midFlag.text))) report.failures.push(`${label}: patient mid flag not readable`);
+    if (s.round3?.tightPieceSamples.some(sample=>sample.pieces.some(piece=>piece.opacity>.1&&(piece.emptyImageBand>3||piece.excessFrameHeight>4)))) report.failures.push(`${label}: empty lifted piece bands`);
     if (s.mobileAnchors?.some(anchor => !anchor.clear)) report.failures.push(`${label}: obscured mobile anchor`);
     if (s.navigation.header !== 1 || s.navigation.footer !== 1 || !s.navigation.submenuKeyboardVisible || s.navigation.missingLocalFooterLinks.length || (s.width === 390 && s.js && (!s.navigation.mobileOpened || !s.navigation.mobileClosed || !s.navigation.mobileFocusRestored)) || (s.width === 390 && !s.js && !s.navigation.staticNavUsable)) report.failures.push(`${label}: standard navigation`);
   }

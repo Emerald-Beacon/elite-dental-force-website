@@ -8,29 +8,30 @@
   const segment = (p, start, end) => clamp((p - start) / (end - start));
   const ease = p => p * p * (3 - 2 * p);
   const pieces = [...document.querySelectorAll('[data-detach]')];
-  const targets = new WeakMap();
   let frame = 0, current = 0;
 
-  function measureTargets() {
-    pieces.forEach(piece => {
-      const previous = piece.style.transform;
-      piece.style.transform = 'none';
-      const box = piece.getBoundingClientRect();
-      const stage = piece.closest('.room-stage').getBoundingClientRect();
-      targets.set(piece, { x: box.left - stage.left, y: box.top - stage.top, width: box.width });
-      piece.style.transform = previous;
-    });
+  function layoutBox(piece, stage) {
+    let x = 0, y = 0, node = piece;
+    while (node && node !== stage) {
+      x += node.offsetLeft;
+      y += node.offsetTop;
+      node = node.offsetParent;
+    }
+    return { x, y, width: piece.offsetWidth };
   }
 
   function detach(room, progress) {
-    const stage = room.querySelector('.room-stage').getBoundingClientRect();
+    const stageElement = room.querySelector('.room-stage');
+    const stage = stageElement.getBoundingClientRect();
     room.querySelectorAll('[data-detach]').forEach(piece => {
       const source = room.querySelector(`[data-origin="${piece.dataset.originId}"]`);
-      const target = targets.get(piece);
-      if (!source || !target) return;
+      if (!source) return;
+      const raw = segment(progress, Number(piece.dataset.liftStart), Number(piece.dataset.liftEnd));
+      piece.toggleAttribute('data-label-visible', raw >= .55);
+      if (piece.classList.contains('appointment-piece')) piece.dataset.cardState = raw >= .7 ? 'verified' : 'pending';
+      const target = layoutBox(piece, stageElement);
       const origin = source.getBoundingClientRect();
       const [x, y, width] = piece.dataset.originBox.split(',').map(Number);
-      const raw = segment(progress, Number(piece.dataset.liftStart), Number(piece.dataset.liftEnd));
       const lift = ease(raw);
       const dx = origin.left - stage.left + origin.width * x - target.x;
       const dy = origin.top - stage.top + origin.height * y - target.y;
@@ -41,9 +42,6 @@
       piece.style.setProperty('--piece-scale', scale + (1 - scale) * lift);
       piece.style.setProperty('--piece-opacity', segment(progress, Number(piece.dataset.liftStart) - .04, Number(piece.dataset.liftStart)));
       piece.style.setProperty('--piece-shadow', `${lift * 36}px`);
-      piece.style.setProperty('--label-opacity', segment(raw, .55, .9));
-      piece.style.setProperty('--verified-opacity', segment(raw, .7, .95));
-      piece.style.setProperty('--original-opacity', 1 - segment(raw, .45, .68));
       piece.style.setProperty('--verified-border', raw > .8 ? '#76e6be' : '#6685ad');
       piece.dataset.detached = raw.toFixed(3);
       if (x === 0 && y === 0 && width === 1) source.style.opacity = 1 - segment(raw, .1, .65);
@@ -82,11 +80,21 @@
         room.querySelectorAll('.chaos-cloud span').forEach((pill, number) => {
           const release = ease(segment(p, .1 + number * .055, .52 + number * .055));
           const side = number % 2 ? 1 : -1;
+          const stage = room.querySelector('.room-stage');
+          const width = pill.offsetWidth, height = pill.offsetHeight;
+          const angle = (6 * Math.PI) / 180;
+          const boundWidth = width * Math.cos(angle) + height * Math.sin(angle);
+          const boundHeight = height * Math.cos(angle) + width * Math.sin(angle);
+          const starts = [[.12, .1], [.9, .3], [.16, .72], [.86, .92], [.5, .47]];
+          const cx = starts[number][0] + (.5 - starts[number][0]) * release;
+          const cy = starts[number][1] + (.5 - starts[number][1]) * release;
+          const centerX = 24 + boundWidth / 2 + cx * Math.max(0, stage.clientWidth - 48 - boundWidth);
+          const centerY = 24 + boundHeight / 2 + cy * Math.max(0, stage.clientHeight - 48 - boundHeight);
           pill.style.setProperty('--chaos-opacity', 1 - release);
-          pill.style.setProperty('--chaos-x', `${release * side * 220}px`);
-          pill.style.setProperty('--chaos-y', `${release * (number - 2) * 85}px`);
-          pill.style.setProperty('--chaos-z', `${release * 180}px`);
-          pill.style.setProperty('--chaos-rotate', `${side * (6 + release * 15)}deg`);
+          pill.style.setProperty('--chaos-x', `${centerX - width / 2}px`);
+          pill.style.setProperty('--chaos-y', `${centerY - height / 2}px`);
+          pill.style.setProperty('--chaos-scale', 1 - release * .15);
+          pill.style.setProperty('--chaos-rotate', `${side * 6 * (1 - release)}deg`);
         });
       }
       if (room.id === 'schedule') {
@@ -103,17 +111,17 @@
   function schedule() { if (!frame) frame = requestAnimationFrame(update); }
   function reset() {
     document.documentElement.classList.toggle('tour-cinematic', motion.matches);
-    rooms.forEach(room => room.removeAttribute('style'));
-    pieces.forEach(piece => piece.removeAttribute('style'));
-    document.querySelectorAll('.chaos-cloud span').forEach(pill => pill.removeAttribute('style'));
-    document.querySelectorAll('[data-origin]').forEach(source => source.removeAttribute('style'));
-    document.querySelector('[data-verified-count]').textContent = '3';
-    measureTargets();
-    schedule();
+    if (!motion.matches) {
+      rooms.forEach(room => room.removeAttribute('style'));
+      pieces.forEach(piece => piece.removeAttribute('style'));
+      document.querySelectorAll('.chaos-cloud span').forEach(pill => pill.removeAttribute('style'));
+      document.querySelectorAll('[data-origin]').forEach(source => source.removeAttribute('style'));
+      document.querySelector('[data-verified-count]').textContent = '3';
+    }
+    update();
   }
   document.documentElement.classList.add('js-motion');
   document.documentElement.classList.toggle('tour-cinematic', motion.matches);
-  measureTargets();
   update();
   addEventListener('scroll', schedule, { passive: true });
   addEventListener('resize', reset, { passive: true });

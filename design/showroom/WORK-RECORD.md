@@ -41,3 +41,15 @@ Implementation ownership continues: builder owns showroom HTML/CSS/JS, asset bui
 Visual acceptance: compare early, middle and late screenshots, and replay in reverse. Important UI text must be readable at the focal stop. Crop alignment and staggered depth must make it clear which piece came from which screen. Mobile anchor headings must clear the header and stop rail. Static fallbacks must show focal details without relying on camera movement.
 
 Round 2 closeout, 2026-10-12: all seven final browser scenarios passed with explicit --headless=new and a fresh temporary profile. Real crop provenance, reversible poses, mobile heading clearance, standard navigation, static fallbacks and media loading passed. Independent review found no blocking issue. Primary source hashes match verification.json. EVIDENCE.md and REVIEW.md record the final measurements and Chromium-only limits. Produce the authorized new local commit for Claude and Alvin review; no push or deployment.
+
+## Round 3 lead gate, authorized in this session
+
+The 2026-10-13 request retains the current visual direction and authorizes five corrections: contain morning pills inside the stage without touching copy throughout scroll; remove empty bands from lifted appointment and frequency pieces; restore actual synthetic benefit amounts; remove internal engineering identifiers from every visible crop; show the frequency review warning clearly by mid scroll.
+
+The user explicitly distinguishes synthetic annual maximum, remaining and deductible values from EDF prices. Restore those exact capture values, with provenance; EDF pricing remains banned. This supersedes the earlier blanket currency masking for the patient benefit panels only. No live patient data or new values are allowed.
+
+The existing frequency crop also appears inside the lazy tour video. Remove its engineering identifiers through the existing local rendering pipeline while preserving narration, duration, prior scene exclusions and all other video content. This is necessary to keep the requested cleanup consistent across visible product crops.
+
+Ownership remains: builder for HTML/CSS/JS, asset builder for source crops and media, independent reviewer for dense motion checks, screenshots and REVIEW.md. Commander records evidence and makes the new local commit on feat/showroom. No push or deployment.
+
+Round 3 closeout: the final 202-pose pill sweep, tight crop checks, original benefit pixel checks, cleaned frequency/video review, midpoint warning checks and all seven browser scenarios passed. QA additionally caught and corrected frequency and Week caption jumps. Final standard CLS is at most 0.00509528; the complete-session shift sum also remains below 0.05. Page weight is 1,360,432 bytes excluding video. Screenshots, contacts, manifests, EVIDENCE.md and REVIEW.md are refreshed. Commit the tested candidate locally for the lead gate; no push or deployment.

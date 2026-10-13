@@ -6,7 +6,7 @@ def emit(name,source,rect,width,masks=(),note='',attachment=None):
  original=Image.open(BASE/source).convert('RGB'); im=original.copy(); draw=ImageDraw.Draw(im)
  for box,color in masks: draw.rectangle(box,fill=color)
  im=im.crop(rect); im.thumbnail((width,10000),Image.Resampling.LANCZOS)
- path=OUT/(name+'.webp'); im.save(path,'WEBP',quality=91,method=6)
+ path=OUT/(name+'.webp'); im.save(path,'WEBP',quality=91,method=6,lossless=name.startswith('r2-benefit-detail'))
  data=dict(file=str(path.relative_to(ROOT)).replace('\\','/'),source=source,source_dimensions=list(original.size),source_crop=list(rect),width=im.width,height=im.height,bytes=path.stat().st_size,masks=[dict(rect=list(b),color=c) for b,c in masks],note=note)
  if attachment:data['attachment']=attachment
  MAN.append(data)
@@ -18,10 +18,10 @@ for name,src,rect,w in [
  ('r2-week-focus','f4/week.png',(166,366,2240,1230),1800),
  ('r2-frequency','f3/freq.png',(0,0,2539,620),1800),
  ('r2-frequency-row','f3/freq.png',(40,462,2510,614),1600),
- ('r2-frequency-rule','f3/freq.png',(1040,465,1930,610),880),
+ ('r2-frequency-rule','f3/freq.png',(1040,490,1700,544),660),
  ('r2-frequency-label','f3/freq.png',(40,477,430,540),390),
 ]:
- masks=([((1045,155,1600,197),'white'),((1045,350,1600,392),'white')] if src=='f3/freq.png' else [])
+ masks=([((1045,155,1600,197),'white'),((1045,350,1600,392),'white')] + [((1040,top,2400,bottom),'white') for top,bottom in [(213,251),(405,448),(551,594),(696,740),(888,933),(1034,1079)]] if src=='f3/freq.png' else [])
  emit(name,src,rect,w,masks,'Real source crop. Frequency annotation belongs in page, not the product pixels.')
  emit(name+'-mobile',src,rect,min(w,660),masks,'Mobile crop from original source.')
 day=(166,366,1378,1024)
@@ -45,9 +45,9 @@ for name,rect in [('avery',(400,733,1108,1022)),('olivia',(1833,733,2542,1022)),
 # Benefit detail: first three original cards, preserving source P and C badges and labels.
 source='f2/amounts.png'; original=Image.open(BASE/source); ratio=original.width/2048
 masks=[]
-for box in [(66,171,215,218),(511,175,523,201),(392,208,543,298),(724,174,807,220),(724,277,764,308)]: masks.append((tuple(round(v*ratio) for v in box),'#f5f6fa'))
+for box in [(511,175,523,201)]: masks.append((tuple(round(v*ratio) for v in box),'#f5f6fa'))
 rect=(round(40*ratio),round(100*ratio),round(1020*ratio),round(385*ratio))
-for suffix,w in [('',1300),('-mobile',660)]: emit('r2-benefit-detail'+suffix,source,rect,w,masks,'Three real benefit cards with monetary values omitted.')
+for suffix,w in [('',1300),('-mobile',660)]: emit('r2-benefit-detail'+suffix,source,rect,w,masks,'Three real benefit cards with original synthetic demo monetary values restored. Only the punctuation between Conflict and needs review is masked.')
 # Exact P source chip inside annual maximum card for a literal detachment.
 p_rect=tuple(round(v*ratio) for v in (213,177,253,217))
 attachment=dict(parent='r2-benefit-detail.webp',parent_source_crop=list(rect),rect_in_parent_source=[p_rect[0]-rect[0],p_rect[1]-rect[1],p_rect[2]-p_rect[0],p_rect[3]-p_rect[1]],normalized=[(p_rect[0]-rect[0])/(rect[2]-rect[0]),(p_rect[1]-rect[1])/(rect[3]-rect[1]),(p_rect[2]-p_rect[0])/(rect[2]-rect[0]),(p_rect[3]-p_rect[1])/(rect[3]-rect[1])])

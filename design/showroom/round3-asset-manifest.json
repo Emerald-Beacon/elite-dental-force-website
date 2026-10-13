@@ -1,0 +1,970 @@
+{
+  "source_values": {
+    "annual_maximum": "$1,500",
+    "remaining_conflict": [
+      "$1,125",
+      "$980"
+    ],
+    "individual_deductible": "$50",
+    "deductible_remaining": "$0",
+    "deductible_met": "Yes"
+  },
+  "benefit_source": "C:\\Users\\elite\\EDF-Creative\\projects\\edifi-explainer\\f2\\amounts.png",
+  "benefit_source_sha256": "19130384b793b30de5fc6fe569f63e246ee2068a44f79931f00a417d57ab5866",
+  "benefit_crop": [
+    50,
+    125,
+    1279,
+    483
+  ],
+  "benefit_pixel_verification": "Exact decoded RGB equality against original source crop with only prior middle-dot mask, and exact equality to its Lanczos mobile resize. Both restored benefits use lossless WebP.",
+  "frequency_note": "All six OD CodeGroupNum / BenefitNum lines, including Not writable, masked in original source before crop/resize. Tight lifted rule excludes metadata completely.",
+  "assets": [
+    {
+      "file": "images/showroom/frequency.webp",
+      "source": "f3/freq.png",
+      "width": 940,
+      "height": 400,
+      "bytes": 14178,
+      "edits": "Mask ISO date lines containing dashes and all internal engineering identifiers."
+    },
+    {
+      "file": "images/showroom/frequency-mobile.webp",
+      "source": "frequency.webp",
+      "width": 600,
+      "height": 255,
+      "bytes": 5788,
+      "edits": "Mobile variant."
+    },
+    {
+      "file": "images/showroom/r2-frequency.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "width": 1800,
+      "height": 440,
+      "bytes": 21634,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Real source crop. Frequency annotation belongs in page, not the product pixels."
+    },
+    {
+      "file": "images/showroom/r2-frequency-mobile.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        0,
+        0,
+        2539,
+        620
+      ],
+      "width": 660,
+      "height": 161,
+      "bytes": 5484,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Mobile crop from original source."
+    },
+    {
+      "file": "images/showroom/r2-frequency-row.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        40,
+        462,
+        2510,
+        614
+      ],
+      "width": 1600,
+      "height": 98,
+      "bytes": 6812,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          40,
+          462,
+          2470,
+          152
+        ],
+        "normalized": [
+          0.015754233950374164,
+          0.7451612903225806,
+          0.9728239464356045,
+          0.24516129032258063
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-frequency-row-mobile.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        40,
+        462,
+        2510,
+        614
+      ],
+      "width": 660,
+      "height": 41,
+      "bytes": 1670,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Mobile crop from original source.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          40,
+          462,
+          2470,
+          152
+        ],
+        "normalized": [
+          0.015754233950374164,
+          0.7451612903225806,
+          0.9728239464356045,
+          0.24516129032258063
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-frequency-rule.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        1040,
+        490,
+        1700,
+        544
+      ],
+      "width": 660,
+      "height": 54,
+      "bytes": 3512,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          1040,
+          490,
+          660,
+          54
+        ],
+        "normalized": [
+          0.40961008270972826,
+          0.7903225806451613,
+          0.2599448601811737,
+          0.08709677419354839
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-frequency-rule-mobile.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        1040,
+        490,
+        1700,
+        544
+      ],
+      "width": 660,
+      "height": 54,
+      "bytes": 3512,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Mobile crop from original source.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          1040,
+          490,
+          660,
+          54
+        ],
+        "normalized": [
+          0.40961008270972826,
+          0.7903225806451613,
+          0.2599448601811737,
+          0.08709677419354839
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-frequency-label.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        40,
+        477,
+        430,
+        540
+      ],
+      "width": 390,
+      "height": 63,
+      "bytes": 2268,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Real source crop. Frequency annotation belongs in page, not the product pixels.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          40,
+          477,
+          390,
+          63
+        ],
+        "normalized": [
+          0.015754233950374164,
+          0.7693548387096775,
+          0.15360378101614808,
+          0.10161290322580645
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-frequency-label-mobile.webp",
+      "source": "f3/freq.png",
+      "source_dimensions": [
+        2539,
+        1080
+      ],
+      "source_crop": [
+        40,
+        477,
+        430,
+        540
+      ],
+      "width": 390,
+      "height": 63,
+      "bytes": 2268,
+      "masks": [
+        {
+          "rect": [
+            1045,
+            155,
+            1600,
+            197
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1045,
+            350,
+            1600,
+            392
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            213,
+            2400,
+            251
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            405,
+            2400,
+            448
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            551,
+            2400,
+            594
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            696,
+            2400,
+            740
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            888,
+            2400,
+            933
+          ],
+          "color": "white"
+        },
+        {
+          "rect": [
+            1040,
+            1034,
+            2400,
+            1079
+          ],
+          "color": "white"
+        }
+      ],
+      "note": "Mobile crop from original source.",
+      "attachment": {
+        "parent": "r2-frequency.webp",
+        "parent_source_crop": [
+          0,
+          0,
+          2539,
+          620
+        ],
+        "rect_in_parent_source": [
+          40,
+          477,
+          390,
+          63
+        ],
+        "normalized": [
+          0.015754233950374164,
+          0.7693548387096775,
+          0.15360378101614808,
+          0.10161290322580645
+        ]
+      }
+    },
+    {
+      "file": "images/showroom/r2-benefit-detail.webp",
+      "source": "f2/amounts.png",
+      "source_dimensions": [
+        2568,
+        778
+      ],
+      "source_crop": [
+        50,
+        125,
+        1279,
+        483
+      ],
+      "width": 1229,
+      "height": 358,
+      "bytes": 19754,
+      "masks": [
+        {
+          "rect": [
+            641,
+            219,
+            656,
+            252
+          ],
+          "color": "#f5f6fa"
+        }
+      ],
+      "note": "Three real benefit cards with original synthetic demo monetary values restored. Only the punctuation between Conflict and needs review is masked."
+    },
+    {
+      "file": "images/showroom/r2-benefit-detail-mobile.webp",
+      "source": "f2/amounts.png",
+      "source_dimensions": [
+        2568,
+        778
+      ],
+      "source_crop": [
+        50,
+        125,
+        1279,
+        483
+      ],
+      "width": 660,
+      "height": 192,
+      "bytes": 32754,
+      "masks": [
+        {
+          "rect": [
+            641,
+            219,
+            656,
+            252
+          ],
+          "color": "#f5f6fa"
+        }
+      ],
+      "note": "Three real benefit cards with original synthetic demo monetary values restored. Only the punctuation between Conflict and needs review is masked."
+    }
+  ],
+  "video_sha256": "ae8c71762cecaa8eb724d7299e8ef26397425461dfd8b5d1224760a06b996a2f",
+  "audio_sha256_before": "SHA256=0ea0a0fee86aae9ae580ab619b86fab5e5074c9e7a2d71651051abf0044e81d2",
+  "audio_sha256_after": "SHA256=0ea0a0fee86aae9ae580ab619b86fab5e5074c9e7a2d71651051abf0044e81d2",
+  "video_decode_exit": 0,
+  "committed_baseline": {
+    "video_sha256": "6a9563163957b496e48519a1fc9aaa18b947fa516144fcf8c14343a6d4f581fd",
+    "audio_payload_sha256": "SHA256=0ea0a0fee86aae9ae580ab619b86fab5e5074c9e7a2d71651051abf0044e81d2",
+    "duration_seconds": "88.966667",
+    "source": "git show HEAD:media/showroom/tour.mp4 before Round 3 commit"
+  }
+}

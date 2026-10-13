@@ -30,7 +30,8 @@ save(im,'screen-patient','f2/patient.png (film3.jsx patient scene)','Crop to att
 im=Image.open(BASE/'f3/freq.png').convert('RGB'); d=ImageDraw.Draw(im)
 # Remove full last-service lines containing ISO date dashes, preserving frequency and source rows.
 d.rectangle((1045,155,1600,197),fill='white'); d.rectangle((1045,350,1600,392),fill='white')
-save(im,'frequency','f3/freq.png','Mask ISO date lines containing dashes.',(940,600))
+for top,bottom in [(213,251),(405,448),(551,594),(696,740),(888,933),(1034,1079)]: d.rectangle((1040,top,2400,bottom),fill='white')
+save(im,'frequency','f3/freq.png','Mask ISO date lines containing dashes and all internal engineering identifiers.',(940,600))
 for letter in 'pocs':
  im=Image.open(BASE/f'f3/lt-{letter}.png').convert('RGBA')
  # Keep the original white pill and lettering, remove the colored shadow outside it.

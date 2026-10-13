@@ -166,7 +166,7 @@
     ],
     "width": 1800,
     "height": 440,
-    "bytes": 30916,
+    "bytes": 21634,
     "masks": [
       {
         "rect": [
@@ -183,6 +183,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -204,7 +258,7 @@
     ],
     "width": 660,
     "height": 161,
-    "bytes": 7410,
+    "bytes": 5484,
     "masks": [
       {
         "rect": [
@@ -221,6 +275,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -242,7 +350,7 @@
     ],
     "width": 1600,
     "height": 98,
-    "bytes": 9710,
+    "bytes": 6812,
     "masks": [
       {
         "rect": [
@@ -259,6 +367,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -301,7 +463,7 @@
     ],
     "width": 660,
     "height": 41,
-    "bytes": 2390,
+    "bytes": 1670,
     "masks": [
       {
         "rect": [
@@ -318,6 +480,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -354,13 +570,13 @@
     ],
     "source_crop": [
       1040,
-      465,
-      1930,
-      610
+      490,
+      1700,
+      544
     ],
-    "width": 880,
-    "height": 143,
-    "bytes": 9792,
+    "width": 660,
+    "height": 54,
+    "bytes": 3512,
     "masks": [
       {
         "rect": [
@@ -377,6 +593,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -392,15 +662,15 @@
       ],
       "rect_in_parent_source": [
         1040,
-        465,
-        890,
-        145
+        490,
+        660,
+        54
       ],
       "normalized": [
         0.40961008270972826,
-        0.75,
-        0.3505317053958251,
-        0.23387096774193547
+        0.7903225806451613,
+        0.2599448601811737,
+        0.08709677419354839
       ]
     }
   },
@@ -413,13 +683,13 @@
     ],
     "source_crop": [
       1040,
-      465,
-      1930,
-      610
+      490,
+      1700,
+      544
     ],
     "width": 660,
-    "height": 108,
-    "bytes": 7290,
+    "height": 54,
+    "bytes": 3512,
     "masks": [
       {
         "rect": [
@@ -438,6 +708,60 @@
           392
         ],
         "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
+        ],
+        "color": "white"
       }
     ],
     "note": "Mobile crop from original source.",
@@ -451,15 +775,15 @@
       ],
       "rect_in_parent_source": [
         1040,
-        465,
-        890,
-        145
+        490,
+        660,
+        54
       ],
       "normalized": [
         0.40961008270972826,
-        0.75,
-        0.3505317053958251,
-        0.23387096774193547
+        0.7903225806451613,
+        0.2599448601811737,
+        0.08709677419354839
       ]
     }
   },
@@ -495,6 +819,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -554,6 +932,60 @@
           350,
           1600,
           392
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          213,
+          2400,
+          251
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          405,
+          2400,
+          448
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          551,
+          2400,
+          594
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          696,
+          2400,
+          740
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          888,
+          2400,
+          933
+        ],
+        "color": "white"
+      },
+      {
+        "rect": [
+          1040,
+          1034,
+          2400,
+          1079
         ],
         "color": "white"
       }
@@ -1238,17 +1670,8 @@
     ],
     "width": 1229,
     "height": 358,
-    "bytes": 21140,
+    "bytes": 19754,
     "masks": [
-      {
-        "rect": [
-          83,
-          214,
-          270,
-          273
-        ],
-        "color": "#f5f6fa"
-      },
       {
         "rect": [
           641,
@@ -1257,36 +1680,9 @@
           252
         ],
         "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          492,
-          261,
-          681,
-          374
-        ],
-        "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          908,
-          218,
-          1012,
-          276
-        ],
-        "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          908,
-          347,
-          958,
-          386
-        ],
-        "color": "#f5f6fa"
       }
     ],
-    "note": "Three real benefit cards with monetary values omitted."
+    "note": "Three real benefit cards with original synthetic demo monetary values restored. Only the punctuation between Conflict and needs review is masked."
   },
   {
     "file": "images/showroom/r2-benefit-detail-mobile.webp",
@@ -1303,17 +1699,8 @@
     ],
     "width": 660,
     "height": 192,
-    "bytes": 10506,
+    "bytes": 32754,
     "masks": [
-      {
-        "rect": [
-          83,
-          214,
-          270,
-          273
-        ],
-        "color": "#f5f6fa"
-      },
       {
         "rect": [
           641,
@@ -1322,36 +1709,9 @@
           252
         ],
         "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          492,
-          261,
-          681,
-          374
-        ],
-        "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          908,
-          218,
-          1012,
-          276
-        ],
-        "color": "#f5f6fa"
-      },
-      {
-        "rect": [
-          908,
-          347,
-          958,
-          386
-        ],
-        "color": "#f5f6fa"
       }
     ],
-    "note": "Three real benefit cards with monetary values omitted."
+    "note": "Three real benefit cards with original synthetic demo monetary values restored. Only the punctuation between Conflict and needs review is masked."
   },
   {
     "file": "images/showroom/r2-source-p-badge.webp",

@@ -60,8 +60,8 @@
     "source": "f3/freq.png",
     "width": 940,
     "height": 400,
-    "bytes": 20318,
-    "edits": "Mask ISO date lines containing dashes."
+    "bytes": 14178,
+    "edits": "Mask ISO date lines containing dashes and all internal engineering identifiers."
   },
   {
     "file": "images/showroom/source-p.webp",
@@ -204,7 +204,7 @@
     "source": "frequency.webp",
     "width": 600,
     "height": 255,
-    "bytes": 8886,
+    "bytes": 5788,
     "edits": "Mobile variant."
   },
   {
