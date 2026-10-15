@@ -105,8 +105,14 @@ async function handleLead(event) {
 
   const pit = process.env.GHL_PIT;
   const locationId = process.env.GHL_LOCATION_ID;
-  if (!pit || !locationId) {
-    console.error("[ghl-lead] Missing GHL_PIT or GHL_LOCATION_ID env var");
+  const edfUrl = process.env.EDF_INTAKE_URL;
+  const edfKey = process.env.EDF_INTAKE_KEY;
+  const hasGhl = Boolean(pit && locationId);
+  const hasEdf = Boolean(edfUrl && edfKey);
+  if (!hasGhl && !hasEdf) {
+    console.error(
+      "[ghl-lead] No CRM configured (GHL_PIT/GHL_LOCATION_ID or EDF_INTAKE_URL/EDF_INTAKE_KEY)",
+    );
     return json(500, { success: false, error: "Server not configured" });
   }
 
@@ -178,6 +184,41 @@ async function handleLead(event) {
     customFields,
   };
 
+  // ponytail: dual write during the GHL to EDF cutover; drop the GHL sink
+  // once GHL is canceled. The lead counts as saved if either CRM takes it.
+  const edfBody = {
+    email,
+    firstName: payload.firstName,
+    lastName: payload.lastName,
+    phone: payload.phone,
+    companyName: company,
+    source: payload.source,
+    tags,
+    customFields: extras,
+    sourceUrl: clean(data.sourceUrl, 300),
+  };
+  for (const key of [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+  ]) {
+    if (typeof data[key] === "string") edfBody[key] = clean(data[key], 200);
+  }
+
+  const sinks = [];
+  if (hasGhl) sinks.push(sendToGhl(pit, payload));
+  if (hasEdf) sinks.push(sendToEdf(edfUrl, edfKey, edfBody));
+  const results = await Promise.all(sinks);
+  const saved = results.find((r) => r.ok);
+  if (!saved) {
+    return json(502, { success: false, error: "CRM rejected the lead" });
+  }
+  return json(200, { success: true, contactId: saved.contactId });
+}
+
+async function sendToGhl(pit, payload) {
   try {
     const res = await fetch(GHL_API + "/contacts/upsert", {
       method: "POST",
@@ -189,20 +230,41 @@ async function handleLead(event) {
       },
       body: JSON.stringify(payload),
     });
-
     if (!res.ok) {
-      const errBody = await res.text();
-      console.error("[ghl-lead] GHL upsert failed", res.status, errBody);
-      return json(502, { success: false, error: "CRM rejected the lead" });
+      console.error(
+        "[ghl-lead] GHL upsert failed",
+        res.status,
+        await res.text(),
+      );
+      return { ok: false };
     }
-
     const result = await res.json();
-    return json(200, {
-      success: true,
-      contactId: result.contact && result.contact.id,
-    });
+    return { ok: true, contactId: result.contact && result.contact.id };
   } catch (err) {
     console.error("[ghl-lead] GHL request error", err);
-    return json(502, { success: false, error: "CRM unreachable" });
+    return { ok: false };
+  }
+}
+
+async function sendToEdf(url, key, body) {
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "X-EDF-Intake-Key": key,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      console.error("[ghl-lead] EDF intake failed", res.status);
+      return { ok: false };
+    }
+    const result = await res.json();
+    return { ok: true, contactId: result.contactId };
+  } catch (err) {
+    console.error("[ghl-lead] EDF intake request error", err.message);
+    return { ok: false };
   }
 }
