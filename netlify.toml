@@ -40,12 +40,12 @@
 
 [[redirects]]
   from = "/demo"
-  to = "https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+  to = "https://marketing.elitedentalforce.com/book/demo"
   status = 302
 
 [[redirects]]
   from = "/book"
-  to = "https://api.leadconnectorhq.com/widget/bookings/alvin-calendar"
+  to = "https://marketing.elitedentalforce.com/book/demo"
   status = 302
 
 # Custom error pages

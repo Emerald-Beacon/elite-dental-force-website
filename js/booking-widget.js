@@ -11,8 +11,8 @@
   var scriptSrc = (scripts[scripts.length - 1] || {}).src || '';
   var BASE = scriptSrc ? scriptSrc.replace(/js\/booking-widget\.js.*$/, '') : '/';
   var LOGO_URL    = BASE + 'images/edf-icon-logo.png';
-  var TEAM_CAL    = 'https://api.leadconnectorhq.com/widget/bookings/alvin-calendar';
-  var FOUNDER_CAL = 'https://api.leadconnectorhq.com/widget/bookings/alvin-calendar';
+  var TEAM_CAL    = 'https://marketing.elitedentalforce.com/book/demo';
+  var FOUNDER_CAL = 'https://marketing.elitedentalforce.com/book/demo';
 
   var AUTO_REPLIES = {
     revenue: "Many dental practices lose collectible revenue to billing errors and unchecked denials. We can show you where your practice is leaving money on the table. Want to see a quick demo?",
