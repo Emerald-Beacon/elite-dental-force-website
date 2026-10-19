@@ -11,7 +11,7 @@
 (function () {
   "use strict";
 
-  var BOOKING_HOST = "api.leadconnectorhq.com/widget/bookings/";
+  var BOOKING_HOST = "marketing.elitedentalforce.com/book/";
   var WEBHOOK_URL =
     "https://exquisite-dango-095989.netlify.app/.netlify/functions/ghl-lead";
 
