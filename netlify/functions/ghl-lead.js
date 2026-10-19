@@ -131,6 +131,9 @@ async function handleLead(event) {
   } catch {
     return json(400, { success: false, error: "Invalid JSON" });
   }
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
+    return json(400, { success: false, error: "Invalid JSON" });
+  }
 
   // Honeypot: bots fill hidden fields, humans never see them
   if (data._hp) {
@@ -156,54 +159,20 @@ async function handleLead(event) {
     200,
   );
 
-  // Everything not a standard contact field lands in the Notes custom
-  // field so no form input is silently dropped.
-  const noteLines = [];
   const extras =
     data.customFields &&
     typeof data.customFields === "object" &&
     !Array.isArray(data.customFields)
       ? data.customFields
       : {};
-  for (const key of Object.keys(extras)) {
-    const val = clean(String(extras[key] == null ? "" : extras[key]), 1500);
-    if (val) noteLines.push(key + ": " + val);
-  }
-  if (data.sourceUrl) noteLines.push("Page: " + clean(data.sourceUrl, 300));
 
-  const customFields = [{ id: FIELD_IDS.leadSource, value: "Organic" }];
-  if (company) {
-    customFields.push({ id: FIELD_IDS.practiceName, value: company });
-  }
-  if (noteLines.length) {
-    customFields.push({ id: FIELD_IDS.notes, value: noteLines.join("\n") });
-  }
-  const pms = PMS_MAP[String(extras.pms || "").toLowerCase()];
-  if (pms) {
-    customFields.push({ id: FIELD_IDS.pmsSoftware, value: pms });
-  }
-
-  const payload = {
-    locationId,
+  const edfBody = {
     email,
     firstName: clean(data.firstName, 100),
     lastName: clean(data.lastName, 100),
     phone: clean(data.phone, 30),
     companyName: company,
     source: clean(data.source, 200) || "EDF Website",
-    tags,
-    customFields,
-  };
-
-  // ponytail: dual write during the GHL to EDF cutover; drop the GHL sink
-  // once GHL is canceled (Nov 1).
-  const edfBody = {
-    email,
-    firstName: payload.firstName,
-    lastName: payload.lastName,
-    phone: payload.phone,
-    companyName: company,
-    source: payload.source,
     tags,
     customFields: extras,
     sourceUrl: clean(data.sourceUrl, 300),
@@ -218,7 +187,12 @@ async function handleLead(event) {
     if (typeof data[key] === "string") edfBody[key] = clean(data[key], 200);
   }
 
-  const ghl = hasGhl ? sendToGhl(pit, payload) : null;
+  // ponytail: dual write during the GHL to EDF cutover; drop the GHL sink
+  // once GHL is canceled (Nov 1). Its payload is built inside its own leg so
+  // nothing GHL specific can stop the EDF request.
+  const ghl = hasGhl
+    ? sendToGhl(pit, () => ghlPayload(locationId, edfBody, extras))
+    : null;
   const edf = hasEdf ? await sendToEdf(edfUrl, edfKey, edfBody) : null;
   // Awaited so Netlify does not freeze the GHL request mid flight; it is
   // time boxed and never throws, so it cannot change the EDF answer.
@@ -230,8 +204,51 @@ async function handleLead(event) {
   return json(200, { success: true, contactId: saved.contactId });
 }
 
-async function sendToGhl(pit, payload) {
+// Accepted JSON can hold any value; objects and arrays go in as JSON, and an
+// object whose toString is not callable can never throw here.
+function fieldText(value) {
+  if (value == null) return "";
+  return typeof value === "string" ? value : JSON.stringify(value) || "";
+}
+
+function ghlPayload(locationId, lead, extras) {
+  // Everything not a standard contact field lands in the Notes custom
+  // field so no form input is silently dropped.
+  const noteLines = [];
+  for (const key of Object.keys(extras)) {
+    const val = clean(fieldText(extras[key]), 1500);
+    if (val) noteLines.push(key + ": " + val);
+  }
+  if (lead.sourceUrl) noteLines.push("Page: " + lead.sourceUrl);
+
+  const customFields = [{ id: FIELD_IDS.leadSource, value: "Organic" }];
+  if (lead.companyName) {
+    customFields.push({ id: FIELD_IDS.practiceName, value: lead.companyName });
+  }
+  if (noteLines.length) {
+    customFields.push({ id: FIELD_IDS.notes, value: noteLines.join("\n") });
+  }
+  const pms = PMS_MAP[fieldText(extras.pms).toLowerCase()];
+  if (pms) {
+    customFields.push({ id: FIELD_IDS.pmsSoftware, value: pms });
+  }
+
+  return {
+    locationId,
+    email: lead.email,
+    firstName: lead.firstName,
+    lastName: lead.lastName,
+    phone: lead.phone,
+    companyName: lead.companyName,
+    source: lead.source,
+    tags: lead.tags,
+    customFields,
+  };
+}
+
+async function sendToGhl(pit, buildPayload) {
   try {
+    const payload = buildPayload();
     const res = await fetch(GHL_API + "/contacts/upsert", {
       method: "POST",
       headers: {

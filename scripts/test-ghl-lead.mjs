@@ -143,6 +143,40 @@ check("the honeypot calls no CRM", async () => {
   record(await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: ghlOk }, { ...lead, _hp: "bot" }));
   assert.equal(calls.length, 0);
 });
+// Astra W2 gate probe: valid JSON whose custom value is an object with a toString that is not callable.
+const customObject = { email: "custom-object@example.test", customFields: { question: { toString: "synthetic answer" } } };
+const edfSent = () => calls.filter((c) => isEdf(c.url)).map((c) => JSON.parse(c.init.body));
+const ghlSent = () => calls.filter((c) => !isEdf(c.url)).map((c) => JSON.parse(c.init.body));
+check("custom object value, old CRM absent: EDF gets the value as sent and the visitor sees success", async () => {
+  const r = record(await submit(EDF, { edf: edfOk, ghl: ghlOk }, customObject));
+  assert.deepEqual(
+    [r.status, edfSent().map((b) => [b.email, b.customFields])],
+    [200, [["custom-object@example.test", { question: { toString: "synthetic answer" } }]]],
+  );
+});
+check("custom object value, old CRM configured: EDF gets the request and the visitor sees success", async () => {
+  const r = record(await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: ghlOk }, customObject));
+  assert.deepEqual([r.status, r.body.contactId, edfSent().length], [200, "edf_1", 1]);
+});
+check("custom object value: the old CRM note carries it as JSON", async () => {
+  await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: ghlOk }, customObject);
+  const notes = ghlSent()[0].customFields.find((f) => f.value.includes("question"));
+  assert.equal(notes.value, 'question: {"toString":"synthetic answer"}');
+});
+check("custom object value, old CRM configured and down: EDF still decides", async () => {
+  const r = record(await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: () => reply(503, {}) }, customObject));
+  assert.deepEqual([r.status, edfSent().length], [200, 1]);
+});
+check("a PMS value sent as an object still reaches both CRMs", async () => {
+  const r = record(
+    await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: ghlOk }, { email: "pms-object@example.test", customFields: { pms: { toString: "dentrix" } } }),
+  );
+  assert.deepEqual([r.status, edfSent().length, ghlSent().length], [200, 1, 1]);
+});
+check("request JSON that is not an object is refused and calls no CRM", async () => {
+  const r = record(await submit({ ...GHL, ...EDF }, { edf: edfOk, ghl: ghlOk }, null));
+  assert.deepEqual([r.status, calls.length], [400, 0]);
+});
 check("no key or env value appears in any log line or response", async () => {
   const leaks = Object.entries(SECRETS).filter(([, v]) => [...logs, ...responses].some((t) => String(t).includes(v)));
   assert.ok(logs.length > 0 && responses.length > 10, "the scan saw the failure logs and responses");
