@@ -5,15 +5,24 @@
  * into GoHighLevel directly. Replaces the n8n webhook hop so leads land
  * in the CRM even if downstream automation is offline.
  *
- * Required Netlify env vars:
- *   GHL_PIT          — GoHighLevel Private Integration Token
- *   GHL_LOCATION_ID  — GHL sub-account location ID
+ * Netlify env vars:
+ *   EDF_INTAKE_URL   — EDF platform intake, .../api/public/website-lead
+ *   EDF_INTAKE_KEY   — shared key sent as X-EDF-Intake-Key
+ *   GHL_PIT          — GoHighLevel Private Integration Token (until Nov 1)
+ *   GHL_LOCATION_ID  — GHL sub-account location ID (until Nov 1)
+ *
+ * Once EDF intake is configured it is the record: its result alone decides
+ * what the visitor sees. The GHL leg is best effort and time boxed.
  */
 
 "use strict";
 
 const GHL_API = "https://services.leadconnectorhq.com";
 const API_VERSION = "2021-07-28";
+// Both legs run in parallel inside Netlify's 10s function limit, so a hung
+// GHL call can never hold the EDF answer past GHL_TIMEOUT_MS.
+const GHL_TIMEOUT_MS = 4000;
+const EDF_TIMEOUT_MS = 8000;
 
 // GHL custom field IDs (location oMeyewr4HWw0bamzu28W)
 const FIELD_IDS = {
@@ -151,7 +160,9 @@ async function handleLead(event) {
   // field so no form input is silently dropped.
   const noteLines = [];
   const extras =
-    data.customFields && typeof data.customFields === "object"
+    data.customFields &&
+    typeof data.customFields === "object" &&
+    !Array.isArray(data.customFields)
       ? data.customFields
       : {};
   for (const key of Object.keys(extras)) {
@@ -185,7 +196,7 @@ async function handleLead(event) {
   };
 
   // ponytail: dual write during the GHL to EDF cutover; drop the GHL sink
-  // once GHL is canceled. The lead counts as saved if either CRM takes it.
+  // once GHL is canceled (Nov 1).
   const edfBody = {
     email,
     firstName: payload.firstName,
@@ -207,12 +218,13 @@ async function handleLead(event) {
     if (typeof data[key] === "string") edfBody[key] = clean(data[key], 200);
   }
 
-  const sinks = [];
-  if (hasGhl) sinks.push(sendToGhl(pit, payload));
-  if (hasEdf) sinks.push(sendToEdf(edfUrl, edfKey, edfBody));
-  const results = await Promise.all(sinks);
-  const saved = results.find((r) => r.ok);
-  if (!saved) {
+  const ghl = hasGhl ? sendToGhl(pit, payload) : null;
+  const edf = hasEdf ? await sendToEdf(edfUrl, edfKey, edfBody) : null;
+  // Awaited so Netlify does not freeze the GHL request mid flight; it is
+  // time boxed and never throws, so it cannot change the EDF answer.
+  const old = ghl ? await ghl : null;
+  const saved = hasEdf ? edf : old;
+  if (!saved.ok) {
     return json(502, { success: false, error: "CRM rejected the lead" });
   }
   return json(200, { success: true, contactId: saved.contactId });
@@ -229,19 +241,17 @@ async function sendToGhl(pit, payload) {
         Accept: "application/json",
       },
       body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(GHL_TIMEOUT_MS),
     });
+    // Status only: a provider error body can echo the request.
     if (!res.ok) {
-      console.error(
-        "[ghl-lead] GHL upsert failed",
-        res.status,
-        await res.text(),
-      );
+      console.error("[ghl-lead] GHL upsert failed", res.status);
       return { ok: false };
     }
     const result = await res.json();
     return { ok: true, contactId: result.contact && result.contact.id };
   } catch (err) {
-    console.error("[ghl-lead] GHL request error", err);
+    console.error("[ghl-lead] GHL request error", err.name);
     return { ok: false };
   }
 }
@@ -256,15 +266,20 @@ async function sendToEdf(url, key, body) {
         Accept: "application/json",
       },
       body: JSON.stringify(body),
+      signal: AbortSignal.timeout(EDF_TIMEOUT_MS),
     });
     if (!res.ok) {
       console.error("[ghl-lead] EDF intake failed", res.status);
       return { ok: false };
     }
     const result = await res.json();
+    if (!result || result.success !== true) {
+      console.error("[ghl-lead] EDF intake did not confirm the lead");
+      return { ok: false };
+    }
     return { ok: true, contactId: result.contactId };
   } catch (err) {
-    console.error("[ghl-lead] EDF intake request error", err.message);
+    console.error("[ghl-lead] EDF intake request error", err.name);
     return { ok: false };
   }
 }
