@@ -85,7 +85,10 @@
 .services-page .seg-card h3 { font-size:1.5rem; }
 .services-page .seg-cta-link { color:#a3d4fa; }
 .services-page .svc-card h3 { font-size:1.25rem; }
-.services-page .pricing-card--featured { border-color:#776e3b; background:linear-gradient(145deg,#2b3356,#173168); transform:none; }
+.services-page .pricing-grid { align-items:stretch; }
+.services-page .pricing-card--featured { border-color:transparent; background:linear-gradient(145deg,#2b3356,#173168) padding-box, conic-gradient(from var(--pricing-spin),#776e3b,#ffd700,#4ba8f0,#776e3b) border-box; transform:none; animation:pricing-spin 6s linear infinite; }
+@property --pricing-spin { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+@keyframes pricing-spin { to { --pricing-spin:360deg; } }
 .services-page .pricing-popular-badge { color:#ffd700; background:#2b3356; border:1px solid #776e3b; border-radius:4px; }
 .services-page .pricing-price-box { background:#11295b; border-color:#36546f; border-radius:10px; }
 .services-page .pricing-price-label { color:#b7cbdc; }
