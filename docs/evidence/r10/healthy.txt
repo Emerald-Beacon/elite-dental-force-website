@@ -1,0 +1,10 @@
+PASS inventory-and-bytes
+PASS home-direct-with-utm-1280
+PASS demo-retains-campaign-and-copy-B-1280
+PASS all-booking-links-and-dynamic-link-1280
+PASS no-campaign-direct-1280
+PASS home-direct-with-utm-390
+PASS demo-retains-campaign-and-copy-B-390
+PASS all-booking-links-and-dynamic-link-390
+PASS no-campaign-direct-390
+9/9 R10 website groups passed

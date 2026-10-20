@@ -1,0 +1,99 @@
+{
+  "cwd": "C:\\Users\\elite\\orca\\workspaces\\elite-dental-force-website\\alvin-choices",
+  "base": "loopback ephemeral static server",
+  "browser": {
+    "headless": true,
+    "freshProfile": true,
+    "flagsVerified": true
+  },
+  "externalTransport": "request interception with a deny-only loopback proxy",
+  "proxyDenials": 71,
+  "pageErrors": [],
+  "loaderPages": [
+    "index.html",
+    "pages/ai-claim-scrubbing.html",
+    "pages/company.html",
+    "pages/company/compliance.html",
+    "pages/company/faq.html",
+    "pages/company/security.html",
+    "pages/contact.html",
+    "pages/demo.html",
+    "pages/denial-prevention.html",
+    "pages/dental-revenue-intelligence.html",
+    "pages/edifi-vs-dentrix-rcm.html",
+    "pages/edifi-vs-manual-billing.html",
+    "pages/edifi-vs-weave.html",
+    "pages/edifi.html",
+    "pages/eligibility-intelligence.html",
+    "pages/enterprise.html",
+    "pages/investors.html",
+    "pages/partners.html",
+    "pages/platform.html",
+    "pages/privacy.html",
+    "pages/resources.html",
+    "pages/resources/articles/16-billion-data-dilemma.html",
+    "pages/resources/articles/active-is-not-the-same-as-covered.html",
+    "pages/resources/articles/ai-accelerated-computing.html",
+    "pages/resources/articles/data-blocks-ai-billing.html",
+    "pages/resources/articles/dental-claim-denial-rates-2025.html",
+    "pages/resources/articles/dental-eligibility-verification-best-practices.html",
+    "pages/resources/articles/dental-industry-crisis.html",
+    "pages/resources/articles/how-to-audit-dental-payments.html",
+    "pages/resources/articles/life-of-cda.html",
+    "pages/resources/articles/optimize-dental-practice-2025.html",
+    "pages/resources/articles/proactive-ai-dental-practices.html",
+    "pages/resources/articles/trust-the-number-eligibility-needs-a-source.html",
+    "pages/resources/articles/your-morning-eligibility-routine-rebuilt.html",
+    "pages/resources/blog.html",
+    "pages/resources/case-studies.html",
+    "pages/resources/news.html",
+    "pages/resources/podcast.html",
+    "pages/revnet.html",
+    "pages/roi-calculator.html",
+    "pages/services.html",
+    "pages/terms.html"
+  ],
+  "bookingLinkCount": 68,
+  "opened": [
+    "https://marketing.elitedentalforce.com/book/demo?utm_source=google&utm_medium=cpc&utm_campaign=fall_eligibility&utm_content=header&utm_term=dental",
+    "https://marketing.elitedentalforce.com/book/demo"
+  ],
+  "results": [
+    {
+      "name": "inventory-and-bytes",
+      "pass": true
+    },
+    {
+      "name": "home-direct-with-utm-1280",
+      "pass": true
+    },
+    {
+      "name": "demo-retains-campaign-and-copy-B-1280",
+      "pass": true
+    },
+    {
+      "name": "all-booking-links-and-dynamic-link-1280",
+      "pass": true
+    },
+    {
+      "name": "no-campaign-direct-1280",
+      "pass": true
+    },
+    {
+      "name": "home-direct-with-utm-390",
+      "pass": true
+    },
+    {
+      "name": "demo-retains-campaign-and-copy-B-390",
+      "pass": true
+    },
+    {
+      "name": "all-booking-links-and-dynamic-link-390",
+      "pass": true
+    },
+    {
+      "name": "no-campaign-direct-390",
+      "pass": true
+    }
+  ]
+}
